@@ -1,0 +1,525 @@
+{
+  "schema_version": "1.0.0",
+  "report_kind": "actual_independent_review",
+  "rubric_version": "1.2.0",
+  "review_scope": "art_complete",
+  "reviewer": {
+    "id": "Codex independent audit 2026-10-25 candidate",
+    "mode": "independent"
+  },
+  "asset_manifest_path": "art_review/submissions/candidate_full/manifest.json",
+  "asset_manifest_sha256": "2f8e63bf0e4c82d8a63a20286ff064ce89196a0d33cbfa0d5091aff9a3f58a3a",
+  "style_master_version": "P1 t015/t044/t054/t084; rubric 1.2.0",
+  "calibration_status": "Provisional rubric judgement from direct P1/candidate review; scores are not similarity percentages.",
+  "gates": {
+    "H01": {
+      "status": "pass",
+      "evidence": [
+        "art/full/source/layout/MAP001_courtyard.blend"
+      ],
+      "reason": "Frozen hashes, archive contents, representative native sources and actual browser build were inspected."
+    },
+    "H02": {
+      "status": "fail",
+      "evidence": [
+        "delivery/next_cycle/T3/game_final4_formal_no_ui.png",
+        "delivery/next_cycle/T3/game_final4_dialogue.png"
+      ],
+      "reason": "Visual acceptance fails: ENV/UI/MIX are below85, and Q01 uses a geometric proxy rather than actual visible character pixels."
+    },
+    "H03": {
+      "status": "not_checked",
+      "evidence": [
+        "art/iterations/cycle_02/full_art_catalog.json"
+      ],
+      "reason": "All47 groups were not exhaustively inspected for every alpha edge, pivot, atlas frame and animation."
+    },
+    "H04": {
+      "status": "pass",
+      "evidence": [
+        "art/full/source/layout/MAP001_courtyard.blend",
+        "art/full/source/environment/ENV006_autumn_tree.blend",
+        "art/full/source/props/PROP001_bench.blend"
+      ],
+      "reason": "Representative Blender sources reopened; archived bench edit survives reopen. Not exhaustive for every native source."
+    },
+    "H05": {
+      "status": "pass",
+      "evidence": [
+        "art/full/previews/engine/assets/CHAR002.png",
+        "art/phase1/character_playback_1015/move_preview.gif"
+      ],
+      "reason": "Locked1015 identity is preserved and independent live browser inspection confirms Relax/Move bone/time progression; submitted GIF defect is N07."
+    },
+    "H06": {
+      "status": "pass",
+      "evidence": [
+        "delivery/next_cycle/T3/game_final4_formal_no_ui.png",
+        "demo/assets/scripts/CourtyardBootstrap.ts"
+      ],
+      "reason": "Actual Cocos web build loaded in separate local browser without page errors; keyboard/touch movement and pause/dialogue locks exercised."
+    },
+    "H07": {
+      "status": "fail",
+      "evidence": [
+        "delivery/next_cycle/T3/game_final4_formal_no_ui.png",
+        "art/full/previews/engine/ui_states/hud_0_3.png"
+      ],
+      "reason": "Pause/touch locks work, but natural portrait resize shows no orientation notice and canvas remains1280x720; test forced rotate_notice (N05)."
+    },
+    "H08": {
+      "status": "pass",
+      "evidence": [
+        "art/iterations/cycle_02/full_art_catalog.json"
+      ],
+      "reason": "Third-party character use is declared; this is source-attribution review, not commercial rights clearance."
+    },
+    "H09": {
+      "status": "pass",
+      "evidence": [
+        "art/full/previews/engine/assets/CHAR001.png",
+        "art/full/previews/engine/assets/CHAR003.png"
+      ],
+      "reason": "Selected player remains locked1015 source and NPC uses approved static-cutout route."
+    }
+  },
+  "cards": {
+    "ENV": {
+      "dimensions": [
+        {
+          "id": "composition_scale",
+          "score": 2,
+          "evidence": [
+            "delivery/next_cycle/T3/game_final4_formal_no_ui.png",
+            "art/full/previews/engine/assets/ENV006.png"
+          ],
+          "reason": "全景路线可读，但空铺地较多，前中后层次与主景焦点弱于P1。",
+          "defect_ids": [
+            "N01",
+            "N02"
+          ]
+        },
+        {
+          "id": "geometry_craft",
+          "score": 2,
+          "evidence": [
+            "delivery/next_cycle/T3/game_final4_formal_no_ui.png",
+            "art/full/previews/engine/assets/ENV006.png"
+          ],
+          "reason": "树冠/灌木可见大块多面体拼接和偏直枝条，缺少细致轮廓变化。",
+          "defect_ids": [
+            "N01",
+            "N02"
+          ]
+        },
+        {
+          "id": "material_separation",
+          "score": 2,
+          "evidence": [
+            "delivery/next_cycle/T3/game_final4_formal_no_ui.png",
+            "art/full/previews/engine/assets/ENV006.png"
+          ],
+          "reason": "石木金属大类可辨，但主画面材质偏平，近景细节证据不足。",
+          "defect_ids": [
+            "N01",
+            "N02"
+          ]
+        },
+        {
+          "id": "lighting_contact",
+          "score": 2,
+          "evidence": [
+            "delivery/next_cycle/T3/game_final4_formal_no_ui.png",
+            "art/full/previews/engine/assets/ENV006.png"
+          ],
+          "reason": "主树投影可见阶梯块，暖光、冷环境光与柔接触阴影层次不足。",
+          "defect_ids": [
+            "N01",
+            "N02"
+          ]
+        },
+        {
+          "id": "vegetation_depth",
+          "score": 2,
+          "evidence": [
+            "delivery/next_cycle/T3/game_final4_formal_no_ui.png",
+            "art/full/previews/engine/assets/ENV006.png"
+          ],
+          "reason": "树冠增量明显，但重复团块、稀疏叶片和裸土令植被层次偏弱。",
+          "defect_ids": [
+            "N01",
+            "N02"
+          ]
+        },
+        {
+          "id": "play_readability",
+          "score": 3,
+          "evidence": [
+            "delivery/next_cycle/T3/game_final4_formal_no_ui.png",
+            "art/full/previews/engine/assets/ENV006.png"
+          ],
+          "reason": "路线和玩家主体可读，达到可用基础，焦点层次仍可加强。",
+          "defect_ids": []
+        }
+      ]
+    },
+    "CHAR": {
+      "dimensions": [
+        {
+          "id": "silhouette_proportion",
+          "score": 4,
+          "evidence": [
+            "art/full/previews/engine/assets/CHAR002.png",
+            "delivery/next_cycle/T3/game_final4_formal_no_ui.png"
+          ],
+          "reason": "1015 Spine角色轮廓完整清楚，独立运行中可辨。",
+          "defect_ids": []
+        },
+        {
+          "id": "line_quality",
+          "score": 4,
+          "evidence": [
+            "art/full/previews/engine/assets/CHAR002.png",
+            "delivery/next_cycle/T3/game_final4_formal_no_ui.png"
+          ],
+          "reason": "角色原始线稿清晰且身份稳定。",
+          "defect_ids": []
+        },
+        {
+          "id": "cel_color_light",
+          "score": 3,
+          "evidence": [
+            "art/full/previews/engine/assets/CHAR002.png",
+            "delivery/next_cycle/T3/game_final4_formal_no_ui.png"
+          ],
+          "reason": "配色稳定，但与暖秋环境的受光融合仍可提升。",
+          "defect_ids": []
+        },
+        {
+          "id": "identity_consistency",
+          "score": 4,
+          "evidence": [
+            "art/full/previews/engine/assets/CHAR002.png",
+            "delivery/next_cycle/T3/game_final4_formal_no_ui.png"
+          ],
+          "reason": "锁定1015骨骼/贴图身份保持一致，独立运行确认Relax/Move骨骼随时间变化。",
+          "defect_ids": []
+        },
+        {
+          "id": "motion_contact",
+          "score": 3,
+          "evidence": [
+            "art/full/previews/engine/assets/CHAR002.png",
+            "delivery/next_cycle/T3/game_final4_formal_no_ui.png"
+          ],
+          "reason": "运行时动画确实播放；提交的idle/move GIF却各只有一个唯一帧，提交证据不合格。",
+          "defect_ids": [
+            "N07"
+          ]
+        },
+        {
+          "id": "small_scale_clarity",
+          "score": 3,
+          "evidence": [
+            "art/full/previews/engine/assets/CHAR002.png",
+            "delivery/next_cycle/T3/game_final4_formal_no_ui.png"
+          ],
+          "reason": "缩小后角色仍容易识别，脚底接触关系可继续强化。",
+          "defect_ids": []
+        }
+      ]
+    },
+    "UI": {
+      "dimensions": [
+        {
+          "id": "paper_shape",
+          "score": 2,
+          "evidence": [
+            "delivery/next_cycle/T3/game_final4_dialogue.png",
+            "art/full/previews/engine/ui_states/hud_0_3.png"
+          ],
+          "reason": "界面大量规则奶油矩形和重复双线框，缺少P1轻透纸片与不规则边缘。",
+          "defect_ids": [
+            "N03"
+          ]
+        },
+        {
+          "id": "doodle_icon_family",
+          "score": 2,
+          "evidence": [
+            "delivery/next_cycle/T3/game_final4_dialogue.png",
+            "art/full/previews/engine/ui_states/hud_0_3.png"
+          ],
+          "reason": "多数图标偏规整矢量，手绘便签/涂鸦装饰家族感不足。",
+          "defect_ids": [
+            "N03"
+          ]
+        },
+        {
+          "id": "typography",
+          "score": 3,
+          "evidence": [
+            "delivery/next_cycle/T3/game_final4_dialogue.png",
+            "art/full/previews/engine/ui_states/hud_0_3.png"
+          ],
+          "reason": "文案清晰且状态覆盖较全，但标题/注释/按钮的手作层次弱。",
+          "defect_ids": [
+            "N03"
+          ]
+        },
+        {
+          "id": "layout_air",
+          "score": 3,
+          "evidence": [
+            "delivery/next_cycle/T3/game_final4_dialogue.png",
+            "art/full/previews/engine/ui_states/hud_0_3.png"
+          ],
+          "reason": "信息可读，但对白遮暗场景且留白较大，层级可优化。",
+          "defect_ids": [
+            "N03"
+          ]
+        },
+        {
+          "id": "state_feedback",
+          "score": 3,
+          "evidence": [
+            "delivery/next_cycle/T3/game_final4_dialogue.png",
+            "art/full/previews/engine/ui_states/hud_0_3.png"
+          ],
+          "reason": "多数状态反馈可用；自然竖屏适配未获证明。",
+          "defect_ids": [
+            "N03"
+          ]
+        },
+        {
+          "id": "palette_restraint",
+          "score": 3,
+          "evidence": [
+            "delivery/next_cycle/T3/game_final4_dialogue.png",
+            "art/full/previews/engine/ui_states/hud_0_3.png"
+          ],
+          "reason": "暖米色统一，但面板不透明、同类色块重复。",
+          "defect_ids": [
+            "N03"
+          ]
+        }
+      ]
+    },
+    "MIX": {
+      "dimensions": [
+        {
+          "id": "visual_language",
+          "score": 2,
+          "evidence": [
+            "delivery/next_cycle/T3/game_final4_formal_no_ui.png",
+            "delivery/next_cycle/T3/game_final4_dialogue.png"
+          ],
+          "reason": "地图几何与UI纸片语言尚未形成统一的P1手作视觉。",
+          "defect_ids": [
+            "N01",
+            "N02"
+          ]
+        },
+        {
+          "id": "color_light_coherence",
+          "score": 2,
+          "evidence": [
+            "delivery/next_cycle/T3/game_final4_formal_no_ui.png",
+            "delivery/next_cycle/T3/game_final4_dialogue.png"
+          ],
+          "reason": "色系兼容，但大面积平土色和硬阴影削弱冷暖层次。",
+          "defect_ids": [
+            "N01",
+            "N02"
+          ]
+        },
+        {
+          "id": "grounding_occlusion",
+          "score": 3,
+          "evidence": [
+            "delivery/next_cycle/T3/game_final4_formal_no_ui.png",
+            "delivery/next_cycle/T3/game_final4_dialogue.png"
+          ],
+          "reason": "角色树前后遮挡可见、脚底阴影存在，整体边界仍需打磨。",
+          "defect_ids": []
+        },
+        {
+          "id": "focus_readability",
+          "score": 3,
+          "evidence": [
+            "delivery/next_cycle/T3/game_final4_formal_no_ui.png",
+            "delivery/next_cycle/T3/game_final4_dialogue.png"
+          ],
+          "reason": "角色和任务UI可辨，但道路、树与留白间焦点不集中。",
+          "defect_ids": []
+        },
+        {
+          "id": "world_style_coherence",
+          "score": 2,
+          "evidence": [
+            "delivery/next_cycle/T3/game_final4_formal_no_ui.png",
+            "delivery/next_cycle/T3/game_final4_dialogue.png"
+          ],
+          "reason": "秋季庭院主题成立，植被密度和几何语言与P1差距明显。",
+          "defect_ids": [
+            "N01",
+            "N02"
+          ]
+        }
+      ]
+    }
+  },
+  "defects": [
+    {
+      "id": "N01",
+      "severity": "major",
+      "status": "open",
+      "title": "场景植被与构图不足",
+      "observed": "主树/绿篱呈明显大块重复多面体，裸土多，前中后景层次弱。",
+      "suggestion": "保留地图骨架与路线；优先重整主树、绿篱、主路径：增加叶簇尺寸/色值变化、自然分叉渐细和花坛层次，降低裸土比例。",
+      "recheck": "固定相机全景+近景并排对P1，检查叶簇变化、枝条渐细、裸土和景深层次。",
+      "evidence": [
+        "delivery/next_cycle/T3/game_final4_formal_no_ui.png",
+        "art/full/previews/engine/assets/ENV006.png"
+      ],
+      "supplemental_diagnostics": []
+    },
+    {
+      "id": "N02",
+      "severity": "major",
+      "status": "open",
+      "title": "树影和材质层次不足",
+      "observed": "主树投影有阶梯块；石木金属虽可分但视觉偏平，木纹近景证明力弱。",
+      "suggestion": "检查阴影分辨率、过滤、偏移与投影网格，柔化接触影；补木/石/金属近景，用画面证据验收。",
+      "recheck": "同机位全景及材质近景；树影无大块台阶且材质在缩放后仍可辨。",
+      "evidence": [
+        "delivery/next_cycle/T3/game_final4_formal_no_ui.png",
+        "art/full/previews/engine/assets/ENV006.png"
+      ],
+      "supplemental_diagnostics": []
+    },
+    {
+      "id": "N03",
+      "severity": "major",
+      "status": "open",
+      "title": "UI纸片与涂鸦语言偏离参考",
+      "observed": "大量不透明奶油矩形、重复双框、规整图标，P1轻透纸边和手绘细节不足。",
+      "suggestion": "保留逻辑和文字，先修改通用面板：降低不透明度、改变边缘/框线节奏，补克制且统一的手绘角标与线稿图标；缩小对白空白和遮暗。",
+      "recheck": "同规范应用HUD/对白/暂停/完成弹窗，检查轮廓、透明度、笔触、可读性。",
+      "evidence": [
+        "delivery/next_cycle/T3/game_final4_dialogue.png",
+        "art/full/previews/engine/ui_states/hud_0_3.png"
+      ],
+      "supplemental_diagnostics": []
+    },
+    {
+      "id": "N04",
+      "severity": "blocking",
+      "status": "open",
+      "title": "Q01不是实际可见角色像素测量",
+      "observed": "报告97.844px来自1.75世界单位投影差；独立画布显示/隐藏角色差分框约139×140px。",
+      "suggestion": "改为固定相机/缩放/时间下角色实际alpha或渲染差分bbox，记录阈值、截图和原始数据；若目标范围不合，先复核范围，不要机械缩小锁定角色。",
+      "recheck": "真实画布重测并留原始数据；同条件重复结果可复核后重跑Q01。",
+      "evidence": [
+        "delivery/next_cycle/T5/q01_formal_no_ui.png"
+      ],
+      "supplemental_diagnostics": [
+        "actor_visible.png",
+        "actor_hidden.png",
+        "actor_pixel_crop.png",
+        "pixel_measurements.json"
+      ]
+    },
+    {
+      "id": "N05",
+      "severity": "blocking",
+      "status": "open",
+      "title": "Q09测试强制指定方向提示",
+      "observed": "脚本resize后直接setUiState(rotate_notice)；自然竖屏启动/切换仍为1280×720且未显示提示。",
+      "suggestion": "实现resize/orientationchange真实响应；竖屏显示旋转提示并锁交互，横屏恢复后撤提示。测试只改变窗口方向，不注入目标UI状态。",
+      "recheck": "干净页面初始竖屏、运行后转竖屏、再横屏；记录画布尺寸、提示与输入锁。另测微信真机。",
+      "evidence": [
+        "delivery/next_cycle/T3/game_final4_formal_no_ui.png"
+      ],
+      "supplemental_diagnostics": [
+        "touch_orientation_probe.json",
+        "orientation_initial_portrait.png",
+        "orientation_resize_portrait.png",
+        "orientation_landscape.png"
+      ]
+    },
+    {
+      "id": "N06",
+      "severity": "major",
+      "status": "open",
+      "title": "90分自评没有逐项视觉依据",
+      "observed": "样张分数复制到全量卡片，47项统一pass/通用理由无法支撑90分；机械检查只检字段和哈希。",
+      "suggestion": "返修后每维绑定实际区域和P1对照点；逐资产写具体可见观察；低分继续自修。结构校验与视觉判断分别报告。",
+      "recheck": "抽查47项理由均具体到资产和可见特征；ENV/UI/MIX逐维对照图复核。",
+      "evidence": [
+        "art/iterations/cycle_02/full_art_catalog.json"
+      ],
+      "supplemental_diagnostics": [
+        "audited_inputs/delivery/next_cycle/T3/fill_sample_self_review.py",
+        "audited_inputs/delivery/next_cycle/T4/fill_full_self_review.py"
+      ]
+    },
+    {
+      "id": "N07",
+      "severity": "major",
+      "status": "open",
+      "title": "提交的动作GIF为单帧重复",
+      "observed": "char_idle.gif和char_move.gif SHA相同，每个12帧但各只有1个唯一帧；独立运行时Spine骨骼确实变化。",
+      "suggestion": "保留Spine运行实现，修复采集器并重新录制Idle/Move；注明帧率/时长，输出逐帧唯一数。",
+      "recheck": "GIF分别出现多张唯一帧，Move另附运行时状态/骨骼变化。",
+      "evidence": [
+        "art/full/previews/engine/assets/CHAR002.png",
+        "art/phase1/character_playback_1015/move_preview.gif"
+      ],
+      "supplemental_diagnostics": [
+        "animation_inspection.json",
+        "runtime_probe.json"
+      ]
+    },
+    {
+      "id": "N08",
+      "severity": "major",
+      "status": "open",
+      "title": "最终review ZIP有旧元数据",
+      "observed": "源ZIP匹配且CRC正常；最终review ZIP中self-review和I07报告与磁盘不一致，共3个SHA字段滞后。",
+      "suggestion": "所有修订完成后一次性重打包，逐项对比压缩包与磁盘；ZIP外保存整体校验和。",
+      "recheck": "逐项SHA一致、CRC通过且冻结manifest资源未变。",
+      "evidence": [
+        "delivery/next_cycle/T4/material_closeups_final4.png"
+      ],
+      "supplemental_diagnostics": [
+        "archive_and_glb_check.json",
+        "review_pack_metadata_differences.json"
+      ]
+    },
+    {
+      "id": "N09",
+      "severity": "minor",
+      "status": "open",
+      "title": "交付边界应明确",
+      "observed": "当前为美术候选/桌面Cocos演示，不等于完整任务玩法或微信真机/性能验收。",
+      "suggestion": "交付说明限定当前范围；完整玩法与真机性能在对应阶段验收。",
+      "recheck": "文档不把界面状态入口/桌面运行宣称为完整游戏或微信发布通过。",
+      "evidence": [
+        "delivery/RUN_DEMO_v4.md"
+      ],
+      "supplemental_diagnostics": []
+    }
+  ],
+  "overall_decision": "rework",
+  "limitations": [
+    "Candidate art audit, not complete-game release review.",
+    "Desktop browser exercised; WeChat-device and mobile performance not tested.",
+    "41 UI and34 asset views contact-sheet screened; not exhaustive per-frame alpha/pivot validation.",
+    "Supplemental diagnostics are outside frozen manifest; formal evidence paths are frozen candidate items.",
+    "No approval certificate or controller attestation issued."
+  ],
+  "manifest_sha256": "2f8e63bf0e4c82d8a63a20286ff064ce89196a0d33cbfa0d5091aff9a3f58a3a",
+  "contract_sha256": "72396f78d5b4c7fab5cac0a9e714866aa786d16666a0098ee67f533e96a46ea5",
+  "contract_digest_definition": "SHA256 canonical combined contract+rubric per tools/art_harness.py; not raw contract bytes"
+}

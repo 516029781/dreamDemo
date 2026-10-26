@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>Ark-Models candidate runtime parse</title>
+  <style>
+    html, body { margin: 0; background: transparent; overflow: hidden; }
+    canvas { display: block; }
+  </style>
+</head>
+<body>
+  <script src="/vendor/pixi.js"></script>
+  <script src="/vendor/pixi-spine.js"></script>
+  <script>
+    const params = new URLSearchParams(location.search);
+    const ID = params.get('id') || '';
+    const SIZE = Number(params.get('size') || 1024);
+
+    const app = new PIXI.Application({
+      width: SIZE,
+      height: SIZE,
+      backgroundAlpha: 1,
+      backgroundColor: 0xff00ff,
+      antialias: true,
+      preserveDrawingBuffer: true,
+      powerPreference: 'high-performance'
+    });
+    document.body.appendChild(app.view);
+    window.__app = app;
+    const bg = new PIXI.Graphics();
+    bg.beginFill(0xff00ff);
+    bg.drawRect(0, 0, SIZE, SIZE);
+    bg.endFill();
+    app.stage.addChild(bg);
+
+    const logs = [];
+    function log(...args) {
+      const line = args.map(a => typeof a === 'string' ? a : JSON.stringify(a)).join(' ');
+      logs.push(line);
+      console.log(line);
+    }
+
+    function captureImages() {
+      app.renderer.render(app.stage);
+      const view = app.view.toDataURL('image/png');
+      const extractCanvas = app.renderer.extract.canvas(app.stage, new PIXI.Rectangle(0, 0, SIZE, SIZE), 1);
+      const extract = extractCanvas.toDataURL('image/png');
+      return { view, extract };
+    }
+    function fitSpine(spine) {
+      spine.skeleton.updateWorldTransform();
+      const b = spine.getLocalBounds();
+      const pad = 36;
+      const scale = Math.min((SIZE - pad * 2) / Math.max(1, b.width), (SIZE - pad * 2) / Math.max(1, b.height));
+      spine.scale.set(scale);
+      spine.x = SIZE / 2 - (b.x + b.width / 2) * scale;
+      spine.y = SIZE / 2 - (b.y + b.height / 2) * scale;
+      spine.skeleton.updateWorldTransform();
+      return { localBounds: { x: b.x, y: b.y, width: b.width, height: b.height }, scale };
+    }
+    function applyPose(spine, animName, time) {
+      spine.autoUpdate = false;
+      spine.state.clearTracks();
+      if (animName) {
+        const anim = spine.spineData.animations.find(a => a.name === animName);
+        if (!anim) throw new Error('animation not found: ' + animName);
+        spine.state.setAnimation(0, animName, true);
+        spine.state.update(time);
+        spine.update(0);
+        return { name: anim.name, duration: anim.duration, time };
+      }
+      spine.skeleton.setToSetupPose();
+      spine.skeleton.updateWorldTransform();
+      spine.update(0);
+      return { name: null, duration: 0, time: 0, setup: true };
+    }
+
+    (async () => {
+      try {
+        if (PIXI.spine.SpineParser && PIXI.spine.SpineParser.registerLoaderPlugin) {
+          PIXI.spine.SpineParser.registerLoaderPlugin();
+        }
+        log('PIXI', PIXI.VERSION, 'pixi-spine', (PIXI.spine && PIXI.spine.VERSION) || '3.0.16');
+        const loader = new PIXI.Loader();
+        loader.add('candidate', '/model/' + ID + '/' + ID + '.skel');
+        loader.onError.add(err => log('LOADER_ERROR', String(err)));
+        loader.load(async (loader, resources) => {
+          try {
+            const data = resources.candidate.spineData;
+            if (!data) throw new Error('spineData missing; atlas/loader failed');
+            const skins = (data.skins || []).map(s => s.name);
+            const animations = (data.animations || []).map(a => ({ name: a.name, duration: a.duration }));
+            const inventory = {
+              candidate_id: ID,
+              extraction_method: 'runtime_parse',
+              runtime: { name: 'pixi-spine (Spine 3.8 runtime)', version: (PIXI.spine && PIXI.spine.VERSION) || '3.0.16', host: 'Chromium headless WebGL' },
+              skeleton_version: data.version,
+              width: data.width,
+              height: data.height,
+              fps: data.fps,
+              skins,
+              animations,
+              bones: (data.bones || []).map(b => b.name),
+              slots: (data.slots || []).map(s => s.name)
+            };
+            log('skins:', skins);
+            log('animations:', animations);
+            log('skeleton:', data.version, data.width + 'x' + data.height, 'fps', data.fps);
+            const spine = new PIXI.spine.Spine(data);
+            const chosenSkin = skins[0] || null;
+            if (chosenSkin) {
+              spine.skeleton.setSkinByName(chosenSkin);
+              spine.skeleton.setSlotsToSetupPose();
+              log('skin chosen:', chosenSkin);
+            }
+            app.stage.addChild(spine);
+            window.__spine = spine;
+            window.__inventory = inventory;
+
+            window.__setFixedCamera = () => {
+              spine.state.clearTracks();
+              spine.skeleton.setToSetupPose();
+              spine.update(0);
+              const b = spine.getLocalBounds();
+              const pad = 48;
+              const scale = Math.min((SIZE - pad * 2) / Math.max(1, b.width), (SIZE - pad * 2) / Math.max(1, b.height)) * 0.94;
+              const x = SIZE / 2 - (b.x + b.width / 2) * scale;
+              const y = SIZE / 2 - (b.y + b.height / 2) * scale;
+              window.__camera = { scale, x, y, setupBounds: { x: b.x, y: b.y, width: b.width, height: b.height } };
+              spine.scale.set(scale);
+              spine.position.set(x, y);
+              spine.update(0);
+              return window.__camera;
+            };
+            window.__renderFixed = (anim, time) => {
+              applyPose(spine, anim, time);
+              const cam = window.__camera;
+              spine.scale.set(cam.scale);
+              spine.position.set(cam.x, cam.y);
+              spine.update(0);
+              const cap = captureImages();
+              return { pose: { name: anim || 'setup', time }, camera: cam, extract: cap.extract };
+            };
+
+            await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
+            app.ticker.stop();
+            spine.autoUpdate = false;
+            window.__setFixedCamera();
+            const cap = captureImages();
+            window.__setupExtract = cap.extract;
+            window.__logs = logs.join('\n') + '\n';
+            document.title = 'DONE';
+            window.__ready = true;
+          } catch (err) {
+            log('ERROR', String(err && err.stack || err));
+            window.__logs = logs.join('\n') + '\n';
+            document.title = 'ERROR';
+          }
+        });
+      } catch (err) {
+        log('FATAL', String(err && err.stack || err));
+        window.__logs = logs.join('\n') + '\n';
+        document.title = 'ERROR';
+      }
+    })();
+  </script>
+</body>
+</html>

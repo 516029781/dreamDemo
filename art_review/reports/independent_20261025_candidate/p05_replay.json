@@ -1,0 +1,170 @@
+{
+  "kind": "p05_selfcheck_quality_checks",
+  "checker_sha256": "f7b263d008d10c3604966247b07e59f432a3f7ed4612c26da0a88ddf619e3647",
+  "checks_sha256": "ea59c490cfa70074b664a9524644014c3b26f629711809d5d3e6b9c6b6ee6807",
+  "cases": [
+    {
+      "case": "all_pass",
+      "expected": "pass",
+      "actual": "pass",
+      "pass": true,
+      "failed": [],
+      "pending": [],
+      "warnings": [
+        "Q09 device_tested=false: browser adaptation only; no real-device claim"
+      ]
+    },
+    {
+      "case": "missing_q03",
+      "expected": "pending",
+      "actual": "pending",
+      "pass": true,
+      "failed": [],
+      "pending": [
+        "Q03"
+      ],
+      "warnings": [
+        "Q09 device_tested=false: browser adaptation only; no real-device claim"
+      ]
+    },
+    {
+      "case": "q04_no_touch",
+      "expected": "fail",
+      "actual": "fail",
+      "pass": true,
+      "failed": [
+        "Q04"
+      ],
+      "pending": [],
+      "warnings": [
+        "Q09 device_tested=false: browser adaptation only; no real-device claim"
+      ]
+    },
+    {
+      "case": "q04_pause_drift",
+      "expected": "fail",
+      "actual": "fail",
+      "pass": true,
+      "failed": [
+        "Q04"
+      ],
+      "pending": [],
+      "warnings": [
+        "Q09 device_tested=false: browser adaptation only; no real-device claim"
+      ]
+    },
+    {
+      "case": "q05_reset_residue",
+      "expected": "fail",
+      "actual": "fail",
+      "pass": true,
+      "failed": [
+        "Q05"
+      ],
+      "pending": [],
+      "warnings": [
+        "Q09 device_tested=false: browser adaptation only; no real-device claim"
+      ]
+    },
+    {
+      "case": "q09_portrait_mock",
+      "expected": "fail",
+      "actual": "fail",
+      "pass": true,
+      "failed": [
+        "Q09"
+      ],
+      "pending": [],
+      "warnings": []
+    },
+    {
+      "case": "q06_copied_stats",
+      "expected": "fail",
+      "actual": "fail",
+      "pass": true,
+      "failed": [
+        "Q06"
+      ],
+      "pending": [],
+      "warnings": [
+        "Q09 device_tested=false: browser adaptation only; no real-device claim"
+      ]
+    },
+    {
+      "case": "q06_high_draws_is_warning_only",
+      "expected": "pass",
+      "actual": "pass",
+      "pass": true,
+      "failed": [],
+      "pending": [],
+      "warnings": [
+        "Q06 MAP001 draws 450 above warning line",
+        "Q09 device_tested=false: browser adaptation only; no real-device claim"
+      ]
+    },
+    {
+      "case": "q03_missing_behind",
+      "expected": "fail",
+      "actual": "fail",
+      "pass": true,
+      "failed": [
+        "Q03"
+      ],
+      "pending": [],
+      "warnings": [
+        "Q09 device_tested=false: browser adaptation only; no real-device claim"
+      ]
+    },
+    {
+      "case": "q05_missing_evidence_file",
+      "expected": "pending",
+      "actual": "pending",
+      "pass": true,
+      "failed": [],
+      "pending": [
+        "Q05"
+      ],
+      "warnings": [
+        "Q09 device_tested=false: browser adaptation only; no real-device claim"
+      ]
+    },
+    {
+      "case": "q01_too_small",
+      "expected": "fail",
+      "actual": "fail",
+      "pass": true,
+      "failed": [
+        "Q01"
+      ],
+      "pending": [],
+      "warnings": [
+        "Q09 device_tested=false: browser adaptation only; no real-device claim"
+      ]
+    },
+    {
+      "case": "no_capture_binding",
+      "expected": "pending",
+      "actual": "pending",
+      "pass": true,
+      "failed": [],
+      "pending": [
+        "capture_binding"
+      ],
+      "warnings": [
+        "Q09 device_tested=false: browser adaptation only; no real-device claim"
+      ]
+    }
+  ],
+  "template_structure": {
+    "template_only": true,
+    "overall_pending": true,
+    "gates_unchecked": true,
+    "quality_unchecked": true,
+    "behavior_unbound": true,
+    "checks_count": true,
+    "hard_fails_defined": true,
+    "solution_neutral": true
+  },
+  "factual_note": "All fixtures are synthetic. Passing Q06 with a procedural material (no texture atlas) demonstrates solution neutrality, not production approval.",
+  "all_passed": true
+}

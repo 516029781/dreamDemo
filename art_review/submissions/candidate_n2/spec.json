@@ -1,0 +1,265 @@
+{
+  "stage": "art_complete",
+  "character_mode": "reference_spine",
+  "production_methods": [
+    "reference_spine",
+    "blender_editable",
+    "cocos_scene_edit",
+    "svg_editable",
+    "existing_asset_import"
+  ],
+  "artifacts": [
+    {
+      "role": "clip_inventory",
+      "path": "art/phase1/character_playback_1015/clip_inventory.json"
+    },
+    {
+      "role": "idle_preview",
+      "path": "art/phase1/character_playback_1015/idle_preview.png"
+    },
+    {
+      "role": "move_preview",
+      "path": "art/phase1/character_playback_1015/move_preview.gif"
+    },
+    {
+      "role": "reference_comparison",
+      "path": "art/phase1/character_playback_1015/reference_comparison.png"
+    },
+    {
+      "role": "runtime_log",
+      "path": "art/phase1/character_playback_1015/runtime_log.txt"
+    },
+    {
+      "role": "scene_screenshot",
+      "path": "delivery/next_cycle/T3/game_finalN2_formal_no_ui.png"
+    },
+    {
+      "role": "dialogue_screenshot",
+      "path": "delivery/next_cycle/T3/game_finalN2_dialogue.png"
+    },
+    {
+      "role": "demo_recording",
+      "path": "delivery/next_cycle/T6/demo_current.gif"
+    },
+    {
+      "role": "engine_sources",
+      "path": "delivery/courtyard_scene_demo_sources_v5.zip"
+    },
+    {
+      "role": "run_instructions",
+      "path": "delivery/RUN_DEMO_v5.md"
+    },
+    {
+      "role": "map_editable_source",
+      "path": "art/full/source/layout/MAP001_courtyard.blend"
+    },
+    {
+      "role": "ui_editable_source",
+      "path": "art/full/ui/components/paper_panel.svg"
+    },
+    {
+      "role": "full_art_catalog",
+      "path": "art/iterations/cycle_03/full_art_catalog.json"
+    },
+    {
+      "role": "ui_state_index",
+      "path": "delivery/next_cycle/T6/state_index.json"
+    },
+    {
+      "role": "capture_bindings",
+      "path": "art_review/submissions/candidate_n2/bindings/summary.json"
+    },
+    {
+      "role": "quality_results",
+      "path": "delivery/next_cycle/N_rework/behavior_results_n.json"
+    },
+    {
+      "role": "runtime_stats",
+      "path": "delivery/next_cycle/T5/q06_stats.json"
+    },
+    {
+      "role": "occlusion_evidence",
+      "path": "delivery/next_cycle/T5/q03_occlusion.json"
+    },
+    {
+      "role": "sample_no_ui",
+      "path": "delivery/next_cycle/T2/sample_no_ui.png"
+    },
+    {
+      "role": "sample_hud",
+      "path": "delivery/next_cycle/T2/sample_hud.png"
+    },
+    {
+      "role": "sample_dialogue",
+      "path": "delivery/next_cycle/T2/sample_dialogue.png"
+    },
+    {
+      "role": "reference_comparison_scene",
+      "path": "delivery/next_cycle/T2/reference_comparison.png"
+    },
+    {
+      "role": "n01_tree_hedge",
+      "path": "delivery/next_cycle/T4/N01_tree_hedge_before_after.png"
+    },
+    {
+      "role": "n02_shadow",
+      "path": "delivery/next_cycle/T4/N02_shadow_before_after.png"
+    },
+    {
+      "role": "n02_material",
+      "path": "delivery/next_cycle/T4/N02_material_closeups.png"
+    },
+    {
+      "role": "n03_ui",
+      "path": "delivery/next_cycle/T4/N03_ui_before_after.png"
+    },
+    {
+      "role": "n04_bbox_sheet",
+      "path": "delivery/next_cycle/T4/N04_actor_bbox.png"
+    },
+    {
+      "role": "n04_visible",
+      "path": "delivery/next_cycle/N_rework/N04_actor_visible.png"
+    },
+    {
+      "role": "n04_hidden",
+      "path": "delivery/next_cycle/N_rework/N04_actor_hidden.png"
+    },
+    {
+      "role": "n04_bbox_json",
+      "path": "delivery/next_cycle/N_rework/N04_bbox.json"
+    },
+    {
+      "role": "n05_orientation",
+      "path": "delivery/next_cycle/T4/N05_orientation.png"
+    },
+    {
+      "role": "n05_orientation_json",
+      "path": "delivery/next_cycle/N_rework/N05_orientation.json"
+    },
+    {
+      "role": "n07_animation_sheet",
+      "path": "delivery/next_cycle/T6/character_n/N07_animation_sheet.png"
+    },
+    {
+      "role": "n07_animation_json",
+      "path": "delivery/next_cycle/T6/character_n/N07_animation.json"
+    },
+    {
+      "role": "n07_idle_gif",
+      "path": "delivery/next_cycle/T6/character_n/char_idle.gif"
+    },
+    {
+      "role": "n07_move_gif",
+      "path": "delivery/next_cycle/T6/character_n/char_move.gif"
+    },
+    {
+      "role": "q01_camera",
+      "path": "delivery/next_cycle/T5/q01_camera.json"
+    },
+    {
+      "role": "q02_reference",
+      "path": "delivery/next_cycle/N_rework/q02_reference.json"
+    },
+    {
+      "role": "q03_front",
+      "path": "delivery/next_cycle/T5/q03_front.png"
+    },
+    {
+      "role": "q03_behind",
+      "path": "delivery/next_cycle/T5/q03_behind.png"
+    },
+    {
+      "role": "q04_behavior",
+      "path": "delivery/next_cycle/T5/q04_behavior.json"
+    },
+    {
+      "role": "q05_board_empty",
+      "path": "delivery/next_cycle/T5/q05_board_empty.png"
+    },
+    {
+      "role": "q05_board_full",
+      "path": "delivery/next_cycle/T5/q05_board_full.png"
+    },
+    {
+      "role": "q05_board_reset",
+      "path": "delivery/next_cycle/T5/q05_board_reset.png"
+    },
+    {
+      "role": "q05_board_json",
+      "path": "delivery/next_cycle/T5/q05_board.json"
+    },
+    {
+      "role": "q06_stats",
+      "path": "delivery/next_cycle/T5/q06_stats.json"
+    },
+    {
+      "role": "q08_binding",
+      "path": "delivery/next_cycle/N_rework/q08_evidence_binding.json"
+    },
+    {
+      "role": "q09_landscape",
+      "path": "delivery/next_cycle/T5/q09_landscape_1280x720.png"
+    },
+    {
+      "role": "q09_portrait",
+      "path": "delivery/next_cycle/T5/q09_portrait_720x1280.png"
+    },
+    {
+      "role": "q09_viewports",
+      "path": "delivery/next_cycle/T5/q09_viewports.json"
+    },
+    {
+      "role": "quality_assessment",
+      "path": "delivery/next_cycle/N_rework/quality_check_n.json"
+    },
+    {
+      "role": "lighting_settings",
+      "path": "delivery/next_cycle/T2/lighting_settings_finalN2.json"
+    },
+    {
+      "role": "finalN2_shots",
+      "path": "delivery/next_cycle/T3/game_finalN2_shots.json"
+    },
+    {
+      "role": "capture_bindings_summary",
+      "path": "art_review/submissions/candidate_n2/bindings/summary.json"
+    },
+    {
+      "role": "finalN2_binding_formal_no_ui",
+      "path": "art_review/submissions/candidate_n2/bindings/binding_formal_no_ui.json"
+    },
+    {
+      "role": "finalN2_binding_formal_ui",
+      "path": "art_review/submissions/candidate_n2/bindings/binding_formal_ui.json"
+    },
+    {
+      "role": "finalN2_binding_dialogue",
+      "path": "art_review/submissions/candidate_n2/bindings/binding_dialogue.json"
+    },
+    {
+      "role": "build_report",
+      "path": "delivery/performance/cocos_build_20261025_035037.json"
+    },
+    {
+      "role": "build_log",
+      "path": "tools/cocos/logs/build_web_desktop.log"
+    },
+    {
+      "role": "catalog_review_sample",
+      "path": "art/iterations/cycle_03/reviews/ENV006.json"
+    },
+    {
+      "role": "n06_evidence_index",
+      "path": "delivery/next_cycle/N_rework/N06_evidence_index.json"
+    },
+    {
+      "role": "mat_finalN2_ENV001",
+      "path": "delivery/next_cycle/T3/mat_finalN2_ENV001.png"
+    },
+    {
+      "role": "mat_finalN2_ENV006",
+      "path": "delivery/next_cycle/T3/mat_finalN2_ENV006.png"
+    }
+  ]
+}

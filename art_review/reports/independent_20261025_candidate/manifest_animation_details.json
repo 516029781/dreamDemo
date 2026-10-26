@@ -1,0 +1,38 @@
+[
+  {
+    "path": "delivery/next_cycle/T6/demo_current.gif",
+    "frames": 16,
+    "unique_frames": 16,
+    "size": [
+      640,
+      360
+    ]
+  },
+  {
+    "path": "art/phase1/character_playback_1015/move_preview.gif",
+    "frames": 30,
+    "unique_frames": 30,
+    "size": [
+      512,
+      512
+    ]
+  },
+  {
+    "path": "delivery/next_cycle/T6/character/char_move.gif",
+    "frames": 12,
+    "unique_frames": 1,
+    "size": [
+      640,
+      360
+    ]
+  },
+  {
+    "path": "delivery/next_cycle/T6/character/char_idle.gif",
+    "frames": 12,
+    "unique_frames": 1,
+    "size": [
+      640,
+      360
+    ]
+  }
+]

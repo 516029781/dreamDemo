@@ -1,0 +1,142 @@
+{
+  "binding_version": "vnext.capture_binding/1.0.0",
+  "binding_id": "cap-finalN-formal_no_ui",
+  "stage": "scene_demo",
+  "created_at": "2026-10-24T19:59:08.417515+00:00",
+  "backend": {
+    "name": "cocos-creator-web-desktop",
+    "version": "3.8.8"
+  },
+  "viewport": {
+    "browser_width": 1280,
+    "browser_height": 720,
+    "scroll_x": 0,
+    "scroll_y": 0,
+    "device_pixel_ratio": 1
+  },
+  "canvas": {
+    "selector": "#GameCanvas",
+    "css_rect": {
+      "x": 5,
+      "y": 5,
+      "width": 1280,
+      "height": 720
+    },
+    "backing_width": 1280,
+    "backing_height": 720,
+    "capture_method": "element_screenshot",
+    "page_screenshot": false
+  },
+  "camera": {
+    "node": "Main Camera",
+    "position": [
+      -2.5,
+      11.5,
+      -14.6
+    ],
+    "rotation": [
+      -36.276619358317014,
+      180,
+      0
+    ],
+    "fov": 37.5,
+    "clip_time": null
+  },
+  "sources": [
+    {
+      "role": "map_blend",
+      "path": "art/full/source/layout/MAP001_courtyard.blend",
+      "sha256": "78df1d0d2a2306078059d888ab2afd67ea7540b9940fe1041972245bced993e4"
+    },
+    {
+      "role": "tree_blend",
+      "path": "art/full/source/environment/ENV006_autumn_tree.blend",
+      "sha256": "40cf01866d80b5b7dba4fb40e60939484ffd3ec26b6c93c68be8864f8f2c02d1"
+    },
+    {
+      "role": "map_script",
+      "path": "tools/blender/build_map001.py",
+      "sha256": "68dcfd141df797bcf72e374db27fe914e748b6176b8ad5a92aaa0dad11780b76"
+    },
+    {
+      "role": "tree_script",
+      "path": "tools/blender/build_env_courtyard.py",
+      "sha256": "2c10849fdd58ec619d9f2b864952b0dcfa1c0fb3e3c887b248fcd0dec6eaf452"
+    },
+    {
+      "role": "engine_bootstrap",
+      "path": "demo/assets/scripts/CourtyardBootstrap.ts",
+      "sha256": "96f9f016c04ed0ef0b174ba4a6601356fea32f88c949e06f44a49d3988753eb1"
+    }
+  ],
+  "exports": [
+    {
+      "role": "map_glb",
+      "path": "art/full/source/layout/MAP001_courtyard.glb",
+      "sha256": "809e2d2be5726f4c0c31e64602f1c3763e8de234edffec40efc15354c34b4a91"
+    },
+    {
+      "role": "engine_glb",
+      "path": "demo/assets/resources/models/MAP001_courtyard.glb",
+      "sha256": "809e2d2be5726f4c0c31e64602f1c3763e8de234edffec40efc15354c34b4a91"
+    }
+  ],
+  "shared_inputs": [
+    {
+      "role": "texture",
+      "path": "art/full/source/textures/tex_stone_tiles.png",
+      "sha256": "641820ea55acff3d115d50ac2a118b0ac71a0d0f1eeb6e96a4dc8148efdc319f",
+      "scope": [
+        "MAP001"
+      ]
+    },
+    {
+      "role": "texture",
+      "path": "art/full/source/textures/tex_wood_grain.png",
+      "sha256": "daa4da581bbd33c7a81408574de154b3e7867f6f34faa32c42980acb3610d578",
+      "scope": [
+        "MAP001"
+      ]
+    },
+    {
+      "role": "texture",
+      "path": "art/full/source/textures/tex_metal_brushed.png",
+      "sha256": "a711f90a3310a30b41b47a34393cbcffed96b2ce94ddd71a6da3b9dff6201948",
+      "scope": [
+        "MAP001"
+      ]
+    },
+    {
+      "role": "texture",
+      "path": "art/full/source/textures/tex_soil_noise.png",
+      "sha256": "805d897061a8ec26233325a3d51ebeed7b1066cdb33047d7d5fc15743f00dfae",
+      "scope": [
+        "MAP001"
+      ]
+    },
+    {
+      "role": "texture",
+      "path": "art/full/source/textures/tex_bark.png",
+      "sha256": "e454adb01dbe940c8b536b517eeff13c49ba2b5a756616c6ecefaaa0cf782981",
+      "scope": [
+        "MAP001"
+      ]
+    }
+  ],
+  "build": {
+    "build_id": "cocos-web-desktop-cocos_build_20261025_035037",
+    "log_path": "tools/cocos/logs/build_web_desktop.log",
+    "log_sha256": "893d667084f244e997bbbf403918de67cad537474c1805762b44de362dccbc29",
+    "result": "success"
+  },
+  "output": {
+    "path": "delivery/next_cycle/T3/game_finalN_formal_no_ui.png",
+    "sha256": "d596d0ce73939fb02c84f697b73e752b1570e0d1737512d2fdde1edfbe29bde9",
+    "width": 1280,
+    "height": 720
+  },
+  "notes": [
+    "FOV 37.5 composition calibration; Spine source scale unchanged.",
+    "Cocos 3.8.8 exit 36 accepted only by the versioned gate rule with output present."
+  ]
+}

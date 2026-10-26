@@ -1,0 +1,908 @@
+{
+  "manifest_sha256": "fe1b91e2b86734241270b4111cf861d3881ef5e103c29e313d145116f79fd95c",
+  "contract_sha256": "dfb3692699b94d126e652dc78c5341917db26251e7df8299f192661a9dc5a883",
+  "artifacts_checked": 13,
+  "artifact_hash_failures": [],
+  "catalog_items": 47,
+  "engine_verified_with_nonempty_blockers": [
+    {
+      "id": "MAP001",
+      "status": "engine_verified",
+      "blockers": [
+        "Cocos/微信导入与引擎截图未做；程序化材质未烘焙为引擎贴图。",
+        "独立审核未做；不能计 engine_verified/approved。",
+        "MAP001 的 NPC 尚未放入；Cocos 引擎导入未做。",
+        "layout verifier PASS 是 Blender/数据检查，不是引擎验收。"
+      ],
+      "notes": "Full 28x20 courtyard layout: 129 instances, 22 collision proxies, 5 interactions, 92,976 tris, layout.json; Blender verifier PASS; no engine screenshot."
+    },
+    {
+      "id": "ENV001",
+      "status": "engine_verified",
+      "blockers": [
+        "Cocos 导入/引擎截图未做；程序化材质未烘焙为引擎贴图；UV 未展开。",
+        "石板 5,196 tris/16m²，铺满全图的预算需合并/实例化后再验证。",
+        "独立审核未做。"
+      ],
+      "notes": "Blender 4.5.15 native module; 4x4m, base-centre origin, 48 slabs, 2 materials, no image planes."
+    },
+    {
+      "id": "ENV002",
+      "status": "engine_verified",
+      "blockers": [
+        "Cocos/微信导入与引擎截图未做；程序化材质未烘焙为引擎贴图。",
+        "独立审核未做；不能计 engine_verified/approved。"
+      ],
+      "notes": "Blender 4.5.15 native curb; real geometry/materials; source_ready."
+    },
+    {
+      "id": "ENV003",
+      "status": "engine_verified",
+      "blockers": [
+        "Cocos/微信导入与引擎截图未做；程序化材质未烘焙为引擎贴图。",
+        "独立审核未做；不能计 engine_verified/approved。"
+      ],
+      "notes": "Blender 4.5.15 native low_wall; real geometry/materials; source_ready."
+    },
+    {
+      "id": "ENV004",
+      "status": "engine_verified",
+      "blockers": [
+        "Cocos/微信导入与引擎截图未做；程序化材质未烘焙为引擎贴图。",
+        "独立审核未做；不能计 engine_verified/approved。"
+      ],
+      "notes": "Blender 4.5.15 native railing; real geometry/materials; source_ready."
+    },
+    {
+      "id": "ENV005",
+      "status": "engine_verified",
+      "blockers": [
+        "Cocos/微信导入与引擎截图未做；程序化材质未烘焙为引擎贴图。",
+        "独立审核未做；不能计 engine_verified/approved。"
+      ],
+      "notes": "Blender 4.5.15 native steps; real geometry/materials; source_ready."
+    },
+    {
+      "id": "ENV006",
+      "status": "engine_verified",
+      "blockers": [
+        "Cocos/微信导入与引擎截图未做；程序化材质未烘焙为引擎贴图。",
+        "独立审核未做；不能计 engine_verified/approved。"
+      ],
+      "notes": "Blender 4.5.15 native autumn_tree; real geometry/materials; source_ready."
+    },
+    {
+      "id": "ENV007",
+      "status": "engine_verified",
+      "blockers": [
+        "Cocos/微信导入与引擎截图未做；程序化材质未烘焙为引擎贴图。",
+        "独立审核未做；不能计 engine_verified/approved。"
+      ],
+      "notes": "Blender 4.5.15 native ring_planter; real geometry/materials; source_ready."
+    },
+    {
+      "id": "ENV008",
+      "status": "engine_verified",
+      "blockers": [
+        "Cocos/微信导入与引擎截图未做；程序化材质未烘焙为引擎贴图。",
+        "独立审核未做；不能计 engine_verified/approved。"
+      ],
+      "notes": "Blender 4.5.15 native side_planter; real geometry/materials; source_ready."
+    },
+    {
+      "id": "ENV009",
+      "status": "engine_verified",
+      "blockers": [
+        "Cocos/微信导入与引擎截图未做；程序化材质未烘焙为引擎贴图。",
+        "独立审核未做；不能计 engine_verified/approved。"
+      ],
+      "notes": "Blender native shrub_a; real geometry; source_ready."
+    },
+    {
+      "id": "ENV010",
+      "status": "engine_verified",
+      "blockers": [
+        "Cocos/微信导入与引擎截图未做；程序化材质未烘焙为引擎贴图。",
+        "独立审核未做；不能计 engine_verified/approved。"
+      ],
+      "notes": "Blender native shrub_b; real geometry; source_ready."
+    },
+    {
+      "id": "ENV011",
+      "status": "engine_verified",
+      "blockers": [
+        "Cocos/微信导入与引擎截图未做；程序化材质未烘焙为引擎贴图。",
+        "独立审核未做；不能计 engine_verified/approved。"
+      ],
+      "notes": "Blender native dry_grass; real geometry; source_ready."
+    },
+    {
+      "id": "ENV012",
+      "status": "engine_verified",
+      "blockers": [
+        "Cocos/微信导入与引擎截图未做；程序化材质未烘焙为引擎贴图。",
+        "独立审核未做；不能计 engine_verified/approved。"
+      ],
+      "notes": "Blender native fallen_leaves; real geometry; source_ready."
+    },
+    {
+      "id": "PROP001",
+      "status": "engine_verified",
+      "blockers": [
+        "Cocos 导入/引擎截图未做；材质未烘焙。",
+        "全图摆放、碰撞与遮挡未验证；独立审核未做。"
+      ],
+      "notes": "Blender 4.5.15 native bench: 1.61x0.623x0.905m, seat 0.44m, wood + metal, 1944 tris."
+    },
+    {
+      "id": "PROP002",
+      "status": "engine_verified",
+      "blockers": [
+        "Cocos/微信导入与引擎截图未做；程序化材质未烘焙为引擎贴图。",
+        "独立审核未做；不能计 engine_verified/approved。"
+      ],
+      "notes": "Blender native pergola; source_ready."
+    },
+    {
+      "id": "PROP003",
+      "status": "engine_verified",
+      "blockers": [
+        "Cocos/微信导入与引擎截图未做；程序化材质未烘焙为引擎贴图。",
+        "独立审核未做；不能计 engine_verified/approved。"
+      ],
+      "notes": "Blender native message_board with 3 state previews; source_ready."
+    },
+    {
+      "id": "PROP004",
+      "status": "engine_verified",
+      "blockers": [
+        "Cocos/微信导入与引擎截图未做；程序化材质未烘焙为引擎贴图。",
+        "独立审核未做；不能计 engine_verified/approved。"
+      ],
+      "notes": "Blender native lamp; source_ready."
+    },
+    {
+      "id": "PROP005",
+      "status": "engine_verified",
+      "blockers": [
+        "Cocos/微信导入与引擎截图未做；程序化材质未烘焙为引擎贴图。",
+        "独立审核未做；不能计 engine_verified/approved。"
+      ],
+      "notes": "Blender native direction_sign; source_ready."
+    },
+    {
+      "id": "PROP006",
+      "status": "engine_verified",
+      "blockers": [
+        "Cocos/微信导入与引擎截图未做；程序化材质未烘焙为引擎贴图。",
+        "独立审核未做；不能计 engine_verified/approved。"
+      ],
+      "notes": "Blender native postcards; source_ready."
+    },
+    {
+      "id": "MAT001",
+      "status": "engine_verified",
+      "blockers": [
+        "Cocos/微信导入与引擎截图未做；程序化材质未烘焙为引擎贴图。",
+        "独立审核未做；不能计 engine_verified/approved。",
+        "材质族需要烘焙到引擎可用贴图。"
+      ],
+      "notes": "Native material family stone; source_ready; engine bake/UV pending."
+    },
+    {
+      "id": "MAT002",
+      "status": "engine_verified",
+      "blockers": [
+        "Cocos/微信导入与引擎截图未做；程序化材质未烘焙为引擎贴图。",
+        "独立审核未做；不能计 engine_verified/approved。",
+        "材质族需要烘焙到引擎可用贴图。"
+      ],
+      "notes": "Native material family wood; source_ready; engine bake/UV pending."
+    },
+    {
+      "id": "MAT003",
+      "status": "engine_verified",
+      "blockers": [
+        "Cocos/微信导入与引擎截图未做；程序化材质未烘焙为引擎贴图。",
+        "独立审核未做；不能计 engine_verified/approved。",
+        "材质族需要烘焙到引擎可用贴图。"
+      ],
+      "notes": "Native material family metal; source_ready; engine bake/UV pending."
+    },
+    {
+      "id": "MAT004",
+      "status": "engine_verified",
+      "blockers": [
+        "Cocos/微信导入与引擎截图未做；程序化材质未烘焙为引擎贴图。",
+        "独立审核未做；不能计 engine_verified/approved。",
+        "材质族需要烘焙到引擎可用贴图。"
+      ],
+      "notes": "Native material family leaf_grass; source_ready; engine bake/UV pending."
+    },
+    {
+      "id": "MAT005",
+      "status": "engine_verified",
+      "blockers": [
+        "Cocos/微信导入与引擎截图未做；程序化材质未烘焙为引擎贴图。",
+        "独立审核未做；不能计 engine_verified/approved。",
+        "材质族需要烘焙到引擎可用贴图。"
+      ],
+      "notes": "Native material family paper; source_ready; engine bake/UV pending."
+    },
+    {
+      "id": "LOOK001",
+      "status": "engine_verified",
+      "blockers": [
+        "Cocos/微信导入与引擎截图未做；程序化材质未烘焙为引擎贴图。",
+        "独立审核未做；不能计 engine_verified/approved。",
+        "引擎内同一机位截图未做。"
+      ],
+      "notes": "Native LOOK001: 45° camera, vertical FOV 35, warm/cool rig, scale pole; Cycles preview, not Cocos."
+    },
+    {
+      "id": "CHAR001",
+      "status": "engine_verified",
+      "blockers": [
+        "换源已由用户/控制器于 2026-10-24 批准为 1015_aglna2 default；旧 291 证据保留历史。",
+        "独立 H09/H05 视觉审核仍未完成；本模型是 alter，不是 291 的 skin。",
+        "未做 Cocos/微信导入；未验证背面、完整动作和接地。"
+      ],
+      "notes": "Source switch approved; new 1015 evidence in art/phase1/character_playback_1015/. Not independently approved."
+    },
+    {
+      "id": "CHAR002",
+      "status": "engine_verified",
+      "blockers": [
+        "真实动作清单/idle/Move 已从 1015 runtime 重新产出；H09/H05 独立审核未完成。",
+        "尚无 Cocos 引擎导入和游戏内动作调校；不能计 engine_verified。"
+      ],
+      "notes": "1015_aglna2: Relax 4s idle, Move 1s; 30fps GIF; source switch approved."
+    },
+    {
+      "id": "CHAR003",
+      "status": "engine_verified",
+      "blockers": [
+        "用户/控制器已批准静态切片路线；mask 是手工向量遮罩，边缘/局部背景仍需清理复核。",
+        "P1 参考是暖光低分辨率视频帧；无背面、无干净全身板。",
+        "未导入 Cocos/微信，未做独立角色卡审核。"
+      ],
+      "notes": "Real P1 t054 static slice; manual mask; right girl/cone excluded; full visible front contour; candidate only."
+    },
+    {
+      "id": "CHAR004",
+      "status": "engine_verified",
+      "blockers": [
+        "独立审核与 Cocos 导入未做；是 chibi runtime 裁切，不是专属官方头像。"
+      ],
+      "notes": "1015_aglna2 approved source; real runtime head crop; integrated in UI dialogue."
+    },
+    {
+      "id": "CHAR005",
+      "status": "engine_verified",
+      "blockers": [
+        "P1 参考裁切分辨率有限；独立审核与引擎验证未做；与全身静态切片一样需复核。"
+      ],
+      "notes": "Real P1 t054 reference head crop; integrated in UI dialogue; no AI."
+    },
+    {
+      "id": "UI001",
+      "status": "engine_verified",
+      "blockers": [
+        "Cocos/微信未验证；字体未随包交付；独立审核未做。"
+      ],
+      "notes": "Title initial/pressed/loading; 1280x720 previews."
+    },
+    {
+      "id": "UI002",
+      "status": "engine_verified",
+      "blockers": [
+        "Cocos/微信未验证；字体未随包交付；独立审核未做。"
+      ],
+      "notes": "Loading progress/failure/retry."
+    },
+    {
+      "id": "UI003",
+      "status": "engine_verified",
+      "blockers": [
+        "Cocos/微信未验证；字体未随包交付；独立审核未做。"
+      ],
+      "notes": "HUD talk/0..3/submit/done."
+    },
+    {
+      "id": "UI004",
+      "status": "engine_verified",
+      "blockers": [
+        "Cocos/微信未验证；字体未随包交付；独立审核未做。"
+      ],
+      "notes": "Joystick idle/drag/hidden."
+    },
+    {
+      "id": "UI005",
+      "status": "engine_verified",
+      "blockers": [
+        "Cocos/微信未验证；字体未随包交付；独立审核未做。"
+      ],
+      "notes": "Interaction talk/pick/place/view/pressed/disabled/hidden."
+    },
+    {
+      "id": "UI006",
+      "status": "engine_verified",
+      "blockers": [
+        "无 Cocos/微信验证；字体未随包；主角/NPC 头像已接真实裁切，但最终独立审核未做。"
+      ],
+      "notes": "Dialogue two speakers/pages/accept; portraits integrated: player 1015 runtime crop, gardener P1 reference crop (full-body slice candidate); no old messenger story."
+    },
+    {
+      "id": "UI007",
+      "status": "engine_verified",
+      "blockers": [
+        "Cocos/微信未验证；字体未随包交付；独立审核未做。"
+      ],
+      "notes": "Pause resume/mute on-off/restart."
+    },
+    {
+      "id": "UI008",
+      "status": "engine_verified",
+      "blockers": [
+        "Cocos/微信未验证；字体未随包交付；独立审核未做。"
+      ],
+      "notes": "Complete three cards/continue; restart in component state."
+    },
+    {
+      "id": "UI009",
+      "status": "engine_verified",
+      "blockers": [
+        "Cocos/微信未验证；字体未随包交付；独立审核未做。"
+      ],
+      "notes": "Pickup/task update/error toasts."
+    },
+    {
+      "id": "UI010",
+      "status": "engine_verified",
+      "blockers": [
+        "Cocos/微信未验证；字体未随包交付；独立审核未做。"
+      ],
+      "notes": "First-move/first-interact tips."
+    },
+    {
+      "id": "UI011",
+      "status": "engine_verified",
+      "blockers": [
+        "Cocos/微信未验证；字体未随包交付；独立审核未做。"
+      ],
+      "notes": "Safe area and 720x1280 rotation notice."
+    },
+    {
+      "id": "UI012",
+      "status": "engine_verified",
+      "blockers": [
+        "Cocos/微信未验证；字体未随包交付；独立审核未做。"
+      ],
+      "notes": "Editable path-only icon family at 24/32/48; no images/text."
+    },
+    {
+      "id": "UI013",
+      "status": "engine_verified",
+      "blockers": [
+        "Cocos/微信未验证；字体未随包交付；独立审核未做。"
+      ],
+      "notes": "Tokens/font manifest/9-slice spec; fonts not bundled."
+    },
+    {
+      "id": "FX001",
+      "status": "engine_verified",
+      "blockers": [
+        "Cocos/微信实测未做；独立审核未做。"
+      ],
+      "notes": "World-space foot contact shadow SVG + parameters; follows actor, not screen-locked."
+    },
+    {
+      "id": "FX002",
+      "status": "engine_verified",
+      "blockers": [
+        "Cocos/微信拾取 burst 与残影未验证；独立审核未做。"
+      ],
+      "notes": "World-target ring/sparkle states near/pickup/disabled; editable SVG + JS-free spec."
+    },
+    {
+      "id": "FX003",
+      "status": "engine_verified",
+      "blockers": [
+        "Cocos/微信三卡显现与重置未验证；独立审核未做。"
+      ],
+      "notes": "Three-card reveal/ribbon/empty-reset spec + PROP003 model states."
+    },
+    {
+      "id": "PACK001",
+      "status": "engine_verified",
+      "blockers": [
+        "47 组未全部 engine_verified/approved；2 组 candidate（CHAR001/CHAR003）。",
+        "字体未随包交付；Cocos/微信构建、独立审核与 controller 签认未完成。"
+      ],
+      "notes": "Complete source/preview inventory and per-item paths; not a full-art acceptance."
+    }
+  ],
+  "technical_reviews": [
+    {
+      "id": "MAP001",
+      "decision": "pass",
+      "reviewer": "producer technical engine check (not independent stage signoff)",
+      "limitations": [],
+      "evidence": [
+        "art/full/previews/engine/assets/MAP001.png"
+      ]
+    },
+    {
+      "id": "ENV001",
+      "decision": "pass",
+      "reviewer": "producer technical engine check (not independent stage signoff)",
+      "limitations": [],
+      "evidence": [
+        "art/full/previews/engine/assets/ENV001.png"
+      ]
+    },
+    {
+      "id": "ENV002",
+      "decision": "pass",
+      "reviewer": "producer technical engine check (not independent stage signoff)",
+      "limitations": [],
+      "evidence": [
+        "art/full/previews/engine/assets/ENV002.png"
+      ]
+    },
+    {
+      "id": "ENV003",
+      "decision": "pass",
+      "reviewer": "producer technical engine check (not independent stage signoff)",
+      "limitations": [],
+      "evidence": [
+        "art/full/previews/engine/assets/ENV003.png"
+      ]
+    },
+    {
+      "id": "ENV004",
+      "decision": "pass",
+      "reviewer": "producer technical engine check (not independent stage signoff)",
+      "limitations": [],
+      "evidence": [
+        "art/full/previews/engine/assets/ENV004.png"
+      ]
+    },
+    {
+      "id": "ENV005",
+      "decision": "pass",
+      "reviewer": "producer technical engine check (not independent stage signoff)",
+      "limitations": [],
+      "evidence": [
+        "art/full/previews/engine/assets/ENV005.png"
+      ]
+    },
+    {
+      "id": "ENV006",
+      "decision": "pass",
+      "reviewer": "producer technical engine check (not independent stage signoff)",
+      "limitations": [],
+      "evidence": [
+        "art/full/previews/engine/assets/ENV006.png"
+      ]
+    },
+    {
+      "id": "ENV007",
+      "decision": "pass",
+      "reviewer": "producer technical engine check (not independent stage signoff)",
+      "limitations": [],
+      "evidence": [
+        "art/full/previews/engine/assets/ENV007.png"
+      ]
+    },
+    {
+      "id": "ENV008",
+      "decision": "pass",
+      "reviewer": "producer technical engine check (not independent stage signoff)",
+      "limitations": [],
+      "evidence": [
+        "art/full/previews/engine/assets/ENV008.png"
+      ]
+    },
+    {
+      "id": "ENV009",
+      "decision": "pass",
+      "reviewer": "producer technical engine check (not independent stage signoff)",
+      "limitations": [],
+      "evidence": [
+        "art/full/previews/engine/assets/ENV009.png"
+      ]
+    },
+    {
+      "id": "ENV010",
+      "decision": "pass",
+      "reviewer": "producer technical engine check (not independent stage signoff)",
+      "limitations": [],
+      "evidence": [
+        "art/full/previews/engine/assets/ENV010.png"
+      ]
+    },
+    {
+      "id": "ENV011",
+      "decision": "pass",
+      "reviewer": "producer technical engine check (not independent stage signoff)",
+      "limitations": [],
+      "evidence": [
+        "art/full/previews/engine/assets/ENV011.png"
+      ]
+    },
+    {
+      "id": "ENV012",
+      "decision": "pass",
+      "reviewer": "producer technical engine check (not independent stage signoff)",
+      "limitations": [],
+      "evidence": [
+        "art/full/previews/engine/assets/ENV012.png"
+      ]
+    },
+    {
+      "id": "PROP001",
+      "decision": "pass",
+      "reviewer": "producer technical engine check (not independent stage signoff)",
+      "limitations": [],
+      "evidence": [
+        "art/full/previews/engine/assets/PROP001.png"
+      ]
+    },
+    {
+      "id": "PROP002",
+      "decision": "pass",
+      "reviewer": "producer technical engine check (not independent stage signoff)",
+      "limitations": [],
+      "evidence": [
+        "art/full/previews/engine/assets/PROP002.png"
+      ]
+    },
+    {
+      "id": "PROP003",
+      "decision": "pass",
+      "reviewer": "producer technical engine check (not independent stage signoff)",
+      "limitations": [],
+      "evidence": [
+        "art/full/previews/engine/assets/PROP003.png"
+      ]
+    },
+    {
+      "id": "PROP004",
+      "decision": "pass",
+      "reviewer": "producer technical engine check (not independent stage signoff)",
+      "limitations": [],
+      "evidence": [
+        "art/full/previews/engine/assets/PROP004.png"
+      ]
+    },
+    {
+      "id": "PROP005",
+      "decision": "pass",
+      "reviewer": "producer technical engine check (not independent stage signoff)",
+      "limitations": [],
+      "evidence": [
+        "art/full/previews/engine/assets/PROP005.png"
+      ]
+    },
+    {
+      "id": "PROP006",
+      "decision": "pass",
+      "reviewer": "producer technical engine check (not independent stage signoff)",
+      "limitations": [],
+      "evidence": [
+        "art/full/previews/engine/assets/PROP006.png"
+      ]
+    },
+    {
+      "id": "MAT001",
+      "decision": "pass",
+      "reviewer": "producer technical engine check (not independent stage signoff)",
+      "limitations": [
+        "Engine close-up of procedural materials; no baked texture atlas claimed."
+      ],
+      "evidence": [
+        "art/full/previews/engine/assets/MAT001.png"
+      ]
+    },
+    {
+      "id": "MAT002",
+      "decision": "pass",
+      "reviewer": "producer technical engine check (not independent stage signoff)",
+      "limitations": [
+        "Engine close-up of procedural materials; no baked texture atlas claimed."
+      ],
+      "evidence": [
+        "art/full/previews/engine/assets/MAT002.png"
+      ]
+    },
+    {
+      "id": "MAT003",
+      "decision": "pass",
+      "reviewer": "producer technical engine check (not independent stage signoff)",
+      "limitations": [
+        "Engine close-up of procedural materials; no baked texture atlas claimed."
+      ],
+      "evidence": [
+        "art/full/previews/engine/assets/MAT003.png"
+      ]
+    },
+    {
+      "id": "MAT004",
+      "decision": "pass",
+      "reviewer": "producer technical engine check (not independent stage signoff)",
+      "limitations": [
+        "Engine close-up of procedural materials; no baked texture atlas claimed."
+      ],
+      "evidence": [
+        "art/full/previews/engine/assets/MAT004.png"
+      ]
+    },
+    {
+      "id": "MAT005",
+      "decision": "pass",
+      "reviewer": "producer technical engine check (not independent stage signoff)",
+      "limitations": [
+        "Engine close-up of procedural materials; no baked texture atlas claimed."
+      ],
+      "evidence": [
+        "art/full/previews/engine/assets/MAT005.png"
+      ]
+    },
+    {
+      "id": "LOOK001",
+      "decision": "pass",
+      "reviewer": "producer technical engine check (not independent stage signoff)",
+      "limitations": [],
+      "evidence": [
+        "art/full/previews/engine/assets/LOOK001.png"
+      ]
+    },
+    {
+      "id": "CHAR001",
+      "decision": "pass",
+      "reviewer": "producer technical engine check (not independent stage signoff)",
+      "limitations": [],
+      "evidence": [
+        "art/full/previews/engine/assets/CHAR001.png"
+      ]
+    },
+    {
+      "id": "CHAR002",
+      "decision": "pass",
+      "reviewer": "producer technical engine check (not independent stage signoff)",
+      "limitations": [],
+      "evidence": [
+        "art/full/previews/engine/assets/CHAR002.png"
+      ]
+    },
+    {
+      "id": "CHAR003",
+      "decision": "pass",
+      "reviewer": "producer technical engine check (not independent stage signoff)",
+      "limitations": [
+        "Static cutout + subtle sway; no official t054 Spine exists.",
+        "Edges approximate at native video resolution."
+      ],
+      "evidence": [
+        "art/full/previews/engine/assets/CHAR003.png"
+      ]
+    },
+    {
+      "id": "CHAR004",
+      "decision": "pass",
+      "reviewer": "producer technical engine check (not independent stage signoff)",
+      "limitations": [],
+      "evidence": [
+        "art/full/previews/engine/assets/CHAR004.png"
+      ]
+    },
+    {
+      "id": "CHAR005",
+      "decision": "pass",
+      "reviewer": "producer technical engine check (not independent stage signoff)",
+      "limitations": [],
+      "evidence": [
+        "art/full/previews/engine/assets/CHAR005.png"
+      ]
+    },
+    {
+      "id": "UI001",
+      "decision": "pass",
+      "reviewer": "producer technical engine check (not independent stage signoff)",
+      "limitations": [],
+      "evidence": [
+        "art/full/previews/engine/ui_states/title_initial.png",
+        "art/full/previews/engine/ui_states/title_pressed.png",
+        "art/full/previews/engine/ui_states/title_loading.png"
+      ]
+    },
+    {
+      "id": "UI002",
+      "decision": "pass",
+      "reviewer": "producer technical engine check (not independent stage signoff)",
+      "limitations": [],
+      "evidence": [
+        "art/full/previews/engine/ui_states/loading_progress.png",
+        "art/full/previews/engine/ui_states/loading_failure.png",
+        "art/full/previews/engine/ui_states/loading_retry_pressed.png"
+      ]
+    },
+    {
+      "id": "UI003",
+      "decision": "pass",
+      "reviewer": "producer technical engine check (not independent stage signoff)",
+      "limitations": [],
+      "evidence": [
+        "art/full/previews/engine/ui_states/hud_talk.png",
+        "art/full/previews/engine/ui_states/hud_0_3.png",
+        "art/full/previews/engine/ui_states/hud_1_3.png",
+        "art/full/previews/engine/ui_states/hud_2_3.png",
+        "art/full/previews/engine/ui_states/hud_3_3.png",
+        "art/full/previews/engine/ui_states/hud_submit.png",
+        "art/full/previews/engine/ui_states/hud_done.png"
+      ]
+    },
+    {
+      "id": "UI004",
+      "decision": "pass",
+      "reviewer": "producer technical engine check (not independent stage signoff)",
+      "limitations": [],
+      "evidence": [
+        "art/full/previews/engine/ui_states/joystick_idle.png",
+        "art/full/previews/engine/ui_states/joystick_drag.png",
+        "art/full/previews/engine/ui_states/joystick_hidden.png"
+      ]
+    },
+    {
+      "id": "UI005",
+      "decision": "pass",
+      "reviewer": "producer technical engine check (not independent stage signoff)",
+      "limitations": [],
+      "evidence": [
+        "art/full/previews/engine/ui_states/interact_talk.png",
+        "art/full/previews/engine/ui_states/interact_pick.png",
+        "art/full/previews/engine/ui_states/interact_place.png",
+        "art/full/previews/engine/ui_states/interact_view.png",
+        "art/full/previews/engine/ui_states/interact_pressed.png",
+        "art/full/previews/engine/ui_states/interact_disabled.png",
+        "art/full/previews/engine/ui_states/interact_hidden.png"
+      ]
+    },
+    {
+      "id": "UI006",
+      "decision": "pass",
+      "reviewer": "producer technical engine check (not independent stage signoff)",
+      "limitations": [],
+      "evidence": [
+        "art/full/previews/engine/ui_states/dialogue_gardener_p1.png",
+        "art/full/previews/engine/ui_states/dialogue_player_p2.png",
+        "art/full/previews/engine/ui_states/dialogue_accept_pressed.png"
+      ]
+    },
+    {
+      "id": "UI007",
+      "decision": "pass",
+      "reviewer": "producer technical engine check (not independent stage signoff)",
+      "limitations": [],
+      "evidence": [
+        "art/full/previews/engine/ui_states/pause_default.png",
+        "art/full/previews/engine/ui_states/pause_sound_on.png",
+        "art/full/previews/engine/ui_states/pause_restart_pressed.png"
+      ]
+    },
+    {
+      "id": "UI008",
+      "decision": "pass",
+      "reviewer": "producer technical engine check (not independent stage signoff)",
+      "limitations": [],
+      "evidence": [
+        "art/full/previews/engine/ui_states/complete_default.png",
+        "art/full/previews/engine/ui_states/complete_continue_pressed.png"
+      ]
+    },
+    {
+      "id": "UI009",
+      "decision": "pass",
+      "reviewer": "producer technical engine check (not independent stage signoff)",
+      "limitations": [],
+      "evidence": [
+        "art/full/previews/engine/ui_states/toast_pickup.png",
+        "art/full/previews/engine/ui_states/toast_task_update.png",
+        "art/full/previews/engine/ui_states/toast_error.png"
+      ]
+    },
+    {
+      "id": "UI010",
+      "decision": "pass",
+      "reviewer": "producer technical engine check (not independent stage signoff)",
+      "limitations": [],
+      "evidence": [
+        "art/full/previews/engine/ui_states/tip_first_move.png",
+        "art/full/previews/engine/ui_states/tip_first_interact.png"
+      ]
+    },
+    {
+      "id": "UI011",
+      "decision": "pass",
+      "reviewer": "producer technical engine check (not independent stage signoff)",
+      "limitations": [
+        "rotate_notice is a 1280x720 layout representation; true 720x1280 device capture pending."
+      ],
+      "evidence": [
+        "art/full/previews/engine/ui_states/safe_area_landscape.png",
+        "art/full/previews/engine/ui_states/rotate_notice.png"
+      ]
+    },
+    {
+      "id": "UI012",
+      "decision": "pass",
+      "reviewer": "producer technical engine check (not independent stage signoff)",
+      "limitations": [],
+      "evidence": [
+        "art/full/previews/engine/ui_states/spec_icons.png"
+      ]
+    },
+    {
+      "id": "UI013",
+      "decision": "pass",
+      "reviewer": "producer technical engine check (not independent stage signoff)",
+      "limitations": [],
+      "evidence": [
+        "art/full/previews/engine/ui_states/spec_type.png",
+        "art/full/previews/engine/ui_states/spec_nine_slice.png"
+      ]
+    },
+    {
+      "id": "FX001",
+      "decision": "pass",
+      "reviewer": "producer technical engine check (not independent stage signoff)",
+      "limitations": [],
+      "evidence": [
+        "art/full/previews/engine/assets/FX001.png"
+      ]
+    },
+    {
+      "id": "FX002",
+      "decision": "pass",
+      "reviewer": "producer technical engine check (not independent stage signoff)",
+      "limitations": [],
+      "evidence": [
+        "art/full/previews/engine/assets/FX002.png"
+      ]
+    },
+    {
+      "id": "FX003",
+      "decision": "pass",
+      "reviewer": "producer technical engine check (not independent stage signoff)",
+      "limitations": [],
+      "evidence": [
+        "art/full/previews/engine/assets/FX003.png"
+      ]
+    },
+    {
+      "id": "PACK001",
+      "decision": "pass",
+      "reviewer": "producer technical engine check (not independent stage signoff)",
+      "limitations": [
+        "Handoff summary is rendered in the viewer; independent review/attestation remains external."
+      ],
+      "evidence": [
+        "art/full/previews/engine/assets/PACK001.png"
+      ]
+    }
+  ],
+  "glb": {
+    "materials": 24,
+    "textures": 0,
+    "meshes": 74,
+    "triangle_count_index_accessors": 120304
+  },
+  "zip_source_check": [
+    {
+      "entry": "assets/scripts/CourtyardBootstrap.ts",
+      "matches_current": true
+    }
+  ],
+  "code_sha256": "2de1f421e838647578695e138d7ae090ae5c2b3c0383fb7403eb4ec3562054c1"
+}

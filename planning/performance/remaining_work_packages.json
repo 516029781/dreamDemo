@@ -1,0 +1,237 @@
+{
+  "status": "active_execution_package_index_not_scheduler",
+  "scope_note": "Production continues through complete candidate; external review is final, no mid-production P08/V09 stop. Review and release criteria retained.",
+  "coverage": {
+    "ledger_revision": "1.0.130",
+    "mode": "all_tasks_including_done_for_safe_future_reopen",
+    "all_task_count": 97,
+    "mapped_count": 97,
+    "unfinished_count": 76,
+    "missing": [],
+    "extra": [],
+    "duplicates": [],
+    "note": "Done tasks are hidden in the current summary; mapping them does not reopen them."
+  },
+  "packages": [
+    {
+      "id": "B01",
+      "title": "规则闭环",
+      "task_ids": [
+        "P00",
+        "P01",
+        "P02",
+        "P03",
+        "P04",
+        "P05",
+        "P06",
+        "P07"
+      ],
+      "reopened_task_ids": [
+        "P00",
+        "P02",
+        "P03"
+      ]
+    },
+    {
+      "id": "B02",
+      "title": "视觉样板返修",
+      "task_ids": [
+        "K01",
+        "K02",
+        "K03",
+        "K04",
+        "K05",
+        "K06",
+        "K07",
+        "K08",
+        "V01",
+        "V02",
+        "V03",
+        "V04",
+        "V05"
+      ],
+      "reopened_task_ids": [
+        "V01",
+        "V02",
+        "V03",
+        "V04",
+        "V05"
+      ]
+    },
+    {
+      "id": "B03",
+      "title": "样板候选冻结与制作侧预检",
+      "task_ids": [
+        "V06",
+        "V07"
+      ],
+      "reopened_task_ids": []
+    },
+    {
+      "id": "B04",
+      "title": "材质与场景母版",
+      "task_ids": [
+        "A-MAT001",
+        "A-MAT002",
+        "A-MAT003",
+        "A-MAT004",
+        "A-MAT005",
+        "A-LOOK001"
+      ],
+      "reopened_task_ids": []
+    },
+    {
+      "id": "B05",
+      "title": "环境与道具",
+      "task_ids": [
+        "A-ENV001",
+        "A-ENV002",
+        "A-ENV003",
+        "A-ENV004",
+        "A-ENV005",
+        "A-ENV006",
+        "A-ENV007",
+        "A-ENV008",
+        "A-ENV009",
+        "A-ENV010",
+        "A-ENV011",
+        "A-ENV012",
+        "A-PROP001",
+        "A-PROP002",
+        "A-PROP003",
+        "A-PROP004",
+        "A-PROP005",
+        "A-PROP006"
+      ],
+      "reopened_task_ids": []
+    },
+    {
+      "id": "B06",
+      "title": "角色资产",
+      "task_ids": [
+        "A-CHAR001",
+        "A-CHAR002",
+        "A-CHAR003",
+        "A-CHAR004",
+        "A-CHAR005"
+      ],
+      "reopened_task_ids": []
+    },
+    {
+      "id": "B07",
+      "title": "全套UI",
+      "task_ids": [
+        "A-UI001",
+        "A-UI002",
+        "A-UI003",
+        "A-UI004",
+        "A-UI005",
+        "A-UI006",
+        "A-UI007",
+        "A-UI008",
+        "A-UI009",
+        "A-UI010",
+        "A-UI011",
+        "A-UI012",
+        "A-UI013"
+      ],
+      "reopened_task_ids": []
+    },
+    {
+      "id": "B08",
+      "title": "世界反馈",
+      "task_ids": [
+        "A-FX001",
+        "A-FX002",
+        "A-FX003"
+      ],
+      "reopened_task_ids": []
+    },
+    {
+      "id": "B09",
+      "title": "地图集成",
+      "task_ids": [
+        "A-MAP001"
+      ],
+      "reopened_task_ids": []
+    },
+    {
+      "id": "B10",
+      "title": "资产依赖清单",
+      "task_ids": [
+        "A-PACK001"
+      ],
+      "reopened_task_ids": []
+    },
+    {
+      "id": "B11",
+      "title": "全量集成检查",
+      "task_ids": [
+        "I01",
+        "I02",
+        "I03",
+        "I04",
+        "I05",
+        "I06",
+        "I07"
+      ],
+      "reopened_task_ids": []
+    },
+    {
+      "id": "B12",
+      "title": "完整美术候选后的集中评审与放行",
+      "task_ids": [
+        "P08",
+        "V08",
+        "V09",
+        "I08",
+        "I09"
+      ],
+      "reopened_task_ids": []
+    },
+    {
+      "id": "B13",
+      "title": "游戏闭环实现",
+      "task_ids": [
+        "G01",
+        "G02",
+        "G03",
+        "G04",
+        "G05",
+        "G06",
+        "G07"
+      ],
+      "reopened_task_ids": []
+    },
+    {
+      "id": "B14",
+      "title": "后续游戏审核记录在B15候选完成后集中处理",
+      "task_ids": [],
+      "reopened_task_ids": []
+    },
+    {
+      "id": "B15",
+      "title": "完整微信候选后集中游戏验收",
+      "task_ids": [
+        "W01",
+        "W02",
+        "W03",
+        "W04",
+        "W05",
+        "G08"
+      ],
+      "reopened_task_ids": []
+    },
+    {
+      "id": "B16",
+      "title": "可选工具",
+      "task_ids": [
+        "O01",
+        "O02"
+      ],
+      "reopened_task_ids": []
+    }
+  ],
+  "workflow_mode": "candidate_first_final_review",
+  "producer_submission_policy": "planning/execution/producer_review_policy.json"
+}

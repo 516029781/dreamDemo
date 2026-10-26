@@ -1,0 +1,306 @@
+{
+  "kind": "read_only_timing_evidence_not_benchmark",
+  "cocos_log_records": [
+    {
+      "path": "tools/cocos/logs/build_cycle2_billboard.out.txt",
+      "reported_build_seconds": 9,
+      "first_log_time": "2026-10-24 18:23:40",
+      "last_log_time": "2026-10-24 18:23:49",
+      "contains_asset_build_failure": false
+    },
+    {
+      "path": "tools/cocos/logs/build_cycle2_k08.out.txt",
+      "reported_build_seconds": 16,
+      "first_log_time": "2026-10-24 19:29:18",
+      "last_log_time": "2026-10-24 19:29:35",
+      "contains_asset_build_failure": false
+    },
+    {
+      "path": "tools/cocos/logs/build_cycle2_k08b.out.txt",
+      "reported_build_seconds": 14,
+      "first_log_time": "2026-10-24 19:30:52",
+      "last_log_time": "2026-10-24 19:31:07",
+      "contains_asset_build_failure": false
+    },
+    {
+      "path": "tools/cocos/logs/build_cycle2_revert.out.txt",
+      "reported_build_seconds": 14,
+      "first_log_time": "2026-10-24 19:34:40",
+      "last_log_time": "2026-10-24 19:34:54",
+      "contains_asset_build_failure": false
+    },
+    {
+      "path": "tools/cocos/logs/build_cycle2_t1.out.txt",
+      "reported_build_seconds": 9,
+      "first_log_time": "2026-10-24 18:14:38",
+      "last_log_time": "2026-10-24 18:14:48",
+      "contains_asset_build_failure": false
+    },
+    {
+      "path": "tools/cocos/logs/build_cycle2_t1b.out.txt",
+      "reported_build_seconds": 9,
+      "first_log_time": "2026-10-24 18:21:28",
+      "last_log_time": "2026-10-24 18:21:37",
+      "contains_asset_build_failure": false
+    },
+    {
+      "path": "tools/cocos/logs/build_cycle2_uv2.out.txt",
+      "reported_build_seconds": 8,
+      "first_log_time": "2026-10-24 18:24:59",
+      "last_log_time": "2026-10-24 18:25:08",
+      "contains_asset_build_failure": false
+    },
+    {
+      "path": "tools/cocos/logs/build_cycle2_uv3.out.txt",
+      "reported_build_seconds": 8,
+      "first_log_time": "2026-10-24 19:01:09",
+      "last_log_time": "2026-10-24 19:01:18",
+      "contains_asset_build_failure": false
+    },
+    {
+      "path": "tools/cocos/logs/build_cycle2_uv4.out.txt",
+      "reported_build_seconds": 10,
+      "first_log_time": "2026-10-24 19:06:40",
+      "last_log_time": "2026-10-24 19:06:50",
+      "contains_asset_build_failure": false
+    },
+    {
+      "path": "tools/cocos/logs/build_final_scene.out.txt",
+      "reported_build_seconds": 14,
+      "first_log_time": "2026-10-24 14:21:58",
+      "last_log_time": "2026-10-24 14:22:13",
+      "contains_asset_build_failure": false
+    },
+    {
+      "path": "tools/cocos/logs/build_final_viewer.out.txt",
+      "reported_build_seconds": 16,
+      "first_log_time": "2026-10-24 15:10:34",
+      "last_log_time": "2026-10-24 15:10:50",
+      "contains_asset_build_failure": false
+    },
+    {
+      "path": "tools/cocos/logs/build_fullmap.out.txt",
+      "reported_build_seconds": 16,
+      "first_log_time": "2026-10-24 14:10:06",
+      "last_log_time": "2026-10-24 14:10:22",
+      "contains_asset_build_failure": false
+    },
+    {
+      "path": "tools/cocos/logs/build_fullmap_720.out.txt",
+      "reported_build_seconds": 16,
+      "first_log_time": "2026-10-24 14:13:19",
+      "last_log_time": "2026-10-24 14:13:36",
+      "contains_asset_build_failure": false
+    },
+    {
+      "path": "tools/cocos/logs/build_hud.out.txt",
+      "reported_build_seconds": 13,
+      "first_log_time": "2026-10-24 14:17:09",
+      "last_log_time": "2026-10-24 14:17:22",
+      "contains_asset_build_failure": false
+    },
+    {
+      "path": "tools/cocos/logs/build_move_fix.out.txt",
+      "reported_build_seconds": 15,
+      "first_log_time": "2026-10-24 14:28:05",
+      "last_log_time": "2026-10-24 14:28:21",
+      "contains_asset_build_failure": false
+    },
+    {
+      "path": "tools/cocos/logs/build_projection.out.txt",
+      "reported_build_seconds": 15,
+      "first_log_time": "2026-10-24 14:16:11",
+      "last_log_time": "2026-10-24 14:16:26",
+      "contains_asset_build_failure": false
+    },
+    {
+      "path": "tools/cocos/logs/build_rt_flip.out.txt",
+      "reported_build_seconds": 7,
+      "first_log_time": "2026-10-24 17:34:45",
+      "last_log_time": "2026-10-24 17:34:52",
+      "contains_asset_build_failure": false
+    },
+    {
+      "path": "tools/cocos/logs/build_rt_hires.out.txt",
+      "reported_build_seconds": 9,
+      "first_log_time": "2026-10-24 17:40:13",
+      "last_log_time": "2026-10-24 17:40:22",
+      "contains_asset_build_failure": false
+    },
+    {
+      "path": "tools/cocos/logs/build_rt_square.out.txt",
+      "reported_build_seconds": 10,
+      "first_log_time": "2026-10-24 17:42:49",
+      "last_log_time": "2026-10-24 17:42:59",
+      "contains_asset_build_failure": false
+    },
+    {
+      "path": "tools/cocos/logs/build_rt_t1.out.txt",
+      "reported_build_seconds": 11,
+      "first_log_time": "2026-10-24 17:26:55",
+      "last_log_time": "2026-10-24 17:27:06",
+      "contains_asset_build_failure": false
+    },
+    {
+      "path": "tools/cocos/logs/build_rt_tilt.out.txt",
+      "reported_build_seconds": 9,
+      "first_log_time": "2026-10-24 17:45:14",
+      "last_log_time": "2026-10-24 17:45:24",
+      "contains_asset_build_failure": false
+    },
+    {
+      "path": "tools/cocos/logs/build_rt_uv.out.txt",
+      "reported_build_seconds": 11,
+      "first_log_time": "2026-10-24 17:38:06",
+      "last_log_time": "2026-10-24 17:38:17",
+      "contains_asset_build_failure": false
+    },
+    {
+      "path": "tools/cocos/logs/build_scale_fix.out.txt",
+      "reported_build_seconds": 18,
+      "first_log_time": "2026-10-24 14:24:06",
+      "last_log_time": "2026-10-24 14:24:25",
+      "contains_asset_build_failure": false
+    },
+    {
+      "path": "tools/cocos/logs/build_scene_1.out.txt",
+      "reported_build_seconds": 6,
+      "first_log_time": "2026-10-24 04:44:26",
+      "last_log_time": "2026-10-24 04:44:32",
+      "contains_asset_build_failure": false
+    },
+    {
+      "path": "tools/cocos/logs/build_scene_2.out.txt",
+      "reported_build_seconds": 6,
+      "first_log_time": "2026-10-24 04:49:36",
+      "last_log_time": "2026-10-24 04:49:42",
+      "contains_asset_build_failure": false
+    },
+    {
+      "path": "tools/cocos/logs/build_shadow.out.txt",
+      "reported_build_seconds": 17,
+      "first_log_time": "2026-10-24 14:19:39",
+      "last_log_time": "2026-10-24 14:19:57",
+      "contains_asset_build_failure": false
+    },
+    {
+      "path": "tools/cocos/logs/build_studio.out.txt",
+      "reported_build_seconds": 12,
+      "first_log_time": "2026-10-24 14:46:55",
+      "last_log_time": "2026-10-24 14:47:08",
+      "contains_asset_build_failure": false
+    },
+    {
+      "path": "tools/cocos/logs/build_studio2.out.txt",
+      "reported_build_seconds": 10,
+      "first_log_time": "2026-10-24 14:49:03",
+      "last_log_time": "2026-10-24 14:49:13",
+      "contains_asset_build_failure": false
+    },
+    {
+      "path": "tools/cocos/logs/build_studio3.out.txt",
+      "reported_build_seconds": 9,
+      "first_log_time": "2026-10-24 14:51:04",
+      "last_log_time": "2026-10-24 14:51:14",
+      "contains_asset_build_failure": false
+    },
+    {
+      "path": "tools/cocos/logs/build_test_2.out.txt",
+      "reported_build_seconds": 17,
+      "first_log_time": "2026-10-24 04:29:50",
+      "last_log_time": "2026-10-24 04:30:07",
+      "contains_asset_build_failure": true
+    },
+    {
+      "path": "tools/cocos/logs/build_test_3.out.txt",
+      "reported_build_seconds": 7,
+      "first_log_time": "2026-10-24 04:34:54",
+      "last_log_time": "2026-10-24 04:35:02",
+      "contains_asset_build_failure": false
+    },
+    {
+      "path": "tools/cocos/logs/build_v05.out.txt",
+      "reported_build_seconds": 17,
+      "first_log_time": "2026-10-24 20:12:46",
+      "last_log_time": "2026-10-24 20:13:03",
+      "contains_asset_build_failure": false
+    },
+    {
+      "path": "tools/cocos/logs/build_viewer_capture.out.txt",
+      "reported_build_seconds": 19,
+      "first_log_time": "2026-10-24 15:06:49",
+      "last_log_time": "2026-10-24 15:07:09",
+      "contains_asset_build_failure": false
+    },
+    {
+      "path": "tools/cocos/logs/build_viewer_final2.out.txt",
+      "reported_build_seconds": 15,
+      "first_log_time": "2026-10-24 15:22:15",
+      "last_log_time": "2026-10-24 15:22:30",
+      "contains_asset_build_failure": false
+    }
+  ],
+  "summary": {
+    "log_records": 34,
+    "sum_logged_build_seconds": 412,
+    "median_logged_build_seconds": 11.5,
+    "unique_finish_timestamp_duration_pairs": 34,
+    "unique_reported_seconds_sum": 412,
+    "excludes": "Editor startup, waiting, agent thinking, code generation, command orchestration and review latency."
+  },
+  "blender_full_run": {
+    "source": "tools/blender/logs/full_courtyard_build.out.txt",
+    "start": "2026-10-24T04:37:31.0232352+08:00",
+    "finish": "2026-10-24T04:44:24.1012936+08:00",
+    "seconds": 413.0780584,
+    "scope": "One historical full run, not every repair iteration."
+  },
+  "script_findings": [
+    {
+      "path": "tools/blender/run_courtyard_build.ps1",
+      "finding": "20 sequential Blender invocations; no changed-asset selection in wrapper."
+    },
+    {
+      "path": "tools/blender/courtyard_lib.py",
+      "finding": "Preview helpers explicitly use CYCLES CPU; samples48/64; full map call uses1500x950 and72 samples."
+    },
+    {
+      "path": "tools/engine_viewer_capture.js",
+      "finding": "Always41 UI+34 asset shots; fixed per-state waits:41*(.120+.320)+34*(.150+.550)=41.84s before screenshot/render costs; headless browser forced SwiftShader."
+    }
+  ],
+  "experiment_intervals": [
+    {
+      "pattern": "_rt*",
+      "files": 16,
+      "first_mtime_utc": "2026-10-24T09:27:31.594617+00:00",
+      "last_mtime_utc": "2026-10-24T09:47:52.598520+00:00",
+      "interpretation": "Artifact modification interval, not measured compute or uninterrupted agent wall time."
+    },
+    {
+      "pattern": "_billboard*",
+      "files": 9,
+      "first_mtime_utc": "2026-10-24T10:24:03.328023+00:00",
+      "last_mtime_utc": "2026-10-24T11:02:38.322347+00:00",
+      "interpretation": "Artifact modification interval, not measured compute or uninterrupted agent wall time."
+    },
+    {
+      "pattern": "_npc*",
+      "files": 10,
+      "first_mtime_utc": "2026-10-24T11:04:23.307734+00:00",
+      "last_mtime_utc": "2026-10-24T11:06:00.508000+00:00",
+      "interpretation": "Artifact modification interval, not measured compute or uninterrupted agent wall time."
+    }
+  ],
+  "ledger_bytes": 168113,
+  "task_status_counts": {
+    "done": 15,
+    "todo": 82
+  },
+  "limitations": [
+    "No full session tool-call/LLM latency trace available.",
+    "File timestamps do not measure elapsed CPU/GPU time.",
+    "No GPU benchmark or build rerun performed in this planning turn.",
+    "Cannot claim measured50% improvement before instrumented matched-work pilot."
+  ]
+}

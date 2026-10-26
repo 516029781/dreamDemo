@@ -1,0 +1,165 @@
+{
+  "kind": "p06_selfcheck_audit_build_capture",
+  "cases": [
+    {
+      "case": "cocos_ok_with_benign_noise",
+      "exit": "pass",
+      "expected": "pass",
+      "failures": [],
+      "warnings": 2,
+      "pass": true
+    },
+    {
+      "case": "cocos_failed_but_finished",
+      "exit": "fail",
+      "expected": "fail",
+      "failures": [
+        "failure event line 1: Build Assets failed: missing resource"
+      ],
+      "warnings": 0,
+      "pass": true
+    },
+    {
+      "case": "cocos_zero_exit_not_trusted_36",
+      "exit": "fail",
+      "expected": "fail",
+      "failures": [
+        "process exit code 36 is not zero"
+      ],
+      "warnings": 0,
+      "pass": true
+    },
+    {
+      "case": "blender_traceback_even_with_quit",
+      "exit": "fail",
+      "expected": "fail",
+      "failures": [
+        "failure event line 1: Traceback (most recent call last):"
+      ],
+      "warnings": 0,
+      "pass": true
+    },
+    {
+      "case": "blender_ok",
+      "exit": "pass",
+      "expected": "pass",
+      "failures": [],
+      "warnings": 0,
+      "pass": true
+    },
+    {
+      "case": "verify_fail",
+      "exit": "fail",
+      "expected": "fail",
+      "failures": [
+        "process exit code 1 is not zero",
+        "failure event line 1: VERIFY_RESULT=FAIL count=3",
+        "no success marker for profile verify"
+      ],
+      "warnings": 0,
+      "pass": true
+    },
+    {
+      "case": "missing_success_marker",
+      "exit": "fail",
+      "expected": "fail",
+      "failures": [
+        "no success marker for profile cocos"
+      ],
+      "warnings": 0,
+      "pass": true
+    }
+  ],
+  "all_passed": true,
+  "canvas_capture": {
+    "pass": true,
+    "metadata": {
+      "capture_method": "element_screenshot",
+      "page_screenshot": false,
+      "selector": "#GameCanvas",
+      "css_rect": {
+        "x": 0,
+        "y": 88.875,
+        "width": 320,
+        "height": 180
+      },
+      "backing_width": 640,
+      "backing_height": 360,
+      "device_pixel_ratio": 2,
+      "viewport": {
+        "browser_width": 800,
+        "browser_height": 600,
+        "scroll_x": 0,
+        "scroll_y": 0
+      },
+      "page_shell_visible": true,
+      "stats_hidden": false,
+      "output": {
+        "path": "C:\\软件\\鼠鼠\\delivery\\_independent_20261025\\p06_canvas\\canvas_selftest.png",
+        "sha256": "d7ba690ebd5867e2fb691e9917792cb4104d544cb8713b6b6edd816566a60b57",
+        "width": 640,
+        "height": 360
+      }
+    },
+    "center_pixel": {
+      "r": 51,
+      "g": 204,
+      "b": 34
+    }
+  },
+  "audit": {
+    "pass": true,
+    "status": "blocked",
+    "failed_count": 19,
+    "pending_count": 5,
+    "review": "art_review/reports/independent_20261024/independent_review.json",
+    "failed_sample": [
+      "card:CHAR",
+      "card:ENV",
+      "card:MIX",
+      "card:UI",
+      "defect:R01",
+      "defect:R02",
+      "defect:R03",
+      "defect:R04",
+      "defect:R05",
+      "defect:R06"
+    ],
+    "next_actions": 5
+  },
+  "audit_quality_integration": {
+    "pass": true,
+    "pending_sample": [
+      "active_manifest_stage",
+      "active_submission",
+      "defect:R09",
+      "defect:R10",
+      "gate:H03",
+      "quality:Q01",
+      "quality:Q02",
+      "quality:Q03",
+      "quality:Q04",
+      "quality:Q05",
+      "quality:Q06",
+      "quality:Q07"
+    ]
+  },
+  "audit_binding_integration": {
+    "pass": true,
+    "verified_checks": 4,
+    "audit_status": "pass"
+  },
+  "powershell_wrapper": {
+    "pass": true,
+    "exit": 3,
+    "tail": "EXIT_CODE 3 (valid run but not accepted)"
+  },
+  "directed_build_dry_run": {
+    "pass": true,
+    "exit": 0,
+    "selected": [
+      "env_tree",
+      "map001"
+    ]
+  }
+}

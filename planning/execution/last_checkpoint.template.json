@@ -1,0 +1,14 @@
+{
+  "template_only": true,
+  "task_id": null,
+  "work_summary": null,
+  "changed_files": [],
+  "commands_and_results": [],
+  "build_id": null,
+  "capture_id": null,
+  "open_defect_ids": [],
+  "blocked_tasks": [],
+  "next_ready_task_ids": [],
+  "uncommitted_changes": [],
+  "overall_release_state": "not_released"
+}

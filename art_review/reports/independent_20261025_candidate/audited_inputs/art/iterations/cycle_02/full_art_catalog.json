@@ -1,0 +1,1327 @@
+{
+  "catalog_version": "2.0.0-candidate",
+  "scope": "47-group courtyard chapter art candidate after V01-V07",
+  "audit_date": "2026-10-24",
+  "status": "engine_verified_candidate_not_independently_approved",
+  "status_semantics": {
+    "missing": "未找到正式产物",
+    "candidate": "文件存在但未验证",
+    "historical_candidate": "历史源部分可编辑但不满足现行完整要求",
+    "source_ready": "可编辑源和导出验证通过",
+    "engine_verified": "实际引擎验证通过",
+    "approved": "当前合同独立审核并获准"
+  },
+  "engine_evidence": {
+    "engine": "Cocos Creator 3.8.8 web-desktop 1280x720",
+    "map_glb_sha256": "099ac82e54355da53c32d97720f0ca030e5a551282a5155718942bc08c3fb104",
+    "viewer_state_index": "delivery/next_cycle/T6/state_index.json",
+    "ui_state_shots": 41,
+    "asset_shots": 34,
+    "capture_method": "real canvas element capture"
+  },
+  "items": [
+    {
+      "id": "MAP001",
+      "name": "完整秋庭地图",
+      "group": "MAP",
+      "kind": "layout_scene",
+      "acceptance": "地图整体、路线、场景边界、全图摆放与遮挡规则",
+      "status": "engine_verified",
+      "source_paths": [
+        "art/full/source/layout/MAP001_courtyard.blend",
+        "art/full/source/layout/MAP001_courtyard.glb",
+        "art/full/source/layout/layout.json",
+        "art/full/engine_viewer_state_map.json",
+        "demo/assets/scripts/CourtyardBootstrap.ts",
+        "tools/blender/build_map001.py",
+        "tools/blender/build_env_courtyard.py"
+      ],
+      "preview_paths": [
+        "art/full/previews/engine/assets/MAP001.png",
+        "art/full/previews/layout/MAP001_courtyard.png",
+        "art/full/previews/layout/MAP001_topdown.png",
+        "delivery/next_cycle/T6/assets/MAP001.png",
+        "delivery/next_cycle/T2/sample_no_ui.png"
+      ],
+      "review_path": "art/iterations/cycle_02/reviews/MAP001.json",
+      "historical_blockers": [
+        "Cocos/微信导入与引擎截图未做；程序化材质未烘焙为引擎贴图。",
+        "独立审核未做；不能计 engine_verified/approved。",
+        "MAP001 的 NPC 尚未放入；Cocos 引擎导入未做。",
+        "layout verifier PASS 是 Blender/数据检查，不是引擎验收。"
+      ],
+      "notes": "Current candidate build; previews recaptured on the final4 Cocos build."
+    },
+    {
+      "id": "ENV001",
+      "name": "石铺地模块",
+      "group": "ENV",
+      "kind": "model",
+      "acceptance": "可平铺纹理、砖缝与轻磨损",
+      "status": "engine_verified",
+      "source_paths": [
+        "art/full/source/environment/ENV001_stone_paving.blend",
+        "art/full/source/environment/ENV001_stone_paving.glb",
+        "tools/blender/env001_stone_paving.py",
+        "art/full/engine_viewer_state_map.json"
+      ],
+      "preview_paths": [
+        "art/full/previews/engine/assets/ENV001.png",
+        "art/full/previews/environment/ENV001_stone_paving.png",
+        "art/full/previews/environment/ENV001_stone_paving_tiled2x2.png",
+        "delivery/next_cycle/T6/assets/ENV001.png"
+      ],
+      "review_path": "art/iterations/cycle_02/reviews/ENV001.json",
+      "historical_blockers": [
+        "Cocos 导入/引擎截图未做；程序化材质未烘焙为引擎贴图；UV 未展开。",
+        "石板 5,196 tris/16m²，铺满全图的预算需合并/实例化后再验证。",
+        "独立审核未做。"
+      ],
+      "notes": "Current candidate build; previews recaptured on the final4 Cocos build."
+    },
+    {
+      "id": "ENV002",
+      "name": "路缘模块",
+      "group": "ENV",
+      "kind": "model",
+      "acceptance": "与地面和花坛拼接",
+      "status": "engine_verified",
+      "source_paths": [
+        "art/full/source/environment/ENV002_curb.blend",
+        "art/full/source/environment/ENV002_curb.glb",
+        "art/full/engine_viewer_state_map.json"
+      ],
+      "preview_paths": [
+        "art/full/previews/engine/assets/ENV002.png",
+        "art/full/previews/environment/ENV002_curb.png",
+        "delivery/next_cycle/T6/assets/ENV002.png"
+      ],
+      "review_path": "art/iterations/cycle_02/reviews/ENV002.json",
+      "historical_blockers": [
+        "Cocos/微信导入与引擎截图未做；程序化材质未烘焙为引擎贴图。",
+        "独立审核未做；不能计 engine_verified/approved。"
+      ],
+      "notes": "Current candidate build; previews recaptured on the final4 Cocos build."
+    },
+    {
+      "id": "ENV003",
+      "name": "矮墙模块",
+      "group": "ENV",
+      "kind": "model",
+      "acceptance": "地图边缘封闭、简化阻挡",
+      "status": "engine_verified",
+      "source_paths": [
+        "art/full/source/environment/ENV003_low_wall.blend",
+        "art/full/source/environment/ENV003_low_wall.glb",
+        "art/full/engine_viewer_state_map.json"
+      ],
+      "preview_paths": [
+        "art/full/previews/engine/assets/ENV003.png",
+        "art/full/previews/environment/ENV003_low_wall.png",
+        "delivery/next_cycle/T6/assets/ENV003.png"
+      ],
+      "review_path": "art/iterations/cycle_02/reviews/ENV003.json",
+      "historical_blockers": [
+        "Cocos/微信导入与引擎截图未做；程序化材质未烘焙为引擎贴图。",
+        "独立审核未做；不能计 engine_verified/approved。"
+      ],
+      "notes": "Current candidate build; previews recaptured on the final4 Cocos build."
+    },
+    {
+      "id": "ENV004",
+      "name": "栏杆模块",
+      "group": "ENV",
+      "kind": "model",
+      "acceptance": "细节、接缝、碰撞代理",
+      "status": "engine_verified",
+      "source_paths": [
+        "art/full/source/environment/ENV004_railing.blend",
+        "art/full/source/environment/ENV004_railing.glb",
+        "art/full/engine_viewer_state_map.json"
+      ],
+      "preview_paths": [
+        "art/full/previews/engine/assets/ENV004.png",
+        "art/full/previews/environment/ENV004_railing.png",
+        "delivery/next_cycle/T6/assets/ENV004.png"
+      ],
+      "review_path": "art/iterations/cycle_02/reviews/ENV004.json",
+      "historical_blockers": [
+        "Cocos/微信导入与引擎截图未做；程序化材质未烘焙为引擎贴图。",
+        "独立审核未做；不能计 engine_verified/approved。"
+      ],
+      "notes": "Current candidate build; previews recaptured on the final4 Cocos build."
+    },
+    {
+      "id": "ENV005",
+      "name": "边缘装饰台阶",
+      "group": "ENV",
+      "kind": "model",
+      "acceptance": "仅景观、不新增楼层玩法",
+      "status": "engine_verified",
+      "source_paths": [
+        "art/full/source/environment/ENV005_steps.blend",
+        "art/full/source/environment/ENV005_steps.glb",
+        "art/full/engine_viewer_state_map.json"
+      ],
+      "preview_paths": [
+        "art/full/previews/engine/assets/ENV005.png",
+        "art/full/previews/environment/ENV005_steps.png",
+        "delivery/next_cycle/T6/assets/ENV005.png"
+      ],
+      "review_path": "art/iterations/cycle_02/reviews/ENV005.json",
+      "historical_blockers": [
+        "Cocos/微信导入与引擎截图未做；程序化材质未烘焙为引擎贴图。",
+        "独立审核未做；不能计 engine_verified/approved。"
+      ],
+      "notes": "Current candidate build; previews recaptured on the final4 Cocos build."
+    },
+    {
+      "id": "ENV006",
+      "name": "秋日主树",
+      "group": "ENV",
+      "kind": "model",
+      "acceptance": "主枝、叶簇、透空、遮挡处理",
+      "status": "engine_verified",
+      "source_paths": [
+        "art/full/source/environment/ENV006_autumn_tree.blend",
+        "art/full/source/environment/ENV006_autumn_tree.glb",
+        "art/full/engine_viewer_state_map.json",
+        "tools/blender/build_env_courtyard.py"
+      ],
+      "preview_paths": [
+        "art/full/previews/engine/assets/ENV006.png",
+        "art/full/previews/environment/ENV006_autumn_tree.png",
+        "delivery/next_cycle/T4/tree_before_after_final4.png"
+      ],
+      "review_path": "art/iterations/cycle_02/reviews/ENV006.json",
+      "historical_blockers": [
+        "Cocos/微信导入与引擎截图未做；程序化材质未烘焙为引擎贴图。",
+        "独立审核未做；不能计 engine_verified/approved。"
+      ],
+      "notes": "Current candidate build; previews recaptured on the final4 Cocos build."
+    },
+    {
+      "id": "ENV007",
+      "name": "中央环形花坛",
+      "group": "ENV",
+      "kind": "model",
+      "acceptance": "主树底座与环形通路",
+      "status": "engine_verified",
+      "source_paths": [
+        "art/full/source/environment/ENV007_ring_planter.blend",
+        "art/full/source/environment/ENV007_ring_planter.glb",
+        "art/full/engine_viewer_state_map.json"
+      ],
+      "preview_paths": [
+        "art/full/previews/engine/assets/ENV007.png",
+        "art/full/previews/environment/ENV007_ring_planter.png",
+        "delivery/next_cycle/T6/assets/ENV007.png"
+      ],
+      "review_path": "art/iterations/cycle_02/reviews/ENV007.json",
+      "historical_blockers": [
+        "Cocos/微信导入与引擎截图未做；程序化材质未烘焙为引擎贴图。",
+        "独立审核未做；不能计 engine_verified/approved。"
+      ],
+      "notes": "Current candidate build; previews recaptured on the final4 Cocos build."
+    },
+    {
+      "id": "ENV008",
+      "name": "侧花坛",
+      "group": "ENV",
+      "kind": "model",
+      "acceptance": "B点与站立区留白",
+      "status": "engine_verified",
+      "source_paths": [
+        "art/full/source/environment/ENV008_side_planter.blend",
+        "art/full/source/environment/ENV008_side_planter.glb",
+        "art/full/engine_viewer_state_map.json"
+      ],
+      "preview_paths": [
+        "art/full/previews/engine/assets/ENV008.png",
+        "art/full/previews/environment/ENV008_side_planter.png",
+        "delivery/next_cycle/T6/assets/ENV008.png"
+      ],
+      "review_path": "art/iterations/cycle_02/reviews/ENV008.json",
+      "historical_blockers": [
+        "Cocos/微信导入与引擎截图未做；程序化材质未烘焙为引擎贴图。",
+        "独立审核未做；不能计 engine_verified/approved。"
+      ],
+      "notes": "Current candidate build; previews recaptured on the final4 Cocos build."
+    },
+    {
+      "id": "ENV009",
+      "name": "灌木A",
+      "group": "ENV",
+      "kind": "model",
+      "acceptance": "黄绿植被变体",
+      "status": "engine_verified",
+      "source_paths": [
+        "art/full/source/plants/ENV009_shrub_a.blend",
+        "art/full/source/plants/ENV009_shrub_a.glb",
+        "art/full/engine_viewer_state_map.json"
+      ],
+      "preview_paths": [
+        "art/full/previews/engine/assets/ENV009.png",
+        "art/full/previews/plants/ENV009_shrub_a.png",
+        "delivery/next_cycle/T6/assets/ENV009.png",
+        "delivery/next_cycle/T4/plant_closeups_final4.png"
+      ],
+      "review_path": "art/iterations/cycle_02/reviews/ENV009.json",
+      "historical_blockers": [
+        "Cocos/微信导入与引擎截图未做；程序化材质未烘焙为引擎贴图。",
+        "独立审核未做；不能计 engine_verified/approved。"
+      ],
+      "notes": "Current candidate build; previews recaptured on the final4 Cocos build."
+    },
+    {
+      "id": "ENV010",
+      "name": "灌木B",
+      "group": "ENV",
+      "kind": "model",
+      "acceptance": "与A同风格的轮廓变体",
+      "status": "engine_verified",
+      "source_paths": [
+        "art/full/source/plants/ENV010_shrub_b.blend",
+        "art/full/source/plants/ENV010_shrub_b.glb",
+        "art/full/engine_viewer_state_map.json"
+      ],
+      "preview_paths": [
+        "art/full/previews/engine/assets/ENV010.png",
+        "art/full/previews/plants/ENV010_shrub_b.png",
+        "delivery/next_cycle/T6/assets/ENV010.png",
+        "delivery/next_cycle/T4/plant_closeups_final4.png"
+      ],
+      "review_path": "art/iterations/cycle_02/reviews/ENV010.json",
+      "historical_blockers": [
+        "Cocos/微信导入与引擎截图未做；程序化材质未烘焙为引擎贴图。",
+        "独立审核未做；不能计 engine_verified/approved。"
+      ],
+      "notes": "Current candidate build; previews recaptured on the final4 Cocos build."
+    },
+    {
+      "id": "ENV011",
+      "name": "干草簇",
+      "group": "ENV",
+      "kind": "model",
+      "acceptance": "边缘成组、不覆盖主路",
+      "status": "engine_verified",
+      "source_paths": [
+        "art/full/source/plants/ENV011_dry_grass.blend",
+        "art/full/source/plants/ENV011_dry_grass.glb",
+        "art/full/engine_viewer_state_map.json"
+      ],
+      "preview_paths": [
+        "art/full/previews/engine/assets/ENV011.png",
+        "art/full/previews/plants/ENV011_dry_grass.png",
+        "delivery/next_cycle/T6/assets/ENV011.png",
+        "delivery/next_cycle/T4/plant_closeups_final4.png"
+      ],
+      "review_path": "art/iterations/cycle_02/reviews/ENV011.json",
+      "historical_blockers": [
+        "Cocos/微信导入与引擎截图未做；程序化材质未烘焙为引擎贴图。",
+        "独立审核未做；不能计 engine_verified/approved。"
+      ],
+      "notes": "Current candidate build; previews recaptured on the final4 Cocos build."
+    },
+    {
+      "id": "ENV012",
+      "name": "落叶簇或贴花",
+      "group": "ENV",
+      "kind": "model_or_decal",
+      "acceptance": "材质/透明开销可控",
+      "status": "engine_verified",
+      "source_paths": [
+        "art/full/source/plants/ENV012_fallen_leaves.blend",
+        "art/full/source/plants/ENV012_fallen_leaves.glb",
+        "art/full/engine_viewer_state_map.json"
+      ],
+      "preview_paths": [
+        "art/full/previews/engine/assets/ENV012.png",
+        "art/full/previews/plants/ENV012_fallen_leaves.png",
+        "delivery/next_cycle/T6/assets/ENV012.png",
+        "delivery/next_cycle/T4/plant_closeups_final4.png"
+      ],
+      "review_path": "art/iterations/cycle_02/reviews/ENV012.json",
+      "historical_blockers": [
+        "Cocos/微信导入与引擎截图未做；程序化材质未烘焙为引擎贴图。",
+        "独立审核未做；不能计 engine_verified/approved。"
+      ],
+      "notes": "Current candidate build; previews recaptured on the final4 Cocos build."
+    },
+    {
+      "id": "PROP001",
+      "name": "长椅",
+      "group": "PROP",
+      "kind": "model",
+      "acceptance": "木条、金属腿、接地与接缝",
+      "status": "engine_verified",
+      "source_paths": [
+        "art/full/source/props/PROP001_bench.blend",
+        "art/full/source/props/PROP001_bench.glb",
+        "tools/blender/prop001_bench.py",
+        "art/full/engine_viewer_state_map.json"
+      ],
+      "preview_paths": [
+        "art/full/previews/engine/assets/PROP001.png",
+        "art/full/previews/props/PROP001_bench.png",
+        "delivery/next_cycle/T6/assets/PROP001.png",
+        "delivery/next_cycle/T3/mat_final4_PROP001.png"
+      ],
+      "review_path": "art/iterations/cycle_02/reviews/PROP001.json",
+      "historical_blockers": [
+        "Cocos 导入/引擎截图未做；材质未烘焙。",
+        "全图摆放、碰撞与遮挡未验证；独立审核未做。"
+      ],
+      "notes": "Current candidate build; previews recaptured on the final4 Cocos build."
+    },
+    {
+      "id": "PROP002",
+      "name": "小廊架",
+      "group": "PROP",
+      "kind": "model",
+      "acceptance": "C点，不遮角色与拾取物",
+      "status": "engine_verified",
+      "source_paths": [
+        "art/full/source/props/PROP002_pergola.blend",
+        "art/full/source/props/PROP002_pergola.glb",
+        "art/full/engine_viewer_state_map.json"
+      ],
+      "preview_paths": [
+        "art/full/previews/engine/assets/PROP002.png",
+        "art/full/previews/props/PROP002_pergola.png",
+        "delivery/next_cycle/T6/assets/PROP002.png"
+      ],
+      "review_path": "art/iterations/cycle_02/reviews/PROP002.json",
+      "historical_blockers": [
+        "Cocos/微信导入与引擎截图未做；程序化材质未烘焙为引擎贴图。",
+        "独立审核未做；不能计 engine_verified/approved。"
+      ],
+      "notes": "Current candidate build; previews recaptured on the final4 Cocos build."
+    },
+    {
+      "id": "PROP003",
+      "name": "留言板",
+      "group": "PROP",
+      "kind": "model_states",
+      "acceptance": "空板和布置后两状态，三张卡可分别控制",
+      "status": "engine_verified",
+      "source_paths": [
+        "art/full/source/props/PROP003_message_board.blend",
+        "art/full/source/props/PROP003_message_board.glb",
+        "art/full/engine_viewer_state_map.json"
+      ],
+      "preview_paths": [
+        "art/full/previews/engine/assets/PROP003.png",
+        "art/full/previews/props/PROP003_message_board_empty.png",
+        "art/full/previews/props/PROP003_message_board_partial.png",
+        "art/full/previews/props/PROP003_message_board_full.png",
+        "delivery/next_cycle/T6/assets/PROP003.png"
+      ],
+      "review_path": "art/iterations/cycle_02/reviews/PROP003.json",
+      "historical_blockers": [
+        "Cocos/微信导入与引擎截图未做；程序化材质未烘焙为引擎贴图。",
+        "独立审核未做；不能计 engine_verified/approved。"
+      ],
+      "notes": "Current candidate build; previews recaptured on the final4 Cocos build."
+    },
+    {
+      "id": "PROP004",
+      "name": "路灯",
+      "group": "PROP",
+      "kind": "model",
+      "acceptance": "统一造型，不强制独立动态投影灯",
+      "status": "engine_verified",
+      "source_paths": [
+        "art/full/source/props/PROP004_lamp.blend",
+        "art/full/source/props/PROP004_lamp.glb",
+        "art/full/engine_viewer_state_map.json"
+      ],
+      "preview_paths": [
+        "art/full/previews/engine/assets/PROP004.png",
+        "art/full/previews/props/PROP004_lamp.png",
+        "delivery/next_cycle/T6/assets/PROP004.png",
+        "delivery/next_cycle/T3/mat_final4_PROP004.png"
+      ],
+      "review_path": "art/iterations/cycle_02/reviews/PROP004.json",
+      "historical_blockers": [
+        "Cocos/微信导入与引擎截图未做；程序化材质未烘焙为引擎贴图。",
+        "独立审核未做；不能计 engine_verified/approved。"
+      ],
+      "notes": "Current candidate build; previews recaptured on the final4 Cocos build."
+    },
+    {
+      "id": "PROP005",
+      "name": "导视牌",
+      "group": "PROP",
+      "kind": "model",
+      "acceptance": "方向与原创可编辑文字/图形",
+      "status": "engine_verified",
+      "source_paths": [
+        "art/full/source/props/PROP005_direction_sign.blend",
+        "art/full/source/props/PROP005_direction_sign.glb",
+        "art/full/engine_viewer_state_map.json"
+      ],
+      "preview_paths": [
+        "art/full/previews/engine/assets/PROP005.png",
+        "art/full/previews/props/PROP005_direction_sign.png",
+        "delivery/next_cycle/T6/assets/PROP005.png"
+      ],
+      "review_path": "art/iterations/cycle_02/reviews/PROP005.json",
+      "historical_blockers": [
+        "Cocos/微信导入与引擎截图未做；程序化材质未烘焙为引擎贴图。",
+        "独立审核未做；不能计 engine_verified/approved。"
+      ],
+      "notes": "Current candidate build; previews recaptured on the final4 Cocos build."
+    },
+    {
+      "id": "PROP006",
+      "name": "明信片物件",
+      "group": "PROP",
+      "kind": "model_states",
+      "acceptance": "三处拾取、收集后消失、板上显示",
+      "status": "engine_verified",
+      "source_paths": [
+        "art/full/source/props/PROP006_postcards.blend",
+        "art/full/source/props/PROP006_postcards.glb",
+        "art/full/engine_viewer_state_map.json"
+      ],
+      "preview_paths": [
+        "art/full/previews/engine/assets/PROP006.png",
+        "art/full/previews/props/PROP006_postcards.png",
+        "delivery/next_cycle/T6/assets/PROP006.png"
+      ],
+      "review_path": "art/iterations/cycle_02/reviews/PROP006.json",
+      "historical_blockers": [
+        "Cocos/微信导入与引擎截图未做；程序化材质未烘焙为引擎贴图。",
+        "独立审核未做；不能计 engine_verified/approved。"
+      ],
+      "notes": "Current candidate build; previews recaptured on the final4 Cocos build."
+    },
+    {
+      "id": "MAT001",
+      "name": "石材材质族",
+      "group": "MAT",
+      "kind": "material",
+      "acceptance": "引擎支持贴图及参数，非仅Blender预览",
+      "status": "engine_verified",
+      "source_paths": [
+        "art/full/source/materials/MAT001_stone.blend",
+        "art/full/source/materials/MAT001_stone.glb",
+        "art/full/source/materials/MAT_families.json",
+        "art/full/engine_viewer_state_map.json",
+        "demo/assets/scripts/CourtyardBootstrap.ts"
+      ],
+      "preview_paths": [
+        "art/full/previews/engine/assets/MAT001.png",
+        "art/full/previews/materials/MAT001_stone.png",
+        "delivery/next_cycle/T6/assets/MAT001.png",
+        "delivery/next_cycle/T4/material_closeups_final4.png"
+      ],
+      "review_path": "art/iterations/cycle_02/reviews/MAT001.json",
+      "historical_blockers": [
+        "Cocos/微信导入与引擎截图未做；程序化材质未烘焙为引擎贴图。",
+        "独立审核未做；不能计 engine_verified/approved。",
+        "材质族需要烘焙到引擎可用贴图。"
+      ],
+      "notes": "Current candidate build; previews recaptured on the final4 Cocos build."
+    },
+    {
+      "id": "MAT002",
+      "name": "木材材质族",
+      "group": "MAT",
+      "kind": "material",
+      "acceptance": "方向统一、磨损克制",
+      "status": "engine_verified",
+      "source_paths": [
+        "art/full/source/materials/MAT002_wood.blend",
+        "art/full/source/materials/MAT002_wood.glb",
+        "art/full/source/materials/MAT_families.json",
+        "art/full/engine_viewer_state_map.json",
+        "demo/assets/scripts/CourtyardBootstrap.ts"
+      ],
+      "preview_paths": [
+        "art/full/previews/engine/assets/MAT002.png",
+        "art/full/previews/materials/MAT002_wood.png",
+        "delivery/next_cycle/T6/assets/MAT002.png",
+        "delivery/next_cycle/T4/material_closeups_final4.png"
+      ],
+      "review_path": "art/iterations/cycle_02/reviews/MAT002.json",
+      "historical_blockers": [
+        "Cocos/微信导入与引擎截图未做；程序化材质未烘焙为引擎贴图。",
+        "独立审核未做；不能计 engine_verified/approved。",
+        "材质族需要烘焙到引擎可用贴图。"
+      ],
+      "notes": "Current candidate build; previews recaptured on the final4 Cocos build."
+    },
+    {
+      "id": "MAT003",
+      "name": "金属材质族",
+      "group": "MAT",
+      "kind": "material",
+      "acceptance": "粗糙度与石木分离",
+      "status": "engine_verified",
+      "source_paths": [
+        "art/full/source/materials/MAT003_metal.blend",
+        "art/full/source/materials/MAT003_metal.glb",
+        "art/full/source/materials/MAT_families.json",
+        "art/full/engine_viewer_state_map.json",
+        "demo/assets/scripts/CourtyardBootstrap.ts"
+      ],
+      "preview_paths": [
+        "art/full/previews/engine/assets/MAT003.png",
+        "art/full/previews/materials/MAT003_metal.png",
+        "delivery/next_cycle/T6/assets/MAT003.png",
+        "delivery/next_cycle/T4/material_closeups_final4.png"
+      ],
+      "review_path": "art/iterations/cycle_02/reviews/MAT003.json",
+      "historical_blockers": [
+        "Cocos/微信导入与引擎截图未做；程序化材质未烘焙为引擎贴图。",
+        "独立审核未做；不能计 engine_verified/approved。",
+        "材质族需要烘焙到引擎可用贴图。"
+      ],
+      "notes": "Current candidate build; previews recaptured on the final4 Cocos build."
+    },
+    {
+      "id": "MAT004",
+      "name": "树叶草材质族",
+      "group": "MAT",
+      "kind": "material",
+      "acceptance": "黄赭与橄榄绿，透明规则",
+      "status": "engine_verified",
+      "source_paths": [
+        "art/full/source/materials/MAT004_leaf_grass.blend",
+        "art/full/source/materials/MAT004_leaf_grass.glb",
+        "art/full/source/materials/MAT_families.json",
+        "art/full/engine_viewer_state_map.json",
+        "demo/assets/scripts/CourtyardBootstrap.ts"
+      ],
+      "preview_paths": [
+        "art/full/previews/engine/assets/MAT004.png",
+        "art/full/previews/materials/MAT004_leaf_grass.png",
+        "delivery/next_cycle/T6/assets/MAT004.png",
+        "delivery/next_cycle/T4/material_closeups_final4.png"
+      ],
+      "review_path": "art/iterations/cycle_02/reviews/MAT004.json",
+      "historical_blockers": [
+        "Cocos/微信导入与引擎截图未做；程序化材质未烘焙为引擎贴图。",
+        "独立审核未做；不能计 engine_verified/approved。",
+        "材质族需要烘焙到引擎可用贴图。"
+      ],
+      "notes": "Current candidate build; previews recaptured on the final4 Cocos build."
+    },
+    {
+      "id": "MAT005",
+      "name": "纸片材质族",
+      "group": "MAT",
+      "kind": "material",
+      "acceptance": "明信片/板上卡片，UI纸感协调",
+      "status": "engine_verified",
+      "source_paths": [
+        "art/full/source/materials/MAT005_paper.blend",
+        "art/full/source/materials/MAT005_paper.glb",
+        "art/full/source/materials/MAT_families.json",
+        "art/full/engine_viewer_state_map.json",
+        "demo/assets/scripts/CourtyardBootstrap.ts"
+      ],
+      "preview_paths": [
+        "art/full/previews/engine/assets/MAT005.png",
+        "art/full/previews/materials/MAT005_paper.png",
+        "delivery/next_cycle/T6/assets/MAT005.png",
+        "delivery/next_cycle/T4/material_closeups_final4.png"
+      ],
+      "review_path": "art/iterations/cycle_02/reviews/MAT005.json",
+      "historical_blockers": [
+        "Cocos/微信导入与引擎截图未做；程序化材质未烘焙为引擎贴图。",
+        "独立审核未做；不能计 engine_verified/approved。",
+        "材质族需要烘焙到引擎可用贴图。"
+      ],
+      "notes": "Current candidate build; previews recaptured on the final4 Cocos build."
+    },
+    {
+      "id": "LOOK001",
+      "name": "相机灯光预览场景",
+      "group": "LOOK",
+      "kind": "scene_profile",
+      "acceptance": "固定机位、暖光冷填充、阴影/色调记录",
+      "status": "engine_verified",
+      "source_paths": [
+        "art/full/source/layout/LOOK001_camera_light.blend",
+        "art/full/source/layout/LOOK001_look_profile.json",
+        "art/full/engine_viewer_state_map.json",
+        "demo/assets/scripts/CourtyardBootstrap.ts"
+      ],
+      "preview_paths": [
+        "art/full/previews/engine/assets/LOOK001.png",
+        "art/full/previews/layout/LOOK001_camera_light.png",
+        "art/full/previews/layout/LOOK001_scale_check.png",
+        "delivery/next_cycle/T6/assets/LOOK001.png"
+      ],
+      "review_path": "art/iterations/cycle_02/reviews/LOOK001.json",
+      "historical_blockers": [
+        "Cocos/微信导入与引擎截图未做；程序化材质未烘焙为引擎贴图。",
+        "独立审核未做；不能计 engine_verified/approved。",
+        "引擎内同一机位截图未做。"
+      ],
+      "notes": "Current candidate build; previews recaptured on the final4 Cocos build."
+    },
+    {
+      "id": "CHAR001",
+      "name": "目标主角原Spine资产",
+      "group": "CHAR",
+      "kind": "spine",
+      "acceptance": "291_aglina候选原包存在，需核对皮肤与运行",
+      "status": "engine_verified",
+      "source_paths": [
+        "reference/character_sources/ark_models/1015_aglna2/build_char_1015_aglna2.skel",
+        "reference/character_sources/ark_models/1015_aglna2/build_char_1015_aglna2.atlas",
+        "reference/character_sources/ark_models/1015_aglna2/build_char_1015_aglna2.png",
+        "art/full/engine_viewer_state_map.json"
+      ],
+      "preview_paths": [
+        "art/full/previews/engine/assets/CHAR001.png",
+        "art/phase1/character_playback_1015/idle_preview.png",
+        "art/phase1/character_playback_1015/reference_comparison.png",
+        "delivery/next_cycle/T6/assets/CHAR001.png",
+        "art/phase1/character_playback_1015/move_preview.gif"
+      ],
+      "review_path": "art/iterations/cycle_02/reviews/CHAR001.json",
+      "historical_blockers": [
+        "换源已由用户/控制器于 2026-10-24 批准为 1015_aglna2 default；旧 291 证据保留历史。",
+        "独立 H09/H05 视觉审核仍未完成；本模型是 alter，不是 291 的 skin。",
+        "未做 Cocos/微信导入；未验证背面、完整动作和接地。"
+      ],
+      "notes": "Current candidate build; previews recaptured on the final4 Cocos build."
+    },
+    {
+      "id": "CHAR002",
+      "name": "主角动作与状态映射",
+      "group": "CHAR",
+      "kind": "animation",
+      "acceptance": "原待机/Move，交互动作存在性，朝向能力表",
+      "status": "engine_verified",
+      "source_paths": [
+        "art/phase1/character_playback_1015/clip_inventory.json",
+        "art/phase1/character_playback_1015/runtime_log.txt",
+        "art/full/engine_viewer_state_map.json"
+      ],
+      "preview_paths": [
+        "art/full/previews/engine/assets/CHAR002.png",
+        "art/phase1/character_playback_1015/idle_preview.png",
+        "art/phase1/character_playback_1015/move_preview.gif",
+        "art/phase1/character_playback_1015/move_contact.png",
+        "delivery/next_cycle/T6/assets/CHAR002.png",
+        "art/phase1/character_playback_1015/reference_comparison.png"
+      ],
+      "review_path": "art/iterations/cycle_02/reviews/CHAR002.json",
+      "historical_blockers": [
+        "真实动作清单/idle/Move 已从 1015 runtime 重新产出；H09/H05 独立审核未完成。",
+        "尚无 Cocos 引擎导入和游戏内动作调校；不能计 engine_verified。"
+      ],
+      "notes": "Current candidate build; previews recaptured on the final4 Cocos build."
+    },
+    {
+      "id": "CHAR003",
+      "name": "固定NPC形象",
+      "group": "CHAR",
+      "kind": "spine_or_layered",
+      "acceptance": "按P1相应人物选定资源，确认角色ID及服装；非原创信使替换",
+      "status": "engine_verified",
+      "source_paths": [
+        "art/full/source/characters/CHAR003_NPC_GARDENER/npc_source_crop_490x670.png",
+        "art/full/source/characters/CHAR003_NPC_GARDENER/npc_gardener_mask.svg",
+        "art/full/source/characters/CHAR003_NPC_GARDENER/npc_gardener_static_slice.png",
+        "art/full/source/characters/CHAR003_NPC_GARDENER/npc_gardener_slice_record.json",
+        "art/full/engine_viewer_state_map.json",
+        "art/full/source/characters/CHAR003_NPC_GARDENER/npc_gardener_static_slice_final.png"
+      ],
+      "preview_paths": [
+        "art/full/previews/engine/assets/CHAR003.png",
+        "art/full/source/characters/CHAR003_NPC_GARDENER/npc_gardener_slice_final_preview.png",
+        "delivery/next_cycle/T6/assets/CHAR003.png"
+      ],
+      "review_path": "art/iterations/cycle_02/reviews/CHAR003.json",
+      "historical_blockers": [
+        "用户/控制器已批准静态切片路线；mask 是手工向量遮罩，边缘/局部背景仍需清理复核。",
+        "P1 参考是暖光低分辨率视频帧；无背面、无干净全身板。",
+        "未导入 Cocos/微信，未做独立角色卡审核。"
+      ],
+      "notes": "Current candidate build; previews recaptured on the final4 Cocos build."
+    },
+    {
+      "id": "CHAR004",
+      "name": "主角头像",
+      "group": "CHAR",
+      "kind": "portrait",
+      "acceptance": "与确认人物相同，源与裁切范围可追溯",
+      "status": "engine_verified",
+      "source_paths": [
+        "art/full/source/characters/CHAR004_PLAYER/portrait_1015_head_512.png",
+        "art/full/source/characters/CHAR004_PLAYER/portrait_record.json",
+        "art/full/engine_viewer_state_map.json"
+      ],
+      "preview_paths": [
+        "art/full/previews/engine/assets/CHAR004.png",
+        "art/full/source/characters/CHAR004_PLAYER/portrait_1015_head_512.png",
+        "art/full/previews/ui/dialogue_player_p2.png",
+        "delivery/next_cycle/T6/assets/CHAR004.png",
+        "delivery/next_cycle/T2/sample_dialogue.png"
+      ],
+      "review_path": "art/iterations/cycle_02/reviews/CHAR004.json",
+      "historical_blockers": [
+        "独立审核与 Cocos 导入未做；是 chibi runtime 裁切，不是专属官方头像。"
+      ],
+      "notes": "Current candidate build; previews recaptured on the final4 Cocos build."
+    },
+    {
+      "id": "CHAR005",
+      "name": "NPC头像",
+      "group": "CHAR",
+      "kind": "portrait",
+      "acceptance": "与NPC一致、对话尺寸下清晰",
+      "status": "engine_verified",
+      "source_paths": [
+        "art/full/source/characters/CHAR003_NPC_GARDENER/npc_gardener_portrait_512.png",
+        "art/full/source/characters/CHAR003_NPC_GARDENER/npc_gardener_slice_record.json",
+        "art/full/engine_viewer_state_map.json"
+      ],
+      "preview_paths": [
+        "art/full/previews/engine/assets/CHAR005.png",
+        "art/full/source/characters/CHAR003_NPC_GARDENER/npc_gardener_portrait_512.png",
+        "art/full/previews/ui/dialogue_gardener_p1.png",
+        "delivery/next_cycle/T6/assets/CHAR005.png",
+        "delivery/next_cycle/T2/sample_dialogue.png"
+      ],
+      "review_path": "art/iterations/cycle_02/reviews/CHAR005.json",
+      "historical_blockers": [
+        "P1 参考裁切分辨率有限；独立审核与引擎验证未做；与全身静态切片一样需复核。"
+      ],
+      "notes": "Current candidate build; previews recaptured on the final4 Cocos build."
+    },
+    {
+      "id": "UI001",
+      "name": "标题与进入界面",
+      "group": "UI",
+      "kind": "editable_ui",
+      "acceptance": "标题、进入按钮及状态",
+      "status": "engine_verified",
+      "source_paths": [
+        "art/full/ui/tokens.json",
+        "art/full/ui/index.html",
+        "art/full/ui/js/states.js",
+        "art/full/ui/css/ui.css",
+        "art/full/ui/js/components.js",
+        "art/full/engine_viewer_state_map.json",
+        "demo/assets/scripts/CourtyardBootstrap.ts",
+        "art/full/ui/fonts/FONT_MANIFEST.json"
+      ],
+      "preview_paths": [
+        "art/full/previews/engine/ui_states/title_initial.png",
+        "art/full/previews/engine/ui_states/title_pressed.png",
+        "art/full/previews/engine/ui_states/title_loading.png",
+        "delivery/next_cycle/T6/ui_states/title_initial.png",
+        "delivery/next_cycle/T6/ui_states/title_pressed.png"
+      ],
+      "review_path": "art/iterations/cycle_02/reviews/UI001.json",
+      "historical_blockers": [
+        "Cocos/微信未验证；字体未随包交付；独立审核未做。"
+      ],
+      "notes": "Current candidate build; previews recaptured on the final4 Cocos build."
+    },
+    {
+      "id": "UI002",
+      "name": "加载与失败重试",
+      "group": "UI",
+      "kind": "editable_ui",
+      "acceptance": "加载阶段、失败反馈、重试",
+      "status": "engine_verified",
+      "source_paths": [
+        "art/full/ui/tokens.json",
+        "art/full/ui/index.html",
+        "art/full/ui/js/states.js",
+        "art/full/ui/css/ui.css",
+        "art/full/ui/js/components.js",
+        "art/full/engine_viewer_state_map.json",
+        "demo/assets/scripts/CourtyardBootstrap.ts",
+        "art/full/ui/fonts/FONT_MANIFEST.json"
+      ],
+      "preview_paths": [
+        "art/full/previews/engine/ui_states/loading_progress.png",
+        "art/full/previews/engine/ui_states/loading_failure.png",
+        "art/full/previews/engine/ui_states/loading_retry_pressed.png",
+        "delivery/next_cycle/T6/ui_states/loading_progress.png",
+        "delivery/next_cycle/T6/ui_states/loading_failure.png",
+        "delivery/next_cycle/T6/ui_states/loading_retry_pressed.png"
+      ],
+      "review_path": "art/iterations/cycle_02/reviews/UI002.json",
+      "historical_blockers": [
+        "Cocos/微信未验证；字体未随包交付；独立审核未做。"
+      ],
+      "notes": "Current candidate build; previews recaptured on the final4 Cocos build."
+    },
+    {
+      "id": "UI003",
+      "name": "任务HUD全部状态",
+      "group": "UI",
+      "kind": "editable_ui",
+      "acceptance": "未接、0/3、1/3、2/3、3/3、可提交、完成",
+      "status": "engine_verified",
+      "source_paths": [
+        "art/full/ui/tokens.json",
+        "art/full/ui/index.html",
+        "art/full/ui/js/states.js",
+        "art/full/ui/css/ui.css",
+        "art/full/ui/js/components.js",
+        "art/full/engine_viewer_state_map.json",
+        "demo/assets/scripts/CourtyardBootstrap.ts",
+        "art/full/ui/fonts/FONT_MANIFEST.json"
+      ],
+      "preview_paths": [
+        "art/full/previews/engine/ui_states/hud_talk.png",
+        "art/full/previews/engine/ui_states/hud_0_3.png",
+        "art/full/previews/engine/ui_states/hud_1_3.png",
+        "art/full/previews/engine/ui_states/hud_2_3.png",
+        "art/full/previews/engine/ui_states/hud_3_3.png",
+        "art/full/previews/engine/ui_states/hud_submit.png",
+        "art/full/previews/engine/ui_states/hud_done.png",
+        "delivery/next_cycle/T6/ui_states/hud_talk.png",
+        "delivery/next_cycle/T6/ui_states/hud_0_3.png",
+        "delivery/next_cycle/T6/ui_states/hud_1_3.png",
+        "delivery/next_cycle/T6/ui_states/hud_2_3.png",
+        "delivery/next_cycle/T6/ui_states/hud_3_3.png",
+        "delivery/next_cycle/T6/ui_states/hud_submit.png",
+        "delivery/next_cycle/T6/ui_states/hud_done.png"
+      ],
+      "review_path": "art/iterations/cycle_02/reviews/UI003.json",
+      "historical_blockers": [
+        "Cocos/微信未验证；字体未随包交付；独立审核未做。"
+      ],
+      "notes": "Current candidate build; previews recaptured on the final4 Cocos build."
+    },
+    {
+      "id": "UI004",
+      "name": "摇杆全部状态",
+      "group": "UI",
+      "kind": "editable_ui",
+      "acceptance": "待机、拖动、锁定隐藏、安全区",
+      "status": "engine_verified",
+      "source_paths": [
+        "art/full/ui/tokens.json",
+        "art/full/ui/index.html",
+        "art/full/ui/js/states.js",
+        "art/full/ui/css/ui.css",
+        "art/full/ui/js/components.js",
+        "art/full/engine_viewer_state_map.json",
+        "demo/assets/scripts/CourtyardBootstrap.ts",
+        "art/full/ui/fonts/FONT_MANIFEST.json"
+      ],
+      "preview_paths": [
+        "art/full/previews/engine/ui_states/joystick_idle.png",
+        "art/full/previews/engine/ui_states/joystick_drag.png",
+        "art/full/previews/engine/ui_states/joystick_hidden.png",
+        "delivery/next_cycle/T6/ui_states/joystick_idle.png",
+        "delivery/next_cycle/T6/ui_states/joystick_drag.png",
+        "delivery/next_cycle/T6/ui_states/joystick_hidden.png"
+      ],
+      "review_path": "art/iterations/cycle_02/reviews/UI004.json",
+      "historical_blockers": [
+        "Cocos/微信未验证；字体未随包交付；独立审核未做。"
+      ],
+      "notes": "Current candidate build; previews recaptured on the final4 Cocos build."
+    },
+    {
+      "id": "UI005",
+      "name": "交互按钮状态族",
+      "group": "UI",
+      "kind": "editable_ui",
+      "acceptance": "交谈、拾取、布置、查看及按下/不可用",
+      "status": "engine_verified",
+      "source_paths": [
+        "art/full/ui/tokens.json",
+        "art/full/ui/index.html",
+        "art/full/ui/js/states.js",
+        "art/full/ui/css/ui.css",
+        "art/full/ui/js/components.js",
+        "art/full/engine_viewer_state_map.json",
+        "demo/assets/scripts/CourtyardBootstrap.ts",
+        "art/full/ui/fonts/FONT_MANIFEST.json"
+      ],
+      "preview_paths": [
+        "art/full/previews/engine/ui_states/interact_talk.png",
+        "art/full/previews/engine/ui_states/interact_pick.png",
+        "art/full/previews/engine/ui_states/interact_place.png",
+        "art/full/previews/engine/ui_states/interact_view.png",
+        "art/full/previews/engine/ui_states/interact_pressed.png",
+        "art/full/previews/engine/ui_states/interact_disabled.png",
+        "art/full/previews/engine/ui_states/interact_hidden.png",
+        "delivery/next_cycle/T6/ui_states/interact_talk.png",
+        "delivery/next_cycle/T6/ui_states/interact_pick.png",
+        "delivery/next_cycle/T6/ui_states/interact_place.png",
+        "delivery/next_cycle/T6/ui_states/interact_view.png",
+        "delivery/next_cycle/T6/ui_states/interact_pressed.png",
+        "delivery/next_cycle/T6/ui_states/interact_disabled.png",
+        "delivery/next_cycle/T6/ui_states/interact_hidden.png"
+      ],
+      "review_path": "art/iterations/cycle_02/reviews/UI005.json",
+      "historical_blockers": [
+        "Cocos/微信未验证；字体未随包交付；独立审核未做。"
+      ],
+      "notes": "Current candidate build; previews recaptured on the final4 Cocos build."
+    },
+    {
+      "id": "UI006",
+      "name": "对话组件",
+      "group": "UI",
+      "kind": "editable_ui",
+      "acceptance": "姓名、头像、正文、下一页/结束，实际任务文案",
+      "status": "engine_verified",
+      "source_paths": [
+        "art/full/ui/tokens.json",
+        "art/full/ui/index.html",
+        "art/full/ui/js/states.js",
+        "art/full/ui/css/ui.css",
+        "art/full/ui/js/components.js",
+        "art/full/ui/portraits/player_1015.png",
+        "art/full/ui/portraits/npc_gardener.png",
+        "art/full/source/characters/CHAR004_PLAYER/portrait_record.json",
+        "art/full/source/characters/CHAR003_NPC_GARDENER/npc_gardener_slice_record.json",
+        "art/full/engine_viewer_state_map.json",
+        "demo/assets/scripts/CourtyardBootstrap.ts",
+        "art/full/ui/fonts/FONT_MANIFEST.json"
+      ],
+      "preview_paths": [
+        "art/full/previews/engine/ui_states/dialogue_gardener_p1.png",
+        "art/full/previews/engine/ui_states/dialogue_player_p2.png",
+        "art/full/previews/engine/ui_states/dialogue_accept_pressed.png",
+        "delivery/next_cycle/T6/ui_states/dialogue_gardener_p1.png",
+        "delivery/next_cycle/T6/ui_states/dialogue_player_p2.png",
+        "delivery/next_cycle/T6/ui_states/dialogue_accept_pressed.png"
+      ],
+      "review_path": "art/iterations/cycle_02/reviews/UI006.json",
+      "historical_blockers": [
+        "无 Cocos/微信验证；字体未随包；主角/NPC 头像已接真实裁切，但最终独立审核未做。"
+      ],
+      "notes": "Current candidate build; previews recaptured on the final4 Cocos build."
+    },
+    {
+      "id": "UI007",
+      "name": "暂停菜单",
+      "group": "UI",
+      "kind": "editable_ui",
+      "acceptance": "继续、静音开关、重新开始",
+      "status": "engine_verified",
+      "source_paths": [
+        "art/full/ui/tokens.json",
+        "art/full/ui/index.html",
+        "art/full/ui/js/states.js",
+        "art/full/ui/css/ui.css",
+        "art/full/ui/js/components.js",
+        "art/full/engine_viewer_state_map.json",
+        "demo/assets/scripts/CourtyardBootstrap.ts",
+        "art/full/ui/fonts/FONT_MANIFEST.json"
+      ],
+      "preview_paths": [
+        "art/full/previews/engine/ui_states/pause_default.png",
+        "art/full/previews/engine/ui_states/pause_sound_on.png",
+        "art/full/previews/engine/ui_states/pause_restart_pressed.png",
+        "delivery/next_cycle/T6/ui_states/pause_default.png",
+        "delivery/next_cycle/T6/ui_states/pause_sound_on.png",
+        "delivery/next_cycle/T6/ui_states/pause_restart_pressed.png"
+      ],
+      "review_path": "art/iterations/cycle_02/reviews/UI007.json",
+      "historical_blockers": [
+        "Cocos/微信未验证；字体未随包交付；独立审核未做。"
+      ],
+      "notes": "Current candidate build; previews recaptured on the final4 Cocos build."
+    },
+    {
+      "id": "UI008",
+      "name": "完成界面",
+      "group": "UI",
+      "kind": "editable_ui",
+      "acceptance": "完成反馈、继续漫步、重新开始",
+      "status": "engine_verified",
+      "source_paths": [
+        "art/full/ui/tokens.json",
+        "art/full/ui/index.html",
+        "art/full/ui/js/states.js",
+        "art/full/ui/css/ui.css",
+        "art/full/ui/js/components.js",
+        "art/full/engine_viewer_state_map.json",
+        "demo/assets/scripts/CourtyardBootstrap.ts",
+        "art/full/ui/fonts/FONT_MANIFEST.json"
+      ],
+      "preview_paths": [
+        "art/full/previews/engine/ui_states/complete_default.png",
+        "art/full/previews/engine/ui_states/complete_continue_pressed.png",
+        "delivery/next_cycle/T6/ui_states/complete_default.png",
+        "delivery/next_cycle/T6/ui_states/complete_continue_pressed.png"
+      ],
+      "review_path": "art/iterations/cycle_02/reviews/UI008.json",
+      "historical_blockers": [
+        "Cocos/微信未验证；字体未随包交付；独立审核未做。"
+      ],
+      "notes": "Current candidate build; previews recaptured on the final4 Cocos build."
+    },
+    {
+      "id": "UI009",
+      "name": "拾取与任务提示",
+      "group": "UI",
+      "kind": "editable_ui",
+      "acceptance": "轻量toast与任务更新反馈",
+      "status": "engine_verified",
+      "source_paths": [
+        "art/full/ui/tokens.json",
+        "art/full/ui/index.html",
+        "art/full/ui/js/states.js",
+        "art/full/ui/css/ui.css",
+        "art/full/ui/js/components.js",
+        "art/full/engine_viewer_state_map.json",
+        "demo/assets/scripts/CourtyardBootstrap.ts",
+        "art/full/ui/fonts/FONT_MANIFEST.json"
+      ],
+      "preview_paths": [
+        "art/full/previews/engine/ui_states/toast_pickup.png",
+        "art/full/previews/engine/ui_states/toast_task_update.png",
+        "art/full/previews/engine/ui_states/toast_error.png",
+        "delivery/next_cycle/T6/ui_states/toast_pickup.png",
+        "delivery/next_cycle/T6/ui_states/toast_task_update.png",
+        "delivery/next_cycle/T6/ui_states/toast_error.png"
+      ],
+      "review_path": "art/iterations/cycle_02/reviews/UI009.json",
+      "historical_blockers": [
+        "Cocos/微信未验证；字体未随包交付；独立审核未做。"
+      ],
+      "notes": "Current candidate build; previews recaptured on the final4 Cocos build."
+    },
+    {
+      "id": "UI010",
+      "name": "首次操作提示",
+      "group": "UI",
+      "kind": "editable_ui",
+      "acceptance": "移动和交互简明说明、可收起",
+      "status": "engine_verified",
+      "source_paths": [
+        "art/full/ui/tokens.json",
+        "art/full/ui/index.html",
+        "art/full/ui/js/states.js",
+        "art/full/ui/css/ui.css",
+        "art/full/ui/js/components.js",
+        "art/full/engine_viewer_state_map.json",
+        "demo/assets/scripts/CourtyardBootstrap.ts",
+        "art/full/ui/fonts/FONT_MANIFEST.json"
+      ],
+      "preview_paths": [
+        "art/full/previews/engine/ui_states/tip_first_move.png",
+        "art/full/previews/engine/ui_states/tip_first_interact.png",
+        "delivery/next_cycle/T6/ui_states/tip_first_move.png",
+        "delivery/next_cycle/T6/ui_states/tip_first_interact.png"
+      ],
+      "review_path": "art/iterations/cycle_02/reviews/UI010.json",
+      "historical_blockers": [
+        "Cocos/微信未验证；字体未随包交付；独立审核未做。"
+      ],
+      "notes": "Current candidate build; previews recaptured on the final4 Cocos build."
+    },
+    {
+      "id": "UI011",
+      "name": "旋转与安全区适配",
+      "group": "UI",
+      "kind": "editable_ui",
+      "acceptance": "横屏旋转提示/遮挡避让示意",
+      "status": "engine_verified",
+      "source_paths": [
+        "art/full/ui/tokens.json",
+        "art/full/ui/index.html",
+        "art/full/ui/js/states.js",
+        "art/full/ui/css/ui.css",
+        "art/full/ui/js/components.js",
+        "art/full/engine_viewer_state_map.json",
+        "demo/assets/scripts/CourtyardBootstrap.ts",
+        "art/full/ui/fonts/FONT_MANIFEST.json"
+      ],
+      "preview_paths": [
+        "art/full/previews/engine/ui_states/safe_area_landscape.png",
+        "art/full/previews/engine/ui_states/rotate_notice.png",
+        "delivery/next_cycle/T6/ui_states/safe_area_landscape.png",
+        "delivery/next_cycle/T6/ui_states/rotate_notice.png"
+      ],
+      "review_path": "art/iterations/cycle_02/reviews/UI011.json",
+      "historical_blockers": [
+        "Cocos/微信未验证；字体未随包交付；独立审核未做。"
+      ],
+      "notes": "Current candidate build; previews recaptured on the final4 Cocos build."
+    },
+    {
+      "id": "UI012",
+      "name": "基础图标族",
+      "group": "UI",
+      "kind": "editable_ui",
+      "acceptance": "交谈/卡片/布置/菜单原SVG存在，需手绘语言与新状态审核",
+      "status": "engine_verified",
+      "source_paths": [
+        "art/full/ui/components/icons.svg",
+        "art/full/ui/components/icons/icon_arrow.svg",
+        "art/full/ui/components/icons/icon_check.svg",
+        "art/full/ui/components/icons/icon_close.svg",
+        "art/full/ui/components/icons/icon_continue.svg",
+        "art/full/ui/components/icons/icon_copy.svg",
+        "art/full/ui/components/icons/icon_info.svg",
+        "art/full/ui/components/icons/icon_leaf.svg",
+        "art/full/ui/components/icons/icon_lock.svg",
+        "art/full/ui/components/icons/icon_menu.svg",
+        "art/full/ui/components/icons/icon_pickup.svg",
+        "art/full/ui/components/icons/icon_pin.svg",
+        "art/full/ui/components/icons/icon_place.svg",
+        "art/full/ui/components/icons/icon_postcard.svg",
+        "art/full/ui/components/icons/icon_restart.svg",
+        "art/full/ui/components/icons/icon_retry.svg",
+        "art/full/ui/components/icons/icon_rotate.svg",
+        "art/full/ui/components/icons/icon_sound_off.svg",
+        "art/full/ui/components/icons/icon_sound_on.svg",
+        "art/full/ui/components/icons/icon_sparkle.svg",
+        "art/full/ui/components/icons/icon_talk.svg",
+        "art/full/ui/components/icons/icon_view.svg",
+        "art/full/engine_viewer_state_map.json",
+        "demo/assets/scripts/CourtyardBootstrap.ts",
+        "art/full/ui/tokens.json",
+        "art/full/ui/fonts/FONT_MANIFEST.json"
+      ],
+      "preview_paths": [
+        "art/full/previews/engine/ui_states/spec_icons.png",
+        "delivery/next_cycle/T6/ui_states/spec_icons.png"
+      ],
+      "review_path": "art/iterations/cycle_02/reviews/UI012.json",
+      "historical_blockers": [
+        "Cocos/微信未验证；字体未随包交付；独立审核未做。"
+      ],
+      "notes": "Current candidate build; previews recaptured on the final4 Cocos build."
+    },
+    {
+      "id": "UI013",
+      "name": "UI变量与中文字体",
+      "group": "UI",
+      "kind": "tokens_font",
+      "acceptance": "色板/线宽/字号/内边距/字体文件及来源，字形验证",
+      "status": "engine_verified",
+      "source_paths": [
+        "art/full/ui/tokens.json",
+        "art/full/ui/css/tokens.css",
+        "art/full/ui/fonts/FONT_MANIFEST.json",
+        "art/full/ui/fonts/OFL.txt",
+        "art/full/engine_viewer_state_map.json",
+        "demo/assets/scripts/CourtyardBootstrap.ts"
+      ],
+      "preview_paths": [
+        "art/full/previews/engine/ui_states/spec_type.png",
+        "art/full/previews/engine/ui_states/spec_nine_slice.png",
+        "delivery/next_cycle/T6/ui_states/spec_type.png",
+        "delivery/next_cycle/T6/ui_states/spec_nine_slice.png"
+      ],
+      "review_path": "art/iterations/cycle_02/reviews/UI013.json",
+      "historical_blockers": [
+        "Cocos/微信未验证；字体未随包交付；独立审核未做。"
+      ],
+      "notes": "Current candidate build; previews recaptured on the final4 Cocos build."
+    },
+    {
+      "id": "FX001",
+      "name": "角色脚底接触阴影",
+      "group": "FX",
+      "kind": "effect",
+      "acceptance": "随角色位移，非跟随屏幕的假阴影",
+      "status": "engine_verified",
+      "source_paths": [
+        "art/full/source/fx/FX001_foot_shadow.svg",
+        "art/full/source/fx/FX001_spec.json",
+        "art/full/engine_viewer_state_map.json"
+      ],
+      "preview_paths": [
+        "art/full/previews/engine/assets/FX001.png",
+        "art/full/previews/fx/FX001_foot_shadow.png",
+        "delivery/next_cycle/T6/assets/FX001.png"
+      ],
+      "review_path": "art/iterations/cycle_02/reviews/FX001.json",
+      "historical_blockers": [
+        "Cocos/微信实测未做；独立审核未做。"
+      ],
+      "notes": "Current candidate build; previews recaptured on the final4 Cocos build."
+    },
+    {
+      "id": "FX002",
+      "name": "目标与拾取反馈",
+      "group": "FX",
+      "kind": "effect",
+      "acceptance": "近距离提示、轻量拾取效果、状态变化",
+      "status": "engine_verified",
+      "source_paths": [
+        "art/full/source/fx/FX002_pickup_feedback.svg",
+        "art/full/source/fx/FX002_spec.json",
+        "art/full/engine_viewer_state_map.json"
+      ],
+      "preview_paths": [
+        "art/full/previews/engine/assets/FX002.png",
+        "art/full/previews/fx/FX002_pickup_feedback.png",
+        "delivery/next_cycle/T6/assets/FX002.png"
+      ],
+      "review_path": "art/iterations/cycle_02/reviews/FX002.json",
+      "historical_blockers": [
+        "Cocos/微信拾取 burst 与残影未验证；独立审核未做。"
+      ],
+      "notes": "Current candidate build; previews recaptured on the final4 Cocos build."
+    },
+    {
+      "id": "FX003",
+      "name": "留言板完成变化",
+      "group": "FX",
+      "kind": "effect",
+      "acceptance": "三张卡显现与完成视觉反馈，可重置",
+      "status": "engine_verified",
+      "source_paths": [
+        "art/full/source/fx/FX003_board_completion.svg",
+        "art/full/source/fx/FX003_spec.json",
+        "art/full/source/props/PROP003_message_board.blend",
+        "art/full/engine_viewer_state_map.json"
+      ],
+      "preview_paths": [
+        "art/full/previews/engine/assets/FX003.png",
+        "art/full/previews/fx/FX003_board_completion.png",
+        "art/full/previews/props/PROP003_message_board_empty.png",
+        "art/full/previews/props/PROP003_message_board_full.png",
+        "delivery/next_cycle/T6/assets/FX003.png",
+        "delivery/next_cycle/T5/q05_board_empty.png",
+        "delivery/next_cycle/T5/q05_board_full.png",
+        "delivery/next_cycle/T5/q05_board_reset.png"
+      ],
+      "review_path": "art/iterations/cycle_02/reviews/FX003.json",
+      "historical_blockers": [
+        "Cocos/微信三卡显现与重置未验证；独立审核未做。"
+      ],
+      "notes": "Current candidate build; previews recaptured on the final4 Cocos build."
+    },
+    {
+      "id": "PACK001",
+      "name": "全美术清单与依赖包",
+      "group": "PACK",
+      "kind": "delivery",
+      "acceptance": "源文件、贴图/字体、预览、版本哈希、操作配方和审核",
+      "status": "engine_verified",
+      "source_paths": [
+        "art/full/PACK001_manifest.json",
+        "art_review/full_art_catalog.json",
+        "art/full/engine_viewer_state_map.json"
+      ],
+      "preview_paths": [
+        "art/full/previews/engine/assets/PACK001.png",
+        "art/full/previews/pack/PACK001_overview.png",
+        "delivery/next_cycle/T6/assets/PACK001.png",
+        "delivery/next_cycle/T2/sample_no_ui.png"
+      ],
+      "review_path": "art/iterations/cycle_02/reviews/PACK001.json",
+      "historical_blockers": [
+        "47 组未全部 engine_verified/approved；2 组 candidate（CHAR001/CHAR003）。",
+        "字体未随包交付；Cocos/微信构建、独立审核与 controller 签认未完成。"
+      ],
+      "notes": "Current candidate build; previews recaptured on the final4 Cocos build."
+    }
+  ]
+}

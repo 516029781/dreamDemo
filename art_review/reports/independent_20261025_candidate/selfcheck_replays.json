@@ -1,0 +1,42 @@
+[
+  {
+    "script": "delivery\\next_cycle\\T0\\p02_selfcheck.py",
+    "redirected_fixture_and_report_paths": true,
+    "exit_code": 0,
+    "seconds": 0.8189705000113463,
+    "stdout": "OK wrote art_review/vnext/_independent_final_p02/fail_empty_evidence_missing/out.json (schema=draft-07 pass)\nitems=1 rework=0 blocked=0 package=reviewed_not_released total_issue_attachments=0 technical_state_notes=1\nOK wrote art_review/vnext/_independent_final_p02/pass_empty_evidence_missing/out.json (schema=draft-07 pass)\nitems=1 rework=0 blocked=0 package=reviewed_not_released total_issue_attachments=0 technical_state_notes=1\nOK wrote art_review/vnext/_independent_final_p02/pass_unresolvable_evidence_missing/out.json (schema=draft-07 pass)\nitems=1 rework=0 blocked=0 package=reviewed_not_released total_issue_attachments=0 technical_state_notes=1\nOK wrote art_review/vnext/_independent_final_p02/pass_wrong_asset_binding/out.json (schema=draft-07 pass)\nitems=1 rework=0 blocked=0 package=reviewed_not_released total_issue_attachments=0 technical_state_notes=1\nOK wrote art_review/vnext/_independent_final_p02/pass_real_evidence_promotes/out.json (schema=draft-07 pass)\nitems=1 rework=0 blocked=0 package=reviewed_not_released total_issue_attachments=0 technical_state_notes=0\nOK wrote art_review/vnext/_independent_final_p02/fail_review_demotes_engine_verified/out.json (schema=draft-07 pass)\nitems=1 rework=0 blocked=0 package=reviewed_not_released total_issue_attachments=0 technical_state_notes=1\n{\"all_passed\": true, \"cases\": 6, \"output\": \"C:\\\\软件\\\\鼠鼠\\\\art_review\\\\reports\\\\independent_20261025_candidate\\\\p02_replay.json\", \"sha256\": \"f70f72c677be0eaa557468d60b23612b0a8e61815d34cd78d33bc1e68de2c272\"}\n",
+    "stderr": "C:\\软件\\鼠鼠\\art_review\\reports\\independent_20261025_candidate\\p02_selfcheck_isolated.py:86: DeprecationWarning: Accessing jsonschema.__version__ is deprecated and will be removed in a future release. Use importlib.metadata directly to query for jsonschema's version.\n  \"schema_draft07_validator\": f\"jsonschema {jsonschema.__version__}\",\n"
+  },
+  {
+    "script": "delivery\\next_cycle\\T0\\p03_chain_test.py",
+    "redirected_fixture_and_report_paths": true,
+    "exit_code": 0,
+    "seconds": 4.974350599994068,
+    "stdout": "{\n \"results\": [\n  {\n   \"step\": \"prepare character_playback draft\",\n   \"exit\": 0,\n   \"status\": \"draft_prepared_not_accepted\"\n  },\n  {\n   \"step\": \"attest character_playback\",\n   \"exit\": 0\n  },\n  {\n   \"step\": \"certify character_playback\",\n   \"exit\": 0\n  },\n  {\n   \"step\": \"prepare scene_demo draft\",\n   \"exit\": 0,\n   \"status\": \"draft_prepared_not_accepted\"\n  },\n  {\n   \"step\": \"attest scene_demo\",\n   \"exit\": 0\n  },\n  {\n   \"step\": \"certify scene_demo\",\n   \"exit\": 0\n  },\n  {\n   \"step\": \"verify scene_demo with certificate chain\",\n   \"exit\": 0,\n   \"accepted\": true,\n   \"certificate_id\": \"cert-scene_demo-001\"\n  },\n  {\n   \"step\": \"forged certificate rejected\",\n   \"exit\": 2,\n   \"error\": \"Invalid stage certificate signature\"\n  },\n  {\n   \"step\": \"boolean dependencies rejected\",\n   \"exit\": 2,\n   \"error\": \"Certificate dependencies must be a list of objects, not a bo\"\n  },\n  {\n   \"step\": \"missing certificate rejected\",\n   \"exit\": 2,\n   \"error\": \"Stage release requires a real controller certificate; a bool\"\n  },\n  {\n   \"step\": \"no-key context rejected\",\n   \"exit\": 2,\n   \"error\": \"Controller verification key missing; never create a key insi\"\n  },\n  {\n   \"step\": \"missing dependency certificate rejected\",\n   \"exit\": 2,\n   \"error\": \"Missing certificate file: C:\\\\Users\\\\tt\\\\AppData\\\\Local\\\\Temp\\\\p03\"\n  },\n  {\n   \"step\": \"predecessor payload changed after certification rejected\",\n   \"exit\": 2,\n   \"error\": \"Artifacts changed after snapshot; regenerate manifest and review\"\n  },\n  {\n   \"step\": \"restored predecessor payload accepted again\",\n   \"exit\": 0,\n   \"accepted\": true\n  },\n  {\n   \"step\": \"prepare scene_demo draft\",\n   \"exit\": 0,\n   \"status\": \"draft_prepared_not_accepted\"\n  },\n  {\n   \"step\": \"attest scene_demo\",\n   \"exit\": 0\n  },\n  {\n   \"step\": \"consumption mismatch refused at certify\",\n   \"exit\": 2,\n   \"error\": \"Consumed predecessor artifacts differ from the certified character_playback vers\"\n  },\n  {\n   \"step\": \"consumption mismatch rejected at verify\",\n   \"exit\": 2,\n   \"error\": \"Consumed predecessor artifacts differ from the certified character_playback vers\"\n  },\n  {\n   \"step\": \"contract change invalidates certificate chain\",\n   \"exit\": 2,\n   \"error\": \"Stale contract/rubric digest; resubmit and re-review\"\n  }\n ],\n \"fixture_root\": \"C:\\\\Users\\\\tt\\\\AppData\\\\Local\\\\Temp\\\\p03_chain_ou8osbw2\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "script": "delivery\\next_cycle\\T0\\p04_selfcheck.py",
+    "redirected_fixture_and_report_paths": true,
+    "exit_code": 2,
+    "seconds": 2.263913299990236,
+    "stdout": "{\"all_passed\": false, \"verify_cases\": 7, \"impact_cases\": 5, \"output\": \"C:\\\\软件\\\\鼠鼠\\\\art_review\\\\reports\\\\independent_20261025_candidate\\\\p04_replay.json\", \"sha256\": \"f576f33ebadc66b4709d678716a1462b5240401685cfe05c4223e69b85499be7\"}\n",
+    "stderr": ""
+  },
+  {
+    "script": "delivery\\next_cycle\\T0\\p05_selfcheck.py",
+    "redirected_fixture_and_report_paths": true,
+    "exit_code": 0,
+    "seconds": 0.7361165000038454,
+    "stdout": "{\"all_passed\": true, \"cases\": 12, \"output\": \"C:\\\\软件\\\\鼠鼠\\\\art_review\\\\reports\\\\independent_20261025_candidate\\\\p05_replay.json\", \"sha256\": \"d88518ad13134f13761771bfbae9f89be09572830762efef060664559a40e7d2\"}\n",
+    "stderr": ""
+  },
+  {
+    "script": "delivery\\next_cycle\\T0\\p06_selfcheck.py",
+    "redirected_fixture_and_report_paths": true,
+    "exit_code": 1,
+    "seconds": 0.38369109999621287,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"C:\\软件\\鼠鼠\\art_review\\reports\\independent_20261025_candidate\\p06_selfcheck_isolated.py\", line 185, in <module>\n    sys.exit(main())\n             ^^^^^^\n  File \"C:\\软件\\鼠鼠\\art_review\\reports\\independent_20261025_candidate\\p06_selfcheck_isolated.py\", line 81, in main\n    canvas_report = json.loads((CANVAS / \"canvas_selftest.json\").read_text(encoding=\"utf-8-sig\"))\n                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\tt\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\pathlib.py\", line 1027, in read_text\n    with self.open(mode='r', encoding=encoding, errors=errors) as f:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\tt\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\pathlib.py\", line 1013, in open\n    return io.open(self, mode, buffering, encoding, errors, newline)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: 'C:\\\\软件\\\\鼠鼠\\\\art_review\\\\reports\\\\independent_20261025_candidate\\\\fixtures_p06_canvas\\\\canvas_selftest.json'\n"
+  }
+]

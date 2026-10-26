@@ -1,0 +1,18 @@
+[
+  {
+    "script": "delivery\\next_cycle\\T0\\p04_selfcheck.py",
+    "exit_code": 0,
+    "seconds": 2.57505850000598,
+    "stdout": "{\"all_passed\": true, \"verify_cases\": 7, \"impact_cases\": 5, \"output\": \"C:\\\\软件\\\\鼠鼠\\\\art_review\\\\reports\\\\independent_20261025_candidate\\\\p04_replay_corrected.json\", \"sha256\": \"a109b3843539825c4016788256f2e3bc59b8a8bf7832111965fdbc1b360c0817\"}\n",
+    "stderr": "",
+    "note": "Original audit-path isolation was incompatible with frozen-output policy; rerun under allowed independent delivery temp. P06 canvas fixture freshly generated."
+  },
+  {
+    "script": "delivery\\next_cycle\\T0\\p06_selfcheck.py",
+    "exit_code": 0,
+    "seconds": 2.931378399996902,
+    "stdout": "{\"all_passed\": true, \"cases\": 7, \"output\": \"C:\\\\软件\\\\鼠鼠\\\\art_review\\\\reports\\\\independent_20261025_candidate\\\\p06_replay_corrected.json\", \"sha256\": \"c350ea473e686b2f00f84ef926892adec1ac738f119fc0752ee1a5aaae21e109\"}\n",
+    "stderr": "",
+    "note": "Original audit-path isolation was incompatible with frozen-output policy; rerun under allowed independent delivery temp. P06 canvas fixture freshly generated."
+  }
+]

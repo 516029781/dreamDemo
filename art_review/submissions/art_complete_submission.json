@@ -1,0 +1,64 @@
+{
+  "character_mode": "reference_spine",
+  "production_methods": [
+    "reference_spine",
+    "blender_editable",
+    "cocos_scene_edit",
+    "svg_editable",
+    "existing_asset_import"
+  ],
+  "artifacts": [
+    {
+      "role": "clip_inventory",
+      "path": "art/phase1/character_playback_1015/clip_inventory.json"
+    },
+    {
+      "role": "idle_preview",
+      "path": "art/phase1/character_playback_1015/idle_preview.png"
+    },
+    {
+      "role": "move_preview",
+      "path": "art/phase1/character_playback_1015/move_preview.gif"
+    },
+    {
+      "role": "reference_comparison",
+      "path": "art/phase1/character_playback_1015/reference_comparison.png"
+    },
+    {
+      "role": "runtime_log",
+      "path": "art/phase1/character_playback_1015/runtime_log.txt"
+    },
+    {
+      "role": "scene_screenshot",
+      "path": "art/full/previews/engine/scene_gameplay_1280x720.png"
+    },
+    {
+      "role": "dialogue_screenshot",
+      "path": "art/full/previews/engine/dialogue_npc_1280x720.png"
+    },
+    {
+      "role": "demo_recording",
+      "path": "art/full/previews/engine/demo_recording.gif"
+    },
+    {
+      "role": "engine_sources",
+      "path": "delivery/courtyard_scene_demo_sources_v3.zip"
+    },
+    {
+      "role": "run_instructions",
+      "path": "delivery/RUN_DEMO.md"
+    },
+    {
+      "role": "map_editable_source",
+      "path": "art/full/source/layout/MAP001_courtyard.blend"
+    },
+    {
+      "role": "ui_editable_source",
+      "path": "art/full/ui/components/paper_panel.svg"
+    },
+    {
+      "role": "full_art_catalog",
+      "path": "art/full/art_complete_catalog.json"
+    }
+  ]
+}

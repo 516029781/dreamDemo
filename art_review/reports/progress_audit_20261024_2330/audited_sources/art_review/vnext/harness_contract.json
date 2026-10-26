@@ -1,0 +1,246 @@
+{
+  "contract_version": "1.4.0-draft",
+  "vnext_effective": false,
+  "vnext_note": "草案：仅在独立审核确认规则迁移（P08）后才可替换art_review/harness_contract.json生效；生效前生产判定仍按1.3.0。三轴状态schema见art_review/vnext/asset_status.schema.json（P02）。",
+  "character_policy": "reuse_reference_spine_no_free_generation",
+  "active_manifest": "art_review/submissions/current/manifest.json",
+  "release_policy": {
+    "prepare_draft_allowed": true,
+    "draft_status": "draft_not_accepted",
+    "released_only_by": "external_controller",
+    "boolean_previous_passed_accepted": false,
+    "certificate_required_for_release": true,
+    "certificate_schema": "art_review/vnext/stage_certificate.schema.json",
+    "note": "prepare只冻结draft收集缺项；放行需要确切的controller attestation加本阶段及全部前序阶段的真实证书链；伪造证书/布尔前序通过一律拒绝。"
+  },
+  "status_axes": {
+    "schema": "art_review/vnext/asset_status.schema.json",
+    "technical_state": ["missing", "source_ready", "import_verified"],
+    "visual_state": ["not_reviewed", "rework", "pass"],
+    "behavior_state": ["not_required", "not_tested", "fail", "pass"],
+    "release_state": ["draft", "blocked", "reviewed_not_released", "released"],
+    "invariants": [
+      "technical_self_check不得产生visual_state=pass",
+      "released只由外部controller_release记录产生",
+      "存在未解blocking/major问题的记录release_state必须为blocked"
+    ]
+  },
+  "quality_checks_path": "art_review/vnext/quality_checks.json",
+  "quality_checks_note": "Q01-Q09检查定义由P05填充；该文件当前不存在，不代表检查已实现。",
+  "locked_sources": [
+    {
+      "path": "reference/character_sources/ark_models/1015_aglna2/build_char_1015_aglna2.atlas",
+      "sha256": "e91e80fb9ac01ea52dfcdcdf8650085d57d04df06e4f130dacdb2ce038f8673b"
+    },
+    {
+      "path": "reference/character_sources/ark_models/1015_aglna2/build_char_1015_aglna2.png",
+      "sha256": "1adcc810e8e7325bf29451ddc02bbb66e531e8e8411e1baea0e765bf05ffaec3"
+    },
+    {
+      "path": "reference/character_sources/ark_models/1015_aglna2/build_char_1015_aglna2.skel",
+      "sha256": "07434af8bd32c0a863573492067bba6ffd56b4cd8df757537651658166f0fadc"
+    }
+  ],
+  "stages": {
+    "character_playback": {
+      "required_roles": [
+        "clip_inventory",
+        "idle_preview",
+        "move_preview",
+        "reference_comparison",
+        "runtime_log"
+      ],
+      "review_gates": [
+        "H01",
+        "H03",
+        "H04",
+        "H05",
+        "H09"
+      ],
+      "cards": [
+        "CHAR"
+      ],
+      "certificate_policy": {
+        "required_for_release": true,
+        "requires_certificates": []
+      }
+    },
+    "scene_demo": {
+      "required_roles": [
+        "clip_inventory",
+        "idle_preview",
+        "move_preview",
+        "reference_comparison",
+        "runtime_log",
+        "scene_screenshot",
+        "dialogue_screenshot",
+        "demo_recording",
+        "engine_sources",
+        "run_instructions",
+        "map_editable_source",
+        "ui_editable_source"
+      ],
+      "review_gates": [
+        "H01",
+        "H02",
+        "H03",
+        "H04",
+        "H05",
+        "H06",
+        "H07",
+        "H08",
+        "H09"
+      ],
+      "cards": [
+        "ENV",
+        "CHAR",
+        "UI",
+        "MIX"
+      ],
+      "certificate_policy": {
+        "required_for_release": true,
+        "requires_certificates": [
+          "character_playback"
+        ]
+      }
+    },
+    "art_complete": {
+      "required_roles": [
+        "clip_inventory",
+        "idle_preview",
+        "move_preview",
+        "reference_comparison",
+        "runtime_log",
+        "scene_screenshot",
+        "dialogue_screenshot",
+        "demo_recording",
+        "engine_sources",
+        "run_instructions",
+        "map_editable_source",
+        "ui_editable_source",
+        "full_art_catalog"
+      ],
+      "review_gates": [
+        "H01",
+        "H02",
+        "H03",
+        "H04",
+        "H05",
+        "H06",
+        "H07",
+        "H08",
+        "H09"
+      ],
+      "cards": [
+        "ENV",
+        "CHAR",
+        "UI",
+        "MIX"
+      ],
+      "certificate_policy": {
+        "required_for_release": true,
+        "requires_certificates": [
+          "scene_demo"
+        ]
+      }
+    }
+  },
+  "production_policy": {
+    "direct_image_generation_allowed": false,
+    "allowed_methods": [
+      "reference_spine",
+      "blender_editable",
+      "blender_mcp_native",
+      "cocos_scene_edit",
+      "krita_layered",
+      "svg_editable",
+      "existing_asset_import"
+    ],
+    "proof": "Editable native files plus runtime/tool logs and independent visual review. Method labels alone are not proof."
+  },
+  "catalog_definition_path": "art_review/full_art_catalog.json",
+  "expected_art_ids": [
+    "MAP001",
+    "ENV001",
+    "ENV002",
+    "ENV003",
+    "ENV004",
+    "ENV005",
+    "ENV006",
+    "ENV007",
+    "ENV008",
+    "ENV009",
+    "ENV010",
+    "ENV011",
+    "ENV012",
+    "PROP001",
+    "PROP002",
+    "PROP003",
+    "PROP004",
+    "PROP005",
+    "PROP006",
+    "MAT001",
+    "MAT002",
+    "MAT003",
+    "MAT004",
+    "MAT005",
+    "LOOK001",
+    "CHAR001",
+    "CHAR002",
+    "CHAR003",
+    "CHAR004",
+    "CHAR005",
+    "UI001",
+    "UI002",
+    "UI003",
+    "UI004",
+    "UI005",
+    "UI006",
+    "UI007",
+    "UI008",
+    "UI009",
+    "UI010",
+    "UI011",
+    "UI012",
+    "UI013",
+    "FX001",
+    "FX002",
+    "FX003",
+    "PACK001"
+  ],
+  "character_source": {
+    "candidate_id": "1015_aglna2",
+    "display_name": "予愿安洁莉娜 (Angelina the Mellow Wish)",
+    "skin": "default",
+    "kind": "reference_spine_alter",
+    "repository": "https://github.com/isHarryh/Ark-Models",
+    "commit": "e65fb9147846b64bcf2df956b8cd8da77a51b9b8",
+    "note": "P1 visual identity match; not a 291_aglina skin; user/controller approved source switch 2026-10-24. Independent H09/H05 review still required."
+  },
+  "source_update": {
+    "date": "2026-10-24",
+    "approved_by": "user/controller (conversation approval)",
+    "reason": "P1 t044/t054/t084 identity comparison shows the red/black Angelina is 1015_aglna2 default, not 291_aglina default or BoC#1. User approved switching the locked reference source and re-running character_playback.",
+    "previous_locked_sources": [
+      {
+        "path": "reference/character_sources/ark_models/291_aglina/build_char_291_aglina.atlas",
+        "sha256": "d27d955bfeb64be8c75e6d66ff0e67624028b4ec114abdaf1a838bdb375855ca"
+      },
+      {
+        "path": "reference/character_sources/ark_models/291_aglina/build_char_291_aglina.png",
+        "sha256": "17d9db6fa73002948f666ec8d4c5c0d4dadfc6a27e1c2031ffa0e1e8bdad3faf"
+      },
+      {
+        "path": "reference/character_sources/ark_models/291_aglina/build_char_291_aglina.skel",
+        "sha256": "efc45340936ec4ef3da37e351975c2902b6d5d9f8f46684ebbd7dc7b93683eee"
+      }
+    ],
+    "proposal": "art/phase1/reference_character/source_search/source_contract_update_proposal.json",
+    "evidence": [
+      "art/phase1/reference_character/source_search/identity_candidate_1015_aglna2.png",
+      "art/phase1/reference_character/source_search/source_search_report.md"
+    ],
+    "thresholds_unchanged": true,
+    "note": "Source-only update; rubric/gates unchanged. New frozen character_playback submission is required; old 291 evidence remains historical."
+  }
+}

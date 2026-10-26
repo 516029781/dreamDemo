@@ -1,0 +1,205 @@
+{
+  "contract_version": "1.3.0",
+  "character_policy": "reuse_reference_spine_no_free_generation",
+  "active_manifest": "art_review/submissions/current/manifest.json",
+  "locked_sources": [
+    {
+      "path": "reference/character_sources/ark_models/1015_aglna2/build_char_1015_aglna2.atlas",
+      "sha256": "e91e80fb9ac01ea52dfcdcdf8650085d57d04df06e4f130dacdb2ce038f8673b"
+    },
+    {
+      "path": "reference/character_sources/ark_models/1015_aglna2/build_char_1015_aglna2.png",
+      "sha256": "1adcc810e8e7325bf29451ddc02bbb66e531e8e8411e1baea0e765bf05ffaec3"
+    },
+    {
+      "path": "reference/character_sources/ark_models/1015_aglna2/build_char_1015_aglna2.skel",
+      "sha256": "07434af8bd32c0a863573492067bba6ffd56b4cd8df757537651658166f0fadc"
+    }
+  ],
+  "stages": {
+    "character_playback": {
+      "required_roles": [
+        "clip_inventory",
+        "idle_preview",
+        "move_preview",
+        "reference_comparison",
+        "runtime_log"
+      ],
+      "review_gates": [
+        "H01",
+        "H03",
+        "H04",
+        "H05",
+        "H09"
+      ],
+      "cards": [
+        "CHAR"
+      ]
+    },
+    "scene_demo": {
+      "required_roles": [
+        "clip_inventory",
+        "idle_preview",
+        "move_preview",
+        "reference_comparison",
+        "runtime_log",
+        "scene_screenshot",
+        "dialogue_screenshot",
+        "demo_recording",
+        "engine_sources",
+        "run_instructions",
+        "map_editable_source",
+        "ui_editable_source"
+      ],
+      "review_gates": [
+        "H01",
+        "H02",
+        "H03",
+        "H04",
+        "H05",
+        "H06",
+        "H07",
+        "H08",
+        "H09"
+      ],
+      "cards": [
+        "ENV",
+        "CHAR",
+        "UI",
+        "MIX"
+      ]
+    },
+    "art_complete": {
+      "required_roles": [
+        "clip_inventory",
+        "idle_preview",
+        "move_preview",
+        "reference_comparison",
+        "runtime_log",
+        "scene_screenshot",
+        "dialogue_screenshot",
+        "demo_recording",
+        "engine_sources",
+        "run_instructions",
+        "map_editable_source",
+        "ui_editable_source",
+        "full_art_catalog"
+      ],
+      "review_gates": [
+        "H01",
+        "H02",
+        "H03",
+        "H04",
+        "H05",
+        "H06",
+        "H07",
+        "H08",
+        "H09"
+      ],
+      "cards": [
+        "ENV",
+        "CHAR",
+        "UI",
+        "MIX"
+      ]
+    }
+  },
+  "production_policy": {
+    "direct_image_generation_allowed": false,
+    "allowed_methods": [
+      "reference_spine",
+      "blender_editable",
+      "blender_mcp_native",
+      "cocos_scene_edit",
+      "krita_layered",
+      "svg_editable",
+      "existing_asset_import"
+    ],
+    "proof": "Editable native files plus runtime/tool logs and independent visual review. Method labels alone are not proof."
+  },
+  "catalog_definition_path": "art_review/full_art_catalog.json",
+  "expected_art_ids": [
+    "MAP001",
+    "ENV001",
+    "ENV002",
+    "ENV003",
+    "ENV004",
+    "ENV005",
+    "ENV006",
+    "ENV007",
+    "ENV008",
+    "ENV009",
+    "ENV010",
+    "ENV011",
+    "ENV012",
+    "PROP001",
+    "PROP002",
+    "PROP003",
+    "PROP004",
+    "PROP005",
+    "PROP006",
+    "MAT001",
+    "MAT002",
+    "MAT003",
+    "MAT004",
+    "MAT005",
+    "LOOK001",
+    "CHAR001",
+    "CHAR002",
+    "CHAR003",
+    "CHAR004",
+    "CHAR005",
+    "UI001",
+    "UI002",
+    "UI003",
+    "UI004",
+    "UI005",
+    "UI006",
+    "UI007",
+    "UI008",
+    "UI009",
+    "UI010",
+    "UI011",
+    "UI012",
+    "UI013",
+    "FX001",
+    "FX002",
+    "FX003",
+    "PACK001"
+  ],
+  "character_source": {
+    "candidate_id": "1015_aglna2",
+    "display_name": "予愿安洁莉娜 (Angelina the Mellow Wish)",
+    "skin": "default",
+    "kind": "reference_spine_alter",
+    "repository": "https://github.com/isHarryh/Ark-Models",
+    "commit": "e65fb9147846b64bcf2df956b8cd8da77a51b9b8",
+    "note": "P1 visual identity match; not a 291_aglina skin; user/controller approved source switch 2026-10-24. Independent H09/H05 review still required."
+  },
+  "source_update": {
+    "date": "2026-10-24",
+    "approved_by": "user/controller (conversation approval)",
+    "reason": "P1 t044/t054/t084 identity comparison shows the red/black Angelina is 1015_aglna2 default, not 291_aglina default or BoC#1. User approved switching the locked reference source and re-running character_playback.",
+    "previous_locked_sources": [
+      {
+        "path": "reference/character_sources/ark_models/291_aglina/build_char_291_aglina.atlas",
+        "sha256": "d27d955bfeb64be8c75e6d66ff0e67624028b4ec114abdaf1a838bdb375855ca"
+      },
+      {
+        "path": "reference/character_sources/ark_models/291_aglina/build_char_291_aglina.png",
+        "sha256": "17d9db6fa73002948f666ec8d4c5c0d4dadfc6a27e1c2031ffa0e1e8bdad3faf"
+      },
+      {
+        "path": "reference/character_sources/ark_models/291_aglina/build_char_291_aglina.skel",
+        "sha256": "efc45340936ec4ef3da37e351975c2902b6d5d9f8f46684ebbd7dc7b93683eee"
+      }
+    ],
+    "proposal": "art/phase1/reference_character/source_search/source_contract_update_proposal.json",
+    "evidence": [
+      "art/phase1/reference_character/source_search/identity_candidate_1015_aglna2.png",
+      "art/phase1/reference_character/source_search/source_search_report.md"
+    ],
+    "thresholds_unchanged": true,
+    "note": "Source-only update; rubric/gates unchanged. New frozen character_playback submission is required; old 291 evidence remains historical."
+  }
+}

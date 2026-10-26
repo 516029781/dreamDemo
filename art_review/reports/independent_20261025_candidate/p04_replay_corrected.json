@@ -1,0 +1,183 @@
+{
+  "kind": "p04_selfcheck_capture_binding",
+  "checker_sha256": "b3202d5d2c3f301133cbf41bf3efa5dcaea9e1bfd4fdd343d72b3f9dfb4b9a73",
+  "schema_sha256": "9a19a1bb3ec6f2521ae6812a9c071508c8fe834171fdec472f76d547ccd96b15",
+  "verify_cases": [
+    {
+      "case": "good_binding",
+      "pass": true,
+      "error": null,
+      "checks": 5,
+      "expected_error_contains": null
+    },
+    {
+      "case": "output_hash_tampered",
+      "pass": true,
+      "error": "output hash mismatch: delivery/_independent_20261025/p04_tmp/output_hash_tampered/out_a.png",
+      "checks": null,
+      "expected_error_contains": "output hash mismatch"
+    },
+    {
+      "case": "page_screenshot_rejected",
+      "pass": true,
+      "error": "Schema violations: canvas/page_screenshot: False was expected",
+      "checks": null,
+      "expected_error_contains": "page_screenshot"
+    },
+    {
+      "case": "backing_size_mismatch",
+      "pass": true,
+      "error": "Captured image must match the real canvas backing size; page crops are not canvas evidence",
+      "checks": null,
+      "expected_error_contains": "canvas backing size"
+    },
+    {
+      "case": "missing_build_log",
+      "pass": true,
+      "error": "Missing file: delivery/_independent_20261025/p04_tmp/missing_build_log/build.log",
+      "checks": null,
+      "expected_error_contains": "Missing file"
+    },
+    {
+      "case": "build_failure_rejected",
+      "pass": true,
+      "error": "Build log is marked failure; a Finished message is not success (F08)",
+      "checks": null,
+      "expected_error_contains": "marked failure"
+    },
+    {
+      "case": "frozen_output_rejected",
+      "pass": true,
+      "error": "Capture output must not overwrite frozen evidence: art_review/submissions/frozen_capture.png",
+      "checks": null,
+      "expected_error_contains": "frozen evidence"
+    }
+  ],
+  "impact_cases": [
+    {
+      "case": "shared_texture_change",
+      "pass": true,
+      "dirty": [
+        "cap-A",
+        "cap-B",
+        "cap-C"
+      ],
+      "expected_dirty": [
+        "cap-A",
+        "cap-B",
+        "cap-C"
+      ],
+      "unrelated_cap_d_clean": true,
+      "stages": [
+        "art_complete",
+        "scene_demo"
+      ],
+      "changed": [
+        {
+          "path": "delivery/_independent_20261025/p04_tmp/shared_texture_change/shared_tex.png",
+          "status": "content_changed",
+          "current_sha256": "f928198c74d56434da46932c59edb886a121c260c678e39128ed5ae215f70eb0",
+          "recorded_sha256": [
+            "f066331a1679ee36f8fbec91ab2cf026616bb66e0d458c80dd3a7f837b2f4263"
+          ],
+          "shared_scopes": [
+            "ENV006",
+            "MAP001"
+          ]
+        }
+      ]
+    },
+    {
+      "case": "single_tree_source_change",
+      "pass": true,
+      "dirty": [
+        "cap-B",
+        "cap-C"
+      ],
+      "expected_dirty": [
+        "cap-B",
+        "cap-C"
+      ],
+      "unrelated_cap_d_clean": true,
+      "stages": [
+        "art_complete"
+      ],
+      "changed": [
+        {
+          "path": "delivery/_independent_20261025/p04_tmp/single_tree_source_change/tree.blend",
+          "status": "content_changed",
+          "current_sha256": "9f63c83ce35ffe14d2165251785a9175d1c7ad24dc4e1ebdd9dc56b6790c3418",
+          "recorded_sha256": [
+            "c2f7dbde76fc63350c19fa2bd7f9218fb4843798ced712b3d3eddb3c764dd902"
+          ],
+          "shared_scopes": []
+        }
+      ]
+    },
+    {
+      "case": "same_bytes_touch_only",
+      "pass": true,
+      "dirty": [],
+      "expected_dirty": [],
+      "unrelated_cap_d_clean": true,
+      "stages": [],
+      "changed": [
+        {
+          "path": "delivery/_independent_20261025/p04_tmp/same_bytes_touch_only/out_a.png",
+          "status": "content_unchanged",
+          "current_sha256": "d6f0c4c25c83b98ed30f96093fec0a4ed1ba054246306961103adc94719c3edf",
+          "recorded_sha256": [
+            "d6f0c4c25c83b98ed30f96093fec0a4ed1ba054246306961103adc94719c3edf"
+          ],
+          "shared_scopes": []
+        }
+      ]
+    },
+    {
+      "case": "upstream_capture_change",
+      "pass": true,
+      "dirty": [
+        "cap-A",
+        "cap-C"
+      ],
+      "expected_dirty": [
+        "cap-A",
+        "cap-C"
+      ],
+      "unrelated_cap_d_clean": true,
+      "stages": [
+        "art_complete",
+        "scene_demo"
+      ],
+      "changed": [
+        {
+          "path": "delivery/_independent_20261025/p04_tmp/upstream_capture_change/out_a.png",
+          "status": "content_changed",
+          "current_sha256": "9ea77bc15001f64353c886222858f535c8430c61f546a8839d6d85fda05a1b2f",
+          "recorded_sha256": [
+            "d6f0c4c25c83b98ed30f96093fec0a4ed1ba054246306961103adc94719c3edf"
+          ],
+          "shared_scopes": []
+        }
+      ]
+    },
+    {
+      "case": "unreferenced_file",
+      "pass": true,
+      "dirty": [],
+      "expected_dirty": [],
+      "unrelated_cap_d_clean": true,
+      "stages": [],
+      "changed": [
+        {
+          "path": "delivery/_independent_20261025/p04_tmp/unreferenced_file/unique.txt",
+          "status": "unreferenced",
+          "current_sha256": "77492e686534e36128069cab85c36be73630f72d7d9d5b1a94155ef8fae23b43",
+          "recorded_sha256": [],
+          "shared_scopes": []
+        }
+      ]
+    }
+  ],
+  "all_passed": true
+}

@@ -1,0 +1,15 @@
+{
+  "template_only": true,
+  "task_id": null,
+  "status": "todo",
+  "input_bindings": [],
+  "changed_files": [],
+  "evidence_paths": [],
+  "commands_run": [],
+  "actual_exit_codes": [],
+  "acceptance_results": [],
+  "related_defects": [],
+  "reviewer_reference": null,
+  "blocker": null,
+  "resume_action": null
+}

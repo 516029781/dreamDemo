@@ -1,0 +1,1031 @@
+{
+  "schema_version": 1,
+  "planning_only": true,
+  "map_id": "courtyard_01",
+  "revision": 0,
+  "layout_owner": "blender",
+  "coordinate_system": "right_handed_y_up_xz_ground",
+  "bounds": {
+    "x_min": -14,
+    "x_max": 14,
+    "z_min": -10,
+    "z_max": 10,
+    "walk_surface_y": 0
+  },
+  "camera": {
+    "follow_offset": [
+      0,
+      10,
+      -10
+    ],
+    "vertical_fov_deg": 35,
+    "resolution": [
+      1280,
+      720
+    ]
+  },
+  "instances": [
+    {
+      "instance_id": "paving_0_0",
+      "asset_id": "ENV001",
+      "position": [
+        -12,
+        0,
+        -8
+      ],
+      "rotation_quat": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "material_variant": "stone_default",
+      "occlusion_group": null
+    },
+    {
+      "instance_id": "paving_0_1",
+      "asset_id": "ENV001",
+      "position": [
+        -8,
+        0,
+        -8
+      ],
+      "rotation_quat": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "material_variant": "stone_default",
+      "occlusion_group": null
+    },
+    {
+      "instance_id": "paving_0_2",
+      "asset_id": "ENV001",
+      "position": [
+        -4,
+        0,
+        -8
+      ],
+      "rotation_quat": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "material_variant": "stone_default",
+      "occlusion_group": null
+    },
+    {
+      "instance_id": "paving_0_3",
+      "asset_id": "ENV001",
+      "position": [
+        0,
+        0,
+        -8
+      ],
+      "rotation_quat": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "material_variant": "stone_default",
+      "occlusion_group": null
+    },
+    {
+      "instance_id": "paving_0_4",
+      "asset_id": "ENV001",
+      "position": [
+        4,
+        0,
+        -8
+      ],
+      "rotation_quat": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "material_variant": "stone_default",
+      "occlusion_group": null
+    },
+    {
+      "instance_id": "paving_0_5",
+      "asset_id": "ENV001",
+      "position": [
+        8,
+        0,
+        -8
+      ],
+      "rotation_quat": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "material_variant": "stone_default",
+      "occlusion_group": null
+    },
+    {
+      "instance_id": "paving_0_6",
+      "asset_id": "ENV001",
+      "position": [
+        12,
+        0,
+        -8
+      ],
+      "rotation_quat": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "material_variant": "stone_default",
+      "occlusion_group": null
+    },
+    {
+      "instance_id": "paving_1_0",
+      "asset_id": "ENV001",
+      "position": [
+        -12,
+        0,
+        -4
+      ],
+      "rotation_quat": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "material_variant": "stone_default",
+      "occlusion_group": null
+    },
+    {
+      "instance_id": "paving_1_1",
+      "asset_id": "ENV001",
+      "position": [
+        -8,
+        0,
+        -4
+      ],
+      "rotation_quat": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "material_variant": "stone_default",
+      "occlusion_group": null
+    },
+    {
+      "instance_id": "paving_1_2",
+      "asset_id": "ENV001",
+      "position": [
+        -4,
+        0,
+        -4
+      ],
+      "rotation_quat": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "material_variant": "stone_default",
+      "occlusion_group": null
+    },
+    {
+      "instance_id": "paving_1_3",
+      "asset_id": "ENV001",
+      "position": [
+        0,
+        0,
+        -4
+      ],
+      "rotation_quat": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "material_variant": "stone_default",
+      "occlusion_group": null
+    },
+    {
+      "instance_id": "paving_1_4",
+      "asset_id": "ENV001",
+      "position": [
+        4,
+        0,
+        -4
+      ],
+      "rotation_quat": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "material_variant": "stone_default",
+      "occlusion_group": null
+    },
+    {
+      "instance_id": "paving_1_5",
+      "asset_id": "ENV001",
+      "position": [
+        8,
+        0,
+        -4
+      ],
+      "rotation_quat": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "material_variant": "stone_default",
+      "occlusion_group": null
+    },
+    {
+      "instance_id": "paving_1_6",
+      "asset_id": "ENV001",
+      "position": [
+        12,
+        0,
+        -4
+      ],
+      "rotation_quat": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "material_variant": "stone_default",
+      "occlusion_group": null
+    },
+    {
+      "instance_id": "paving_2_0",
+      "asset_id": "ENV001",
+      "position": [
+        -12,
+        0,
+        0
+      ],
+      "rotation_quat": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "material_variant": "stone_default",
+      "occlusion_group": null
+    },
+    {
+      "instance_id": "paving_2_1",
+      "asset_id": "ENV001",
+      "position": [
+        -8,
+        0,
+        0
+      ],
+      "rotation_quat": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "material_variant": "stone_default",
+      "occlusion_group": null
+    },
+    {
+      "instance_id": "paving_2_2",
+      "asset_id": "ENV001",
+      "position": [
+        -4,
+        0,
+        0
+      ],
+      "rotation_quat": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "material_variant": "stone_default",
+      "occlusion_group": null
+    },
+    {
+      "instance_id": "paving_2_3",
+      "asset_id": "ENV001",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotation_quat": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "material_variant": "stone_default",
+      "occlusion_group": null
+    },
+    {
+      "instance_id": "paving_2_4",
+      "asset_id": "ENV001",
+      "position": [
+        4,
+        0,
+        0
+      ],
+      "rotation_quat": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "material_variant": "stone_default",
+      "occlusion_group": null
+    },
+    {
+      "instance_id": "paving_2_5",
+      "asset_id": "ENV001",
+      "position": [
+        8,
+        0,
+        0
+      ],
+      "rotation_quat": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "material_variant": "stone_default",
+      "occlusion_group": null
+    },
+    {
+      "instance_id": "paving_2_6",
+      "asset_id": "ENV001",
+      "position": [
+        12,
+        0,
+        0
+      ],
+      "rotation_quat": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "material_variant": "stone_default",
+      "occlusion_group": null
+    },
+    {
+      "instance_id": "paving_3_0",
+      "asset_id": "ENV001",
+      "position": [
+        -12,
+        0,
+        4
+      ],
+      "rotation_quat": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "material_variant": "stone_default",
+      "occlusion_group": null
+    },
+    {
+      "instance_id": "paving_3_1",
+      "asset_id": "ENV001",
+      "position": [
+        -8,
+        0,
+        4
+      ],
+      "rotation_quat": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "material_variant": "stone_default",
+      "occlusion_group": null
+    },
+    {
+      "instance_id": "paving_3_2",
+      "asset_id": "ENV001",
+      "position": [
+        -4,
+        0,
+        4
+      ],
+      "rotation_quat": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "material_variant": "stone_default",
+      "occlusion_group": null
+    },
+    {
+      "instance_id": "paving_3_3",
+      "asset_id": "ENV001",
+      "position": [
+        0,
+        0,
+        4
+      ],
+      "rotation_quat": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "material_variant": "stone_default",
+      "occlusion_group": null
+    },
+    {
+      "instance_id": "paving_3_4",
+      "asset_id": "ENV001",
+      "position": [
+        4,
+        0,
+        4
+      ],
+      "rotation_quat": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "material_variant": "stone_default",
+      "occlusion_group": null
+    },
+    {
+      "instance_id": "paving_3_5",
+      "asset_id": "ENV001",
+      "position": [
+        8,
+        0,
+        4
+      ],
+      "rotation_quat": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "material_variant": "stone_default",
+      "occlusion_group": null
+    },
+    {
+      "instance_id": "paving_3_6",
+      "asset_id": "ENV001",
+      "position": [
+        12,
+        0,
+        4
+      ],
+      "rotation_quat": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "material_variant": "stone_default",
+      "occlusion_group": null
+    },
+    {
+      "instance_id": "paving_4_0",
+      "asset_id": "ENV001",
+      "position": [
+        -12,
+        0,
+        8
+      ],
+      "rotation_quat": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "material_variant": "stone_default",
+      "occlusion_group": null
+    },
+    {
+      "instance_id": "paving_4_1",
+      "asset_id": "ENV001",
+      "position": [
+        -8,
+        0,
+        8
+      ],
+      "rotation_quat": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "material_variant": "stone_default",
+      "occlusion_group": null
+    },
+    {
+      "instance_id": "paving_4_2",
+      "asset_id": "ENV001",
+      "position": [
+        -4,
+        0,
+        8
+      ],
+      "rotation_quat": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "material_variant": "stone_default",
+      "occlusion_group": null
+    },
+    {
+      "instance_id": "paving_4_3",
+      "asset_id": "ENV001",
+      "position": [
+        0,
+        0,
+        8
+      ],
+      "rotation_quat": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "material_variant": "stone_default",
+      "occlusion_group": null
+    },
+    {
+      "instance_id": "paving_4_4",
+      "asset_id": "ENV001",
+      "position": [
+        4,
+        0,
+        8
+      ],
+      "rotation_quat": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "material_variant": "stone_default",
+      "occlusion_group": null
+    },
+    {
+      "instance_id": "paving_4_5",
+      "asset_id": "ENV001",
+      "position": [
+        8,
+        0,
+        8
+      ],
+      "rotation_quat": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "material_variant": "stone_default",
+      "occlusion_group": null
+    },
+    {
+      "instance_id": "paving_4_6",
+      "asset_id": "ENV001",
+      "position": [
+        12,
+        0,
+        8
+      ],
+      "rotation_quat": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "material_variant": "stone_default",
+      "occlusion_group": null
+    },
+    {
+      "instance_id": "main_tree",
+      "asset_id": "ENV006",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotation_quat": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "material_variant": "default",
+      "occlusion_group": "main_tree_crown"
+    },
+    {
+      "instance_id": "central_planter",
+      "asset_id": "ENV007",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotation_quat": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "material_variant": "default",
+      "occlusion_group": null
+    },
+    {
+      "instance_id": "bench_west",
+      "asset_id": "PROP001",
+      "position": [
+        -8,
+        0,
+        -3
+      ],
+      "rotation_quat": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "material_variant": "default",
+      "occlusion_group": null
+    },
+    {
+      "instance_id": "bench_east",
+      "asset_id": "PROP001",
+      "position": [
+        7,
+        0,
+        -3
+      ],
+      "rotation_quat": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "material_variant": "default",
+      "occlusion_group": null
+    },
+    {
+      "instance_id": "planter_west",
+      "asset_id": "ENV008",
+      "position": [
+        -9,
+        0,
+        4
+      ],
+      "rotation_quat": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "material_variant": "default",
+      "occlusion_group": null
+    },
+    {
+      "instance_id": "pergola_east",
+      "asset_id": "PROP002",
+      "position": [
+        9,
+        0,
+        5
+      ],
+      "rotation_quat": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "material_variant": "default",
+      "occlusion_group": null
+    },
+    {
+      "instance_id": "noticeboard",
+      "asset_id": "PROP003",
+      "position": [
+        0,
+        0,
+        6
+      ],
+      "rotation_quat": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "material_variant": "default",
+      "occlusion_group": null
+    }
+  ],
+  "colliders": [
+    {
+      "id": "central_planter",
+      "shape": "circle",
+      "center_xz": [
+        0,
+        0
+      ],
+      "radius": 2
+    }
+  ],
+  "markers": [
+    {
+      "marker_id": "spawn",
+      "kind": "spawn",
+      "position": [
+        0,
+        0,
+        -8
+      ],
+      "interaction_radius": 0
+    },
+    {
+      "marker_id": "npc",
+      "kind": "npc",
+      "position": [
+        3,
+        0,
+        -5
+      ],
+      "interaction_radius": 1.6
+    },
+    {
+      "marker_id": "pickup_A",
+      "kind": "pickup",
+      "position": [
+        -7,
+        0.15,
+        -3
+      ],
+      "interaction_radius": 1.6
+    },
+    {
+      "marker_id": "pickup_B",
+      "kind": "pickup",
+      "position": [
+        -8,
+        0.15,
+        4
+      ],
+      "interaction_radius": 1.6
+    },
+    {
+      "marker_id": "pickup_C",
+      "kind": "pickup",
+      "position": [
+        8,
+        0.15,
+        5
+      ],
+      "interaction_radius": 1.6
+    },
+    {
+      "marker_id": "noticeboard",
+      "kind": "interaction",
+      "position": [
+        0,
+        0,
+        6
+      ],
+      "interaction_radius": 1.6
+    }
+  ],
+  "unresolved": [
+    "Normalise existing paving top0.14 to engine walking surface0 exactly once.",
+    "Asset export registry references unresolved; not import-ready.",
+    "Boundary,bench,pergola colliders and NPC cutout anchor still need implementation."
+  ]
+}

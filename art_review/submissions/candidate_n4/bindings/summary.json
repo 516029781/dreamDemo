@@ -1,0 +1,11 @@
+{
+  "kind": "finalN4_capture_bindings",
+  "build_report": "delivery\\performance\\cocos_build_20261025_235846.json",
+  "verified": {
+    "formal_no_ui": "efc4af459d2dbfcdc9b430141e2b32493894a89bc8cca05d2c675dff8747b572",
+    "formal_ui": "2b9dfa9bed71b73b78e0bbf874e3c2dec250944ca5e7c19434281ae1a2937a29",
+    "dialogue": "6e6609782b5ecd71b6678774bc57a7a451a2e738dc4e806bdcf82ca466b1a4ef"
+  },
+  "all_verified": true,
+  "meaning": "Evidence chain only; not visual acceptance."
+}

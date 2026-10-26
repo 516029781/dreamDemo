@@ -1,0 +1,748 @@
+{
+  "schema_version": "1.0.0",
+  "report_kind": "actual_independent_review",
+  "rubric_version": "1.2.0",
+  "review_scope": "art_complete",
+  "reviewer": {
+    "id": "Codex independent audit 2026-10-24",
+    "mode": "independent"
+  },
+  "asset_manifest_path": "art_review/submissions/art_complete/manifest.json",
+  "asset_manifest_sha256": null,
+  "style_master_version": "P1 t015/t044/t054/t084; current rubric1.2.0",
+  "calibration_status": "provisional rubric; human-reference comparison, not a similarity metric",
+  "gates": {
+    "H01": {
+      "status": "pass",
+      "evidence": [
+        "art/full/previews/engine/scene_gameplay_1280x720.png",
+        "delivery/courtyard_scene_demo_sources_v3.zip"
+      ],
+      "reason": "Native sources, Cocos build, source archive and real browser output inspected;394 frozen entries match hashes."
+    },
+    "H02": {
+      "status": "fail",
+      "evidence": [
+        "art/full/previews/engine/scene_gameplay_1280x720.png",
+        "art/full/previews/engine/assets/FX003.png"
+      ],
+      "reason": "All47 groups are listed, but world occlusion and empty/full/reset visual evidence are not complete; file coverage is not full acceptance."
+    },
+    "H03": {
+      "status": "not_checked",
+      "evidence": [
+        "art/full/previews/engine/assets/CHAR003.png",
+        "art/full/previews/engine/assets/FX001.png"
+      ],
+      "reason": "Not all47 assets/frames independently inspected for alpha/anchor correctness; only representative visual checks completed."
+    },
+    "H04": {
+      "status": "pass",
+      "evidence": [
+        "art/full/source/layout/MAP001_courtyard.blend",
+        "art/full/source/environment/ENV006_autumn_tree.blend",
+        "art/full/source/props/PROP001_bench.blend"
+      ],
+      "reason": "Representative native blend sources actually reopen; source/dependency records exist. No claim of exhaustive interactive edit of every source."
+    },
+    "H05": {
+      "status": "pass",
+      "evidence": [
+        "art/phase1/character_playback_1015/move_preview.gif",
+        "art/full/previews/engine/assets/CHAR002.png"
+      ],
+      "reason": "Current1015 source package and sampled30-frame real Move loop preserve same outfit/attachments; integration defects scored separately."
+    },
+    "H06": {
+      "status": "pass",
+      "evidence": [
+        "art/full/previews/engine/scene_gameplay_1280x720.png",
+        "delivery/courtyard_scene_demo_sources_v3.zip"
+      ],
+      "reason": "Actual Cocos web-desktop build loaded independently without page errors and responded to API/keyboard; source zip script matches current TS."
+    },
+    "H07": {
+      "status": "fail",
+      "evidence": [
+        "art/full/previews/engine/ui_states/pause_default.png",
+        "delivery/courtyard_scene_demo_sources_v3.zip"
+      ],
+      "reason": "Pause state accepts movement; safe-area/rotation is a representation, not actual mobile validation."
+    },
+    "H08": {
+      "status": "pass",
+      "evidence": [
+        "art/full/art_complete_catalog.json",
+        "art/phase1/character_playback_1015/reference_comparison.png"
+      ],
+      "reason": "Third-party character/cutout sources are declared as reused, not original or official open art. This is truthful-source review, not a commercial rights clearance."
+    },
+    "H09": {
+      "status": "pass",
+      "evidence": [
+        "art/phase1/character_playback_1015/reference_comparison.png",
+        "art/full/previews/engine/assets/CHAR001.png",
+        "art/full/previews/engine/assets/CHAR003.png"
+      ],
+      "reason": "Visual comparison supports1015 red/black identity and approved-route t054 NPC cutout; not a free-generated substitute."
+    }
+  },
+  "cards": {
+    "ENV": {
+      "dimensions": [
+        {
+          "id": "composition_scale",
+          "score": 1,
+          "evidence": [
+            "art/full/previews/engine/scene_gameplay_1280x720.png",
+            "art/full/previews/engine/assets/ENV006.png",
+            "art/full/previews/engine/assets/MAT002.png"
+          ],
+          "reason": "全图总览与小人物，未达到参考构图尺度",
+          "defect_ids": [
+            "R01",
+            "R02",
+            "R03",
+            "R04",
+            "R05",
+            "R06",
+            "R07",
+            "R08"
+          ]
+        },
+        {
+          "id": "geometry_craft",
+          "score": 2,
+          "evidence": [
+            "art/full/previews/engine/scene_gameplay_1280x720.png",
+            "art/full/previews/engine/assets/ENV006.png",
+            "art/full/previews/engine/assets/MAT002.png"
+          ],
+          "reason": "有真实结构，但树干/植物轮廓粗简",
+          "defect_ids": [
+            "R01",
+            "R02",
+            "R03",
+            "R04",
+            "R05",
+            "R06",
+            "R07",
+            "R08"
+          ]
+        },
+        {
+          "id": "material_separation",
+          "score": 1,
+          "evidence": [
+            "art/full/previews/engine/scene_gameplay_1280x720.png",
+            "art/full/previews/engine/assets/ENV006.png",
+            "art/full/previews/engine/assets/MAT002.png"
+          ],
+          "reason": "木石金属大多纯色，无贴图层次",
+          "defect_ids": [
+            "R01",
+            "R02",
+            "R03",
+            "R04",
+            "R05",
+            "R06",
+            "R07",
+            "R08"
+          ]
+        },
+        {
+          "id": "lighting_contact",
+          "score": 2,
+          "evidence": [
+            "art/full/previews/engine/scene_gameplay_1280x720.png",
+            "art/full/previews/engine/assets/ENV006.png",
+            "art/full/previews/engine/assets/MAT002.png"
+          ],
+          "reason": "有投影，但暖冷层次/接地融合不足",
+          "defect_ids": [
+            "R01",
+            "R02",
+            "R03",
+            "R04",
+            "R05",
+            "R06",
+            "R07",
+            "R08"
+          ]
+        },
+        {
+          "id": "vegetation_depth",
+          "score": 1,
+          "evidence": [
+            "art/full/previews/engine/scene_gameplay_1280x720.png",
+            "art/full/previews/engine/assets/ENV006.png",
+            "art/full/previews/engine/assets/MAT002.png"
+          ],
+          "reason": "叶簇稀疏，花坛和草层次不足",
+          "defect_ids": [
+            "R01",
+            "R02",
+            "R03",
+            "R04",
+            "R05",
+            "R06",
+            "R07",
+            "R08"
+          ]
+        },
+        {
+          "id": "play_readability",
+          "score": 2,
+          "evidence": [
+            "art/full/previews/engine/scene_gameplay_1280x720.png",
+            "art/full/previews/engine/assets/ENV006.png",
+            "art/full/previews/engine/assets/MAT002.png"
+          ],
+          "reason": "路线存在，但卡片/小角色读形弱",
+          "defect_ids": [
+            "R01",
+            "R02",
+            "R03",
+            "R04",
+            "R05",
+            "R06",
+            "R07",
+            "R08"
+          ]
+        }
+      ],
+      "computed_total": 37.5,
+      "computed_decision": "rework"
+    },
+    "CHAR": {
+      "dimensions": [
+        {
+          "id": "silhouette_proportion",
+          "score": 3,
+          "evidence": [
+            "art/full/previews/engine/assets/CHAR001.png",
+            "art/full/previews/engine/assets/CHAR003.png",
+            "art/phase1/character_playback_1015/move_preview.gif"
+          ],
+          "reason": "原角色比例基本保留",
+          "defect_ids": [
+            "R01",
+            "R02",
+            "R03",
+            "R04",
+            "R05",
+            "R06",
+            "R07",
+            "R08"
+          ]
+        },
+        {
+          "id": "line_quality",
+          "score": 3,
+          "evidence": [
+            "art/full/previews/engine/assets/CHAR001.png",
+            "art/full/previews/engine/assets/CHAR003.png",
+            "art/phase1/character_playback_1015/move_preview.gif"
+          ],
+          "reason": "原角色线条清楚，NPC切片细节受截图限制",
+          "defect_ids": [
+            "R01",
+            "R02",
+            "R03",
+            "R04",
+            "R05",
+            "R06",
+            "R07",
+            "R08"
+          ]
+        },
+        {
+          "id": "cel_color_light",
+          "score": 3,
+          "evidence": [
+            "art/full/previews/engine/assets/CHAR001.png",
+            "art/full/previews/engine/assets/CHAR003.png",
+            "art/phase1/character_playback_1015/move_preview.gif"
+          ],
+          "reason": "原色块保留，场景融合仍需调整",
+          "defect_ids": [
+            "R01",
+            "R02",
+            "R03",
+            "R04",
+            "R05",
+            "R06",
+            "R07",
+            "R08"
+          ]
+        },
+        {
+          "id": "identity_consistency",
+          "score": 4,
+          "evidence": [
+            "art/full/previews/engine/assets/CHAR001.png",
+            "art/full/previews/engine/assets/CHAR003.png",
+            "art/phase1/character_playback_1015/move_preview.gif"
+          ],
+          "reason": "头饰/红黑服装/双马尾/装备与参考匹配",
+          "defect_ids": [
+            "R01",
+            "R02",
+            "R03",
+            "R04",
+            "R05",
+            "R06",
+            "R07",
+            "R08"
+          ]
+        },
+        {
+          "id": "motion_contact",
+          "score": 2,
+          "evidence": [
+            "art/full/previews/engine/assets/CHAR001.png",
+            "art/full/previews/engine/assets/CHAR003.png",
+            "art/phase1/character_playback_1015/move_preview.gif"
+          ],
+          "reason": "真实Move存在，但世界遮挡未实现",
+          "defect_ids": [
+            "R01",
+            "R02",
+            "R03",
+            "R04",
+            "R05",
+            "R06",
+            "R07",
+            "R08"
+          ]
+        },
+        {
+          "id": "small_scale_clarity",
+          "score": 2,
+          "evidence": [
+            "art/full/previews/engine/assets/CHAR001.png",
+            "art/full/previews/engine/assets/CHAR003.png",
+            "art/phase1/character_playback_1015/move_preview.gif"
+          ],
+          "reason": "默认镜头角色过小",
+          "defect_ids": [
+            "R01",
+            "R02",
+            "R03",
+            "R04",
+            "R05",
+            "R06",
+            "R07",
+            "R08"
+          ]
+        }
+      ],
+      "computed_total": 75.0,
+      "computed_decision": "rework"
+    },
+    "UI": {
+      "dimensions": [
+        {
+          "id": "paper_shape",
+          "score": 2,
+          "evidence": [
+            "art/full/previews/engine/dialogue_npc_1280x720.png",
+            "art/full/previews/engine/ui_states/toast_task_update.png",
+            "art/full/previews/engine/ui_states/pause_default.png"
+          ],
+          "reason": "纸片结构存在但偏不透明，重复边框重",
+          "defect_ids": [
+            "R01",
+            "R02",
+            "R03",
+            "R04",
+            "R05",
+            "R06",
+            "R07",
+            "R08"
+          ]
+        },
+        {
+          "id": "doodle_icon_family",
+          "score": 2,
+          "evidence": [
+            "art/full/previews/engine/dialogue_npc_1280x720.png",
+            "art/full/previews/engine/ui_states/toast_task_update.png",
+            "art/full/previews/engine/ui_states/pause_default.png"
+          ],
+          "reason": "图标成族但手绘装饰表现偏弱",
+          "defect_ids": [
+            "R01",
+            "R02",
+            "R03",
+            "R04",
+            "R05",
+            "R06",
+            "R07",
+            "R08"
+          ]
+        },
+        {
+          "id": "typography",
+          "score": 3,
+          "evidence": [
+            "art/full/previews/engine/dialogue_npc_1280x720.png",
+            "art/full/previews/engine/ui_states/toast_task_update.png",
+            "art/full/previews/engine/ui_states/pause_default.png"
+          ],
+          "reason": "真实中文和字体存在，未作手机可读性确认",
+          "defect_ids": [
+            "R01",
+            "R02",
+            "R03",
+            "R04",
+            "R05",
+            "R06",
+            "R07",
+            "R08"
+          ]
+        },
+        {
+          "id": "layout_air",
+          "score": 3,
+          "evidence": [
+            "art/full/previews/engine/dialogue_npc_1280x720.png",
+            "art/full/previews/engine/ui_states/toast_task_update.png",
+            "art/full/previews/engine/ui_states/pause_default.png"
+          ],
+          "reason": "主要布局齐全，Toast存在局部重叠",
+          "defect_ids": [
+            "R01",
+            "R02",
+            "R03",
+            "R04",
+            "R05",
+            "R06",
+            "R07",
+            "R08"
+          ]
+        },
+        {
+          "id": "state_feedback",
+          "score": 2,
+          "evidence": [
+            "art/full/previews/engine/dialogue_npc_1280x720.png",
+            "art/full/previews/engine/ui_states/toast_task_update.png",
+            "art/full/previews/engine/ui_states/pause_default.png"
+          ],
+          "reason": "状态画面齐，但暂停锁定/完成重置证据不足",
+          "defect_ids": [
+            "R01",
+            "R02",
+            "R03",
+            "R04",
+            "R05",
+            "R06",
+            "R07",
+            "R08"
+          ]
+        },
+        {
+          "id": "palette_restraint",
+          "score": 3,
+          "evidence": [
+            "art/full/previews/engine/dialogue_npc_1280x720.png",
+            "art/full/previews/engine/ui_states/toast_task_update.png",
+            "art/full/previews/engine/ui_states/pause_default.png"
+          ],
+          "reason": "配色克制，与环境仍需共同校准",
+          "defect_ids": [
+            "R01",
+            "R02",
+            "R03",
+            "R04",
+            "R05",
+            "R06",
+            "R07",
+            "R08"
+          ]
+        }
+      ],
+      "computed_total": 61.25,
+      "computed_decision": "rework"
+    },
+    "MIX": {
+      "dimensions": [
+        {
+          "id": "visual_language",
+          "score": 1,
+          "evidence": [
+            "art/full/previews/engine/scene_gameplay_1280x720.png",
+            "art/full/previews/engine/assets/ENV006.png",
+            "art/full/previews/engine/dialogue_npc_1280x720.png",
+            "delivery/courtyard_scene_demo_sources_v3.zip"
+          ],
+          "reason": "细致原角色与粗简环境差距明显",
+          "defect_ids": [
+            "R01",
+            "R02",
+            "R03",
+            "R04",
+            "R05",
+            "R06",
+            "R07",
+            "R08"
+          ]
+        },
+        {
+          "id": "color_light_coherence",
+          "score": 2,
+          "evidence": [
+            "art/full/previews/engine/scene_gameplay_1280x720.png",
+            "art/full/previews/engine/assets/ENV006.png",
+            "art/full/previews/engine/dialogue_npc_1280x720.png",
+            "delivery/courtyard_scene_demo_sources_v3.zip"
+          ],
+          "reason": "色彩基本克制，但材质/暖冷光层次不足",
+          "defect_ids": [
+            "R01",
+            "R02",
+            "R03",
+            "R04",
+            "R05",
+            "R06",
+            "R07",
+            "R08"
+          ]
+        },
+        {
+          "id": "grounding_occlusion",
+          "score": 1,
+          "evidence": [
+            "art/full/previews/engine/scene_gameplay_1280x720.png",
+            "art/full/previews/engine/assets/ENV006.png",
+            "art/full/previews/engine/dialogue_npc_1280x720.png",
+            "delivery/courtyard_scene_demo_sources_v3.zip"
+          ],
+          "reason": "UI投影角色不受世界遮挡",
+          "defect_ids": [
+            "R01",
+            "R02",
+            "R03",
+            "R04",
+            "R05",
+            "R06",
+            "R07",
+            "R08"
+          ]
+        },
+        {
+          "id": "focus_readability",
+          "score": 2,
+          "evidence": [
+            "art/full/previews/engine/scene_gameplay_1280x720.png",
+            "art/full/previews/engine/assets/ENV006.png",
+            "art/full/previews/engine/dialogue_npc_1280x720.png",
+            "delivery/courtyard_scene_demo_sources_v3.zip"
+          ],
+          "reason": "全图镜头降低人物/道具可读性",
+          "defect_ids": [
+            "R01",
+            "R02",
+            "R03",
+            "R04",
+            "R05",
+            "R06",
+            "R07",
+            "R08"
+          ]
+        },
+        {
+          "id": "world_style_coherence",
+          "score": 2,
+          "evidence": [
+            "art/full/previews/engine/scene_gameplay_1280x720.png",
+            "art/full/previews/engine/assets/ENV006.png",
+            "art/full/previews/engine/dialogue_npc_1280x720.png",
+            "delivery/courtyard_scene_demo_sources_v3.zip"
+          ],
+          "reason": "UI和场景主题统一但距P1精致程度仍明显",
+          "defect_ids": [
+            "R01",
+            "R02",
+            "R03",
+            "R04",
+            "R05",
+            "R06",
+            "R07",
+            "R08"
+          ]
+        }
+      ],
+      "computed_total": 38.75,
+      "computed_decision": "rework"
+    }
+  },
+  "defects": [
+    {
+      "id": "R01",
+      "severity": "blocking",
+      "status": "open",
+      "title": "角色/NPC使用UI层投影，未实现世界遮挡",
+      "observed": "PlayerSpine和makeWorldSprite均挂characterLayer，通过projectToCanvas定位。独立将角色置(0,3)，角色仍画在树枝前。",
+      "suggestion": "将原Spine渲染到透明RenderTexture并放入世界面片，或实现已验证的世界骨骼渲染；正确深度测试，按需要隐藏树冠组；保留原动作。",
+      "recheck": "同一机位连续走树前/树后、栏杆前/后；角色不盖住本应在前方的物体，脚底阴影跟随。",
+      "evidence": [
+        "delivery/courtyard_scene_demo_sources_v3.zip",
+        "art/full/previews/engine/scene_gameplay_1280x720.png"
+      ],
+      "supplemental_diagnostics": [
+        "behind_tree.png",
+        "runtime_probe.json"
+      ]
+    },
+    {
+      "id": "R02",
+      "severity": "major",
+      "status": "open",
+      "title": "默认相机为全图总览，角色与道具过小",
+      "observed": "源码相机(0,28,-28)，全图边界/灰褐外裙占据大量画面，主角约60像素高，偏离既定约12%-18%屏高。",
+      "suggestion": "将全图镜头保留为编辑检查模式；增加正式近景/跟随镜头，先以(0,10,-10)偏移和FOV35校准，再检查边缘封边。不要只放大UI层人物。",
+      "recheck": "1280x720中主角约86-130px初始目标；出生/NPC/A/B/C/留言板均可读，正式机位不露大片无内容外裙。",
+      "evidence": [
+        "art/full/previews/engine/scene_gameplay_1280x720.png",
+        "delivery/courtyard_scene_demo_sources_v3.zip"
+      ],
+      "supplemental_diagnostics": []
+    },
+    {
+      "id": "R03",
+      "severity": "major",
+      "status": "open",
+      "title": "植被轮廓和层次明显未达到P1",
+      "observed": "主树枝条粗直、叶片稀疏且碎片化，灌木像零散小苗，侧花坛大面积空土；P1为成片秋叶、分层树冠和饱满草丛。",
+      "suggestion": "在现有可编辑源上重做主树冠：先大/中叶簇体块、再少量叶卡与空隙；补花坛灌木/干草层次，保留通路。",
+      "recheck": "固定正式机位对照t015；树冠有连续可读体块，花坛不空，透明叠层与三角面实测。",
+      "evidence": [
+        "art/full/previews/engine/assets/ENV006.png",
+        "art/full/previews/engine/assets/ENV008.png",
+        "art/full/previews/engine/assets/ENV009.png"
+      ],
+      "supplemental_diagnostics": []
+    },
+    {
+      "id": "R04",
+      "severity": "major",
+      "status": "open",
+      "title": "引擎材质接近纯色，光照层次不足",
+      "observed": "独立重开地图/树/长椅：UV网格均为0，无外部图像；最终GLB textures=0。石/木/金属的外观变化有限，硬影和灰褐底色缺少P1暖光冷影与细腻材质。",
+      "suggestion": "为石/木/树干做UV及受控基础色/法线/粗糙度贴图或等效引擎原生材质；木纹沿木条、石地保持暖灰；先固定曝光再调冷灰填充和阴影。不能仅提高饱和度。",
+      "recheck": "同机位石、木、金属近景与主场景均通过；Blender效果可追溯到引擎实际支持的材质。",
+      "evidence": [
+        "art/full/previews/engine/assets/MAT002.png",
+        "art/full/previews/engine/assets/MAT001.png",
+        "art/full/previews/engine/assets/ENV006.png"
+      ],
+      "supplemental_diagnostics": [
+        "native_reopen.json",
+        "integrity_full_hashes.json"
+      ]
+    },
+    {
+      "id": "R05",
+      "severity": "major",
+      "status": "open",
+      "title": "暂停预览未锁定移动输入",
+      "observed": "独立正向对照：正常ArrowRight约0.9单位；pause_default状态仍约0.9单位；对白状态0。不是仅凭源码猜测。",
+      "suggestion": "所有阻塞面板统一输入锁；打开时清keys/joy/manualMoving，关闭时重新接受新输入；不要只遮住控件。",
+      "recheck": "键盘和触控分别展示暂停前/暂停中/继续，暂停中位移0；不得依赖焦点缺失形成假通过。",
+      "evidence": [
+        "art/full/previews/engine/ui_states/pause_default.png",
+        "delivery/courtyard_scene_demo_sources_v3.zip"
+      ],
+      "supplemental_diagnostics": [
+        "runtime_probe.json",
+        "pause_after_move.png"
+      ]
+    },
+    {
+      "id": "R06",
+      "severity": "major",
+      "status": "open",
+      "title": "三角面统计口径与最终GLB不一致",
+      "observed": "报告92,976；独立重开原blend基础网格93,912；最终GLB所有TRIANGLES索引解码120,304，24材质、173 primitive。统计口径不同，不能用源数据证明导出预算通过。",
+      "suggestion": "将实际导出模型/修改器后几何/运行时可见三角形分开统计；优先减少地砖重复细节和不影响轮廓的细分，记录实测drawcalls。",
+      "recheck": "同一最终GLB与Cocos截图绑定统计；说明可见面数，不能把120304直接当GPU测量或把92976当最终导出值。",
+      "evidence": [
+        "art/full/source/layout/MAP001_courtyard.glb",
+        "delivery/courtyard_scene_demo_sources_v3.zip"
+      ],
+      "supplemental_diagnostics": [
+        "native_reopen.json",
+        "integrity_full_hashes.json"
+      ]
+    },
+    {
+      "id": "R07",
+      "severity": "major",
+      "status": "open",
+      "title": "留言板完成变化缺少前后及重置证据",
+      "observed": "FX003逐项review仅绑定一张静态图；源码focus只开FX贴片，未见空板/三卡分步/完成/恢复的完整状态演示。报告也将提交放G1。",
+      "suggestion": "无需先做整条任务，但资产查看器应可独立切board_empty/board_full/reset，并分别控制真实三张卡子物件；录制变化。",
+      "recheck": "空→满→空连续录屏及三状态截图，初始任务HUD与板状态一致。",
+      "evidence": [
+        "art/full/previews/engine/assets/FX003.png",
+        "art/full/reviews/FX003.json",
+        "delivery/courtyard_scene_demo_sources_v3.zip"
+      ],
+      "supplemental_diagnostics": []
+    },
+    {
+      "id": "R08",
+      "severity": "major",
+      "status": "open",
+      "title": "技术自检覆盖了文件，却没有完成风格放行",
+      "observed": "47份review均为producer technical engine check；ENV006理由仅为在引擎中渲染。未有四卡独立review/控制器签认，scene_demo样板未获准就已扩批。",
+      "suggestion": "保留历史技术检查，增加本轮独立四卡与缺陷返修；先改正式同屏样板并复核，达标后才扩散修改。不得将engine_verified改成approved来解决。",
+      "recheck": "四卡各>=85、核心>=3、任维>=2；开放blocking/major清零后重新冻结、复审并由控制器签认。",
+      "evidence": [
+        "art/full/reviews/ENV006.json",
+        "art/full/art_complete_catalog.json"
+      ],
+      "supplemental_diagnostics": []
+    },
+    {
+      "id": "R09",
+      "severity": "minor",
+      "status": "open",
+      "title": "UI纸片样式单一，透景与涂鸦弱",
+      "observed": "41状态有组件和真实文案，但几乎复用同一切角/双线框，底板偏不透明；Toast与左上HUD局部重叠。",
+      "suggestion": "保留组件，减弱重复边框，按层级调整透明度与原创手绘装饰；Toast下移到不重叠区域。",
+      "recheck": "对白透出场景、主次清晰，所有Toast不覆盖HUD；真实手机可读性单列。",
+      "evidence": [
+        "art/full/previews/engine/dialogue_npc_1280x720.png",
+        "art/full/previews/engine/ui_states/toast_task_update.png"
+      ],
+      "supplemental_diagnostics": []
+    },
+    {
+      "id": "R10",
+      "severity": "minor",
+      "status": "open",
+      "title": "目录/规则仍有旧信息，审核状态存在歧义",
+      "observed": "完整目录47项均有非空blockers且status=engine_verified；MAP001仍写未做引擎截图。rubric.character_policy/AGENTS另存旧291候选，与当前合同1015不一致。",
+      "suggestion": "只将有新证据解决的阻碍转为resolved/history，保留独立审核未完成；角色ID以当前合同唯一读取，不在多处复制旧候选。",
+      "recheck": "目录状态/阻碍/报告/来源一致；不能为通过而删除真实未解问题。",
+      "evidence": [
+        "art/full/art_complete_catalog.json"
+      ],
+      "supplemental_diagnostics": []
+    }
+  ],
+  "overall_decision": "rework",
+  "limitations": [
+    "No controller attestation created; no production key used.",
+    "394 frozen entries rehashed;3 representative blend files reopened, not all23.",
+    "41 UI and34 asset views screened through contact sheets; selected frames inspected at full size.",
+    "Desktop Cocos build independently served and exercised; no independent clean rebuild or WeChat device/performance test.",
+    "Supplemental diagnostics are outside the producer manifest and are linked separately; formal gate evidence uses existing frozen files."
+  ],
+  "manifest_sha256": "fe1b91e2b86734241270b4111cf861d3881ef5e103c29e313d145116f79fd95c",
+  "contract_sha256": "72396f78d5b4c7fab5cac0a9e714866aa786d16666a0098ee67f533e96a46ea5",
+  "contract_digest_definition": "SHA256 canonical combined contract+rubric, per tools/art_harness.py; not raw contract-file bytes"
+}

@@ -1,0 +1,164 @@
+{
+  "kind": "workflow_fix_backlog_not_release_approval",
+  "source_review": "art_review/reports/progress_audit_20261024_2330/REPORT.md",
+  "updated_at": "2026-10-24T16:53:59.762406+00:00",
+  "issues": [
+    {
+      "id": "F01",
+      "priority": "high",
+      "task_ids": [
+        "P03",
+        "P04",
+        "P07"
+      ],
+      "status": "fixed_pending_independent_confirmation",
+      "title": "前序证书过期仍放行",
+      "closure_criteria": "变更前序实际资产/消费版本/合同后拒绝过期批准；正常有效链仍可用。",
+      "resolution_evidence": [
+        "tools/art_harness.py consumption_check + predecessor check_manifest/check_review revalidation",
+        "delivery/next_cycle/T0/p03_selfcheck.json (19 steps; predecessor payload change rejected, restore accepted, consumption mismatch rejected at certify+verify, contract change rejected)",
+        "delivery/next_cycle/T0/p03_chain_test.py (synthetic fixtures only)",
+        "delivery/next_cycle/T0/gate_regression.json (50 tests + selfchecks)"
+      ],
+      "independent_confirmation": null,
+      "producer_fix_at": "2026-10-24T16:12:17.540941+00:00"
+    },
+    {
+      "id": "F02",
+      "priority": "high",
+      "task_ids": [
+        "P00",
+        "P04"
+      ],
+      "status": "fixed_pending_independent_confirmation",
+      "title": "冻结载荷被原地修改",
+      "closure_criteria": "逐条核对18条漂移；能恢复的按旧hash归档，不能恢复明确缺失；新产物独立版本化。",
+      "resolution_evidence": [
+        "reference/frozen_history/art_complete_20261024_manifest/RECOVERY_RECORD.json (17/17 restored, old hashes exact)",
+        "delivery/next_cycle/T0/verify_recovery.py exit 0",
+        "delivery/next_cycle/baseline.json v2 historical_payload_integrity",
+        "art_review/vnext/capture_binding.schema.json forbids outputs under frozen roots; check_bindings.py enforces it"
+      ],
+      "independent_confirmation": null,
+      "producer_fix_at": "2026-10-24T16:10:40.148098+00:00"
+    },
+    {
+      "id": "F03",
+      "priority": "medium",
+      "task_ids": [
+        "P02",
+        "P07"
+      ],
+      "status": "fixed_pending_independent_confirmation",
+      "title": "迁移输出不符合自身schema",
+      "closure_criteria": "实际迁移全文件通过真实schema验证；缺值省略或明确可空。",
+      "resolution_evidence": [
+        "art_review/vnext/asset_status.schema.json 1.0.1 (null semantics)",
+        "delivery/next_cycle/T0/p02_selfcheck.json (Draft-07 pass, integer rejected)",
+        "delivery/next_cycle/T0/gate_regression.json (50 tests + selfchecks)"
+      ],
+      "independent_confirmation": null,
+      "producer_fix_at": "2026-10-24T16:10:40.148098+00:00"
+    },
+    {
+      "id": "F04",
+      "priority": "medium",
+      "task_ids": [
+        "P02",
+        "P07"
+      ],
+      "status": "fixed_pending_independent_confirmation",
+      "title": "失败review被提升为技术验证",
+      "closure_criteria": "missing+fail+空证据不能变import_verified；成功白名单及证据检查有正反例。",
+      "resolution_evidence": [
+        "tools/art_gate/migrate_catalog.py success whitelist + evidence check",
+        "delivery/next_cycle/T0/p02_selfcheck.json (6 cases incl. fail/empty-evidence no promotion)",
+        "delivery/next_cycle/T0/gate_regression.json (50 tests + selfchecks)"
+      ],
+      "independent_confirmation": null,
+      "producer_fix_at": "2026-10-24T16:10:40.148098+00:00"
+    },
+    {
+      "id": "F05",
+      "priority": "medium",
+      "task_ids": [
+        "P04",
+        "P06"
+      ],
+      "status": "fixed_pending_independent_confirmation",
+      "title": "截图包含网页外壳而裁切画布",
+      "closure_criteria": "采集真实canvas，记录backing/CSS/viewport；受影响证据按新版本重采。",
+      "resolution_evidence": [
+        "tools/capture/canvas_capture.js",
+        "delivery/next_cycle/T0/_p06_canvas/canvas_selftest.json",
+        "delivery/next_cycle/T3/final3_bindings_summary.json",
+        "delivery/next_cycle/T3/bindings/"
+      ],
+      "independent_confirmation": null,
+      "producer_progress": "Final formal/dialogue shots recaptured with real canvas element capture (CSS rect 5,84.875,1280x720; backing 1280x720); 3/3 bindings verified. Old T1/T2 page screenshots remain historical, not final evidence.",
+      "producer_fix_at": "2026-10-24T16:53:59.762406+00:00"
+    },
+    {
+      "id": "F06",
+      "priority": "medium",
+      "task_ids": [
+        "V01",
+        "V02",
+        "V03",
+        "V04",
+        "V05"
+      ],
+      "status": "fixed_pending_independent_confirmation",
+      "title": "样板视觉差距",
+      "closure_criteria": "正式机位+局部+对话视图按P1特征独立审查；不得只靠文件存在或技术pass关闭。",
+      "resolution_evidence": [
+        "delivery/next_cycle/T4/tree_before_after_v2.png",
+        "delivery/next_cycle/T4/material_closeups_v2.png",
+        "delivery/next_cycle/T4/plant_background_v2.png",
+        "delivery/next_cycle/T4/plant_closeups_v2.png",
+        "delivery/next_cycle/T4/ui_comparison_v2.png",
+        "delivery/next_cycle/T3/final3_bindings_summary.json"
+      ],
+      "independent_confirmation": null,
+      "producer_fix_at": "2026-10-24T16:53:59.762406+00:00",
+      "producer_progress": "V01-V05 producer rework complete: crown mass/clumps, warm palette, layered background/groundcover, material separation, translucent UI accents, real-canvas comparisons. Independent visual review still required; not self-signed."
+    },
+    {
+      "id": "F07",
+      "priority": "medium",
+      "task_ids": [
+        "V04"
+      ],
+      "status": "fixed_pending_independent_confirmation",
+      "title": "光照测量推断错误",
+      "closure_criteria": "固定clip time和机位；区分明暗绝对值/相对值，修正文案和实图，接受独立视觉检查。",
+      "resolution_evidence": [
+        "delivery/next_cycle/T2/lighting_profile_v2.json",
+        "tools/measure_lighting.js",
+        "delivery/next_cycle/T2/lighting_comparison_v2.png"
+      ],
+      "independent_confirmation": null,
+      "producer_fix_at": "2026-10-24T16:53:59.762406+00:00",
+      "producer_progress": "Fixed camera and static ROIs; absolute luminance and per-ROI contrast reported separately; ratio 0.835->0.782 now interpreted as deeper shadows/higher contrast, not brighter. Character clip time still not separately measured."
+    },
+    {
+      "id": "F08",
+      "priority": "medium",
+      "task_ids": [
+        "P06",
+        "P07"
+      ],
+      "status": "fixed_pending_independent_confirmation",
+      "title": "Finished被误当构建成功",
+      "closure_criteria": "失败事件+Finished负例拒绝；返回码、输出、hash及真实加载共同判定。",
+      "resolution_evidence": [
+        "tools/art_gate/build_log_gate.py",
+        "tools/blender/run_courtyard_build.ps1",
+        "delivery/next_cycle/T0/p06_selfcheck.json (failure+Finished, exit 36, traceback cases)",
+        "delivery/next_cycle/T0/gate_regression.json (50 tests + selfchecks)"
+      ],
+      "independent_confirmation": null,
+      "producer_fix_at": "2026-10-24T16:21:42.402142+00:00"
+    }
+  ]
+}

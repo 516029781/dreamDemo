@@ -1,0 +1,332 @@
+{
+  "kind": "candidate_n4_partial_timing_audit",
+  "selection": "performance JSON files containing n4 in their content; not a continuous end-to-end trace",
+  "blender": {
+    "count": 11,
+    "sum_seconds": 2265.89,
+    "median_seconds": 145.488,
+    "records": [
+      {
+        "path": "delivery/performance/blender_build_20261025_121825.json",
+        "seconds": 37.911,
+        "stage": "env_tree",
+        "status": "completed"
+      },
+      {
+        "path": "delivery/performance/blender_build_20261025_121923.json",
+        "seconds": 52.637,
+        "stage": "env_tree",
+        "status": "completed"
+      },
+      {
+        "path": "delivery/performance/blender_build_20261025_122028.json",
+        "seconds": 46.747,
+        "stage": "env_tree",
+        "status": "completed"
+      },
+      {
+        "path": "delivery/performance/blender_build_20261025_122842.json",
+        "seconds": 118.212,
+        "stage": "env_tree",
+        "status": "completed"
+      },
+      {
+        "path": "delivery/performance/blender_build_20261025_123121.json",
+        "seconds": 145.488,
+        "stage": "env_tree",
+        "status": "completed"
+      },
+      {
+        "path": "delivery/performance/blender_build_20261025_123428.json",
+        "seconds": 433.218,
+        "stage": "map001",
+        "status": "completed"
+      },
+      {
+        "path": "delivery/performance/blender_build_20261025_124455.json",
+        "seconds": 2.581,
+        "stage": "map001",
+        "status": "failed"
+      },
+      {
+        "path": "delivery/performance/blender_build_20261025_124723.json",
+        "seconds": 380.921,
+        "stage": "map001",
+        "status": "completed"
+      },
+      {
+        "path": "delivery/performance/blender_build_20261025_125542.json",
+        "seconds": 382.9,
+        "stage": "map001",
+        "status": "completed"
+      },
+      {
+        "path": "delivery/performance/blender_build_20261025_130344.json",
+        "seconds": 339.761,
+        "stage": "map001",
+        "status": "completed"
+      },
+      {
+        "path": "delivery/performance/blender_build_20261025_131035.json",
+        "seconds": 325.514,
+        "stage": "map001",
+        "status": "completed"
+      }
+    ]
+  },
+  "cocos": {
+    "count": 41,
+    "sum_seconds": 1602.989,
+    "median_seconds": 37.581,
+    "records": [
+      {
+        "path": "delivery/performance/cocos_build_20261025_124248.json",
+        "seconds": 66.183,
+        "stage": "web_desktop",
+        "status": "completed"
+      },
+      {
+        "path": "delivery/performance/cocos_build_20261025_124611.json",
+        "seconds": 72.744,
+        "stage": "web_desktop",
+        "status": "completed"
+      },
+      {
+        "path": "delivery/performance/cocos_build_20261025_125427.json",
+        "seconds": 42.813,
+        "stage": "web_desktop",
+        "status": "completed"
+      },
+      {
+        "path": "delivery/performance/cocos_build_20261025_130252.json",
+        "seconds": 46.081,
+        "stage": "web_desktop",
+        "status": "completed"
+      },
+      {
+        "path": "delivery/performance/cocos_build_20261025_130952.json",
+        "seconds": 28.206,
+        "stage": "web_desktop",
+        "status": "completed"
+      },
+      {
+        "path": "delivery/performance/cocos_build_20261025_131642.json",
+        "seconds": 40.65,
+        "stage": "web_desktop",
+        "status": "completed"
+      },
+      {
+        "path": "delivery/performance/cocos_build_20261025_133631.json",
+        "seconds": 39.052,
+        "stage": "web_desktop",
+        "status": "completed"
+      },
+      {
+        "path": "delivery/performance/cocos_build_20261025_133921.json",
+        "seconds": 31.022,
+        "stage": "web_desktop",
+        "status": "completed"
+      },
+      {
+        "path": "delivery/performance/cocos_build_20261025_134318.json",
+        "seconds": 30.691,
+        "stage": "web_desktop",
+        "status": "completed"
+      },
+      {
+        "path": "delivery/performance/cocos_build_20261025_134917.json",
+        "seconds": 31.591,
+        "stage": "web_desktop",
+        "status": "completed"
+      },
+      {
+        "path": "delivery/performance/cocos_build_20261025_135037.json",
+        "seconds": 31.44,
+        "stage": "web_desktop",
+        "status": "completed"
+      },
+      {
+        "path": "delivery/performance/cocos_build_20261025_135438.json",
+        "seconds": 31.134,
+        "stage": "web_desktop",
+        "status": "completed"
+      },
+      {
+        "path": "delivery/performance/cocos_build_20261025_135625.json",
+        "seconds": 30.439,
+        "stage": "web_desktop",
+        "status": "completed"
+      },
+      {
+        "path": "delivery/performance/cocos_build_20261025_140252.json",
+        "seconds": 37.581,
+        "stage": "web_desktop",
+        "status": "completed"
+      },
+      {
+        "path": "delivery/performance/cocos_build_20261025_140510.json",
+        "seconds": 31.137,
+        "stage": "web_desktop",
+        "status": "completed"
+      },
+      {
+        "path": "delivery/performance/cocos_build_20261025_140947.json",
+        "seconds": 31.326,
+        "stage": "web_desktop",
+        "status": "completed"
+      },
+      {
+        "path": "delivery/performance/cocos_build_20261025_141236.json",
+        "seconds": 30.259,
+        "stage": "web_desktop",
+        "status": "completed"
+      },
+      {
+        "path": "delivery/performance/cocos_build_20261025_141450.json",
+        "seconds": 30.283,
+        "stage": "web_desktop",
+        "status": "completed"
+      },
+      {
+        "path": "delivery/performance/cocos_build_20261025_142250.json",
+        "seconds": 39.962,
+        "stage": "web_desktop",
+        "status": "completed"
+      },
+      {
+        "path": "delivery/performance/cocos_build_20261025_143317.json",
+        "seconds": 39.322,
+        "stage": "web_desktop",
+        "status": "completed"
+      },
+      {
+        "path": "delivery/performance/cocos_build_20261025_144726.json",
+        "seconds": 38.669,
+        "stage": "web_desktop",
+        "status": "completed"
+      },
+      {
+        "path": "delivery/performance/cocos_build_20261025_155212.json",
+        "seconds": 32.356,
+        "stage": "web_desktop",
+        "status": "completed"
+      },
+      {
+        "path": "delivery/performance/cocos_build_20261025_160321.json",
+        "seconds": 44.356,
+        "stage": "web_desktop",
+        "status": "completed"
+      },
+      {
+        "path": "delivery/performance/cocos_build_20261025_160632.json",
+        "seconds": 48.272,
+        "stage": "web_desktop",
+        "status": "completed"
+      },
+      {
+        "path": "delivery/performance/cocos_build_20261025_161453.json",
+        "seconds": 52.131,
+        "stage": "web_desktop",
+        "status": "completed"
+      },
+      {
+        "path": "delivery/performance/cocos_build_20261025_162031.json",
+        "seconds": 46.412,
+        "stage": "web_desktop",
+        "status": "completed"
+      },
+      {
+        "path": "delivery/performance/cocos_build_20261025_163030.json",
+        "seconds": 50.976,
+        "stage": "web_desktop",
+        "status": "completed"
+      },
+      {
+        "path": "delivery/performance/cocos_build_20261025_163935.json",
+        "seconds": 38.972,
+        "stage": "web_desktop",
+        "status": "completed"
+      },
+      {
+        "path": "delivery/performance/cocos_build_20261025_173003.json",
+        "seconds": 28.84,
+        "stage": "web_desktop",
+        "status": "completed"
+      },
+      {
+        "path": "delivery/performance/cocos_build_20261025_173319.json",
+        "seconds": 20.304,
+        "stage": "web_desktop",
+        "status": "completed"
+      },
+      {
+        "path": "delivery/performance/cocos_build_20261025_173826.json",
+        "seconds": 28.809,
+        "stage": "web_desktop",
+        "status": "completed"
+      },
+      {
+        "path": "delivery/performance/cocos_build_20261025_174304.json",
+        "seconds": 29.488,
+        "stage": "web_desktop",
+        "status": "completed"
+      },
+      {
+        "path": "delivery/performance/cocos_build_20261025_175031.json",
+        "seconds": 24.425,
+        "stage": "web_desktop",
+        "status": "completed"
+      },
+      {
+        "path": "delivery/performance/cocos_build_20261025_222938.json",
+        "seconds": 62.506,
+        "stage": "web_desktop",
+        "status": "completed"
+      },
+      {
+        "path": "delivery/performance/cocos_build_20261025_225900.json",
+        "seconds": 19.233,
+        "stage": "web_desktop",
+        "status": "completed"
+      },
+      {
+        "path": "delivery/performance/cocos_build_20261025_234610.json",
+        "seconds": 59.437,
+        "stage": "web_desktop",
+        "status": "completed"
+      },
+      {
+        "path": "delivery/performance/cocos_build_20261025_234840.json",
+        "seconds": 34.258,
+        "stage": "web_desktop",
+        "status": "completed"
+      },
+      {
+        "path": "delivery/performance/cocos_build_20261025_235413.json",
+        "seconds": 36.844,
+        "stage": "web_desktop",
+        "status": "completed"
+      },
+      {
+        "path": "delivery/performance/cocos_build_20261025_235846.json",
+        "seconds": 44.998,
+        "stage": "web_desktop",
+        "status": "completed"
+      },
+      {
+        "path": "delivery/performance/cocos_build_20261026_000528.json",
+        "seconds": 46.989,
+        "stage": "web_desktop",
+        "status": "completed"
+      },
+      {
+        "path": "delivery/performance/cocos_build_20261026_000915.json",
+        "seconds": 52.798,
+        "stage": "web_desktop",
+        "status": "completed"
+      }
+    ]
+  },
+  "combined_command_seconds": 3868.879,
+  "limitation": "command durations may overlap and exclude edit, visual assessment, capture, packaging, waiting and idle intervals; cannot infer eight-hour critical path"
+}

@@ -1,0 +1,79 @@
+# Local runtimes and tool installs (regenerable, multi-GB)
+.tools/
+.tooling/
+tools/cocos/editors/
+tools/cocos/downloads/
+
+# Cocos Creator working caches and build output (regenerable)
+demo/library/
+demo/temp/
+demo/build/
+demo/node_modules/
+node_modules/
+
+# Per-candidate Cocos projects (regenerable caches; sources stay tracked)
+demo_n*/library/
+demo_n*/temp/
+demo_n*/build/
+demo_n*/node_modules/
+
+# Blender autosave backups (regenerable)
+*.blend1
+
+# Python
+__pycache__/
+*.pyc
+
+# WeChat devtools personal settings
+project.private.config.json
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Code-only Git policy: editable art and exported media stay on disk, outside Git.
+*.blend
+*.blend1
+*.glb
+*.gltf
+*.bin
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.gif
+*.svg
+*.ttf
+*.otf
+*.woff
+*.woff2
+*.mp3
+*.wav
+*.ogg
+*.m4s
+*.mp4
+*.zip
+*.psd
+*.kra
+*.skel
+*.atlas
+*.pdb
+
+# Generated evidence and downloaded research, not project source code.
+delivery/**/*.json
+delivery/**/*.jsonl
+delivery/**/*.log
+delivery/**/*.txt
+/reference/
+/art/candidates/
+/art/phase1/
+/art/full/
+/art/iterations/
+/screenshots/
+/vibe_images/
+/images/
+/assets/
+/audio/
+/tools/cocos/logs/
+/tools/blender/out/
+/tools/source_search/*.json

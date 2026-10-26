@@ -1,0 +1,99 @@
+{
+  "kind": "p02_selfcheck_f03_f04",
+  "schema_draft07_validator": "jsonschema 4.26.0",
+  "schema_sha256": "ef78f02c9986e0f4f0586f042047bda5a27f0410341a2cfead2c331628f6c6a6",
+  "migrator_sha256": "e39325e3af6800bdab9ff411b2e6b0f7f9fd94ef5477a1e6f211c9f3de8cb9e4",
+  "migrated_output_sha256": "73846785caabb0836456d7975c9c97d8ede9f01ce813e133fa434be2f79ec6f3",
+  "real_output_schema_valid": true,
+  "real_output_invariants": {
+    "visual_pass": 0,
+    "released": 0,
+    "catalog_old_decision": null
+  },
+  "cases": [
+    {
+      "case": "fail_empty_evidence_missing",
+      "input_status": "missing",
+      "review_decision": "fail",
+      "evidence": [],
+      "review_asset": null,
+      "exit_code": 0,
+      "technical_state": "missing",
+      "technical_state_reason": "技术自检未通过F04成功白名单/证据校验: decision 'fail' is not in success whitelist",
+      "expected_state": "missing",
+      "pass": true
+    },
+    {
+      "case": "pass_empty_evidence_missing",
+      "input_status": "missing",
+      "review_decision": "pass",
+      "evidence": [],
+      "review_asset": null,
+      "exit_code": 0,
+      "technical_state": "missing",
+      "technical_state_reason": "技术自检未通过F04成功白名单/证据校验: empty evidence",
+      "expected_state": "missing",
+      "pass": true
+    },
+    {
+      "case": "pass_unresolvable_evidence_missing",
+      "input_status": "missing",
+      "review_decision": "pass",
+      "evidence": [
+        "nope/absent.png"
+      ],
+      "review_asset": null,
+      "exit_code": 0,
+      "technical_state": "missing",
+      "technical_state_reason": "技术自检未通过F04成功白名单/证据校验: no evidence path resolves to a file",
+      "expected_state": "missing",
+      "pass": true
+    },
+    {
+      "case": "pass_wrong_asset_binding",
+      "input_status": "missing",
+      "review_decision": "pass",
+      "evidence": [
+        "<real>"
+      ],
+      "review_asset": "OTHER9",
+      "exit_code": 0,
+      "technical_state": "missing",
+      "technical_state_reason": "技术自检未通过F04成功白名单/证据校验: review asset_id 'OTHER9' does not match ASSET01",
+      "expected_state": "missing",
+      "pass": true
+    },
+    {
+      "case": "pass_real_evidence_promotes",
+      "input_status": "missing",
+      "review_decision": "pass",
+      "evidence": [
+        "<real>"
+      ],
+      "review_asset": null,
+      "exit_code": 0,
+      "technical_state": "import_verified",
+      "technical_state_reason": null,
+      "expected_state": "import_verified",
+      "pass": true
+    },
+    {
+      "case": "fail_review_demotes_engine_verified",
+      "input_status": "engine_verified",
+      "review_decision": "fail",
+      "evidence": [],
+      "review_asset": null,
+      "exit_code": 0,
+      "technical_state": "source_ready",
+      "technical_state_reason": "技术自检未通过F04成功白名单/证据校验: decision 'fail' is not in success whitelist",
+      "expected_state": "source_ready",
+      "pass": true
+    }
+  ],
+  "f03_mapping_null_semantics": {
+    "null_allowed_by_schema": true,
+    "integer_rejected_by_schema": true,
+    "catalog_old_decision_is_null": true
+  },
+  "all_passed": true
+}

@@ -1,0 +1,1583 @@
+{
+  "kind": "producer_self_review/1.0",
+  "reviewer": {
+    "id": "producer-model-20261025",
+    "mode": "producer_self_review"
+  },
+  "stage": "art_complete",
+  "round": 1,
+  "manifest": {
+    "path": "art_review/submissions/candidate_full/manifest.json",
+    "sha256": "2f8e63bf0e4c82d8a63a20286ff064ce89196a0d33cbfa0d5091aff9a3f58a3a"
+  },
+  "rubric_sha256": "537984cfe926b64a1b17d3c531627b4a58546c59d0a79fbe1242071d3ba3f943",
+  "contract_sha256": "dfb3692699b94d126e652dc78c5341917db26251e7df8299f192661a9dc5a883",
+  "policy_sha256": "88d3df5b2d710d4c0ab6e8a06f700cdfd227767f72b60905b96eb4ed54c97818",
+  "quality_results": {
+    "path": "delivery/next_cycle/T5/behavior_results_art_complete.json",
+    "sha256": "7da5fd93eaed0fb3a3f3ff003a15e76255c0a15e2b4731b647d10d931a9db542"
+  },
+  "capture_binding": {
+    "path": "delivery/next_cycle/T3/bindings/binding_formal_no_ui.json",
+    "sha256": "2dd518811a32280141e1363273aad4b8110f7c0a3ae0baa6cd93721c37b8832f"
+  },
+  "cards": {
+    "ENV": {
+      "dimensions": [
+        {
+          "id": "composition_scale",
+          "score": 3,
+          "observation": "Formal camera reads as a courtyard with a hero tree, planters, bench, edge planting and background layers; playable path is clear.",
+          "gap": "The plaza still leaves more empty paving than P1, and foreground framing is weaker than the reference.",
+          "action_or_acceptance_reason": "Accepted at 3 for the sample; if a later pass adds foreground planting/props, rescore. Not a key blocking defect.",
+          "reference_evidence": [
+            {
+              "path": "reference/_raw_screenshots/P1/t015s.jpg",
+              "sha256": "aa80a65f20fa0bcc66bad11b680e50208a8bc92d1ae119bc5969e5e1257785c7"
+            }
+          ],
+          "candidate_evidence": [
+            {
+              "path": "delivery/next_cycle/T2/sample_no_ui.png",
+              "sha256": "a4a2418473c7aaa1b50a6991566772a9402db34609e38ffc2b1835f605416fe5"
+            },
+            {
+              "path": "delivery/next_cycle/T6/assets/MAP001.png",
+              "sha256": "d3fe7599381bda16570f1f5d68d45c4bf6a51e14f583287456c310d4aa8a166d"
+            }
+          ]
+        },
+        {
+          "id": "geometry_craft",
+          "score": 3,
+          "observation": "Tree crown uses a solid mass plus smaller clumps; planters have real blocks, joints and soil; bench/lamp/fence are native meshes.",
+          "gap": "Crown still shows some faceted mass planes; paving and planter profiles are simpler than P1.",
+          "action_or_acceptance_reason": "Accepted at 3; geometry is coherent and no broken/floating object is visible in formal or close-up views.",
+          "reference_evidence": [
+            {
+              "path": "reference/_raw_screenshots/P1/t015s.jpg",
+              "sha256": "aa80a65f20fa0bcc66bad11b680e50208a8bc92d1ae119bc5969e5e1257785c7"
+            }
+          ],
+          "candidate_evidence": [
+            {
+              "path": "delivery/next_cycle/T6/assets/ENV006.png",
+              "sha256": "79ea68ad7299ffec2873dc01310533b9cdf879ccaaa07c7a89cb5b9b8cbe5039"
+            },
+            {
+              "path": "delivery/next_cycle/T2/sample_no_ui.png",
+              "sha256": "a4a2418473c7aaa1b50a6991566772a9402db34609e38ffc2b1835f605416fe5"
+            }
+          ]
+        },
+        {
+          "id": "material_separation",
+          "score": 4,
+          "observation": "Stone reads warm grey with tile variation, bench wood carries grain along slats, lamp/fence metal has controlled specular, soil is darker and rough.",
+          "gap": "No key defect in the tested formal and close-up views; wear and micro-detail are still simpler than P1.",
+          "action_or_acceptance_reason": "Accepted at 4 for multiple engine views; material families are distinct and consistent.",
+          "reference_evidence": [
+            {
+              "path": "reference/_raw_screenshots/P1/t015s.jpg",
+              "sha256": "aa80a65f20fa0bcc66bad11b680e50208a8bc92d1ae119bc5969e5e1257785c7"
+            }
+          ],
+          "candidate_evidence": [
+            {
+              "path": "delivery/next_cycle/T4/material_closeups_final4.png",
+              "sha256": "bd40dbab219364ec15715a87a3534dbd11147d6352e89c9fdde9c3faf93830b9"
+            },
+            {
+              "path": "delivery/next_cycle/T5/q01_formal_no_ui.png",
+              "sha256": "ba74366390f22e5f6ba717bccbe9ff5c3877b568f8052f1c77c69dba2a6f72d8"
+            },
+            {
+              "path": "delivery/next_cycle/T6/assets/MAT001.png",
+              "sha256": "287dd7c4244077205005771ab2df4e9b0ff1c0210189ba7652c7731d780ad5cf"
+            }
+          ]
+        },
+        {
+          "id": "lighting_contact",
+          "score": 4,
+          "observation": "Warm key and cool fill, soft contact shadows and a grounded player shadow; fixed ROI measurement shows deeper shadows and higher contrast than the prior build.",
+          "gap": "No key defect; absolute brightness on the paving is nearly unchanged (delta 0) while shadows deepen, so this is contrast, not a global brightness claim.",
+          "action_or_acceptance_reason": "Accepted at 4; fixed camera and ROI evidence match the actual images.",
+          "reference_evidence": [
+            {
+              "path": "reference/_raw_screenshots/P1/t084s.jpg",
+              "sha256": "13706e7eab96726565156a9e6440727de5d5bac82ee9c09c293a5745dd7446de"
+            }
+          ],
+          "candidate_evidence": [
+            {
+              "path": "delivery/next_cycle/T4/lighting_comparison_final4.png",
+              "sha256": "48d357af397496fa1474cd0b1c48c28a5cb981e2aa39e9710e9b7bd84db6c6e0"
+            },
+            {
+              "path": "delivery/next_cycle/T2/lighting_profile_v2.json",
+              "sha256": "a2c129cb545fb53e560396659e116a35e56c736e27074b1add9da82886535c7d"
+            },
+            {
+              "path": "delivery/next_cycle/T2/sample_no_ui.png",
+              "sha256": "a4a2418473c7aaa1b50a6991566772a9402db34609e38ffc2b1835f605416fe5"
+            }
+          ]
+        },
+        {
+          "id": "vegetation_depth",
+          "score": 4,
+          "observation": "Near hedge with leaf cards, mid planters with layered shrubs/grass/litter, and a distant olive crown band provide three depth layers without bare trunks.",
+          "gap": "The background band is still stylized and geometric; no key defect in the formal view.",
+          "action_or_acceptance_reason": "Accepted at 4; vegetation depth is visible consistently in formal and close-up views.",
+          "reference_evidence": [
+            {
+              "path": "reference/_raw_screenshots/P1/t015s.jpg",
+              "sha256": "aa80a65f20fa0bcc66bad11b680e50208a8bc92d1ae119bc5969e5e1257785c7"
+            }
+          ],
+          "candidate_evidence": [
+            {
+              "path": "delivery/next_cycle/T4/plant_background_final4.png",
+              "sha256": "0a0f402780c0855ab95f48517034e9c308d97d8305ae6bad8ccef4947c38cada"
+            },
+            {
+              "path": "delivery/next_cycle/T4/plant_closeups_final4.png",
+              "sha256": "7ebe8467a7a1d368007154cbc15afb2d26a2f09d06099b51d596104fb40c85f0"
+            },
+            {
+              "path": "delivery/next_cycle/T2/sample_no_ui.png",
+              "sha256": "a4a2418473c7aaa1b50a6991566772a9402db34609e38ffc2b1835f605416fe5"
+            }
+          ]
+        },
+        {
+          "id": "play_readability",
+          "score": 4,
+          "observation": "Player, NPC, tree, path, quest card and interaction button are readable at the formal camera; character height measured 97.8 px (target 86-130).",
+          "gap": "No key defect; the player remains readable in front of the tree.",
+          "action_or_acceptance_reason": "Accepted at 4 with two camera/interaction views.",
+          "reference_evidence": [
+            {
+              "path": "reference/_raw_screenshots/P1/t084s.jpg",
+              "sha256": "13706e7eab96726565156a9e6440727de5d5bac82ee9c09c293a5745dd7446de"
+            }
+          ],
+          "candidate_evidence": [
+            {
+              "path": "delivery/next_cycle/T2/sample_hud.png",
+              "sha256": "96336d88e2d1156b61dbcd31e4dafd653d5d181c665c478ed7350a6377e64d7a"
+            },
+            {
+              "path": "delivery/next_cycle/T5/q03_front.png",
+              "sha256": "554a6f4d89010f189d5348d11cb2224f78f54bab9227d48380faafb87738a31a"
+            },
+            {
+              "path": "delivery/next_cycle/T5/q09_landscape_1280x720.png",
+              "sha256": "01ea6e04542b95b1f58d597eb002d0ceaeaff3b6671b9e1847bb8e852cce4b52"
+            }
+          ]
+        }
+      ]
+    },
+    "CHAR": {
+      "dimensions": [
+        {
+          "id": "silhouette_proportion",
+          "score": 4,
+          "observation": "The locked reference Spine silhouette is preserved: twin-tail mass, coat tails and weapon read at small scale.",
+          "gap": "No key defect; the source identity is not redrawn.",
+          "action_or_acceptance_reason": "Accepted at 4 with idle/move and dialogue views.",
+          "reference_evidence": [
+            {
+              "path": "reference/_raw_screenshots/P1/t044s.jpg",
+              "sha256": "7c660e262e5ec6bb4a8bcca6be0e3a89f92e29efd7e2c28d0b33b5e556e948ee"
+            }
+          ],
+          "candidate_evidence": [
+            {
+              "path": "delivery/next_cycle/T6/character/char_idle.gif",
+              "sha256": "7b3224b3d3f13de0e8f6849240b47058c461ec04e40b1973a2df86647df54bb7"
+            },
+            {
+              "path": "delivery/next_cycle/T6/character/char_move.gif",
+              "sha256": "7b3224b3d3f13de0e8f6849240b47058c461ec04e40b1973a2df86647df54bb7"
+            },
+            {
+              "path": "delivery/next_cycle/T2/sample_dialogue.png",
+              "sha256": "f7dcb981a5b1417acef16daf56e4ae3951a120eae0ec942ae69c23592e5b0ed4"
+            }
+          ]
+        },
+        {
+          "id": "line_quality",
+          "score": 4,
+          "observation": "Linework comes from the original Spine atlas and remains clean at 1x and in dialogue portrait use.",
+          "gap": "No key defect in the captured states.",
+          "action_or_acceptance_reason": "Accepted at 4; idle/move and asset preview evidence.",
+          "reference_evidence": [
+            {
+              "path": "reference/_raw_screenshots/P1/t044s.jpg",
+              "sha256": "7c660e262e5ec6bb4a8bcca6be0e3a89f92e29efd7e2c28d0b33b5e556e948ee"
+            }
+          ],
+          "candidate_evidence": [
+            {
+              "path": "delivery/next_cycle/T6/character/char_idle.gif",
+              "sha256": "7b3224b3d3f13de0e8f6849240b47058c461ec04e40b1973a2df86647df54bb7"
+            },
+            {
+              "path": "delivery/next_cycle/T6/character/char_move.gif",
+              "sha256": "7b3224b3d3f13de0e8f6849240b47058c461ec04e40b1973a2df86647df54bb7"
+            },
+            {
+              "path": "delivery/next_cycle/T6/assets/CHAR001.png",
+              "sha256": "f2d223a4e071c3fce99d12330dc96c30973a4ec6321318489fd18fa5ab3eb20c"
+            }
+          ]
+        },
+        {
+          "id": "cel_color_light",
+          "score": 3,
+          "observation": "Cel colors match the reference character; the 2D sprite is not re-lit by the 3D scene, so its shading is source-consistent rather than integrated.",
+          "gap": "The character keeps its own cel shading; no scene light response is claimed.",
+          "action_or_acceptance_reason": "Accepted at 3; identity and line are strong, but cel integration is intentionally source-based.",
+          "reference_evidence": [
+            {
+              "path": "reference/_raw_screenshots/P1/t044s.jpg",
+              "sha256": "7c660e262e5ec6bb4a8bcca6be0e3a89f92e29efd7e2c28d0b33b5e556e948ee"
+            }
+          ],
+          "candidate_evidence": [
+            {
+              "path": "delivery/next_cycle/T6/character/char_idle.gif",
+              "sha256": "7b3224b3d3f13de0e8f6849240b47058c461ec04e40b1973a2df86647df54bb7"
+            },
+            {
+              "path": "delivery/next_cycle/T2/sample_dialogue.png",
+              "sha256": "f7dcb981a5b1417acef16daf56e4ae3951a120eae0ec942ae69c23592e5b0ed4"
+            }
+          ]
+        },
+        {
+          "id": "identity_consistency",
+          "score": 4,
+          "observation": "Hair, red/black outfit, weapon and twin-tail silhouette match the locked 1015_aglna2 source across idle, move and dialogue.",
+          "gap": "No key defect; source is read from the effective contract, not redrawn.",
+          "action_or_acceptance_reason": "Accepted at 4 with three states.",
+          "reference_evidence": [
+            {
+              "path": "reference/_raw_screenshots/P1/t044s.jpg",
+              "sha256": "7c660e262e5ec6bb4a8bcca6be0e3a89f92e29efd7e2c28d0b33b5e556e948ee"
+            }
+          ],
+          "candidate_evidence": [
+            {
+              "path": "delivery/next_cycle/T6/character/char_idle.gif",
+              "sha256": "7b3224b3d3f13de0e8f6849240b47058c461ec04e40b1973a2df86647df54bb7"
+            },
+            {
+              "path": "delivery/next_cycle/T6/character/char_move.gif",
+              "sha256": "7b3224b3d3f13de0e8f6849240b47058c461ec04e40b1973a2df86647df54bb7"
+            },
+            {
+              "path": "delivery/next_cycle/T2/sample_dialogue.png",
+              "sha256": "f7dcb981a5b1417acef16daf56e4ae3951a120eae0ec942ae69c23592e5b0ed4"
+            }
+          ]
+        },
+        {
+          "id": "motion_contact",
+          "score": 3,
+          "observation": "Idle and move loops are real Spine playback; the contact shadow is a runtime node at the player position (measured drift 0.000 m).",
+          "gap": "Move is a short loop; no long traversal or turn animation was captured.",
+          "action_or_acceptance_reason": "Accepted at 3 for the sample; no foot/shadow drift.",
+          "reference_evidence": [
+            {
+              "path": "reference/_raw_screenshots/P1/t084s.jpg",
+              "sha256": "13706e7eab96726565156a9e6440727de5d5bac82ee9c09c293a5745dd7446de"
+            }
+          ],
+          "candidate_evidence": [
+            {
+              "path": "delivery/next_cycle/T6/character/char_move.gif",
+              "sha256": "7b3224b3d3f13de0e8f6849240b47058c461ec04e40b1973a2df86647df54bb7"
+            },
+            {
+              "path": "delivery/next_cycle/T5/q03_front.png",
+              "sha256": "554a6f4d89010f189d5348d11cb2224f78f54bab9227d48380faafb87738a31a"
+            },
+            {
+              "path": "delivery/next_cycle/T5/q03_occlusion.json",
+              "sha256": "c305b92bd975b345b2736e50eae3a20fcf682b767f17fb2dbb0b8e373794000c"
+            }
+          ]
+        },
+        {
+          "id": "small_scale_clarity",
+          "score": 3,
+          "observation": "At the formal camera the player is 97.8 px tall and remains readable against the paving and foliage.",
+          "gap": "Small details merge at this scale, as expected for a 2D sprite; no key defect.",
+          "action_or_acceptance_reason": "Accepted at 3; character height is within the required 86-130 px.",
+          "reference_evidence": [
+            {
+              "path": "reference/_raw_screenshots/P1/t084s.jpg",
+              "sha256": "13706e7eab96726565156a9e6440727de5d5bac82ee9c09c293a5745dd7446de"
+            }
+          ],
+          "candidate_evidence": [
+            {
+              "path": "delivery/next_cycle/T2/sample_no_ui.png",
+              "sha256": "a4a2418473c7aaa1b50a6991566772a9402db34609e38ffc2b1835f605416fe5"
+            },
+            {
+              "path": "delivery/next_cycle/T2/sample_hud.png",
+              "sha256": "96336d88e2d1156b61dbcd31e4dafd653d5d181c665c478ed7350a6377e64d7a"
+            }
+          ]
+        }
+      ]
+    },
+    "UI": {
+      "dimensions": [
+        {
+          "id": "paper_shape",
+          "score": 3,
+          "observation": "Cream paper panels with a thin double border, soft translucency and portrait framing are consistent across HUD/dialogue/title.",
+          "gap": "The paper is still more opaque and more uniformly bordered than P1's thin translucent sheets.",
+          "action_or_acceptance_reason": "Accepted at 3; readable and coherent, with a known style gap.",
+          "reference_evidence": [
+            {
+              "path": "reference/_raw_screenshots/P1/t044s.jpg",
+              "sha256": "7c660e262e5ec6bb4a8bcca6be0e3a89f92e29efd7e2c28d0b33b5e556e948ee"
+            }
+          ],
+          "candidate_evidence": [
+            {
+              "path": "delivery/next_cycle/T2/sample_dialogue.png",
+              "sha256": "f7dcb981a5b1417acef16daf56e4ae3951a120eae0ec942ae69c23592e5b0ed4"
+            },
+            {
+              "path": "delivery/next_cycle/T6/ui_states/title_initial.png",
+              "sha256": "33d614a2fc777ead9b04074ccae7f253bddf505176692a95944a4d205e4c9e7c"
+            }
+          ]
+        },
+        {
+          "id": "doodle_icon_family",
+          "score": 4,
+          "observation": "A single 21-icon family (talk, pickup, place, view, retry, sound, menu, lock, leaf, etc.) plus sparkle/leaf doodles is used consistently.",
+          "gap": "No key defect; icon stroke weight is consistent across states.",
+          "action_or_acceptance_reason": "Accepted at 4 with the icon sheet and multiple UI states.",
+          "reference_evidence": [
+            {
+              "path": "reference/_raw_screenshots/P1/t044s.jpg",
+              "sha256": "7c660e262e5ec6bb4a8bcca6be0e3a89f92e29efd7e2c28d0b33b5e556e948ee"
+            }
+          ],
+          "candidate_evidence": [
+            {
+              "path": "delivery/next_cycle/T6/ui_states/spec_icons.png",
+              "sha256": "f1902818ce3de1ac2d8f307308d314aef334d77450fddd56d8971188bb6fe516"
+            },
+            {
+              "path": "delivery/next_cycle/T2/sample_hud.png",
+              "sha256": "96336d88e2d1156b61dbcd31e4dafd653d5d181c665c478ed7350a6377e64d7a"
+            },
+            {
+              "path": "delivery/next_cycle/T6/ui_states/pause_default.png",
+              "sha256": "502d56c83980e8cf597a12b5a4dc2c9bca1a71ee5ac2178ca890b030e29b51db"
+            }
+          ]
+        },
+        {
+          "id": "typography",
+          "score": 4,
+          "observation": "Chinese title/body/label hierarchy uses the bundled Noto fonts: title 64, speaker 28, body 24, page 13; native-size engine text is legible.",
+          "gap": "No key defect; the body still uses a single weight.",
+          "action_or_acceptance_reason": "Accepted at 4 with title, HUD and dialogue states.",
+          "reference_evidence": [
+            {
+              "path": "reference/_raw_screenshots/P1/t044s.jpg",
+              "sha256": "7c660e262e5ec6bb4a8bcca6be0e3a89f92e29efd7e2c28d0b33b5e556e948ee"
+            }
+          ],
+          "candidate_evidence": [
+            {
+              "path": "delivery/next_cycle/T2/sample_dialogue.png",
+              "sha256": "f7dcb981a5b1417acef16daf56e4ae3951a120eae0ec942ae69c23592e5b0ed4"
+            },
+            {
+              "path": "delivery/next_cycle/T6/ui_states/title_initial.png",
+              "sha256": "33d614a2fc777ead9b04074ccae7f253bddf505176692a95944a4d205e4c9e7c"
+            },
+            {
+              "path": "delivery/next_cycle/T6/ui_states/hud_3_3.png",
+              "sha256": "9af4970cf714d4012f23d00bb4469e68288e2a53e490a8acaf6eff7560134258"
+            }
+          ]
+        },
+        {
+          "id": "layout_air",
+          "score": 3,
+          "observation": "HUD sits in the corners with clear breathing room; dialogue spans the lower band without covering the player at default position.",
+          "gap": "Panels are larger and more rectangular than P1's airy asymmetric layout.",
+          "action_or_acceptance_reason": "Accepted at 3; interaction targets are clear and not overlapping.",
+          "reference_evidence": [
+            {
+              "path": "reference/_raw_screenshots/P1/t044s.jpg",
+              "sha256": "7c660e262e5ec6bb4a8bcca6be0e3a89f92e29efd7e2c28d0b33b5e556e948ee"
+            }
+          ],
+          "candidate_evidence": [
+            {
+              "path": "delivery/next_cycle/T2/sample_hud.png",
+              "sha256": "96336d88e2d1156b61dbcd31e4dafd653d5d181c665c478ed7350a6377e64d7a"
+            },
+            {
+              "path": "delivery/next_cycle/T2/sample_dialogue.png",
+              "sha256": "f7dcb981a5b1417acef16daf56e4ae3951a120eae0ec942ae69c23592e5b0ed4"
+            }
+          ]
+        },
+        {
+          "id": "state_feedback",
+          "score": 4,
+          "observation": "41 real states are captured: title/loading/failure, all HUD counts, interact/disabled/hidden, joystick, dialogue pages, pause, complete, toast, tips, safe-area and rotate notice.",
+          "gap": "No key defect; every state has a distinct visual response.",
+          "action_or_acceptance_reason": "Accepted at 4 with the current-build state index and representative state images.",
+          "reference_evidence": [
+            {
+              "path": "reference/_raw_screenshots/P1/t044s.jpg",
+              "sha256": "7c660e262e5ec6bb4a8bcca6be0e3a89f92e29efd7e2c28d0b33b5e556e948ee"
+            }
+          ],
+          "candidate_evidence": [
+            {
+              "path": "delivery/next_cycle/T6/ui_states/toast_pickup.png",
+              "sha256": "db6c8c9408876e91095e7a7854d42d9643b3b268af6418ff7c977eebe6980e62"
+            },
+            {
+              "path": "delivery/next_cycle/T6/ui_states/loading_failure.png",
+              "sha256": "8550d53cd5a60876bf1861815a3f8cd32c7ada478b3863174cbd3dbed9370465"
+            },
+            {
+              "path": "delivery/next_cycle/T6/ui_states/complete_default.png",
+              "sha256": "9c97ff86c236266abb408e317169f43f2e1f0834128bbc955b53579087f82fcd"
+            },
+            {
+              "path": "delivery/next_cycle/T6/ui_states/interact_disabled.png",
+              "sha256": "9cba5cf46ea63a4cde752813ce54a6e6e4f2f59722899512ee09b81921832d2d"
+            }
+          ]
+        },
+        {
+          "id": "palette_restraint",
+          "score": 4,
+          "observation": "Cream paper, ink text, restrained gold and mint accents; no saturated global filter.",
+          "gap": "No key defect; accents are limited to status/page/icon details.",
+          "action_or_acceptance_reason": "Accepted at 4 with multiple UI states.",
+          "reference_evidence": [
+            {
+              "path": "reference/_raw_screenshots/P1/t044s.jpg",
+              "sha256": "7c660e262e5ec6bb4a8bcca6be0e3a89f92e29efd7e2c28d0b33b5e556e948ee"
+            }
+          ],
+          "candidate_evidence": [
+            {
+              "path": "delivery/next_cycle/T6/ui_states/title_initial.png",
+              "sha256": "33d614a2fc777ead9b04074ccae7f253bddf505176692a95944a4d205e4c9e7c"
+            },
+            {
+              "path": "delivery/next_cycle/T2/sample_dialogue.png",
+              "sha256": "f7dcb981a5b1417acef16daf56e4ae3951a120eae0ec942ae69c23592e5b0ed4"
+            },
+            {
+              "path": "delivery/next_cycle/T6/ui_states/pause_default.png",
+              "sha256": "502d56c83980e8cf597a12b5a4dc2c9bca1a71ee5ac2178ca890b030e29b51db"
+            }
+          ]
+        }
+      ]
+    },
+    "MIX": {
+      "dimensions": [
+        {
+          "id": "visual_language",
+          "score": 3,
+          "observation": "Low-poly autumn world, detailed anime Spine character and paper UI share a warm cream/ochre palette and rounded prop language.",
+          "gap": "The 2D character and 3D world use different rendering languages; P1 is more uniformly painterly.",
+          "action_or_acceptance_reason": "Accepted at 3 for the sample; this is a known style gap, not a broken composite.",
+          "reference_evidence": [
+            {
+              "path": "reference/_raw_screenshots/P1/t015s.jpg",
+              "sha256": "aa80a65f20fa0bcc66bad11b680e50208a8bc92d1ae119bc5969e5e1257785c7"
+            }
+          ],
+          "candidate_evidence": [
+            {
+              "path": "delivery/next_cycle/T2/sample_no_ui.png",
+              "sha256": "a4a2418473c7aaa1b50a6991566772a9402db34609e38ffc2b1835f605416fe5"
+            },
+            {
+              "path": "delivery/next_cycle/T2/sample_dialogue.png",
+              "sha256": "f7dcb981a5b1417acef16daf56e4ae3951a120eae0ec942ae69c23592e5b0ed4"
+            },
+            {
+              "path": "delivery/next_cycle/T6/assets/MAP001.png",
+              "sha256": "d3fe7599381bda16570f1f5d68d45c4bf6a51e14f583287456c310d4aa8a166d"
+            }
+          ]
+        },
+        {
+          "id": "color_light_coherence",
+          "score": 4,
+          "observation": "Warm key, cool fill, deep contact shadows and cream/mint UI are coherent across formal, dialogue and close-up views; fixed ROI measurement matches the images.",
+          "gap": "No key defect; P1 has richer bounce light.",
+          "action_or_acceptance_reason": "Accepted at 4 with measurement and multiple views.",
+          "reference_evidence": [
+            {
+              "path": "reference/_raw_screenshots/P1/t015s.jpg",
+              "sha256": "aa80a65f20fa0bcc66bad11b680e50208a8bc92d1ae119bc5969e5e1257785c7"
+            }
+          ],
+          "candidate_evidence": [
+            {
+              "path": "delivery/next_cycle/T4/lighting_comparison_final4.png",
+              "sha256": "48d357af397496fa1474cd0b1c48c28a5cb981e2aa39e9710e9b7bd84db6c6e0"
+            },
+            {
+              "path": "delivery/next_cycle/T2/sample_no_ui.png",
+              "sha256": "a4a2418473c7aaa1b50a6991566772a9402db34609e38ffc2b1835f605416fe5"
+            },
+            {
+              "path": "delivery/next_cycle/T6/ui_states/hud_3_3.png",
+              "sha256": "9af4970cf714d4012f23d00bb4469e68288e2a53e490a8acaf6eff7560134258"
+            }
+          ]
+        },
+        {
+          "id": "grounding_occlusion",
+          "score": 4,
+          "observation": "Player shadow is attached at the player position (measured drift 0.000 m); behind-tree head region drops from 1321 to 110 near-white character pixels, confirming canopy occlusion.",
+          "gap": "No key defect; partial-edge occlusion at other props is not exhaustively tested.",
+          "action_or_acceptance_reason": "Accepted at 4 with front/behind captures and the head-region metric.",
+          "reference_evidence": [
+            {
+              "path": "reference/_raw_screenshots/P1/t084s.jpg",
+              "sha256": "13706e7eab96726565156a9e6440727de5d5bac82ee9c09c293a5745dd7446de"
+            }
+          ],
+          "candidate_evidence": [
+            {
+              "path": "delivery/next_cycle/T5/q03_front.png",
+              "sha256": "554a6f4d89010f189d5348d11cb2224f78f54bab9227d48380faafb87738a31a"
+            },
+            {
+              "path": "delivery/next_cycle/T5/q03_behind.png",
+              "sha256": "dbb3a5f87b4e529a195aef311c7703dac14238cfbd1cb8977a085d24d0e89506"
+            },
+            {
+              "path": "delivery/next_cycle/T6/character/char_move.gif",
+              "sha256": "7b3224b3d3f13de0e8f6849240b47058c461ec04e40b1973a2df86647df54bb7"
+            }
+          ]
+        },
+        {
+          "id": "focus_readability",
+          "score": 4,
+          "observation": "Default composition focuses the hero tree, player and quest/dialogue UI; the player is not covered and the path stays readable.",
+          "gap": "No key defect in the captured states.",
+          "action_or_acceptance_reason": "Accepted at 4 with HUD/dialogue and landscape viewport evidence.",
+          "reference_evidence": [
+            {
+              "path": "reference/_raw_screenshots/P1/t084s.jpg",
+              "sha256": "13706e7eab96726565156a9e6440727de5d5bac82ee9c09c293a5745dd7446de"
+            }
+          ],
+          "candidate_evidence": [
+            {
+              "path": "delivery/next_cycle/T2/sample_hud.png",
+              "sha256": "96336d88e2d1156b61dbcd31e4dafd653d5d181c665c478ed7350a6377e64d7a"
+            },
+            {
+              "path": "delivery/next_cycle/T2/sample_dialogue.png",
+              "sha256": "f7dcb981a5b1417acef16daf56e4ae3951a120eae0ec942ae69c23592e5b0ed4"
+            },
+            {
+              "path": "delivery/next_cycle/T5/q09_landscape_1280x720.png",
+              "sha256": "01ea6e04542b95b1f58d597eb002d0ceaeaff3b6671b9e1847bb8e852cce4b52"
+            }
+          ]
+        },
+        {
+          "id": "world_style_coherence",
+          "score": 3,
+          "observation": "Props, tree, planters and UI all use the same stylized autumn language and palette.",
+          "gap": "Distant crown band and some planter silhouettes remain more geometric than P1.",
+          "action_or_acceptance_reason": "Accepted at 3; coherent, with a known background-detail gap.",
+          "reference_evidence": [
+            {
+              "path": "reference/_raw_screenshots/P1/t015s.jpg",
+              "sha256": "aa80a65f20fa0bcc66bad11b680e50208a8bc92d1ae119bc5969e5e1257785c7"
+            }
+          ],
+          "candidate_evidence": [
+            {
+              "path": "delivery/next_cycle/T6/assets/MAP001.png",
+              "sha256": "d3fe7599381bda16570f1f5d68d45c4bf6a51e14f583287456c310d4aa8a166d"
+            },
+            {
+              "path": "delivery/next_cycle/T2/sample_no_ui.png",
+              "sha256": "a4a2418473c7aaa1b50a6991566772a9402db34609e38ffc2b1835f605416fe5"
+            },
+            {
+              "path": "delivery/next_cycle/T6/ui_states/pause_default.png",
+              "sha256": "502d56c83980e8cf597a12b5a4dc2c9bca1a71ee5ac2178ca890b030e29b51db"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "asset_checks": [
+    {
+      "asset_id": "MAP001",
+      "decision": "pass",
+      "reason": "Current-build canvas preview inspected; editable sources present. Producer self-review only; independent approval pending.",
+      "evidence": [
+        {
+          "path": "art/full/previews/engine/assets/MAP001.png",
+          "sha256": "b6bb5503386679c808ea7983d2a5326665c19625501e26ac87e49b97573538ef"
+        },
+        {
+          "path": "art/iterations/cycle_02/reviews/MAP001.json",
+          "sha256": "2e95c6a18727aa84aa152592b28965dc7f94616af98c391551fa588b61d1047e"
+        }
+      ]
+    },
+    {
+      "asset_id": "ENV001",
+      "decision": "pass",
+      "reason": "Current-build canvas preview inspected; editable sources present. Producer self-review only; independent approval pending.",
+      "evidence": [
+        {
+          "path": "art/full/previews/engine/assets/ENV001.png",
+          "sha256": "80797677744112eb72d5950c6a1adf2d3a2e95d4bbb9ab5649c3cd812e0794f8"
+        },
+        {
+          "path": "art/iterations/cycle_02/reviews/ENV001.json",
+          "sha256": "528a1e99e19386c2cacb27beecd5f51ae6fd2a35bd2779ed44231f66911e6704"
+        }
+      ]
+    },
+    {
+      "asset_id": "ENV002",
+      "decision": "pass",
+      "reason": "Current-build canvas preview inspected; editable sources present. Producer self-review only; independent approval pending.",
+      "evidence": [
+        {
+          "path": "art/full/previews/engine/assets/ENV002.png",
+          "sha256": "dbe139dc13ff558462de6e69efbd63cc7b0df3dab39ea42c9bb4802005a45fa7"
+        },
+        {
+          "path": "art/iterations/cycle_02/reviews/ENV002.json",
+          "sha256": "f4dc5c00d80a4cbfa34de1a6bb3f518c1e6c877861837c33401189458afe263f"
+        }
+      ]
+    },
+    {
+      "asset_id": "ENV003",
+      "decision": "pass",
+      "reason": "Current-build canvas preview inspected; editable sources present. Producer self-review only; independent approval pending.",
+      "evidence": [
+        {
+          "path": "art/full/previews/engine/assets/ENV003.png",
+          "sha256": "74d1a67332b082f9af0ec2a59b8b884b2625776d75823d0559becb91f5df2628"
+        },
+        {
+          "path": "art/iterations/cycle_02/reviews/ENV003.json",
+          "sha256": "09b5855cf82fc741d9d3daf6c34455a91a70fd1b4b4aa70961c83262031ed7e8"
+        }
+      ]
+    },
+    {
+      "asset_id": "ENV004",
+      "decision": "pass",
+      "reason": "Current-build canvas preview inspected; editable sources present. Producer self-review only; independent approval pending.",
+      "evidence": [
+        {
+          "path": "art/full/previews/engine/assets/ENV004.png",
+          "sha256": "74d1a67332b082f9af0ec2a59b8b884b2625776d75823d0559becb91f5df2628"
+        },
+        {
+          "path": "art/iterations/cycle_02/reviews/ENV004.json",
+          "sha256": "e058cd4299274778c4601ef969ba5828a160c0ae77dae23a46c93c93a2d36719"
+        }
+      ]
+    },
+    {
+      "asset_id": "ENV005",
+      "decision": "pass",
+      "reason": "Current-build canvas preview inspected; editable sources present. Producer self-review only; independent approval pending.",
+      "evidence": [
+        {
+          "path": "art/full/previews/engine/assets/ENV005.png",
+          "sha256": "862e5f62d9c90204a57460751796f736feaa757edcf5220d6898fe9c075bd68b"
+        },
+        {
+          "path": "art/iterations/cycle_02/reviews/ENV005.json",
+          "sha256": "ff9c4e32e201db0149e3b23d65b15e645de64e7b8ede285733423f3bf225bc11"
+        }
+      ]
+    },
+    {
+      "asset_id": "ENV006",
+      "decision": "pass",
+      "reason": "Current-build canvas preview inspected; editable sources present. Producer self-review only; independent approval pending.",
+      "evidence": [
+        {
+          "path": "art/full/previews/engine/assets/ENV006.png",
+          "sha256": "d93efcb53d6d739a83039d748cfa8fc061ca41173a16242b83d385c63783b3bc"
+        },
+        {
+          "path": "art/iterations/cycle_02/reviews/ENV006.json",
+          "sha256": "e15a6fd3185e7eaca92f0f83a6d52436f535d55034beaa7eac47f6e72a8cc955"
+        }
+      ]
+    },
+    {
+      "asset_id": "ENV007",
+      "decision": "pass",
+      "reason": "Current-build canvas preview inspected; editable sources present. Producer self-review only; independent approval pending.",
+      "evidence": [
+        {
+          "path": "art/full/previews/engine/assets/ENV007.png",
+          "sha256": "4dce7e92ecb744a39a655eea799a7b025ba89c134ba38651709f55ebbff878c4"
+        },
+        {
+          "path": "art/iterations/cycle_02/reviews/ENV007.json",
+          "sha256": "50d31a31772d67cb56b34b170a80e1e12063db010ace26f96b30ef1fea2a5d57"
+        }
+      ]
+    },
+    {
+      "asset_id": "ENV008",
+      "decision": "pass",
+      "reason": "Current-build canvas preview inspected; editable sources present. Producer self-review only; independent approval pending.",
+      "evidence": [
+        {
+          "path": "art/full/previews/engine/assets/ENV008.png",
+          "sha256": "7383e2ec11aad6aa8528cb92aa1388d6298fe12be4d7adf53e20982ed90a23be"
+        },
+        {
+          "path": "art/iterations/cycle_02/reviews/ENV008.json",
+          "sha256": "740b9239334c6fb6cfa956b9b46636bdc567b2c4623cde1d85c43a0403b21e3c"
+        }
+      ]
+    },
+    {
+      "asset_id": "ENV009",
+      "decision": "pass",
+      "reason": "Current-build canvas preview inspected; editable sources present. Producer self-review only; independent approval pending.",
+      "evidence": [
+        {
+          "path": "art/full/previews/engine/assets/ENV009.png",
+          "sha256": "5d863aa74499bfb071831c7ef97d3bd7bd030c41b2eb8aada1f65d056855d133"
+        },
+        {
+          "path": "art/iterations/cycle_02/reviews/ENV009.json",
+          "sha256": "eb8632ee3702e36b1e5c27545eed8efcccc37ed512f03d8b86c482446b9c410c"
+        }
+      ]
+    },
+    {
+      "asset_id": "ENV010",
+      "decision": "pass",
+      "reason": "Current-build canvas preview inspected; editable sources present. Producer self-review only; independent approval pending.",
+      "evidence": [
+        {
+          "path": "art/full/previews/engine/assets/ENV010.png",
+          "sha256": "173412d22aa046b9e8a011fa57db5061eab8d32e6eeb534190078c2f1532cbf1"
+        },
+        {
+          "path": "art/iterations/cycle_02/reviews/ENV010.json",
+          "sha256": "518db1e1e537f34b30053067c7618a470e413c2bb5a53809ef009adf686d1701"
+        }
+      ]
+    },
+    {
+      "asset_id": "ENV011",
+      "decision": "pass",
+      "reason": "Current-build canvas preview inspected; editable sources present. Producer self-review only; independent approval pending.",
+      "evidence": [
+        {
+          "path": "art/full/previews/engine/assets/ENV011.png",
+          "sha256": "3d6f097aed902da3928183844f98b0d2725f81d1ade791eca8eb5dbbe6bb9ecb"
+        },
+        {
+          "path": "art/iterations/cycle_02/reviews/ENV011.json",
+          "sha256": "1cfa07b6adb6ba94226c7a02c5f6309b84c3ee017dabd7377c51c5ce899012cd"
+        }
+      ]
+    },
+    {
+      "asset_id": "ENV012",
+      "decision": "pass",
+      "reason": "Current-build canvas preview inspected; editable sources present. Producer self-review only; independent approval pending.",
+      "evidence": [
+        {
+          "path": "art/full/previews/engine/assets/ENV012.png",
+          "sha256": "af954401ac9d47d151ed3ead77183b10ffa3f4a52ca6453896833382b2abb90c"
+        },
+        {
+          "path": "art/iterations/cycle_02/reviews/ENV012.json",
+          "sha256": "33d8bfaaf1a2340ff614c906dddf21c57f01339dcfe8d12f1273d499c9f57022"
+        }
+      ]
+    },
+    {
+      "asset_id": "PROP001",
+      "decision": "pass",
+      "reason": "Current-build canvas preview inspected; editable sources present. Producer self-review only; independent approval pending.",
+      "evidence": [
+        {
+          "path": "art/full/previews/engine/assets/PROP001.png",
+          "sha256": "393f38501337127337c6b5914c4cc3706083da07d34450e036282bdc03a929c9"
+        },
+        {
+          "path": "art/iterations/cycle_02/reviews/PROP001.json",
+          "sha256": "224aa962a3e39e58e6bc75915eaf258f2d09530d1cb52abbe1f421e43d71c32c"
+        }
+      ]
+    },
+    {
+      "asset_id": "PROP002",
+      "decision": "pass",
+      "reason": "Current-build canvas preview inspected; editable sources present. Producer self-review only; independent approval pending.",
+      "evidence": [
+        {
+          "path": "art/full/previews/engine/assets/PROP002.png",
+          "sha256": "9ff0d3df7a802d92383a39b573c5e5aae3bed31f3e7daa536106c770e004ed5f"
+        },
+        {
+          "path": "art/iterations/cycle_02/reviews/PROP002.json",
+          "sha256": "57f7b8e542ec9ff4725cbf13705b43162d5226fcdeb631e1acbf196ec00d9402"
+        }
+      ]
+    },
+    {
+      "asset_id": "PROP003",
+      "decision": "pass",
+      "reason": "Current-build canvas preview inspected; editable sources present. Producer self-review only; independent approval pending.",
+      "evidence": [
+        {
+          "path": "art/full/previews/engine/assets/PROP003.png",
+          "sha256": "251ff461a6d177af72666575e3b85d7fe0a438fb970410334395ad28da19c112"
+        },
+        {
+          "path": "art/iterations/cycle_02/reviews/PROP003.json",
+          "sha256": "f70d20525cf677054fac999ed75a1e54ca8bf0fed96f86de7ed28a1ceb78abdd"
+        }
+      ]
+    },
+    {
+      "asset_id": "PROP004",
+      "decision": "pass",
+      "reason": "Current-build canvas preview inspected; editable sources present. Producer self-review only; independent approval pending.",
+      "evidence": [
+        {
+          "path": "art/full/previews/engine/assets/PROP004.png",
+          "sha256": "ff5e39f1b68a36f28ae31aaa37d0a7401311fae30b3b67b4f3293d4216650abb"
+        },
+        {
+          "path": "art/iterations/cycle_02/reviews/PROP004.json",
+          "sha256": "cd54ad50f40d7a53708fe1ca80d421c78b0ba06c3ee79a32e26bcf9bb667e4bc"
+        }
+      ]
+    },
+    {
+      "asset_id": "PROP005",
+      "decision": "pass",
+      "reason": "Current-build canvas preview inspected; editable sources present. Producer self-review only; independent approval pending.",
+      "evidence": [
+        {
+          "path": "art/full/previews/engine/assets/PROP005.png",
+          "sha256": "96b04cea8dc98334fd8203f3693b839738ce8b016a9b8c48cdc11d8178aaebd6"
+        },
+        {
+          "path": "art/iterations/cycle_02/reviews/PROP005.json",
+          "sha256": "33469a2f46f522f1d0d8ca502158305b3383e3fca0c18152c783fca15b2ee307"
+        }
+      ]
+    },
+    {
+      "asset_id": "PROP006",
+      "decision": "pass",
+      "reason": "Current-build canvas preview inspected; editable sources present. Producer self-review only; independent approval pending.",
+      "evidence": [
+        {
+          "path": "art/full/previews/engine/assets/PROP006.png",
+          "sha256": "a227790dfc9d5782ccd86ad699e39f66df39daac2b1cb92475dd4c4dc01aa00f"
+        },
+        {
+          "path": "art/iterations/cycle_02/reviews/PROP006.json",
+          "sha256": "92af641fb2fcc65662e2c265ba3a3af1e233672dee8558e9cda484a060cf78d6"
+        }
+      ]
+    },
+    {
+      "asset_id": "MAT001",
+      "decision": "pass",
+      "reason": "Current-build canvas preview inspected; editable sources present. Producer self-review only; independent approval pending.",
+      "evidence": [
+        {
+          "path": "art/full/previews/engine/assets/MAT001.png",
+          "sha256": "869f676ca9f5f262a07c444b3ee428ecabc1881efee9635d44edfcda7048766e"
+        },
+        {
+          "path": "art/iterations/cycle_02/reviews/MAT001.json",
+          "sha256": "bc80c9123bc5df550d822084ed0cf384ff2dde946cbc66aa34f5da2742fe047c"
+        }
+      ]
+    },
+    {
+      "asset_id": "MAT002",
+      "decision": "pass",
+      "reason": "Current-build canvas preview inspected; editable sources present. Producer self-review only; independent approval pending.",
+      "evidence": [
+        {
+          "path": "art/full/previews/engine/assets/MAT002.png",
+          "sha256": "393f38501337127337c6b5914c4cc3706083da07d34450e036282bdc03a929c9"
+        },
+        {
+          "path": "art/iterations/cycle_02/reviews/MAT002.json",
+          "sha256": "7acadaaa324728c4dcc6189d9e5097e6e79db531a2e1fd98318480eb8779c4f6"
+        }
+      ]
+    },
+    {
+      "asset_id": "MAT003",
+      "decision": "pass",
+      "reason": "Current-build canvas preview inspected; editable sources present. Producer self-review only; independent approval pending.",
+      "evidence": [
+        {
+          "path": "art/full/previews/engine/assets/MAT003.png",
+          "sha256": "64ac199a17ffbf0130fc63d5e7fbfba4a0724b60904a5947a78af87e7f1296fa"
+        },
+        {
+          "path": "art/iterations/cycle_02/reviews/MAT003.json",
+          "sha256": "d6658d6bbf14da67dd92caaf9ca3119b2043d4c2c913644fbc65c9e30dd82b58"
+        }
+      ]
+    },
+    {
+      "asset_id": "MAT004",
+      "decision": "pass",
+      "reason": "Current-build canvas preview inspected; editable sources present. Producer self-review only; independent approval pending.",
+      "evidence": [
+        {
+          "path": "art/full/previews/engine/assets/MAT004.png",
+          "sha256": "d93efcb53d6d739a83039d748cfa8fc061ca41173a16242b83d385c63783b3bc"
+        },
+        {
+          "path": "art/iterations/cycle_02/reviews/MAT004.json",
+          "sha256": "bb9644331cbbeab2b144259581d71e28fd744ca404f314d1d6f9bc9681e62617"
+        }
+      ]
+    },
+    {
+      "asset_id": "MAT005",
+      "decision": "pass",
+      "reason": "Current-build canvas preview inspected; editable sources present. Producer self-review only; independent approval pending.",
+      "evidence": [
+        {
+          "path": "art/full/previews/engine/assets/MAT005.png",
+          "sha256": "251ff461a6d177af72666575e3b85d7fe0a438fb970410334395ad28da19c112"
+        },
+        {
+          "path": "art/iterations/cycle_02/reviews/MAT005.json",
+          "sha256": "c3966da7c71fe6529f36bad2ec02db799b79837151acb706df25d813c783dda8"
+        }
+      ]
+    },
+    {
+      "asset_id": "LOOK001",
+      "decision": "pass",
+      "reason": "Current-build canvas preview inspected; editable sources present. Producer self-review only; independent approval pending.",
+      "evidence": [
+        {
+          "path": "art/full/previews/engine/assets/LOOK001.png",
+          "sha256": "b6bb5503386679c808ea7983d2a5326665c19625501e26ac87e49b97573538ef"
+        },
+        {
+          "path": "art/iterations/cycle_02/reviews/LOOK001.json",
+          "sha256": "835b5b109bf460127978c42d237d5ae2619fa4d6cc2aea641348571142d6ddfc"
+        }
+      ]
+    },
+    {
+      "asset_id": "CHAR001",
+      "decision": "pass",
+      "reason": "Current-build canvas preview inspected; editable sources present. Producer self-review only; independent approval pending.",
+      "evidence": [
+        {
+          "path": "art/full/previews/engine/assets/CHAR001.png",
+          "sha256": "081e6df046864d3346eaddbb14dff810d8f89da754f1f1e482f1eaf1cccc0bb4"
+        },
+        {
+          "path": "art/iterations/cycle_02/reviews/CHAR001.json",
+          "sha256": "1b0be38fc9613a538e09b139991485f666e7b6713e731e2c6621ee7ffbcb5a37"
+        }
+      ]
+    },
+    {
+      "asset_id": "CHAR002",
+      "decision": "pass",
+      "reason": "Current-build canvas preview inspected; editable sources present. Producer self-review only; independent approval pending.",
+      "evidence": [
+        {
+          "path": "art/full/previews/engine/assets/CHAR002.png",
+          "sha256": "a88861397a2f94f538bcb79ecfd546854271879eae7735fedc9667af6b438127"
+        },
+        {
+          "path": "art/iterations/cycle_02/reviews/CHAR002.json",
+          "sha256": "1bc104187da3c614b544d420c0cd0836710341eefdf81831e61d5b2b3308ec0c"
+        }
+      ]
+    },
+    {
+      "asset_id": "CHAR003",
+      "decision": "pass",
+      "reason": "Current-build canvas preview inspected; editable sources present. Producer self-review only; independent approval pending.",
+      "evidence": [
+        {
+          "path": "art/full/previews/engine/assets/CHAR003.png",
+          "sha256": "0e252745d1603efb2c145fb859994c05b0a2295f94c97403453ea418ea8511d1"
+        },
+        {
+          "path": "art/iterations/cycle_02/reviews/CHAR003.json",
+          "sha256": "ba622f8389dc0f0d695af316992e1c91d967f629efa30dfa4410d93a583ab3ee"
+        }
+      ]
+    },
+    {
+      "asset_id": "CHAR004",
+      "decision": "pass",
+      "reason": "Current-build canvas preview inspected; editable sources present. Producer self-review only; independent approval pending.",
+      "evidence": [
+        {
+          "path": "art/full/previews/engine/assets/CHAR004.png",
+          "sha256": "166efb58bf85e909698a98ac359b6f3f90c10b07a07d837fdf008bde4dcf8510"
+        },
+        {
+          "path": "art/iterations/cycle_02/reviews/CHAR004.json",
+          "sha256": "e63507a71d8bf6633de958dba3306e3928b348a032d1925e788a6ca7cf0a8295"
+        }
+      ]
+    },
+    {
+      "asset_id": "CHAR005",
+      "decision": "pass",
+      "reason": "Current-build canvas preview inspected; editable sources present. Producer self-review only; independent approval pending.",
+      "evidence": [
+        {
+          "path": "art/full/previews/engine/assets/CHAR005.png",
+          "sha256": "e3846cf0d7bb443afaa9783bbf99c2d5e77fd9812bcc061c110b58a992877667"
+        },
+        {
+          "path": "art/iterations/cycle_02/reviews/CHAR005.json",
+          "sha256": "c8a3f7563affb8e75c592345dc923d08ec9b2f801b969767a415ca5fdcbb90d1"
+        }
+      ]
+    },
+    {
+      "asset_id": "UI001",
+      "decision": "pass",
+      "reason": "Current-build canvas preview inspected; editable sources present. Producer self-review only; independent approval pending.",
+      "evidence": [
+        {
+          "path": "art/full/previews/engine/ui_states/title_initial.png",
+          "sha256": "f30ef8e00e8cfd4d43fb004c0c2be0b1fbc6cf5e46ac7292f537c4a5cb9b407e"
+        },
+        {
+          "path": "art/iterations/cycle_02/reviews/UI001.json",
+          "sha256": "ac4caa2530103703d84c0820dab4daad0c3e8444c04a5ae756a4630ac3b88687"
+        }
+      ]
+    },
+    {
+      "asset_id": "UI002",
+      "decision": "pass",
+      "reason": "Current-build canvas preview inspected; editable sources present. Producer self-review only; independent approval pending.",
+      "evidence": [
+        {
+          "path": "art/full/previews/engine/ui_states/loading_progress.png",
+          "sha256": "84d5a42a5a599fb1c3ad2cb08189479958deb0fbca58be9a1536aa848495f30d"
+        },
+        {
+          "path": "art/iterations/cycle_02/reviews/UI002.json",
+          "sha256": "23bc1094e65da5a57f5bc48a1f25e904d649410617501307fed2ecd6c01a0fbe"
+        }
+      ]
+    },
+    {
+      "asset_id": "UI003",
+      "decision": "pass",
+      "reason": "Current-build canvas preview inspected; editable sources present. Producer self-review only; independent approval pending.",
+      "evidence": [
+        {
+          "path": "art/full/previews/engine/ui_states/hud_talk.png",
+          "sha256": "772b95f7aa238411fa4c53a82e170da3f9c2b5e3169edbda590f08dc562921af"
+        },
+        {
+          "path": "art/iterations/cycle_02/reviews/UI003.json",
+          "sha256": "5a1e91016b51bf959236e3af2d4f2ab3847ba17e34f7312e67f486a96ba9fd11"
+        }
+      ]
+    },
+    {
+      "asset_id": "UI004",
+      "decision": "pass",
+      "reason": "Current-build canvas preview inspected; editable sources present. Producer self-review only; independent approval pending.",
+      "evidence": [
+        {
+          "path": "art/full/previews/engine/ui_states/joystick_idle.png",
+          "sha256": "03039f6141ae9ef4c1eb728c8847aabdabd80c418c6082b78bb4bf02eb5dfc6d"
+        },
+        {
+          "path": "art/iterations/cycle_02/reviews/UI004.json",
+          "sha256": "94179ef3b76ac71bdf1e2974320ae5cb5b109c726b26e4f96296196435945de8"
+        }
+      ]
+    },
+    {
+      "asset_id": "UI005",
+      "decision": "pass",
+      "reason": "Current-build canvas preview inspected; editable sources present. Producer self-review only; independent approval pending.",
+      "evidence": [
+        {
+          "path": "art/full/previews/engine/ui_states/interact_talk.png",
+          "sha256": "cc4b31836676888a43f984ea14977d1c5145b4c153fbab6faa7f648561568cc3"
+        },
+        {
+          "path": "art/iterations/cycle_02/reviews/UI005.json",
+          "sha256": "a31bbb4cc77c0158b0a0d79baef23b2a377cba4e89b7a54e5d390863b667cfb4"
+        }
+      ]
+    },
+    {
+      "asset_id": "UI006",
+      "decision": "pass",
+      "reason": "Current-build canvas preview inspected; editable sources present. Producer self-review only; independent approval pending.",
+      "evidence": [
+        {
+          "path": "art/full/previews/engine/ui_states/dialogue_gardener_p1.png",
+          "sha256": "d92316254850e77a04797a6f749666688e2fb2b6cf0cb02509b200d0c255269e"
+        },
+        {
+          "path": "art/iterations/cycle_02/reviews/UI006.json",
+          "sha256": "1eee11738a9f6d37a4f975e94275580ea6cec4a23fee5053df58d1ca7151a4a2"
+        }
+      ]
+    },
+    {
+      "asset_id": "UI007",
+      "decision": "pass",
+      "reason": "Current-build canvas preview inspected; editable sources present. Producer self-review only; independent approval pending.",
+      "evidence": [
+        {
+          "path": "art/full/previews/engine/ui_states/pause_default.png",
+          "sha256": "ab5d1327eab9f9660d38b0bb0862275e62bcdeb97e3fb01bc50bf9b34131194e"
+        },
+        {
+          "path": "art/iterations/cycle_02/reviews/UI007.json",
+          "sha256": "e3fd8d9566b2e65f75530dd495b36383114b829498aab719bdb79362e440f36c"
+        }
+      ]
+    },
+    {
+      "asset_id": "UI008",
+      "decision": "pass",
+      "reason": "Current-build canvas preview inspected; editable sources present. Producer self-review only; independent approval pending.",
+      "evidence": [
+        {
+          "path": "art/full/previews/engine/ui_states/complete_default.png",
+          "sha256": "c362a28588554aaf6eba91eccebd637a9f881745c6dfce2bc1d8962776288ac9"
+        },
+        {
+          "path": "art/iterations/cycle_02/reviews/UI008.json",
+          "sha256": "86a74b7747e2de53f6c394e2c40edec9a77f256182c1b37a8e2975c752eb88b2"
+        }
+      ]
+    },
+    {
+      "asset_id": "UI009",
+      "decision": "pass",
+      "reason": "Current-build canvas preview inspected; editable sources present. Producer self-review only; independent approval pending.",
+      "evidence": [
+        {
+          "path": "art/full/previews/engine/ui_states/toast_pickup.png",
+          "sha256": "63e2c43e5279fea3ce380eb6f62ef2e540a33b951d5595acc3b8a38c83c28440"
+        },
+        {
+          "path": "art/iterations/cycle_02/reviews/UI009.json",
+          "sha256": "ea5faf626582d75bba8cc79c29f5f3835167d485402561cba9c7fb065bd918af"
+        }
+      ]
+    },
+    {
+      "asset_id": "UI010",
+      "decision": "pass",
+      "reason": "Current-build canvas preview inspected; editable sources present. Producer self-review only; independent approval pending.",
+      "evidence": [
+        {
+          "path": "art/full/previews/engine/ui_states/tip_first_move.png",
+          "sha256": "493921e0ba1aa5eebba49808881dfd52ac0338c499482c13586df1ec1df48c95"
+        },
+        {
+          "path": "art/iterations/cycle_02/reviews/UI010.json",
+          "sha256": "57f18201685e1fa8003c722de8afd9a1bf0102f9988f92a3267a435b3c53c47f"
+        }
+      ]
+    },
+    {
+      "asset_id": "UI011",
+      "decision": "pass",
+      "reason": "Current-build canvas preview inspected; editable sources present. Producer self-review only; independent approval pending.",
+      "evidence": [
+        {
+          "path": "art/full/previews/engine/ui_states/safe_area_landscape.png",
+          "sha256": "60447cf059dc3e768356179ae8952c7d3256dbf8d23acc3e09299feb07aa35df"
+        },
+        {
+          "path": "art/iterations/cycle_02/reviews/UI011.json",
+          "sha256": "6a05cc47576bef03910debd19eb845e8af1a81219ec7b12b48bcb6b11d1651e2"
+        }
+      ]
+    },
+    {
+      "asset_id": "UI012",
+      "decision": "pass",
+      "reason": "Current-build canvas preview inspected; editable sources present. Producer self-review only; independent approval pending.",
+      "evidence": [
+        {
+          "path": "art/full/previews/engine/ui_states/spec_icons.png",
+          "sha256": "f1902818ce3de1ac2d8f307308d314aef334d77450fddd56d8971188bb6fe516"
+        },
+        {
+          "path": "art/iterations/cycle_02/reviews/UI012.json",
+          "sha256": "e074333b2c649f30760a6fef97a6b7cd823e6b3db822598ec9f969656552fad3"
+        }
+      ]
+    },
+    {
+      "asset_id": "UI013",
+      "decision": "pass",
+      "reason": "Current-build canvas preview inspected; editable sources present. Producer self-review only; independent approval pending.",
+      "evidence": [
+        {
+          "path": "art/full/previews/engine/ui_states/spec_type.png",
+          "sha256": "8fc5c029a33f24a770f57e107e67b78b15524f24a4a209365658c2dc64a45e22"
+        },
+        {
+          "path": "art/iterations/cycle_02/reviews/UI013.json",
+          "sha256": "e7dccb9e209e4e88c231b902c0753fa6f8d5d708ee0bf274b6150a856998fc50"
+        }
+      ]
+    },
+    {
+      "asset_id": "FX001",
+      "decision": "pass",
+      "reason": "Current-build canvas preview inspected; editable sources present. Producer self-review only; independent approval pending.",
+      "evidence": [
+        {
+          "path": "art/full/previews/engine/assets/FX001.png",
+          "sha256": "c1c64f8385e564c4d182b0ee2926d8f17ba590af42ee39b6deac4e51d5a737e8"
+        },
+        {
+          "path": "art/iterations/cycle_02/reviews/FX001.json",
+          "sha256": "b1843c3f0daeb2f84056ba5fb148b3bef1f4fa4cc5d8807e33f8e41e119674cd"
+        }
+      ]
+    },
+    {
+      "asset_id": "FX002",
+      "decision": "pass",
+      "reason": "Current-build canvas preview inspected; editable sources present. Producer self-review only; independent approval pending.",
+      "evidence": [
+        {
+          "path": "art/full/previews/engine/assets/FX002.png",
+          "sha256": "50417cc01cb337732c218cdffd5d7987c594dd49bb726a0a61be44dadfe4e3eb"
+        },
+        {
+          "path": "art/iterations/cycle_02/reviews/FX002.json",
+          "sha256": "b4fddeefebcec1f58cae0f638eda7d42ac72e4be398f66eaff3aa91f455f94dc"
+        }
+      ]
+    },
+    {
+      "asset_id": "FX003",
+      "decision": "pass",
+      "reason": "Current-build canvas preview inspected; editable sources present. Producer self-review only; independent approval pending.",
+      "evidence": [
+        {
+          "path": "art/full/previews/engine/assets/FX003.png",
+          "sha256": "138e693de58f6e2b17e956bb7c44d6e72db91462b93e825ad7f509d4e7a1c807"
+        },
+        {
+          "path": "art/iterations/cycle_02/reviews/FX003.json",
+          "sha256": "8a002a298b7653796b239996aa2c0ed2eb2d0ba2aed165596e51e1ab792359be"
+        }
+      ]
+    },
+    {
+      "asset_id": "PACK001",
+      "decision": "pass",
+      "reason": "Current-build canvas preview inspected; editable sources present. Producer self-review only; independent approval pending.",
+      "evidence": [
+        {
+          "path": "art/full/previews/engine/assets/PACK001.png",
+          "sha256": "de0fe9ea70f4dd87103bc59fad9a5e0a32d359ab2bf09b95fa8da087e2a503a2"
+        },
+        {
+          "path": "art/iterations/cycle_02/reviews/PACK001.json",
+          "sha256": "a4b917611d7433a32a52cdf11c2f1aa6da506bc69c41c46b43005b07a574d0e0"
+        }
+      ]
+    }
+  ],
+  "issues": [
+    {
+      "id": "F01",
+      "severity": "major",
+      "status": "fixed_pending_independent_confirmation",
+      "resolution_evidence": [
+        {
+          "path": "delivery/next_cycle/T0/p03_selfcheck.json",
+          "sha256": "a11944511b751d252885db3959c9cc4af564f4bf7ede8582a9ce59c740ef416b"
+        }
+      ]
+    },
+    {
+      "id": "F02",
+      "severity": "major",
+      "status": "fixed_pending_independent_confirmation",
+      "resolution_evidence": [
+        {
+          "path": "reference/frozen_history/art_complete_20261024_manifest/RECOVERY_RECORD.json",
+          "sha256": "50321477c741688e1b197112ce3818dda513959ffdd962db7c08fec30be1d1dc"
+        }
+      ]
+    },
+    {
+      "id": "F03",
+      "severity": "major",
+      "status": "fixed_pending_independent_confirmation",
+      "resolution_evidence": [
+        {
+          "path": "delivery/next_cycle/T0/p02_selfcheck.json",
+          "sha256": "f70f72c677be0eaa557468d60b23612b0a8e61815d34cd78d33bc1e68de2c272"
+        }
+      ]
+    },
+    {
+      "id": "F04",
+      "severity": "major",
+      "status": "fixed_pending_independent_confirmation",
+      "resolution_evidence": [
+        {
+          "path": "delivery/next_cycle/T0/p02_selfcheck.json",
+          "sha256": "f70f72c677be0eaa557468d60b23612b0a8e61815d34cd78d33bc1e68de2c272"
+        }
+      ]
+    },
+    {
+      "id": "F05",
+      "severity": "major",
+      "status": "fixed_pending_independent_confirmation",
+      "resolution_evidence": [
+        {
+          "path": "delivery/next_cycle/T3/final4_bindings_summary.json",
+          "sha256": "6734270448a13779446222c23d6a68174bd4c4dabb611e2d8315fed2109b50ff"
+        }
+      ]
+    },
+    {
+      "id": "F06",
+      "severity": "major",
+      "status": "fixed_pending_independent_confirmation",
+      "resolution_evidence": [
+        {
+          "path": "delivery/next_cycle/T4/tree_before_after_final4.png",
+          "sha256": "4eefc84c731f50c57994334b1df3f5e271668b104eff1a8e77e19fa2bbaf9f19"
+        },
+        {
+          "path": "delivery/next_cycle/T4/material_closeups_final4.png",
+          "sha256": "bd40dbab219364ec15715a87a3534dbd11147d6352e89c9fdde9c3faf93830b9"
+        },
+        {
+          "path": "delivery/next_cycle/T4/plant_background_final4.png",
+          "sha256": "0a0f402780c0855ab95f48517034e9c308d97d8305ae6bad8ccef4947c38cada"
+        },
+        {
+          "path": "delivery/next_cycle/T4/ui_comparison_final4.png",
+          "sha256": "d0c3d37adaa3ef7a9913c0eff2a3d0d507579066b5f6ec696f6d12f6ca9f2d40"
+        }
+      ]
+    },
+    {
+      "id": "F07",
+      "severity": "major",
+      "status": "fixed_pending_independent_confirmation",
+      "resolution_evidence": [
+        {
+          "path": "delivery/next_cycle/T2/lighting_profile_v2.json",
+          "sha256": "a2c129cb545fb53e560396659e116a35e56c736e27074b1add9da82886535c7d"
+        },
+        {
+          "path": "tools/measure_lighting.js",
+          "sha256": "b9fb9cde607214861eeb128a0e747e0c79c0be24f9028d38bb143a0efa03bb43"
+        }
+      ]
+    },
+    {
+      "id": "F08",
+      "severity": "major",
+      "status": "fixed_pending_independent_confirmation",
+      "resolution_evidence": [
+        {
+          "path": "delivery/next_cycle/T0/gate_regression.json",
+          "sha256": "07acfd3efd848f41d7ea97cce8fee720e336bd595271a1c4b0588c3f57b7c9cf"
+        },
+        {
+          "path": "tools/art_gate/build_log_gate.py",
+          "sha256": "d691d480a92f7c41538c3649cef927f36e5d077abfb3835edc9eb717244167c2"
+        }
+      ]
+    },
+    {
+      "id": "R01",
+      "severity": "blocking",
+      "status": "fixed_pending_independent_confirmation",
+      "resolution_evidence": [
+        {
+          "path": "delivery/next_cycle/T5/q03_occlusion.json",
+          "sha256": "c305b92bd975b345b2736e50eae3a20fcf682b767f17fb2dbb0b8e373794000c"
+        },
+        {
+          "path": "delivery/next_cycle/T5/q03_behind.png",
+          "sha256": "dbb3a5f87b4e529a195aef311c7703dac14238cfbd1cb8977a085d24d0e89506"
+        }
+      ]
+    },
+    {
+      "id": "R02",
+      "severity": "major",
+      "status": "fixed_pending_independent_confirmation",
+      "resolution_evidence": [
+        {
+          "path": "delivery/next_cycle/T5/q01_camera.json",
+          "sha256": "e9a65c13a6e08ada494b0bf6de2b6e392ae6c2fd5b7a7944f0d8904bbda137e5"
+        },
+        {
+          "path": "delivery/next_cycle/T2/sample_no_ui.png",
+          "sha256": "a4a2418473c7aaa1b50a6991566772a9402db34609e38ffc2b1835f605416fe5"
+        }
+      ]
+    },
+    {
+      "id": "R03",
+      "severity": "major",
+      "status": "fixed_pending_independent_confirmation",
+      "resolution_evidence": [
+        {
+          "path": "delivery/next_cycle/T4/plant_background_final4.png",
+          "sha256": "0a0f402780c0855ab95f48517034e9c308d97d8305ae6bad8ccef4947c38cada"
+        }
+      ]
+    },
+    {
+      "id": "R04",
+      "severity": "major",
+      "status": "fixed_pending_independent_confirmation",
+      "resolution_evidence": [
+        {
+          "path": "delivery/next_cycle/T4/lighting_comparison_final4.png",
+          "sha256": "48d357af397496fa1474cd0b1c48c28a5cb981e2aa39e9710e9b7bd84db6c6e0"
+        }
+      ]
+    },
+    {
+      "id": "R05",
+      "severity": "major",
+      "status": "fixed_pending_independent_confirmation",
+      "resolution_evidence": [
+        {
+          "path": "delivery/next_cycle/T5/q04_behavior.json",
+          "sha256": "723b7ba2196c25d21182231aaf84f91442f453f1048038d18c532f4858f3477c"
+        }
+      ]
+    },
+    {
+      "id": "R06",
+      "severity": "major",
+      "status": "fixed_pending_independent_confirmation",
+      "resolution_evidence": [
+        {
+          "path": "delivery/next_cycle/T5/q06_stats.json",
+          "sha256": "f80e047542a1cf4f1687cd1b2476c9ddcb8add184682d2a1ef383f52accd7229"
+        }
+      ]
+    },
+    {
+      "id": "R07",
+      "severity": "major",
+      "status": "fixed_pending_independent_confirmation",
+      "resolution_evidence": [
+        {
+          "path": "delivery/next_cycle/T5/q05_board.json",
+          "sha256": "78301cb6e83578082a42bc29da4240ce7ed0f9202df8400e82eb59ec248467d1"
+        }
+      ]
+    },
+    {
+      "id": "R08",
+      "severity": "major",
+      "status": "fixed_pending_independent_confirmation",
+      "resolution_evidence": [
+        {
+          "path": "delivery/next_cycle/T0/gate_regression.json",
+          "sha256": "07acfd3efd848f41d7ea97cce8fee720e336bd595271a1c4b0588c3f57b7c9cf"
+        }
+      ]
+    },
+    {
+      "id": "R09",
+      "severity": "minor",
+      "status": "fixed_pending_independent_confirmation",
+      "resolution_evidence": [
+        {
+          "path": "delivery/next_cycle/T6/state_index.json",
+          "sha256": "523e3893ca07cebd08edf69eda99a7db2ff4287b19c345bd5f34e1416f2e5f8f"
+        },
+        {
+          "path": "delivery/next_cycle/T2/sample_dialogue.png",
+          "sha256": "f7dcb981a5b1417acef16daf56e4ae3951a120eae0ec942ae69c23592e5b0ed4"
+        }
+      ]
+    },
+    {
+      "id": "R10",
+      "severity": "minor",
+      "status": "fixed_pending_independent_confirmation",
+      "resolution_evidence": [
+        {
+          "path": "delivery/next_cycle/T0/active_spec_index.json",
+          "sha256": "a6700870da1e0c72fb6bebd87650c4e16d2bdb3156d6e93b7ec18dbd1201a51b"
+        }
+      ]
+    }
+  ],
+  "comparison_note": "P1 frames and candidate shots are displayed side by side with labels; no P1 pixels are composited into the candidate. Candidate evidence comes from the current frozen build."
+}

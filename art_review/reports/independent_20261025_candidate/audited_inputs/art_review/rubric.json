@@ -1,0 +1,269 @@
+{
+  "rubric_version": "1.2.0",
+  "purpose": "phase1_art_acceptance_not_similarity_percentage",
+  "definition_file": "../PHASE1_ART_ACCEPTANCE.md",
+  "rating_scale": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "pass_total": 85,
+  "rework_below": 70,
+  "minimum_dimension": 2,
+  "minimum_core_dimension": 3,
+  "formula": "sum(weight * score / 4); compare unrounded; each card must pass",
+  "missing_evidence": "pending; score must be null",
+  "gate_states": [
+    "pass",
+    "fail",
+    "not_checked"
+  ],
+  "gate_precedence": [
+    "any_fail:blocked",
+    "any_not_checked:pending",
+    "incomplete_scores_or_evidence:pending",
+    "any_card_below_70:rework",
+    "any_card_rule_failed:revise",
+    "all_rules_pass:pass"
+  ],
+  "cards": {
+    "ENV": [
+      {
+        "id": "composition_scale",
+        "weight": 20,
+        "core": true,
+        "features": [
+          "E01",
+          "E06"
+        ]
+      },
+      {
+        "id": "geometry_craft",
+        "weight": 20,
+        "core": true,
+        "features": [
+          "E02",
+          "E05"
+        ]
+      },
+      {
+        "id": "material_separation",
+        "weight": 20,
+        "core": true,
+        "features": [
+          "E02"
+        ]
+      },
+      {
+        "id": "lighting_contact",
+        "weight": 20,
+        "core": true,
+        "features": [
+          "E03"
+        ]
+      },
+      {
+        "id": "vegetation_depth",
+        "weight": 10,
+        "core": false,
+        "features": [
+          "E04",
+          "E05"
+        ]
+      },
+      {
+        "id": "play_readability",
+        "weight": 10,
+        "core": false,
+        "features": [
+          "E06",
+          "C04"
+        ]
+      }
+    ],
+    "CHAR": [
+      {
+        "id": "silhouette_proportion",
+        "weight": 20,
+        "core": true,
+        "features": [
+          "C01"
+        ]
+      },
+      {
+        "id": "line_quality",
+        "weight": 15,
+        "core": true,
+        "features": [
+          "C02"
+        ]
+      },
+      {
+        "id": "cel_color_light",
+        "weight": 15,
+        "core": true,
+        "features": [
+          "C03"
+        ]
+      },
+      {
+        "id": "identity_consistency",
+        "weight": 25,
+        "core": true,
+        "features": [
+          "C05"
+        ]
+      },
+      {
+        "id": "motion_contact",
+        "weight": 15,
+        "core": true,
+        "features": [
+          "C04",
+          "C05"
+        ]
+      },
+      {
+        "id": "small_scale_clarity",
+        "weight": 10,
+        "core": false,
+        "features": [
+          "C04"
+        ]
+      }
+    ],
+    "UI": [
+      {
+        "id": "paper_shape",
+        "weight": 20,
+        "core": true,
+        "features": [
+          "U01"
+        ]
+      },
+      {
+        "id": "doodle_icon_family",
+        "weight": 20,
+        "core": true,
+        "features": [
+          "U02"
+        ]
+      },
+      {
+        "id": "typography",
+        "weight": 20,
+        "core": true,
+        "features": [
+          "U03"
+        ]
+      },
+      {
+        "id": "layout_air",
+        "weight": 15,
+        "core": true,
+        "features": [
+          "U04"
+        ]
+      },
+      {
+        "id": "state_feedback",
+        "weight": 15,
+        "core": true,
+        "features": [
+          "U04"
+        ]
+      },
+      {
+        "id": "palette_restraint",
+        "weight": 10,
+        "core": false,
+        "features": [
+          "U05"
+        ]
+      }
+    ],
+    "MIX": [
+      {
+        "id": "visual_language",
+        "weight": 25,
+        "core": true,
+        "features": [
+          "X01",
+          "C01",
+          "U01"
+        ]
+      },
+      {
+        "id": "color_light_coherence",
+        "weight": 25,
+        "core": true,
+        "features": [
+          "E03",
+          "C03",
+          "U05"
+        ]
+      },
+      {
+        "id": "grounding_occlusion",
+        "weight": 20,
+        "core": true,
+        "features": [
+          "C04",
+          "E04"
+        ]
+      },
+      {
+        "id": "focus_readability",
+        "weight": 15,
+        "core": true,
+        "features": [
+          "E06",
+          "U04"
+        ]
+      },
+      {
+        "id": "world_style_coherence",
+        "weight": 15,
+        "core": false,
+        "features": [
+          "X01"
+        ]
+      }
+    ]
+  },
+  "gates": {
+    "H01": "authenticity",
+    "H02": "scope_completeness",
+    "H03": "format_alpha_anchor",
+    "H04": "editable_sources_dependencies",
+    "H05": "same_reference_character_skin_and_source_animation_continuity",
+    "H06": "engine_import",
+    "H07": "ui_legibility_states",
+    "H08": "truthful_third_party_source_and_permission_status",
+    "H09": "reference_identity_match_from_assembled_runtime_preview_not_text_to_image_redesign"
+  },
+  "threshold_status": "provisional_until_real_sample_calibration",
+  "scope": "Full cards apply to B/C production review. Stage A uses static feature checks only; do not penalize absent animation or engine evidence as visual failure.",
+  "character_policy": {
+    "mode": "reuse_reference_spine_first",
+    "candidate_id": "291_aglina",
+    "reference_frames": [
+      "t044s.jpg",
+      "t054s.jpg",
+      "t084s.jpg"
+    ],
+    "source_manifest": "reference/character_sources/ark_models/291_aglina/source_manifest.json",
+    "verification_status": "downloaded_not_runtime_verified",
+    "free_text_character_generation_allowed": false,
+    "four_generated_walk_frames_required": false,
+    "required_deliverables": [
+      "skeleton_atlas_textures",
+      "runtime_clip_inventory_and_mapping",
+      "idle_transparent_preview",
+      "source_move_loop",
+      "reference_and_engine_comparison"
+    ]
+  }
+}

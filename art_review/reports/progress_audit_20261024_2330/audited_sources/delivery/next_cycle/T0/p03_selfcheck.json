@@ -1,0 +1,40 @@
+{
+  "task": "P03",
+  "title": "样板前序批准与扩批依赖 - 自检证据",
+  "generated_at": "2026-10-24T16:05:00Z",
+  "review_state": "self_check_only_not_reviewed",
+  "test_key_note": "自检使用临时合成密钥（仅存在于temp夹具）；生产批准密钥在制作环境外保管，本任务未生成任何真实批准。所有夹具为合成文件，非生产美术。",
+  "artifacts": {
+    "tools/art_harness.py": "15efc535f43e9a5daf0702b8a205202eda9d2b422a5428c1d480bc480c9633e0",
+    "tools/art_gate/legacy/art_harness_pre_certificate.py (修改前版本保留)": "c12d3d970f731db8714d31064ba50a855d24b5fa403a5190964a2494f2ec1984",
+    "art_review/vnext/harness_contract.json (1.4.0-draft, vnext_effective=false)": "c2a581a8cba9e2b28d8f0e44ff21903c2694ab9494084e6c87f52e0539682519",
+    "art_review/vnext/stage_certificate.schema.json": "bc7f71d16708a3b9c8dd9ead9061e99523170c953505bfedf076d99c9d1cca2d",
+    "delivery/next_cycle/T0/p03_chain_test.py (可复跑自检脚本)": "670b470414ba17d52d2b7713d9d8dad4c1cdc0cfef27ecfd2d45dee3ce3ec4a0"
+  },
+  "regression": {
+    "command": "python -X utf8 tools/test_art_harness.py",
+    "exit": 0,
+    "result": "25/25 pass（旧合同路径行为不变：无certificate_policy的合同不启用证书流）"
+  },
+  "chain_selfcheck_steps": [
+    {"step": "prepare character_playback draft", "exit": 0, "status": "draft_prepared_not_accepted"},
+    {"step": "attest character_playback (合成测试密钥)", "exit": 0},
+    {"step": "certify character_playback", "exit": 0},
+    {"step": "prepare scene_demo draft（无证书仍可保存draft）", "exit": 0, "status": "draft_prepared_not_accepted"},
+    {"step": "attest scene_demo", "exit": 0},
+    {"step": "certify scene_demo --dependencies cert_char.json", "exit": 0},
+    {"step": "verify scene_demo + attestation + certificate chain", "exit": 0, "accepted": true, "certificate_id": "cert-scene_demo-001"},
+    {"step": "伪造证书签名", "exit": 2, "error": "Invalid stage certificate signature"},
+    {"step": "dependencies=true（布尔previous_passed形态）", "exit": 2, "error": "Certificate dependencies must be a list of objects, not a boolean"},
+    {"step": "verify缺certificate", "exit": 2, "error": "Stage release requires a real controller certificate; a boolean previous_passed is not accepted"},
+    {"step": "无密钥环境（制作方上下文）", "exit": 2, "error": "Controller verification key missing; never create a key inside producer workflow"},
+    {"step": "前序证书文件缺失", "exit": 2, "error": "Missing certificate file"}
+  ],
+  "implementation_notes": [
+    "Harness增加可选--contract覆盖与certificate_check/certificate_policy/certificate_binding；verify在attestation通过后按合同certificate_policy强制证书链",
+    "证书签名=HMAC(ART_HARNESS_REVIEW_KEY, canonical(binding))，binding含manifest/review字节hash、approval_scope、approver与依赖签名列表（链式绑定）",
+    "依赖证书路径按harness root解析（修复了相对CWD解析缺陷）；环检测防循环",
+    "certify命令仅controller可用（需密钥环境）；制作环境无密钥时证书验证一律失败关闭",
+    "1.3.0合同与rubric 1.2.0未改动；art_review/harness_contract.json未替换，vNext合同为vnext/下草案"
+  ]
+}

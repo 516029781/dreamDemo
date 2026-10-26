@@ -1,0 +1,62 @@
+[
+  {
+    "path": "art/full/source/layout/MAP001_courtyard.blend",
+    "opened": true,
+    "objects": 150,
+    "meshes": 143,
+    "uv_meshes": 121,
+    "materials": 25,
+    "images": [],
+    "bench_wood_dimensions": [
+      1.5800000429153442,
+      0.55305415391922,
+      0.49133989214897156
+    ],
+    "base_mesh_triangles": 163472,
+    "geometry_editable": true
+  },
+  {
+    "path": "art/full/source/environment/ENV006_autumn_tree.blend",
+    "opened": true,
+    "objects": 3,
+    "meshes": 3,
+    "uv_meshes": 0,
+    "materials": 7,
+    "images": [],
+    "bench_wood_dimensions": null,
+    "base_mesh_triangles": 16444,
+    "geometry_editable": true
+  },
+  {
+    "path": "art/full/source/props/PROP001_bench.blend",
+    "opened": true,
+    "objects": 3,
+    "meshes": 2,
+    "uv_meshes": 0,
+    "materials": 2,
+    "images": [],
+    "bench_wood_dimensions": [
+      1.5800000429153442,
+      0.55305415391922,
+      0.49133989214897156
+    ],
+    "base_mesh_triangles": 1944,
+    "geometry_editable": true
+  },
+  {
+    "path": "art/iterations/cycle_02/PROP001/versions/q07_edited_bench.blend",
+    "opened": true,
+    "objects": 3,
+    "meshes": 2,
+    "uv_meshes": 0,
+    "materials": 2,
+    "images": [],
+    "bench_wood_dimensions": [
+      1.8960001468658447,
+      0.55305415391922,
+      0.49133989214897156
+    ],
+    "base_mesh_triangles": 1944,
+    "geometry_editable": true
+  }
+]

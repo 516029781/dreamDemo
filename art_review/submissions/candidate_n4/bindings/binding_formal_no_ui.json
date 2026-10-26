@@ -1,0 +1,150 @@
+{
+  "binding_version": "vnext.capture_binding/1.0.0",
+  "binding_id": "cap-finalN4-formal_no_ui",
+  "stage": "art_complete",
+  "created_at": "2026-10-25T16:40:58.428504+00:00",
+  "backend": {
+    "name": "cocos-creator-web-desktop",
+    "version": "3.8.8"
+  },
+  "viewport": {
+    "browser_width": 1280,
+    "browser_height": 720,
+    "scroll_x": 0,
+    "scroll_y": 0,
+    "device_pixel_ratio": 1
+  },
+  "canvas": {
+    "selector": "#GameCanvas",
+    "css_rect": {
+      "x": 5,
+      "y": 5,
+      "width": 1280,
+      "height": 720
+    },
+    "backing_width": 1280,
+    "backing_height": 720,
+    "capture_method": "element_screenshot",
+    "page_screenshot": false
+  },
+  "camera": {
+    "node": "Main Camera",
+    "position": [
+      -2.5,
+      11.5,
+      -14.6
+    ],
+    "rotation": [
+      -36.276619358317014,
+      180,
+      0
+    ],
+    "fov": 37.5,
+    "clip_time": null
+  },
+  "sources": [
+    {
+      "role": "map_blend",
+      "path": "art/candidates/candidate_n4/source/layout/MAP001_courtyard.blend",
+      "sha256": "9376864d25cf707aae6f0c8f84b2d25cc8247fa4a484a261d4d110afaea24630"
+    },
+    {
+      "role": "tree_blend",
+      "path": "art/candidates/candidate_n4/source/environment/ENV006_autumn_tree.blend",
+      "sha256": "f2d19cf6b24ce492768ecaef1f1806ea9126b817dfa1f5466f1cfde817249eb1"
+    },
+    {
+      "role": "map_script",
+      "path": "tools/blender_n4/build_map001.py",
+      "sha256": "1e9e0d43a0d93f2ecbaa806451af951ac213d7a77bec233b4d6728e976fdbfdc"
+    },
+    {
+      "role": "tree_script",
+      "path": "tools/blender_n4/build_env_courtyard.py",
+      "sha256": "78c932bd04bff5e2f24ef736f863b2dae1afce23591cfc4fcd238507364248c4"
+    },
+    {
+      "role": "engine_bootstrap",
+      "path": "demo_n4/assets/scripts/CourtyardBootstrap.ts",
+      "sha256": "d649cbad8b7fb2c4a76b4b592175f3be155ba9dab34d765480d53eed7f743dd8"
+    }
+  ],
+  "exports": [
+    {
+      "role": "map_glb",
+      "path": "art/candidates/candidate_n4/source/layout/MAP001_courtyard.glb",
+      "sha256": "7e9a20bf082db628c1a653d9eece7faeb26cfddbdbd0b72400a08e64128748f3"
+    },
+    {
+      "role": "engine_glb",
+      "path": "demo_n4/assets/resources/models/MAP001_courtyard.glb",
+      "sha256": "7e9a20bf082db628c1a653d9eece7faeb26cfddbdbd0b72400a08e64128748f3"
+    }
+  ],
+  "shared_inputs": [
+    {
+      "role": "texture",
+      "path": "art/candidates/candidate_n4/source/textures/tex_stone_tiles.png",
+      "sha256": "9bef1df46f0a10dd8583a54edacb312f6806f38f79a75385ae93a0890bdcd3ea",
+      "scope": [
+        "MAP001"
+      ]
+    },
+    {
+      "role": "texture",
+      "path": "art/candidates/candidate_n4/source/textures/tex_wood_grain.png",
+      "sha256": "edd97f8ec9843e59fd2ab6fa5858b589af0987a028c01b8d4ed4c9bf9ef54c58",
+      "scope": [
+        "MAP001"
+      ]
+    },
+    {
+      "role": "texture",
+      "path": "art/candidates/candidate_n4/source/textures/tex_metal_brushed.png",
+      "sha256": "e3bba2c74bad44ba34e897e3e6fbda7d6e05fed67f98d6f0b3243c19240ee2bd",
+      "scope": [
+        "MAP001"
+      ]
+    },
+    {
+      "role": "texture",
+      "path": "art/candidates/candidate_n4/source/textures/tex_soil_noise.png",
+      "sha256": "71811cea5494328f85b3fc4d1be94a9f57e7f8c96387eef09e9c1e139f636b2e",
+      "scope": [
+        "MAP001"
+      ]
+    },
+    {
+      "role": "texture",
+      "path": "art/candidates/candidate_n4/source/textures/tex_bark.png",
+      "sha256": "b72f5f75982d1886bcd7b828a3d857f6de894dc138078360cb28cf3c047b07d6",
+      "scope": [
+        "MAP001"
+      ]
+    },
+    {
+      "role": "texture",
+      "path": "art/candidates/candidate_n4/source/textures/tex_leaf_detail.png",
+      "sha256": "2f056eb4c032e7f91a54fe0495881584d3639e7ed4ad9f76ea1d73723b0427de",
+      "scope": [
+        "MAP001"
+      ]
+    }
+  ],
+  "build": {
+    "build_id": "cocos-web-desktop-cocos_build_20261026_000915",
+    "log_path": "tools/cocos/logs/build_web_desktop_n4.log",
+    "log_sha256": "edb9a259a9164a8357fca761e6a7093d0fbc448cf56dbbfc956405ff7c9d8f96",
+    "result": "success"
+  },
+  "output": {
+    "path": "delivery/next_cycle/n4/T3/game_finalN4_formal_no_ui.png",
+    "sha256": "66f7ad0fb932db1b48edbd8f230a08b015b8e60bb23756ac7e222998f61c8fa3",
+    "width": 1280,
+    "height": 720
+  },
+  "notes": [
+    "Cocos 3.8.8 exits 36 after Finished + SIGTERM; accepted only by the versioned gate rule with build output present.",
+    "Real canvas element capture; CSS rect extends beyond the 1280x720 browser viewport, full backing captured."
+  ]
+}

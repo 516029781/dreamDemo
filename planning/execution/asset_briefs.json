@@ -1,0 +1,937 @@
+{
+  "status": "planning_only",
+  "budget_note": "Starting caps, not measured results; total visible triangles<=100000,drawcalls<=100 warning targets. Preserve existing native sources and save engine derivatives separately.",
+  "assets": [
+    {
+      "asset_id": "MAP001",
+      "name": "完整秋庭地图",
+      "plan_status": "specification_only_not_approval",
+      "existing_source_paths_snapshot": [],
+      "acceptance": "地图整体、路线、场景边界、全图摆放与遮挡规则",
+      "review_required": true,
+      "production_recipe": "28x20 courtyard using layout.draft.json; walking surfaceY0;37k max initial paving budget including borders,100k initial visible-scene budget.",
+      "reject_and_repair": "Optimise engine paving derivative/shared materials before reducing hero tree quality.",
+      "evidence": [
+        "native_map",
+        "layout",
+        "engine_checkpoints",
+        "walkthrough",
+        "import_report"
+      ]
+    },
+    {
+      "asset_id": "ENV001",
+      "name": "石铺地模块",
+      "plan_status": "specification_only_not_approval",
+      "existing_source_paths_snapshot": [
+        "art/full/source/environment/ENV001_stone_paving.blend",
+        "art/full/source/environment/ENV001_stone_paving.glb",
+        "tools/blender/env001_stone_paving.py"
+      ],
+      "acceptance": "可平铺纹理、砖缝与轻磨损",
+      "review_required": true,
+      "initial_dimensions_or_texture": "4x4, top Y0",
+      "engine_triangle_cap_per_instance": 1000,
+      "production_recipe": "Real slab silhouette,0.02 joints; bake wear/normal and simplify engine derivative.",
+      "reject_and_repair": "Fix tile UV seams and neutral-grey stone; current5196-triangle source is too dense for35 repeats.",
+      "reference_frames": [
+        "t015s.jpg",
+        "t084s.jpg"
+      ]
+    },
+    {
+      "asset_id": "ENV002",
+      "name": "路缘模块",
+      "plan_status": "specification_only_not_approval",
+      "existing_source_paths_snapshot": [],
+      "acceptance": "与地面和花坛拼接",
+      "review_required": true,
+      "initial_dimensions_or_texture": "2x0.18x0.22",
+      "engine_triangle_cap_per_instance": 160,
+      "production_recipe": "Straight curb with corner/end variants and shared stone.",
+      "reject_and_repair": "Fix dimensions/pivots for corner gaps.",
+      "reference_frames": [
+        "t015s.jpg",
+        "t084s.jpg"
+      ]
+    },
+    {
+      "asset_id": "ENV003",
+      "name": "矮墙模块",
+      "plan_status": "specification_only_not_approval",
+      "existing_source_paths_snapshot": [],
+      "acceptance": "地图边缘封闭、简化阻挡",
+      "review_required": true,
+      "initial_dimensions_or_texture": "2x0.25x0.9",
+      "engine_triangle_cap_per_instance": 300,
+      "production_recipe": "Wall thickness, stone cap, subtle bevel.",
+      "reject_and_repair": "Add real depth rather than a flat background plane.",
+      "reference_frames": [
+        "t015s.jpg",
+        "t084s.jpg"
+      ]
+    },
+    {
+      "asset_id": "ENV004",
+      "name": "栏杆模块",
+      "plan_status": "specification_only_not_approval",
+      "existing_source_paths_snapshot": [],
+      "acceptance": "细节、接缝、碰撞代理",
+      "review_required": true,
+      "initial_dimensions_or_texture": "2x0.12x0.95",
+      "engine_triangle_cap_per_instance": 500,
+      "production_recipe": "Dark posts/rails, readable at target distance.",
+      "reject_and_repair": "Simplify subpixel rails to avoid shimmer.",
+      "reference_frames": [
+        "t015s.jpg",
+        "t084s.jpg"
+      ]
+    },
+    {
+      "asset_id": "ENV005",
+      "name": "边缘装饰台阶",
+      "plan_status": "specification_only_not_approval",
+      "existing_source_paths_snapshot": [],
+      "acceptance": "仅景观、不新增楼层玩法",
+      "review_required": true,
+      "initial_dimensions_or_texture": "2x0.9, height0.36",
+      "engine_triangle_cap_per_instance": 300,
+      "production_recipe": "Three decorative risers outside walkable area.",
+      "reject_and_repair": "Move behind boundary if it falsely invites climbing.",
+      "reference_frames": [
+        "t015s.jpg",
+        "t084s.jpg"
+      ]
+    },
+    {
+      "asset_id": "ENV006",
+      "name": "秋日主树",
+      "plan_status": "specification_only_not_approval",
+      "existing_source_paths_snapshot": [],
+      "acceptance": "主枝、叶簇、透空、遮挡处理",
+      "review_required": true,
+      "initial_dimensions_or_texture": "height4.8, crown diameter4.2",
+      "engine_triangle_cap_per_instance": 9000,
+      "production_recipe": "Visible branches, large/medium/small leaf clusters, gaps; separate crown group.",
+      "reject_and_repair": "Restructure sphere-pile silhouette before adding leaf density.",
+      "reference_frames": [
+        "t015s.jpg",
+        "t084s.jpg"
+      ]
+    },
+    {
+      "asset_id": "ENV007",
+      "name": "中央环形花坛",
+      "plan_status": "specification_only_not_approval",
+      "existing_source_paths_snapshot": [],
+      "acceptance": "主树底座与环形通路",
+      "review_required": true,
+      "initial_dimensions_or_texture": "outer radius2, inner1.65, rim height0.35",
+      "engine_triangle_cap_per_instance": 1400,
+      "production_recipe": "Real inner rim and soil; circle collider radius2.",
+      "reject_and_repair": "Separate rim/soil and repair bevels if it looks like a solid cylinder.",
+      "reference_frames": [
+        "t015s.jpg",
+        "t084s.jpg"
+      ]
+    },
+    {
+      "asset_id": "ENV008",
+      "name": "侧花坛",
+      "plan_status": "specification_only_not_approval",
+      "existing_source_paths_snapshot": [],
+      "acceptance": "B点与站立区留白",
+      "review_required": true,
+      "initial_dimensions_or_texture": "2.4x1.2x0.45",
+      "engine_triangle_cap_per_instance": 700,
+      "production_recipe": "Stone frame and soil, shared stone palette.",
+      "reject_and_repair": "Compare with paving under identical lighting.",
+      "reference_frames": [
+        "t015s.jpg",
+        "t084s.jpg"
+      ]
+    },
+    {
+      "asset_id": "ENV009",
+      "name": "灌木A",
+      "plan_status": "specification_only_not_approval",
+      "existing_source_paths_snapshot": [],
+      "acceptance": "黄绿植被变体",
+      "review_required": true,
+      "initial_dimensions_or_texture": "1.2x0.8x0.75",
+      "engine_triangle_cap_per_instance": 1200,
+      "production_recipe": "Broad layered shrub, two controlled variants.",
+      "reject_and_repair": "Vary clump heights/negative space rather than random hue.",
+      "reference_frames": [
+        "t015s.jpg",
+        "t084s.jpg"
+      ]
+    },
+    {
+      "asset_id": "ENV010",
+      "name": "灌木B",
+      "plan_status": "specification_only_not_approval",
+      "existing_source_paths_snapshot": [],
+      "acceptance": "与A同风格的轮廓变体",
+      "review_required": true,
+      "initial_dimensions_or_texture": "0.8x0.7x0.5",
+      "engine_triangle_cap_per_instance": 900,
+      "production_recipe": "Lower shrub silhouette distinct from A.",
+      "reject_and_repair": "Change actual clump structure, not only scale.",
+      "reference_frames": [
+        "t015s.jpg",
+        "t084s.jpg"
+      ]
+    },
+    {
+      "asset_id": "ENV011",
+      "name": "干草簇",
+      "plan_status": "specification_only_not_approval",
+      "existing_source_paths_snapshot": [],
+      "acceptance": "边缘成组、不覆盖主路",
+      "review_required": true,
+      "initial_dimensions_or_texture": "0.6x0.6x0.45",
+      "engine_triangle_cap_per_instance": 180,
+      "production_recipe": "Dry grass tuft with limited overlapping alpha cards.",
+      "reject_and_repair": "Reduce overlapping layers and empty atlas area.",
+      "reference_frames": [
+        "t015s.jpg",
+        "t084s.jpg"
+      ]
+    },
+    {
+      "asset_id": "ENV012",
+      "name": "落叶簇或贴花",
+      "plan_status": "specification_only_not_approval",
+      "existing_source_paths_snapshot": [],
+      "acceptance": "材质/透明开销可控",
+      "review_required": true,
+      "initial_dimensions_or_texture": "1x0.7x0.03",
+      "engine_triangle_cap_per_instance": 100,
+      "production_recipe": "Sparse leaf patches near borders, two variants.",
+      "reject_and_repair": "Keep path centres clear; avoid noisy ground carpet.",
+      "reference_frames": [
+        "t015s.jpg",
+        "t084s.jpg"
+      ]
+    },
+    {
+      "asset_id": "PROP001",
+      "name": "长椅",
+      "plan_status": "specification_only_not_approval",
+      "existing_source_paths_snapshot": [
+        "art/full/source/props/PROP001_bench.blend",
+        "art/full/source/props/PROP001_bench.glb",
+        "tools/blender/prop001_bench.py"
+      ],
+      "acceptance": "木条、金属腿、接地与接缝",
+      "review_required": true,
+      "initial_dimensions_or_texture": "1.70x0.70x0.88, seat0.44",
+      "engine_triangle_cap_per_instance": 2200,
+      "production_recipe": "Wood slats, metal supports, bevels, max2 materials.",
+      "reject_and_repair": "Fix slat spacing/support structure before adding texture noise.",
+      "reference_frames": [
+        "t015s.jpg",
+        "t084s.jpg"
+      ]
+    },
+    {
+      "asset_id": "PROP002",
+      "name": "小廊架",
+      "plan_status": "specification_only_not_approval",
+      "existing_source_paths_snapshot": [],
+      "acceptance": "C点，不遮角色与拾取物",
+      "review_required": true,
+      "initial_dimensions_or_texture": "footprint3.6x2.8, height2.8",
+      "engine_triangle_cap_per_instance": 2500,
+      "production_recipe": "Separate posts/beams, canopy occlusion group.",
+      "reject_and_repair": "Keep pickup and standing area visible, never draw character above all geometry.",
+      "reference_frames": [
+        "t015s.jpg",
+        "t084s.jpg"
+      ]
+    },
+    {
+      "asset_id": "PROP003",
+      "name": "留言板",
+      "plan_status": "specification_only_not_approval",
+      "existing_source_paths_snapshot": [],
+      "acceptance": "空板和布置后两状态，三张卡可分别控制",
+      "review_required": true,
+      "initial_dimensions_or_texture": "2x0.35x1.8",
+      "engine_triangle_cap_per_instance": 1200,
+      "production_recipe": "Frame/backing/three postcard children; shared empty/full model.",
+      "reject_and_repair": "Bind children visibility to board state, not a new whole mesh.",
+      "reference_frames": [
+        "t015s.jpg",
+        "t084s.jpg"
+      ]
+    },
+    {
+      "asset_id": "PROP004",
+      "name": "路灯",
+      "plan_status": "specification_only_not_approval",
+      "existing_source_paths_snapshot": [],
+      "acceptance": "统一造型，不强制独立动态投影灯",
+      "review_required": true,
+      "initial_dimensions_or_texture": "height2.3, base diameter0.3",
+      "engine_triangle_cap_per_instance": 700,
+      "production_recipe": "Metal lamp prop, no additional realtime shadow lamp.",
+      "reject_and_repair": "Remove competing bright pools.",
+      "reference_frames": [
+        "t015s.jpg",
+        "t084s.jpg"
+      ]
+    },
+    {
+      "asset_id": "PROP005",
+      "name": "导视牌",
+      "plan_status": "specification_only_not_approval",
+      "existing_source_paths_snapshot": [],
+      "acceptance": "方向与原创可编辑文字/图形",
+      "review_required": true,
+      "initial_dimensions_or_texture": "height1.5, board0.8x0.45",
+      "engine_triangle_cap_per_instance": 500,
+      "production_recipe": "Simple own symbol; tiny body text not baked.",
+      "reject_and_repair": "Use clear symbol and optional engine text.",
+      "reference_frames": [
+        "t015s.jpg",
+        "t084s.jpg"
+      ]
+    },
+    {
+      "asset_id": "PROP006",
+      "name": "明信片物件",
+      "plan_status": "specification_only_not_approval",
+      "existing_source_paths_snapshot": [],
+      "acceptance": "三处拾取、收集后消失、板上显示",
+      "review_required": true,
+      "initial_dimensions_or_texture": "0.5x0.35 thin card",
+      "engine_triangle_cap_per_instance": 80,
+      "production_recipe": "Three editable envelope/leaf/postmark patterns.",
+      "reject_and_repair": "Increase actual cue contrast, not texture size.",
+      "reference_frames": [
+        "t015s.jpg",
+        "t084s.jpg"
+      ]
+    },
+    {
+      "asset_id": "MAT001",
+      "name": "石材材质族",
+      "plan_status": "specification_only_not_approval",
+      "existing_source_paths_snapshot": [],
+      "acceptance": "引擎支持贴图及参数，非仅Blender预览",
+      "review_required": true,
+      "initial_dimensions_or_texture": "shared1024 initial",
+      "engine_triangle_cap_per_instance": null,
+      "production_recipe": "Stone basecolour/normal/roughness with real UV.",
+      "reject_and_repair": "Bake unsupported Blender nodes; restore neutral basecolour.",
+      "reference_frames": [
+        "t015s.jpg",
+        "t084s.jpg"
+      ]
+    },
+    {
+      "asset_id": "MAT002",
+      "name": "木材材质族",
+      "plan_status": "specification_only_not_approval",
+      "existing_source_paths_snapshot": [],
+      "acceptance": "方向统一、磨损克制",
+      "review_required": true,
+      "initial_dimensions_or_texture": "shared1024 initial",
+      "engine_triangle_cap_per_instance": null,
+      "production_recipe": "Muted wood grain follows slats.",
+      "reject_and_repair": "Repair UV grain orientation.",
+      "reference_frames": [
+        "t015s.jpg",
+        "t084s.jpg"
+      ]
+    },
+    {
+      "asset_id": "MAT003",
+      "name": "金属材质族",
+      "plan_status": "specification_only_not_approval",
+      "existing_source_paths_snapshot": [],
+      "acceptance": "粗糙度与石木分离",
+      "review_required": true,
+      "initial_dimensions_or_texture": "shared512 initial",
+      "engine_triangle_cap_per_instance": null,
+      "production_recipe": "Dark low-gloss metal separated from wood.",
+      "reject_and_repair": "Repair roughness, avoid chrome/black void.",
+      "reference_frames": [
+        "t015s.jpg",
+        "t084s.jpg"
+      ]
+    },
+    {
+      "asset_id": "MAT004",
+      "name": "树叶草材质族",
+      "plan_status": "specification_only_not_approval",
+      "existing_source_paths_snapshot": [],
+      "acceptance": "黄赭与橄榄绿，透明规则",
+      "review_required": true,
+      "initial_dimensions_or_texture": "shared1024 atlas initial",
+      "engine_triangle_cap_per_instance": null,
+      "production_recipe": "Ochre/olive plants, measured alpha/two-sided settings.",
+      "reject_and_repair": "Correct alpha edges and reduce overdraw.",
+      "reference_frames": [
+        "t015s.jpg",
+        "t084s.jpg"
+      ]
+    },
+    {
+      "asset_id": "MAT005",
+      "name": "纸片材质族",
+      "plan_status": "specification_only_not_approval",
+      "existing_source_paths_snapshot": [],
+      "acceptance": "明信片/板上卡片，UI纸感协调",
+      "review_required": true,
+      "initial_dimensions_or_texture": "shared512 initial",
+      "engine_triangle_cap_per_instance": null,
+      "production_recipe": "Offwhite paper with subtle texture and editable pattern source.",
+      "reject_and_repair": "Reduce texture contrast if paper dominates.",
+      "reference_frames": [
+        "t015s.jpg",
+        "t084s.jpg"
+      ]
+    },
+    {
+      "asset_id": "LOOK001",
+      "name": "相机灯光预览场景",
+      "plan_status": "specification_only_not_approval",
+      "existing_source_paths_snapshot": [],
+      "acceptance": "固定机位、暖光冷填充、阴影/色调记录",
+      "review_required": true,
+      "initial_dimensions_or_texture": "1280x720, offset(0,10,-10), FOV35",
+      "engine_triangle_cap_per_instance": null,
+      "production_recipe": "Warm sun/cool-grey fill, locked exposure, no DOF initially.",
+      "reject_and_repair": "Fix material/ambient separation before postprocessing.",
+      "reference_frames": [
+        "t015s.jpg",
+        "t084s.jpg"
+      ]
+    },
+    {
+      "asset_id": "CHAR001",
+      "name": "目标主角原Spine资产",
+      "plan_status": "specification_only_not_approval",
+      "existing_source_paths_snapshot": [
+        "reference/character_sources/ark_models/1015_aglna2/build_char_1015_aglna2.skel",
+        "reference/character_sources/ark_models/1015_aglna2/build_char_1015_aglna2.atlas",
+        "reference/character_sources/ark_models/1015_aglna2/build_char_1015_aglna2.png"
+      ],
+      "acceptance": "291_aglina候选原包存在，需核对皮肤与运行",
+      "review_required": true,
+      "reference_frames": [
+        "t044s.jpg",
+        "t054s.jpg",
+        "t084s.jpg"
+      ],
+      "production_recipe": "Use current harness locked_sources and actual current catalogue. Reuse current parsed animation evidence if source/runtime hashes match; retain actual NPC static-cutout route.",
+      "reject_and_repair": "Fix source/skin/attachment mismatch with reference evidence, never generate a replacement face.",
+      "evidence": [
+        "source_hash",
+        "comparison",
+        "transparent_preview",
+        "runtime_or_cutout_source"
+      ]
+    },
+    {
+      "asset_id": "CHAR002",
+      "name": "主角动作与状态映射",
+      "plan_status": "specification_only_not_approval",
+      "existing_source_paths_snapshot": [
+        "art/phase1/character_playback_1015/clip_inventory.json",
+        "art/phase1/character_playback_1015/runtime_log.txt"
+      ],
+      "acceptance": "原待机/Move，交互动作存在性，朝向能力表",
+      "review_required": true,
+      "reference_frames": [
+        "t044s.jpg",
+        "t054s.jpg",
+        "t084s.jpg"
+      ],
+      "production_recipe": "Use current harness locked_sources and actual current catalogue. Reuse current parsed animation evidence if source/runtime hashes match; retain actual NPC static-cutout route.",
+      "reject_and_repair": "Fix source/skin/attachment mismatch with reference evidence, never generate a replacement face.",
+      "evidence": [
+        "source_hash",
+        "comparison",
+        "transparent_preview",
+        "runtime_or_cutout_source"
+      ]
+    },
+    {
+      "asset_id": "CHAR003",
+      "name": "固定NPC形象",
+      "plan_status": "specification_only_not_approval",
+      "existing_source_paths_snapshot": [
+        "art/full/source/characters/CHAR003_NPC_GARDENER/npc_source_crop_490x670.png",
+        "art/full/source/characters/CHAR003_NPC_GARDENER/npc_gardener_mask.svg",
+        "art/full/source/characters/CHAR003_NPC_GARDENER/npc_gardener_static_slice.png",
+        "art/full/source/characters/CHAR003_NPC_GARDENER/npc_gardener_slice_record.json"
+      ],
+      "acceptance": "按P1相应人物选定资源，确认角色ID及服装；非原创信使替换",
+      "review_required": true,
+      "reference_frames": [
+        "t044s.jpg",
+        "t054s.jpg",
+        "t084s.jpg"
+      ],
+      "production_recipe": "Use current harness locked_sources and actual current catalogue. Reuse current parsed animation evidence if source/runtime hashes match; retain actual NPC static-cutout route.",
+      "reject_and_repair": "Fix source/skin/attachment mismatch with reference evidence, never generate a replacement face.",
+      "evidence": [
+        "source_hash",
+        "comparison",
+        "transparent_preview",
+        "runtime_or_cutout_source"
+      ]
+    },
+    {
+      "asset_id": "CHAR004",
+      "name": "主角头像",
+      "plan_status": "specification_only_not_approval",
+      "existing_source_paths_snapshot": [
+        "art/full/source/characters/CHAR004_PLAYER/portrait_1015_head_512.png",
+        "art/full/source/characters/CHAR004_PLAYER/portrait_record.json"
+      ],
+      "acceptance": "与确认人物相同，源与裁切范围可追溯",
+      "review_required": true,
+      "reference_frames": [
+        "t044s.jpg",
+        "t054s.jpg",
+        "t084s.jpg"
+      ],
+      "production_recipe": "Use current harness locked_sources and actual current catalogue. Reuse current parsed animation evidence if source/runtime hashes match; retain actual NPC static-cutout route.",
+      "reject_and_repair": "Fix source/skin/attachment mismatch with reference evidence, never generate a replacement face.",
+      "evidence": [
+        "source_hash",
+        "comparison",
+        "transparent_preview",
+        "runtime_or_cutout_source"
+      ]
+    },
+    {
+      "asset_id": "CHAR005",
+      "name": "NPC头像",
+      "plan_status": "specification_only_not_approval",
+      "existing_source_paths_snapshot": [
+        "art/full/source/characters/CHAR003_NPC_GARDENER/npc_gardener_portrait_512.png",
+        "art/full/source/characters/CHAR003_NPC_GARDENER/npc_gardener_slice_record.json"
+      ],
+      "acceptance": "与NPC一致、对话尺寸下清晰",
+      "review_required": true,
+      "reference_frames": [
+        "t044s.jpg",
+        "t054s.jpg",
+        "t084s.jpg"
+      ],
+      "production_recipe": "Use current harness locked_sources and actual current catalogue. Reuse current parsed animation evidence if source/runtime hashes match; retain actual NPC static-cutout route.",
+      "reject_and_repair": "Fix source/skin/attachment mismatch with reference evidence, never generate a replacement face.",
+      "evidence": [
+        "source_hash",
+        "comparison",
+        "transparent_preview",
+        "runtime_or_cutout_source"
+      ]
+    },
+    {
+      "asset_id": "UI001",
+      "name": "标题与进入界面",
+      "plan_status": "specification_only_not_approval",
+      "existing_source_paths_snapshot": [
+        "art/full/ui/tokens.json",
+        "art/full/ui/index.html",
+        "art/full/ui/js/states.js",
+        "art/full/ui/css/ui.css",
+        "art/full/ui/js/components.js"
+      ],
+      "acceptance": "标题、进入按钮及状态",
+      "review_required": true,
+      "reference_frames": [
+        "t044s.jpg",
+        "t084s.jpg"
+      ],
+      "production_recipe": "Reuse art/full/ui/tokens.json, SVG and current state_index.json; implement this group as interactive Cocos components with engine text. Preserve approved source versions.",
+      "reject_and_repair": "Repair missing state/portrait in component data; do not replace with whole-screen PNG.",
+      "evidence": [
+        "native_source",
+        "light_dark_background",
+        "engine_state_capture",
+        "safe_area_capture"
+      ]
+    },
+    {
+      "asset_id": "UI002",
+      "name": "加载与失败重试",
+      "plan_status": "specification_only_not_approval",
+      "existing_source_paths_snapshot": [
+        "art/full/ui/tokens.json",
+        "art/full/ui/index.html",
+        "art/full/ui/js/states.js",
+        "art/full/ui/css/ui.css",
+        "art/full/ui/js/components.js"
+      ],
+      "acceptance": "加载阶段、失败反馈、重试",
+      "review_required": true,
+      "reference_frames": [
+        "t044s.jpg",
+        "t084s.jpg"
+      ],
+      "production_recipe": "Reuse art/full/ui/tokens.json, SVG and current state_index.json; implement this group as interactive Cocos components with engine text. Preserve approved source versions.",
+      "reject_and_repair": "Repair missing state/portrait in component data; do not replace with whole-screen PNG.",
+      "evidence": [
+        "native_source",
+        "light_dark_background",
+        "engine_state_capture",
+        "safe_area_capture"
+      ]
+    },
+    {
+      "asset_id": "UI003",
+      "name": "任务HUD全部状态",
+      "plan_status": "specification_only_not_approval",
+      "existing_source_paths_snapshot": [
+        "art/full/ui/tokens.json",
+        "art/full/ui/index.html",
+        "art/full/ui/js/states.js",
+        "art/full/ui/css/ui.css",
+        "art/full/ui/js/components.js"
+      ],
+      "acceptance": "未接、0/3、1/3、2/3、3/3、可提交、完成",
+      "review_required": true,
+      "reference_frames": [
+        "t044s.jpg",
+        "t084s.jpg"
+      ],
+      "production_recipe": "Reuse art/full/ui/tokens.json, SVG and current state_index.json; implement this group as interactive Cocos components with engine text. Preserve approved source versions.",
+      "reject_and_repair": "Repair missing state/portrait in component data; do not replace with whole-screen PNG.",
+      "evidence": [
+        "native_source",
+        "light_dark_background",
+        "engine_state_capture",
+        "safe_area_capture"
+      ]
+    },
+    {
+      "asset_id": "UI004",
+      "name": "摇杆全部状态",
+      "plan_status": "specification_only_not_approval",
+      "existing_source_paths_snapshot": [
+        "art/full/ui/tokens.json",
+        "art/full/ui/index.html",
+        "art/full/ui/js/states.js",
+        "art/full/ui/css/ui.css",
+        "art/full/ui/js/components.js"
+      ],
+      "acceptance": "待机、拖动、锁定隐藏、安全区",
+      "review_required": true,
+      "reference_frames": [
+        "t044s.jpg",
+        "t084s.jpg"
+      ],
+      "production_recipe": "Reuse art/full/ui/tokens.json, SVG and current state_index.json; implement this group as interactive Cocos components with engine text. Preserve approved source versions.",
+      "reject_and_repair": "Repair missing state/portrait in component data; do not replace with whole-screen PNG.",
+      "evidence": [
+        "native_source",
+        "light_dark_background",
+        "engine_state_capture",
+        "safe_area_capture"
+      ]
+    },
+    {
+      "asset_id": "UI005",
+      "name": "交互按钮状态族",
+      "plan_status": "specification_only_not_approval",
+      "existing_source_paths_snapshot": [
+        "art/full/ui/tokens.json",
+        "art/full/ui/index.html",
+        "art/full/ui/js/states.js",
+        "art/full/ui/css/ui.css",
+        "art/full/ui/js/components.js"
+      ],
+      "acceptance": "交谈、拾取、布置、查看及按下/不可用",
+      "review_required": true,
+      "reference_frames": [
+        "t044s.jpg",
+        "t084s.jpg"
+      ],
+      "production_recipe": "Reuse art/full/ui/tokens.json, SVG and current state_index.json; implement this group as interactive Cocos components with engine text. Preserve approved source versions.",
+      "reject_and_repair": "Repair missing state/portrait in component data; do not replace with whole-screen PNG.",
+      "evidence": [
+        "native_source",
+        "light_dark_background",
+        "engine_state_capture",
+        "safe_area_capture"
+      ]
+    },
+    {
+      "asset_id": "UI006",
+      "name": "对话组件",
+      "plan_status": "specification_only_not_approval",
+      "existing_source_paths_snapshot": [
+        "art/full/ui/tokens.json",
+        "art/full/ui/index.html",
+        "art/full/ui/js/states.js",
+        "art/full/ui/css/ui.css",
+        "art/full/ui/js/components.js",
+        "art/full/ui/portraits/player_1015.png",
+        "art/full/ui/portraits/npc_gardener.png",
+        "art/full/source/characters/CHAR004_PLAYER/portrait_record.json",
+        "art/full/source/characters/CHAR003_NPC_GARDENER/npc_gardener_slice_record.json"
+      ],
+      "acceptance": "姓名、头像、正文、下一页/结束，实际任务文案",
+      "review_required": true,
+      "reference_frames": [
+        "t044s.jpg",
+        "t084s.jpg"
+      ],
+      "production_recipe": "Reuse art/full/ui/tokens.json, SVG and current state_index.json; implement this group as interactive Cocos components with engine text. Preserve approved source versions.",
+      "reject_and_repair": "Repair missing state/portrait in component data; do not replace with whole-screen PNG.",
+      "evidence": [
+        "native_source",
+        "light_dark_background",
+        "engine_state_capture",
+        "safe_area_capture"
+      ]
+    },
+    {
+      "asset_id": "UI007",
+      "name": "暂停菜单",
+      "plan_status": "specification_only_not_approval",
+      "existing_source_paths_snapshot": [
+        "art/full/ui/tokens.json",
+        "art/full/ui/index.html",
+        "art/full/ui/js/states.js",
+        "art/full/ui/css/ui.css",
+        "art/full/ui/js/components.js"
+      ],
+      "acceptance": "继续、静音开关、重新开始",
+      "review_required": true,
+      "reference_frames": [
+        "t044s.jpg",
+        "t084s.jpg"
+      ],
+      "production_recipe": "Reuse art/full/ui/tokens.json, SVG and current state_index.json; implement this group as interactive Cocos components with engine text. Preserve approved source versions.",
+      "reject_and_repair": "Repair missing state/portrait in component data; do not replace with whole-screen PNG.",
+      "evidence": [
+        "native_source",
+        "light_dark_background",
+        "engine_state_capture",
+        "safe_area_capture"
+      ]
+    },
+    {
+      "asset_id": "UI008",
+      "name": "完成界面",
+      "plan_status": "specification_only_not_approval",
+      "existing_source_paths_snapshot": [
+        "art/full/ui/tokens.json",
+        "art/full/ui/index.html",
+        "art/full/ui/js/states.js",
+        "art/full/ui/css/ui.css",
+        "art/full/ui/js/components.js"
+      ],
+      "acceptance": "完成反馈、继续漫步、重新开始",
+      "review_required": true,
+      "reference_frames": [
+        "t044s.jpg",
+        "t084s.jpg"
+      ],
+      "production_recipe": "Reuse art/full/ui/tokens.json, SVG and current state_index.json; implement this group as interactive Cocos components with engine text. Preserve approved source versions.",
+      "reject_and_repair": "Repair missing state/portrait in component data; do not replace with whole-screen PNG.",
+      "evidence": [
+        "native_source",
+        "light_dark_background",
+        "engine_state_capture",
+        "safe_area_capture"
+      ]
+    },
+    {
+      "asset_id": "UI009",
+      "name": "拾取与任务提示",
+      "plan_status": "specification_only_not_approval",
+      "existing_source_paths_snapshot": [
+        "art/full/ui/tokens.json",
+        "art/full/ui/index.html",
+        "art/full/ui/js/states.js",
+        "art/full/ui/css/ui.css",
+        "art/full/ui/js/components.js"
+      ],
+      "acceptance": "轻量toast与任务更新反馈",
+      "review_required": true,
+      "reference_frames": [
+        "t044s.jpg",
+        "t084s.jpg"
+      ],
+      "production_recipe": "Reuse art/full/ui/tokens.json, SVG and current state_index.json; implement this group as interactive Cocos components with engine text. Preserve approved source versions.",
+      "reject_and_repair": "Repair missing state/portrait in component data; do not replace with whole-screen PNG.",
+      "evidence": [
+        "native_source",
+        "light_dark_background",
+        "engine_state_capture",
+        "safe_area_capture"
+      ]
+    },
+    {
+      "asset_id": "UI010",
+      "name": "首次操作提示",
+      "plan_status": "specification_only_not_approval",
+      "existing_source_paths_snapshot": [
+        "art/full/ui/tokens.json",
+        "art/full/ui/index.html",
+        "art/full/ui/js/states.js",
+        "art/full/ui/css/ui.css",
+        "art/full/ui/js/components.js"
+      ],
+      "acceptance": "移动和交互简明说明、可收起",
+      "review_required": true,
+      "reference_frames": [
+        "t044s.jpg",
+        "t084s.jpg"
+      ],
+      "production_recipe": "Reuse art/full/ui/tokens.json, SVG and current state_index.json; implement this group as interactive Cocos components with engine text. Preserve approved source versions.",
+      "reject_and_repair": "Repair missing state/portrait in component data; do not replace with whole-screen PNG.",
+      "evidence": [
+        "native_source",
+        "light_dark_background",
+        "engine_state_capture",
+        "safe_area_capture"
+      ]
+    },
+    {
+      "asset_id": "UI011",
+      "name": "旋转与安全区适配",
+      "plan_status": "specification_only_not_approval",
+      "existing_source_paths_snapshot": [
+        "art/full/ui/tokens.json",
+        "art/full/ui/index.html",
+        "art/full/ui/js/states.js",
+        "art/full/ui/css/ui.css",
+        "art/full/ui/js/components.js"
+      ],
+      "acceptance": "横屏旋转提示/遮挡避让示意",
+      "review_required": true,
+      "reference_frames": [
+        "t044s.jpg",
+        "t084s.jpg"
+      ],
+      "production_recipe": "Reuse art/full/ui/tokens.json, SVG and current state_index.json; implement this group as interactive Cocos components with engine text. Preserve approved source versions.",
+      "reject_and_repair": "Repair missing state/portrait in component data; do not replace with whole-screen PNG.",
+      "evidence": [
+        "native_source",
+        "light_dark_background",
+        "engine_state_capture",
+        "safe_area_capture"
+      ]
+    },
+    {
+      "asset_id": "UI012",
+      "name": "基础图标族",
+      "plan_status": "specification_only_not_approval",
+      "existing_source_paths_snapshot": [
+        "art/full/ui/components/icons.json",
+        "art/full/ui/components/icons.svg",
+        "art/full/ui/components/icons",
+        "art/full/ui/js/icons.js"
+      ],
+      "acceptance": "交谈/卡片/布置/菜单原SVG存在，需手绘语言与新状态审核",
+      "review_required": true,
+      "reference_frames": [
+        "t044s.jpg",
+        "t084s.jpg"
+      ],
+      "production_recipe": "Reuse art/full/ui/tokens.json, SVG and current state_index.json; implement this group as interactive Cocos components with engine text. Preserve approved source versions.",
+      "reject_and_repair": "Repair missing state/portrait in component data; do not replace with whole-screen PNG.",
+      "evidence": [
+        "native_source",
+        "light_dark_background",
+        "engine_state_capture",
+        "safe_area_capture"
+      ]
+    },
+    {
+      "asset_id": "UI013",
+      "name": "UI变量与中文字体",
+      "plan_status": "specification_only_not_approval",
+      "existing_source_paths_snapshot": [
+        "art/full/ui/tokens.json",
+        "art/full/ui/css/tokens.css",
+        "art/full/ui/fonts/FONT_MANIFEST.json",
+        "art/full/ui/fonts/OFL.txt"
+      ],
+      "acceptance": "色板/线宽/字号/内边距/字体文件及来源，字形验证",
+      "review_required": true,
+      "reference_frames": [
+        "t044s.jpg",
+        "t084s.jpg"
+      ],
+      "production_recipe": "Reuse art/full/ui/tokens.json, SVG and current state_index.json; implement this group as interactive Cocos components with engine text. Preserve approved source versions.",
+      "reject_and_repair": "Repair missing state/portrait in component data; do not replace with whole-screen PNG.",
+      "evidence": [
+        "native_source",
+        "light_dark_background",
+        "engine_state_capture",
+        "safe_area_capture"
+      ]
+    },
+    {
+      "asset_id": "FX001",
+      "name": "角色脚底接触阴影",
+      "plan_status": "specification_only_not_approval",
+      "existing_source_paths_snapshot": [],
+      "acceptance": "随角色位移，非跟随屏幕的假阴影",
+      "review_required": true,
+      "production_recipe": "Grounded soft footshadow; anchor follows real footpoint; no z-fighting.",
+      "reject_and_repair": "Fix state/lifecycle and capture both forward and reset transitions.",
+      "evidence": [
+        "editable_effect_source",
+        "engine_forward_and_reset"
+      ]
+    },
+    {
+      "asset_id": "FX002",
+      "name": "目标与拾取反馈",
+      "plan_status": "specification_only_not_approval",
+      "existing_source_paths_snapshot": [],
+      "acceptance": "近距离提示、轻量拾取效果、状态变化",
+      "review_required": true,
+      "production_recipe": "Interaction fade0.15s,pickup cue0.35s; hide after pickup, restore on reset.",
+      "reject_and_repair": "Fix state/lifecycle and capture both forward and reset transitions.",
+      "evidence": [
+        "editable_effect_source",
+        "engine_forward_and_reset"
+      ]
+    },
+    {
+      "asset_id": "FX003",
+      "name": "留言板完成变化",
+      "plan_status": "specification_only_not_approval",
+      "existing_source_paths_snapshot": [],
+      "acceptance": "三张卡显现与完成视觉反馈，可重置",
+      "review_required": true,
+      "production_recipe": "Reveal three real postcard children with0.25s fade; board state determines visibility.",
+      "reject_and_repair": "Fix state/lifecycle and capture both forward and reset transitions.",
+      "evidence": [
+        "editable_effect_source",
+        "engine_forward_and_reset"
+      ]
+    },
+    {
+      "asset_id": "PACK001",
+      "name": "全美术清单与依赖包",
+      "plan_status": "specification_only_not_approval",
+      "existing_source_paths_snapshot": [],
+      "acceptance": "源文件、贴图/字体、预览、版本哈希、操作配方和审核",
+      "review_required": true,
+      "production_recipe": "Collect47-group real sources,exports,dependencies,recipes,review and current manifest. Do not invent approval keys.",
+      "reject_and_repair": "Fix missing dependencies; freeze and review again after any content change.",
+      "evidence": [
+        "catalog",
+        "manifest",
+        "independent_review",
+        "controller_result",
+        "run_instructions"
+      ]
+    }
+  ]
+}

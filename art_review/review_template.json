@@ -1,0 +1,255 @@
+{
+  "schema_version": "1.0.0",
+  "report_kind": "template_not_actual_review",
+  "rubric_version": "1.2.0",
+  "review_scope": "character_playback",
+  "reviewer": {
+    "id": null,
+    "mode": null
+  },
+  "asset_manifest_path": null,
+  "asset_manifest_sha256": null,
+  "style_master_version": null,
+  "calibration_status": "not_done",
+  "gates": {
+    "H01": {
+      "status": "not_checked",
+      "evidence": [],
+      "reason": null
+    },
+    "H02": {
+      "status": "not_checked",
+      "evidence": [],
+      "reason": null
+    },
+    "H03": {
+      "status": "not_checked",
+      "evidence": [],
+      "reason": null
+    },
+    "H04": {
+      "status": "not_checked",
+      "evidence": [],
+      "reason": null
+    },
+    "H05": {
+      "status": "not_checked",
+      "evidence": [],
+      "reason": null
+    },
+    "H06": {
+      "status": "not_checked",
+      "evidence": [],
+      "reason": null
+    },
+    "H07": {
+      "status": "not_checked",
+      "evidence": [],
+      "reason": null
+    },
+    "H08": {
+      "status": "not_checked",
+      "evidence": [],
+      "reason": null
+    },
+    "H09": {
+      "status": "not_checked",
+      "evidence": [],
+      "reason": null
+    }
+  },
+  "cards": {
+    "ENV": {
+      "dimensions": [
+        {
+          "id": "composition_scale",
+          "score": null,
+          "evidence": [],
+          "reason": null,
+          "defect_ids": []
+        },
+        {
+          "id": "geometry_craft",
+          "score": null,
+          "evidence": [],
+          "reason": null,
+          "defect_ids": []
+        },
+        {
+          "id": "material_separation",
+          "score": null,
+          "evidence": [],
+          "reason": null,
+          "defect_ids": []
+        },
+        {
+          "id": "lighting_contact",
+          "score": null,
+          "evidence": [],
+          "reason": null,
+          "defect_ids": []
+        },
+        {
+          "id": "vegetation_depth",
+          "score": null,
+          "evidence": [],
+          "reason": null,
+          "defect_ids": []
+        },
+        {
+          "id": "play_readability",
+          "score": null,
+          "evidence": [],
+          "reason": null,
+          "defect_ids": []
+        }
+      ],
+      "computed_total": null,
+      "computed_decision": "pending"
+    },
+    "CHAR": {
+      "dimensions": [
+        {
+          "id": "silhouette_proportion",
+          "score": null,
+          "evidence": [],
+          "reason": null,
+          "defect_ids": []
+        },
+        {
+          "id": "line_quality",
+          "score": null,
+          "evidence": [],
+          "reason": null,
+          "defect_ids": []
+        },
+        {
+          "id": "cel_color_light",
+          "score": null,
+          "evidence": [],
+          "reason": null,
+          "defect_ids": []
+        },
+        {
+          "id": "identity_consistency",
+          "score": null,
+          "evidence": [],
+          "reason": null,
+          "defect_ids": []
+        },
+        {
+          "id": "motion_contact",
+          "score": null,
+          "evidence": [],
+          "reason": null,
+          "defect_ids": []
+        },
+        {
+          "id": "small_scale_clarity",
+          "score": null,
+          "evidence": [],
+          "reason": null,
+          "defect_ids": []
+        }
+      ],
+      "computed_total": null,
+      "computed_decision": "pending"
+    },
+    "UI": {
+      "dimensions": [
+        {
+          "id": "paper_shape",
+          "score": null,
+          "evidence": [],
+          "reason": null,
+          "defect_ids": []
+        },
+        {
+          "id": "doodle_icon_family",
+          "score": null,
+          "evidence": [],
+          "reason": null,
+          "defect_ids": []
+        },
+        {
+          "id": "typography",
+          "score": null,
+          "evidence": [],
+          "reason": null,
+          "defect_ids": []
+        },
+        {
+          "id": "layout_air",
+          "score": null,
+          "evidence": [],
+          "reason": null,
+          "defect_ids": []
+        },
+        {
+          "id": "state_feedback",
+          "score": null,
+          "evidence": [],
+          "reason": null,
+          "defect_ids": []
+        },
+        {
+          "id": "palette_restraint",
+          "score": null,
+          "evidence": [],
+          "reason": null,
+          "defect_ids": []
+        }
+      ],
+      "computed_total": null,
+      "computed_decision": "pending"
+    },
+    "MIX": {
+      "dimensions": [
+        {
+          "id": "visual_language",
+          "score": null,
+          "evidence": [],
+          "reason": null,
+          "defect_ids": []
+        },
+        {
+          "id": "color_light_coherence",
+          "score": null,
+          "evidence": [],
+          "reason": null,
+          "defect_ids": []
+        },
+        {
+          "id": "grounding_occlusion",
+          "score": null,
+          "evidence": [],
+          "reason": null,
+          "defect_ids": []
+        },
+        {
+          "id": "focus_readability",
+          "score": null,
+          "evidence": [],
+          "reason": null,
+          "defect_ids": []
+        },
+        {
+          "id": "world_style_coherence",
+          "score": null,
+          "evidence": [],
+          "reason": null,
+          "defect_ids": []
+        }
+      ],
+      "computed_total": null,
+      "computed_decision": "pending"
+    }
+  },
+  "defects": [],
+  "overall_decision": "pending",
+  "limitations": [
+    "No production samples or engine evidence reviewed."
+  ],
+  "manifest_sha256": null,
+  "contract_sha256": null
+}

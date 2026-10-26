@@ -1,0 +1,41 @@
+{
+  "status": "submission_present_not_accepted",
+  "accepted": false,
+  "locked_sources": [
+    {
+      "path": "reference/character_sources/ark_models/1015_aglna2/build_char_1015_aglna2.atlas",
+      "status": "pass"
+    },
+    {
+      "path": "reference/character_sources/ark_models/1015_aglna2/build_char_1015_aglna2.png",
+      "status": "pass"
+    },
+    {
+      "path": "reference/character_sources/ark_models/1015_aglna2/build_char_1015_aglna2.skel",
+      "status": "pass"
+    }
+  ],
+  "legacy_review": {
+    "path": "art\\phase1\\a_stage\\reviews\\A_stage_review.json",
+    "version": "1.1.0",
+    "stale": true,
+    "reviewer_mode": "self",
+    "has_reference_identity_gate": false
+  },
+  "legacy_artifact_integrity": {
+    "checked": 40,
+    "failures": [],
+    "meaning": "Integrity only, not aesthetic or engine acceptance"
+  },
+  "active_manifest_exists": true,
+  "full_art_catalog": {
+    "declared_status_counts": {
+      "missing": 37,
+      "source_ready": 3,
+      "candidate": 1,
+      "historical_candidate": 6
+    },
+    "meaning": "Planning/inventory states, not independently approved progress percentages"
+  },
+  "next_action": "Verify reference Spine playback, submit bound artifacts; preserve old concept as historical."
+}

@@ -1,0 +1,58 @@
+{
+  "PROJECT_TASKS.json": {
+    "sha256": "3cd8bc0e25472c6acb5f6bce70707ddaccecc1f41b9ab077773feb1fa27e7c38",
+    "bytes": 290721
+  },
+  "tools/art_harness.py": {
+    "sha256": "407b1ed18c9bb84217544a34c17d79df32d7e73380a60f947b8a891591a20b77",
+    "bytes": 45429
+  },
+  "tools/producer_review.py": {
+    "sha256": "f5c4dfd2b7c732ad40d70e1da956f3015da29e43faf52ae0142243fa65acfa3d",
+    "bytes": 16121
+  },
+  "tools/test_art_harness.py": {
+    "sha256": "a5e531e63bd7ad9b535990c148557d19c8e1477216aca21476f6494e3c756ce1",
+    "bytes": 33158
+  },
+  "tools/art_gate/check_quality.py": {
+    "sha256": "f7b263d008d10c3604966247b07e59f432a3f7ed4612c26da0a88ddf619e3647",
+    "bytes": 13412
+  },
+  "tools/art_gate/check_bindings.py": {
+    "sha256": "b3202d5d2c3f301133cbf41bf3efa5dcaea9e1bfd4fdd343d72b3f9dfb4b9a73",
+    "bytes": 10657
+  },
+  "art_review/harness_contract.json": {
+    "sha256": "dfb3692699b94d126e652dc78c5341917db26251e7df8299f192661a9dc5a883",
+    "bytes": 5526
+  },
+  "art_review/rubric.json": {
+    "sha256": "537984cfe926b64a1b17d3c531627b4a58546c59d0a79fbe1242071d3ba3f943",
+    "bytes": 5935
+  },
+  "planning/execution/producer_review_policy.json": {
+    "sha256": "88d3df5b2d710d4c0ab6e8a06f700cdfd227767f72b60905b96eb4ed54c97818",
+    "bytes": 1393
+  },
+  "art_review/submissions/candidate_full/manifest.json": {
+    "sha256": "2f8e63bf0e4c82d8a63a20286ff064ce89196a0d33cbfa0d5091aff9a3f58a3a",
+    "bytes": 146299
+  },
+  "delivery/next_cycle/T4/producer_self_review.json": {
+    "sha256": "95188ce13a3dbc7311aaeeab6f73cf44ded4a7aafd615c682ab866e28df972ce",
+    "bytes": 66539
+  },
+  "delivery/next_cycle/T4/producer_submission_check.json": {
+    "sha256": "b0819248926a3762e7a137ebca351647653f3934698b81ca63df6fe402fb206b",
+    "bytes": 20326
+  },
+  "art/iterations/cycle_02/full_art_catalog.json": {
+    "sha256": "ab99a51bcd825f882a2037f36caa8851900da576cf09d314054b9fbb9ca2848e",
+    "bytes": 57431
+  },
+  "demo/assets/scripts/CourtyardBootstrap.ts": {
+    "sha256": "6b3b31ee6503d44b93291d5b7f0ec835fdc2a65b5d4901c5eb485e5ba8875b21",
+    "bytes": 90906
+  }
+}

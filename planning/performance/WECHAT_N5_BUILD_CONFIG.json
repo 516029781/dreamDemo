@@ -1,0 +1,20 @@
+{
+  "name": "courtyard_scene_demo_probe",
+  "platform": "wechatgame",
+  "debug": false,
+  "buildPath": "C:/软件/鼠鼠/.tooling/wechat_probe_n5_20261026T152015Z/build",
+  "outputName": "wechatgame",
+  "startScene": "0b1f4c5e-6a7d-4e2f-9b3c-5d8e0f1a2b3c",
+  "scenes": [
+    {
+      "url": "db://assets/scenes/main.scene",
+      "uuid": "0b1f4c5e-6a7d-4e2f-9b3c-5d8e0f1a2b3c"
+    }
+  ],
+  "packages": {
+    "wechatgame": {
+      "orientation": "landscape",
+      "appid": "wx6ac3f5090a6b99c5"
+    }
+  }
+}

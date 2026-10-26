@@ -1,0 +1,505 @@
+{
+  "kind": "producer_submission_filter_not_independent_approval",
+  "status": "ready_for_final_review",
+  "ready_for_final_review": true,
+  "accepted": false,
+  "independent_approval": false,
+  "computed_scores": {
+    "ENV": 90.0,
+    "CHAR": 90.0,
+    "UI": 91.25,
+    "MIX": 90.0
+  },
+  "findings": [],
+  "dimension_diagnostics": [
+    {
+      "card": "ENV",
+      "dimension": "composition_scale",
+      "score": 3,
+      "lost_weight": 5.0,
+      "reported_gap": "The plaza still leaves more empty paving than P1, and foreground framing is weaker than the reference.",
+      "suggested_repair": "Accepted at 3 for the sample; if a later pass adds foreground planting/props, rescore. Not a key blocking defect.",
+      "candidate_evidence": [
+        {
+          "path": "delivery/next_cycle/T2/sample_no_ui.png",
+          "sha256": "a4a2418473c7aaa1b50a6991566772a9402db34609e38ffc2b1835f605416fe5"
+        },
+        {
+          "path": "delivery/next_cycle/T6/assets/MAP001.png",
+          "sha256": "d3fe7599381bda16570f1f5d68d45c4bf6a51e14f583287456c310d4aa8a166d"
+        }
+      ]
+    },
+    {
+      "card": "ENV",
+      "dimension": "geometry_craft",
+      "score": 3,
+      "lost_weight": 5.0,
+      "reported_gap": "Crown still shows some faceted mass planes; paving and planter profiles are simpler than P1.",
+      "suggested_repair": "Accepted at 3; geometry is coherent and no broken/floating object is visible in formal or close-up views.",
+      "candidate_evidence": [
+        {
+          "path": "delivery/next_cycle/T6/assets/ENV006.png",
+          "sha256": "79ea68ad7299ffec2873dc01310533b9cdf879ccaaa07c7a89cb5b9b8cbe5039"
+        },
+        {
+          "path": "delivery/next_cycle/T2/sample_no_ui.png",
+          "sha256": "a4a2418473c7aaa1b50a6991566772a9402db34609e38ffc2b1835f605416fe5"
+        }
+      ]
+    },
+    {
+      "card": "ENV",
+      "dimension": "material_separation",
+      "score": 4,
+      "lost_weight": 0.0,
+      "reported_gap": "No key defect in the tested formal and close-up views; wear and micro-detail are still simpler than P1.",
+      "suggested_repair": "Accepted at 4 for multiple engine views; material families are distinct and consistent.",
+      "candidate_evidence": [
+        {
+          "path": "delivery/next_cycle/T4/material_closeups_final4.png",
+          "sha256": "bd40dbab219364ec15715a87a3534dbd11147d6352e89c9fdde9c3faf93830b9"
+        },
+        {
+          "path": "delivery/next_cycle/T5/q01_formal_no_ui.png",
+          "sha256": "ba74366390f22e5f6ba717bccbe9ff5c3877b568f8052f1c77c69dba2a6f72d8"
+        },
+        {
+          "path": "delivery/next_cycle/T6/assets/MAT001.png",
+          "sha256": "287dd7c4244077205005771ab2df4e9b0ff1c0210189ba7652c7731d780ad5cf"
+        }
+      ]
+    },
+    {
+      "card": "ENV",
+      "dimension": "lighting_contact",
+      "score": 4,
+      "lost_weight": 0.0,
+      "reported_gap": "No key defect; absolute brightness on the paving is nearly unchanged (delta 0) while shadows deepen, so this is contrast, not a global brightness claim.",
+      "suggested_repair": "Accepted at 4; fixed camera and ROI evidence match the actual images.",
+      "candidate_evidence": [
+        {
+          "path": "delivery/next_cycle/T4/lighting_comparison_final4.png",
+          "sha256": "48d357af397496fa1474cd0b1c48c28a5cb981e2aa39e9710e9b7bd84db6c6e0"
+        },
+        {
+          "path": "delivery/next_cycle/T2/lighting_profile_v2.json",
+          "sha256": "a2c129cb545fb53e560396659e116a35e56c736e27074b1add9da82886535c7d"
+        },
+        {
+          "path": "delivery/next_cycle/T2/sample_no_ui.png",
+          "sha256": "a4a2418473c7aaa1b50a6991566772a9402db34609e38ffc2b1835f605416fe5"
+        }
+      ]
+    },
+    {
+      "card": "ENV",
+      "dimension": "vegetation_depth",
+      "score": 4,
+      "lost_weight": 0.0,
+      "reported_gap": "The background band is still stylized and geometric; no key defect in the formal view.",
+      "suggested_repair": "Accepted at 4; vegetation depth is visible consistently in formal and close-up views.",
+      "candidate_evidence": [
+        {
+          "path": "delivery/next_cycle/T4/plant_background_final4.png",
+          "sha256": "0a0f402780c0855ab95f48517034e9c308d97d8305ae6bad8ccef4947c38cada"
+        },
+        {
+          "path": "delivery/next_cycle/T4/plant_closeups_final4.png",
+          "sha256": "7ebe8467a7a1d368007154cbc15afb2d26a2f09d06099b51d596104fb40c85f0"
+        },
+        {
+          "path": "delivery/next_cycle/T2/sample_no_ui.png",
+          "sha256": "a4a2418473c7aaa1b50a6991566772a9402db34609e38ffc2b1835f605416fe5"
+        }
+      ]
+    },
+    {
+      "card": "ENV",
+      "dimension": "play_readability",
+      "score": 4,
+      "lost_weight": 0.0,
+      "reported_gap": "No key defect; the player remains readable in front of the tree.",
+      "suggested_repair": "Accepted at 4 with two camera/interaction views.",
+      "candidate_evidence": [
+        {
+          "path": "delivery/next_cycle/T2/sample_hud.png",
+          "sha256": "96336d88e2d1156b61dbcd31e4dafd653d5d181c665c478ed7350a6377e64d7a"
+        },
+        {
+          "path": "delivery/next_cycle/T5/q03_front.png",
+          "sha256": "554a6f4d89010f189d5348d11cb2224f78f54bab9227d48380faafb87738a31a"
+        },
+        {
+          "path": "delivery/next_cycle/T5/q09_landscape_1280x720.png",
+          "sha256": "01ea6e04542b95b1f58d597eb002d0ceaeaff3b6671b9e1847bb8e852cce4b52"
+        }
+      ]
+    },
+    {
+      "card": "CHAR",
+      "dimension": "silhouette_proportion",
+      "score": 4,
+      "lost_weight": 0.0,
+      "reported_gap": "No key defect; the source identity is not redrawn.",
+      "suggested_repair": "Accepted at 4 with idle/move and dialogue views.",
+      "candidate_evidence": [
+        {
+          "path": "delivery/next_cycle/T6/character/char_idle.gif",
+          "sha256": "7b3224b3d3f13de0e8f6849240b47058c461ec04e40b1973a2df86647df54bb7"
+        },
+        {
+          "path": "delivery/next_cycle/T6/character/char_move.gif",
+          "sha256": "7b3224b3d3f13de0e8f6849240b47058c461ec04e40b1973a2df86647df54bb7"
+        },
+        {
+          "path": "delivery/next_cycle/T2/sample_dialogue.png",
+          "sha256": "f7dcb981a5b1417acef16daf56e4ae3951a120eae0ec942ae69c23592e5b0ed4"
+        }
+      ]
+    },
+    {
+      "card": "CHAR",
+      "dimension": "line_quality",
+      "score": 4,
+      "lost_weight": 0.0,
+      "reported_gap": "No key defect in the captured states.",
+      "suggested_repair": "Accepted at 4; idle/move and asset preview evidence.",
+      "candidate_evidence": [
+        {
+          "path": "delivery/next_cycle/T6/character/char_idle.gif",
+          "sha256": "7b3224b3d3f13de0e8f6849240b47058c461ec04e40b1973a2df86647df54bb7"
+        },
+        {
+          "path": "delivery/next_cycle/T6/character/char_move.gif",
+          "sha256": "7b3224b3d3f13de0e8f6849240b47058c461ec04e40b1973a2df86647df54bb7"
+        },
+        {
+          "path": "delivery/next_cycle/T6/assets/CHAR001.png",
+          "sha256": "f2d223a4e071c3fce99d12330dc96c30973a4ec6321318489fd18fa5ab3eb20c"
+        }
+      ]
+    },
+    {
+      "card": "CHAR",
+      "dimension": "cel_color_light",
+      "score": 3,
+      "lost_weight": 3.75,
+      "reported_gap": "The character keeps its own cel shading; no scene light response is claimed.",
+      "suggested_repair": "Accepted at 3; identity and line are strong, but cel integration is intentionally source-based.",
+      "candidate_evidence": [
+        {
+          "path": "delivery/next_cycle/T6/character/char_idle.gif",
+          "sha256": "7b3224b3d3f13de0e8f6849240b47058c461ec04e40b1973a2df86647df54bb7"
+        },
+        {
+          "path": "delivery/next_cycle/T2/sample_dialogue.png",
+          "sha256": "f7dcb981a5b1417acef16daf56e4ae3951a120eae0ec942ae69c23592e5b0ed4"
+        }
+      ]
+    },
+    {
+      "card": "CHAR",
+      "dimension": "identity_consistency",
+      "score": 4,
+      "lost_weight": 0.0,
+      "reported_gap": "No key defect; source is read from the effective contract, not redrawn.",
+      "suggested_repair": "Accepted at 4 with three states.",
+      "candidate_evidence": [
+        {
+          "path": "delivery/next_cycle/T6/character/char_idle.gif",
+          "sha256": "7b3224b3d3f13de0e8f6849240b47058c461ec04e40b1973a2df86647df54bb7"
+        },
+        {
+          "path": "delivery/next_cycle/T6/character/char_move.gif",
+          "sha256": "7b3224b3d3f13de0e8f6849240b47058c461ec04e40b1973a2df86647df54bb7"
+        },
+        {
+          "path": "delivery/next_cycle/T2/sample_dialogue.png",
+          "sha256": "f7dcb981a5b1417acef16daf56e4ae3951a120eae0ec942ae69c23592e5b0ed4"
+        }
+      ]
+    },
+    {
+      "card": "CHAR",
+      "dimension": "motion_contact",
+      "score": 3,
+      "lost_weight": 3.75,
+      "reported_gap": "Move is a short loop; no long traversal or turn animation was captured.",
+      "suggested_repair": "Accepted at 3 for the sample; no foot/shadow drift.",
+      "candidate_evidence": [
+        {
+          "path": "delivery/next_cycle/T6/character/char_move.gif",
+          "sha256": "7b3224b3d3f13de0e8f6849240b47058c461ec04e40b1973a2df86647df54bb7"
+        },
+        {
+          "path": "delivery/next_cycle/T5/q03_front.png",
+          "sha256": "554a6f4d89010f189d5348d11cb2224f78f54bab9227d48380faafb87738a31a"
+        },
+        {
+          "path": "delivery/next_cycle/T5/q03_occlusion.json",
+          "sha256": "c305b92bd975b345b2736e50eae3a20fcf682b767f17fb2dbb0b8e373794000c"
+        }
+      ]
+    },
+    {
+      "card": "CHAR",
+      "dimension": "small_scale_clarity",
+      "score": 3,
+      "lost_weight": 2.5,
+      "reported_gap": "Small details merge at this scale, as expected for a 2D sprite; no key defect.",
+      "suggested_repair": "Accepted at 3; character height is within the required 86-130 px.",
+      "candidate_evidence": [
+        {
+          "path": "delivery/next_cycle/T2/sample_no_ui.png",
+          "sha256": "a4a2418473c7aaa1b50a6991566772a9402db34609e38ffc2b1835f605416fe5"
+        },
+        {
+          "path": "delivery/next_cycle/T2/sample_hud.png",
+          "sha256": "96336d88e2d1156b61dbcd31e4dafd653d5d181c665c478ed7350a6377e64d7a"
+        }
+      ]
+    },
+    {
+      "card": "UI",
+      "dimension": "paper_shape",
+      "score": 3,
+      "lost_weight": 5.0,
+      "reported_gap": "The paper is still more opaque and more uniformly bordered than P1's thin translucent sheets.",
+      "suggested_repair": "Accepted at 3; readable and coherent, with a known style gap.",
+      "candidate_evidence": [
+        {
+          "path": "delivery/next_cycle/T2/sample_dialogue.png",
+          "sha256": "f7dcb981a5b1417acef16daf56e4ae3951a120eae0ec942ae69c23592e5b0ed4"
+        },
+        {
+          "path": "delivery/next_cycle/T6/ui_states/title_initial.png",
+          "sha256": "33d614a2fc777ead9b04074ccae7f253bddf505176692a95944a4d205e4c9e7c"
+        }
+      ]
+    },
+    {
+      "card": "UI",
+      "dimension": "doodle_icon_family",
+      "score": 4,
+      "lost_weight": 0.0,
+      "reported_gap": "No key defect; icon stroke weight is consistent across states.",
+      "suggested_repair": "Accepted at 4 with the icon sheet and multiple UI states.",
+      "candidate_evidence": [
+        {
+          "path": "delivery/next_cycle/T6/ui_states/spec_icons.png",
+          "sha256": "f1902818ce3de1ac2d8f307308d314aef334d77450fddd56d8971188bb6fe516"
+        },
+        {
+          "path": "delivery/next_cycle/T2/sample_hud.png",
+          "sha256": "96336d88e2d1156b61dbcd31e4dafd653d5d181c665c478ed7350a6377e64d7a"
+        },
+        {
+          "path": "delivery/next_cycle/T6/ui_states/pause_default.png",
+          "sha256": "502d56c83980e8cf597a12b5a4dc2c9bca1a71ee5ac2178ca890b030e29b51db"
+        }
+      ]
+    },
+    {
+      "card": "UI",
+      "dimension": "typography",
+      "score": 4,
+      "lost_weight": 0.0,
+      "reported_gap": "No key defect; the body still uses a single weight.",
+      "suggested_repair": "Accepted at 4 with title, HUD and dialogue states.",
+      "candidate_evidence": [
+        {
+          "path": "delivery/next_cycle/T2/sample_dialogue.png",
+          "sha256": "f7dcb981a5b1417acef16daf56e4ae3951a120eae0ec942ae69c23592e5b0ed4"
+        },
+        {
+          "path": "delivery/next_cycle/T6/ui_states/title_initial.png",
+          "sha256": "33d614a2fc777ead9b04074ccae7f253bddf505176692a95944a4d205e4c9e7c"
+        },
+        {
+          "path": "delivery/next_cycle/T6/ui_states/hud_3_3.png",
+          "sha256": "9af4970cf714d4012f23d00bb4469e68288e2a53e490a8acaf6eff7560134258"
+        }
+      ]
+    },
+    {
+      "card": "UI",
+      "dimension": "layout_air",
+      "score": 3,
+      "lost_weight": 3.75,
+      "reported_gap": "Panels are larger and more rectangular than P1's airy asymmetric layout.",
+      "suggested_repair": "Accepted at 3; interaction targets are clear and not overlapping.",
+      "candidate_evidence": [
+        {
+          "path": "delivery/next_cycle/T2/sample_hud.png",
+          "sha256": "96336d88e2d1156b61dbcd31e4dafd653d5d181c665c478ed7350a6377e64d7a"
+        },
+        {
+          "path": "delivery/next_cycle/T2/sample_dialogue.png",
+          "sha256": "f7dcb981a5b1417acef16daf56e4ae3951a120eae0ec942ae69c23592e5b0ed4"
+        }
+      ]
+    },
+    {
+      "card": "UI",
+      "dimension": "state_feedback",
+      "score": 4,
+      "lost_weight": 0.0,
+      "reported_gap": "No key defect; every state has a distinct visual response.",
+      "suggested_repair": "Accepted at 4 with the current-build state index and representative state images.",
+      "candidate_evidence": [
+        {
+          "path": "delivery/next_cycle/T6/ui_states/toast_pickup.png",
+          "sha256": "db6c8c9408876e91095e7a7854d42d9643b3b268af6418ff7c977eebe6980e62"
+        },
+        {
+          "path": "delivery/next_cycle/T6/ui_states/loading_failure.png",
+          "sha256": "8550d53cd5a60876bf1861815a3f8cd32c7ada478b3863174cbd3dbed9370465"
+        },
+        {
+          "path": "delivery/next_cycle/T6/ui_states/complete_default.png",
+          "sha256": "9c97ff86c236266abb408e317169f43f2e1f0834128bbc955b53579087f82fcd"
+        },
+        {
+          "path": "delivery/next_cycle/T6/ui_states/interact_disabled.png",
+          "sha256": "9cba5cf46ea63a4cde752813ce54a6e6e4f2f59722899512ee09b81921832d2d"
+        }
+      ]
+    },
+    {
+      "card": "UI",
+      "dimension": "palette_restraint",
+      "score": 4,
+      "lost_weight": 0.0,
+      "reported_gap": "No key defect; accents are limited to status/page/icon details.",
+      "suggested_repair": "Accepted at 4 with multiple UI states.",
+      "candidate_evidence": [
+        {
+          "path": "delivery/next_cycle/T6/ui_states/title_initial.png",
+          "sha256": "33d614a2fc777ead9b04074ccae7f253bddf505176692a95944a4d205e4c9e7c"
+        },
+        {
+          "path": "delivery/next_cycle/T2/sample_dialogue.png",
+          "sha256": "f7dcb981a5b1417acef16daf56e4ae3951a120eae0ec942ae69c23592e5b0ed4"
+        },
+        {
+          "path": "delivery/next_cycle/T6/ui_states/pause_default.png",
+          "sha256": "502d56c83980e8cf597a12b5a4dc2c9bca1a71ee5ac2178ca890b030e29b51db"
+        }
+      ]
+    },
+    {
+      "card": "MIX",
+      "dimension": "visual_language",
+      "score": 3,
+      "lost_weight": 6.25,
+      "reported_gap": "The 2D character and 3D world use different rendering languages; P1 is more uniformly painterly.",
+      "suggested_repair": "Accepted at 3 for the sample; this is a known style gap, not a broken composite.",
+      "candidate_evidence": [
+        {
+          "path": "delivery/next_cycle/T2/sample_no_ui.png",
+          "sha256": "a4a2418473c7aaa1b50a6991566772a9402db34609e38ffc2b1835f605416fe5"
+        },
+        {
+          "path": "delivery/next_cycle/T2/sample_dialogue.png",
+          "sha256": "f7dcb981a5b1417acef16daf56e4ae3951a120eae0ec942ae69c23592e5b0ed4"
+        },
+        {
+          "path": "delivery/next_cycle/T6/assets/MAP001.png",
+          "sha256": "d3fe7599381bda16570f1f5d68d45c4bf6a51e14f583287456c310d4aa8a166d"
+        }
+      ]
+    },
+    {
+      "card": "MIX",
+      "dimension": "color_light_coherence",
+      "score": 4,
+      "lost_weight": 0.0,
+      "reported_gap": "No key defect; P1 has richer bounce light.",
+      "suggested_repair": "Accepted at 4 with measurement and multiple views.",
+      "candidate_evidence": [
+        {
+          "path": "delivery/next_cycle/T4/lighting_comparison_final4.png",
+          "sha256": "48d357af397496fa1474cd0b1c48c28a5cb981e2aa39e9710e9b7bd84db6c6e0"
+        },
+        {
+          "path": "delivery/next_cycle/T2/sample_no_ui.png",
+          "sha256": "a4a2418473c7aaa1b50a6991566772a9402db34609e38ffc2b1835f605416fe5"
+        },
+        {
+          "path": "delivery/next_cycle/T6/ui_states/hud_3_3.png",
+          "sha256": "9af4970cf714d4012f23d00bb4469e68288e2a53e490a8acaf6eff7560134258"
+        }
+      ]
+    },
+    {
+      "card": "MIX",
+      "dimension": "grounding_occlusion",
+      "score": 4,
+      "lost_weight": 0.0,
+      "reported_gap": "No key defect; partial-edge occlusion at other props is not exhaustively tested.",
+      "suggested_repair": "Accepted at 4 with front/behind captures and the head-region metric.",
+      "candidate_evidence": [
+        {
+          "path": "delivery/next_cycle/T5/q03_front.png",
+          "sha256": "554a6f4d89010f189d5348d11cb2224f78f54bab9227d48380faafb87738a31a"
+        },
+        {
+          "path": "delivery/next_cycle/T5/q03_behind.png",
+          "sha256": "dbb3a5f87b4e529a195aef311c7703dac14238cfbd1cb8977a085d24d0e89506"
+        },
+        {
+          "path": "delivery/next_cycle/T6/character/char_move.gif",
+          "sha256": "7b3224b3d3f13de0e8f6849240b47058c461ec04e40b1973a2df86647df54bb7"
+        }
+      ]
+    },
+    {
+      "card": "MIX",
+      "dimension": "focus_readability",
+      "score": 4,
+      "lost_weight": 0.0,
+      "reported_gap": "No key defect in the captured states.",
+      "suggested_repair": "Accepted at 4 with HUD/dialogue and landscape viewport evidence.",
+      "candidate_evidence": [
+        {
+          "path": "delivery/next_cycle/T2/sample_hud.png",
+          "sha256": "96336d88e2d1156b61dbcd31e4dafd653d5d181c665c478ed7350a6377e64d7a"
+        },
+        {
+          "path": "delivery/next_cycle/T2/sample_dialogue.png",
+          "sha256": "f7dcb981a5b1417acef16daf56e4ae3951a120eae0ec942ae69c23592e5b0ed4"
+        },
+        {
+          "path": "delivery/next_cycle/T5/q09_landscape_1280x720.png",
+          "sha256": "01ea6e04542b95b1f58d597eb002d0ceaeaff3b6671b9e1847bb8e852cce4b52"
+        }
+      ]
+    },
+    {
+      "card": "MIX",
+      "dimension": "world_style_coherence",
+      "score": 3,
+      "lost_weight": 3.75,
+      "reported_gap": "Distant crown band and some planter silhouettes remain more geometric than P1.",
+      "suggested_repair": "Accepted at 3; coherent, with a known background-detail gap.",
+      "candidate_evidence": [
+        {
+          "path": "delivery/next_cycle/T6/assets/MAP001.png",
+          "sha256": "d3fe7599381bda16570f1f5d68d45c4bf6a51e14f583287456c310d4aa8a166d"
+        },
+        {
+          "path": "delivery/next_cycle/T2/sample_no_ui.png",
+          "sha256": "a4a2418473c7aaa1b50a6991566772a9402db34609e38ffc2b1835f605416fe5"
+        },
+        {
+          "path": "delivery/next_cycle/T6/ui_states/pause_default.png",
+          "sha256": "502d56c83980e8cf597a12b5a4dc2c9bca1a71ee5ac2178ca890b030e29b51db"
+        }
+      ]
+    }
+  ],
+  "priority_repairs": [],
+  "next_action": "Submit complete candidate for final review; do not sign approval",
+  "limitation": "Computes reported scores and validates evidence/mechanical consistency; cannot judge whether visual observations or claimed measurements are truthful."
+}

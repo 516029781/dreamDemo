@@ -1,0 +1,2892 @@
+{
+  "records": 394,
+  "mismatch_count": 18,
+  "mismatches": [
+    {
+      "path": "art/full/source/layout/MAP001_courtyard.blend",
+      "role": "map_editable_source",
+      "expected": "ada7e0eca83ccec87698b39beb04e382378bc938ab68d5499e8ccf3d556055e8",
+      "actual": "721028c67b69133263a5982d19ceb0867aeedf164ff89a108ffbc833fa164f7c",
+      "match": false
+    },
+    {
+      "path": "art/full/source/layout/MAP001_courtyard.blend",
+      "role": "catalog_member:MAP001:0",
+      "expected": "ada7e0eca83ccec87698b39beb04e382378bc938ab68d5499e8ccf3d556055e8",
+      "actual": "721028c67b69133263a5982d19ceb0867aeedf164ff89a108ffbc833fa164f7c",
+      "match": false
+    },
+    {
+      "path": "art/full/source/layout/MAP001_courtyard.glb",
+      "role": "catalog_member:MAP001:1",
+      "expected": "00483c58404d6b4b2871cd67d4c7f01bc542ce43b88d7d96a0d64e21491023bc",
+      "actual": "3e712dae2c1e95e84f28a2b77e60cf5f67f3647c3ad26d899e1c970c46241b63",
+      "match": false
+    },
+    {
+      "path": "art/full/source/layout/layout.json",
+      "role": "catalog_member:MAP001:2",
+      "expected": "919685e86fc4716549649b69dbd32e3813cbbc55a3eb4c328300e3f92b0133a0",
+      "actual": "2ebe8d23b91bfdbc963f4b2379d83ce46ab648ad3c255aac40ea57fc2a2a8def",
+      "match": false
+    },
+    {
+      "path": "art/full/previews/layout/MAP001_courtyard.png",
+      "role": "catalog_member:MAP001:5",
+      "expected": "0d46319de902ac21f44d5a99f1d1e217588d97e69db7fc3ac9afe640a55edaac",
+      "actual": "6a679e71212f5aad84f82add4f46784012472ec6f3c2a693a4e34d5166f6908e",
+      "match": false
+    },
+    {
+      "path": "art/full/previews/layout/MAP001_topdown.png",
+      "role": "catalog_member:MAP001:6",
+      "expected": "03a77b5b71adb6c5ac68445fa2844b39f07da7b1241a4e42ca73313a7c17efaf",
+      "actual": "73e16ec7142507edb02a575d9ac97a70246035118ec71bb3e2598c08c2e02b0f",
+      "match": false
+    },
+    {
+      "path": "art/full/source/environment/ENV006_autumn_tree.blend",
+      "role": "catalog_member:ENV006:0",
+      "expected": "4e4684428a98df07bef1a8f7da51a157dae22c29ee5de0b2c09e65c31187ad48",
+      "actual": "e20fc103d080601a85b4a5508c1c9505e12342773b94b3c0be43bd63f42f84ed",
+      "match": false
+    },
+    {
+      "path": "art/full/source/environment/ENV006_autumn_tree.glb",
+      "role": "catalog_member:ENV006:1",
+      "expected": "c200eef8d2a6bec38588bf2f0bf28a7b78dac88776152790fea4e9c8d6779dfe",
+      "actual": "1946103ec7989711806c5a3dd920461add97102cbf520f10c1a48e8938d116d1",
+      "match": false
+    },
+    {
+      "path": "art/full/previews/environment/ENV006_autumn_tree.png",
+      "role": "catalog_member:ENV006:4",
+      "expected": "64e2c3db05d13467f593f85bebe28a36218f21a12656830cfcaf5e531dec709d",
+      "actual": "13cee225bd44cc87ad26b4d6f8f40bc477dbf4774cad533b9eb15245e9974b7c",
+      "match": false
+    },
+    {
+      "path": "art/full/source/plants/ENV009_shrub_a.blend",
+      "role": "catalog_member:ENV009:0",
+      "expected": "d6acc58bef670eeb432ded789f93080ce649d2bc8e4dfeae694930319b0fcb5b",
+      "actual": "2329dfd71d2f31cabc9fc6bf41434c8c64ecf1840b2d1d5377bf49d668611cb2",
+      "match": false
+    },
+    {
+      "path": "art/full/source/plants/ENV009_shrub_a.glb",
+      "role": "catalog_member:ENV009:1",
+      "expected": "3cffd66c2a6538225a54b9406cd5fec3e746eacba6b431f805986d8114ffb155",
+      "actual": "648897dfe05e23feaa1082018ae332f09b78c75c6a7e2d45245f3d520e3191a4",
+      "match": false
+    },
+    {
+      "path": "art/full/previews/plants/ENV009_shrub_a.png",
+      "role": "catalog_member:ENV009:4",
+      "expected": "58203413816e31964a49a23316f8d8b9327e7187d9a89c0d0a5d4250e503bbc2",
+      "actual": "b40d62f7b5e51ffad2571e9c4c305125a0f8c6f53e83230b81f8efa01a817237",
+      "match": false
+    },
+    {
+      "path": "art/full/source/plants/ENV010_shrub_b.blend",
+      "role": "catalog_member:ENV010:0",
+      "expected": "e82ac1c14d14b67cb82a33a45060098d2c89b73c7ecd920235ece693b6aad1f2",
+      "actual": "295f45e2241653063e4ffb06bbd0a1b966199ec5d1e6d03435a40c43197e1fff",
+      "match": false
+    },
+    {
+      "path": "art/full/source/plants/ENV010_shrub_b.glb",
+      "role": "catalog_member:ENV010:1",
+      "expected": "6d7fc9482a41fd56f68363f38c6d540c09fe6ba56e0e4ed23229a369d659aec1",
+      "actual": "00e92d282a3034f4a7f949760df142195f3164d060365b500c0d6c7f759914ac",
+      "match": false
+    },
+    {
+      "path": "art/full/previews/plants/ENV010_shrub_b.png",
+      "role": "catalog_member:ENV010:4",
+      "expected": "d068e5841e7102d51f548de5c33dc5ceaaf5357d5afed081f3c24a0886a6a89a",
+      "actual": "cfde4b891754b1bac578a9f81822c50836c22b40ca83087fba198e6aa0a34362",
+      "match": false
+    },
+    {
+      "path": "art/full/source/plants/ENV011_dry_grass.blend",
+      "role": "catalog_member:ENV011:0",
+      "expected": "67c9990781b27be3c8872c897dd2b08d43e3e063a7326fc362205a07ee82278b",
+      "actual": "4e40b168e8f24b6546b0ed770464bb347f96555b8329f497d8d48b0cf2e48cf2",
+      "match": false
+    },
+    {
+      "path": "art/full/source/plants/ENV011_dry_grass.glb",
+      "role": "catalog_member:ENV011:1",
+      "expected": "7e05d32edf980b55e6f0038ac11712a005153b6854fe60ab5324a062a3108196",
+      "actual": "06dc92d814dbaa8e7483afb824d2da07c9007b3a6e95d8553a5ad20fb488d095",
+      "match": false
+    },
+    {
+      "path": "art/full/previews/plants/ENV011_dry_grass.png",
+      "role": "catalog_member:ENV011:4",
+      "expected": "2df89e844f5768e19617099504446cf7b1f2e007d51b40ab663a9dc2a89340b6",
+      "actual": "c3289fc078a04bec12eb82dad5b58b708b2bed098e5d94e56071f12aef51f190",
+      "match": false
+    }
+  ],
+  "records_all": [
+    {
+      "path": "art/phase1/character_playback_1015/clip_inventory.json",
+      "role": "clip_inventory",
+      "expected": "b3a5ad698976dc20ec976f1c39b5778cd00a19572de481ea7ab29bdf10fddb00",
+      "actual": "b3a5ad698976dc20ec976f1c39b5778cd00a19572de481ea7ab29bdf10fddb00",
+      "match": true
+    },
+    {
+      "path": "art/phase1/character_playback_1015/idle_preview.png",
+      "role": "idle_preview",
+      "expected": "a94cbf779a7942493ba750c1363f457c629031b54a89d3d99f11e382b8481bd6",
+      "actual": "a94cbf779a7942493ba750c1363f457c629031b54a89d3d99f11e382b8481bd6",
+      "match": true
+    },
+    {
+      "path": "art/phase1/character_playback_1015/move_preview.gif",
+      "role": "move_preview",
+      "expected": "015db46945c373c40c066fb33ec4de730f6123db07acce7550e1ba1258e41cd1",
+      "actual": "015db46945c373c40c066fb33ec4de730f6123db07acce7550e1ba1258e41cd1",
+      "match": true
+    },
+    {
+      "path": "art/phase1/character_playback_1015/reference_comparison.png",
+      "role": "reference_comparison",
+      "expected": "eb88a5ffd91d62049e2a0b80bd75790bc8f34335a8591e245046d45f095ae98a",
+      "actual": "eb88a5ffd91d62049e2a0b80bd75790bc8f34335a8591e245046d45f095ae98a",
+      "match": true
+    },
+    {
+      "path": "art/phase1/character_playback_1015/runtime_log.txt",
+      "role": "runtime_log",
+      "expected": "1e27cf05c89fa550760e1415c6e1986e8dfc111f75fbd18f577d804fd471a900",
+      "actual": "1e27cf05c89fa550760e1415c6e1986e8dfc111f75fbd18f577d804fd471a900",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/scene_gameplay_1280x720.png",
+      "role": "scene_screenshot",
+      "expected": "78b2bcfa2c8321dc19bc60c50736cebcfc5e0f15ac3a2c7196b412b6b2b5d07f",
+      "actual": "78b2bcfa2c8321dc19bc60c50736cebcfc5e0f15ac3a2c7196b412b6b2b5d07f",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/dialogue_npc_1280x720.png",
+      "role": "dialogue_screenshot",
+      "expected": "7475591963df4e3fe87b688ca1f1cf389de1f20b00003acaec63f62c8cbc8430",
+      "actual": "7475591963df4e3fe87b688ca1f1cf389de1f20b00003acaec63f62c8cbc8430",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/demo_recording.gif",
+      "role": "demo_recording",
+      "expected": "a3fe4faeac068284f2792f93af5b9b44eddeab5fb1f9176082037c8f28e91ff2",
+      "actual": "a3fe4faeac068284f2792f93af5b9b44eddeab5fb1f9176082037c8f28e91ff2",
+      "match": true
+    },
+    {
+      "path": "delivery/courtyard_scene_demo_sources_v3.zip",
+      "role": "engine_sources",
+      "expected": "4c1c8cba06e36ef71f3f874068c53c02fa2931f5da4014cbacc3f2ed66040c12",
+      "actual": "4c1c8cba06e36ef71f3f874068c53c02fa2931f5da4014cbacc3f2ed66040c12",
+      "match": true
+    },
+    {
+      "path": "delivery/RUN_DEMO.md",
+      "role": "run_instructions",
+      "expected": "cb7200a5ca429b429149b04ef72b311a9a4c5000a09afb0099d9a4f3ceb6fdef",
+      "actual": "cb7200a5ca429b429149b04ef72b311a9a4c5000a09afb0099d9a4f3ceb6fdef",
+      "match": true
+    },
+    {
+      "path": "art/full/source/layout/MAP001_courtyard.blend",
+      "role": "map_editable_source",
+      "expected": "ada7e0eca83ccec87698b39beb04e382378bc938ab68d5499e8ccf3d556055e8",
+      "actual": "721028c67b69133263a5982d19ceb0867aeedf164ff89a108ffbc833fa164f7c",
+      "match": false
+    },
+    {
+      "path": "art/full/ui/components/paper_panel.svg",
+      "role": "ui_editable_source",
+      "expected": "4f518b89b5df3250f74df9d9ef0015135da9fdbc114eed1cac5b4a65893f326d",
+      "actual": "4f518b89b5df3250f74df9d9ef0015135da9fdbc114eed1cac5b4a65893f326d",
+      "match": true
+    },
+    {
+      "path": "art/full/art_complete_catalog.json",
+      "role": "full_art_catalog",
+      "expected": "96f9e52e2acd1cf95bbcfef95c3a5f00204628a0f0f452be832552942636e248",
+      "actual": "96f9e52e2acd1cf95bbcfef95c3a5f00204628a0f0f452be832552942636e248",
+      "match": true
+    },
+    {
+      "path": "art/full/source/layout/MAP001_courtyard.blend",
+      "role": "catalog_member:MAP001:0",
+      "expected": "ada7e0eca83ccec87698b39beb04e382378bc938ab68d5499e8ccf3d556055e8",
+      "actual": "721028c67b69133263a5982d19ceb0867aeedf164ff89a108ffbc833fa164f7c",
+      "match": false
+    },
+    {
+      "path": "art/full/source/layout/MAP001_courtyard.glb",
+      "role": "catalog_member:MAP001:1",
+      "expected": "00483c58404d6b4b2871cd67d4c7f01bc542ce43b88d7d96a0d64e21491023bc",
+      "actual": "3e712dae2c1e95e84f28a2b77e60cf5f67f3647c3ad26d899e1c970c46241b63",
+      "match": false
+    },
+    {
+      "path": "art/full/source/layout/layout.json",
+      "role": "catalog_member:MAP001:2",
+      "expected": "919685e86fc4716549649b69dbd32e3813cbbc55a3eb4c328300e3f92b0133a0",
+      "actual": "2ebe8d23b91bfdbc963f4b2379d83ce46ab648ad3c255aac40ea57fc2a2a8def",
+      "match": false
+    },
+    {
+      "path": "art/full/engine_viewer_state_map.json",
+      "role": "catalog_member:MAP001:3",
+      "expected": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "actual": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/assets/MAP001.png",
+      "role": "catalog_member:MAP001:4",
+      "expected": "b6bb5503386679c808ea7983d2a5326665c19625501e26ac87e49b97573538ef",
+      "actual": "b6bb5503386679c808ea7983d2a5326665c19625501e26ac87e49b97573538ef",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/layout/MAP001_courtyard.png",
+      "role": "catalog_member:MAP001:5",
+      "expected": "0d46319de902ac21f44d5a99f1d1e217588d97e69db7fc3ac9afe640a55edaac",
+      "actual": "6a679e71212f5aad84f82add4f46784012472ec6f3c2a693a4e34d5166f6908e",
+      "match": false
+    },
+    {
+      "path": "art/full/previews/layout/MAP001_topdown.png",
+      "role": "catalog_member:MAP001:6",
+      "expected": "03a77b5b71adb6c5ac68445fa2844b39f07da7b1241a4e42ca73313a7c17efaf",
+      "actual": "73e16ec7142507edb02a575d9ac97a70246035118ec71bb3e2598c08c2e02b0f",
+      "match": false
+    },
+    {
+      "path": "art/full/reviews/MAP001.json",
+      "role": "catalog_member:MAP001:7",
+      "expected": "b9156c21951763390117df7dbaf1c4043e9ee8c4d97a457b4fe4998fc6bcace0",
+      "actual": "b9156c21951763390117df7dbaf1c4043e9ee8c4d97a457b4fe4998fc6bcace0",
+      "match": true
+    },
+    {
+      "path": "art/full/source/environment/ENV001_stone_paving.blend",
+      "role": "catalog_member:ENV001:0",
+      "expected": "e61744ad72edc1b27700b10350c033f53766d1149d9b258517fb48476de4278e",
+      "actual": "e61744ad72edc1b27700b10350c033f53766d1149d9b258517fb48476de4278e",
+      "match": true
+    },
+    {
+      "path": "art/full/source/environment/ENV001_stone_paving.glb",
+      "role": "catalog_member:ENV001:1",
+      "expected": "acde61c24ad7b7520d97a98d345320b7a5a934210a87f142c3a57faaadc318d0",
+      "actual": "acde61c24ad7b7520d97a98d345320b7a5a934210a87f142c3a57faaadc318d0",
+      "match": true
+    },
+    {
+      "path": "tools/blender/env001_stone_paving.py",
+      "role": "catalog_member:ENV001:2",
+      "expected": "0bf0a4d3cdd524fc9bcc63bfca4b873f4878741806f6dce3bf7c6da79cef5b33",
+      "actual": "0bf0a4d3cdd524fc9bcc63bfca4b873f4878741806f6dce3bf7c6da79cef5b33",
+      "match": true
+    },
+    {
+      "path": "art/full/engine_viewer_state_map.json",
+      "role": "catalog_member:ENV001:3",
+      "expected": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "actual": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/assets/ENV001.png",
+      "role": "catalog_member:ENV001:4",
+      "expected": "80797677744112eb72d5950c6a1adf2d3a2e95d4bbb9ab5649c3cd812e0794f8",
+      "actual": "80797677744112eb72d5950c6a1adf2d3a2e95d4bbb9ab5649c3cd812e0794f8",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/environment/ENV001_stone_paving.png",
+      "role": "catalog_member:ENV001:5",
+      "expected": "b62ae8dba5b887047d5fe437d7ccae2309660fecd0b5b6344ead65acaea0ba16",
+      "actual": "b62ae8dba5b887047d5fe437d7ccae2309660fecd0b5b6344ead65acaea0ba16",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/environment/ENV001_stone_paving_tiled2x2.png",
+      "role": "catalog_member:ENV001:6",
+      "expected": "f1572752017a3003688c58da54c7e2ccd9a0da8d4b0bfada41577e5d9fe8d7b7",
+      "actual": "f1572752017a3003688c58da54c7e2ccd9a0da8d4b0bfada41577e5d9fe8d7b7",
+      "match": true
+    },
+    {
+      "path": "art/full/reviews/ENV001.json",
+      "role": "catalog_member:ENV001:7",
+      "expected": "a0339eb5e7e4754355191bdd134a2e04e2eab5772bc71198360365dc2fa6bff7",
+      "actual": "a0339eb5e7e4754355191bdd134a2e04e2eab5772bc71198360365dc2fa6bff7",
+      "match": true
+    },
+    {
+      "path": "art/full/source/environment/ENV002_curb.blend",
+      "role": "catalog_member:ENV002:0",
+      "expected": "d122fd6f4852c1062245c32397b6596d0f13bc3b0e8a726a238c7c0fa94fe335",
+      "actual": "d122fd6f4852c1062245c32397b6596d0f13bc3b0e8a726a238c7c0fa94fe335",
+      "match": true
+    },
+    {
+      "path": "art/full/source/environment/ENV002_curb.glb",
+      "role": "catalog_member:ENV002:1",
+      "expected": "4f00cf89ccfe51208f538274d9e5c1f1007596ef20d86087187cb4fe58c99260",
+      "actual": "4f00cf89ccfe51208f538274d9e5c1f1007596ef20d86087187cb4fe58c99260",
+      "match": true
+    },
+    {
+      "path": "art/full/engine_viewer_state_map.json",
+      "role": "catalog_member:ENV002:2",
+      "expected": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "actual": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/assets/ENV002.png",
+      "role": "catalog_member:ENV002:3",
+      "expected": "dbe139dc13ff558462de6e69efbd63cc7b0df3dab39ea42c9bb4802005a45fa7",
+      "actual": "dbe139dc13ff558462de6e69efbd63cc7b0df3dab39ea42c9bb4802005a45fa7",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/environment/ENV002_curb.png",
+      "role": "catalog_member:ENV002:4",
+      "expected": "0415a429f0a21b889cdbee2a81e975bd01ff94efd0ac7f9f4fb15df3a786968f",
+      "actual": "0415a429f0a21b889cdbee2a81e975bd01ff94efd0ac7f9f4fb15df3a786968f",
+      "match": true
+    },
+    {
+      "path": "art/full/reviews/ENV002.json",
+      "role": "catalog_member:ENV002:5",
+      "expected": "8a7e214802439792ffc1baf12d02697b6dd50a26804ea9cb7d5cc267dfeeb638",
+      "actual": "8a7e214802439792ffc1baf12d02697b6dd50a26804ea9cb7d5cc267dfeeb638",
+      "match": true
+    },
+    {
+      "path": "art/full/source/environment/ENV003_low_wall.blend",
+      "role": "catalog_member:ENV003:0",
+      "expected": "d3d13d437d7472b460d382ddef3b4c4537b2301ff5fd9539a2758cf9cece6aa8",
+      "actual": "d3d13d437d7472b460d382ddef3b4c4537b2301ff5fd9539a2758cf9cece6aa8",
+      "match": true
+    },
+    {
+      "path": "art/full/source/environment/ENV003_low_wall.glb",
+      "role": "catalog_member:ENV003:1",
+      "expected": "565a5f089ecab655c01c345569f31dd93a3b23d02ff2836582665594868966f2",
+      "actual": "565a5f089ecab655c01c345569f31dd93a3b23d02ff2836582665594868966f2",
+      "match": true
+    },
+    {
+      "path": "art/full/engine_viewer_state_map.json",
+      "role": "catalog_member:ENV003:2",
+      "expected": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "actual": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/assets/ENV003.png",
+      "role": "catalog_member:ENV003:3",
+      "expected": "74d1a67332b082f9af0ec2a59b8b884b2625776d75823d0559becb91f5df2628",
+      "actual": "74d1a67332b082f9af0ec2a59b8b884b2625776d75823d0559becb91f5df2628",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/environment/ENV003_low_wall.png",
+      "role": "catalog_member:ENV003:4",
+      "expected": "1d8b5e29fe4555c5e13466fe1b3b3c1d0cecd5594f9997c22f0ee1e395e9b734",
+      "actual": "1d8b5e29fe4555c5e13466fe1b3b3c1d0cecd5594f9997c22f0ee1e395e9b734",
+      "match": true
+    },
+    {
+      "path": "art/full/reviews/ENV003.json",
+      "role": "catalog_member:ENV003:5",
+      "expected": "aa2f232e95de2b414f54c5c480b9de4a8f044479a32328658dc0efef4e6be57e",
+      "actual": "aa2f232e95de2b414f54c5c480b9de4a8f044479a32328658dc0efef4e6be57e",
+      "match": true
+    },
+    {
+      "path": "art/full/source/environment/ENV004_railing.blend",
+      "role": "catalog_member:ENV004:0",
+      "expected": "95bcb3681a64cd6de8a39e8468e0036482138fca4ff58dae6b6f97fddf64a424",
+      "actual": "95bcb3681a64cd6de8a39e8468e0036482138fca4ff58dae6b6f97fddf64a424",
+      "match": true
+    },
+    {
+      "path": "art/full/source/environment/ENV004_railing.glb",
+      "role": "catalog_member:ENV004:1",
+      "expected": "73517756373dd0cbd8d8734d8484c6486b6a5e1bb11421c4a61f8ad310682cf0",
+      "actual": "73517756373dd0cbd8d8734d8484c6486b6a5e1bb11421c4a61f8ad310682cf0",
+      "match": true
+    },
+    {
+      "path": "art/full/engine_viewer_state_map.json",
+      "role": "catalog_member:ENV004:2",
+      "expected": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "actual": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/assets/ENV004.png",
+      "role": "catalog_member:ENV004:3",
+      "expected": "74d1a67332b082f9af0ec2a59b8b884b2625776d75823d0559becb91f5df2628",
+      "actual": "74d1a67332b082f9af0ec2a59b8b884b2625776d75823d0559becb91f5df2628",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/environment/ENV004_railing.png",
+      "role": "catalog_member:ENV004:4",
+      "expected": "2e6446fb40cd497b38951a7ec97bf3b3dfd5eb1a9fdecdfc26d2d35b7c0d12cd",
+      "actual": "2e6446fb40cd497b38951a7ec97bf3b3dfd5eb1a9fdecdfc26d2d35b7c0d12cd",
+      "match": true
+    },
+    {
+      "path": "art/full/reviews/ENV004.json",
+      "role": "catalog_member:ENV004:5",
+      "expected": "b40f187732d27510f97a46bc8d99ad372204f0240d649c2d9c428fd547235f28",
+      "actual": "b40f187732d27510f97a46bc8d99ad372204f0240d649c2d9c428fd547235f28",
+      "match": true
+    },
+    {
+      "path": "art/full/source/environment/ENV005_steps.blend",
+      "role": "catalog_member:ENV005:0",
+      "expected": "3a78255d315fe276c86a2fa820f798cdf7f1e1a110b3a2497419002d3cc5cb54",
+      "actual": "3a78255d315fe276c86a2fa820f798cdf7f1e1a110b3a2497419002d3cc5cb54",
+      "match": true
+    },
+    {
+      "path": "art/full/source/environment/ENV005_steps.glb",
+      "role": "catalog_member:ENV005:1",
+      "expected": "1c229e04c0f171a13e15d416f609b6a1ff3fd9f09a64edb7f21c5ea2f0909b65",
+      "actual": "1c229e04c0f171a13e15d416f609b6a1ff3fd9f09a64edb7f21c5ea2f0909b65",
+      "match": true
+    },
+    {
+      "path": "art/full/engine_viewer_state_map.json",
+      "role": "catalog_member:ENV005:2",
+      "expected": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "actual": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/assets/ENV005.png",
+      "role": "catalog_member:ENV005:3",
+      "expected": "862e5f62d9c90204a57460751796f736feaa757edcf5220d6898fe9c075bd68b",
+      "actual": "862e5f62d9c90204a57460751796f736feaa757edcf5220d6898fe9c075bd68b",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/environment/ENV005_steps.png",
+      "role": "catalog_member:ENV005:4",
+      "expected": "739232ac50f664e07b7059343d89b8cdc8044357c2ab371963b9222bc1dde275",
+      "actual": "739232ac50f664e07b7059343d89b8cdc8044357c2ab371963b9222bc1dde275",
+      "match": true
+    },
+    {
+      "path": "art/full/reviews/ENV005.json",
+      "role": "catalog_member:ENV005:5",
+      "expected": "aa07764ac31aad2219514ac09b0146ab2300166c503fe1745bd2e52844a3dfde",
+      "actual": "aa07764ac31aad2219514ac09b0146ab2300166c503fe1745bd2e52844a3dfde",
+      "match": true
+    },
+    {
+      "path": "art/full/source/environment/ENV006_autumn_tree.blend",
+      "role": "catalog_member:ENV006:0",
+      "expected": "4e4684428a98df07bef1a8f7da51a157dae22c29ee5de0b2c09e65c31187ad48",
+      "actual": "e20fc103d080601a85b4a5508c1c9505e12342773b94b3c0be43bd63f42f84ed",
+      "match": false
+    },
+    {
+      "path": "art/full/source/environment/ENV006_autumn_tree.glb",
+      "role": "catalog_member:ENV006:1",
+      "expected": "c200eef8d2a6bec38588bf2f0bf28a7b78dac88776152790fea4e9c8d6779dfe",
+      "actual": "1946103ec7989711806c5a3dd920461add97102cbf520f10c1a48e8938d116d1",
+      "match": false
+    },
+    {
+      "path": "art/full/engine_viewer_state_map.json",
+      "role": "catalog_member:ENV006:2",
+      "expected": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "actual": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/assets/ENV006.png",
+      "role": "catalog_member:ENV006:3",
+      "expected": "d93efcb53d6d739a83039d748cfa8fc061ca41173a16242b83d385c63783b3bc",
+      "actual": "d93efcb53d6d739a83039d748cfa8fc061ca41173a16242b83d385c63783b3bc",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/environment/ENV006_autumn_tree.png",
+      "role": "catalog_member:ENV006:4",
+      "expected": "64e2c3db05d13467f593f85bebe28a36218f21a12656830cfcaf5e531dec709d",
+      "actual": "13cee225bd44cc87ad26b4d6f8f40bc477dbf4774cad533b9eb15245e9974b7c",
+      "match": false
+    },
+    {
+      "path": "art/full/reviews/ENV006.json",
+      "role": "catalog_member:ENV006:5",
+      "expected": "243d2f6dd85011b4b60675ce16b48f2c400125acf986d0f10c976ed1b645f5b6",
+      "actual": "243d2f6dd85011b4b60675ce16b48f2c400125acf986d0f10c976ed1b645f5b6",
+      "match": true
+    },
+    {
+      "path": "art/full/source/environment/ENV007_ring_planter.blend",
+      "role": "catalog_member:ENV007:0",
+      "expected": "8d49023e162f303a7579fbfea57e5a53bbb25a3685109b5ca7dfaddbce70abc8",
+      "actual": "8d49023e162f303a7579fbfea57e5a53bbb25a3685109b5ca7dfaddbce70abc8",
+      "match": true
+    },
+    {
+      "path": "art/full/source/environment/ENV007_ring_planter.glb",
+      "role": "catalog_member:ENV007:1",
+      "expected": "a889d35864eb62b502604de1685f5c856bc1a1297897d77c6e69114007f9bd73",
+      "actual": "a889d35864eb62b502604de1685f5c856bc1a1297897d77c6e69114007f9bd73",
+      "match": true
+    },
+    {
+      "path": "art/full/engine_viewer_state_map.json",
+      "role": "catalog_member:ENV007:2",
+      "expected": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "actual": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/assets/ENV007.png",
+      "role": "catalog_member:ENV007:3",
+      "expected": "4dce7e92ecb744a39a655eea799a7b025ba89c134ba38651709f55ebbff878c4",
+      "actual": "4dce7e92ecb744a39a655eea799a7b025ba89c134ba38651709f55ebbff878c4",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/environment/ENV007_ring_planter.png",
+      "role": "catalog_member:ENV007:4",
+      "expected": "b154d942a9c12d695b2ebf87837b051bce70e78bf0c76ad08e112be3592cd6a3",
+      "actual": "b154d942a9c12d695b2ebf87837b051bce70e78bf0c76ad08e112be3592cd6a3",
+      "match": true
+    },
+    {
+      "path": "art/full/reviews/ENV007.json",
+      "role": "catalog_member:ENV007:5",
+      "expected": "c461983d49f93544b449724f823c001663182bb6aa19d958d25d825697341207",
+      "actual": "c461983d49f93544b449724f823c001663182bb6aa19d958d25d825697341207",
+      "match": true
+    },
+    {
+      "path": "art/full/source/environment/ENV008_side_planter.blend",
+      "role": "catalog_member:ENV008:0",
+      "expected": "2958b2b226f34578b4d2f5e2621f87513fccb869575bb826f4479a440a622548",
+      "actual": "2958b2b226f34578b4d2f5e2621f87513fccb869575bb826f4479a440a622548",
+      "match": true
+    },
+    {
+      "path": "art/full/source/environment/ENV008_side_planter.glb",
+      "role": "catalog_member:ENV008:1",
+      "expected": "bde8e1f6c1483ac04c2025f7263cc36744a3bb08b77044186509578354ae6eed",
+      "actual": "bde8e1f6c1483ac04c2025f7263cc36744a3bb08b77044186509578354ae6eed",
+      "match": true
+    },
+    {
+      "path": "art/full/engine_viewer_state_map.json",
+      "role": "catalog_member:ENV008:2",
+      "expected": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "actual": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/assets/ENV008.png",
+      "role": "catalog_member:ENV008:3",
+      "expected": "7383e2ec11aad6aa8528cb92aa1388d6298fe12be4d7adf53e20982ed90a23be",
+      "actual": "7383e2ec11aad6aa8528cb92aa1388d6298fe12be4d7adf53e20982ed90a23be",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/environment/ENV008_side_planter.png",
+      "role": "catalog_member:ENV008:4",
+      "expected": "ce435d96df6c06f10bdff0c013923b11544350f2efb92be22097d42ee116b253",
+      "actual": "ce435d96df6c06f10bdff0c013923b11544350f2efb92be22097d42ee116b253",
+      "match": true
+    },
+    {
+      "path": "art/full/reviews/ENV008.json",
+      "role": "catalog_member:ENV008:5",
+      "expected": "7bac443c9c867a6b91b1d64e4c2dea41387782075b3ded715df91c9a750e2a7b",
+      "actual": "7bac443c9c867a6b91b1d64e4c2dea41387782075b3ded715df91c9a750e2a7b",
+      "match": true
+    },
+    {
+      "path": "art/full/source/plants/ENV009_shrub_a.blend",
+      "role": "catalog_member:ENV009:0",
+      "expected": "d6acc58bef670eeb432ded789f93080ce649d2bc8e4dfeae694930319b0fcb5b",
+      "actual": "2329dfd71d2f31cabc9fc6bf41434c8c64ecf1840b2d1d5377bf49d668611cb2",
+      "match": false
+    },
+    {
+      "path": "art/full/source/plants/ENV009_shrub_a.glb",
+      "role": "catalog_member:ENV009:1",
+      "expected": "3cffd66c2a6538225a54b9406cd5fec3e746eacba6b431f805986d8114ffb155",
+      "actual": "648897dfe05e23feaa1082018ae332f09b78c75c6a7e2d45245f3d520e3191a4",
+      "match": false
+    },
+    {
+      "path": "art/full/engine_viewer_state_map.json",
+      "role": "catalog_member:ENV009:2",
+      "expected": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "actual": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/assets/ENV009.png",
+      "role": "catalog_member:ENV009:3",
+      "expected": "5d863aa74499bfb071831c7ef97d3bd7bd030c41b2eb8aada1f65d056855d133",
+      "actual": "5d863aa74499bfb071831c7ef97d3bd7bd030c41b2eb8aada1f65d056855d133",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/plants/ENV009_shrub_a.png",
+      "role": "catalog_member:ENV009:4",
+      "expected": "58203413816e31964a49a23316f8d8b9327e7187d9a89c0d0a5d4250e503bbc2",
+      "actual": "b40d62f7b5e51ffad2571e9c4c305125a0f8c6f53e83230b81f8efa01a817237",
+      "match": false
+    },
+    {
+      "path": "art/full/reviews/ENV009.json",
+      "role": "catalog_member:ENV009:5",
+      "expected": "961964b874d235bc010cc253f0bbaae24ffc66de26c2a143909ab73d04b56a71",
+      "actual": "961964b874d235bc010cc253f0bbaae24ffc66de26c2a143909ab73d04b56a71",
+      "match": true
+    },
+    {
+      "path": "art/full/source/plants/ENV010_shrub_b.blend",
+      "role": "catalog_member:ENV010:0",
+      "expected": "e82ac1c14d14b67cb82a33a45060098d2c89b73c7ecd920235ece693b6aad1f2",
+      "actual": "295f45e2241653063e4ffb06bbd0a1b966199ec5d1e6d03435a40c43197e1fff",
+      "match": false
+    },
+    {
+      "path": "art/full/source/plants/ENV010_shrub_b.glb",
+      "role": "catalog_member:ENV010:1",
+      "expected": "6d7fc9482a41fd56f68363f38c6d540c09fe6ba56e0e4ed23229a369d659aec1",
+      "actual": "00e92d282a3034f4a7f949760df142195f3164d060365b500c0d6c7f759914ac",
+      "match": false
+    },
+    {
+      "path": "art/full/engine_viewer_state_map.json",
+      "role": "catalog_member:ENV010:2",
+      "expected": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "actual": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/assets/ENV010.png",
+      "role": "catalog_member:ENV010:3",
+      "expected": "173412d22aa046b9e8a011fa57db5061eab8d32e6eeb534190078c2f1532cbf1",
+      "actual": "173412d22aa046b9e8a011fa57db5061eab8d32e6eeb534190078c2f1532cbf1",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/plants/ENV010_shrub_b.png",
+      "role": "catalog_member:ENV010:4",
+      "expected": "d068e5841e7102d51f548de5c33dc5ceaaf5357d5afed081f3c24a0886a6a89a",
+      "actual": "cfde4b891754b1bac578a9f81822c50836c22b40ca83087fba198e6aa0a34362",
+      "match": false
+    },
+    {
+      "path": "art/full/reviews/ENV010.json",
+      "role": "catalog_member:ENV010:5",
+      "expected": "df5bbe2ec2d4b5f18cc6a5859439595e55a03b3a1b4ffa8fa1830e74e44fbd7c",
+      "actual": "df5bbe2ec2d4b5f18cc6a5859439595e55a03b3a1b4ffa8fa1830e74e44fbd7c",
+      "match": true
+    },
+    {
+      "path": "art/full/source/plants/ENV011_dry_grass.blend",
+      "role": "catalog_member:ENV011:0",
+      "expected": "67c9990781b27be3c8872c897dd2b08d43e3e063a7326fc362205a07ee82278b",
+      "actual": "4e40b168e8f24b6546b0ed770464bb347f96555b8329f497d8d48b0cf2e48cf2",
+      "match": false
+    },
+    {
+      "path": "art/full/source/plants/ENV011_dry_grass.glb",
+      "role": "catalog_member:ENV011:1",
+      "expected": "7e05d32edf980b55e6f0038ac11712a005153b6854fe60ab5324a062a3108196",
+      "actual": "06dc92d814dbaa8e7483afb824d2da07c9007b3a6e95d8553a5ad20fb488d095",
+      "match": false
+    },
+    {
+      "path": "art/full/engine_viewer_state_map.json",
+      "role": "catalog_member:ENV011:2",
+      "expected": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "actual": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/assets/ENV011.png",
+      "role": "catalog_member:ENV011:3",
+      "expected": "3d6f097aed902da3928183844f98b0d2725f81d1ade791eca8eb5dbbe6bb9ecb",
+      "actual": "3d6f097aed902da3928183844f98b0d2725f81d1ade791eca8eb5dbbe6bb9ecb",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/plants/ENV011_dry_grass.png",
+      "role": "catalog_member:ENV011:4",
+      "expected": "2df89e844f5768e19617099504446cf7b1f2e007d51b40ab663a9dc2a89340b6",
+      "actual": "c3289fc078a04bec12eb82dad5b58b708b2bed098e5d94e56071f12aef51f190",
+      "match": false
+    },
+    {
+      "path": "art/full/reviews/ENV011.json",
+      "role": "catalog_member:ENV011:5",
+      "expected": "32cbfe4f0dc3979887ec0d72252f87d1bee0779472f5283b7088b7fe99b677b5",
+      "actual": "32cbfe4f0dc3979887ec0d72252f87d1bee0779472f5283b7088b7fe99b677b5",
+      "match": true
+    },
+    {
+      "path": "art/full/source/plants/ENV012_fallen_leaves.blend",
+      "role": "catalog_member:ENV012:0",
+      "expected": "ebb2c609428ac01272f90e470c938e62ef11da43a298ce9411a8d15407a124f0",
+      "actual": "ebb2c609428ac01272f90e470c938e62ef11da43a298ce9411a8d15407a124f0",
+      "match": true
+    },
+    {
+      "path": "art/full/source/plants/ENV012_fallen_leaves.glb",
+      "role": "catalog_member:ENV012:1",
+      "expected": "ec3effaa060b1a03438585758b3be93f4f91c52b331b274ce9f73345a8b496fd",
+      "actual": "ec3effaa060b1a03438585758b3be93f4f91c52b331b274ce9f73345a8b496fd",
+      "match": true
+    },
+    {
+      "path": "art/full/engine_viewer_state_map.json",
+      "role": "catalog_member:ENV012:2",
+      "expected": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "actual": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/assets/ENV012.png",
+      "role": "catalog_member:ENV012:3",
+      "expected": "af954401ac9d47d151ed3ead77183b10ffa3f4a52ca6453896833382b2abb90c",
+      "actual": "af954401ac9d47d151ed3ead77183b10ffa3f4a52ca6453896833382b2abb90c",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/plants/ENV012_fallen_leaves.png",
+      "role": "catalog_member:ENV012:4",
+      "expected": "dc19f9aa83277627c28a2088932db6e9e36c3b7faaef3933cf922ae808926160",
+      "actual": "dc19f9aa83277627c28a2088932db6e9e36c3b7faaef3933cf922ae808926160",
+      "match": true
+    },
+    {
+      "path": "art/full/reviews/ENV012.json",
+      "role": "catalog_member:ENV012:5",
+      "expected": "b29c722e3759a71e4f8dd358300f9c0d9a8de3c255b60c166b3aed519308b3c5",
+      "actual": "b29c722e3759a71e4f8dd358300f9c0d9a8de3c255b60c166b3aed519308b3c5",
+      "match": true
+    },
+    {
+      "path": "art/full/source/props/PROP001_bench.blend",
+      "role": "catalog_member:PROP001:0",
+      "expected": "c96aaaf88fa9139ac3a930010f8cd6d576dd2d08927efea3273f703f04375a16",
+      "actual": "c96aaaf88fa9139ac3a930010f8cd6d576dd2d08927efea3273f703f04375a16",
+      "match": true
+    },
+    {
+      "path": "art/full/source/props/PROP001_bench.glb",
+      "role": "catalog_member:PROP001:1",
+      "expected": "1489ea4f2f5d6ad0b1284f52faa142bf7786dbb4619578f1a3a5f963fcd349eb",
+      "actual": "1489ea4f2f5d6ad0b1284f52faa142bf7786dbb4619578f1a3a5f963fcd349eb",
+      "match": true
+    },
+    {
+      "path": "tools/blender/prop001_bench.py",
+      "role": "catalog_member:PROP001:2",
+      "expected": "d1d19de5dedbe9943c435127172f67630edac293fedebb592122d39a52911f7f",
+      "actual": "d1d19de5dedbe9943c435127172f67630edac293fedebb592122d39a52911f7f",
+      "match": true
+    },
+    {
+      "path": "art/full/engine_viewer_state_map.json",
+      "role": "catalog_member:PROP001:3",
+      "expected": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "actual": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/assets/PROP001.png",
+      "role": "catalog_member:PROP001:4",
+      "expected": "393f38501337127337c6b5914c4cc3706083da07d34450e036282bdc03a929c9",
+      "actual": "393f38501337127337c6b5914c4cc3706083da07d34450e036282bdc03a929c9",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/props/PROP001_bench.png",
+      "role": "catalog_member:PROP001:5",
+      "expected": "e2c40e2d24d5f799c137ef80b898063bd75bf3a72e65b200c44876dba5f99a36",
+      "actual": "e2c40e2d24d5f799c137ef80b898063bd75bf3a72e65b200c44876dba5f99a36",
+      "match": true
+    },
+    {
+      "path": "art/full/reviews/PROP001.json",
+      "role": "catalog_member:PROP001:6",
+      "expected": "8f8f0559f23196437a10778aee38dc328b3e88b006846388ca5e56bb40053cfc",
+      "actual": "8f8f0559f23196437a10778aee38dc328b3e88b006846388ca5e56bb40053cfc",
+      "match": true
+    },
+    {
+      "path": "art/full/source/props/PROP002_pergola.blend",
+      "role": "catalog_member:PROP002:0",
+      "expected": "51ff48c041fd75e29508d883aaa30575179d94f5bdf060cf0ca0a488c82e87c3",
+      "actual": "51ff48c041fd75e29508d883aaa30575179d94f5bdf060cf0ca0a488c82e87c3",
+      "match": true
+    },
+    {
+      "path": "art/full/source/props/PROP002_pergola.glb",
+      "role": "catalog_member:PROP002:1",
+      "expected": "3cae69685545e031eb31f059e6ceb587c5d5be6588e716f47fbdd9e8cd3b530b",
+      "actual": "3cae69685545e031eb31f059e6ceb587c5d5be6588e716f47fbdd9e8cd3b530b",
+      "match": true
+    },
+    {
+      "path": "art/full/engine_viewer_state_map.json",
+      "role": "catalog_member:PROP002:2",
+      "expected": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "actual": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/assets/PROP002.png",
+      "role": "catalog_member:PROP002:3",
+      "expected": "9ff0d3df7a802d92383a39b573c5e5aae3bed31f3e7daa536106c770e004ed5f",
+      "actual": "9ff0d3df7a802d92383a39b573c5e5aae3bed31f3e7daa536106c770e004ed5f",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/props/PROP002_pergola.png",
+      "role": "catalog_member:PROP002:4",
+      "expected": "148ec7740149e38c0fabfde52e50898796d1c15f78323dc93b6d1f994a9b47b9",
+      "actual": "148ec7740149e38c0fabfde52e50898796d1c15f78323dc93b6d1f994a9b47b9",
+      "match": true
+    },
+    {
+      "path": "art/full/reviews/PROP002.json",
+      "role": "catalog_member:PROP002:5",
+      "expected": "a3fc88f5076c0d9e7ef964e518a69a19c025bfeadc176c22f71b2dba804e83a1",
+      "actual": "a3fc88f5076c0d9e7ef964e518a69a19c025bfeadc176c22f71b2dba804e83a1",
+      "match": true
+    },
+    {
+      "path": "art/full/source/props/PROP003_message_board.blend",
+      "role": "catalog_member:PROP003:0",
+      "expected": "f31860d9d50a790ddfb1fea1a93e79e2feda20a24ca31e28defb0775b8b6d069",
+      "actual": "f31860d9d50a790ddfb1fea1a93e79e2feda20a24ca31e28defb0775b8b6d069",
+      "match": true
+    },
+    {
+      "path": "art/full/source/props/PROP003_message_board.glb",
+      "role": "catalog_member:PROP003:1",
+      "expected": "a86bc98f01c92637ad10ba293ee0b37e4bb2a6387989fec918c7513c91044f02",
+      "actual": "a86bc98f01c92637ad10ba293ee0b37e4bb2a6387989fec918c7513c91044f02",
+      "match": true
+    },
+    {
+      "path": "art/full/engine_viewer_state_map.json",
+      "role": "catalog_member:PROP003:2",
+      "expected": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "actual": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/assets/PROP003.png",
+      "role": "catalog_member:PROP003:3",
+      "expected": "251ff461a6d177af72666575e3b85d7fe0a438fb970410334395ad28da19c112",
+      "actual": "251ff461a6d177af72666575e3b85d7fe0a438fb970410334395ad28da19c112",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/props/PROP003_message_board_empty.png",
+      "role": "catalog_member:PROP003:4",
+      "expected": "0f19385a8bb018cae7738c661c40a214bc1387bb75d67187cd81270363f94a37",
+      "actual": "0f19385a8bb018cae7738c661c40a214bc1387bb75d67187cd81270363f94a37",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/props/PROP003_message_board_partial.png",
+      "role": "catalog_member:PROP003:5",
+      "expected": "300c84543000f1ca8f98224f560915e128e794fd827fb00613af07693c9989c5",
+      "actual": "300c84543000f1ca8f98224f560915e128e794fd827fb00613af07693c9989c5",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/props/PROP003_message_board_full.png",
+      "role": "catalog_member:PROP003:6",
+      "expected": "1fdca9eb61d50cfe12d3c6f17b8a0533f4249ce60f7801a988a2bf16e86f0c34",
+      "actual": "1fdca9eb61d50cfe12d3c6f17b8a0533f4249ce60f7801a988a2bf16e86f0c34",
+      "match": true
+    },
+    {
+      "path": "art/full/reviews/PROP003.json",
+      "role": "catalog_member:PROP003:7",
+      "expected": "652434546357e8aeff5a616892a86e25ee12f6fa095c066b151adfd8fbeb9f98",
+      "actual": "652434546357e8aeff5a616892a86e25ee12f6fa095c066b151adfd8fbeb9f98",
+      "match": true
+    },
+    {
+      "path": "art/full/source/props/PROP004_lamp.blend",
+      "role": "catalog_member:PROP004:0",
+      "expected": "b6ffa30a17630b3cdd90b602f9a632b8e80237cdbe57bae80f934710e9213ebf",
+      "actual": "b6ffa30a17630b3cdd90b602f9a632b8e80237cdbe57bae80f934710e9213ebf",
+      "match": true
+    },
+    {
+      "path": "art/full/source/props/PROP004_lamp.glb",
+      "role": "catalog_member:PROP004:1",
+      "expected": "321ae907c273b4620714ae2036f75baf0539e105e3fb8eef348bac2d5e629eea",
+      "actual": "321ae907c273b4620714ae2036f75baf0539e105e3fb8eef348bac2d5e629eea",
+      "match": true
+    },
+    {
+      "path": "art/full/engine_viewer_state_map.json",
+      "role": "catalog_member:PROP004:2",
+      "expected": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "actual": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/assets/PROP004.png",
+      "role": "catalog_member:PROP004:3",
+      "expected": "ff5e39f1b68a36f28ae31aaa37d0a7401311fae30b3b67b4f3293d4216650abb",
+      "actual": "ff5e39f1b68a36f28ae31aaa37d0a7401311fae30b3b67b4f3293d4216650abb",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/props/PROP004_lamp.png",
+      "role": "catalog_member:PROP004:4",
+      "expected": "369d45002bca2d2a6b4fd8b1399d310d4bbfc12475f9af5276622bcc70b93587",
+      "actual": "369d45002bca2d2a6b4fd8b1399d310d4bbfc12475f9af5276622bcc70b93587",
+      "match": true
+    },
+    {
+      "path": "art/full/reviews/PROP004.json",
+      "role": "catalog_member:PROP004:5",
+      "expected": "cfbdd3ae85d6d1e50ea1510b6bbde4b9fca009ad35ff9acce5f4de024848b20e",
+      "actual": "cfbdd3ae85d6d1e50ea1510b6bbde4b9fca009ad35ff9acce5f4de024848b20e",
+      "match": true
+    },
+    {
+      "path": "art/full/source/props/PROP005_direction_sign.blend",
+      "role": "catalog_member:PROP005:0",
+      "expected": "c435bf88a7845e582f7eaeae3569922ece618b04a3e457a9caae418d3aa5933d",
+      "actual": "c435bf88a7845e582f7eaeae3569922ece618b04a3e457a9caae418d3aa5933d",
+      "match": true
+    },
+    {
+      "path": "art/full/source/props/PROP005_direction_sign.glb",
+      "role": "catalog_member:PROP005:1",
+      "expected": "96eaed5786feec65bae362117e92127f1fd18d726980ea9c8986ad5566b2de37",
+      "actual": "96eaed5786feec65bae362117e92127f1fd18d726980ea9c8986ad5566b2de37",
+      "match": true
+    },
+    {
+      "path": "art/full/engine_viewer_state_map.json",
+      "role": "catalog_member:PROP005:2",
+      "expected": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "actual": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/assets/PROP005.png",
+      "role": "catalog_member:PROP005:3",
+      "expected": "96b04cea8dc98334fd8203f3693b839738ce8b016a9b8c48cdc11d8178aaebd6",
+      "actual": "96b04cea8dc98334fd8203f3693b839738ce8b016a9b8c48cdc11d8178aaebd6",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/props/PROP005_direction_sign.png",
+      "role": "catalog_member:PROP005:4",
+      "expected": "cc080a3477f4f5ad955931208e195da06bbbef0c575d8fdd39bfd173ea753517",
+      "actual": "cc080a3477f4f5ad955931208e195da06bbbef0c575d8fdd39bfd173ea753517",
+      "match": true
+    },
+    {
+      "path": "art/full/reviews/PROP005.json",
+      "role": "catalog_member:PROP005:5",
+      "expected": "faf0e32a916e87a5328cd139812d0237cd88f227fa448cead3c2cd2275f7b334",
+      "actual": "faf0e32a916e87a5328cd139812d0237cd88f227fa448cead3c2cd2275f7b334",
+      "match": true
+    },
+    {
+      "path": "art/full/source/props/PROP006_postcards.blend",
+      "role": "catalog_member:PROP006:0",
+      "expected": "fe6f5baf9d7c1bd39edb8e78d7f28bd20910872440becca9ad3947fc42d2f3d1",
+      "actual": "fe6f5baf9d7c1bd39edb8e78d7f28bd20910872440becca9ad3947fc42d2f3d1",
+      "match": true
+    },
+    {
+      "path": "art/full/source/props/PROP006_postcards.glb",
+      "role": "catalog_member:PROP006:1",
+      "expected": "5bff706e2de17176eb6f9173fad0ce9cf30835987e842efb065f302086e380ae",
+      "actual": "5bff706e2de17176eb6f9173fad0ce9cf30835987e842efb065f302086e380ae",
+      "match": true
+    },
+    {
+      "path": "art/full/engine_viewer_state_map.json",
+      "role": "catalog_member:PROP006:2",
+      "expected": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "actual": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/assets/PROP006.png",
+      "role": "catalog_member:PROP006:3",
+      "expected": "a227790dfc9d5782ccd86ad699e39f66df39daac2b1cb92475dd4c4dc01aa00f",
+      "actual": "a227790dfc9d5782ccd86ad699e39f66df39daac2b1cb92475dd4c4dc01aa00f",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/props/PROP006_postcards.png",
+      "role": "catalog_member:PROP006:4",
+      "expected": "134557ea4b7522f5b60514c746c2d508e8db656dd462f52f40611c0b548073a7",
+      "actual": "134557ea4b7522f5b60514c746c2d508e8db656dd462f52f40611c0b548073a7",
+      "match": true
+    },
+    {
+      "path": "art/full/reviews/PROP006.json",
+      "role": "catalog_member:PROP006:5",
+      "expected": "e87f7d724c56ae9e6aabad321b682fc21de711c6f4c61a168457d4a7aa4e8627",
+      "actual": "e87f7d724c56ae9e6aabad321b682fc21de711c6f4c61a168457d4a7aa4e8627",
+      "match": true
+    },
+    {
+      "path": "art/full/source/materials/MAT001_stone.blend",
+      "role": "catalog_member:MAT001:0",
+      "expected": "ba9f16041c135cae07740105af862f402b5ad95fd4234e9bd82aede2cb1562fc",
+      "actual": "ba9f16041c135cae07740105af862f402b5ad95fd4234e9bd82aede2cb1562fc",
+      "match": true
+    },
+    {
+      "path": "art/full/source/materials/MAT001_stone.glb",
+      "role": "catalog_member:MAT001:1",
+      "expected": "68b76e9e9ab7ac495e0e2376dc510deff6029a812f0956933f1b20f960f78495",
+      "actual": "68b76e9e9ab7ac495e0e2376dc510deff6029a812f0956933f1b20f960f78495",
+      "match": true
+    },
+    {
+      "path": "art/full/source/materials/MAT_families.json",
+      "role": "catalog_member:MAT001:2",
+      "expected": "af8a1072a530019d809b5e6f2fddbb0cb6a65b588b2981961a19dd30b1fcfd45",
+      "actual": "af8a1072a530019d809b5e6f2fddbb0cb6a65b588b2981961a19dd30b1fcfd45",
+      "match": true
+    },
+    {
+      "path": "art/full/engine_viewer_state_map.json",
+      "role": "catalog_member:MAT001:3",
+      "expected": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "actual": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/assets/MAT001.png",
+      "role": "catalog_member:MAT001:4",
+      "expected": "869f676ca9f5f262a07c444b3ee428ecabc1881efee9635d44edfcda7048766e",
+      "actual": "869f676ca9f5f262a07c444b3ee428ecabc1881efee9635d44edfcda7048766e",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/materials/MAT001_stone.png",
+      "role": "catalog_member:MAT001:5",
+      "expected": "59adf0001311e3ef667a951b644899138f11c330b4f22aee3bd28d633cb5f59a",
+      "actual": "59adf0001311e3ef667a951b644899138f11c330b4f22aee3bd28d633cb5f59a",
+      "match": true
+    },
+    {
+      "path": "art/full/reviews/MAT001.json",
+      "role": "catalog_member:MAT001:6",
+      "expected": "ff98e57fe3a1ed52e568306d362499c0d7eda44fdd70fdf1914c306078d363c8",
+      "actual": "ff98e57fe3a1ed52e568306d362499c0d7eda44fdd70fdf1914c306078d363c8",
+      "match": true
+    },
+    {
+      "path": "art/full/source/materials/MAT002_wood.blend",
+      "role": "catalog_member:MAT002:0",
+      "expected": "6212a1e967c5baba52f8d391123f0236070a0c6007509eb57757cfc011ccdb1d",
+      "actual": "6212a1e967c5baba52f8d391123f0236070a0c6007509eb57757cfc011ccdb1d",
+      "match": true
+    },
+    {
+      "path": "art/full/source/materials/MAT002_wood.glb",
+      "role": "catalog_member:MAT002:1",
+      "expected": "00fcb23d3fc7776cf238df1ba747e189aba90447584b06f9d80c3d369b2c70c1",
+      "actual": "00fcb23d3fc7776cf238df1ba747e189aba90447584b06f9d80c3d369b2c70c1",
+      "match": true
+    },
+    {
+      "path": "art/full/source/materials/MAT_families.json",
+      "role": "catalog_member:MAT002:2",
+      "expected": "af8a1072a530019d809b5e6f2fddbb0cb6a65b588b2981961a19dd30b1fcfd45",
+      "actual": "af8a1072a530019d809b5e6f2fddbb0cb6a65b588b2981961a19dd30b1fcfd45",
+      "match": true
+    },
+    {
+      "path": "art/full/engine_viewer_state_map.json",
+      "role": "catalog_member:MAT002:3",
+      "expected": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "actual": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/assets/MAT002.png",
+      "role": "catalog_member:MAT002:4",
+      "expected": "393f38501337127337c6b5914c4cc3706083da07d34450e036282bdc03a929c9",
+      "actual": "393f38501337127337c6b5914c4cc3706083da07d34450e036282bdc03a929c9",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/materials/MAT002_wood.png",
+      "role": "catalog_member:MAT002:5",
+      "expected": "af8afae100574a0fe39468dcc2428b5ecde0894ddccf79e10efb9d29efa9b166",
+      "actual": "af8afae100574a0fe39468dcc2428b5ecde0894ddccf79e10efb9d29efa9b166",
+      "match": true
+    },
+    {
+      "path": "art/full/reviews/MAT002.json",
+      "role": "catalog_member:MAT002:6",
+      "expected": "2793c9fbff2fd4e2da0a5432883887016501e65ad2b8008d767574cc02e568ef",
+      "actual": "2793c9fbff2fd4e2da0a5432883887016501e65ad2b8008d767574cc02e568ef",
+      "match": true
+    },
+    {
+      "path": "art/full/source/materials/MAT003_metal.blend",
+      "role": "catalog_member:MAT003:0",
+      "expected": "e24b271388ce1109cfc5a40b852c2e156fa4079f4face601720313a57e064e43",
+      "actual": "e24b271388ce1109cfc5a40b852c2e156fa4079f4face601720313a57e064e43",
+      "match": true
+    },
+    {
+      "path": "art/full/source/materials/MAT003_metal.glb",
+      "role": "catalog_member:MAT003:1",
+      "expected": "3116c8ab0eb3a31bea461f6505e34439ed4ec4db0f0a49dafb4b1904975295f6",
+      "actual": "3116c8ab0eb3a31bea461f6505e34439ed4ec4db0f0a49dafb4b1904975295f6",
+      "match": true
+    },
+    {
+      "path": "art/full/source/materials/MAT_families.json",
+      "role": "catalog_member:MAT003:2",
+      "expected": "af8a1072a530019d809b5e6f2fddbb0cb6a65b588b2981961a19dd30b1fcfd45",
+      "actual": "af8a1072a530019d809b5e6f2fddbb0cb6a65b588b2981961a19dd30b1fcfd45",
+      "match": true
+    },
+    {
+      "path": "art/full/engine_viewer_state_map.json",
+      "role": "catalog_member:MAT003:3",
+      "expected": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "actual": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/assets/MAT003.png",
+      "role": "catalog_member:MAT003:4",
+      "expected": "64ac199a17ffbf0130fc63d5e7fbfba4a0724b60904a5947a78af87e7f1296fa",
+      "actual": "64ac199a17ffbf0130fc63d5e7fbfba4a0724b60904a5947a78af87e7f1296fa",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/materials/MAT003_metal.png",
+      "role": "catalog_member:MAT003:5",
+      "expected": "46b194cf7bca124e5f052ba7188cb9d1aabbdb915befe0dcd59ca3cadfe36c59",
+      "actual": "46b194cf7bca124e5f052ba7188cb9d1aabbdb915befe0dcd59ca3cadfe36c59",
+      "match": true
+    },
+    {
+      "path": "art/full/reviews/MAT003.json",
+      "role": "catalog_member:MAT003:6",
+      "expected": "0841c9facd6e3844914e8dabaedb8211e6abfa846efd9da3b2ce949df4bb5fa9",
+      "actual": "0841c9facd6e3844914e8dabaedb8211e6abfa846efd9da3b2ce949df4bb5fa9",
+      "match": true
+    },
+    {
+      "path": "art/full/source/materials/MAT004_leaf_grass.blend",
+      "role": "catalog_member:MAT004:0",
+      "expected": "fcc8c668b3a1a90376f4aaa9dffc0ccd12a7e11f271ed81ed26671c9d4e89ee0",
+      "actual": "fcc8c668b3a1a90376f4aaa9dffc0ccd12a7e11f271ed81ed26671c9d4e89ee0",
+      "match": true
+    },
+    {
+      "path": "art/full/source/materials/MAT004_leaf_grass.glb",
+      "role": "catalog_member:MAT004:1",
+      "expected": "d2ab1ea55bf43c8f2634f20424665960974dd50a332cb9721e980ff964d738eb",
+      "actual": "d2ab1ea55bf43c8f2634f20424665960974dd50a332cb9721e980ff964d738eb",
+      "match": true
+    },
+    {
+      "path": "art/full/source/materials/MAT_families.json",
+      "role": "catalog_member:MAT004:2",
+      "expected": "af8a1072a530019d809b5e6f2fddbb0cb6a65b588b2981961a19dd30b1fcfd45",
+      "actual": "af8a1072a530019d809b5e6f2fddbb0cb6a65b588b2981961a19dd30b1fcfd45",
+      "match": true
+    },
+    {
+      "path": "art/full/engine_viewer_state_map.json",
+      "role": "catalog_member:MAT004:3",
+      "expected": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "actual": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/assets/MAT004.png",
+      "role": "catalog_member:MAT004:4",
+      "expected": "d93efcb53d6d739a83039d748cfa8fc061ca41173a16242b83d385c63783b3bc",
+      "actual": "d93efcb53d6d739a83039d748cfa8fc061ca41173a16242b83d385c63783b3bc",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/materials/MAT004_leaf_grass.png",
+      "role": "catalog_member:MAT004:5",
+      "expected": "fbff237e056ecc0a15b4b65e07bc53d4fbddbac8868b510cca4a3d5264475f7d",
+      "actual": "fbff237e056ecc0a15b4b65e07bc53d4fbddbac8868b510cca4a3d5264475f7d",
+      "match": true
+    },
+    {
+      "path": "art/full/reviews/MAT004.json",
+      "role": "catalog_member:MAT004:6",
+      "expected": "c0167d6683ba7355a04cbdba54b682edcc292dac31fc5f3cbd4ef28e4ef9abbc",
+      "actual": "c0167d6683ba7355a04cbdba54b682edcc292dac31fc5f3cbd4ef28e4ef9abbc",
+      "match": true
+    },
+    {
+      "path": "art/full/source/materials/MAT005_paper.blend",
+      "role": "catalog_member:MAT005:0",
+      "expected": "829efdfd58debd5634e7f6704cbfbd5f4c954cfbb131d4c71a5e1ec92bff9b55",
+      "actual": "829efdfd58debd5634e7f6704cbfbd5f4c954cfbb131d4c71a5e1ec92bff9b55",
+      "match": true
+    },
+    {
+      "path": "art/full/source/materials/MAT005_paper.glb",
+      "role": "catalog_member:MAT005:1",
+      "expected": "b992208287061b361783f42e314a4036774359972b6c652ea57411c883ec48c1",
+      "actual": "b992208287061b361783f42e314a4036774359972b6c652ea57411c883ec48c1",
+      "match": true
+    },
+    {
+      "path": "art/full/source/materials/MAT_families.json",
+      "role": "catalog_member:MAT005:2",
+      "expected": "af8a1072a530019d809b5e6f2fddbb0cb6a65b588b2981961a19dd30b1fcfd45",
+      "actual": "af8a1072a530019d809b5e6f2fddbb0cb6a65b588b2981961a19dd30b1fcfd45",
+      "match": true
+    },
+    {
+      "path": "art/full/engine_viewer_state_map.json",
+      "role": "catalog_member:MAT005:3",
+      "expected": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "actual": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/assets/MAT005.png",
+      "role": "catalog_member:MAT005:4",
+      "expected": "251ff461a6d177af72666575e3b85d7fe0a438fb970410334395ad28da19c112",
+      "actual": "251ff461a6d177af72666575e3b85d7fe0a438fb970410334395ad28da19c112",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/materials/MAT005_paper.png",
+      "role": "catalog_member:MAT005:5",
+      "expected": "554cefba3e51302ab8f584c60f47daea6ec0412d8a59d307da0515fd702edfe1",
+      "actual": "554cefba3e51302ab8f584c60f47daea6ec0412d8a59d307da0515fd702edfe1",
+      "match": true
+    },
+    {
+      "path": "art/full/reviews/MAT005.json",
+      "role": "catalog_member:MAT005:6",
+      "expected": "53fb78a7b92afadf03c7db6deb9fb532d55c298fbd7073cb8197f06485ab4fd6",
+      "actual": "53fb78a7b92afadf03c7db6deb9fb532d55c298fbd7073cb8197f06485ab4fd6",
+      "match": true
+    },
+    {
+      "path": "art/full/source/layout/LOOK001_camera_light.blend",
+      "role": "catalog_member:LOOK001:0",
+      "expected": "735239d1886239209164ebe3effb272e29800afa88534e7517fe9892e6ade1e8",
+      "actual": "735239d1886239209164ebe3effb272e29800afa88534e7517fe9892e6ade1e8",
+      "match": true
+    },
+    {
+      "path": "art/full/source/layout/LOOK001_look_profile.json",
+      "role": "catalog_member:LOOK001:1",
+      "expected": "ffbc6f50c8678989f922c42a6c5ef9b936b16e4145bd0e144532e3611bda4e9f",
+      "actual": "ffbc6f50c8678989f922c42a6c5ef9b936b16e4145bd0e144532e3611bda4e9f",
+      "match": true
+    },
+    {
+      "path": "art/full/engine_viewer_state_map.json",
+      "role": "catalog_member:LOOK001:2",
+      "expected": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "actual": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/assets/LOOK001.png",
+      "role": "catalog_member:LOOK001:3",
+      "expected": "b6bb5503386679c808ea7983d2a5326665c19625501e26ac87e49b97573538ef",
+      "actual": "b6bb5503386679c808ea7983d2a5326665c19625501e26ac87e49b97573538ef",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/layout/LOOK001_camera_light.png",
+      "role": "catalog_member:LOOK001:4",
+      "expected": "4e8a465f78c0596126cf1324acfa8933c84b1a708a764cf2034d3193735d2fa4",
+      "actual": "4e8a465f78c0596126cf1324acfa8933c84b1a708a764cf2034d3193735d2fa4",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/layout/LOOK001_scale_check.png",
+      "role": "catalog_member:LOOK001:5",
+      "expected": "9e55d31021930240f8c5f9b28a47149190b0f7e9c11a611c5b6235bea20942a2",
+      "actual": "9e55d31021930240f8c5f9b28a47149190b0f7e9c11a611c5b6235bea20942a2",
+      "match": true
+    },
+    {
+      "path": "art/full/reviews/LOOK001.json",
+      "role": "catalog_member:LOOK001:6",
+      "expected": "018c32a8736562812966c4f1de010bf08fa4fff101c6e02856c98bcd9444409f",
+      "actual": "018c32a8736562812966c4f1de010bf08fa4fff101c6e02856c98bcd9444409f",
+      "match": true
+    },
+    {
+      "path": "reference/character_sources/ark_models/1015_aglna2/build_char_1015_aglna2.skel",
+      "role": "catalog_member:CHAR001:0",
+      "expected": "07434af8bd32c0a863573492067bba6ffd56b4cd8df757537651658166f0fadc",
+      "actual": "07434af8bd32c0a863573492067bba6ffd56b4cd8df757537651658166f0fadc",
+      "match": true
+    },
+    {
+      "path": "reference/character_sources/ark_models/1015_aglna2/build_char_1015_aglna2.atlas",
+      "role": "catalog_member:CHAR001:1",
+      "expected": "e91e80fb9ac01ea52dfcdcdf8650085d57d04df06e4f130dacdb2ce038f8673b",
+      "actual": "e91e80fb9ac01ea52dfcdcdf8650085d57d04df06e4f130dacdb2ce038f8673b",
+      "match": true
+    },
+    {
+      "path": "reference/character_sources/ark_models/1015_aglna2/build_char_1015_aglna2.png",
+      "role": "catalog_member:CHAR001:2",
+      "expected": "1adcc810e8e7325bf29451ddc02bbb66e531e8e8411e1baea0e765bf05ffaec3",
+      "actual": "1adcc810e8e7325bf29451ddc02bbb66e531e8e8411e1baea0e765bf05ffaec3",
+      "match": true
+    },
+    {
+      "path": "art/full/engine_viewer_state_map.json",
+      "role": "catalog_member:CHAR001:3",
+      "expected": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "actual": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/assets/CHAR001.png",
+      "role": "catalog_member:CHAR001:4",
+      "expected": "081e6df046864d3346eaddbb14dff810d8f89da754f1f1e482f1eaf1cccc0bb4",
+      "actual": "081e6df046864d3346eaddbb14dff810d8f89da754f1f1e482f1eaf1cccc0bb4",
+      "match": true
+    },
+    {
+      "path": "art/phase1/character_playback_1015/idle_preview.png",
+      "role": "catalog_member:CHAR001:5",
+      "expected": "a94cbf779a7942493ba750c1363f457c629031b54a89d3d99f11e382b8481bd6",
+      "actual": "a94cbf779a7942493ba750c1363f457c629031b54a89d3d99f11e382b8481bd6",
+      "match": true
+    },
+    {
+      "path": "art/phase1/character_playback_1015/reference_comparison.png",
+      "role": "catalog_member:CHAR001:6",
+      "expected": "eb88a5ffd91d62049e2a0b80bd75790bc8f34335a8591e245046d45f095ae98a",
+      "actual": "eb88a5ffd91d62049e2a0b80bd75790bc8f34335a8591e245046d45f095ae98a",
+      "match": true
+    },
+    {
+      "path": "art/full/reviews/CHAR001.json",
+      "role": "catalog_member:CHAR001:7",
+      "expected": "9db7e5faf8590529e7e0b4bc4399ae03bf83c797b9107793f7a74d166003a477",
+      "actual": "9db7e5faf8590529e7e0b4bc4399ae03bf83c797b9107793f7a74d166003a477",
+      "match": true
+    },
+    {
+      "path": "art/phase1/character_playback_1015/clip_inventory.json",
+      "role": "catalog_member:CHAR002:0",
+      "expected": "b3a5ad698976dc20ec976f1c39b5778cd00a19572de481ea7ab29bdf10fddb00",
+      "actual": "b3a5ad698976dc20ec976f1c39b5778cd00a19572de481ea7ab29bdf10fddb00",
+      "match": true
+    },
+    {
+      "path": "art/phase1/character_playback_1015/runtime_log.txt",
+      "role": "catalog_member:CHAR002:1",
+      "expected": "1e27cf05c89fa550760e1415c6e1986e8dfc111f75fbd18f577d804fd471a900",
+      "actual": "1e27cf05c89fa550760e1415c6e1986e8dfc111f75fbd18f577d804fd471a900",
+      "match": true
+    },
+    {
+      "path": "art/full/engine_viewer_state_map.json",
+      "role": "catalog_member:CHAR002:2",
+      "expected": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "actual": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/assets/CHAR002.png",
+      "role": "catalog_member:CHAR002:3",
+      "expected": "a88861397a2f94f538bcb79ecfd546854271879eae7735fedc9667af6b438127",
+      "actual": "a88861397a2f94f538bcb79ecfd546854271879eae7735fedc9667af6b438127",
+      "match": true
+    },
+    {
+      "path": "art/phase1/character_playback_1015/idle_preview.png",
+      "role": "catalog_member:CHAR002:4",
+      "expected": "a94cbf779a7942493ba750c1363f457c629031b54a89d3d99f11e382b8481bd6",
+      "actual": "a94cbf779a7942493ba750c1363f457c629031b54a89d3d99f11e382b8481bd6",
+      "match": true
+    },
+    {
+      "path": "art/phase1/character_playback_1015/move_preview.gif",
+      "role": "catalog_member:CHAR002:5",
+      "expected": "015db46945c373c40c066fb33ec4de730f6123db07acce7550e1ba1258e41cd1",
+      "actual": "015db46945c373c40c066fb33ec4de730f6123db07acce7550e1ba1258e41cd1",
+      "match": true
+    },
+    {
+      "path": "art/phase1/character_playback_1015/move_contact.png",
+      "role": "catalog_member:CHAR002:6",
+      "expected": "643e557836214d161fe224b6daa2e19b413d86de83d606fa162e19420f8da7c9",
+      "actual": "643e557836214d161fe224b6daa2e19b413d86de83d606fa162e19420f8da7c9",
+      "match": true
+    },
+    {
+      "path": "art/full/reviews/CHAR002.json",
+      "role": "catalog_member:CHAR002:7",
+      "expected": "a4d02c3d53bbb9d647be2bc9bc12fb35ed4b751ccea3be29eb5309513c269913",
+      "actual": "a4d02c3d53bbb9d647be2bc9bc12fb35ed4b751ccea3be29eb5309513c269913",
+      "match": true
+    },
+    {
+      "path": "art/full/source/characters/CHAR003_NPC_GARDENER/npc_source_crop_490x670.png",
+      "role": "catalog_member:CHAR003:0",
+      "expected": "ac075a7a3af650d7e55a1a73570df1e22fe90b108980b761a79782f341fd3756",
+      "actual": "ac075a7a3af650d7e55a1a73570df1e22fe90b108980b761a79782f341fd3756",
+      "match": true
+    },
+    {
+      "path": "art/full/source/characters/CHAR003_NPC_GARDENER/npc_gardener_mask.svg",
+      "role": "catalog_member:CHAR003:1",
+      "expected": "0a266693e5131266b2dbe5b0235867d4f627b1ad8384111be2a49af11e887abd",
+      "actual": "0a266693e5131266b2dbe5b0235867d4f627b1ad8384111be2a49af11e887abd",
+      "match": true
+    },
+    {
+      "path": "art/full/source/characters/CHAR003_NPC_GARDENER/npc_gardener_static_slice.png",
+      "role": "catalog_member:CHAR003:2",
+      "expected": "25f0da88193aa4bdb01de57b48d93cadd703a5dca13027177b1155ac37da8d1b",
+      "actual": "25f0da88193aa4bdb01de57b48d93cadd703a5dca13027177b1155ac37da8d1b",
+      "match": true
+    },
+    {
+      "path": "art/full/source/characters/CHAR003_NPC_GARDENER/npc_gardener_slice_record.json",
+      "role": "catalog_member:CHAR003:3",
+      "expected": "4ec4036dfdda582354078bdd6820c6ca4be53aa79341938e12bd77f2923b0d46",
+      "actual": "4ec4036dfdda582354078bdd6820c6ca4be53aa79341938e12bd77f2923b0d46",
+      "match": true
+    },
+    {
+      "path": "art/full/engine_viewer_state_map.json",
+      "role": "catalog_member:CHAR003:4",
+      "expected": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "actual": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "match": true
+    },
+    {
+      "path": "art/full/source/characters/CHAR003_NPC_GARDENER/npc_gardener_static_slice_final.png",
+      "role": "catalog_member:CHAR003:5",
+      "expected": "0eacef80f125464e0de10361f52af947fa43a1d6b075d1d5dd86a8c3fb9cdc31",
+      "actual": "0eacef80f125464e0de10361f52af947fa43a1d6b075d1d5dd86a8c3fb9cdc31",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/assets/CHAR003.png",
+      "role": "catalog_member:CHAR003:6",
+      "expected": "0e252745d1603efb2c145fb859994c05b0a2295f94c97403453ea418ea8511d1",
+      "actual": "0e252745d1603efb2c145fb859994c05b0a2295f94c97403453ea418ea8511d1",
+      "match": true
+    },
+    {
+      "path": "art/full/source/characters/CHAR003_NPC_GARDENER/npc_gardener_slice_final_preview.png",
+      "role": "catalog_member:CHAR003:7",
+      "expected": "519a97332b220f44cc36e14fff07d5d0b55da44aa9cb9725f100e590e34c6c53",
+      "actual": "519a97332b220f44cc36e14fff07d5d0b55da44aa9cb9725f100e590e34c6c53",
+      "match": true
+    },
+    {
+      "path": "art/full/reviews/CHAR003.json",
+      "role": "catalog_member:CHAR003:8",
+      "expected": "0e194d5c33b4d5fdb39782027a34d7db3b85a1c38f19a6b148925f66d7b2cd75",
+      "actual": "0e194d5c33b4d5fdb39782027a34d7db3b85a1c38f19a6b148925f66d7b2cd75",
+      "match": true
+    },
+    {
+      "path": "art/full/source/characters/CHAR004_PLAYER/portrait_1015_head_512.png",
+      "role": "catalog_member:CHAR004:0",
+      "expected": "160a74b967a3294b40ad985a1d11f8fbcb5449fbebf5071453b954cdb187e4fe",
+      "actual": "160a74b967a3294b40ad985a1d11f8fbcb5449fbebf5071453b954cdb187e4fe",
+      "match": true
+    },
+    {
+      "path": "art/full/source/characters/CHAR004_PLAYER/portrait_record.json",
+      "role": "catalog_member:CHAR004:1",
+      "expected": "1f20fbd3f17377132bb02ec6e886682690426672967fe86f37c6fdc5b2c16a28",
+      "actual": "1f20fbd3f17377132bb02ec6e886682690426672967fe86f37c6fdc5b2c16a28",
+      "match": true
+    },
+    {
+      "path": "art/full/engine_viewer_state_map.json",
+      "role": "catalog_member:CHAR004:2",
+      "expected": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "actual": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/assets/CHAR004.png",
+      "role": "catalog_member:CHAR004:3",
+      "expected": "166efb58bf85e909698a98ac359b6f3f90c10b07a07d837fdf008bde4dcf8510",
+      "actual": "166efb58bf85e909698a98ac359b6f3f90c10b07a07d837fdf008bde4dcf8510",
+      "match": true
+    },
+    {
+      "path": "art/full/source/characters/CHAR004_PLAYER/portrait_1015_head_512.png",
+      "role": "catalog_member:CHAR004:4",
+      "expected": "160a74b967a3294b40ad985a1d11f8fbcb5449fbebf5071453b954cdb187e4fe",
+      "actual": "160a74b967a3294b40ad985a1d11f8fbcb5449fbebf5071453b954cdb187e4fe",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/ui/dialogue_player_p2.png",
+      "role": "catalog_member:CHAR004:5",
+      "expected": "3c2d8fa994e36f0362c6d51edcfe9110527fee4af49734e210d7652ddb8ac345",
+      "actual": "3c2d8fa994e36f0362c6d51edcfe9110527fee4af49734e210d7652ddb8ac345",
+      "match": true
+    },
+    {
+      "path": "art/full/reviews/CHAR004.json",
+      "role": "catalog_member:CHAR004:6",
+      "expected": "7dea4e8abe14d4633ee496f872fcffafd36e9243464443de4a96e014092f9b62",
+      "actual": "7dea4e8abe14d4633ee496f872fcffafd36e9243464443de4a96e014092f9b62",
+      "match": true
+    },
+    {
+      "path": "art/full/source/characters/CHAR003_NPC_GARDENER/npc_gardener_portrait_512.png",
+      "role": "catalog_member:CHAR005:0",
+      "expected": "f25ad3fb94b13593578ebfb5d224ac9f520320df2b68e1589992356f5f565737",
+      "actual": "f25ad3fb94b13593578ebfb5d224ac9f520320df2b68e1589992356f5f565737",
+      "match": true
+    },
+    {
+      "path": "art/full/source/characters/CHAR003_NPC_GARDENER/npc_gardener_slice_record.json",
+      "role": "catalog_member:CHAR005:1",
+      "expected": "4ec4036dfdda582354078bdd6820c6ca4be53aa79341938e12bd77f2923b0d46",
+      "actual": "4ec4036dfdda582354078bdd6820c6ca4be53aa79341938e12bd77f2923b0d46",
+      "match": true
+    },
+    {
+      "path": "art/full/engine_viewer_state_map.json",
+      "role": "catalog_member:CHAR005:2",
+      "expected": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "actual": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/assets/CHAR005.png",
+      "role": "catalog_member:CHAR005:3",
+      "expected": "e3846cf0d7bb443afaa9783bbf99c2d5e77fd9812bcc061c110b58a992877667",
+      "actual": "e3846cf0d7bb443afaa9783bbf99c2d5e77fd9812bcc061c110b58a992877667",
+      "match": true
+    },
+    {
+      "path": "art/full/source/characters/CHAR003_NPC_GARDENER/npc_gardener_portrait_512.png",
+      "role": "catalog_member:CHAR005:4",
+      "expected": "f25ad3fb94b13593578ebfb5d224ac9f520320df2b68e1589992356f5f565737",
+      "actual": "f25ad3fb94b13593578ebfb5d224ac9f520320df2b68e1589992356f5f565737",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/ui/dialogue_gardener_p1.png",
+      "role": "catalog_member:CHAR005:5",
+      "expected": "d7d1eb6c00b97fcf599bf400174ff453f986e642d299af74cd0c0bb111ecac76",
+      "actual": "d7d1eb6c00b97fcf599bf400174ff453f986e642d299af74cd0c0bb111ecac76",
+      "match": true
+    },
+    {
+      "path": "art/full/reviews/CHAR005.json",
+      "role": "catalog_member:CHAR005:6",
+      "expected": "f6faa978399ce92402eb2c0f5775c8c589d9fd7b187b263e1341e5514499fc20",
+      "actual": "f6faa978399ce92402eb2c0f5775c8c589d9fd7b187b263e1341e5514499fc20",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/tokens.json",
+      "role": "catalog_member:UI001:0",
+      "expected": "ebb1eb23a8cc6cc251b93cdc305771aecc57cadd11d6d95a9c48ab895d45107c",
+      "actual": "ebb1eb23a8cc6cc251b93cdc305771aecc57cadd11d6d95a9c48ab895d45107c",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/index.html",
+      "role": "catalog_member:UI001:1",
+      "expected": "bdd7b5ec377f0d570a7deadeee7ae6d3be3a45546ea92f72a12ac44799bc7e68",
+      "actual": "bdd7b5ec377f0d570a7deadeee7ae6d3be3a45546ea92f72a12ac44799bc7e68",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/js/states.js",
+      "role": "catalog_member:UI001:2",
+      "expected": "e111011457878bf075f8782d763191f0dea052275119cf8a1cfc4c90a9928d45",
+      "actual": "e111011457878bf075f8782d763191f0dea052275119cf8a1cfc4c90a9928d45",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/css/ui.css",
+      "role": "catalog_member:UI001:3",
+      "expected": "579b07cd69fce49eac51411006fb35bf756ee95c42e02978c83534b99e416237",
+      "actual": "579b07cd69fce49eac51411006fb35bf756ee95c42e02978c83534b99e416237",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/js/components.js",
+      "role": "catalog_member:UI001:4",
+      "expected": "9c12d3ed85945956dea8446284747734eef871a8a03183c288450004395d546f",
+      "actual": "9c12d3ed85945956dea8446284747734eef871a8a03183c288450004395d546f",
+      "match": true
+    },
+    {
+      "path": "art/full/engine_viewer_state_map.json",
+      "role": "catalog_member:UI001:5",
+      "expected": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "actual": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/ui_states/title_initial.png",
+      "role": "catalog_member:UI001:6",
+      "expected": "f30ef8e00e8cfd4d43fb004c0c2be0b1fbc6cf5e46ac7292f537c4a5cb9b407e",
+      "actual": "f30ef8e00e8cfd4d43fb004c0c2be0b1fbc6cf5e46ac7292f537c4a5cb9b407e",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/ui_states/title_pressed.png",
+      "role": "catalog_member:UI001:7",
+      "expected": "5d16c09a66c555dd5829534209219cc457b3340abe28ccae11f8c6a18e6d8b4f",
+      "actual": "5d16c09a66c555dd5829534209219cc457b3340abe28ccae11f8c6a18e6d8b4f",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/ui_states/title_loading.png",
+      "role": "catalog_member:UI001:8",
+      "expected": "53cdcf15f41378b4c7602ae5f3f5369357b634fcd3c7d6b10674113e7bbef67e",
+      "actual": "53cdcf15f41378b4c7602ae5f3f5369357b634fcd3c7d6b10674113e7bbef67e",
+      "match": true
+    },
+    {
+      "path": "art/full/reviews/UI001.json",
+      "role": "catalog_member:UI001:9",
+      "expected": "70293d77529033ed5d69cab716ff410df5d483579d13c080cc98494d7f3ef25f",
+      "actual": "70293d77529033ed5d69cab716ff410df5d483579d13c080cc98494d7f3ef25f",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/tokens.json",
+      "role": "catalog_member:UI002:0",
+      "expected": "ebb1eb23a8cc6cc251b93cdc305771aecc57cadd11d6d95a9c48ab895d45107c",
+      "actual": "ebb1eb23a8cc6cc251b93cdc305771aecc57cadd11d6d95a9c48ab895d45107c",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/index.html",
+      "role": "catalog_member:UI002:1",
+      "expected": "bdd7b5ec377f0d570a7deadeee7ae6d3be3a45546ea92f72a12ac44799bc7e68",
+      "actual": "bdd7b5ec377f0d570a7deadeee7ae6d3be3a45546ea92f72a12ac44799bc7e68",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/js/states.js",
+      "role": "catalog_member:UI002:2",
+      "expected": "e111011457878bf075f8782d763191f0dea052275119cf8a1cfc4c90a9928d45",
+      "actual": "e111011457878bf075f8782d763191f0dea052275119cf8a1cfc4c90a9928d45",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/css/ui.css",
+      "role": "catalog_member:UI002:3",
+      "expected": "579b07cd69fce49eac51411006fb35bf756ee95c42e02978c83534b99e416237",
+      "actual": "579b07cd69fce49eac51411006fb35bf756ee95c42e02978c83534b99e416237",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/js/components.js",
+      "role": "catalog_member:UI002:4",
+      "expected": "9c12d3ed85945956dea8446284747734eef871a8a03183c288450004395d546f",
+      "actual": "9c12d3ed85945956dea8446284747734eef871a8a03183c288450004395d546f",
+      "match": true
+    },
+    {
+      "path": "art/full/engine_viewer_state_map.json",
+      "role": "catalog_member:UI002:5",
+      "expected": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "actual": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/ui_states/loading_progress.png",
+      "role": "catalog_member:UI002:6",
+      "expected": "84d5a42a5a599fb1c3ad2cb08189479958deb0fbca58be9a1536aa848495f30d",
+      "actual": "84d5a42a5a599fb1c3ad2cb08189479958deb0fbca58be9a1536aa848495f30d",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/ui_states/loading_failure.png",
+      "role": "catalog_member:UI002:7",
+      "expected": "135e22b4111e246387042a678b32a5a04e2d9c44cdb1efa43b68813939b217ad",
+      "actual": "135e22b4111e246387042a678b32a5a04e2d9c44cdb1efa43b68813939b217ad",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/ui_states/loading_retry_pressed.png",
+      "role": "catalog_member:UI002:8",
+      "expected": "45a0f0d5cc862dd1678c43c1a8e1179ce992eb1118059cc5f58b30352e9f3a93",
+      "actual": "45a0f0d5cc862dd1678c43c1a8e1179ce992eb1118059cc5f58b30352e9f3a93",
+      "match": true
+    },
+    {
+      "path": "art/full/reviews/UI002.json",
+      "role": "catalog_member:UI002:9",
+      "expected": "bd4cc8387b9b993d37a5a8b06a91b7eabcaba735da1b49e044008df76fb1356a",
+      "actual": "bd4cc8387b9b993d37a5a8b06a91b7eabcaba735da1b49e044008df76fb1356a",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/tokens.json",
+      "role": "catalog_member:UI003:0",
+      "expected": "ebb1eb23a8cc6cc251b93cdc305771aecc57cadd11d6d95a9c48ab895d45107c",
+      "actual": "ebb1eb23a8cc6cc251b93cdc305771aecc57cadd11d6d95a9c48ab895d45107c",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/index.html",
+      "role": "catalog_member:UI003:1",
+      "expected": "bdd7b5ec377f0d570a7deadeee7ae6d3be3a45546ea92f72a12ac44799bc7e68",
+      "actual": "bdd7b5ec377f0d570a7deadeee7ae6d3be3a45546ea92f72a12ac44799bc7e68",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/js/states.js",
+      "role": "catalog_member:UI003:2",
+      "expected": "e111011457878bf075f8782d763191f0dea052275119cf8a1cfc4c90a9928d45",
+      "actual": "e111011457878bf075f8782d763191f0dea052275119cf8a1cfc4c90a9928d45",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/css/ui.css",
+      "role": "catalog_member:UI003:3",
+      "expected": "579b07cd69fce49eac51411006fb35bf756ee95c42e02978c83534b99e416237",
+      "actual": "579b07cd69fce49eac51411006fb35bf756ee95c42e02978c83534b99e416237",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/js/components.js",
+      "role": "catalog_member:UI003:4",
+      "expected": "9c12d3ed85945956dea8446284747734eef871a8a03183c288450004395d546f",
+      "actual": "9c12d3ed85945956dea8446284747734eef871a8a03183c288450004395d546f",
+      "match": true
+    },
+    {
+      "path": "art/full/engine_viewer_state_map.json",
+      "role": "catalog_member:UI003:5",
+      "expected": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "actual": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/ui_states/hud_talk.png",
+      "role": "catalog_member:UI003:6",
+      "expected": "772b95f7aa238411fa4c53a82e170da3f9c2b5e3169edbda590f08dc562921af",
+      "actual": "772b95f7aa238411fa4c53a82e170da3f9c2b5e3169edbda590f08dc562921af",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/ui_states/hud_0_3.png",
+      "role": "catalog_member:UI003:7",
+      "expected": "0bfebd38ead7917ffb4bf75757a717b6556b8d5a3321f5c012ba8420ba61acd1",
+      "actual": "0bfebd38ead7917ffb4bf75757a717b6556b8d5a3321f5c012ba8420ba61acd1",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/ui_states/hud_1_3.png",
+      "role": "catalog_member:UI003:8",
+      "expected": "2b2747b5a3e8b8014f8a0cd66216e3603cc1b148fbe8942d7216e30dbe92b5f1",
+      "actual": "2b2747b5a3e8b8014f8a0cd66216e3603cc1b148fbe8942d7216e30dbe92b5f1",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/ui_states/hud_2_3.png",
+      "role": "catalog_member:UI003:9",
+      "expected": "f928b23fcc37c8d891597aa5b6bbdbf99b5187d7e9b60964ccbae1374ac7a41a",
+      "actual": "f928b23fcc37c8d891597aa5b6bbdbf99b5187d7e9b60964ccbae1374ac7a41a",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/ui_states/hud_3_3.png",
+      "role": "catalog_member:UI003:10",
+      "expected": "3a54f38eb909f30600aeb88a3b6d93609d3a676026243b687a97ad1921b93730",
+      "actual": "3a54f38eb909f30600aeb88a3b6d93609d3a676026243b687a97ad1921b93730",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/ui_states/hud_submit.png",
+      "role": "catalog_member:UI003:11",
+      "expected": "85273bde3d722dcee8d7e2e3af810e61d2009718835eccd4998c6750f1ab7891",
+      "actual": "85273bde3d722dcee8d7e2e3af810e61d2009718835eccd4998c6750f1ab7891",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/ui_states/hud_done.png",
+      "role": "catalog_member:UI003:12",
+      "expected": "638387dea86cdd135720bfb13b9d7a127b025ff2b64481ed98e5ca2718ea5b44",
+      "actual": "638387dea86cdd135720bfb13b9d7a127b025ff2b64481ed98e5ca2718ea5b44",
+      "match": true
+    },
+    {
+      "path": "art/full/reviews/UI003.json",
+      "role": "catalog_member:UI003:13",
+      "expected": "20a928c424ae010617e67100cba0be19d888bcc39f3ef350d450aab53efe35c4",
+      "actual": "20a928c424ae010617e67100cba0be19d888bcc39f3ef350d450aab53efe35c4",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/tokens.json",
+      "role": "catalog_member:UI004:0",
+      "expected": "ebb1eb23a8cc6cc251b93cdc305771aecc57cadd11d6d95a9c48ab895d45107c",
+      "actual": "ebb1eb23a8cc6cc251b93cdc305771aecc57cadd11d6d95a9c48ab895d45107c",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/index.html",
+      "role": "catalog_member:UI004:1",
+      "expected": "bdd7b5ec377f0d570a7deadeee7ae6d3be3a45546ea92f72a12ac44799bc7e68",
+      "actual": "bdd7b5ec377f0d570a7deadeee7ae6d3be3a45546ea92f72a12ac44799bc7e68",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/js/states.js",
+      "role": "catalog_member:UI004:2",
+      "expected": "e111011457878bf075f8782d763191f0dea052275119cf8a1cfc4c90a9928d45",
+      "actual": "e111011457878bf075f8782d763191f0dea052275119cf8a1cfc4c90a9928d45",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/css/ui.css",
+      "role": "catalog_member:UI004:3",
+      "expected": "579b07cd69fce49eac51411006fb35bf756ee95c42e02978c83534b99e416237",
+      "actual": "579b07cd69fce49eac51411006fb35bf756ee95c42e02978c83534b99e416237",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/js/components.js",
+      "role": "catalog_member:UI004:4",
+      "expected": "9c12d3ed85945956dea8446284747734eef871a8a03183c288450004395d546f",
+      "actual": "9c12d3ed85945956dea8446284747734eef871a8a03183c288450004395d546f",
+      "match": true
+    },
+    {
+      "path": "art/full/engine_viewer_state_map.json",
+      "role": "catalog_member:UI004:5",
+      "expected": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "actual": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/ui_states/joystick_idle.png",
+      "role": "catalog_member:UI004:6",
+      "expected": "03039f6141ae9ef4c1eb728c8847aabdabd80c418c6082b78bb4bf02eb5dfc6d",
+      "actual": "03039f6141ae9ef4c1eb728c8847aabdabd80c418c6082b78bb4bf02eb5dfc6d",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/ui_states/joystick_drag.png",
+      "role": "catalog_member:UI004:7",
+      "expected": "710c2b7f88f7efbf6500ddf05150cdc19b9f74fb024696c56890f0ac119bcf27",
+      "actual": "710c2b7f88f7efbf6500ddf05150cdc19b9f74fb024696c56890f0ac119bcf27",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/ui_states/joystick_hidden.png",
+      "role": "catalog_member:UI004:8",
+      "expected": "cb604e12f129ea28d0acd68212d4063512503e9f4f5df09e965ce0358ea26063",
+      "actual": "cb604e12f129ea28d0acd68212d4063512503e9f4f5df09e965ce0358ea26063",
+      "match": true
+    },
+    {
+      "path": "art/full/reviews/UI004.json",
+      "role": "catalog_member:UI004:9",
+      "expected": "9b72e11b33ccddb6f3c8c0c1dea18d09c53c261c46537cdd780de9de6ddda05e",
+      "actual": "9b72e11b33ccddb6f3c8c0c1dea18d09c53c261c46537cdd780de9de6ddda05e",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/tokens.json",
+      "role": "catalog_member:UI005:0",
+      "expected": "ebb1eb23a8cc6cc251b93cdc305771aecc57cadd11d6d95a9c48ab895d45107c",
+      "actual": "ebb1eb23a8cc6cc251b93cdc305771aecc57cadd11d6d95a9c48ab895d45107c",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/index.html",
+      "role": "catalog_member:UI005:1",
+      "expected": "bdd7b5ec377f0d570a7deadeee7ae6d3be3a45546ea92f72a12ac44799bc7e68",
+      "actual": "bdd7b5ec377f0d570a7deadeee7ae6d3be3a45546ea92f72a12ac44799bc7e68",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/js/states.js",
+      "role": "catalog_member:UI005:2",
+      "expected": "e111011457878bf075f8782d763191f0dea052275119cf8a1cfc4c90a9928d45",
+      "actual": "e111011457878bf075f8782d763191f0dea052275119cf8a1cfc4c90a9928d45",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/css/ui.css",
+      "role": "catalog_member:UI005:3",
+      "expected": "579b07cd69fce49eac51411006fb35bf756ee95c42e02978c83534b99e416237",
+      "actual": "579b07cd69fce49eac51411006fb35bf756ee95c42e02978c83534b99e416237",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/js/components.js",
+      "role": "catalog_member:UI005:4",
+      "expected": "9c12d3ed85945956dea8446284747734eef871a8a03183c288450004395d546f",
+      "actual": "9c12d3ed85945956dea8446284747734eef871a8a03183c288450004395d546f",
+      "match": true
+    },
+    {
+      "path": "art/full/engine_viewer_state_map.json",
+      "role": "catalog_member:UI005:5",
+      "expected": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "actual": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/ui_states/interact_talk.png",
+      "role": "catalog_member:UI005:6",
+      "expected": "cc4b31836676888a43f984ea14977d1c5145b4c153fbab6faa7f648561568cc3",
+      "actual": "cc4b31836676888a43f984ea14977d1c5145b4c153fbab6faa7f648561568cc3",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/ui_states/interact_pick.png",
+      "role": "catalog_member:UI005:7",
+      "expected": "19a31c3778d53bebe9d264e8637485405cf2431c2ef90d0bbac00c8cdda76ed3",
+      "actual": "19a31c3778d53bebe9d264e8637485405cf2431c2ef90d0bbac00c8cdda76ed3",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/ui_states/interact_place.png",
+      "role": "catalog_member:UI005:8",
+      "expected": "e711dafa913a5fe74ea5fa85aae50eccf748f7406846c7eaedba64a8516f644d",
+      "actual": "e711dafa913a5fe74ea5fa85aae50eccf748f7406846c7eaedba64a8516f644d",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/ui_states/interact_view.png",
+      "role": "catalog_member:UI005:9",
+      "expected": "91dcf6ad2b5d5426b44851fd4aa2a77086537d8ce1ec9e6823421efd4340cb50",
+      "actual": "91dcf6ad2b5d5426b44851fd4aa2a77086537d8ce1ec9e6823421efd4340cb50",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/ui_states/interact_pressed.png",
+      "role": "catalog_member:UI005:10",
+      "expected": "5087ee8c40c3e3b52d9cb4f0197dc813b801056a99b683a9027c32e970f98281",
+      "actual": "5087ee8c40c3e3b52d9cb4f0197dc813b801056a99b683a9027c32e970f98281",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/ui_states/interact_disabled.png",
+      "role": "catalog_member:UI005:11",
+      "expected": "52ad5e4dbc41b8822d66e107ce1223d20ad5ea0c15a50deb9cb14aaded8a8e0b",
+      "actual": "52ad5e4dbc41b8822d66e107ce1223d20ad5ea0c15a50deb9cb14aaded8a8e0b",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/ui_states/interact_hidden.png",
+      "role": "catalog_member:UI005:12",
+      "expected": "ecdf7b0247348a95ce19a6fdcdafec005c66bd0cf372f36a3d215a4ff93f866f",
+      "actual": "ecdf7b0247348a95ce19a6fdcdafec005c66bd0cf372f36a3d215a4ff93f866f",
+      "match": true
+    },
+    {
+      "path": "art/full/reviews/UI005.json",
+      "role": "catalog_member:UI005:13",
+      "expected": "8e8b76a109f34994f7a65dc42b277dc7c6e53c0f555c04b8ff3338c79aff8ab8",
+      "actual": "8e8b76a109f34994f7a65dc42b277dc7c6e53c0f555c04b8ff3338c79aff8ab8",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/tokens.json",
+      "role": "catalog_member:UI006:0",
+      "expected": "ebb1eb23a8cc6cc251b93cdc305771aecc57cadd11d6d95a9c48ab895d45107c",
+      "actual": "ebb1eb23a8cc6cc251b93cdc305771aecc57cadd11d6d95a9c48ab895d45107c",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/index.html",
+      "role": "catalog_member:UI006:1",
+      "expected": "bdd7b5ec377f0d570a7deadeee7ae6d3be3a45546ea92f72a12ac44799bc7e68",
+      "actual": "bdd7b5ec377f0d570a7deadeee7ae6d3be3a45546ea92f72a12ac44799bc7e68",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/js/states.js",
+      "role": "catalog_member:UI006:2",
+      "expected": "e111011457878bf075f8782d763191f0dea052275119cf8a1cfc4c90a9928d45",
+      "actual": "e111011457878bf075f8782d763191f0dea052275119cf8a1cfc4c90a9928d45",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/css/ui.css",
+      "role": "catalog_member:UI006:3",
+      "expected": "579b07cd69fce49eac51411006fb35bf756ee95c42e02978c83534b99e416237",
+      "actual": "579b07cd69fce49eac51411006fb35bf756ee95c42e02978c83534b99e416237",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/js/components.js",
+      "role": "catalog_member:UI006:4",
+      "expected": "9c12d3ed85945956dea8446284747734eef871a8a03183c288450004395d546f",
+      "actual": "9c12d3ed85945956dea8446284747734eef871a8a03183c288450004395d546f",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/portraits/player_1015.png",
+      "role": "catalog_member:UI006:5",
+      "expected": "160a74b967a3294b40ad985a1d11f8fbcb5449fbebf5071453b954cdb187e4fe",
+      "actual": "160a74b967a3294b40ad985a1d11f8fbcb5449fbebf5071453b954cdb187e4fe",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/portraits/npc_gardener.png",
+      "role": "catalog_member:UI006:6",
+      "expected": "f25ad3fb94b13593578ebfb5d224ac9f520320df2b68e1589992356f5f565737",
+      "actual": "f25ad3fb94b13593578ebfb5d224ac9f520320df2b68e1589992356f5f565737",
+      "match": true
+    },
+    {
+      "path": "art/full/source/characters/CHAR004_PLAYER/portrait_record.json",
+      "role": "catalog_member:UI006:7",
+      "expected": "1f20fbd3f17377132bb02ec6e886682690426672967fe86f37c6fdc5b2c16a28",
+      "actual": "1f20fbd3f17377132bb02ec6e886682690426672967fe86f37c6fdc5b2c16a28",
+      "match": true
+    },
+    {
+      "path": "art/full/source/characters/CHAR003_NPC_GARDENER/npc_gardener_slice_record.json",
+      "role": "catalog_member:UI006:8",
+      "expected": "4ec4036dfdda582354078bdd6820c6ca4be53aa79341938e12bd77f2923b0d46",
+      "actual": "4ec4036dfdda582354078bdd6820c6ca4be53aa79341938e12bd77f2923b0d46",
+      "match": true
+    },
+    {
+      "path": "art/full/engine_viewer_state_map.json",
+      "role": "catalog_member:UI006:9",
+      "expected": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "actual": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/ui_states/dialogue_gardener_p1.png",
+      "role": "catalog_member:UI006:10",
+      "expected": "d92316254850e77a04797a6f749666688e2fb2b6cf0cb02509b200d0c255269e",
+      "actual": "d92316254850e77a04797a6f749666688e2fb2b6cf0cb02509b200d0c255269e",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/ui_states/dialogue_player_p2.png",
+      "role": "catalog_member:UI006:11",
+      "expected": "02b94dc9c45339f4048b28c4e5df7993508e117116a7970b3df8006c4a411651",
+      "actual": "02b94dc9c45339f4048b28c4e5df7993508e117116a7970b3df8006c4a411651",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/ui_states/dialogue_accept_pressed.png",
+      "role": "catalog_member:UI006:12",
+      "expected": "37bbc72a2803698b5aa2b60ca17b37b721b8352d14992adc1a25e561dd749b9e",
+      "actual": "37bbc72a2803698b5aa2b60ca17b37b721b8352d14992adc1a25e561dd749b9e",
+      "match": true
+    },
+    {
+      "path": "art/full/reviews/UI006.json",
+      "role": "catalog_member:UI006:13",
+      "expected": "cdf6b80ed35dee39bbbcdd9ad534f02c4e5dbdbaac7d2399f203084e51a3c64e",
+      "actual": "cdf6b80ed35dee39bbbcdd9ad534f02c4e5dbdbaac7d2399f203084e51a3c64e",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/tokens.json",
+      "role": "catalog_member:UI007:0",
+      "expected": "ebb1eb23a8cc6cc251b93cdc305771aecc57cadd11d6d95a9c48ab895d45107c",
+      "actual": "ebb1eb23a8cc6cc251b93cdc305771aecc57cadd11d6d95a9c48ab895d45107c",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/index.html",
+      "role": "catalog_member:UI007:1",
+      "expected": "bdd7b5ec377f0d570a7deadeee7ae6d3be3a45546ea92f72a12ac44799bc7e68",
+      "actual": "bdd7b5ec377f0d570a7deadeee7ae6d3be3a45546ea92f72a12ac44799bc7e68",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/js/states.js",
+      "role": "catalog_member:UI007:2",
+      "expected": "e111011457878bf075f8782d763191f0dea052275119cf8a1cfc4c90a9928d45",
+      "actual": "e111011457878bf075f8782d763191f0dea052275119cf8a1cfc4c90a9928d45",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/css/ui.css",
+      "role": "catalog_member:UI007:3",
+      "expected": "579b07cd69fce49eac51411006fb35bf756ee95c42e02978c83534b99e416237",
+      "actual": "579b07cd69fce49eac51411006fb35bf756ee95c42e02978c83534b99e416237",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/js/components.js",
+      "role": "catalog_member:UI007:4",
+      "expected": "9c12d3ed85945956dea8446284747734eef871a8a03183c288450004395d546f",
+      "actual": "9c12d3ed85945956dea8446284747734eef871a8a03183c288450004395d546f",
+      "match": true
+    },
+    {
+      "path": "art/full/engine_viewer_state_map.json",
+      "role": "catalog_member:UI007:5",
+      "expected": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "actual": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/ui_states/pause_default.png",
+      "role": "catalog_member:UI007:6",
+      "expected": "ab5d1327eab9f9660d38b0bb0862275e62bcdeb97e3fb01bc50bf9b34131194e",
+      "actual": "ab5d1327eab9f9660d38b0bb0862275e62bcdeb97e3fb01bc50bf9b34131194e",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/ui_states/pause_sound_on.png",
+      "role": "catalog_member:UI007:7",
+      "expected": "f61d38b68d4586f8118b60e62e714dbc451ef4400b5c186d61817dfcd7552be7",
+      "actual": "f61d38b68d4586f8118b60e62e714dbc451ef4400b5c186d61817dfcd7552be7",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/ui_states/pause_restart_pressed.png",
+      "role": "catalog_member:UI007:8",
+      "expected": "88a5d91561272f7e1add5d98fccf9cf94317c204f5cbe4ac6cbfef325f8b1dff",
+      "actual": "88a5d91561272f7e1add5d98fccf9cf94317c204f5cbe4ac6cbfef325f8b1dff",
+      "match": true
+    },
+    {
+      "path": "art/full/reviews/UI007.json",
+      "role": "catalog_member:UI007:9",
+      "expected": "c7bee7c346ee8f96f62758ef739c28fac144ad7bf4c3b53f318ebe66f145e169",
+      "actual": "c7bee7c346ee8f96f62758ef739c28fac144ad7bf4c3b53f318ebe66f145e169",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/tokens.json",
+      "role": "catalog_member:UI008:0",
+      "expected": "ebb1eb23a8cc6cc251b93cdc305771aecc57cadd11d6d95a9c48ab895d45107c",
+      "actual": "ebb1eb23a8cc6cc251b93cdc305771aecc57cadd11d6d95a9c48ab895d45107c",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/index.html",
+      "role": "catalog_member:UI008:1",
+      "expected": "bdd7b5ec377f0d570a7deadeee7ae6d3be3a45546ea92f72a12ac44799bc7e68",
+      "actual": "bdd7b5ec377f0d570a7deadeee7ae6d3be3a45546ea92f72a12ac44799bc7e68",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/js/states.js",
+      "role": "catalog_member:UI008:2",
+      "expected": "e111011457878bf075f8782d763191f0dea052275119cf8a1cfc4c90a9928d45",
+      "actual": "e111011457878bf075f8782d763191f0dea052275119cf8a1cfc4c90a9928d45",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/css/ui.css",
+      "role": "catalog_member:UI008:3",
+      "expected": "579b07cd69fce49eac51411006fb35bf756ee95c42e02978c83534b99e416237",
+      "actual": "579b07cd69fce49eac51411006fb35bf756ee95c42e02978c83534b99e416237",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/js/components.js",
+      "role": "catalog_member:UI008:4",
+      "expected": "9c12d3ed85945956dea8446284747734eef871a8a03183c288450004395d546f",
+      "actual": "9c12d3ed85945956dea8446284747734eef871a8a03183c288450004395d546f",
+      "match": true
+    },
+    {
+      "path": "art/full/engine_viewer_state_map.json",
+      "role": "catalog_member:UI008:5",
+      "expected": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "actual": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/ui_states/complete_default.png",
+      "role": "catalog_member:UI008:6",
+      "expected": "c362a28588554aaf6eba91eccebd637a9f881745c6dfce2bc1d8962776288ac9",
+      "actual": "c362a28588554aaf6eba91eccebd637a9f881745c6dfce2bc1d8962776288ac9",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/ui_states/complete_continue_pressed.png",
+      "role": "catalog_member:UI008:7",
+      "expected": "4a3a202647fa7d8672badd9db21bb9df0639a6d15d30acdc45b7129660fcc37c",
+      "actual": "4a3a202647fa7d8672badd9db21bb9df0639a6d15d30acdc45b7129660fcc37c",
+      "match": true
+    },
+    {
+      "path": "art/full/reviews/UI008.json",
+      "role": "catalog_member:UI008:8",
+      "expected": "eb27dd3766a67df3e8d3f3df132f7891b02e545ecbe9a93af45adca80643b5e1",
+      "actual": "eb27dd3766a67df3e8d3f3df132f7891b02e545ecbe9a93af45adca80643b5e1",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/tokens.json",
+      "role": "catalog_member:UI009:0",
+      "expected": "ebb1eb23a8cc6cc251b93cdc305771aecc57cadd11d6d95a9c48ab895d45107c",
+      "actual": "ebb1eb23a8cc6cc251b93cdc305771aecc57cadd11d6d95a9c48ab895d45107c",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/index.html",
+      "role": "catalog_member:UI009:1",
+      "expected": "bdd7b5ec377f0d570a7deadeee7ae6d3be3a45546ea92f72a12ac44799bc7e68",
+      "actual": "bdd7b5ec377f0d570a7deadeee7ae6d3be3a45546ea92f72a12ac44799bc7e68",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/js/states.js",
+      "role": "catalog_member:UI009:2",
+      "expected": "e111011457878bf075f8782d763191f0dea052275119cf8a1cfc4c90a9928d45",
+      "actual": "e111011457878bf075f8782d763191f0dea052275119cf8a1cfc4c90a9928d45",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/css/ui.css",
+      "role": "catalog_member:UI009:3",
+      "expected": "579b07cd69fce49eac51411006fb35bf756ee95c42e02978c83534b99e416237",
+      "actual": "579b07cd69fce49eac51411006fb35bf756ee95c42e02978c83534b99e416237",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/js/components.js",
+      "role": "catalog_member:UI009:4",
+      "expected": "9c12d3ed85945956dea8446284747734eef871a8a03183c288450004395d546f",
+      "actual": "9c12d3ed85945956dea8446284747734eef871a8a03183c288450004395d546f",
+      "match": true
+    },
+    {
+      "path": "art/full/engine_viewer_state_map.json",
+      "role": "catalog_member:UI009:5",
+      "expected": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "actual": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/ui_states/toast_pickup.png",
+      "role": "catalog_member:UI009:6",
+      "expected": "63e2c43e5279fea3ce380eb6f62ef2e540a33b951d5595acc3b8a38c83c28440",
+      "actual": "63e2c43e5279fea3ce380eb6f62ef2e540a33b951d5595acc3b8a38c83c28440",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/ui_states/toast_task_update.png",
+      "role": "catalog_member:UI009:7",
+      "expected": "7246b1222402e4b928c85e8d0de325d6fe2abfc8e4416a1a06977fbc252f2445",
+      "actual": "7246b1222402e4b928c85e8d0de325d6fe2abfc8e4416a1a06977fbc252f2445",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/ui_states/toast_error.png",
+      "role": "catalog_member:UI009:8",
+      "expected": "f9481850c3aef366ff6ec9d482ccbb92468920a091f249e02605b9abb46e8a0c",
+      "actual": "f9481850c3aef366ff6ec9d482ccbb92468920a091f249e02605b9abb46e8a0c",
+      "match": true
+    },
+    {
+      "path": "art/full/reviews/UI009.json",
+      "role": "catalog_member:UI009:9",
+      "expected": "0cbb5564ab1fa8faffde86f6fd81e999eadc71e331ab3264c06658946631d928",
+      "actual": "0cbb5564ab1fa8faffde86f6fd81e999eadc71e331ab3264c06658946631d928",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/tokens.json",
+      "role": "catalog_member:UI010:0",
+      "expected": "ebb1eb23a8cc6cc251b93cdc305771aecc57cadd11d6d95a9c48ab895d45107c",
+      "actual": "ebb1eb23a8cc6cc251b93cdc305771aecc57cadd11d6d95a9c48ab895d45107c",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/index.html",
+      "role": "catalog_member:UI010:1",
+      "expected": "bdd7b5ec377f0d570a7deadeee7ae6d3be3a45546ea92f72a12ac44799bc7e68",
+      "actual": "bdd7b5ec377f0d570a7deadeee7ae6d3be3a45546ea92f72a12ac44799bc7e68",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/js/states.js",
+      "role": "catalog_member:UI010:2",
+      "expected": "e111011457878bf075f8782d763191f0dea052275119cf8a1cfc4c90a9928d45",
+      "actual": "e111011457878bf075f8782d763191f0dea052275119cf8a1cfc4c90a9928d45",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/css/ui.css",
+      "role": "catalog_member:UI010:3",
+      "expected": "579b07cd69fce49eac51411006fb35bf756ee95c42e02978c83534b99e416237",
+      "actual": "579b07cd69fce49eac51411006fb35bf756ee95c42e02978c83534b99e416237",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/js/components.js",
+      "role": "catalog_member:UI010:4",
+      "expected": "9c12d3ed85945956dea8446284747734eef871a8a03183c288450004395d546f",
+      "actual": "9c12d3ed85945956dea8446284747734eef871a8a03183c288450004395d546f",
+      "match": true
+    },
+    {
+      "path": "art/full/engine_viewer_state_map.json",
+      "role": "catalog_member:UI010:5",
+      "expected": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "actual": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/ui_states/tip_first_move.png",
+      "role": "catalog_member:UI010:6",
+      "expected": "493921e0ba1aa5eebba49808881dfd52ac0338c499482c13586df1ec1df48c95",
+      "actual": "493921e0ba1aa5eebba49808881dfd52ac0338c499482c13586df1ec1df48c95",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/ui_states/tip_first_interact.png",
+      "role": "catalog_member:UI010:7",
+      "expected": "9ea806569c016090197b8e2423fb6f3b7150e83dccee7390b543230d70aef3db",
+      "actual": "9ea806569c016090197b8e2423fb6f3b7150e83dccee7390b543230d70aef3db",
+      "match": true
+    },
+    {
+      "path": "art/full/reviews/UI010.json",
+      "role": "catalog_member:UI010:8",
+      "expected": "fd27ce7ab4a10abe0eaa007f41de28ea0a476dbd01fe958f0218ed2b3124b315",
+      "actual": "fd27ce7ab4a10abe0eaa007f41de28ea0a476dbd01fe958f0218ed2b3124b315",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/tokens.json",
+      "role": "catalog_member:UI011:0",
+      "expected": "ebb1eb23a8cc6cc251b93cdc305771aecc57cadd11d6d95a9c48ab895d45107c",
+      "actual": "ebb1eb23a8cc6cc251b93cdc305771aecc57cadd11d6d95a9c48ab895d45107c",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/index.html",
+      "role": "catalog_member:UI011:1",
+      "expected": "bdd7b5ec377f0d570a7deadeee7ae6d3be3a45546ea92f72a12ac44799bc7e68",
+      "actual": "bdd7b5ec377f0d570a7deadeee7ae6d3be3a45546ea92f72a12ac44799bc7e68",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/js/states.js",
+      "role": "catalog_member:UI011:2",
+      "expected": "e111011457878bf075f8782d763191f0dea052275119cf8a1cfc4c90a9928d45",
+      "actual": "e111011457878bf075f8782d763191f0dea052275119cf8a1cfc4c90a9928d45",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/css/ui.css",
+      "role": "catalog_member:UI011:3",
+      "expected": "579b07cd69fce49eac51411006fb35bf756ee95c42e02978c83534b99e416237",
+      "actual": "579b07cd69fce49eac51411006fb35bf756ee95c42e02978c83534b99e416237",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/js/components.js",
+      "role": "catalog_member:UI011:4",
+      "expected": "9c12d3ed85945956dea8446284747734eef871a8a03183c288450004395d546f",
+      "actual": "9c12d3ed85945956dea8446284747734eef871a8a03183c288450004395d546f",
+      "match": true
+    },
+    {
+      "path": "art/full/engine_viewer_state_map.json",
+      "role": "catalog_member:UI011:5",
+      "expected": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "actual": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/ui_states/safe_area_landscape.png",
+      "role": "catalog_member:UI011:6",
+      "expected": "60447cf059dc3e768356179ae8952c7d3256dbf8d23acc3e09299feb07aa35df",
+      "actual": "60447cf059dc3e768356179ae8952c7d3256dbf8d23acc3e09299feb07aa35df",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/ui_states/rotate_notice.png",
+      "role": "catalog_member:UI011:7",
+      "expected": "82825c54a902565d544d62fa99855221a89833b5dc481f03011deddc4c74f7c1",
+      "actual": "82825c54a902565d544d62fa99855221a89833b5dc481f03011deddc4c74f7c1",
+      "match": true
+    },
+    {
+      "path": "art/full/reviews/UI011.json",
+      "role": "catalog_member:UI011:8",
+      "expected": "cc4db93f8e4cf9430faf0b1a2cf12e028d8a7e8e537434071f4a9dbf52cd7437",
+      "actual": "cc4db93f8e4cf9430faf0b1a2cf12e028d8a7e8e537434071f4a9dbf52cd7437",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/components/icons.svg",
+      "role": "catalog_member:UI012:0",
+      "expected": "ef400140d123adb3c067c857aba51571bc82968e023e241e732627612c9b1768",
+      "actual": "ef400140d123adb3c067c857aba51571bc82968e023e241e732627612c9b1768",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/components/icons/icon_arrow.svg",
+      "role": "catalog_member:UI012:1",
+      "expected": "33a53c56264a0a30bac58abcae604cf16862818aad3107cfbf49748567c0b289",
+      "actual": "33a53c56264a0a30bac58abcae604cf16862818aad3107cfbf49748567c0b289",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/components/icons/icon_check.svg",
+      "role": "catalog_member:UI012:2",
+      "expected": "46cd4452ae12c8cca311dec5a6808280373eca3caf8c2ff3a82d343ecb79ce03",
+      "actual": "46cd4452ae12c8cca311dec5a6808280373eca3caf8c2ff3a82d343ecb79ce03",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/components/icons/icon_close.svg",
+      "role": "catalog_member:UI012:3",
+      "expected": "cfa33139f3cb7bcd2dc271c86776e17fa364fc26aef49f95d86a3422ab4ab73f",
+      "actual": "cfa33139f3cb7bcd2dc271c86776e17fa364fc26aef49f95d86a3422ab4ab73f",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/components/icons/icon_continue.svg",
+      "role": "catalog_member:UI012:4",
+      "expected": "3536614dc0d650a255746c792d04b5b69c1b3da3f9befdb506c17b685237bb72",
+      "actual": "3536614dc0d650a255746c792d04b5b69c1b3da3f9befdb506c17b685237bb72",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/components/icons/icon_copy.svg",
+      "role": "catalog_member:UI012:5",
+      "expected": "cca448a5ae751603c3eecf8524852e2e17a903c6b7197080fe83527200a3e582",
+      "actual": "cca448a5ae751603c3eecf8524852e2e17a903c6b7197080fe83527200a3e582",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/components/icons/icon_info.svg",
+      "role": "catalog_member:UI012:6",
+      "expected": "b25841eeb0012cb0d0570d921f7f8fe32fcf82bd8e8446cfaefdbbcff264feac",
+      "actual": "b25841eeb0012cb0d0570d921f7f8fe32fcf82bd8e8446cfaefdbbcff264feac",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/components/icons/icon_leaf.svg",
+      "role": "catalog_member:UI012:7",
+      "expected": "76cc1957d61247ff03a6a5c6028de5280c45e3f1ac42d5303638dce11005e799",
+      "actual": "76cc1957d61247ff03a6a5c6028de5280c45e3f1ac42d5303638dce11005e799",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/components/icons/icon_lock.svg",
+      "role": "catalog_member:UI012:8",
+      "expected": "d1fc16f61e4e9717007362a771ee7316f93a56937539e97e9a8e872e2ceb1254",
+      "actual": "d1fc16f61e4e9717007362a771ee7316f93a56937539e97e9a8e872e2ceb1254",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/components/icons/icon_menu.svg",
+      "role": "catalog_member:UI012:9",
+      "expected": "fe56c439ba1aee83f068e66bbbc0712cbe1fe6942ea818e99fccf0d1d68cd058",
+      "actual": "fe56c439ba1aee83f068e66bbbc0712cbe1fe6942ea818e99fccf0d1d68cd058",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/components/icons/icon_pickup.svg",
+      "role": "catalog_member:UI012:10",
+      "expected": "4537ea65a141fededb21032d7dfe4ebece2f220702bae2593966a471bafb6f5e",
+      "actual": "4537ea65a141fededb21032d7dfe4ebece2f220702bae2593966a471bafb6f5e",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/components/icons/icon_pin.svg",
+      "role": "catalog_member:UI012:11",
+      "expected": "9f8d185a4a1e02eed200c0e9a166e7cd8bb6ecbf0b85089078aca0ea382f9796",
+      "actual": "9f8d185a4a1e02eed200c0e9a166e7cd8bb6ecbf0b85089078aca0ea382f9796",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/components/icons/icon_place.svg",
+      "role": "catalog_member:UI012:12",
+      "expected": "364e8a521b237ae4ebd57df825e1951bc2dad9e788254e785fe121add2387159",
+      "actual": "364e8a521b237ae4ebd57df825e1951bc2dad9e788254e785fe121add2387159",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/components/icons/icon_postcard.svg",
+      "role": "catalog_member:UI012:13",
+      "expected": "a8464e19f0b3787615a69d5c390c604b122a369e99b985c5f7789b83d31ace48",
+      "actual": "a8464e19f0b3787615a69d5c390c604b122a369e99b985c5f7789b83d31ace48",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/components/icons/icon_restart.svg",
+      "role": "catalog_member:UI012:14",
+      "expected": "b8d38bf154e7fd50481533141fc2f697178e5cf686dc511618f7749d9589cb9d",
+      "actual": "b8d38bf154e7fd50481533141fc2f697178e5cf686dc511618f7749d9589cb9d",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/components/icons/icon_retry.svg",
+      "role": "catalog_member:UI012:15",
+      "expected": "dd071a022ed69f168417268f3522c8d44069217cef223ee86dd518931d8cd42e",
+      "actual": "dd071a022ed69f168417268f3522c8d44069217cef223ee86dd518931d8cd42e",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/components/icons/icon_rotate.svg",
+      "role": "catalog_member:UI012:16",
+      "expected": "cf17f2b88a8b5afca527f6a35a16832aed47f5396d584e82cd6e3c6290d3948f",
+      "actual": "cf17f2b88a8b5afca527f6a35a16832aed47f5396d584e82cd6e3c6290d3948f",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/components/icons/icon_sound_off.svg",
+      "role": "catalog_member:UI012:17",
+      "expected": "22767f8d0c6a3aab2a9679e4785d94aed3b931ae073f37dc78d2b7958348ef27",
+      "actual": "22767f8d0c6a3aab2a9679e4785d94aed3b931ae073f37dc78d2b7958348ef27",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/components/icons/icon_sound_on.svg",
+      "role": "catalog_member:UI012:18",
+      "expected": "738c43b23360a8ba745d65126e5e310becbad13963c2ec86511a74c587ea4232",
+      "actual": "738c43b23360a8ba745d65126e5e310becbad13963c2ec86511a74c587ea4232",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/components/icons/icon_sparkle.svg",
+      "role": "catalog_member:UI012:19",
+      "expected": "2b38c50ffe567c93300e6031fce010fcac65751937e65b5ceffa4a680e4f4302",
+      "actual": "2b38c50ffe567c93300e6031fce010fcac65751937e65b5ceffa4a680e4f4302",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/components/icons/icon_talk.svg",
+      "role": "catalog_member:UI012:20",
+      "expected": "dd90272bdc2b4dfa8eae6fd496f376bbc748e14ad32ab09dd1901c555072b259",
+      "actual": "dd90272bdc2b4dfa8eae6fd496f376bbc748e14ad32ab09dd1901c555072b259",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/components/icons/icon_view.svg",
+      "role": "catalog_member:UI012:21",
+      "expected": "da299221f7aeb03e39053e4c2c925cd708e1151ae0ac685e89fe59b88ee54a89",
+      "actual": "da299221f7aeb03e39053e4c2c925cd708e1151ae0ac685e89fe59b88ee54a89",
+      "match": true
+    },
+    {
+      "path": "art/full/engine_viewer_state_map.json",
+      "role": "catalog_member:UI012:22",
+      "expected": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "actual": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/ui_states/spec_icons.png",
+      "role": "catalog_member:UI012:23",
+      "expected": "f1902818ce3de1ac2d8f307308d314aef334d77450fddd56d8971188bb6fe516",
+      "actual": "f1902818ce3de1ac2d8f307308d314aef334d77450fddd56d8971188bb6fe516",
+      "match": true
+    },
+    {
+      "path": "art/full/reviews/UI012.json",
+      "role": "catalog_member:UI012:24",
+      "expected": "f86c6343280dd835318eb7958f1b745d73faceb32216a323dc493710a63f3978",
+      "actual": "f86c6343280dd835318eb7958f1b745d73faceb32216a323dc493710a63f3978",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/tokens.json",
+      "role": "catalog_member:UI013:0",
+      "expected": "ebb1eb23a8cc6cc251b93cdc305771aecc57cadd11d6d95a9c48ab895d45107c",
+      "actual": "ebb1eb23a8cc6cc251b93cdc305771aecc57cadd11d6d95a9c48ab895d45107c",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/css/tokens.css",
+      "role": "catalog_member:UI013:1",
+      "expected": "b59035c90da3c167af36174a213585766773dd17c21e93f00805bcae5b9cb9eb",
+      "actual": "b59035c90da3c167af36174a213585766773dd17c21e93f00805bcae5b9cb9eb",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/fonts/FONT_MANIFEST.json",
+      "role": "catalog_member:UI013:2",
+      "expected": "77377db1f3c2d34ed618d54bc8a111905e367c8c709d489ff55fb8a5fe0ce6d1",
+      "actual": "77377db1f3c2d34ed618d54bc8a111905e367c8c709d489ff55fb8a5fe0ce6d1",
+      "match": true
+    },
+    {
+      "path": "art/full/ui/fonts/OFL.txt",
+      "role": "catalog_member:UI013:3",
+      "expected": "1d361a8f8e8ce6e68457dcd93fb56e162e6baa3bbb7e7573a290d44399f6b57e",
+      "actual": "1d361a8f8e8ce6e68457dcd93fb56e162e6baa3bbb7e7573a290d44399f6b57e",
+      "match": true
+    },
+    {
+      "path": "art/full/engine_viewer_state_map.json",
+      "role": "catalog_member:UI013:4",
+      "expected": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "actual": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/ui_states/spec_type.png",
+      "role": "catalog_member:UI013:5",
+      "expected": "8fc5c029a33f24a770f57e107e67b78b15524f24a4a209365658c2dc64a45e22",
+      "actual": "8fc5c029a33f24a770f57e107e67b78b15524f24a4a209365658c2dc64a45e22",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/ui_states/spec_nine_slice.png",
+      "role": "catalog_member:UI013:6",
+      "expected": "a7b7c1d623a4b81581abc8860029fb92c945113440084a1873349cde294149cf",
+      "actual": "a7b7c1d623a4b81581abc8860029fb92c945113440084a1873349cde294149cf",
+      "match": true
+    },
+    {
+      "path": "art/full/reviews/UI013.json",
+      "role": "catalog_member:UI013:7",
+      "expected": "2f9c60c0db498e782c3c7bf6635f10783238e82e3d1ea3d86b481239d456d484",
+      "actual": "2f9c60c0db498e782c3c7bf6635f10783238e82e3d1ea3d86b481239d456d484",
+      "match": true
+    },
+    {
+      "path": "art/full/source/fx/FX001_foot_shadow.svg",
+      "role": "catalog_member:FX001:0",
+      "expected": "295a4cbcdb81e6f2ca321ef24706b381074bb4680bc5f4d48034e2cf4223cb38",
+      "actual": "295a4cbcdb81e6f2ca321ef24706b381074bb4680bc5f4d48034e2cf4223cb38",
+      "match": true
+    },
+    {
+      "path": "art/full/source/fx/FX001_spec.json",
+      "role": "catalog_member:FX001:1",
+      "expected": "aaf085f0599d2b442224d983e8c488e3af96ba7e3f7e2d5e5b40a1cc8faf3913",
+      "actual": "aaf085f0599d2b442224d983e8c488e3af96ba7e3f7e2d5e5b40a1cc8faf3913",
+      "match": true
+    },
+    {
+      "path": "art/full/engine_viewer_state_map.json",
+      "role": "catalog_member:FX001:2",
+      "expected": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "actual": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/assets/FX001.png",
+      "role": "catalog_member:FX001:3",
+      "expected": "c1c64f8385e564c4d182b0ee2926d8f17ba590af42ee39b6deac4e51d5a737e8",
+      "actual": "c1c64f8385e564c4d182b0ee2926d8f17ba590af42ee39b6deac4e51d5a737e8",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/fx/FX001_foot_shadow.png",
+      "role": "catalog_member:FX001:4",
+      "expected": "857dc4ba55cf1fb7b30373f5418b9f0ec9c8feb582e8ca198c5e333e33bb288a",
+      "actual": "857dc4ba55cf1fb7b30373f5418b9f0ec9c8feb582e8ca198c5e333e33bb288a",
+      "match": true
+    },
+    {
+      "path": "art/full/reviews/FX001.json",
+      "role": "catalog_member:FX001:5",
+      "expected": "392ceb6c0463208a79ddb18eba13bfb46de956ee2524c1d03c305c684f08436c",
+      "actual": "392ceb6c0463208a79ddb18eba13bfb46de956ee2524c1d03c305c684f08436c",
+      "match": true
+    },
+    {
+      "path": "art/full/source/fx/FX002_pickup_feedback.svg",
+      "role": "catalog_member:FX002:0",
+      "expected": "3188071ab20cdb4691cb56df30643a51cde9de09dc62d7e23d626f600bff3ed5",
+      "actual": "3188071ab20cdb4691cb56df30643a51cde9de09dc62d7e23d626f600bff3ed5",
+      "match": true
+    },
+    {
+      "path": "art/full/source/fx/FX002_spec.json",
+      "role": "catalog_member:FX002:1",
+      "expected": "0c92ece6f0334049363b6b70acd9408e6cb898a3ccc52c45fb5323759823e59c",
+      "actual": "0c92ece6f0334049363b6b70acd9408e6cb898a3ccc52c45fb5323759823e59c",
+      "match": true
+    },
+    {
+      "path": "art/full/engine_viewer_state_map.json",
+      "role": "catalog_member:FX002:2",
+      "expected": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "actual": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/assets/FX002.png",
+      "role": "catalog_member:FX002:3",
+      "expected": "50417cc01cb337732c218cdffd5d7987c594dd49bb726a0a61be44dadfe4e3eb",
+      "actual": "50417cc01cb337732c218cdffd5d7987c594dd49bb726a0a61be44dadfe4e3eb",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/fx/FX002_pickup_feedback.png",
+      "role": "catalog_member:FX002:4",
+      "expected": "b8aca72ea0fe48d225ac2283e5d7d2433f441aeb5a09d3d31116992aaecd368e",
+      "actual": "b8aca72ea0fe48d225ac2283e5d7d2433f441aeb5a09d3d31116992aaecd368e",
+      "match": true
+    },
+    {
+      "path": "art/full/reviews/FX002.json",
+      "role": "catalog_member:FX002:5",
+      "expected": "66cc908098d0f2a88f88f4127fb377118f9fba6e97b12f109c5d5d7e81c1c17a",
+      "actual": "66cc908098d0f2a88f88f4127fb377118f9fba6e97b12f109c5d5d7e81c1c17a",
+      "match": true
+    },
+    {
+      "path": "art/full/source/fx/FX003_board_completion.svg",
+      "role": "catalog_member:FX003:0",
+      "expected": "cac9e974951f73540205c42188083410e08ed3fbf6d4a6017c39d627cc7f8478",
+      "actual": "cac9e974951f73540205c42188083410e08ed3fbf6d4a6017c39d627cc7f8478",
+      "match": true
+    },
+    {
+      "path": "art/full/source/fx/FX003_spec.json",
+      "role": "catalog_member:FX003:1",
+      "expected": "cfdff6dc3e7763c27ac684e1a5a561635424869aa9ba7fdf0960a8729aaaecca",
+      "actual": "cfdff6dc3e7763c27ac684e1a5a561635424869aa9ba7fdf0960a8729aaaecca",
+      "match": true
+    },
+    {
+      "path": "art/full/source/props/PROP003_message_board.blend",
+      "role": "catalog_member:FX003:2",
+      "expected": "f31860d9d50a790ddfb1fea1a93e79e2feda20a24ca31e28defb0775b8b6d069",
+      "actual": "f31860d9d50a790ddfb1fea1a93e79e2feda20a24ca31e28defb0775b8b6d069",
+      "match": true
+    },
+    {
+      "path": "art/full/engine_viewer_state_map.json",
+      "role": "catalog_member:FX003:3",
+      "expected": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "actual": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/assets/FX003.png",
+      "role": "catalog_member:FX003:4",
+      "expected": "138e693de58f6e2b17e956bb7c44d6e72db91462b93e825ad7f509d4e7a1c807",
+      "actual": "138e693de58f6e2b17e956bb7c44d6e72db91462b93e825ad7f509d4e7a1c807",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/fx/FX003_board_completion.png",
+      "role": "catalog_member:FX003:5",
+      "expected": "6406ec54ce6728be0edb5976e109ffaa2da1500d00e92d49c77af0a04f3bec12",
+      "actual": "6406ec54ce6728be0edb5976e109ffaa2da1500d00e92d49c77af0a04f3bec12",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/props/PROP003_message_board_empty.png",
+      "role": "catalog_member:FX003:6",
+      "expected": "0f19385a8bb018cae7738c661c40a214bc1387bb75d67187cd81270363f94a37",
+      "actual": "0f19385a8bb018cae7738c661c40a214bc1387bb75d67187cd81270363f94a37",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/props/PROP003_message_board_full.png",
+      "role": "catalog_member:FX003:7",
+      "expected": "1fdca9eb61d50cfe12d3c6f17b8a0533f4249ce60f7801a988a2bf16e86f0c34",
+      "actual": "1fdca9eb61d50cfe12d3c6f17b8a0533f4249ce60f7801a988a2bf16e86f0c34",
+      "match": true
+    },
+    {
+      "path": "art/full/reviews/FX003.json",
+      "role": "catalog_member:FX003:8",
+      "expected": "f5647f0b449edfe8afe81bc0f1dff0e6baa4dd9b85399cb5256a686e085a2c75",
+      "actual": "f5647f0b449edfe8afe81bc0f1dff0e6baa4dd9b85399cb5256a686e085a2c75",
+      "match": true
+    },
+    {
+      "path": "art/full/PACK001_manifest.json",
+      "role": "catalog_member:PACK001:0",
+      "expected": "de3768d58aa7a2bcf68aa2a6d1bd508cba2bb4b69a995c9e20aacc8897df18d7",
+      "actual": "de3768d58aa7a2bcf68aa2a6d1bd508cba2bb4b69a995c9e20aacc8897df18d7",
+      "match": true
+    },
+    {
+      "path": "art_review/full_art_catalog.json",
+      "role": "catalog_member:PACK001:1",
+      "expected": "cbee2a787e9d5484ff72187b37adeac0703001f93956147346a25d1b2947fbf9",
+      "actual": "cbee2a787e9d5484ff72187b37adeac0703001f93956147346a25d1b2947fbf9",
+      "match": true
+    },
+    {
+      "path": "art/full/engine_viewer_state_map.json",
+      "role": "catalog_member:PACK001:2",
+      "expected": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "actual": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/engine/assets/PACK001.png",
+      "role": "catalog_member:PACK001:3",
+      "expected": "de0fe9ea70f4dd87103bc59fad9a5e0a32d359ab2bf09b95fa8da087e2a503a2",
+      "actual": "de0fe9ea70f4dd87103bc59fad9a5e0a32d359ab2bf09b95fa8da087e2a503a2",
+      "match": true
+    },
+    {
+      "path": "art/full/previews/pack/PACK001_overview.png",
+      "role": "catalog_member:PACK001:4",
+      "expected": "d9c032ab3a31a29ae3b11e2098bbe81dc199348b22656489bc7b05e31af06cd8",
+      "actual": "d9c032ab3a31a29ae3b11e2098bbe81dc199348b22656489bc7b05e31af06cd8",
+      "match": true
+    },
+    {
+      "path": "art/full/reviews/PACK001.json",
+      "role": "catalog_member:PACK001:5",
+      "expected": "4d912b535b0c80b9744b75c5132e6853b7a68c2caee87c6d6eb8e630d1560d30",
+      "actual": "4d912b535b0c80b9744b75c5132e6853b7a68c2caee87c6d6eb8e630d1560d30",
+      "match": true
+    }
+  ]
+}

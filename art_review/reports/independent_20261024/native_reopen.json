@@ -1,0 +1,29 @@
+[
+  {
+    "path": "art\\full\\source\\layout\\MAP001_courtyard.blend",
+    "opened": true,
+    "mesh_objects": 92,
+    "mesh_triangles": 93912,
+    "uv_meshes": 0,
+    "materials": 24,
+    "images": []
+  },
+  {
+    "path": "art\\full\\source\\environment\\ENV006_autumn_tree.blend",
+    "opened": true,
+    "mesh_objects": 2,
+    "mesh_triangles": 8904,
+    "uv_meshes": 0,
+    "materials": 6,
+    "images": []
+  },
+  {
+    "path": "art\\full\\source\\props\\PROP001_bench.blend",
+    "opened": true,
+    "mesh_objects": 2,
+    "mesh_triangles": 1944,
+    "uv_meshes": 0,
+    "materials": 2,
+    "images": []
+  }
+]

@@ -1,0 +1,113 @@
+{
+  "status": "open",
+  "source_candidate": "candidate_n2",
+  "attempted_candidate": "candidate_n5",
+  "next_candidate": "candidate_n5",
+  "independent_report": "art_review/reports/independent_20261025_candidate_n2/REPORT.md",
+  "execution_spec": "art_review/reports/independent_20261025_candidate_n2/REWORK_EXECUTION_SPEC.md",
+  "open_findings": [
+    "N01",
+    "N02",
+    "MIX"
+  ],
+  "executed_pending_independent": [
+    "N03"
+  ],
+  "resolved_pending_independent": [
+    "N09",
+    "N04",
+    "N05",
+    "N07"
+  ],
+  "measurement_note": "Scores are no longer the working signal. P0 calibration (planning/execution/P0_CALIBRATION/P0_REPORT.md) showed two blind raters agree to 2.50 but sit 12.50 below the producer self-review; every rater in the project is the same model, so re-scoring produces no new information. The W cycle walks the measurable items in REWORK_EXECUTION_SPEC instead.",
+  "w_cycle": {
+    "record": "planning/execution/W_CYCLE_W1W2_20261026.md",
+    "W1_ui": {
+      "status": "executed",
+      "covers": ["N03"],
+      "changed": [
+        "21 icons redrawn on one spec: 96 frame, 7 px stroke, round caps, +-0.6 px hand jitter, two solid glyphs removed",
+        "paper panels 96% -> 80% opacity with a 10 px alpha feather on the texture edge",
+        "meta text 13-16 px moved from mintDeep to the meta ink so the page hint is readable"
+      ],
+      "measured": {
+        "dialogue_panel_height_px": 174,
+        "dialogue_panel_share_of_720": 0.242,
+        "spec_range": [0.24, 0.27]
+      }
+    },
+    "W2_character": {
+      "status": "executed",
+      "changed": [
+        "spine pose fitted inside the 1024 render texture: scale 2.0 -> 1.45, y -500 -> -430, world quad 1.75 -> 2.41 to keep screen size",
+        "contact shadow texture shipped as textures/tex_contact_shadow.png and loaded through resources instead of being built at runtime"
+      ],
+      "measured": {
+        "weapon_cut_before": true,
+        "weapon_cut_after": false,
+        "player_contact_shadow": "present",
+        "npc_contact_shadow": "present"
+      }
+    },
+    "W3_geometry": {
+      "status": "partial",
+      "changed": [
+        "hedge back layers restored (0.26 / 0.32) so the hedge separates by density instead of one silhouette line",
+        "clean_mesh_object(): exact duplicate faces 137 -> 1, zero-area triangles 7630 -> 7436"
+      ],
+      "not_changed": [
+        "tree crown topology: the anchor wants visible gaps inside the crown while add_mass_lobe exists to close them; no external criterion, so left alone and recorded instead of guessed at"
+      ]
+    },
+    "W4_material": {
+      "status": "executed",
+      "changed": [
+        "paving split into three languages: plaza flags (2-3 per course), path running bond (5-6), edge cobbles (9-10)",
+        "course heights sampled +-26% instead of a constant 0.5 m",
+        "every slab's four top corners inset independently, so joints vary in width instead of being parallel",
+        "stone tone split widened from 13%/4% to 22%/9% light/dark"
+      ],
+      "measured": {
+        "paving_triangles_before": 7680,
+        "paving_triangles_after": 8820,
+        "map_triangles_after": 1044850,
+        "grey_steps_used": 13,
+        "grey_steps_required": 9
+      }
+    },
+    "W5_mix": {
+      "status": "executed",
+      "changed": [
+        "contact shadow now renders under both the player and the NPC",
+        "action button sub-label moved off C.muted (about 2:1 on near-white paper) to body ink"
+      ]
+    }
+  },
+  "reproducibility": {
+    "problem": "the D1b/D2 density knobs were set by hand and defaulted to 1.0, so any plain rebuild silently produced the pre-reduction 188 MB map",
+    "fix": "defaults pinned to the shipped values (grass 0.44 / ring 0.55 / hedge 0.53, 0.26 / far 0.53, 0.32, paving variants on)",
+    "evidence": "rebuild with no environment variables: 1,044,850 triangles, byte-identical GLB sha256 across two runs"
+  },
+  "pipeline": {
+    "glb_sync": "tools/sync_map_glb.py (dry-run by default, sha256 verified both ways, .meta preserved so prefab uuids survive)",
+    "geometry_audit": "tools/audit_glb_geometry.py (duplicate and zero-area triangle counts straight from the GLB)",
+    "tone_report": "delivery/next_cycle/n5/_tone_report.js (luminance steps, near-white and near-black share)"
+  },
+  "last_attempt": {
+    "candidate": "candidate_n5",
+    "manifest": "art_review/submissions/candidate_n5/manifest.json",
+    "manifest_sha256": "a1af9316bb076264e7f152a3d60a8ebcc4c5b86ef67a6796d11c79ede2e143b0",
+    "self_review": "delivery/next_cycle/n5/T4/producer_self_review_n5.json",
+    "self_review_sha256": "24436b06117d0556bc2b2dd322ef7c4bd0f236eb4e5b3642027940136f10cd6e",
+    "scores": {
+      "ENV": 77.5,
+      "CHAR": 93.75,
+      "UI": 87.5,
+      "MIX": 80.0
+    },
+    "quality": "pass (Q06/Q09 warnings)",
+    "producer_filter": "producer_rework_required",
+    "not_submitted_reason": "Producer self-review below 90; no final review request issued."
+  },
+  "resume_action": "N03 is executed and waits on an external reviewer. N01 and N02 are partially executed: paving, hedge depth and duplicate faces are done, tree-crown topology and material micro-variation are not. Re-run the formal camera set and hand the frames to a reviewer outside this model before any further scoring work."
+}

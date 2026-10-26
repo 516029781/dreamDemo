@@ -1,0 +1,25 @@
+{
+  "policy_version": "producer_submission/1.2",
+  "purpose": "producer self-review filter before requesting final independent review; not release approval",
+  "sample_minimum_per_card": 85,
+  "final_submission_minimum_per_card": 90,
+  "cards": [
+    "ENV",
+    "CHAR",
+    "UI",
+    "MIX"
+  ],
+  "score_source": "art_review/rubric.json dimensions/weights/floors; ignore historical character_policy and use active contract source",
+  "minimum_core_dimension": 3,
+  "minimum_dimension": 2,
+  "unresolved_blocking_major_allowed": 0,
+  "required_mechanical_checks": "Q01-Q09 + actual capture binding validation",
+  "final_report": "delivery/next_cycle/T4/producer_self_review.json",
+  "sample_report": "delivery/next_cycle/T3/producer_self_review.json",
+  "round_policy": "Repair -> recapture affected evidence -> rescore. After three no-improvement rounds change method; do not automatically stop or request final review. Preserve real environment/permission/resource blockers.",
+  "self_review_identity": "producer_self_review; same model may perform a separate critical review pass; never pretend independent",
+  "no_external_review_needed_for_repair": true,
+  "formal_release_threshold_unchanged": true,
+  "threshold_note": "90 is the producer self-review submission filter only. Independent art acceptance remains governed by art_review/rubric.json and its pass_total.",
+  "limitation": "Scores are producer claims. Arithmetic, evidence hashes and mechanical checks cannot independently prove visual quality or honest observations."
+}

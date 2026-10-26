@@ -1,0 +1,39 @@
+{
+  "updated_at": "2026-10-24T16:10:00+08:00",
+  "status": "in_progress_not_complete",
+  "completed_this_session": [
+    "P03 stage certificate chain (harness certificate_check/certify CLI + vnext harness_contract.json 1.4.0-draft + stage_certificate.schema.json; 25/25 regression + 12-step chain selfcheck; legacy harness preserved in tools/art_gate/legacy/)",
+    "P02 three-axis status migration (asset_status.schema.json + tools/art_gate/migrate_catalog.py + rule_migration.md; 47 items migrated, 0 pass/0 released, guards tested)",
+    "P01 unified active docs + character source (delivery/next_cycle/T0/active_spec_index.json; EDITABLE_ART_RESEARCH.md supersession banner; 15-doc stale scan)",
+    "P00 baseline lock (delivery/next_cycle/baseline.json, contract 1.3.0 + rubric 1.2.0 hashes, GLB lineage, forbidden list)",
+    "V01 tree crown/branch hierarchy (ENV006 rebuild, T2/tree_before_after.png, GLB c01dd774)",
+    "V03 planter/plant density (ENV009/010/011 + map planter composition, T2/plant_group.png, GLB d9d86eae)",
+    "V02 material separation (procedural UVs + 5 textures + builtin-standard overrides, T2/material_comparison.png, GLB 3e712dae)",
+    "V04 lighting calibration (PCF SOFT_4X, warm key/cool fill, T2/lighting_profile.json)",
+    "V05 registered done in ledger earlier this session (UI toast/dialogue fixes)"
+  ],
+  "ledger_revision": "1.0.116",
+  "done_total": "17/97 (K01-K08, V01-V05, P00-P03)",
+  "current_map_glb": "3e712dae2c1e95e84f28a2b77e60cf5f67f3647c3ad26d899e1c970c46241b63",
+  "engine_state": "Cocos web-desktop build current with V01+V02+V03+V04+V05; capture server http://127.0.0.1:8801 running",
+  "next_tasks": [
+    "P04 (ready, delegated to background agent): capture_binding.schema.json + tools/art_gate/check_bindings.py - verify agent output before marking done",
+    "Then P05 (Q01-Q09 into review contract), P06 (audit/CLI), P07 (fixtures+regression), P08 (independent rule review - external, never self-sign)",
+    "V06-V07 sample freeze + pre-check; V08/V09 external review/certificate - never self-sign"
+  ],
+  "how_to_resume": [
+    "Ready-task query: deps satisfied = all depends_on ids status done",
+    "P03 chain selfcheck rerun: python -X utf8 delivery/next_cycle/T0/p03_chain_test.py (synthetic key, temp fixtures)",
+    "Harness regression: python -X utf8 tools/test_art_harness.py (25 tests)",
+    "Capture: node delivery/next_cycle/_v01_shots.js <tag> | _v02_shots.js <tag> | _v03_planter.js <tag>",
+    "Blender map rebuild: .tools/blender/blender-4.5.15-windows-x64/blender.exe --background --factory-startup --python tools/blender/build_map001.py, then cp art/full/source/layout/MAP001_courtyard.glb demo/assets/resources/models/",
+    "Cocos build: unset ELECTRON_RUN_AS_NODE; tools/cocos/editors/3.8.8/CocosCreator.exe --project demo --build configPath=demo/build-config-web-desktop.json (exit 36/SIGTERM noise = trust 'build Task Finished')"
+  ],
+  "notes": [
+    "All completed work self_check_only_not_reviewed - independent review still pending, nothing self-signed",
+    "P03: vNext contract 1.4.0 NOT effective; art_review/harness_contract.json (1.3.0) untouched; certificate verification fails closed without controller key",
+    "P02: migrated draft at art_review/vnext/asset_status_migrated.json (package blocked, 6 rework, 7 blocked items)",
+    "Character source sole input: harness_contract.json locked_sources/character_source = 1015_aglna2; 291 evidence historical only",
+    "Old GLB hashes preserved for evidence chain: 00483c58 (K08 era), c01dd774 (V01), d9d86eae (V03), 3e712dae (V02+bench UVs, current)"
+  ]
+}

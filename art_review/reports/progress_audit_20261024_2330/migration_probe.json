@@ -1,0 +1,48 @@
+{
+  "scope": "targeted explicit string-type constraints, not full JSON Schema validation (jsonschema unavailable)",
+  "actual_schema_type_violations": [
+    {
+      "asset_id": "CATALOG",
+      "path": "mapping.old_decision",
+      "value": null,
+      "schema_requires": "string"
+    },
+    {
+      "asset_id": "CATALOG",
+      "path": "mapping.old_reviewer",
+      "value": null,
+      "schema_requires": "string"
+    }
+  ],
+  "synthetic_failed_review_migration": {
+    "exit": 0,
+    "stdout": "OK wrote art_review/vnext/asset_status_migrated.json\nitems=1 rework=0 blocked=0 package=reviewed_not_released total_issue_attachments=0\n",
+    "result": {
+      "asset_id": "ENV001",
+      "record_kind": "asset",
+      "technical_state": "import_verified",
+      "visual_state": "not_reviewed",
+      "behavior_state": "not_tested",
+      "release_state": "reviewed_not_released",
+      "release_state_reason": "包含于2026-10-24独立返修整体结论(review_gate blocked/H02)；无本条目未解blocking/major问题；released只能由外部控制器产生",
+      "issues": [],
+      "historical_notes": [],
+      "mapping": {
+        "old_status": "missing",
+        "old_decision": "fail",
+        "old_reviewer": "synthetic technical failure"
+      },
+      "kind": "environment",
+      "technical_evidence": {
+        "review_kind": "technical_self_check",
+        "reviewer": "synthetic technical failure",
+        "decision": "fail",
+        "reviewed_at": null,
+        "evidence": [],
+        "source_file": "reviews/ENV001.json",
+        "limitations": []
+      }
+    }
+  },
+  "fixture_root": "C:\\Users\\tt\\AppData\\Local\\Temp\\audit_migration_5mfvh78v"
+}

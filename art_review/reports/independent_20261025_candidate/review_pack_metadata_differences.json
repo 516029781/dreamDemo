@@ -1,0 +1,20 @@
+[
+  {
+    "path": "delivery/next_cycle/T4/producer_self_review.json",
+    "field": "/issues/7/resolution_evidence/0/sha256",
+    "archive": "257fa9326814a3caf63250113a0325d413f295351c7a737a3da650b31bb7a952",
+    "disk": "07acfd3efd848f41d7ea97cce8fee720e336bd595271a1c4b0588c3f57b7c9cf"
+  },
+  {
+    "path": "delivery/next_cycle/T4/producer_self_review.json",
+    "field": "/issues/15/resolution_evidence/0/sha256",
+    "archive": "257fa9326814a3caf63250113a0325d413f295351c7a737a3da650b31bb7a952",
+    "disk": "07acfd3efd848f41d7ea97cce8fee720e336bd595271a1c4b0588c3f57b7c9cf"
+  },
+  {
+    "path": "delivery/next_cycle/T7/I07_complete_candidate_package.json",
+    "field": "/producer_review/sha256",
+    "archive": "856471f5c9c1c84908e4ad2fd89132a0bb7ea7f67a10471cf6b96177e6eceb7f",
+    "disk": "95188ce13a3dbc7311aaeeab6f73cf44ded4a7aafd615c682ab866e28df972ce"
+  }
+]

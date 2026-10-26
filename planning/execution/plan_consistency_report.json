@@ -1,0 +1,16 @@
+{
+  "inspection": "Planning consistency and frozen-file integrity only; no art approval or implementation regression implied",
+  "task_count": 97,
+  "art_required": 82,
+  "game_deferred": 13,
+  "optional_deferred": 2,
+  "asset_groups_covered": 47,
+  "dependency_graph_acyclic": true,
+  "initial_ready_producer_tasks": [
+    "P00"
+  ],
+  "frozen_records_checked": 394,
+  "frozen_changed_or_missing": [],
+  "errors": [],
+  "valid": true
+}

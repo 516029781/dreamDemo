@@ -1,0 +1,38 @@
+{
+  "task": "V04 lock exposure and calibrate warm key / cool-gray fill",
+  "generated_at": "2026-10-24T23:55:00+08:00",
+  "defect": "REPORT.md line 99: 硬影和灰褐底色缺少P1暖光冷影 (R04)",
+  "engine_file": "demo/assets/scripts/CourtyardBootstrap.ts setupLights + camera setup",
+  "profile_after": {
+    "key": {"color": "#FFDFB0", "illuminance": 72000, "euler_deg": [-50, -32, 0], "shadow": true, "pcf": "SOFT_4X (3)", "bias": 0.0003, "normalBias": 0.35, "shadowDistance": 30, "shadowSaturation": 0.72},
+    "fill": {"color": "#AFC4D2", "illuminance": 26000, "euler_deg": [-28, 148, 0], "shadow": false},
+    "ambient": {"skyColor": [0.57, 0.62, 0.68], "skyIllum": 21000, "groundLightingColor": [118, 108, 94, 255]},
+    "camera_clear": "#C9C4B6",
+    "exposure": "fixed constants in code; no auto-exposure, no post-process, no tone-mapping changes"
+  },
+  "profile_before": {
+    "key": {"color": "#FFE2BC", "pcf": "SOFT (1)", "normalBias": 0.2, "shadowDistance": 36},
+    "fill": {"color": "#AFC4D2", "illuminance": 22000},
+    "ambient": {"skyIllum": 18000}
+  },
+  "measured": {
+    "method": "OpenCV on engine captures (same pose), lit region x850-1100 y150-260, shadow region x330-560 y380-520",
+    "warm_light_cool_shadow": "lit R-B channel delta 24.4 -> 25.7 (key warmed); shadow R-B 22.8 -> 22.9 (unchanged) => shadow relatively cooler than lit: 暖光冷影关系成立",
+    "shadow_interior": "shadow/lit mean ratio 0.874 -> 0.869 with lifted ambient/fill; interior slightly lighter, direction relationship kept",
+    "edge_softness": "PCF SOFT->SOFT_4X + shadowDistance 36->30: canopy dapple shadows visibly diffused in crop comparison (see _shadow_crop_compare.png)"
+  },
+  "rule_compliance": [
+    "无全局橙滤镜: camera clear color neutral #C9C4B6, no fullscreen filter quad, no post-process",
+    "无景深/DOF: no blur pass used to mask geometry",
+    "曝光锁定: all light values are fixed code constants recorded here; no dynamic exposure"
+  ],
+  "evidence_paths": [
+    "delivery/next_cycle/T2/lighting_comparison.png",
+    "delivery/next_cycle/T2/mat_light_before_paving.png",
+    "delivery/next_cycle/T2/mat_light_after2_paving.png",
+    "delivery/next_cycle/T2/mat_light_before_bench.png",
+    "delivery/next_cycle/T2/mat_light_after2_bench.png",
+    "delivery/_shadow_crop_compare.png"
+  ],
+  "review_state": "self_check_only_not_reviewed"
+}

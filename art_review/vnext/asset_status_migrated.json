@@ -1,0 +1,1791 @@
+{
+  "schema_version": "vnext.asset_status/1.0.1",
+  "vnext_effective": false,
+  "contract_version_in_effect": "1.3.0",
+  "migrated_from": [
+    {
+      "path": "art/full/art_complete_catalog.json",
+      "sha256": "96f9e52e2acd1cf95bbcfef95c3a5f00204628a0f0f452be832552942636e248"
+    },
+    {
+      "path": "art_review/reports/independent_20261024/defects.json",
+      "sha256": "a5f48dca483c840ec95c9073d8b579ed8a8c0ce08bfacfcd2a21fa3c420fc3de"
+    }
+  ],
+  "migrated_at": "2026-10-25T00:00:00Z",
+  "package": {
+    "asset_id": "CATALOG",
+    "record_kind": "package",
+    "technical_state": "missing",
+    "visual_state": "not_reviewed",
+    "behavior_state": "not_tested",
+    "release_state": "blocked",
+    "release_state_reason": "未解blocking/major问题8项: R01,R02,R03,R04,R05,R06,R07,R08",
+    "issues": [
+      {
+        "issue_id": "R08",
+        "severity": "major",
+        "status": "open",
+        "title": "技术自检覆盖了文件，却没有完成风格放行",
+        "affected_scope": "catalog_process",
+        "evidence": [
+          "art/full/reviews/ENV006.json",
+          "art/full/art_complete_catalog.json"
+        ],
+        "source_review": "art_review/reports/independent_20261024"
+      },
+      {
+        "issue_id": "R09",
+        "severity": "minor",
+        "status": "open",
+        "title": "UI纸片样式单一，透景与涂鸦弱",
+        "affected_scope": "ui_family",
+        "evidence": [
+          "art/full/previews/engine/dialogue_npc_1280x720.png",
+          "art/full/previews/engine/ui_states/toast_task_update.png"
+        ],
+        "source_review": "art_review/reports/independent_20261024"
+      },
+      {
+        "issue_id": "R10",
+        "severity": "minor",
+        "status": "open",
+        "title": "目录/规则仍有旧信息，审核状态存在歧义",
+        "affected_scope": "catalog_docs",
+        "evidence": [
+          "art/full/art_complete_catalog.json"
+        ],
+        "source_review": "art_review/reports/independent_20261024"
+      }
+    ],
+    "historical_notes": [
+      "catalog_status=engine_verified_pending_independent_review"
+    ],
+    "mapping": {
+      "old_status": "engine_verified_pending_independent_review",
+      "old_decision": null,
+      "old_reviewer": null
+    },
+    "technical_evidence": {
+      "review_kind": "technical_self_check",
+      "reviewer": "producer technical engine check (not independent stage signoff)",
+      "decision": "engine_verified_pending_independent_review",
+      "evidence": [
+        "art/full/art_complete_catalog.json"
+      ],
+      "source_file": "art/full/art_complete_catalog.json",
+      "limitations": []
+    },
+    "open_issue_ids_all": [
+      "R01",
+      "R02",
+      "R03",
+      "R04",
+      "R05",
+      "R06",
+      "R07",
+      "R08",
+      "R09",
+      "R10"
+    ],
+    "decision_source": "rework",
+    "accepted": false
+  },
+  "items": [
+    {
+      "asset_id": "CHAR001",
+      "record_kind": "asset",
+      "technical_state": "import_verified",
+      "visual_state": "not_reviewed",
+      "behavior_state": "not_tested",
+      "release_state": "reviewed_not_released",
+      "release_state_reason": "包含于2026-10-24独立返修整体结论(review_gate blocked/H02)；无本条目未解blocking/major问题；released只能由外部控制器产生",
+      "issues": [],
+      "historical_notes": [
+        "换源已由用户/控制器于 2026-10-24 批准为 1015_aglna2 default；旧 291 证据保留历史。",
+        "独立 H09/H05 视觉审核仍未完成；本模型是 alter，不是 291 的 skin。",
+        "未做 Cocos/微信导入；未验证背面、完整动作和接地。"
+      ],
+      "mapping": {
+        "old_status": "engine_verified",
+        "old_decision": "pass",
+        "old_reviewer": "producer technical engine check (not independent stage signoff)"
+      },
+      "group": "CHAR",
+      "kind": "spine",
+      "technical_evidence": {
+        "review_kind": "technical_self_check",
+        "reviewer": "producer technical engine check (not independent stage signoff)",
+        "decision": "pass",
+        "reviewed_at": "2026-10-24",
+        "evidence": [
+          "art/full/previews/engine/assets/CHAR001.png"
+        ],
+        "source_file": "art/full/reviews/CHAR001.json",
+        "limitations": []
+      }
+    },
+    {
+      "asset_id": "CHAR002",
+      "record_kind": "asset",
+      "technical_state": "import_verified",
+      "visual_state": "not_reviewed",
+      "behavior_state": "not_tested",
+      "release_state": "reviewed_not_released",
+      "release_state_reason": "包含于2026-10-24独立返修整体结论(review_gate blocked/H02)；无本条目未解blocking/major问题；released只能由外部控制器产生",
+      "issues": [],
+      "historical_notes": [
+        "真实动作清单/idle/Move 已从 1015 runtime 重新产出；H09/H05 独立审核未完成。",
+        "尚无 Cocos 引擎导入和游戏内动作调校；不能计 engine_verified。"
+      ],
+      "mapping": {
+        "old_status": "engine_verified",
+        "old_decision": "pass",
+        "old_reviewer": "producer technical engine check (not independent stage signoff)"
+      },
+      "group": "CHAR",
+      "kind": "animation",
+      "technical_evidence": {
+        "review_kind": "technical_self_check",
+        "reviewer": "producer technical engine check (not independent stage signoff)",
+        "decision": "pass",
+        "reviewed_at": "2026-10-24",
+        "evidence": [
+          "art/full/previews/engine/assets/CHAR002.png"
+        ],
+        "source_file": "art/full/reviews/CHAR002.json",
+        "limitations": []
+      }
+    },
+    {
+      "asset_id": "CHAR003",
+      "record_kind": "asset",
+      "technical_state": "import_verified",
+      "visual_state": "not_reviewed",
+      "behavior_state": "not_tested",
+      "release_state": "reviewed_not_released",
+      "release_state_reason": "包含于2026-10-24独立返修整体结论(review_gate blocked/H02)；无本条目未解blocking/major问题；released只能由外部控制器产生",
+      "issues": [],
+      "historical_notes": [
+        "用户/控制器已批准静态切片路线；mask 是手工向量遮罩，边缘/局部背景仍需清理复核。",
+        "P1 参考是暖光低分辨率视频帧；无背面、无干净全身板。",
+        "未导入 Cocos/微信，未做独立角色卡审核。"
+      ],
+      "mapping": {
+        "old_status": "engine_verified",
+        "old_decision": "pass",
+        "old_reviewer": "producer technical engine check (not independent stage signoff)"
+      },
+      "group": "CHAR",
+      "kind": "spine_or_layered",
+      "technical_evidence": {
+        "review_kind": "technical_self_check",
+        "reviewer": "producer technical engine check (not independent stage signoff)",
+        "decision": "pass",
+        "reviewed_at": "2026-10-24",
+        "evidence": [
+          "art/full/previews/engine/assets/CHAR003.png"
+        ],
+        "source_file": "art/full/reviews/CHAR003.json",
+        "limitations": [
+          "Static cutout + subtle sway; no official t054 Spine exists.",
+          "Edges approximate at native video resolution."
+        ]
+      }
+    },
+    {
+      "asset_id": "CHAR004",
+      "record_kind": "asset",
+      "technical_state": "import_verified",
+      "visual_state": "not_reviewed",
+      "behavior_state": "not_tested",
+      "release_state": "reviewed_not_released",
+      "release_state_reason": "包含于2026-10-24独立返修整体结论(review_gate blocked/H02)；无本条目未解blocking/major问题；released只能由外部控制器产生",
+      "issues": [],
+      "historical_notes": [
+        "独立审核与 Cocos 导入未做；是 chibi runtime 裁切，不是专属官方头像。"
+      ],
+      "mapping": {
+        "old_status": "engine_verified",
+        "old_decision": "pass",
+        "old_reviewer": "producer technical engine check (not independent stage signoff)"
+      },
+      "group": "CHAR",
+      "kind": "portrait",
+      "technical_evidence": {
+        "review_kind": "technical_self_check",
+        "reviewer": "producer technical engine check (not independent stage signoff)",
+        "decision": "pass",
+        "reviewed_at": "2026-10-24",
+        "evidence": [
+          "art/full/previews/engine/assets/CHAR004.png"
+        ],
+        "source_file": "art/full/reviews/CHAR004.json",
+        "limitations": []
+      }
+    },
+    {
+      "asset_id": "CHAR005",
+      "record_kind": "asset",
+      "technical_state": "import_verified",
+      "visual_state": "not_reviewed",
+      "behavior_state": "not_tested",
+      "release_state": "reviewed_not_released",
+      "release_state_reason": "包含于2026-10-24独立返修整体结论(review_gate blocked/H02)；无本条目未解blocking/major问题；released只能由外部控制器产生",
+      "issues": [],
+      "historical_notes": [
+        "P1 参考裁切分辨率有限；独立审核与引擎验证未做；与全身静态切片一样需复核。"
+      ],
+      "mapping": {
+        "old_status": "engine_verified",
+        "old_decision": "pass",
+        "old_reviewer": "producer technical engine check (not independent stage signoff)"
+      },
+      "group": "CHAR",
+      "kind": "portrait",
+      "technical_evidence": {
+        "review_kind": "technical_self_check",
+        "reviewer": "producer technical engine check (not independent stage signoff)",
+        "decision": "pass",
+        "reviewed_at": "2026-10-24",
+        "evidence": [
+          "art/full/previews/engine/assets/CHAR005.png"
+        ],
+        "source_file": "art/full/reviews/CHAR005.json",
+        "limitations": []
+      }
+    },
+    {
+      "asset_id": "ENV001",
+      "record_kind": "asset",
+      "technical_state": "import_verified",
+      "visual_state": "not_reviewed",
+      "behavior_state": "not_tested",
+      "release_state": "reviewed_not_released",
+      "release_state_reason": "包含于2026-10-24独立返修整体结论(review_gate blocked/H02)；无本条目未解blocking/major问题；released只能由外部控制器产生",
+      "issues": [],
+      "historical_notes": [
+        "Cocos 导入/引擎截图未做；程序化材质未烘焙为引擎贴图；UV 未展开。",
+        "石板 5,196 tris/16m²，铺满全图的预算需合并/实例化后再验证。",
+        "独立审核未做。"
+      ],
+      "mapping": {
+        "old_status": "engine_verified",
+        "old_decision": "pass",
+        "old_reviewer": "producer technical engine check (not independent stage signoff)"
+      },
+      "group": "ENV",
+      "kind": "model",
+      "technical_evidence": {
+        "review_kind": "technical_self_check",
+        "reviewer": "producer technical engine check (not independent stage signoff)",
+        "decision": "pass",
+        "reviewed_at": "2026-10-24",
+        "evidence": [
+          "art/full/previews/engine/assets/ENV001.png"
+        ],
+        "source_file": "art/full/reviews/ENV001.json",
+        "limitations": []
+      }
+    },
+    {
+      "asset_id": "ENV002",
+      "record_kind": "asset",
+      "technical_state": "import_verified",
+      "visual_state": "not_reviewed",
+      "behavior_state": "not_tested",
+      "release_state": "reviewed_not_released",
+      "release_state_reason": "包含于2026-10-24独立返修整体结论(review_gate blocked/H02)；无本条目未解blocking/major问题；released只能由外部控制器产生",
+      "issues": [],
+      "historical_notes": [
+        "Cocos/微信导入与引擎截图未做；程序化材质未烘焙为引擎贴图。",
+        "独立审核未做；不能计 engine_verified/approved。"
+      ],
+      "mapping": {
+        "old_status": "engine_verified",
+        "old_decision": "pass",
+        "old_reviewer": "producer technical engine check (not independent stage signoff)"
+      },
+      "group": "ENV",
+      "kind": "model",
+      "technical_evidence": {
+        "review_kind": "technical_self_check",
+        "reviewer": "producer technical engine check (not independent stage signoff)",
+        "decision": "pass",
+        "reviewed_at": "2026-10-24",
+        "evidence": [
+          "art/full/previews/engine/assets/ENV002.png"
+        ],
+        "source_file": "art/full/reviews/ENV002.json",
+        "limitations": []
+      }
+    },
+    {
+      "asset_id": "ENV003",
+      "record_kind": "asset",
+      "technical_state": "import_verified",
+      "visual_state": "not_reviewed",
+      "behavior_state": "not_tested",
+      "release_state": "reviewed_not_released",
+      "release_state_reason": "包含于2026-10-24独立返修整体结论(review_gate blocked/H02)；无本条目未解blocking/major问题；released只能由外部控制器产生",
+      "issues": [],
+      "historical_notes": [
+        "Cocos/微信导入与引擎截图未做；程序化材质未烘焙为引擎贴图。",
+        "独立审核未做；不能计 engine_verified/approved。"
+      ],
+      "mapping": {
+        "old_status": "engine_verified",
+        "old_decision": "pass",
+        "old_reviewer": "producer technical engine check (not independent stage signoff)"
+      },
+      "group": "ENV",
+      "kind": "model",
+      "technical_evidence": {
+        "review_kind": "technical_self_check",
+        "reviewer": "producer technical engine check (not independent stage signoff)",
+        "decision": "pass",
+        "reviewed_at": "2026-10-24",
+        "evidence": [
+          "art/full/previews/engine/assets/ENV003.png"
+        ],
+        "source_file": "art/full/reviews/ENV003.json",
+        "limitations": []
+      }
+    },
+    {
+      "asset_id": "ENV004",
+      "record_kind": "asset",
+      "technical_state": "import_verified",
+      "visual_state": "not_reviewed",
+      "behavior_state": "not_tested",
+      "release_state": "reviewed_not_released",
+      "release_state_reason": "包含于2026-10-24独立返修整体结论(review_gate blocked/H02)；无本条目未解blocking/major问题；released只能由外部控制器产生",
+      "issues": [],
+      "historical_notes": [
+        "Cocos/微信导入与引擎截图未做；程序化材质未烘焙为引擎贴图。",
+        "独立审核未做；不能计 engine_verified/approved。"
+      ],
+      "mapping": {
+        "old_status": "engine_verified",
+        "old_decision": "pass",
+        "old_reviewer": "producer technical engine check (not independent stage signoff)"
+      },
+      "group": "ENV",
+      "kind": "model",
+      "technical_evidence": {
+        "review_kind": "technical_self_check",
+        "reviewer": "producer technical engine check (not independent stage signoff)",
+        "decision": "pass",
+        "reviewed_at": "2026-10-24",
+        "evidence": [
+          "art/full/previews/engine/assets/ENV004.png"
+        ],
+        "source_file": "art/full/reviews/ENV004.json",
+        "limitations": []
+      }
+    },
+    {
+      "asset_id": "ENV005",
+      "record_kind": "asset",
+      "technical_state": "import_verified",
+      "visual_state": "not_reviewed",
+      "behavior_state": "not_tested",
+      "release_state": "reviewed_not_released",
+      "release_state_reason": "包含于2026-10-24独立返修整体结论(review_gate blocked/H02)；无本条目未解blocking/major问题；released只能由外部控制器产生",
+      "issues": [],
+      "historical_notes": [
+        "Cocos/微信导入与引擎截图未做；程序化材质未烘焙为引擎贴图。",
+        "独立审核未做；不能计 engine_verified/approved。"
+      ],
+      "mapping": {
+        "old_status": "engine_verified",
+        "old_decision": "pass",
+        "old_reviewer": "producer technical engine check (not independent stage signoff)"
+      },
+      "group": "ENV",
+      "kind": "model",
+      "technical_evidence": {
+        "review_kind": "technical_self_check",
+        "reviewer": "producer technical engine check (not independent stage signoff)",
+        "decision": "pass",
+        "reviewed_at": "2026-10-24",
+        "evidence": [
+          "art/full/previews/engine/assets/ENV005.png"
+        ],
+        "source_file": "art/full/reviews/ENV005.json",
+        "limitations": []
+      }
+    },
+    {
+      "asset_id": "ENV006",
+      "record_kind": "asset",
+      "technical_state": "import_verified",
+      "visual_state": "rework",
+      "behavior_state": "not_tested",
+      "release_state": "blocked",
+      "release_state_reason": "独立审核未解blocking/major问题: R03,R04（art_review/reports/independent_20261024）",
+      "issues": [
+        {
+          "issue_id": "R03",
+          "severity": "major",
+          "status": "open",
+          "title": "植被轮廓和层次明显未达到P1",
+          "affected_scope": "asset_visual",
+          "evidence": [
+            "art/full/previews/engine/assets/ENV006.png",
+            "art/full/previews/engine/assets/ENV008.png",
+            "art/full/previews/engine/assets/ENV009.png"
+          ],
+          "source_review": "art_review/reports/independent_20261024"
+        },
+        {
+          "issue_id": "R04",
+          "severity": "major",
+          "status": "open",
+          "title": "引擎材质接近纯色，光照层次不足",
+          "affected_scope": "asset_visual",
+          "evidence": [
+            "art/full/previews/engine/assets/MAT002.png",
+            "art/full/previews/engine/assets/MAT001.png",
+            "art/full/previews/engine/assets/ENV006.png"
+          ],
+          "source_review": "art_review/reports/independent_20261024"
+        }
+      ],
+      "historical_notes": [
+        "Cocos/微信导入与引擎截图未做；程序化材质未烘焙为引擎贴图。",
+        "独立审核未做；不能计 engine_verified/approved。"
+      ],
+      "mapping": {
+        "old_status": "engine_verified",
+        "old_decision": "pass",
+        "old_reviewer": "producer technical engine check (not independent stage signoff)"
+      },
+      "group": "ENV",
+      "kind": "model",
+      "technical_evidence": {
+        "review_kind": "technical_self_check",
+        "reviewer": "producer technical engine check (not independent stage signoff)",
+        "decision": "pass",
+        "reviewed_at": "2026-10-24",
+        "evidence": [
+          "art/full/previews/engine/assets/ENV006.png"
+        ],
+        "source_file": "art/full/reviews/ENV006.json",
+        "limitations": []
+      }
+    },
+    {
+      "asset_id": "ENV007",
+      "record_kind": "asset",
+      "technical_state": "import_verified",
+      "visual_state": "not_reviewed",
+      "behavior_state": "not_tested",
+      "release_state": "reviewed_not_released",
+      "release_state_reason": "包含于2026-10-24独立返修整体结论(review_gate blocked/H02)；无本条目未解blocking/major问题；released只能由外部控制器产生",
+      "issues": [],
+      "historical_notes": [
+        "Cocos/微信导入与引擎截图未做；程序化材质未烘焙为引擎贴图。",
+        "独立审核未做；不能计 engine_verified/approved。"
+      ],
+      "mapping": {
+        "old_status": "engine_verified",
+        "old_decision": "pass",
+        "old_reviewer": "producer technical engine check (not independent stage signoff)"
+      },
+      "group": "ENV",
+      "kind": "model",
+      "technical_evidence": {
+        "review_kind": "technical_self_check",
+        "reviewer": "producer technical engine check (not independent stage signoff)",
+        "decision": "pass",
+        "reviewed_at": "2026-10-24",
+        "evidence": [
+          "art/full/previews/engine/assets/ENV007.png"
+        ],
+        "source_file": "art/full/reviews/ENV007.json",
+        "limitations": []
+      }
+    },
+    {
+      "asset_id": "ENV008",
+      "record_kind": "asset",
+      "technical_state": "import_verified",
+      "visual_state": "rework",
+      "behavior_state": "not_tested",
+      "release_state": "blocked",
+      "release_state_reason": "独立审核未解blocking/major问题: R03（art_review/reports/independent_20261024）",
+      "issues": [
+        {
+          "issue_id": "R03",
+          "severity": "major",
+          "status": "open",
+          "title": "植被轮廓和层次明显未达到P1",
+          "affected_scope": "asset_visual",
+          "evidence": [
+            "art/full/previews/engine/assets/ENV006.png",
+            "art/full/previews/engine/assets/ENV008.png",
+            "art/full/previews/engine/assets/ENV009.png"
+          ],
+          "source_review": "art_review/reports/independent_20261024"
+        }
+      ],
+      "historical_notes": [
+        "Cocos/微信导入与引擎截图未做；程序化材质未烘焙为引擎贴图。",
+        "独立审核未做；不能计 engine_verified/approved。"
+      ],
+      "mapping": {
+        "old_status": "engine_verified",
+        "old_decision": "pass",
+        "old_reviewer": "producer technical engine check (not independent stage signoff)"
+      },
+      "group": "ENV",
+      "kind": "model",
+      "technical_evidence": {
+        "review_kind": "technical_self_check",
+        "reviewer": "producer technical engine check (not independent stage signoff)",
+        "decision": "pass",
+        "reviewed_at": "2026-10-24",
+        "evidence": [
+          "art/full/previews/engine/assets/ENV008.png"
+        ],
+        "source_file": "art/full/reviews/ENV008.json",
+        "limitations": []
+      }
+    },
+    {
+      "asset_id": "ENV009",
+      "record_kind": "asset",
+      "technical_state": "import_verified",
+      "visual_state": "rework",
+      "behavior_state": "not_tested",
+      "release_state": "blocked",
+      "release_state_reason": "独立审核未解blocking/major问题: R03（art_review/reports/independent_20261024）",
+      "issues": [
+        {
+          "issue_id": "R03",
+          "severity": "major",
+          "status": "open",
+          "title": "植被轮廓和层次明显未达到P1",
+          "affected_scope": "asset_visual",
+          "evidence": [
+            "art/full/previews/engine/assets/ENV006.png",
+            "art/full/previews/engine/assets/ENV008.png",
+            "art/full/previews/engine/assets/ENV009.png"
+          ],
+          "source_review": "art_review/reports/independent_20261024"
+        }
+      ],
+      "historical_notes": [
+        "Cocos/微信导入与引擎截图未做；程序化材质未烘焙为引擎贴图。",
+        "独立审核未做；不能计 engine_verified/approved。"
+      ],
+      "mapping": {
+        "old_status": "engine_verified",
+        "old_decision": "pass",
+        "old_reviewer": "producer technical engine check (not independent stage signoff)"
+      },
+      "group": "ENV",
+      "kind": "model",
+      "technical_evidence": {
+        "review_kind": "technical_self_check",
+        "reviewer": "producer technical engine check (not independent stage signoff)",
+        "decision": "pass",
+        "reviewed_at": "2026-10-24",
+        "evidence": [
+          "art/full/previews/engine/assets/ENV009.png"
+        ],
+        "source_file": "art/full/reviews/ENV009.json",
+        "limitations": []
+      }
+    },
+    {
+      "asset_id": "ENV010",
+      "record_kind": "asset",
+      "technical_state": "import_verified",
+      "visual_state": "not_reviewed",
+      "behavior_state": "not_tested",
+      "release_state": "reviewed_not_released",
+      "release_state_reason": "包含于2026-10-24独立返修整体结论(review_gate blocked/H02)；无本条目未解blocking/major问题；released只能由外部控制器产生",
+      "issues": [],
+      "historical_notes": [
+        "Cocos/微信导入与引擎截图未做；程序化材质未烘焙为引擎贴图。",
+        "独立审核未做；不能计 engine_verified/approved。"
+      ],
+      "mapping": {
+        "old_status": "engine_verified",
+        "old_decision": "pass",
+        "old_reviewer": "producer technical engine check (not independent stage signoff)"
+      },
+      "group": "ENV",
+      "kind": "model",
+      "technical_evidence": {
+        "review_kind": "technical_self_check",
+        "reviewer": "producer technical engine check (not independent stage signoff)",
+        "decision": "pass",
+        "reviewed_at": "2026-10-24",
+        "evidence": [
+          "art/full/previews/engine/assets/ENV010.png"
+        ],
+        "source_file": "art/full/reviews/ENV010.json",
+        "limitations": []
+      }
+    },
+    {
+      "asset_id": "ENV011",
+      "record_kind": "asset",
+      "technical_state": "import_verified",
+      "visual_state": "not_reviewed",
+      "behavior_state": "not_tested",
+      "release_state": "reviewed_not_released",
+      "release_state_reason": "包含于2026-10-24独立返修整体结论(review_gate blocked/H02)；无本条目未解blocking/major问题；released只能由外部控制器产生",
+      "issues": [],
+      "historical_notes": [
+        "Cocos/微信导入与引擎截图未做；程序化材质未烘焙为引擎贴图。",
+        "独立审核未做；不能计 engine_verified/approved。"
+      ],
+      "mapping": {
+        "old_status": "engine_verified",
+        "old_decision": "pass",
+        "old_reviewer": "producer technical engine check (not independent stage signoff)"
+      },
+      "group": "ENV",
+      "kind": "model",
+      "technical_evidence": {
+        "review_kind": "technical_self_check",
+        "reviewer": "producer technical engine check (not independent stage signoff)",
+        "decision": "pass",
+        "reviewed_at": "2026-10-24",
+        "evidence": [
+          "art/full/previews/engine/assets/ENV011.png"
+        ],
+        "source_file": "art/full/reviews/ENV011.json",
+        "limitations": []
+      }
+    },
+    {
+      "asset_id": "ENV012",
+      "record_kind": "asset",
+      "technical_state": "import_verified",
+      "visual_state": "not_reviewed",
+      "behavior_state": "not_tested",
+      "release_state": "reviewed_not_released",
+      "release_state_reason": "包含于2026-10-24独立返修整体结论(review_gate blocked/H02)；无本条目未解blocking/major问题；released只能由外部控制器产生",
+      "issues": [],
+      "historical_notes": [
+        "Cocos/微信导入与引擎截图未做；程序化材质未烘焙为引擎贴图。",
+        "独立审核未做；不能计 engine_verified/approved。"
+      ],
+      "mapping": {
+        "old_status": "engine_verified",
+        "old_decision": "pass",
+        "old_reviewer": "producer technical engine check (not independent stage signoff)"
+      },
+      "group": "ENV",
+      "kind": "model_or_decal",
+      "technical_evidence": {
+        "review_kind": "technical_self_check",
+        "reviewer": "producer technical engine check (not independent stage signoff)",
+        "decision": "pass",
+        "reviewed_at": "2026-10-24",
+        "evidence": [
+          "art/full/previews/engine/assets/ENV012.png"
+        ],
+        "source_file": "art/full/reviews/ENV012.json",
+        "limitations": []
+      }
+    },
+    {
+      "asset_id": "FX001",
+      "record_kind": "asset",
+      "technical_state": "import_verified",
+      "visual_state": "not_reviewed",
+      "behavior_state": "not_tested",
+      "release_state": "reviewed_not_released",
+      "release_state_reason": "包含于2026-10-24独立返修整体结论(review_gate blocked/H02)；无本条目未解blocking/major问题；released只能由外部控制器产生",
+      "issues": [],
+      "historical_notes": [
+        "Cocos/微信实测未做；独立审核未做。"
+      ],
+      "mapping": {
+        "old_status": "engine_verified",
+        "old_decision": "pass",
+        "old_reviewer": "producer technical engine check (not independent stage signoff)"
+      },
+      "group": "FX",
+      "kind": "effect",
+      "technical_evidence": {
+        "review_kind": "technical_self_check",
+        "reviewer": "producer technical engine check (not independent stage signoff)",
+        "decision": "pass",
+        "reviewed_at": "2026-10-24",
+        "evidence": [
+          "art/full/previews/engine/assets/FX001.png"
+        ],
+        "source_file": "art/full/reviews/FX001.json",
+        "limitations": []
+      }
+    },
+    {
+      "asset_id": "FX002",
+      "record_kind": "asset",
+      "technical_state": "import_verified",
+      "visual_state": "not_reviewed",
+      "behavior_state": "not_tested",
+      "release_state": "reviewed_not_released",
+      "release_state_reason": "包含于2026-10-24独立返修整体结论(review_gate blocked/H02)；无本条目未解blocking/major问题；released只能由外部控制器产生",
+      "issues": [],
+      "historical_notes": [
+        "Cocos/微信拾取 burst 与残影未验证；独立审核未做。"
+      ],
+      "mapping": {
+        "old_status": "engine_verified",
+        "old_decision": "pass",
+        "old_reviewer": "producer technical engine check (not independent stage signoff)"
+      },
+      "group": "FX",
+      "kind": "effect",
+      "technical_evidence": {
+        "review_kind": "technical_self_check",
+        "reviewer": "producer technical engine check (not independent stage signoff)",
+        "decision": "pass",
+        "reviewed_at": "2026-10-24",
+        "evidence": [
+          "art/full/previews/engine/assets/FX002.png"
+        ],
+        "source_file": "art/full/reviews/FX002.json",
+        "limitations": []
+      }
+    },
+    {
+      "asset_id": "FX003",
+      "record_kind": "asset",
+      "technical_state": "import_verified",
+      "visual_state": "not_reviewed",
+      "behavior_state": "not_tested",
+      "release_state": "blocked",
+      "release_state_reason": "独立审核未解blocking/major问题: R07（art_review/reports/independent_20261024）",
+      "issues": [
+        {
+          "issue_id": "R07",
+          "severity": "major",
+          "status": "open",
+          "title": "留言板完成变化缺少前后及重置证据",
+          "affected_scope": "board_transition",
+          "evidence": [
+            "art/full/previews/engine/assets/FX003.png",
+            "art/full/reviews/FX003.json",
+            "delivery/courtyard_scene_demo_sources_v3.zip"
+          ],
+          "source_review": "art_review/reports/independent_20261024"
+        }
+      ],
+      "historical_notes": [
+        "Cocos/微信三卡显现与重置未验证；独立审核未做。"
+      ],
+      "mapping": {
+        "old_status": "engine_verified",
+        "old_decision": "pass",
+        "old_reviewer": "producer technical engine check (not independent stage signoff)"
+      },
+      "group": "FX",
+      "kind": "effect",
+      "technical_evidence": {
+        "review_kind": "technical_self_check",
+        "reviewer": "producer technical engine check (not independent stage signoff)",
+        "decision": "pass",
+        "reviewed_at": "2026-10-24",
+        "evidence": [
+          "art/full/previews/engine/assets/FX003.png"
+        ],
+        "source_file": "art/full/reviews/FX003.json",
+        "limitations": []
+      }
+    },
+    {
+      "asset_id": "LOOK001",
+      "record_kind": "asset",
+      "technical_state": "import_verified",
+      "visual_state": "not_reviewed",
+      "behavior_state": "not_required",
+      "release_state": "reviewed_not_released",
+      "release_state_reason": "包含于2026-10-24独立返修整体结论(review_gate blocked/H02)；无本条目未解blocking/major问题；released只能由外部控制器产生",
+      "issues": [],
+      "historical_notes": [
+        "Cocos/微信导入与引擎截图未做；程序化材质未烘焙为引擎贴图。",
+        "独立审核未做；不能计 engine_verified/approved。",
+        "引擎内同一机位截图未做。"
+      ],
+      "mapping": {
+        "old_status": "engine_verified",
+        "old_decision": "pass",
+        "old_reviewer": "producer technical engine check (not independent stage signoff)"
+      },
+      "group": "LOOK",
+      "kind": "scene_profile",
+      "technical_evidence": {
+        "review_kind": "technical_self_check",
+        "reviewer": "producer technical engine check (not independent stage signoff)",
+        "decision": "pass",
+        "reviewed_at": "2026-10-24",
+        "evidence": [
+          "art/full/previews/engine/assets/LOOK001.png"
+        ],
+        "source_file": "art/full/reviews/LOOK001.json",
+        "limitations": []
+      },
+      "behavior_not_required_reason": "无运行时交互面；行为检查(Q04/Q05)适用于场景/角色/UI条目，见NEXT_ITERATION_PLAN.md §4"
+    },
+    {
+      "asset_id": "MAP001",
+      "record_kind": "asset",
+      "technical_state": "import_verified",
+      "visual_state": "rework",
+      "behavior_state": "fail",
+      "release_state": "blocked",
+      "release_state_reason": "独立审核未解blocking/major问题: R01,R02,R05,R06（art_review/reports/independent_20261024）",
+      "issues": [
+        {
+          "issue_id": "R01",
+          "severity": "blocking",
+          "status": "open",
+          "title": "角色/NPC使用UI层投影，未实现世界遮挡",
+          "affected_scope": "scene_character_integration",
+          "evidence": [
+            "delivery/courtyard_scene_demo_sources_v3.zip",
+            "art/full/previews/engine/scene_gameplay_1280x720.png"
+          ],
+          "source_review": "art_review/reports/independent_20261024"
+        },
+        {
+          "issue_id": "R02",
+          "severity": "major",
+          "status": "open",
+          "title": "默认相机为全图总览，角色与道具过小",
+          "affected_scope": "scene_camera",
+          "evidence": [
+            "art/full/previews/engine/scene_gameplay_1280x720.png",
+            "delivery/courtyard_scene_demo_sources_v3.zip"
+          ],
+          "source_review": "art_review/reports/independent_20261024"
+        },
+        {
+          "issue_id": "R05",
+          "severity": "major",
+          "status": "open",
+          "title": "暂停预览未锁定移动输入",
+          "affected_scope": "input_lock_behavior",
+          "evidence": [
+            "art/full/previews/engine/ui_states/pause_default.png",
+            "delivery/courtyard_scene_demo_sources_v3.zip"
+          ],
+          "source_review": "art_review/reports/independent_20261024"
+        },
+        {
+          "issue_id": "R06",
+          "severity": "major",
+          "status": "open",
+          "title": "三角面统计口径与最终GLB不一致",
+          "affected_scope": "tri_stats_reporting",
+          "evidence": [
+            "art/full/source/layout/MAP001_courtyard.glb",
+            "delivery/courtyard_scene_demo_sources_v3.zip"
+          ],
+          "source_review": "art_review/reports/independent_20261024"
+        }
+      ],
+      "historical_notes": [
+        "Cocos/微信导入与引擎截图未做；程序化材质未烘焙为引擎贴图。",
+        "独立审核未做；不能计 engine_verified/approved。",
+        "MAP001 的 NPC 尚未放入；Cocos 引擎导入未做。",
+        "layout verifier PASS 是 Blender/数据检查，不是引擎验收。"
+      ],
+      "mapping": {
+        "old_status": "engine_verified",
+        "old_decision": "pass",
+        "old_reviewer": "producer technical engine check (not independent stage signoff)"
+      },
+      "group": "MAP",
+      "kind": "layout_scene",
+      "technical_evidence": {
+        "review_kind": "technical_self_check",
+        "reviewer": "producer technical engine check (not independent stage signoff)",
+        "decision": "pass",
+        "reviewed_at": "2026-10-24",
+        "evidence": [
+          "art/full/previews/engine/assets/MAP001.png"
+        ],
+        "source_file": "art/full/reviews/MAP001.json",
+        "limitations": []
+      }
+    },
+    {
+      "asset_id": "MAT001",
+      "record_kind": "asset",
+      "technical_state": "import_verified",
+      "visual_state": "rework",
+      "behavior_state": "not_required",
+      "release_state": "blocked",
+      "release_state_reason": "独立审核未解blocking/major问题: R04（art_review/reports/independent_20261024）",
+      "issues": [
+        {
+          "issue_id": "R04",
+          "severity": "major",
+          "status": "open",
+          "title": "引擎材质接近纯色，光照层次不足",
+          "affected_scope": "asset_visual",
+          "evidence": [
+            "art/full/previews/engine/assets/MAT002.png",
+            "art/full/previews/engine/assets/MAT001.png",
+            "art/full/previews/engine/assets/ENV006.png"
+          ],
+          "source_review": "art_review/reports/independent_20261024"
+        }
+      ],
+      "historical_notes": [
+        "Cocos/微信导入与引擎截图未做；程序化材质未烘焙为引擎贴图。",
+        "独立审核未做；不能计 engine_verified/approved。",
+        "材质族需要烘焙到引擎可用贴图。"
+      ],
+      "mapping": {
+        "old_status": "engine_verified",
+        "old_decision": "pass",
+        "old_reviewer": "producer technical engine check (not independent stage signoff)"
+      },
+      "group": "MAT",
+      "kind": "material",
+      "technical_evidence": {
+        "review_kind": "technical_self_check",
+        "reviewer": "producer technical engine check (not independent stage signoff)",
+        "decision": "pass",
+        "reviewed_at": "2026-10-24",
+        "evidence": [
+          "art/full/previews/engine/assets/MAT001.png"
+        ],
+        "source_file": "art/full/reviews/MAT001.json",
+        "limitations": [
+          "Engine close-up of procedural materials; no baked texture atlas claimed."
+        ]
+      },
+      "behavior_not_required_reason": "无运行时交互面；行为检查(Q04/Q05)适用于场景/角色/UI条目，见NEXT_ITERATION_PLAN.md §4"
+    },
+    {
+      "asset_id": "MAT002",
+      "record_kind": "asset",
+      "technical_state": "import_verified",
+      "visual_state": "rework",
+      "behavior_state": "not_required",
+      "release_state": "blocked",
+      "release_state_reason": "独立审核未解blocking/major问题: R04（art_review/reports/independent_20261024）",
+      "issues": [
+        {
+          "issue_id": "R04",
+          "severity": "major",
+          "status": "open",
+          "title": "引擎材质接近纯色，光照层次不足",
+          "affected_scope": "asset_visual",
+          "evidence": [
+            "art/full/previews/engine/assets/MAT002.png",
+            "art/full/previews/engine/assets/MAT001.png",
+            "art/full/previews/engine/assets/ENV006.png"
+          ],
+          "source_review": "art_review/reports/independent_20261024"
+        }
+      ],
+      "historical_notes": [
+        "Cocos/微信导入与引擎截图未做；程序化材质未烘焙为引擎贴图。",
+        "独立审核未做；不能计 engine_verified/approved。",
+        "材质族需要烘焙到引擎可用贴图。"
+      ],
+      "mapping": {
+        "old_status": "engine_verified",
+        "old_decision": "pass",
+        "old_reviewer": "producer technical engine check (not independent stage signoff)"
+      },
+      "group": "MAT",
+      "kind": "material",
+      "technical_evidence": {
+        "review_kind": "technical_self_check",
+        "reviewer": "producer technical engine check (not independent stage signoff)",
+        "decision": "pass",
+        "reviewed_at": "2026-10-24",
+        "evidence": [
+          "art/full/previews/engine/assets/MAT002.png"
+        ],
+        "source_file": "art/full/reviews/MAT002.json",
+        "limitations": [
+          "Engine close-up of procedural materials; no baked texture atlas claimed."
+        ]
+      },
+      "behavior_not_required_reason": "无运行时交互面；行为检查(Q04/Q05)适用于场景/角色/UI条目，见NEXT_ITERATION_PLAN.md §4"
+    },
+    {
+      "asset_id": "MAT003",
+      "record_kind": "asset",
+      "technical_state": "import_verified",
+      "visual_state": "not_reviewed",
+      "behavior_state": "not_required",
+      "release_state": "reviewed_not_released",
+      "release_state_reason": "包含于2026-10-24独立返修整体结论(review_gate blocked/H02)；无本条目未解blocking/major问题；released只能由外部控制器产生",
+      "issues": [],
+      "historical_notes": [
+        "Cocos/微信导入与引擎截图未做；程序化材质未烘焙为引擎贴图。",
+        "独立审核未做；不能计 engine_verified/approved。",
+        "材质族需要烘焙到引擎可用贴图。"
+      ],
+      "mapping": {
+        "old_status": "engine_verified",
+        "old_decision": "pass",
+        "old_reviewer": "producer technical engine check (not independent stage signoff)"
+      },
+      "group": "MAT",
+      "kind": "material",
+      "technical_evidence": {
+        "review_kind": "technical_self_check",
+        "reviewer": "producer technical engine check (not independent stage signoff)",
+        "decision": "pass",
+        "reviewed_at": "2026-10-24",
+        "evidence": [
+          "art/full/previews/engine/assets/MAT003.png"
+        ],
+        "source_file": "art/full/reviews/MAT003.json",
+        "limitations": [
+          "Engine close-up of procedural materials; no baked texture atlas claimed."
+        ]
+      },
+      "behavior_not_required_reason": "无运行时交互面；行为检查(Q04/Q05)适用于场景/角色/UI条目，见NEXT_ITERATION_PLAN.md §4"
+    },
+    {
+      "asset_id": "MAT004",
+      "record_kind": "asset",
+      "technical_state": "import_verified",
+      "visual_state": "not_reviewed",
+      "behavior_state": "not_required",
+      "release_state": "reviewed_not_released",
+      "release_state_reason": "包含于2026-10-24独立返修整体结论(review_gate blocked/H02)；无本条目未解blocking/major问题；released只能由外部控制器产生",
+      "issues": [],
+      "historical_notes": [
+        "Cocos/微信导入与引擎截图未做；程序化材质未烘焙为引擎贴图。",
+        "独立审核未做；不能计 engine_verified/approved。",
+        "材质族需要烘焙到引擎可用贴图。"
+      ],
+      "mapping": {
+        "old_status": "engine_verified",
+        "old_decision": "pass",
+        "old_reviewer": "producer technical engine check (not independent stage signoff)"
+      },
+      "group": "MAT",
+      "kind": "material",
+      "technical_evidence": {
+        "review_kind": "technical_self_check",
+        "reviewer": "producer technical engine check (not independent stage signoff)",
+        "decision": "pass",
+        "reviewed_at": "2026-10-24",
+        "evidence": [
+          "art/full/previews/engine/assets/MAT004.png"
+        ],
+        "source_file": "art/full/reviews/MAT004.json",
+        "limitations": [
+          "Engine close-up of procedural materials; no baked texture atlas claimed."
+        ]
+      },
+      "behavior_not_required_reason": "无运行时交互面；行为检查(Q04/Q05)适用于场景/角色/UI条目，见NEXT_ITERATION_PLAN.md §4"
+    },
+    {
+      "asset_id": "MAT005",
+      "record_kind": "asset",
+      "technical_state": "import_verified",
+      "visual_state": "not_reviewed",
+      "behavior_state": "not_required",
+      "release_state": "reviewed_not_released",
+      "release_state_reason": "包含于2026-10-24独立返修整体结论(review_gate blocked/H02)；无本条目未解blocking/major问题；released只能由外部控制器产生",
+      "issues": [],
+      "historical_notes": [
+        "Cocos/微信导入与引擎截图未做；程序化材质未烘焙为引擎贴图。",
+        "独立审核未做；不能计 engine_verified/approved。",
+        "材质族需要烘焙到引擎可用贴图。"
+      ],
+      "mapping": {
+        "old_status": "engine_verified",
+        "old_decision": "pass",
+        "old_reviewer": "producer technical engine check (not independent stage signoff)"
+      },
+      "group": "MAT",
+      "kind": "material",
+      "technical_evidence": {
+        "review_kind": "technical_self_check",
+        "reviewer": "producer technical engine check (not independent stage signoff)",
+        "decision": "pass",
+        "reviewed_at": "2026-10-24",
+        "evidence": [
+          "art/full/previews/engine/assets/MAT005.png"
+        ],
+        "source_file": "art/full/reviews/MAT005.json",
+        "limitations": [
+          "Engine close-up of procedural materials; no baked texture atlas claimed."
+        ]
+      },
+      "behavior_not_required_reason": "无运行时交互面；行为检查(Q04/Q05)适用于场景/角色/UI条目，见NEXT_ITERATION_PLAN.md §4"
+    },
+    {
+      "asset_id": "PACK001",
+      "record_kind": "asset",
+      "technical_state": "import_verified",
+      "visual_state": "not_reviewed",
+      "behavior_state": "not_required",
+      "release_state": "reviewed_not_released",
+      "release_state_reason": "包含于2026-10-24独立返修整体结论(review_gate blocked/H02)；无本条目未解blocking/major问题；released只能由外部控制器产生",
+      "issues": [],
+      "historical_notes": [
+        "47 组未全部 engine_verified/approved；2 组 candidate（CHAR001/CHAR003）。",
+        "字体未随包交付；Cocos/微信构建、独立审核与 controller 签认未完成。"
+      ],
+      "mapping": {
+        "old_status": "engine_verified",
+        "old_decision": "pass",
+        "old_reviewer": "producer technical engine check (not independent stage signoff)"
+      },
+      "group": "PACK",
+      "kind": "delivery",
+      "technical_evidence": {
+        "review_kind": "technical_self_check",
+        "reviewer": "producer technical engine check (not independent stage signoff)",
+        "decision": "pass",
+        "reviewed_at": "2026-10-24",
+        "evidence": [
+          "art/full/previews/engine/assets/PACK001.png"
+        ],
+        "source_file": "art/full/reviews/PACK001.json",
+        "limitations": [
+          "Handoff summary is rendered in the viewer; independent review/attestation remains external."
+        ]
+      },
+      "behavior_not_required_reason": "无运行时交互面；行为检查(Q04/Q05)适用于场景/角色/UI条目，见NEXT_ITERATION_PLAN.md §4"
+    },
+    {
+      "asset_id": "PROP001",
+      "record_kind": "asset",
+      "technical_state": "import_verified",
+      "visual_state": "not_reviewed",
+      "behavior_state": "not_tested",
+      "release_state": "reviewed_not_released",
+      "release_state_reason": "包含于2026-10-24独立返修整体结论(review_gate blocked/H02)；无本条目未解blocking/major问题；released只能由外部控制器产生",
+      "issues": [],
+      "historical_notes": [
+        "Cocos 导入/引擎截图未做；材质未烘焙。",
+        "全图摆放、碰撞与遮挡未验证；独立审核未做。"
+      ],
+      "mapping": {
+        "old_status": "engine_verified",
+        "old_decision": "pass",
+        "old_reviewer": "producer technical engine check (not independent stage signoff)"
+      },
+      "group": "PROP",
+      "kind": "model",
+      "technical_evidence": {
+        "review_kind": "technical_self_check",
+        "reviewer": "producer technical engine check (not independent stage signoff)",
+        "decision": "pass",
+        "reviewed_at": "2026-10-24",
+        "evidence": [
+          "art/full/previews/engine/assets/PROP001.png"
+        ],
+        "source_file": "art/full/reviews/PROP001.json",
+        "limitations": []
+      }
+    },
+    {
+      "asset_id": "PROP002",
+      "record_kind": "asset",
+      "technical_state": "import_verified",
+      "visual_state": "not_reviewed",
+      "behavior_state": "not_tested",
+      "release_state": "reviewed_not_released",
+      "release_state_reason": "包含于2026-10-24独立返修整体结论(review_gate blocked/H02)；无本条目未解blocking/major问题；released只能由外部控制器产生",
+      "issues": [],
+      "historical_notes": [
+        "Cocos/微信导入与引擎截图未做；程序化材质未烘焙为引擎贴图。",
+        "独立审核未做；不能计 engine_verified/approved。"
+      ],
+      "mapping": {
+        "old_status": "engine_verified",
+        "old_decision": "pass",
+        "old_reviewer": "producer technical engine check (not independent stage signoff)"
+      },
+      "group": "PROP",
+      "kind": "model",
+      "technical_evidence": {
+        "review_kind": "technical_self_check",
+        "reviewer": "producer technical engine check (not independent stage signoff)",
+        "decision": "pass",
+        "reviewed_at": "2026-10-24",
+        "evidence": [
+          "art/full/previews/engine/assets/PROP002.png"
+        ],
+        "source_file": "art/full/reviews/PROP002.json",
+        "limitations": []
+      }
+    },
+    {
+      "asset_id": "PROP003",
+      "record_kind": "asset",
+      "technical_state": "import_verified",
+      "visual_state": "not_reviewed",
+      "behavior_state": "not_tested",
+      "release_state": "reviewed_not_released",
+      "release_state_reason": "包含于2026-10-24独立返修整体结论(review_gate blocked/H02)；无本条目未解blocking/major问题；released只能由外部控制器产生",
+      "issues": [],
+      "historical_notes": [
+        "Cocos/微信导入与引擎截图未做；程序化材质未烘焙为引擎贴图。",
+        "独立审核未做；不能计 engine_verified/approved。"
+      ],
+      "mapping": {
+        "old_status": "engine_verified",
+        "old_decision": "pass",
+        "old_reviewer": "producer technical engine check (not independent stage signoff)"
+      },
+      "group": "PROP",
+      "kind": "model_states",
+      "technical_evidence": {
+        "review_kind": "technical_self_check",
+        "reviewer": "producer technical engine check (not independent stage signoff)",
+        "decision": "pass",
+        "reviewed_at": "2026-10-24",
+        "evidence": [
+          "art/full/previews/engine/assets/PROP003.png"
+        ],
+        "source_file": "art/full/reviews/PROP003.json",
+        "limitations": []
+      }
+    },
+    {
+      "asset_id": "PROP004",
+      "record_kind": "asset",
+      "technical_state": "import_verified",
+      "visual_state": "not_reviewed",
+      "behavior_state": "not_tested",
+      "release_state": "reviewed_not_released",
+      "release_state_reason": "包含于2026-10-24独立返修整体结论(review_gate blocked/H02)；无本条目未解blocking/major问题；released只能由外部控制器产生",
+      "issues": [],
+      "historical_notes": [
+        "Cocos/微信导入与引擎截图未做；程序化材质未烘焙为引擎贴图。",
+        "独立审核未做；不能计 engine_verified/approved。"
+      ],
+      "mapping": {
+        "old_status": "engine_verified",
+        "old_decision": "pass",
+        "old_reviewer": "producer technical engine check (not independent stage signoff)"
+      },
+      "group": "PROP",
+      "kind": "model",
+      "technical_evidence": {
+        "review_kind": "technical_self_check",
+        "reviewer": "producer technical engine check (not independent stage signoff)",
+        "decision": "pass",
+        "reviewed_at": "2026-10-24",
+        "evidence": [
+          "art/full/previews/engine/assets/PROP004.png"
+        ],
+        "source_file": "art/full/reviews/PROP004.json",
+        "limitations": []
+      }
+    },
+    {
+      "asset_id": "PROP005",
+      "record_kind": "asset",
+      "technical_state": "import_verified",
+      "visual_state": "not_reviewed",
+      "behavior_state": "not_tested",
+      "release_state": "reviewed_not_released",
+      "release_state_reason": "包含于2026-10-24独立返修整体结论(review_gate blocked/H02)；无本条目未解blocking/major问题；released只能由外部控制器产生",
+      "issues": [],
+      "historical_notes": [
+        "Cocos/微信导入与引擎截图未做；程序化材质未烘焙为引擎贴图。",
+        "独立审核未做；不能计 engine_verified/approved。"
+      ],
+      "mapping": {
+        "old_status": "engine_verified",
+        "old_decision": "pass",
+        "old_reviewer": "producer technical engine check (not independent stage signoff)"
+      },
+      "group": "PROP",
+      "kind": "model",
+      "technical_evidence": {
+        "review_kind": "technical_self_check",
+        "reviewer": "producer technical engine check (not independent stage signoff)",
+        "decision": "pass",
+        "reviewed_at": "2026-10-24",
+        "evidence": [
+          "art/full/previews/engine/assets/PROP005.png"
+        ],
+        "source_file": "art/full/reviews/PROP005.json",
+        "limitations": []
+      }
+    },
+    {
+      "asset_id": "PROP006",
+      "record_kind": "asset",
+      "technical_state": "import_verified",
+      "visual_state": "not_reviewed",
+      "behavior_state": "not_tested",
+      "release_state": "reviewed_not_released",
+      "release_state_reason": "包含于2026-10-24独立返修整体结论(review_gate blocked/H02)；无本条目未解blocking/major问题；released只能由外部控制器产生",
+      "issues": [],
+      "historical_notes": [
+        "Cocos/微信导入与引擎截图未做；程序化材质未烘焙为引擎贴图。",
+        "独立审核未做；不能计 engine_verified/approved。"
+      ],
+      "mapping": {
+        "old_status": "engine_verified",
+        "old_decision": "pass",
+        "old_reviewer": "producer technical engine check (not independent stage signoff)"
+      },
+      "group": "PROP",
+      "kind": "model_states",
+      "technical_evidence": {
+        "review_kind": "technical_self_check",
+        "reviewer": "producer technical engine check (not independent stage signoff)",
+        "decision": "pass",
+        "reviewed_at": "2026-10-24",
+        "evidence": [
+          "art/full/previews/engine/assets/PROP006.png"
+        ],
+        "source_file": "art/full/reviews/PROP006.json",
+        "limitations": []
+      }
+    },
+    {
+      "asset_id": "UI001",
+      "record_kind": "asset",
+      "technical_state": "import_verified",
+      "visual_state": "not_reviewed",
+      "behavior_state": "not_tested",
+      "release_state": "reviewed_not_released",
+      "release_state_reason": "包含于2026-10-24独立返修整体结论(review_gate blocked/H02)；无本条目未解blocking/major问题；released只能由外部控制器产生",
+      "issues": [],
+      "historical_notes": [
+        "Cocos/微信未验证；字体未随包交付；独立审核未做。"
+      ],
+      "mapping": {
+        "old_status": "engine_verified",
+        "old_decision": "pass",
+        "old_reviewer": "producer technical engine check (not independent stage signoff)"
+      },
+      "group": "UI",
+      "kind": "editable_ui",
+      "technical_evidence": {
+        "review_kind": "technical_self_check",
+        "reviewer": "producer technical engine check (not independent stage signoff)",
+        "decision": "pass",
+        "reviewed_at": "2026-10-24",
+        "evidence": [
+          "art/full/previews/engine/ui_states/title_initial.png",
+          "art/full/previews/engine/ui_states/title_pressed.png",
+          "art/full/previews/engine/ui_states/title_loading.png"
+        ],
+        "source_file": "art/full/reviews/UI001.json",
+        "limitations": []
+      }
+    },
+    {
+      "asset_id": "UI002",
+      "record_kind": "asset",
+      "technical_state": "import_verified",
+      "visual_state": "not_reviewed",
+      "behavior_state": "not_tested",
+      "release_state": "reviewed_not_released",
+      "release_state_reason": "包含于2026-10-24独立返修整体结论(review_gate blocked/H02)；无本条目未解blocking/major问题；released只能由外部控制器产生",
+      "issues": [],
+      "historical_notes": [
+        "Cocos/微信未验证；字体未随包交付；独立审核未做。"
+      ],
+      "mapping": {
+        "old_status": "engine_verified",
+        "old_decision": "pass",
+        "old_reviewer": "producer technical engine check (not independent stage signoff)"
+      },
+      "group": "UI",
+      "kind": "editable_ui",
+      "technical_evidence": {
+        "review_kind": "technical_self_check",
+        "reviewer": "producer technical engine check (not independent stage signoff)",
+        "decision": "pass",
+        "reviewed_at": "2026-10-24",
+        "evidence": [
+          "art/full/previews/engine/ui_states/loading_progress.png",
+          "art/full/previews/engine/ui_states/loading_failure.png",
+          "art/full/previews/engine/ui_states/loading_retry_pressed.png"
+        ],
+        "source_file": "art/full/reviews/UI002.json",
+        "limitations": []
+      }
+    },
+    {
+      "asset_id": "UI003",
+      "record_kind": "asset",
+      "technical_state": "import_verified",
+      "visual_state": "not_reviewed",
+      "behavior_state": "not_tested",
+      "release_state": "reviewed_not_released",
+      "release_state_reason": "包含于2026-10-24独立返修整体结论(review_gate blocked/H02)；无本条目未解blocking/major问题；released只能由外部控制器产生",
+      "issues": [],
+      "historical_notes": [
+        "Cocos/微信未验证；字体未随包交付；独立审核未做。"
+      ],
+      "mapping": {
+        "old_status": "engine_verified",
+        "old_decision": "pass",
+        "old_reviewer": "producer technical engine check (not independent stage signoff)"
+      },
+      "group": "UI",
+      "kind": "editable_ui",
+      "technical_evidence": {
+        "review_kind": "technical_self_check",
+        "reviewer": "producer technical engine check (not independent stage signoff)",
+        "decision": "pass",
+        "reviewed_at": "2026-10-24",
+        "evidence": [
+          "art/full/previews/engine/ui_states/hud_talk.png",
+          "art/full/previews/engine/ui_states/hud_0_3.png",
+          "art/full/previews/engine/ui_states/hud_1_3.png",
+          "art/full/previews/engine/ui_states/hud_2_3.png",
+          "art/full/previews/engine/ui_states/hud_3_3.png",
+          "art/full/previews/engine/ui_states/hud_submit.png",
+          "art/full/previews/engine/ui_states/hud_done.png"
+        ],
+        "source_file": "art/full/reviews/UI003.json",
+        "limitations": []
+      }
+    },
+    {
+      "asset_id": "UI004",
+      "record_kind": "asset",
+      "technical_state": "import_verified",
+      "visual_state": "not_reviewed",
+      "behavior_state": "not_tested",
+      "release_state": "reviewed_not_released",
+      "release_state_reason": "包含于2026-10-24独立返修整体结论(review_gate blocked/H02)；无本条目未解blocking/major问题；released只能由外部控制器产生",
+      "issues": [],
+      "historical_notes": [
+        "Cocos/微信未验证；字体未随包交付；独立审核未做。"
+      ],
+      "mapping": {
+        "old_status": "engine_verified",
+        "old_decision": "pass",
+        "old_reviewer": "producer technical engine check (not independent stage signoff)"
+      },
+      "group": "UI",
+      "kind": "editable_ui",
+      "technical_evidence": {
+        "review_kind": "technical_self_check",
+        "reviewer": "producer technical engine check (not independent stage signoff)",
+        "decision": "pass",
+        "reviewed_at": "2026-10-24",
+        "evidence": [
+          "art/full/previews/engine/ui_states/joystick_idle.png",
+          "art/full/previews/engine/ui_states/joystick_drag.png",
+          "art/full/previews/engine/ui_states/joystick_hidden.png"
+        ],
+        "source_file": "art/full/reviews/UI004.json",
+        "limitations": []
+      }
+    },
+    {
+      "asset_id": "UI005",
+      "record_kind": "asset",
+      "technical_state": "import_verified",
+      "visual_state": "not_reviewed",
+      "behavior_state": "not_tested",
+      "release_state": "reviewed_not_released",
+      "release_state_reason": "包含于2026-10-24独立返修整体结论(review_gate blocked/H02)；无本条目未解blocking/major问题；released只能由外部控制器产生",
+      "issues": [],
+      "historical_notes": [
+        "Cocos/微信未验证；字体未随包交付；独立审核未做。"
+      ],
+      "mapping": {
+        "old_status": "engine_verified",
+        "old_decision": "pass",
+        "old_reviewer": "producer technical engine check (not independent stage signoff)"
+      },
+      "group": "UI",
+      "kind": "editable_ui",
+      "technical_evidence": {
+        "review_kind": "technical_self_check",
+        "reviewer": "producer technical engine check (not independent stage signoff)",
+        "decision": "pass",
+        "reviewed_at": "2026-10-24",
+        "evidence": [
+          "art/full/previews/engine/ui_states/interact_talk.png",
+          "art/full/previews/engine/ui_states/interact_pick.png",
+          "art/full/previews/engine/ui_states/interact_place.png",
+          "art/full/previews/engine/ui_states/interact_view.png",
+          "art/full/previews/engine/ui_states/interact_pressed.png",
+          "art/full/previews/engine/ui_states/interact_disabled.png",
+          "art/full/previews/engine/ui_states/interact_hidden.png"
+        ],
+        "source_file": "art/full/reviews/UI005.json",
+        "limitations": []
+      }
+    },
+    {
+      "asset_id": "UI006",
+      "record_kind": "asset",
+      "technical_state": "import_verified",
+      "visual_state": "not_reviewed",
+      "behavior_state": "not_tested",
+      "release_state": "reviewed_not_released",
+      "release_state_reason": "包含于2026-10-24独立返修整体结论(review_gate blocked/H02)；无本条目未解blocking/major问题；released只能由外部控制器产生",
+      "issues": [],
+      "historical_notes": [
+        "无 Cocos/微信验证；字体未随包；主角/NPC 头像已接真实裁切，但最终独立审核未做。"
+      ],
+      "mapping": {
+        "old_status": "engine_verified",
+        "old_decision": "pass",
+        "old_reviewer": "producer technical engine check (not independent stage signoff)"
+      },
+      "group": "UI",
+      "kind": "editable_ui",
+      "technical_evidence": {
+        "review_kind": "technical_self_check",
+        "reviewer": "producer technical engine check (not independent stage signoff)",
+        "decision": "pass",
+        "reviewed_at": "2026-10-24",
+        "evidence": [
+          "art/full/previews/engine/ui_states/dialogue_gardener_p1.png",
+          "art/full/previews/engine/ui_states/dialogue_player_p2.png",
+          "art/full/previews/engine/ui_states/dialogue_accept_pressed.png"
+        ],
+        "source_file": "art/full/reviews/UI006.json",
+        "limitations": []
+      }
+    },
+    {
+      "asset_id": "UI007",
+      "record_kind": "asset",
+      "technical_state": "import_verified",
+      "visual_state": "not_reviewed",
+      "behavior_state": "not_tested",
+      "release_state": "reviewed_not_released",
+      "release_state_reason": "包含于2026-10-24独立返修整体结论(review_gate blocked/H02)；无本条目未解blocking/major问题；released只能由外部控制器产生",
+      "issues": [],
+      "historical_notes": [
+        "Cocos/微信未验证；字体未随包交付；独立审核未做。"
+      ],
+      "mapping": {
+        "old_status": "engine_verified",
+        "old_decision": "pass",
+        "old_reviewer": "producer technical engine check (not independent stage signoff)"
+      },
+      "group": "UI",
+      "kind": "editable_ui",
+      "technical_evidence": {
+        "review_kind": "technical_self_check",
+        "reviewer": "producer technical engine check (not independent stage signoff)",
+        "decision": "pass",
+        "reviewed_at": "2026-10-24",
+        "evidence": [
+          "art/full/previews/engine/ui_states/pause_default.png",
+          "art/full/previews/engine/ui_states/pause_sound_on.png",
+          "art/full/previews/engine/ui_states/pause_restart_pressed.png"
+        ],
+        "source_file": "art/full/reviews/UI007.json",
+        "limitations": []
+      }
+    },
+    {
+      "asset_id": "UI008",
+      "record_kind": "asset",
+      "technical_state": "import_verified",
+      "visual_state": "not_reviewed",
+      "behavior_state": "not_tested",
+      "release_state": "reviewed_not_released",
+      "release_state_reason": "包含于2026-10-24独立返修整体结论(review_gate blocked/H02)；无本条目未解blocking/major问题；released只能由外部控制器产生",
+      "issues": [],
+      "historical_notes": [
+        "Cocos/微信未验证；字体未随包交付；独立审核未做。"
+      ],
+      "mapping": {
+        "old_status": "engine_verified",
+        "old_decision": "pass",
+        "old_reviewer": "producer technical engine check (not independent stage signoff)"
+      },
+      "group": "UI",
+      "kind": "editable_ui",
+      "technical_evidence": {
+        "review_kind": "technical_self_check",
+        "reviewer": "producer technical engine check (not independent stage signoff)",
+        "decision": "pass",
+        "reviewed_at": "2026-10-24",
+        "evidence": [
+          "art/full/previews/engine/ui_states/complete_default.png",
+          "art/full/previews/engine/ui_states/complete_continue_pressed.png"
+        ],
+        "source_file": "art/full/reviews/UI008.json",
+        "limitations": []
+      }
+    },
+    {
+      "asset_id": "UI009",
+      "record_kind": "asset",
+      "technical_state": "import_verified",
+      "visual_state": "not_reviewed",
+      "behavior_state": "not_tested",
+      "release_state": "reviewed_not_released",
+      "release_state_reason": "包含于2026-10-24独立返修整体结论(review_gate blocked/H02)；无本条目未解blocking/major问题；released只能由外部控制器产生",
+      "issues": [],
+      "historical_notes": [
+        "Cocos/微信未验证；字体未随包交付；独立审核未做。"
+      ],
+      "mapping": {
+        "old_status": "engine_verified",
+        "old_decision": "pass",
+        "old_reviewer": "producer technical engine check (not independent stage signoff)"
+      },
+      "group": "UI",
+      "kind": "editable_ui",
+      "technical_evidence": {
+        "review_kind": "technical_self_check",
+        "reviewer": "producer technical engine check (not independent stage signoff)",
+        "decision": "pass",
+        "reviewed_at": "2026-10-24",
+        "evidence": [
+          "art/full/previews/engine/ui_states/toast_pickup.png",
+          "art/full/previews/engine/ui_states/toast_task_update.png",
+          "art/full/previews/engine/ui_states/toast_error.png"
+        ],
+        "source_file": "art/full/reviews/UI009.json",
+        "limitations": []
+      }
+    },
+    {
+      "asset_id": "UI010",
+      "record_kind": "asset",
+      "technical_state": "import_verified",
+      "visual_state": "not_reviewed",
+      "behavior_state": "not_tested",
+      "release_state": "reviewed_not_released",
+      "release_state_reason": "包含于2026-10-24独立返修整体结论(review_gate blocked/H02)；无本条目未解blocking/major问题；released只能由外部控制器产生",
+      "issues": [],
+      "historical_notes": [
+        "Cocos/微信未验证；字体未随包交付；独立审核未做。"
+      ],
+      "mapping": {
+        "old_status": "engine_verified",
+        "old_decision": "pass",
+        "old_reviewer": "producer technical engine check (not independent stage signoff)"
+      },
+      "group": "UI",
+      "kind": "editable_ui",
+      "technical_evidence": {
+        "review_kind": "technical_self_check",
+        "reviewer": "producer technical engine check (not independent stage signoff)",
+        "decision": "pass",
+        "reviewed_at": "2026-10-24",
+        "evidence": [
+          "art/full/previews/engine/ui_states/tip_first_move.png",
+          "art/full/previews/engine/ui_states/tip_first_interact.png"
+        ],
+        "source_file": "art/full/reviews/UI010.json",
+        "limitations": []
+      }
+    },
+    {
+      "asset_id": "UI011",
+      "record_kind": "asset",
+      "technical_state": "import_verified",
+      "visual_state": "not_reviewed",
+      "behavior_state": "not_tested",
+      "release_state": "reviewed_not_released",
+      "release_state_reason": "包含于2026-10-24独立返修整体结论(review_gate blocked/H02)；无本条目未解blocking/major问题；released只能由外部控制器产生",
+      "issues": [],
+      "historical_notes": [
+        "Cocos/微信未验证；字体未随包交付；独立审核未做。"
+      ],
+      "mapping": {
+        "old_status": "engine_verified",
+        "old_decision": "pass",
+        "old_reviewer": "producer technical engine check (not independent stage signoff)"
+      },
+      "group": "UI",
+      "kind": "editable_ui",
+      "technical_evidence": {
+        "review_kind": "technical_self_check",
+        "reviewer": "producer technical engine check (not independent stage signoff)",
+        "decision": "pass",
+        "reviewed_at": "2026-10-24",
+        "evidence": [
+          "art/full/previews/engine/ui_states/safe_area_landscape.png",
+          "art/full/previews/engine/ui_states/rotate_notice.png"
+        ],
+        "source_file": "art/full/reviews/UI011.json",
+        "limitations": [
+          "rotate_notice is a 1280x720 layout representation; true 720x1280 device capture pending."
+        ]
+      }
+    },
+    {
+      "asset_id": "UI012",
+      "record_kind": "asset",
+      "technical_state": "import_verified",
+      "visual_state": "not_reviewed",
+      "behavior_state": "not_tested",
+      "release_state": "reviewed_not_released",
+      "release_state_reason": "包含于2026-10-24独立返修整体结论(review_gate blocked/H02)；无本条目未解blocking/major问题；released只能由外部控制器产生",
+      "issues": [],
+      "historical_notes": [
+        "Cocos/微信未验证；字体未随包交付；独立审核未做。"
+      ],
+      "mapping": {
+        "old_status": "engine_verified",
+        "old_decision": "pass",
+        "old_reviewer": "producer technical engine check (not independent stage signoff)"
+      },
+      "group": "UI",
+      "kind": "editable_ui",
+      "technical_evidence": {
+        "review_kind": "technical_self_check",
+        "reviewer": "producer technical engine check (not independent stage signoff)",
+        "decision": "pass",
+        "reviewed_at": "2026-10-24",
+        "evidence": [
+          "art/full/previews/engine/ui_states/spec_icons.png"
+        ],
+        "source_file": "art/full/reviews/UI012.json",
+        "limitations": []
+      }
+    },
+    {
+      "asset_id": "UI013",
+      "record_kind": "asset",
+      "technical_state": "import_verified",
+      "visual_state": "not_reviewed",
+      "behavior_state": "not_tested",
+      "release_state": "reviewed_not_released",
+      "release_state_reason": "包含于2026-10-24独立返修整体结论(review_gate blocked/H02)；无本条目未解blocking/major问题；released只能由外部控制器产生",
+      "issues": [],
+      "historical_notes": [
+        "Cocos/微信未验证；字体未随包交付；独立审核未做。"
+      ],
+      "mapping": {
+        "old_status": "engine_verified",
+        "old_decision": "pass",
+        "old_reviewer": "producer technical engine check (not independent stage signoff)"
+      },
+      "group": "UI",
+      "kind": "tokens_font",
+      "technical_evidence": {
+        "review_kind": "technical_self_check",
+        "reviewer": "producer technical engine check (not independent stage signoff)",
+        "decision": "pass",
+        "reviewed_at": "2026-10-24",
+        "evidence": [
+          "art/full/previews/engine/ui_states/spec_type.png",
+          "art/full/previews/engine/ui_states/spec_nine_slice.png"
+        ],
+        "source_file": "art/full/reviews/UI013.json",
+        "limitations": []
+      }
+    }
+  ]
+}

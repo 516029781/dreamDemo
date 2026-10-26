@@ -1,0 +1,107 @@
+{
+  "schema_version": "1.1.0",
+  "report_kind": "template_not_actual_review",
+  "template_only": true,
+  "vnext_effective": false,
+  "contract_version": "1.4.0-draft",
+  "rubric_version": "1.2.0",
+  "review_scope": "scene_demo",
+  "reviewer": {
+    "id": null,
+    "mode": null
+  },
+  "asset_manifest_path": null,
+  "asset_manifest_sha256": null,
+  "quality_checks_path": "art_review/vnext/quality_checks.json",
+  "behavior_results": {
+    "path": null,
+    "sha256": null
+  },
+  "capture_bindings": [],
+  "stage_certificate": {
+    "path": null,
+    "sha256": null,
+    "certificate_id": null,
+    "approver_id": null
+  },
+  "gates": {
+    "H01": {"status": "not_checked", "evidence": [], "reason": null},
+    "H02": {"status": "not_checked", "evidence": [], "reason": null},
+    "H03": {"status": "not_checked", "evidence": [], "reason": null},
+    "H04": {"status": "not_checked", "evidence": [], "reason": null},
+    "H05": {"status": "not_checked", "evidence": [], "reason": null},
+    "H06": {"status": "not_checked", "evidence": [], "reason": null},
+    "H07": {"status": "not_checked", "evidence": [], "reason": null},
+    "H08": {"status": "not_checked", "evidence": [], "reason": null},
+    "H09": {"status": "not_checked", "evidence": [], "reason": null}
+  },
+  "quality_checks": {
+    "Q01": {"status": "not_checked", "evidence": [], "reason": null, "measurements": {}},
+    "Q02": {"status": "not_checked", "evidence": [], "reason": null, "measurements": {}},
+    "Q03": {"status": "not_checked", "evidence": [], "reason": null, "measurements": {}},
+    "Q04": {"status": "not_checked", "evidence": [], "reason": null, "measurements": {}},
+    "Q05": {"status": "not_checked", "evidence": [], "reason": null, "measurements": {}},
+    "Q06": {"status": "not_checked", "evidence": [], "reason": null, "measurements": {}},
+    "Q07": {"status": "not_checked", "evidence": [], "reason": null, "measurements": {}},
+    "Q08": {"status": "not_checked", "evidence": [], "reason": null, "measurements": {}},
+    "Q09": {"status": "not_checked", "evidence": [], "reason": null, "measurements": {}}
+  },
+  "cards": {
+    "ENV": {
+      "dimensions": [
+        {"id": "composition_scale", "score": null, "evidence": [], "reason": null, "defect_ids": []},
+        {"id": "geometry_craft", "score": null, "evidence": [], "reason": null, "defect_ids": []},
+        {"id": "material_separation", "score": null, "evidence": [], "reason": null, "defect_ids": []},
+        {"id": "lighting_contact", "score": null, "evidence": [], "reason": null, "defect_ids": []},
+        {"id": "vegetation_depth", "score": null, "evidence": [], "reason": null, "defect_ids": []},
+        {"id": "play_readability", "score": null, "evidence": [], "reason": null, "defect_ids": []}
+      ],
+      "computed_total": null,
+      "computed_decision": "pending"
+    },
+    "CHAR": {
+      "dimensions": [
+        {"id": "silhouette_proportion", "score": null, "evidence": [], "reason": null, "defect_ids": []},
+        {"id": "line_quality", "score": null, "evidence": [], "reason": null, "defect_ids": []},
+        {"id": "cel_color_light", "score": null, "evidence": [], "reason": null, "defect_ids": []},
+        {"id": "identity_consistency", "score": null, "evidence": [], "reason": null, "defect_ids": []},
+        {"id": "motion_contact", "score": null, "evidence": [], "reason": null, "defect_ids": []},
+        {"id": "small_scale_clarity", "score": null, "evidence": [], "reason": null, "defect_ids": []}
+      ],
+      "computed_total": null,
+      "computed_decision": "pending"
+    },
+    "UI": {
+      "dimensions": [
+        {"id": "paper_shape", "score": null, "evidence": [], "reason": null, "defect_ids": []},
+        {"id": "doodle_icon_family", "score": null, "evidence": [], "reason": null, "defect_ids": []},
+        {"id": "typography", "score": null, "evidence": [], "reason": null, "defect_ids": []},
+        {"id": "layout_air", "score": null, "evidence": [], "reason": null, "defect_ids": []},
+        {"id": "state_feedback", "score": null, "evidence": [], "reason": null, "defect_ids": []},
+        {"id": "palette_restraint", "score": null, "evidence": [], "reason": null, "defect_ids": []}
+      ],
+      "computed_total": null,
+      "computed_decision": "pending"
+    },
+    "MIX": {
+      "dimensions": [
+        {"id": "visual_language", "score": null, "evidence": [], "reason": null, "defect_ids": []},
+        {"id": "color_light_coherence", "score": null, "evidence": [], "reason": null, "defect_ids": []},
+        {"id": "grounding_occlusion", "score": null, "evidence": [], "reason": null, "defect_ids": []},
+        {"id": "focus_readability", "score": null, "evidence": [], "reason": null, "defect_ids": []},
+        {"id": "world_style_coherence", "score": null, "evidence": [], "reason": null, "defect_ids": []}
+      ],
+      "computed_total": null,
+      "computed_decision": "pending"
+    }
+  },
+  "defects": [],
+  "overall_decision": "pending",
+  "limitations": [
+    "Template only: no production samples or independent visual review have been recorded.",
+    "Q01-Q09 remain pending until behavior_results and capture bindings are supplied and checked.",
+    "A controller certificate is required in addition to an independent review."
+  ],
+  "manifest_sha256": null,
+  "contract_sha256": null
+}

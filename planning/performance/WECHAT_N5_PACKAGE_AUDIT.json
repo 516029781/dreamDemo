@@ -1,0 +1,91 @@
+{
+  "build": "C:\\软件\\鼠鼠\\.tooling\\wechat_probe_n5_20261026T152015Z\\build\\wechatgame",
+  "main_limit_bytes": 4194304,
+  "main_pass": false,
+  "bytes_by_bucket": {
+    "main": 188475921,
+    "remote": 0
+  },
+  "files_by_bucket": {
+    "main": 336,
+    "remote": 0
+  },
+  "largest_files": [
+    {
+      "path": "assets/resources/native/c0/c02a69cf-19af-40d7-940d-23fa794c2850@4ba2d.bin",
+      "bytes": 34175712,
+      "bucket": "main"
+    },
+    {
+      "path": "assets/resources/native/c0/c02a69cf-19af-40d7-940d-23fa794c2850@ac42d.bin",
+      "bytes": 27870336,
+      "bucket": "main"
+    },
+    {
+      "path": "assets/resources/native/c0/c02a69cf-19af-40d7-940d-23fa794c2850@d22c5.bin",
+      "bytes": 26204220,
+      "bucket": "main"
+    },
+    {
+      "path": "assets/resources/native/0e/0e2d3c2c-2c13-49d5-8262-5120c68f55c5/NotoSerifSC-VF.ttf",
+      "bytes": 25129160,
+      "bucket": "main"
+    },
+    {
+      "path": "assets/resources/native/24/2462a2fa-ecc3-42a9-be7a-bfd51a536ed0/NotoSansSC-VF.ttf",
+      "bytes": 17773244,
+      "bucket": "main"
+    },
+    {
+      "path": "assets/resources/native/c0/c02a69cf-19af-40d7-940d-23fa794c2850@c25a3.bin",
+      "bytes": 11390064,
+      "bucket": "main"
+    },
+    {
+      "path": "cocos-js/_virtual_cc-BncijMet.js",
+      "bytes": 2977644,
+      "bucket": "main"
+    },
+    {
+      "path": "assets/resources/native/c0/c02a69cf-19af-40d7-940d-23fa794c2850@82607.bin",
+      "bytes": 2700000,
+      "bucket": "main"
+    },
+    {
+      "path": "assets/resources/native/c0/c02a69cf-19af-40d7-940d-23fa794c2850@090a5.bin",
+      "bytes": 2621400,
+      "bucket": "main"
+    },
+    {
+      "path": "assets/resources/native/c0/c02a69cf-19af-40d7-940d-23fa794c2850@d5f47.bin",
+      "bytes": 2080716,
+      "bucket": "main"
+    },
+    {
+      "path": "assets/resources/native/c0/c02a69cf-19af-40d7-940d-23fa794c2850@499b0.bin",
+      "bytes": 1892844,
+      "bucket": "main"
+    },
+    {
+      "path": "assets/resources/native/c0/c02a69cf-19af-40d7-940d-23fa794c2850@daa78.bin",
+      "bytes": 1543200,
+      "bucket": "main"
+    },
+    {
+      "path": "assets/resources/native/c0/c02a69cf-19af-40d7-940d-23fa794c2850@9a0f6.bin",
+      "bytes": 940320,
+      "bucket": "main"
+    },
+    {
+      "path": "assets/resources/native/c0/c02a69cf-19af-40d7-940d-23fa794c2850@833ed.bin",
+      "bytes": 911880,
+      "bucket": "main"
+    },
+    {
+      "path": "assets/resources/native/c0/c02a69cf-19af-40d7-940d-23fa794c2850@9e8ee.bin",
+      "bytes": 777852,
+      "bucket": "main"
+    }
+  ],
+  "note": "Raw build directory bytes; final platform acceptance requires WeChat DevTools."
+}

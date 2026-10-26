@@ -1,0 +1,16 @@
+[
+  {
+    "path": "delivery/next_cycle/T6/character/char_idle.gif",
+    "sha256": "7b3224b3d3f13de0e8f6849240b47058c461ec04e40b1973a2df86647df54bb7",
+    "frames": 12,
+    "unique_rgba_frames": 1,
+    "duration_ms": 1080
+  },
+  {
+    "path": "delivery/next_cycle/T6/character/char_move.gif",
+    "sha256": "7b3224b3d3f13de0e8f6849240b47058c461ec04e40b1973a2df86647df54bb7",
+    "frames": 12,
+    "unique_rgba_frames": 1,
+    "duration_ms": 1080
+  }
+]

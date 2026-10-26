@@ -1,0 +1,35 @@
+{
+  "live_animation_pixels": [
+    {
+      "tag": "idle",
+      "frames": 3,
+      "unique_rgb_frames": 3,
+      "differences_from_first": [
+        0,
+        14754,
+        12989
+      ]
+    },
+    {
+      "tag": "move",
+      "frames": 3,
+      "unique_rgb_frames": 3,
+      "differences_from_first": [
+        0,
+        12211,
+        13807
+      ]
+    }
+  ],
+  "actor_visible_minus_hidden": {
+    "left": 372,
+    "top": 515,
+    "right": 510,
+    "bottom": 654,
+    "width": 139,
+    "height": 140,
+    "changed_pixels": 13249
+  },
+  "threshold_rgb_max_delta": 12,
+  "method": "Only PlayerWorldQuad hidden; same view and unchanged shadow; geometry proxy height is not visible sprite pixel height."
+}

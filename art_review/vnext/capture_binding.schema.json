@@ -1,0 +1,159 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "art_review/vnext/capture_binding.schema.json",
+  "title": "vNext capture binding (source/export/build/camera/canvas/hash)",
+  "description": "一份采集记录必须绑定真实来源、导出、构建日志、相机、浏览器视口、canvas CSS rect/backing 尺寸和输出 hash。page_screenshot=true 一律拒绝（F05：网页截图会裁掉画布）。该记录只证明证据链完整性，不构成视觉或引擎批准。",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["binding_version", "binding_id", "stage", "created_at", "backend", "viewport", "canvas", "camera", "sources", "exports", "shared_inputs", "build", "output"],
+  "properties": {
+    "binding_version": {"type": "string", "const": "vnext.capture_binding/1.0.0"},
+    "binding_id": {"type": "string", "minLength": 1},
+    "stage": {"type": "string", "minLength": 1},
+    "created_at": {"type": "string", "format": "date-time"},
+    "backend": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "version"],
+      "properties": {
+        "name": {"type": "string", "minLength": 1},
+        "version": {"type": "string", "minLength": 1},
+        "channel": {"type": "string"}
+      }
+    },
+    "viewport": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["browser_width", "browser_height", "device_pixel_ratio"],
+      "properties": {
+        "browser_width": {"type": "integer", "minimum": 1},
+        "browser_height": {"type": "integer", "minimum": 1},
+        "device_pixel_ratio": {"type": "number", "exclusiveMinimum": 0},
+        "scroll_x": {"type": "number"},
+        "scroll_y": {"type": "number"}
+      }
+    },
+    "canvas": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["selector", "css_rect", "backing_width", "backing_height", "capture_method", "page_screenshot"],
+      "properties": {
+        "selector": {"type": "string", "minLength": 1},
+        "css_rect": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["x", "y", "width", "height"],
+          "properties": {
+            "x": {"type": "number"},
+            "y": {"type": "number"},
+            "width": {"type": "number", "exclusiveMinimum": 0},
+            "height": {"type": "number", "exclusiveMinimum": 0}
+          }
+        },
+        "backing_width": {"type": "integer", "minimum": 1},
+        "backing_height": {"type": "integer", "minimum": 1},
+        "capture_method": {
+          "type": "string",
+          "enum": ["canvas_to_data_url", "element_screenshot"],
+          "description": "必须是真实 canvas 采集：canvas.toDataURL 或对 canvas 元素的截图，而不是整页截图。"
+        },
+        "page_screenshot": {
+          "type": "boolean",
+          "const": false,
+          "description": "F05：整页截图会包含网页外壳并裁掉画布，禁止作为证据。"
+        }
+      }
+    },
+    "camera": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["node", "position", "rotation", "fov", "clip_time"],
+      "properties": {
+        "node": {"type": "string", "minLength": 1},
+        "position": {"type": "array", "minItems": 3, "maxItems": 3, "items": {"type": "number"}},
+        "rotation": {"type": "array", "minItems": 3, "maxItems": 3, "items": {"type": "number"}},
+        "fov": {"type": "number", "exclusiveMinimum": 0, "maximum": 180},
+        "clip_time": {
+          "type": ["number", "null"],
+          "minimum": 0,
+          "description": "角色动作固定时刻（秒）；静态场景为 null。F07：比较图必须固定 clip time。"
+        }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/definitions/artifact"},
+      "description": "可编辑源（.blend/.ts/.svg 等），至少一项。"
+    },
+    "exports": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/definitions/artifact"},
+      "description": "实际被引擎加载的导出（.glb/.png 等），至少一项。"
+    },
+    "shared_inputs": {
+      "type": "array",
+      "items": {"$ref": "#/definitions/shared"},
+      "description": "共享纹理/材质/字体/相机配置；变化会扩展失效范围到所有 scope 内采集。"
+    },
+    "build": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["build_id", "log_path", "log_sha256", "result"],
+      "properties": {
+        "build_id": {"type": "string", "minLength": 1},
+        "log_path": {"type": "string", "minLength": 1},
+        "log_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "result": {
+          "type": "string",
+          "enum": ["success", "failure", "unknown"],
+          "description": "failure 直接拒绝；unknown 需要人工确认（F08：Finished 提示不能覆盖失败事件）。"
+        }
+      }
+    },
+    "output": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "sha256", "width", "height"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "width": {"type": "integer", "minimum": 1},
+        "height": {"type": "integer", "minimum": 1}
+      }
+    },
+    "notes": {"type": "array", "items": {"type": "string"}}
+  },
+  "definitions": {
+    "artifact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["role", "path", "sha256"],
+      "properties": {
+        "role": {"type": "string", "minLength": 1},
+        "path": {"type": "string", "minLength": 1},
+        "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      }
+    },
+    "shared": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["role", "path", "sha256", "scope"],
+      "properties": {
+        "role": {
+          "type": "string",
+          "enum": ["texture", "material", "font", "camera_profile", "lighting_profile"]
+        },
+        "path": {"type": "string", "minLength": 1},
+        "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "scope": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"type": "string", "minLength": 1},
+          "description": "受影响资产ID列表；共享资源变化时这些资产的采集全部失效。"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+[
+  {
+    "label": "regression",
+    "command": [
+      "C:\\Users\\tt\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "-X",
+      "utf8",
+      "tools/test_art_harness.py"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 0.6654298999928869,
+    "stdout": "",
+    "stderr": ".........................\n----------------------------------------------------------------------\nRan 25 tests in 0.486s\n\nOK\n"
+  },
+  {
+    "label": "chain_selfcheck",
+    "command": [
+      "C:\\Users\\tt\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "-X",
+      "utf8",
+      "delivery/next_cycle/T0/p03_chain_test.py"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 1.4361984999995911,
+    "stdout": "{\n \"results\": [\n  {\n   \"step\": \"prepare character_playback draft\",\n   \"exit\": 0,\n   \"status\": \"draft_prepared_not_accepted\"\n  },\n  {\n   \"step\": \"attest character_playback\",\n   \"exit\": 0\n  },\n  {\n   \"step\": \"certify character_playback\",\n   \"exit\": 0\n  },\n  {\n   \"step\": \"prepare scene_demo draft\",\n   \"exit\": 0,\n   \"status\": \"draft_prepared_not_accepted\"\n  },\n  {\n   \"step\": \"attest scene_demo\",\n   \"exit\": 0\n  },\n  {\n   \"step\": \"certify scene_demo\",\n   \"exit\": 0\n  },\n  {\n   \"step\": \"verify scene_demo with certificate chain\",\n   \"exit\": 0,\n   \"accepted\": true,\n   \"certificate_id\": \"cert-scene_demo-001\"\n  },\n  {\n   \"step\": \"forged certificate rejected\",\n   \"exit\": 2,\n   \"error\": \"Invalid stage certificate signature\"\n  },\n  {\n   \"step\": \"boolean dependencies rejected\",\n   \"exit\": 2,\n   \"error\": \"Certificate dependencies must be a list of objects, not a bo\"\n  },\n  {\n   \"step\": \"missing certificate rejected\",\n   \"exit\": 2,\n   \"error\": \"Stage release requires a real controller certificate; a bool\"\n  },\n  {\n   \"step\": \"no-key context rejected\",\n   \"exit\": 2,\n   \"error\": \"Controller verification key missing; never create a key insi\"\n  },\n  {\n   \"step\": \"missing dependency certificate rejected\",\n   \"exit\": 2,\n   \"error\": \"Missing certificate file: C:\\\\Users\\\\tt\\\\AppData\\\\Local\\\\Temp\\\\p03\"\n  }\n ],\n \"fixture_root\": \"C:\\\\Users\\\\tt\\\\AppData\\\\Local\\\\Temp\\\\p03_chain_9kxpq7pn\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "label": "audit",
+    "command": [
+      "C:\\Users\\tt\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "-X",
+      "utf8",
+      "tools/art_harness.py",
+      "audit",
+      "--root",
+      "C:\\软件\\鼠鼠"
+    ],
+    "exit_code": 3,
+    "duration_seconds": 0.1413806999917142,
+    "stdout": "{\n  \"status\": \"submission_present_not_accepted\",\n  \"accepted\": false,\n  \"locked_sources\": [\n    {\n      \"path\": \"reference/character_sources/ark_models/1015_aglna2/build_char_1015_aglna2.atlas\",\n      \"status\": \"pass\"\n    },\n    {\n      \"path\": \"reference/character_sources/ark_models/1015_aglna2/build_char_1015_aglna2.png\",\n      \"status\": \"pass\"\n    },\n    {\n      \"path\": \"reference/character_sources/ark_models/1015_aglna2/build_char_1015_aglna2.skel\",\n      \"status\": \"pass\"\n    }\n  ],\n  \"legacy_review\": {\n    \"path\": \"art\\\\phase1\\\\a_stage\\\\reviews\\\\A_stage_review.json\",\n    \"version\": \"1.1.0\",\n    \"stale\": true,\n    \"reviewer_mode\": \"self\",\n    \"has_reference_identity_gate\": false\n  },\n  \"legacy_artifact_integrity\": {\n    \"checked\": 40,\n    \"failures\": [],\n    \"meaning\": \"Integrity only, not aesthetic or engine acceptance\"\n  },\n  \"active_manifest_exists\": true,\n  \"full_art_catalog\": {\n    \"declared_status_counts\": {\n      \"engine_verified\": 47\n    },\n    \"meaning\": \"Planning/inventory states, not independently approved progress percentages\"\n  },\n  \"next_action\": \"Verify reference Spine playback, submit bound artifacts; preserve old concept as historical.\"\n}\n",
+    "stderr": ""
+  }
+]

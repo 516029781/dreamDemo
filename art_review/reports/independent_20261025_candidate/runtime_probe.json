@@ -1,0 +1,693 @@
+{
+  "url": "http://127.0.0.1:9013/",
+  "scope": "Isolated local server serving frozen current on-disk web build; no production changes",
+  "errors": [],
+  "logs": [
+    "[]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader flag to opt in to lower security guarantees for trusted content.",
+    "'%s' is deprecated. (please use renderer.getSharedMaterial instead.) Renderer.prototype.getMaterial",
+    "'%s' is deprecated. (please use renderer.getSharedMaterial instead.) Renderer.prototype.getMaterial",
+    "'%s' is deprecated. (please use renderer.getSharedMaterial instead.) Renderer.prototype.getMaterial",
+    "'%s' is deprecated. (please use renderer.getSharedMaterial instead.) Renderer.prototype.getMaterial",
+    "'%s' is deprecated. (please use renderer.getSharedMaterial instead.) Renderer.prototype.getMaterial",
+    "'%s' is deprecated. (please use renderer.getSharedMaterial instead.) Renderer.prototype.getMaterial",
+    "'%s' is deprecated. (please use renderer.getSharedMaterial instead.) Renderer.prototype.getMaterial",
+    "'%s' is deprecated. (please use renderer.getSharedMaterial instead.) Renderer.prototype.getMaterial",
+    "'%s' is deprecated. (please use renderer.getSharedMaterial instead.) Renderer.prototype.getMaterial",
+    "'%s' is deprecated. (please use renderer.getSharedMaterial instead.) Renderer.prototype.getMaterial"
+  ],
+  "initial": {
+    "ready": true,
+    "uiVisible": false,
+    "dialogueVisible": false,
+    "dialoguePage": 1,
+    "accepted": false,
+    "moving": false,
+    "paused": false,
+    "inputLocked": false,
+    "boardState": "full",
+    "cameraMode": "game",
+    "anim": "Relax",
+    "animNames": [],
+    "player": [
+      0,
+      0,
+      -5.2
+    ],
+    "viewer": "",
+    "loadErrors": [],
+    "boneBounds": 450,
+    "metrics": {
+      "px": 97.84413872565966,
+      "feet": [
+        198.46772880309163,
+        -294.45630238540286
+      ],
+      "head": [
+        213.86475974204365,
+        -196.6121636597432
+      ],
+      "depth": 14.382365029021415,
+      "player": [
+        0,
+        0,
+        -5.2
+      ],
+      "canvas": [
+        1280,
+        720
+      ],
+      "view": [
+        1280,
+        720
+      ],
+      "method": "RenderTexture->world transparent quad"
+    },
+    "spine": {
+      "width": 1024,
+      "height": 1024,
+      "premultipliedAlpha": false
+    }
+  },
+  "animation": {
+    "idle": [
+      {
+        "found": true,
+        "enabled": true,
+        "paused": false,
+        "timeScale": 1,
+        "defaultAnimation": "",
+        "current": {
+          "animation": "Relax",
+          "trackTime": 6.580300807952881,
+          "animationLast": 2.350900650024414,
+          "animationStart": 0,
+          "animationEnd": 4
+        },
+        "bones": [
+          {
+            "name": "root",
+            "x": 0,
+            "y": 0
+          },
+          {
+            "name": "Bone",
+            "x": 0,
+            "y": 0
+          },
+          {
+            "name": "Front",
+            "x": -0.00003934024789487012,
+            "y": 450
+          },
+          {
+            "name": "F_All",
+            "x": -0.00003848740743706003,
+            "y": 443.4964294433594
+          },
+          {
+            "name": "F_Hip",
+            "x": 2.770005226135254,
+            "y": 193.33642578125
+          }
+        ],
+        "components": [
+          "UITransform",
+          "Skeleton"
+        ]
+      },
+      {
+        "found": true,
+        "enabled": true,
+        "paused": false,
+        "timeScale": 1,
+        "defaultAnimation": "",
+        "current": {
+          "animation": "Relax",
+          "trackTime": 9.421401023864746,
+          "animationLast": 1.1740007400512695,
+          "animationStart": 0,
+          "animationEnd": 4
+        },
+        "bones": [
+          {
+            "name": "root",
+            "x": 0,
+            "y": 0
+          },
+          {
+            "name": "Bone",
+            "x": 0,
+            "y": 0
+          },
+          {
+            "name": "Front",
+            "x": -0.00003934024789487012,
+            "y": 450
+          },
+          {
+            "name": "F_All",
+            "x": -0.0000384905724786222,
+            "y": 443.5205383300781
+          },
+          {
+            "name": "F_Hip",
+            "x": 2.770005226135254,
+            "y": 193.36053466796875
+          }
+        ],
+        "components": [
+          "UITransform",
+          "Skeleton"
+        ]
+      },
+      {
+        "found": true,
+        "enabled": true,
+        "paused": false,
+        "timeScale": 1,
+        "defaultAnimation": "",
+        "current": {
+          "animation": "Relax",
+          "trackTime": 12.381501197814941,
+          "animationLast": 0.09000110626220703,
+          "animationStart": 0,
+          "animationEnd": 4
+        },
+        "bones": [
+          {
+            "name": "root",
+            "x": 0,
+            "y": 0
+          },
+          {
+            "name": "Bone",
+            "x": 0,
+            "y": 0
+          },
+          {
+            "name": "Front",
+            "x": -0.00003934024789487012,
+            "y": 450
+          },
+          {
+            "name": "F_All",
+            "x": -0.00003885636760969646,
+            "y": 446.31005859375
+          },
+          {
+            "name": "F_Hip",
+            "x": 2.7700047492980957,
+            "y": 196.15005493164062
+          }
+        ],
+        "components": [
+          "UITransform",
+          "Skeleton"
+        ]
+      }
+    ],
+    "move": [
+      {
+        "found": true,
+        "enabled": true,
+        "paused": false,
+        "timeScale": 1,
+        "defaultAnimation": "",
+        "current": {
+          "animation": "Move",
+          "trackTime": 2.529400110244751,
+          "animationLast": 0.28100013732910156,
+          "animationStart": 0,
+          "animationEnd": 1
+        },
+        "bones": [
+          {
+            "name": "root",
+            "x": 0,
+            "y": 0
+          },
+          {
+            "name": "Bone",
+            "x": 0,
+            "y": 0
+          },
+          {
+            "name": "Front",
+            "x": -0.00003934024789487012,
+            "y": 450
+          },
+          {
+            "name": "F_All",
+            "x": -0.000037203273677732795,
+            "y": 433.7038879394531
+          },
+          {
+            "name": "F_Hip",
+            "x": 2.770008087158203,
+            "y": 173.96389770507812
+          }
+        ],
+        "components": [
+          "UITransform",
+          "Skeleton"
+        ]
+      },
+      {
+        "found": true,
+        "enabled": true,
+        "paused": false,
+        "timeScale": 1,
+        "defaultAnimation": "",
+        "current": {
+          "animation": "Move",
+          "trackTime": 7.213600158691406,
+          "animationLast": 0.9850001335144043,
+          "animationStart": 0,
+          "animationEnd": 1
+        },
+        "bones": [
+          {
+            "name": "root",
+            "x": 0,
+            "y": 0
+          },
+          {
+            "name": "Bone",
+            "x": 0,
+            "y": 0
+          },
+          {
+            "name": "Front",
+            "x": -0.00003934024789487012,
+            "y": 450
+          },
+          {
+            "name": "F_All",
+            "x": -0.00003845965693471953,
+            "y": 443.2847900390625
+          },
+          {
+            "name": "F_Hip",
+            "x": 2.7700068950653076,
+            "y": 183.5447998046875
+          }
+        ],
+        "components": [
+          "UITransform",
+          "Skeleton"
+        ]
+      },
+      {
+        "found": true,
+        "enabled": true,
+        "paused": false,
+        "timeScale": 1,
+        "defaultAnimation": "",
+        "current": {
+          "animation": "Move",
+          "trackTime": 10.584700584411621,
+          "animationLast": 0.5547008514404297,
+          "animationStart": 0,
+          "animationEnd": 1
+        },
+        "bones": [
+          {
+            "name": "root",
+            "x": 0,
+            "y": 0
+          },
+          {
+            "name": "Bone",
+            "x": 0,
+            "y": 0
+          },
+          {
+            "name": "Front",
+            "x": -0.00003934024789487012,
+            "y": 450
+          },
+          {
+            "name": "F_All",
+            "x": -0.00003737465158337727,
+            "y": 435.01080322265625
+          },
+          {
+            "name": "F_Hip",
+            "x": 2.770007848739624,
+            "y": 175.27081298828125
+          }
+        ],
+        "components": [
+          "UITransform",
+          "Skeleton"
+        ]
+      }
+    ]
+  },
+  "actor_hide_found": true,
+  "keyboard": [
+    {
+      "mode": "normal",
+      "before": [
+        0,
+        0,
+        -5.2
+      ],
+      "after": [
+        0.45000000000000007,
+        0,
+        -5.2
+      ],
+      "distance": 0.45000000000000007,
+      "state": {
+        "ready": true,
+        "uiVisible": false,
+        "dialogueVisible": false,
+        "dialoguePage": 1,
+        "accepted": false,
+        "moving": false,
+        "paused": false,
+        "inputLocked": false,
+        "boardState": "full",
+        "cameraMode": "game",
+        "anim": "Relax",
+        "animNames": [],
+        "player": [
+          0.45000000000000007,
+          0,
+          -5.2
+        ],
+        "viewer": "",
+        "loadErrors": [],
+        "boneBounds": 450,
+        "metrics": {
+          "px": 97.84413872565966,
+          "feet": [
+            198.46772880309163,
+            -294.45630238540286
+          ],
+          "head": [
+            213.86475974204365,
+            -196.6121636597432
+          ],
+          "depth": 14.382365029021415,
+          "player": [
+            0.45000000000000007,
+            0,
+            -5.2
+          ],
+          "canvas": [
+            1280,
+            720
+          ],
+          "view": [
+            1280,
+            720
+          ],
+          "method": "RenderTexture->world transparent quad"
+        },
+        "spine": {
+          "width": 1024,
+          "height": 1024,
+          "premultipliedAlpha": false
+        }
+      }
+    },
+    {
+      "mode": "paused",
+      "before": [
+        0,
+        0,
+        -5.2
+      ],
+      "after": [
+        0,
+        0,
+        -5.2
+      ],
+      "distance": 0,
+      "state": {
+        "ready": true,
+        "uiVisible": false,
+        "dialogueVisible": false,
+        "dialoguePage": 1,
+        "accepted": false,
+        "moving": false,
+        "paused": true,
+        "inputLocked": true,
+        "boardState": "full",
+        "cameraMode": "game",
+        "anim": "Relax",
+        "animNames": [],
+        "player": [
+          0,
+          0,
+          -5.2
+        ],
+        "viewer": "",
+        "loadErrors": [],
+        "boneBounds": 450,
+        "metrics": {
+          "px": 97.84413872565966,
+          "feet": [
+            198.46772880309163,
+            -294.45630238540286
+          ],
+          "head": [
+            213.86475974204365,
+            -196.6121636597432
+          ],
+          "depth": 14.382365029021415,
+          "player": [
+            0,
+            0,
+            -5.2
+          ],
+          "canvas": [
+            1280,
+            720
+          ],
+          "view": [
+            1280,
+            720
+          ],
+          "method": "RenderTexture->world transparent quad"
+        },
+        "spine": {
+          "width": 1024,
+          "height": 1024,
+          "premultipliedAlpha": false
+        }
+      }
+    },
+    {
+      "mode": "dialogue",
+      "before": [
+        0,
+        0,
+        -5.2
+      ],
+      "after": [
+        0,
+        0,
+        -5.2
+      ],
+      "distance": 0,
+      "state": {
+        "ready": true,
+        "uiVisible": true,
+        "dialogueVisible": true,
+        "dialoguePage": 1,
+        "accepted": false,
+        "moving": false,
+        "paused": false,
+        "inputLocked": true,
+        "boardState": "full",
+        "cameraMode": "game",
+        "anim": "Relax",
+        "animNames": [],
+        "player": [
+          0,
+          0,
+          -5.2
+        ],
+        "viewer": "",
+        "loadErrors": [],
+        "boneBounds": 450,
+        "metrics": {
+          "px": 97.84413872565966,
+          "feet": [
+            198.46772880309163,
+            -294.45630238540286
+          ],
+          "head": [
+            213.86475974204365,
+            -196.6121636597432
+          ],
+          "depth": 14.382365029021415,
+          "player": [
+            0,
+            0,
+            -5.2
+          ],
+          "canvas": [
+            1280,
+            720
+          ],
+          "view": [
+            1280,
+            720
+          ],
+          "method": "RenderTexture->world transparent quad"
+        },
+        "spine": {
+          "width": 1024,
+          "height": 1024,
+          "premultipliedAlpha": false
+        }
+      }
+    },
+    {
+      "mode": "resumed",
+      "before": [
+        0,
+        0,
+        -5.2
+      ],
+      "after": [
+        0.45000000000000007,
+        0,
+        -5.2
+      ],
+      "distance": 0.45000000000000007,
+      "state": {
+        "ready": true,
+        "uiVisible": true,
+        "dialogueVisible": false,
+        "dialoguePage": 1,
+        "accepted": false,
+        "moving": false,
+        "paused": false,
+        "inputLocked": false,
+        "boardState": "full",
+        "cameraMode": "game",
+        "anim": "Relax",
+        "animNames": [],
+        "player": [
+          0.45000000000000007,
+          0,
+          -5.2
+        ],
+        "viewer": "",
+        "loadErrors": [],
+        "boneBounds": 450,
+        "metrics": {
+          "px": 97.84413872565966,
+          "feet": [
+            198.46772880309163,
+            -294.45630238540286
+          ],
+          "head": [
+            213.86475974204365,
+            -196.6121636597432
+          ],
+          "depth": 14.382365029021415,
+          "player": [
+            0.45000000000000007,
+            0,
+            -5.2
+          ],
+          "canvas": [
+            1280,
+            720
+          ],
+          "view": [
+            1280,
+            720
+          ],
+          "method": "RenderTexture->world transparent quad"
+        },
+        "spine": {
+          "width": 1024,
+          "height": 1024,
+          "premultipliedAlpha": false
+        }
+      }
+    }
+  ],
+  "stats": {
+    "draws": 479,
+    "tris": 239614,
+    "instances": 0,
+    "textureMB": 46.91853713989258,
+    "bufferMB": 52.18175506591797,
+    "fps": 1.1048502927926034
+  },
+  "boards": [
+    {
+      "set": "empty",
+      "actual": "empty"
+    },
+    {
+      "set": "full",
+      "actual": "full"
+    },
+    {
+      "set": "reset",
+      "actual": "reset"
+    }
+  ],
+  "portrait": {
+    "ready": true,
+    "uiVisible": false,
+    "dialogueVisible": false,
+    "dialoguePage": 1,
+    "accepted": false,
+    "moving": false,
+    "paused": false,
+    "inputLocked": false,
+    "boardState": "reset",
+    "cameraMode": "game",
+    "anim": "Relax",
+    "animNames": [],
+    "player": [
+      0,
+      0,
+      -5.2
+    ],
+    "viewer": "",
+    "loadErrors": [],
+    "boneBounds": 450,
+    "metrics": {
+      "px": 97.84413872565966,
+      "feet": [
+        198.46772880309163,
+        -294.45630238540286
+      ],
+      "head": [
+        213.86475974204365,
+        -196.6121636597432
+      ],
+      "depth": 14.382365029021415,
+      "player": [
+        0,
+        0,
+        -5.2
+      ],
+      "canvas": [
+        1280,
+        720
+      ],
+      "view": [
+        1280,
+        720
+      ],
+      "method": "RenderTexture->world transparent quad"
+    },
+    "spine": {
+      "width": 1024,
+      "height": 1024,
+      "premultipliedAlpha": false
+    }
+  }
+}

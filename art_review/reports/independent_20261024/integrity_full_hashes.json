@@ -1,0 +1,10 @@
+{
+  "frozen_file_entries_checked": 394,
+  "hash_failures": [],
+  "glb_unique_mesh_triangles": 120304,
+  "glb_node_mesh_triangle_sum": 120304,
+  "glb_primitive_modes": {
+    "4": 173
+  },
+  "scope_note": "GLB decoded mesh triangle counts; not a GPU draw/visible-frustum performance measurement."
+}

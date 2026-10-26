@@ -1,0 +1,56 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "art_review/vnext/behavior_results.schema.json",
+  "title": "vNext behavior/quality results (Q01-Q09)",
+  "description": "Q01-Q09 的机器可读结果。缺证据或未测必须是 pending/not_tested，不能写 pass；pass 必须绑定证据路径。该文件只记录检查结果，不构成视觉或控制器批准。",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["results_version", "stage", "build_id", "generated_at", "results"],
+  "properties": {
+    "results_version": {"type": "string", "const": "vnext.behavior_results/1.0.0"},
+    "stage": {"type": "string", "minLength": 1},
+    "build_id": {"type": "string", "minLength": 1},
+    "generated_at": {"type": "string", "format": "date-time"},
+    "results": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["check_id", "asset_id", "status", "evidence", "measurements", "tested_by", "tested_at"],
+        "properties": {
+          "check_id": {"type": "string", "pattern": "^Q0[1-9]$"},
+          "asset_id": {"type": "string", "minLength": 1},
+          "status": {"type": "string", "enum": ["pass", "fail", "pending", "not_tested"]},
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["role", "path"],
+              "properties": {
+                "role": {"type": "string", "minLength": 1},
+                "path": {"type": "string", "minLength": 1},
+                "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+              }
+            }
+          },
+          "measurements": {"type": "object", "additionalProperties": true},
+          "tested_by": {"type": "string", "minLength": 1},
+          "tested_at": {"type": "string", "minLength": 1},
+          "reason": {"type": "string"}
+        },
+        "allOf": [
+          {
+            "if": {"properties": {"status": {"const": "pass"}}},
+            "then": {"properties": {"evidence": {"minItems": 1}}}
+          },
+          {
+            "if": {"properties": {"status": {"enum": ["fail", "pending", "not_tested"]}}},
+            "then": {"required": ["reason"], "properties": {"reason": {"minLength": 1}}}
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,170 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "art_review/vnext/asset_status.schema.json",
+  "title": "vNext asset status (three axes + release state)",
+  "description": "vNext 1.4.0草案状态记录。当前生效合同仍为1.3.0；本schema由P02产出，仅在P03+安装vNext合同并经独立审核确认后作为门禁生效。核心不变量：技术自检(review_kind=technical_self_check)不得产生visual_state=pass；release_state=released只能来自外部控制器记录；存在未解决blocking/major问题的记录必须为release_state=blocked。1.0.1（P02返修F03）：mapping的旧decision/reviewer显式允许null，表示旧记录无对应值。",
+  "type": "object",
+  "required": ["schema_version", "vnext_effective", "contract_version_in_effect", "migrated_from", "migrated_at", "package", "items"],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "vnext.asset_status/1.0.1"
+    },
+    "vnext_effective": {
+      "type": "boolean",
+      "const": false,
+      "description": "迁移记录是草案；vNext生效与否由P03+的独立审核决定，不由制作方宣布。"
+    },
+    "contract_version_in_effect": {
+      "type": "string",
+      "description": "迁移执行时生效的合同版本（当前1.3.0）。"
+    },
+    "migrated_from": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["path", "sha256"],
+        "properties": {
+          "path": {"type": "string"},
+          "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+        }
+      }
+    },
+    "migrated_at": {"type": "string", "format": "date-time"},
+    "package": {"$ref": "#/definitions/record"},
+    "items": {
+      "type": "array",
+      "items": {"$ref": "#/definitions/record"}
+    }
+  },
+  "definitions": {
+    "severity": {
+      "type": "string",
+      "enum": ["blocking", "major", "minor"]
+    },
+    "issue": {
+      "type": "object",
+      "required": ["issue_id", "severity", "status", "title"],
+      "properties": {
+        "issue_id": {"type": "string"},
+        "severity": {"$ref": "#/definitions/severity"},
+        "status": {"type": "string", "enum": ["open", "resolved"]},
+        "title": {"type": "string"},
+        "affected_scope": {
+          "type": "string",
+          "description": "问题影响面（如 scene_character_integration / scene_camera / input_lock_behavior / board_transition / ui_family / catalog_docs / plant_material）。"
+        },
+        "evidence": {"type": "array", "items": {"type": "string"}},
+        "source_review": {"type": "string", "description": "问题来源的独立审核目录或文件。"}
+      }
+    },
+    "review": {
+      "type": "object",
+      "required": ["review_kind", "reviewer", "decision"],
+      "properties": {
+        "review_kind": {
+          "type": "string",
+          "enum": ["technical_self_check", "independent_visual", "independent_behavior", "controller_release"],
+          "description": "technical_self_check只支持technical_state；visual_state=pass必须绑定review_kind=independent_visual；released必须绑定controller_release。"
+        },
+        "reviewer": {"type": "string"},
+        "decision": {"type": "string"},
+        "reviewed_at": {"type": "string"},
+        "evidence": {"type": "array", "items": {"type": "string"}},
+        "artifact_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$",
+          "description": "视觉/放行审核必须绑定被审产物hash；技术自检可为空。"
+        },
+        "source_file": {"type": "string"},
+        "limitations": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "record": {
+      "type": "object",
+      "required": ["asset_id", "technical_state", "visual_state", "behavior_state", "release_state", "issues", "historical_notes"],
+      "properties": {
+        "asset_id": {"type": "string"},
+        "record_kind": {
+          "type": "string",
+          "enum": ["asset", "package"],
+          "description": "package记录是目录整体状态（asset_id=CATALOG）。"
+        },
+        "group": {"type": "string"},
+        "kind": {"type": "string"},
+        "technical_state": {
+          "type": "string",
+          "enum": ["missing", "source_ready", "import_verified"],
+          "description": "仅由可复核的技术证据支撑；不含任何视觉/放行含义。"
+        },
+        "technical_state_reason": {
+          "type": "string",
+          "description": "技术状态被降级或保持低位的可复核理由（如技术自检decision失败、证据不可解析）。"
+        },
+        "visual_state": {
+          "type": "string",
+          "enum": ["not_reviewed", "rework", "pass"],
+          "description": "pass必须来自绑定产物hash的独立视觉审核；迁移自被拒包时禁止出现pass。"
+        },
+        "behavior_state": {
+          "type": "string",
+          "enum": ["not_required", "not_tested", "fail", "pass"],
+          "description": "not_required必须附behavior_not_required_reason且仅限无运行时交互面的记录；必须有行为验证的条目不得用视觉截图替代。"
+        },
+        "release_state": {
+          "type": "string",
+          "enum": ["draft", "blocked", "reviewed_not_released", "released"],
+          "description": "released只由外部controller_release记录产生；迁移工具永远不得输出released。"
+        },
+        "release_state_reason": {
+          "type": "string",
+          "description": "blocked/draft/reviewed_not_released时必须给出可复核理由。"
+        },
+        "behavior_not_required_reason": {
+          "type": "string"
+        },
+        "technical_evidence": {"$ref": "#/definitions/review"},
+        "visual_review": {
+          "oneOf": [
+            {"$ref": "#/definitions/review"},
+            {"type": "null"}
+          ]
+        },
+        "issues": {
+          "type": "array",
+          "items": {"$ref": "#/definitions/issue"}
+        },
+        "historical_notes": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "旧目录blockers原文逐条保留；仅为历史备注，不参与放行判定（非空历史数组不误判）。"
+        },
+        "mapping": {
+          "type": "object",
+          "description": "迁移来源字段留痕。",
+          "properties": {
+            "old_status": {"type": "string"},
+            "old_decision": {
+              "type": ["string", "null"],
+              "description": "旧审核decision原文；null表示旧记录没有对应值（如CATALOG无独立decision），不等于空字符串或失败。"
+            },
+            "old_reviewer": {
+              "type": ["string", "null"],
+              "description": "旧审核reviewer原文；null表示旧记录没有对应值。"
+            }
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"behavior_state": {"const": "not_required"}}},
+          "then": {"required": ["behavior_not_required_reason"]}
+        },
+        {
+          "if": {"properties": {"release_state": {"enum": ["blocked", "draft", "reviewed_not_released"]}}},
+          "then": {"required": ["release_state_reason"]}
+        }
+      ]
+    }
+  }
+}

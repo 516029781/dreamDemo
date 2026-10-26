@@ -1,0 +1,82 @@
+{
+  "layout": {
+    "url": "http://127.0.0.1:8801/",
+    "viewport": [
+      1280,
+      720
+    ],
+    "canvas": [
+      {
+        "id": "GameCanvas",
+        "width": 1280,
+        "height": 720,
+        "rect": {
+          "x": 5,
+          "y": 84.875,
+          "width": 1280,
+          "height": 720,
+          "top": 84.875,
+          "right": 1285,
+          "bottom": 804.875,
+          "left": 5
+        }
+      }
+    ],
+    "state": {
+      "ready": true,
+      "uiVisible": true,
+      "dialogueVisible": false,
+      "dialoguePage": 1,
+      "accepted": false,
+      "moving": false,
+      "paused": false,
+      "inputLocked": false,
+      "boardState": "full",
+      "cameraMode": "game",
+      "anim": "Relax",
+      "animNames": [],
+      "player": [
+        0,
+        0,
+        -5.2
+      ],
+      "viewer": "",
+      "loadErrors": [],
+      "boneBounds": 450,
+      "metrics": {
+        "px": 97.84413872565966,
+        "feet": [
+          198.46772880309163,
+          -294.45630238540286
+        ],
+        "head": [
+          213.86475974204365,
+          -196.6121636597432
+        ],
+        "depth": 14.382365029021415,
+        "player": [
+          0,
+          0,
+          -5.2
+        ],
+        "canvas": [
+          1280,
+          720
+        ],
+        "view": [
+          1280,
+          720
+        ],
+        "method": "RenderTexture->world transparent quad"
+      },
+      "spine": {
+        "width": 1024,
+        "height": 1024,
+        "premultipliedAlpha": false
+      }
+    },
+    "stats": null
+  },
+  "errors": [],
+  "scope": "existing local server; current source/build lineage not independently frozen by this probe"
+}

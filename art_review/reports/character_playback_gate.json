@@ -1,0 +1,7 @@
+{
+  "status": "needs_review",
+  "accepted": false,
+  "stage": "character_playback",
+  "mechanical_checks": "pass",
+  "next_action": "Independent reviewer must inspect actual media and create a manifest-bound review."
+}

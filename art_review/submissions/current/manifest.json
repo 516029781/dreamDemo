@@ -1,0 +1,50 @@
+{
+  "manifest_version": "1.0.0",
+  "status": "draft_not_accepted",
+  "stage": "character_playback",
+  "character_mode": "reference_spine",
+  "production_methods": [
+    "reference_spine"
+  ],
+  "contract_sha256": "72396f78d5b4c7fab5cac0a9e714866aa786d16666a0098ee67f533e96a46ea5",
+  "rubric_version": "1.2.0",
+  "artifacts": [
+    {
+      "role": "clip_inventory",
+      "path": "art/phase1/character_playback_1015/clip_inventory.json",
+      "sha256": "b3a5ad698976dc20ec976f1c39b5778cd00a19572de481ea7ab29bdf10fddb00",
+      "bytes": 8421
+    },
+    {
+      "role": "idle_preview",
+      "path": "art/phase1/character_playback_1015/idle_preview.png",
+      "sha256": "a94cbf779a7942493ba750c1363f457c629031b54a89d3d99f11e382b8481bd6",
+      "bytes": 496832,
+      "width": 768,
+      "height": 768,
+      "alpha_channel_declared": true
+    },
+    {
+      "role": "move_preview",
+      "path": "art/phase1/character_playback_1015/move_preview.gif",
+      "sha256": "015db46945c373c40c066fb33ec4de730f6123db07acce7550e1ba1258e41cd1",
+      "bytes": 1949195
+    },
+    {
+      "role": "reference_comparison",
+      "path": "art/phase1/character_playback_1015/reference_comparison.png",
+      "sha256": "eb88a5ffd91d62049e2a0b80bd75790bc8f34335a8591e245046d45f095ae98a",
+      "bytes": 878967,
+      "width": 1700,
+      "height": 1250,
+      "alpha_channel_declared": false
+    },
+    {
+      "role": "runtime_log",
+      "path": "art/phase1/character_playback_1015/runtime_log.txt",
+      "sha256": "1e27cf05c89fa550760e1415c6e1986e8dfc111f75fbd18f577d804fd471a900",
+      "bytes": 1706
+    }
+  ],
+  "catalog_members": []
+}

@@ -1,0 +1,28 @@
+{
+  "character_mode": "reference_spine",
+  "artifacts": [
+    {
+      "role": "clip_inventory",
+      "path": "art/phase1/reference_character/clip_inventory.json"
+    },
+    {
+      "role": "idle_preview",
+      "path": "art/phase1/reference_character/idle.png"
+    },
+    {
+      "role": "move_preview",
+      "path": "art/phase1/reference_character/move.gif"
+    },
+    {
+      "role": "reference_comparison",
+      "path": "art/phase1/reference_character/comparison.png"
+    },
+    {
+      "role": "runtime_log",
+      "path": "art/phase1/reference_character/runtime_log.txt"
+    }
+  ],
+  "production_methods": [
+    "reference_spine"
+  ]
+}

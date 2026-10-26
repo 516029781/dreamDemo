@@ -1,0 +1,7 @@
+{
+  "source_skeleton_sha256": "COPY_FROM_LOCKED_SOURCE_NOT_THIS_PLACEHOLDER",
+  "runtime": {"name": "ACTUAL_RUNTIME_NAME", "version": "ACTUAL_COMPATIBLE_VERSION"},
+  "extraction_method": "runtime_parse",
+  "animations": [],
+  "mapping": {"idle": null, "move": null}
+}

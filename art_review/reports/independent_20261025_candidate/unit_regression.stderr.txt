@@ -1,0 +1,57 @@
+test_failed_build_capture_rejected (__main__.BindingGateTests.test_failed_build_capture_rejected) ... ok
+test_old_export_after_binding_is_rejected (__main__.BindingGateTests.test_old_export_after_binding_is_rejected) ... ok
+test_page_screenshot_rejected (__main__.BindingGateTests.test_page_screenshot_rejected) ... ok
+test_same_bytes_are_not_dirty (__main__.BindingGateTests.test_same_bytes_are_not_dirty) ... ok
+test_shared_change_expands_dirty_closure (__main__.BindingGateTests.test_shared_change_expands_dirty_closure) ... ok
+test_valid_binding_passes (__main__.BindingGateTests.test_valid_binding_passes) ... ok
+test_benign_noise_warns_but_passes (__main__.BuildLogGateTests.test_benign_noise_warns_but_passes) ... ok
+test_blender_traceback_beats_quit (__main__.BuildLogGateTests.test_blender_traceback_beats_quit) ... ok
+test_failure_event_beats_finished (__main__.BuildLogGateTests.test_failure_event_beats_finished) ... ok
+test_known_exit_requires_ordered_sigterm_and_output (__main__.BuildLogGateTests.test_known_exit_requires_ordered_sigterm_and_output) ... ok
+test_nonzero_exit_beats_finished (__main__.BuildLogGateTests.test_nonzero_exit_beats_finished) ... ok
+test_utf16_log_is_decoded (__main__.BuildLogGateTests.test_utf16_log_is_decoded) ... ok
+test_all_threes_is_75_not_85 (__main__.GateTests.test_all_threes_is_75_not_85) ... ok
+test_artifact_change_invalidates_review (__main__.GateTests.test_artifact_change_invalidates_review) ... ok
+test_boolean_is_not_score (__main__.GateTests.test_boolean_is_not_score) ... ok
+test_boolean_previous_passed_certificate_rejected (__main__.GateTests.test_boolean_previous_passed_certificate_rejected) ... ok
+test_catalog_dependency_change_invalidates_snapshot (__main__.GateTests.test_catalog_dependency_change_invalidates_snapshot) ... ok
+test_changed_contract_invalidates_snapshot (__main__.GateTests.test_changed_contract_invalidates_snapshot) ... ok
+test_cli_exit_code_three_when_review_missing (__main__.GateTests.test_cli_exit_code_three_when_review_missing) ... ok
+test_consumption_mismatch_is_rejected (__main__.GateTests.test_consumption_mismatch_is_rejected) ... ok
+test_consumption_without_shared_artifact_is_rejected (__main__.GateTests.test_consumption_without_shared_artifact_is_rejected) ... ok
+test_deferred_minor_with_accepted_reason_is_allowed (__main__.GateTests.test_deferred_minor_with_accepted_reason_is_allowed) ... ok
+test_deferred_minor_without_reason_is_rejected (__main__.GateTests.test_deferred_minor_without_reason_is_rejected) ... ok
+test_direct_image_generation_route_is_rejected (__main__.GateTests.test_direct_image_generation_route_is_rejected) ... ok
+test_escape_is_rejected (__main__.GateTests.test_escape_is_rejected) ... ok
+test_flat_background_cannot_be_map_source (__main__.GateTests.test_flat_background_cannot_be_map_source) ... ok
+test_full_catalog_empty_pass_claim_is_rejected (__main__.GateTests.test_full_catalog_empty_pass_claim_is_rejected) ... ok
+test_full_catalog_missing_item_is_rejected (__main__.GateTests.test_full_catalog_missing_item_is_rejected) ... ok
+test_full_catalog_review_is_required (__main__.GateTests.test_full_catalog_review_is_required) ... ok
+test_full_catalog_unfinished_item_is_rejected (__main__.GateTests.test_full_catalog_unfinished_item_is_rejected) ... ok
+test_image_only_svg_is_not_editable_ui (__main__.GateTests.test_image_only_svg_is_not_editable_ui) ... ok
+test_independent_label_is_insufficient_without_controller (__main__.GateTests.test_independent_label_is_insufficient_without_controller) ... ok
+test_legacy_manifest_integrity_detects_change (__main__.GateTests.test_legacy_manifest_integrity_detects_change) ... ok
+test_locked_skeleton_tampering (__main__.GateTests.test_locked_skeleton_tampering) ... ok
+test_mechanical_pass_never_accepts_without_review (__main__.GateTests.test_mechanical_pass_never_accepts_without_review) ... ok
+test_missing_production_method_is_rejected (__main__.GateTests.test_missing_production_method_is_rejected) ... ok
+test_native_svg_ui_is_accepted (__main__.GateTests.test_native_svg_ui_is_accepted) ... ok
+test_open_major_defect_blocks (__main__.GateTests.test_open_major_defect_blocks) ... ok
+test_renamed_png_cannot_be_blender_source (__main__.GateTests.test_renamed_png_cannot_be_blender_source) ... ok
+test_self_review_cannot_release (__main__.GateTests.test_self_review_cannot_release) ... ok
+test_string_scan_is_not_runtime_inventory (__main__.GateTests.test_string_scan_is_not_runtime_inventory) ... ok
+test_unbound_review_evidence_blocks (__main__.GateTests.test_unbound_review_evidence_blocks) ... ok
+test_valid_controller_signature_and_forgery (__main__.GateTests.test_valid_controller_signature_and_forgery) ... ok
+test_directed_build_selection_and_unknown_stage (__main__.OtherGateTests.test_directed_build_selection_and_unknown_stage) ... ok
+test_migration_review_whitelist (__main__.OtherGateTests.test_migration_review_whitelist) ... ok
+test_powershell_wrapper_propagates_exit_code (__main__.OtherGateTests.test_powershell_wrapper_propagates_exit_code) ... ok
+test_all_quality_checks_pass_without_texture_atlas (__main__.QualityGateTests.test_all_quality_checks_pass_without_texture_atlas) ... ok
+test_missing_quality_check_stays_pending (__main__.QualityGateTests.test_missing_quality_check_stays_pending) ... ok
+test_missing_touch_run_fails (__main__.QualityGateTests.test_missing_touch_run_fails) ... ok
+test_portrait_mock_fails (__main__.QualityGateTests.test_portrait_mock_fails) ... ok
+test_statistical_threshold_is_warning_only (__main__.QualityGateTests.test_statistical_threshold_is_warning_only) ... ok
+test_technical_screenshot_cannot_claim_behavior (__main__.QualityGateTests.test_technical_screenshot_cannot_claim_behavior) ... ok
+
+----------------------------------------------------------------------
+Ran 52 tests in 4.867s
+
+OK

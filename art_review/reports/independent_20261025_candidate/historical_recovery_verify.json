@@ -1,0 +1,70 @@
+[
+  {
+    "path": "reference/frozen_history/art_complete_20261024_manifest/art/full/source/layout/MAP001_courtyard.blend",
+    "match": true
+  },
+  {
+    "path": "reference/frozen_history/art_complete_20261024_manifest/art/full/source/layout/MAP001_courtyard.glb",
+    "match": true
+  },
+  {
+    "path": "reference/frozen_history/art_complete_20261024_manifest/art/full/source/layout/layout.json",
+    "match": true
+  },
+  {
+    "path": "reference/frozen_history/art_complete_20261024_manifest/art/full/previews/layout/MAP001_courtyard.png",
+    "match": true
+  },
+  {
+    "path": "reference/frozen_history/art_complete_20261024_manifest/art/full/previews/layout/MAP001_topdown.png",
+    "match": true
+  },
+  {
+    "path": "reference/frozen_history/art_complete_20261024_manifest/art/full/source/environment/ENV006_autumn_tree.blend",
+    "match": true
+  },
+  {
+    "path": "reference/frozen_history/art_complete_20261024_manifest/art/full/source/environment/ENV006_autumn_tree.glb",
+    "match": true
+  },
+  {
+    "path": "reference/frozen_history/art_complete_20261024_manifest/art/full/previews/environment/ENV006_autumn_tree.png",
+    "match": true
+  },
+  {
+    "path": "reference/frozen_history/art_complete_20261024_manifest/art/full/source/plants/ENV009_shrub_a.blend",
+    "match": true
+  },
+  {
+    "path": "reference/frozen_history/art_complete_20261024_manifest/art/full/source/plants/ENV009_shrub_a.glb",
+    "match": true
+  },
+  {
+    "path": "reference/frozen_history/art_complete_20261024_manifest/art/full/previews/plants/ENV009_shrub_a.png",
+    "match": true
+  },
+  {
+    "path": "reference/frozen_history/art_complete_20261024_manifest/art/full/source/plants/ENV010_shrub_b.blend",
+    "match": true
+  },
+  {
+    "path": "reference/frozen_history/art_complete_20261024_manifest/art/full/source/plants/ENV010_shrub_b.glb",
+    "match": true
+  },
+  {
+    "path": "reference/frozen_history/art_complete_20261024_manifest/art/full/previews/plants/ENV010_shrub_b.png",
+    "match": true
+  },
+  {
+    "path": "reference/frozen_history/art_complete_20261024_manifest/art/full/source/plants/ENV011_dry_grass.blend",
+    "match": true
+  },
+  {
+    "path": "reference/frozen_history/art_complete_20261024_manifest/art/full/source/plants/ENV011_dry_grass.glb",
+    "match": true
+  },
+  {
+    "path": "reference/frozen_history/art_complete_20261024_manifest/art/full/previews/plants/ENV011_dry_grass.png",
+    "match": true
+  }
+]

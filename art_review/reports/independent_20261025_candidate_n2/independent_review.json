@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0.0",
+  "report_kind": "actual_independent_review",
+  "reviewer": {"id": "Codex independent audit 2026-10-25 candidate_n2", "mode": "independent"},
+  "rubric_version": "1.2.0",
+  "review_scope": "art_complete_candidate_n2",
+  "asset_manifest_path": "art_review/submissions/candidate_n2/manifest.json",
+  "asset_manifest_sha256": "890dfe78372c63f6945b5807368f5c577b365223d8d5053a2766d2a4c14db946",
+  "pack_path": "delivery/candidate_n2_review_pack_20261025.zip",
+  "pack_sha256": "570f13101bc4b54daf622b4834b0713a2ca13787ddf279ac76ec36a548e4fc5b",
+  "status": "blocked_rework_required",
+  "accepted": false,
+  "certificate_issued": false,
+  "style_master_version": "P1 t015/t044/t084; rubric 1.2.0",
+  "scoring_note": "0-4 dimension scores weighted by rubric; not similarity percentages",
+  "cards": {
+    "ENV": {"score": 62.5, "dimensions": {"composition_scale": 3, "geometry_craft": 2, "material_separation": 3, "lighting_contact": 2, "vegetation_depth": 2, "play_readability": 3}, "evidence": ["delivery/next_cycle/T3/game_finalN2_formal_no_ui.png", "delivery/next_cycle/T4/N01_tree_hedge_before_after.png", "delivery/next_cycle/T4/N02_shadow_before_after.png", "delivery/next_cycle/T4/N02_material_closeups.png", "reference/_raw_screenshots/P1/t015s.jpg"], "reason": "Dense foliage and softer shadow improved, but repeated faceted crown/hedge shapes, crude planter/bench geometry, broad empty paving and flat light remain visible."},
+    "CHAR": {"score": 93.75, "dimensions": {"silhouette_proportion": 4, "line_quality": 4, "cel_color_light": 4, "identity_consistency": 4, "motion_contact": 3, "small_scale_clarity": 3}, "evidence": ["delivery/next_cycle/T3/game_finalN2_formal_no_ui.png", "delivery/next_cycle/T6/character_n/N07_animation_sheet.png", "delivery/next_cycle/T4/N04_actor_bbox.png", "reference/_raw_screenshots/P1/t044s.jpg"], "reason": "Locked 1015 character identity and native motion are preserved; small-scale grounding and scene integration can improve."},
+    "UI": {"score": 65.0, "dimensions": {"paper_shape": 2, "doodle_icon_family": 2, "typography": 3, "layout_air": 3, "state_feedback": 3, "palette_restraint": 3}, "evidence": ["delivery/next_cycle/T3/game_finalN2_formal_ui.png", "delivery/next_cycle/T3/game_finalN2_dialogue.png", "delivery/next_cycle/T4/N03_ui_before_after.png", "reference/_raw_screenshots/P1/t044s.jpg", "reference/_raw_screenshots/P1/t084s.jpg"], "reason": "Translucency and line detail improved, but panels remain rigid, doodle family sparse, and dialogue area over-dominant."},
+    "MIX": {"score": 58.75, "dimensions": {"visual_language": 2, "color_light_coherence": 2, "grounding_occlusion": 3, "focus_readability": 3, "world_style_coherence": 2}, "evidence": ["delivery/next_cycle/T3/game_finalN2_formal_ui.png", "delivery/next_cycle/T3/game_finalN2_dialogue.png", "reference/_raw_screenshots/P1/t015s.jpg", "reference/_raw_screenshots/P1/t044s.jpg"], "reason": "Detailed character contrasts with coarse low-poly world; lighting and UI visual rhythm do not yet read as one scene."}
+  },
+  "gates": {
+    "H01": {"status": "pass", "reason": "Frozen manifest/ZIP hashes and representative scene sources checked."},
+    "H02": {"status": "fail", "reason": "ENV/UI/MIX below 70 and visual scope not at 85 acceptance line."},
+    "H03": {"status": "not_checked", "reason": "All 47 groups were not exhaustively checked for every alpha/pivot/atlas edge."},
+    "H04": {"status": "pass", "reason": "Four representative Blender files reopened read-only; paper_panel.svg parsed."},
+    "H05": {"status": "pass", "reason": "Locked 1015 character identity and animation evidence remain consistent."},
+    "H06": {"status": "pass", "reason": "Frozen Cocos desktop build loaded independently with no page errors."},
+    "H07": {"status": "fail", "reason": "Pause/resume via exposed runtime API resets a moved player to spawn; prior Q04 starts pause at spawn."},
+    "H08": {"status": "pass", "reason": "Third-party reference/use status is declared; not a commercial rights clearance."},
+    "H09": {"status": "pass", "reason": "Assembled runtime character matches locked 1015 source route; no AI image substitution observed."}
+  },
+  "independent_checks": {
+    "manifest_rows": 622,
+    "manifest_unique_paths": 409,
+    "manifest_missing": 0,
+    "manifest_hash_mismatch": 0,
+    "zip_entries": 437,
+    "zip_disk_mismatch": 0,
+    "zip_duplicate_entries": 0,
+    "zip_crc_error": null,
+    "binding_hashes_match": 6,
+    "native_sources_reopened": ["MAP001_courtyard.blend", "ENV006_autumn_tree.blend", "PROP001_bench.blend", "PROP004_lamp.blend"],
+    "svg_xml_parsed": true,
+    "live_browser": {"ready": true, "page_errors": 0, "keyboard_move_m_approx": 0.6, "touch_move_m_approx": 1.2, "paused_move_m": 0, "dialogue_move_m": 0, "resume_reset_m_approx": {"keyboard": 0.6, "touch": 1.2}, "board_states": ["empty", "full", "empty"], "portrait_canvas": [720, 1280], "portrait_viewer": "rotate_notice", "portrait_input_locked": true, "landscape_input_locked": false},
+    "reviewed_not_independently_rerun": ["Q01 pixel bbox", "Q03 pixel occlusion measure", "N07 live animation capture"],
+    "not_tested": ["WeChat device", "WeChat devtools", "mobile performance and package size", "full task gameplay"]
+  },
+  "findings": [
+    {"id": "N01", "severity": "major", "area": "ENV/geometry_craft", "action": "Refine main tree branch taper/crown silhouette, hedge repetition, planter and bench shapes; recapture formal and close views."},
+    {"id": "N02", "severity": "major", "area": "ENV/material_lighting", "action": "Improve stone/wood/metal variation and cool fill/contact light; verify shadow cost on target WeChat device."},
+    {"id": "N03", "severity": "major", "area": "UI/paper_doodle", "action": "Reduce dialogue panel dominance, improve text contrast and consistent hand-drawn icon/edge language."},
+    {"id": "N09", "severity": "major", "area": "Q04/pause_resume", "action": "Preserve player position and task state on resume; use resetView only for restart; add non-spawn keyboard/touch regression including portrait return."}
+  ],
+  "review_order": ["ENV geometry", "material/light", "UI paper/doodle", "MIX coherence", "Q04 pause-resume regression in parallel"],
+  "frozen_candidate_modified": false
+}

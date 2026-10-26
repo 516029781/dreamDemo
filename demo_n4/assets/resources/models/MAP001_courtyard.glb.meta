@@ -1,0 +1,3820 @@
+{
+  "ver": "2.3.14",
+  "importer": "gltf",
+  "imported": true,
+  "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850",
+  "files": [],
+  "subMetas": {
+    "21528": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@21528",
+      "displayName": "",
+      "id": "21528",
+      "name": "MAP001_bedshrub_01_stems_mesh.mesh",
+      "userData": {
+        "gltfIndex": 73,
+        "triangleCount": 100
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "27223": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@27223",
+      "displayName": "",
+      "id": "27223",
+      "name": "MAP001_dry_grass_16_clump_mesh.mesh",
+      "userData": {
+        "gltfIndex": 133,
+        "triangleCount": 1128
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "38839": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@38839",
+      "displayName": "",
+      "id": "38839",
+      "name": "MAP001_dry_grass_01_clump_mesh.mesh",
+      "userData": {
+        "gltfIndex": 118,
+        "triangleCount": 1128
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "44790": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@44790",
+      "displayName": "",
+      "id": "44790",
+      "name": "MAP001_bedshrub_04_leaves_mesh.mesh",
+      "userData": {
+        "gltfIndex": 80,
+        "triangleCount": 2632
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "51285": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@51285",
+      "displayName": "",
+      "id": "51285",
+      "name": "MAP001_planter_00_shrub_b_leaves_mesh.mesh",
+      "userData": {
+        "gltfIndex": 106,
+        "triangleCount": 2632
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "54852": {
+      "importer": "gltf-material",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@54852",
+      "displayName": "",
+      "id": "54852",
+      "name": "ENG_MAT_flower_cream.material",
+      "userData": {
+        "gltfIndex": 18
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "56118": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@56118",
+      "displayName": "",
+      "id": "56118",
+      "name": "MAP001_fg_bed_0_flowers_mesh.mesh",
+      "userData": {
+        "gltfIndex": 18,
+        "triangleCount": 576
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "62670": {
+      "importer": "gltf-material",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@62670",
+      "displayName": "",
+      "id": "62670",
+      "name": "ENG_MAT_lamp_glass.material",
+      "userData": {
+        "gltfIndex": 27
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "65333": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@65333",
+      "displayName": "",
+      "id": "65333",
+      "name": "MAP001_garden_beds_soil_mesh.mesh",
+      "userData": {
+        "gltfIndex": 26,
+        "triangleCount": 48
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "69458": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@69458",
+      "displayName": "",
+      "id": "69458",
+      "name": "MAP001_dry_grass_12_clump_mesh.mesh",
+      "userData": {
+        "gltfIndex": 129,
+        "triangleCount": 1128
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "70620": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@70620",
+      "displayName": "",
+      "id": "70620",
+      "name": "MAP001_dry_grass_07_clump_mesh.mesh",
+      "userData": {
+        "gltfIndex": 124,
+        "triangleCount": 1128
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "71211": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@71211",
+      "displayName": "",
+      "id": "71211",
+      "name": "MAP001_edge_cover_10_clump_mesh.mesh",
+      "userData": {
+        "gltfIndex": 161,
+        "triangleCount": 1128
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "82607": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@82607",
+      "displayName": "",
+      "id": "82607",
+      "name": "MAP001_bg_tree_crowns_mesh.mesh",
+      "userData": {
+        "gltfIndex": 11,
+        "triangleCount": 18000
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "83706": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@83706",
+      "displayName": "",
+      "id": "83706",
+      "name": "MAP001_fallen_leaves_07_leaves_mesh.mesh",
+      "userData": {
+        "gltfIndex": 144,
+        "triangleCount": 408
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "86841": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@86841",
+      "displayName": "",
+      "id": "86841",
+      "name": "MAP001_ring_cover_02_leaves_mesh.mesh",
+      "userData": {
+        "gltfIndex": 149,
+        "triangleCount": 408
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "99841": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@99841",
+      "displayName": "",
+      "id": "99841",
+      "name": "MAP001_edge_cover_05_leaves_mesh.mesh",
+      "userData": {
+        "gltfIndex": 156,
+        "triangleCount": 408
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "a58d0": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@a58d0",
+      "displayName": "",
+      "id": "a58d0",
+      "name": "MAP001_message_board_label_text_curve.001.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 6208
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "fc4c7": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@fc4c7",
+      "displayName": "",
+      "id": "fc4c7",
+      "name": "MAP001_direction_sign_text_1_curve.001.mesh",
+      "userData": {
+        "gltfIndex": 1,
+        "triangleCount": 5972
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "2b122": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@2b122",
+      "displayName": "",
+      "id": "2b122",
+      "name": "MAP001_direction_sign_text_2_curve.001.mesh",
+      "userData": {
+        "gltfIndex": 2,
+        "triangleCount": 6900
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "d9e86": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@d9e86",
+      "displayName": "",
+      "id": "d9e86",
+      "name": "MAP001_direction_sign_text_3_curve.001.mesh",
+      "userData": {
+        "gltfIndex": 3,
+        "triangleCount": 8248
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "96af2": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@96af2",
+      "displayName": "",
+      "id": "96af2",
+      "name": "MAP001_ground_mesh.mesh",
+      "userData": {
+        "gltfIndex": 4,
+        "triangleCount": 12
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "03df1": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@03df1",
+      "displayName": "",
+      "id": "03df1",
+      "name": "MAP001_ground_skirt_mesh.mesh",
+      "userData": {
+        "gltfIndex": 5,
+        "triangleCount": 12
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "833ed": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@833ed",
+      "displayName": "",
+      "id": "833ed",
+      "name": "MAP001_paving_slabs_mesh.mesh",
+      "userData": {
+        "gltfIndex": 6,
+        "triangleCount": 9216
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "ba737": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@ba737",
+      "displayName": "",
+      "id": "ba737",
+      "name": "MAP001_paving_mortar_mesh.mesh",
+      "userData": {
+        "gltfIndex": 7,
+        "triangleCount": 192
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "3a2b8": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@3a2b8",
+      "displayName": "",
+      "id": "3a2b8",
+      "name": "MAP001_bg_hedge_mesh.mesh",
+      "userData": {
+        "gltfIndex": 8,
+        "triangleCount": 7060
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "4ba2d": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@4ba2d",
+      "displayName": "",
+      "id": "4ba2d",
+      "name": "MAP001_bg_hedge_cards_mesh.mesh",
+      "userData": {
+        "gltfIndex": 9,
+        "triangleCount": 467624
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "07f7d": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@07f7d",
+      "displayName": "",
+      "id": "07f7d",
+      "name": "MAP001_bg_tree_trunks_mesh.mesh",
+      "userData": {
+        "gltfIndex": 10,
+        "triangleCount": 240
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "1ebf8": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@1ebf8",
+      "displayName": "",
+      "id": "1ebf8",
+      "name": "MAP001_bg_treeline_mass_mesh.mesh",
+      "userData": {
+        "gltfIndex": 12,
+        "triangleCount": 2000
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "daa78": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@daa78",
+      "displayName": "",
+      "id": "daa78",
+      "name": "MAP001_bg_treeline_cards_mesh.mesh",
+      "userData": {
+        "gltfIndex": 13,
+        "triangleCount": 10288
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "10abe": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@10abe",
+      "displayName": "",
+      "id": "10abe",
+      "name": "MAP001_fg_bed_0_stone_mesh.mesh",
+      "userData": {
+        "gltfIndex": 14,
+        "triangleCount": 648
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "778e1": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@778e1",
+      "displayName": "",
+      "id": "778e1",
+      "name": "MAP001_fg_bed_0_soil_mesh.mesh",
+      "userData": {
+        "gltfIndex": 15,
+        "triangleCount": 12
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "00e63": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@00e63",
+      "displayName": "",
+      "id": "00e63",
+      "name": "MAP001_fg_bed_0_leaves_mesh.mesh",
+      "userData": {
+        "gltfIndex": 16,
+        "triangleCount": 1080
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "6549e": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@6549e",
+      "displayName": "",
+      "id": "6549e",
+      "name": "MAP001_fg_bed_0_grass_mesh.mesh",
+      "userData": {
+        "gltfIndex": 17,
+        "triangleCount": 13910
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "b471c": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@b471c",
+      "displayName": "",
+      "id": "b471c",
+      "name": "MAP001_fg_bed_1_stone_mesh.mesh",
+      "userData": {
+        "gltfIndex": 19,
+        "triangleCount": 648
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "890cb": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@890cb",
+      "displayName": "",
+      "id": "890cb",
+      "name": "MAP001_fg_bed_1_soil_mesh.mesh",
+      "userData": {
+        "gltfIndex": 20,
+        "triangleCount": 12
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "f8ed0": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@f8ed0",
+      "displayName": "",
+      "id": "f8ed0",
+      "name": "MAP001_fg_bed_1_leaves_mesh.mesh",
+      "userData": {
+        "gltfIndex": 21,
+        "triangleCount": 1080
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "9e8ee": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@9e8ee",
+      "displayName": "",
+      "id": "9e8ee",
+      "name": "MAP001_fg_bed_1_grass_mesh.mesh",
+      "userData": {
+        "gltfIndex": 22,
+        "triangleCount": 13930
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "44a28": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@44a28",
+      "displayName": "",
+      "id": "44a28",
+      "name": "MAP001_fg_bed_1_flowers_mesh.mesh",
+      "userData": {
+        "gltfIndex": 23,
+        "triangleCount": 576
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "e4372": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@e4372",
+      "displayName": "",
+      "id": "e4372",
+      "name": "MAP001_fg_leaf_drift_mesh.mesh",
+      "userData": {
+        "gltfIndex": 24,
+        "triangleCount": 2376
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "9a0f6": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@9a0f6",
+      "displayName": "",
+      "id": "9a0f6",
+      "name": "MAP001_garden_beds_stone_mesh.mesh",
+      "userData": {
+        "gltfIndex": 25,
+        "triangleCount": 11880
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "090a5": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@090a5",
+      "displayName": "",
+      "id": "090a5",
+      "name": "MAP001_garden_moss_mesh.mesh",
+      "userData": {
+        "gltfIndex": 27,
+        "triangleCount": 17476
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "cd5e4": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@cd5e4",
+      "displayName": "",
+      "id": "cd5e4",
+      "name": "MAP001_garden_flowers_mesh.mesh",
+      "userData": {
+        "gltfIndex": 28,
+        "triangleCount": 5688
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "3dcfb": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@3dcfb",
+      "displayName": "",
+      "id": "3dcfb",
+      "name": "MAP001_garden_pebbles_mesh.mesh",
+      "userData": {
+        "gltfIndex": 29,
+        "triangleCount": 380
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "3300a": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@3300a",
+      "displayName": "",
+      "id": "3300a",
+      "name": "MAP001_garden_ring_cobbles_mesh.mesh",
+      "userData": {
+        "gltfIndex": 30,
+        "triangleCount": 5440
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "d22c5": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@d22c5",
+      "displayName": "",
+      "id": "d22c5",
+      "name": "MAP001_garden_grass_mesh.mesh",
+      "userData": {
+        "gltfIndex": 31,
+        "triangleCount": 435795
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "32f10": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@32f10",
+      "displayName": "",
+      "id": "32f10",
+      "name": "MAP001_ring_planter_blocks_mesh.mesh",
+      "userData": {
+        "gltfIndex": 32,
+        "triangleCount": 8208
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "be9df": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@be9df",
+      "displayName": "",
+      "id": "be9df",
+      "name": "MAP001_ring_planter_plinth_mesh.mesh",
+      "userData": {
+        "gltfIndex": 33,
+        "triangleCount": 2304
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "84a9b": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@84a9b",
+      "displayName": "",
+      "id": "84a9b",
+      "name": "MAP001_ring_planter_cap_mesh.mesh",
+      "userData": {
+        "gltfIndex": 34,
+        "triangleCount": 2304
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "a1d55": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@a1d55",
+      "displayName": "",
+      "id": "a1d55",
+      "name": "MAP001_ring_planter_soil_mesh.mesh",
+      "userData": {
+        "gltfIndex": 35,
+        "triangleCount": 140
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "499b0": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@499b0",
+      "displayName": "",
+      "id": "499b0",
+      "name": "MAP001_tree_bark_mesh.mesh",
+      "userData": {
+        "gltfIndex": 36,
+        "triangleCount": 35502
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "d142d": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@d142d",
+      "displayName": "",
+      "id": "d142d",
+      "name": "MAP001_tree_crown_mass_mesh.mesh",
+      "userData": {
+        "gltfIndex": 37,
+        "triangleCount": 400
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "ac42d": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@ac42d",
+      "displayName": "",
+      "id": "ac42d",
+      "name": "MAP001_tree_canopy_mesh.mesh",
+      "userData": {
+        "gltfIndex": 38,
+        "triangleCount": 202236
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "00fe0": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@00fe0",
+      "displayName": "",
+      "id": "00fe0",
+      "name": "MAP001_west_planter_stone_mesh.mesh",
+      "userData": {
+        "gltfIndex": 39,
+        "triangleCount": 2808
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "90d9c": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@90d9c",
+      "displayName": "",
+      "id": "90d9c",
+      "name": "MAP001_west_planter_soil_mesh.mesh",
+      "userData": {
+        "gltfIndex": 40,
+        "triangleCount": 12
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "ef7c9": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@ef7c9",
+      "displayName": "",
+      "id": "ef7c9",
+      "name": "MAP001_east_planter_stone_mesh.mesh",
+      "userData": {
+        "gltfIndex": 41,
+        "triangleCount": 2808
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "3aa0c": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@3aa0c",
+      "displayName": "",
+      "id": "3aa0c",
+      "name": "MAP001_east_planter_soil_mesh.mesh",
+      "userData": {
+        "gltfIndex": 42,
+        "triangleCount": 12
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "6c0f1": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@6c0f1",
+      "displayName": "",
+      "id": "6c0f1",
+      "name": "PROP001_bench_wood_mesh.mesh",
+      "userData": {
+        "gltfIndex": 43,
+        "triangleCount": 1504
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "c87f0": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@c87f0",
+      "displayName": "",
+      "id": "c87f0",
+      "name": "PROP001_bench_metal_mesh.mesh",
+      "userData": {
+        "gltfIndex": 44,
+        "triangleCount": 4888
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "3099f": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@3099f",
+      "displayName": "",
+      "id": "3099f",
+      "name": "PROP001_bench_wood_mesh.001.mesh",
+      "userData": {
+        "gltfIndex": 45,
+        "triangleCount": 1504
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "78ed8": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@78ed8",
+      "displayName": "",
+      "id": "78ed8",
+      "name": "PROP001_bench_metal_mesh.001.mesh",
+      "userData": {
+        "gltfIndex": 46,
+        "triangleCount": 4888
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "92a17": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@92a17",
+      "displayName": "",
+      "id": "92a17",
+      "name": "PROP001_bench_wood_mesh.002.mesh",
+      "userData": {
+        "gltfIndex": 47,
+        "triangleCount": 1504
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "0d83a": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@0d83a",
+      "displayName": "",
+      "id": "0d83a",
+      "name": "PROP001_bench_metal_mesh.002.mesh",
+      "userData": {
+        "gltfIndex": 48,
+        "triangleCount": 4888
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "2068f": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@2068f",
+      "displayName": "",
+      "id": "2068f",
+      "name": "MAP001_message_board_wood_mesh.mesh",
+      "userData": {
+        "gltfIndex": 49,
+        "triangleCount": 1512
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "7e586": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@7e586",
+      "displayName": "",
+      "id": "7e586",
+      "name": "MAP001_message_board_cork_mesh.mesh",
+      "userData": {
+        "gltfIndex": 50,
+        "triangleCount": 12
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "5bb2d": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@5bb2d",
+      "displayName": "",
+      "id": "5bb2d",
+      "name": "MAP001_message_board_label_plate_mesh.mesh",
+      "userData": {
+        "gltfIndex": 51,
+        "triangleCount": 12
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "ebc82": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@ebc82",
+      "displayName": "",
+      "id": "ebc82",
+      "name": "MAP001_message_board_card_A_mesh.mesh",
+      "userData": {
+        "gltfIndex": 52,
+        "triangleCount": 260
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "8d18f": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@8d18f",
+      "displayName": "",
+      "id": "8d18f",
+      "name": "MAP001_message_board_card_B_mesh.mesh",
+      "userData": {
+        "gltfIndex": 53,
+        "triangleCount": 460
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "dcd39": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@dcd39",
+      "displayName": "",
+      "id": "dcd39",
+      "name": "MAP001_message_board_card_C_mesh.mesh",
+      "userData": {
+        "gltfIndex": 54,
+        "triangleCount": 412
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "64a00": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@64a00",
+      "displayName": "",
+      "id": "64a00",
+      "name": "MAP001_pergola_frame_mesh.mesh",
+      "userData": {
+        "gltfIndex": 55,
+        "triangleCount": 1296
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "68cc9": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@68cc9",
+      "displayName": "",
+      "id": "68cc9",
+      "name": "MAP001_pergola_roof_mesh.mesh",
+      "userData": {
+        "gltfIndex": 56,
+        "triangleCount": 756
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "677b2": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@677b2",
+      "displayName": "",
+      "id": "677b2",
+      "name": "MAP001_pergola_metal_mesh.mesh",
+      "userData": {
+        "gltfIndex": 57,
+        "triangleCount": 368
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "a3237": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@a3237",
+      "displayName": "",
+      "id": "a3237",
+      "name": "MAP001_lamp_0_iron_mesh.mesh",
+      "userData": {
+        "gltfIndex": 58,
+        "triangleCount": 2436
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "a30eb": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@a30eb",
+      "displayName": "",
+      "id": "a30eb",
+      "name": "MAP001_lamp_0_glass_mesh.mesh",
+      "userData": {
+        "gltfIndex": 59,
+        "triangleCount": 48
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "958ff": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@958ff",
+      "displayName": "",
+      "id": "958ff",
+      "name": "MAP001_lamp_1_iron_mesh.mesh",
+      "userData": {
+        "gltfIndex": 60,
+        "triangleCount": 2436
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "497a6": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@497a6",
+      "displayName": "",
+      "id": "497a6",
+      "name": "MAP001_lamp_1_glass_mesh.mesh",
+      "userData": {
+        "gltfIndex": 61,
+        "triangleCount": 48
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "fbc6e": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@fbc6e",
+      "displayName": "",
+      "id": "fbc6e",
+      "name": "MAP001_lamp_2_iron_mesh.mesh",
+      "userData": {
+        "gltfIndex": 62,
+        "triangleCount": 2436
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "a38da": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@a38da",
+      "displayName": "",
+      "id": "a38da",
+      "name": "MAP001_lamp_2_glass_mesh.mesh",
+      "userData": {
+        "gltfIndex": 63,
+        "triangleCount": 48
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "5ae7e": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@5ae7e",
+      "displayName": "",
+      "id": "5ae7e",
+      "name": "MAP001_lamp_3_iron_mesh.mesh",
+      "userData": {
+        "gltfIndex": 64,
+        "triangleCount": 2436
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "8a47e": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@8a47e",
+      "displayName": "",
+      "id": "8a47e",
+      "name": "MAP001_lamp_3_glass_mesh.mesh",
+      "userData": {
+        "gltfIndex": 65,
+        "triangleCount": 48
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "4f413": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@4f413",
+      "displayName": "",
+      "id": "4f413",
+      "name": "MAP001_direction_sign_body_mesh.mesh",
+      "userData": {
+        "gltfIndex": 66,
+        "triangleCount": 900
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "b7b80": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@b7b80",
+      "displayName": "",
+      "id": "b7b80",
+      "name": "MAP001_direction_sign_leaf_mesh.mesh",
+      "userData": {
+        "gltfIndex": 67,
+        "triangleCount": 4
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "ef3b1": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@ef3b1",
+      "displayName": "",
+      "id": "ef3b1",
+      "name": "MAP001_pickup_A_mesh.mesh",
+      "userData": {
+        "gltfIndex": 68,
+        "triangleCount": 220
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "010dc": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@010dc",
+      "displayName": "",
+      "id": "010dc",
+      "name": "MAP001_pickup_B_mesh.mesh",
+      "userData": {
+        "gltfIndex": 69,
+        "triangleCount": 420
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "80ee9": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@80ee9",
+      "displayName": "",
+      "id": "80ee9",
+      "name": "MAP001_pickup_C_mesh.mesh",
+      "userData": {
+        "gltfIndex": 70,
+        "triangleCount": 372
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "6a98b": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@6a98b",
+      "displayName": "",
+      "id": "6a98b",
+      "name": "MAP001_bedshrub_00_stems_mesh.mesh",
+      "userData": {
+        "gltfIndex": 71,
+        "triangleCount": 120
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "5d650": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@5d650",
+      "displayName": "",
+      "id": "5d650",
+      "name": "MAP001_bedshrub_00_leaves_mesh.mesh",
+      "userData": {
+        "gltfIndex": 72,
+        "triangleCount": 2632
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "02885": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@02885",
+      "displayName": "",
+      "id": "02885",
+      "name": "MAP001_bedshrub_01_leaves_mesh.mesh",
+      "userData": {
+        "gltfIndex": 74,
+        "triangleCount": 2156
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "0f0a8": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@0f0a8",
+      "displayName": "",
+      "id": "0f0a8",
+      "name": "MAP001_bedshrub_02_stems_mesh.mesh",
+      "userData": {
+        "gltfIndex": 75,
+        "triangleCount": 100
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "673d2": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@673d2",
+      "displayName": "",
+      "id": "673d2",
+      "name": "MAP001_bedshrub_02_leaves_mesh.mesh",
+      "userData": {
+        "gltfIndex": 76,
+        "triangleCount": 2156
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "4eb1e": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@4eb1e",
+      "displayName": "",
+      "id": "4eb1e",
+      "name": "MAP001_bedshrub_03_stems_mesh.mesh",
+      "userData": {
+        "gltfIndex": 77,
+        "triangleCount": 100
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "d59a9": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@d59a9",
+      "displayName": "",
+      "id": "d59a9",
+      "name": "MAP001_bedshrub_03_leaves_mesh.mesh",
+      "userData": {
+        "gltfIndex": 78,
+        "triangleCount": 2156
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "10d48": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@10d48",
+      "displayName": "",
+      "id": "10d48",
+      "name": "MAP001_bedshrub_04_stems_mesh.mesh",
+      "userData": {
+        "gltfIndex": 79,
+        "triangleCount": 120
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "e2fee": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@e2fee",
+      "displayName": "",
+      "id": "e2fee",
+      "name": "MAP001_bedshrub_05_stems_mesh.mesh",
+      "userData": {
+        "gltfIndex": 81,
+        "triangleCount": 100
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "ee30e": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@ee30e",
+      "displayName": "",
+      "id": "ee30e",
+      "name": "MAP001_bedshrub_05_leaves_mesh.mesh",
+      "userData": {
+        "gltfIndex": 82,
+        "triangleCount": 2156
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "e5d09": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@e5d09",
+      "displayName": "",
+      "id": "e5d09",
+      "name": "MAP001_bedshrub_06_stems_mesh.mesh",
+      "userData": {
+        "gltfIndex": 83,
+        "triangleCount": 120
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "7315c": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@7315c",
+      "displayName": "",
+      "id": "7315c",
+      "name": "MAP001_bedshrub_06_leaves_mesh.mesh",
+      "userData": {
+        "gltfIndex": 84,
+        "triangleCount": 2632
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "8b927": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@8b927",
+      "displayName": "",
+      "id": "8b927",
+      "name": "MAP001_bedshrub_07_stems_mesh.mesh",
+      "userData": {
+        "gltfIndex": 85,
+        "triangleCount": 100
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "7e4e4": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@7e4e4",
+      "displayName": "",
+      "id": "7e4e4",
+      "name": "MAP001_bedshrub_07_leaves_mesh.mesh",
+      "userData": {
+        "gltfIndex": 86,
+        "triangleCount": 2156
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "35d0e": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@35d0e",
+      "displayName": "",
+      "id": "35d0e",
+      "name": "MAP001_env009_00_stems_mesh.mesh",
+      "userData": {
+        "gltfIndex": 87,
+        "triangleCount": 100
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "f44c2": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@f44c2",
+      "displayName": "",
+      "id": "f44c2",
+      "name": "MAP001_env009_00_leaves_mesh.mesh",
+      "userData": {
+        "gltfIndex": 88,
+        "triangleCount": 2156
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "863ff": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@863ff",
+      "displayName": "",
+      "id": "863ff",
+      "name": "MAP001_env010_01_stems_mesh.mesh",
+      "userData": {
+        "gltfIndex": 89,
+        "triangleCount": 120
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "13e4d": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@13e4d",
+      "displayName": "",
+      "id": "13e4d",
+      "name": "MAP001_env010_01_leaves_mesh.mesh",
+      "userData": {
+        "gltfIndex": 90,
+        "triangleCount": 2632
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "842ea": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@842ea",
+      "displayName": "",
+      "id": "842ea",
+      "name": "MAP001_env009_02_stems_mesh.mesh",
+      "userData": {
+        "gltfIndex": 91,
+        "triangleCount": 100
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "b9fe5": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@b9fe5",
+      "displayName": "",
+      "id": "b9fe5",
+      "name": "MAP001_env009_02_leaves_mesh.mesh",
+      "userData": {
+        "gltfIndex": 92,
+        "triangleCount": 2156
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "05bd0": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@05bd0",
+      "displayName": "",
+      "id": "05bd0",
+      "name": "MAP001_env010_03_stems_mesh.mesh",
+      "userData": {
+        "gltfIndex": 93,
+        "triangleCount": 120
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "3c94e": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@3c94e",
+      "displayName": "",
+      "id": "3c94e",
+      "name": "MAP001_env010_03_leaves_mesh.mesh",
+      "userData": {
+        "gltfIndex": 94,
+        "triangleCount": 2632
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "da9be": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@da9be",
+      "displayName": "",
+      "id": "da9be",
+      "name": "MAP001_env009_04_stems_mesh.mesh",
+      "userData": {
+        "gltfIndex": 95,
+        "triangleCount": 100
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "d9df0": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@d9df0",
+      "displayName": "",
+      "id": "d9df0",
+      "name": "MAP001_env009_04_leaves_mesh.mesh",
+      "userData": {
+        "gltfIndex": 96,
+        "triangleCount": 2156
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "f910f": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@f910f",
+      "displayName": "",
+      "id": "f910f",
+      "name": "MAP001_env010_05_stems_mesh.mesh",
+      "userData": {
+        "gltfIndex": 97,
+        "triangleCount": 120
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "12c78": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@12c78",
+      "displayName": "",
+      "id": "12c78",
+      "name": "MAP001_env010_05_leaves_mesh.mesh",
+      "userData": {
+        "gltfIndex": 98,
+        "triangleCount": 2632
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "ba58e": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@ba58e",
+      "displayName": "",
+      "id": "ba58e",
+      "name": "MAP001_env009_06_stems_mesh.mesh",
+      "userData": {
+        "gltfIndex": 99,
+        "triangleCount": 100
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "ee1f2": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@ee1f2",
+      "displayName": "",
+      "id": "ee1f2",
+      "name": "MAP001_env009_06_leaves_mesh.mesh",
+      "userData": {
+        "gltfIndex": 100,
+        "triangleCount": 2156
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "48efd": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@48efd",
+      "displayName": "",
+      "id": "48efd",
+      "name": "MAP001_env010_07_stems_mesh.mesh",
+      "userData": {
+        "gltfIndex": 101,
+        "triangleCount": 120
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "1f899": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@1f899",
+      "displayName": "",
+      "id": "1f899",
+      "name": "MAP001_env010_07_leaves_mesh.mesh",
+      "userData": {
+        "gltfIndex": 102,
+        "triangleCount": 2632
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "1705a": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@1705a",
+      "displayName": "",
+      "id": "1705a",
+      "name": "MAP001_planter_00_shrub_a_stems_mesh.mesh",
+      "userData": {
+        "gltfIndex": 103,
+        "triangleCount": 100
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "92f61": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@92f61",
+      "displayName": "",
+      "id": "92f61",
+      "name": "MAP001_planter_00_shrub_a_leaves_mesh.mesh",
+      "userData": {
+        "gltfIndex": 104,
+        "triangleCount": 2156
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "b3ef4": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@b3ef4",
+      "displayName": "",
+      "id": "b3ef4",
+      "name": "MAP001_planter_00_shrub_b_stems_mesh.mesh",
+      "userData": {
+        "gltfIndex": 105,
+        "triangleCount": 120
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "29b59": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@29b59",
+      "displayName": "",
+      "id": "29b59",
+      "name": "MAP001_planter_00_grass_2_clump_mesh.mesh",
+      "userData": {
+        "gltfIndex": 107,
+        "triangleCount": 1128
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "c294a": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@c294a",
+      "displayName": "",
+      "id": "c294a",
+      "name": "MAP001_planter_00_grass_3_clump_mesh.mesh",
+      "userData": {
+        "gltfIndex": 108,
+        "triangleCount": 1128
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "3f3c0": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@3f3c0",
+      "displayName": "",
+      "id": "3f3c0",
+      "name": "MAP001_planter_00_litter_4_leaves_mesh.mesh",
+      "userData": {
+        "gltfIndex": 109,
+        "triangleCount": 408
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "9ad69": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@9ad69",
+      "displayName": "",
+      "id": "9ad69",
+      "name": "MAP001_planter_01_shrub_b_stems_mesh.mesh",
+      "userData": {
+        "gltfIndex": 110,
+        "triangleCount": 120
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "48b99": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@48b99",
+      "displayName": "",
+      "id": "48b99",
+      "name": "MAP001_planter_01_shrub_b_leaves_mesh.mesh",
+      "userData": {
+        "gltfIndex": 111,
+        "triangleCount": 2632
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "90b35": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@90b35",
+      "displayName": "",
+      "id": "90b35",
+      "name": "MAP001_planter_01_shrub_a_stems_mesh.mesh",
+      "userData": {
+        "gltfIndex": 112,
+        "triangleCount": 100
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "dd5ce": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@dd5ce",
+      "displayName": "",
+      "id": "dd5ce",
+      "name": "MAP001_planter_01_shrub_a_leaves_mesh.mesh",
+      "userData": {
+        "gltfIndex": 113,
+        "triangleCount": 2156
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "d9b62": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@d9b62",
+      "displayName": "",
+      "id": "d9b62",
+      "name": "MAP001_planter_01_grass_2_clump_mesh.mesh",
+      "userData": {
+        "gltfIndex": 114,
+        "triangleCount": 1128
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "c3bab": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@c3bab",
+      "displayName": "",
+      "id": "c3bab",
+      "name": "MAP001_planter_01_grass_3_clump_mesh.mesh",
+      "userData": {
+        "gltfIndex": 115,
+        "triangleCount": 1128
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "46db5": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@46db5",
+      "displayName": "",
+      "id": "46db5",
+      "name": "MAP001_planter_01_litter_4_leaves_mesh.mesh",
+      "userData": {
+        "gltfIndex": 116,
+        "triangleCount": 408
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "ab239": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@ab239",
+      "displayName": "",
+      "id": "ab239",
+      "name": "MAP001_dry_grass_00_clump_mesh.mesh",
+      "userData": {
+        "gltfIndex": 117,
+        "triangleCount": 1128
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "e1152": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@e1152",
+      "displayName": "",
+      "id": "e1152",
+      "name": "MAP001_dry_grass_02_clump_mesh.mesh",
+      "userData": {
+        "gltfIndex": 119,
+        "triangleCount": 1128
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "c48bb": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@c48bb",
+      "displayName": "",
+      "id": "c48bb",
+      "name": "MAP001_dry_grass_03_clump_mesh.mesh",
+      "userData": {
+        "gltfIndex": 120,
+        "triangleCount": 1128
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "6bc02": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@6bc02",
+      "displayName": "",
+      "id": "6bc02",
+      "name": "MAP001_dry_grass_04_clump_mesh.mesh",
+      "userData": {
+        "gltfIndex": 121,
+        "triangleCount": 1128
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "361b2": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@361b2",
+      "displayName": "",
+      "id": "361b2",
+      "name": "MAP001_dry_grass_05_clump_mesh.mesh",
+      "userData": {
+        "gltfIndex": 122,
+        "triangleCount": 1128
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "7b0c9": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@7b0c9",
+      "displayName": "",
+      "id": "7b0c9",
+      "name": "MAP001_dry_grass_06_clump_mesh.mesh",
+      "userData": {
+        "gltfIndex": 123,
+        "triangleCount": 1128
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "98bd1": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@98bd1",
+      "displayName": "",
+      "id": "98bd1",
+      "name": "MAP001_dry_grass_08_clump_mesh.mesh",
+      "userData": {
+        "gltfIndex": 125,
+        "triangleCount": 1128
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "609af": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@609af",
+      "displayName": "",
+      "id": "609af",
+      "name": "MAP001_dry_grass_09_clump_mesh.mesh",
+      "userData": {
+        "gltfIndex": 126,
+        "triangleCount": 1128
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "600bd": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@600bd",
+      "displayName": "",
+      "id": "600bd",
+      "name": "MAP001_dry_grass_10_clump_mesh.mesh",
+      "userData": {
+        "gltfIndex": 127,
+        "triangleCount": 1128
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "f70ff": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@f70ff",
+      "displayName": "",
+      "id": "f70ff",
+      "name": "MAP001_dry_grass_11_clump_mesh.mesh",
+      "userData": {
+        "gltfIndex": 128,
+        "triangleCount": 1128
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "cd9f3": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@cd9f3",
+      "displayName": "",
+      "id": "cd9f3",
+      "name": "MAP001_dry_grass_13_clump_mesh.mesh",
+      "userData": {
+        "gltfIndex": 130,
+        "triangleCount": 1128
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "2945c": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@2945c",
+      "displayName": "",
+      "id": "2945c",
+      "name": "MAP001_dry_grass_14_clump_mesh.mesh",
+      "userData": {
+        "gltfIndex": 131,
+        "triangleCount": 1128
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "700f7": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@700f7",
+      "displayName": "",
+      "id": "700f7",
+      "name": "MAP001_dry_grass_15_clump_mesh.mesh",
+      "userData": {
+        "gltfIndex": 132,
+        "triangleCount": 1128
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "180e1": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@180e1",
+      "displayName": "",
+      "id": "180e1",
+      "name": "MAP001_dry_grass_17_clump_mesh.mesh",
+      "userData": {
+        "gltfIndex": 134,
+        "triangleCount": 1128
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "d46a5": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@d46a5",
+      "displayName": "",
+      "id": "d46a5",
+      "name": "MAP001_dry_grass_18_clump_mesh.mesh",
+      "userData": {
+        "gltfIndex": 135,
+        "triangleCount": 1128
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "00d38": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@00d38",
+      "displayName": "",
+      "id": "00d38",
+      "name": "MAP001_dry_grass_19_clump_mesh.mesh",
+      "userData": {
+        "gltfIndex": 136,
+        "triangleCount": 1128
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "b2bcb": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@b2bcb",
+      "displayName": "",
+      "id": "b2bcb",
+      "name": "MAP001_fallen_leaves_00_leaves_mesh.mesh",
+      "userData": {
+        "gltfIndex": 137,
+        "triangleCount": 408
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "c9e59": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@c9e59",
+      "displayName": "",
+      "id": "c9e59",
+      "name": "MAP001_fallen_leaves_01_leaves_mesh.mesh",
+      "userData": {
+        "gltfIndex": 138,
+        "triangleCount": 408
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "a9e6f": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@a9e6f",
+      "displayName": "",
+      "id": "a9e6f",
+      "name": "MAP001_fallen_leaves_02_leaves_mesh.mesh",
+      "userData": {
+        "gltfIndex": 139,
+        "triangleCount": 408
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "3d7d6": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@3d7d6",
+      "displayName": "",
+      "id": "3d7d6",
+      "name": "MAP001_fallen_leaves_03_leaves_mesh.mesh",
+      "userData": {
+        "gltfIndex": 140,
+        "triangleCount": 408
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "b99b1": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@b99b1",
+      "displayName": "",
+      "id": "b99b1",
+      "name": "MAP001_fallen_leaves_04_leaves_mesh.mesh",
+      "userData": {
+        "gltfIndex": 141,
+        "triangleCount": 408
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "8117e": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@8117e",
+      "displayName": "",
+      "id": "8117e",
+      "name": "MAP001_fallen_leaves_05_leaves_mesh.mesh",
+      "userData": {
+        "gltfIndex": 142,
+        "triangleCount": 408
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "2dd6d": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@2dd6d",
+      "displayName": "",
+      "id": "2dd6d",
+      "name": "MAP001_fallen_leaves_06_leaves_mesh.mesh",
+      "userData": {
+        "gltfIndex": 143,
+        "triangleCount": 408
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "c766d": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@c766d",
+      "displayName": "",
+      "id": "c766d",
+      "name": "MAP001_fallen_leaves_08_leaves_mesh.mesh",
+      "userData": {
+        "gltfIndex": 145,
+        "triangleCount": 408
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "326ab": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@326ab",
+      "displayName": "",
+      "id": "326ab",
+      "name": "MAP001_fallen_leaves_09_leaves_mesh.mesh",
+      "userData": {
+        "gltfIndex": 146,
+        "triangleCount": 408
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "f6fb5": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@f6fb5",
+      "displayName": "",
+      "id": "f6fb5",
+      "name": "MAP001_ring_cover_00_leaves_mesh.mesh",
+      "userData": {
+        "gltfIndex": 147,
+        "triangleCount": 408
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "753c7": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@753c7",
+      "displayName": "",
+      "id": "753c7",
+      "name": "MAP001_ring_cover_01_leaves_mesh.mesh",
+      "userData": {
+        "gltfIndex": 148,
+        "triangleCount": 408
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "b26f5": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@b26f5",
+      "displayName": "",
+      "id": "b26f5",
+      "name": "MAP001_ring_cover_03_clump_mesh.mesh",
+      "userData": {
+        "gltfIndex": 150,
+        "triangleCount": 1128
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "5fc94": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@5fc94",
+      "displayName": "",
+      "id": "5fc94",
+      "name": "MAP001_edge_cover_00_clump_mesh.mesh",
+      "userData": {
+        "gltfIndex": 151,
+        "triangleCount": 1128
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "ee14a": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@ee14a",
+      "displayName": "",
+      "id": "ee14a",
+      "name": "MAP001_edge_cover_01_clump_mesh.mesh",
+      "userData": {
+        "gltfIndex": 152,
+        "triangleCount": 1128
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "20c52": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@20c52",
+      "displayName": "",
+      "id": "20c52",
+      "name": "MAP001_edge_cover_02_clump_mesh.mesh",
+      "userData": {
+        "gltfIndex": 153,
+        "triangleCount": 1128
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "6fe9e": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@6fe9e",
+      "displayName": "",
+      "id": "6fe9e",
+      "name": "MAP001_edge_cover_03_leaves_mesh.mesh",
+      "userData": {
+        "gltfIndex": 154,
+        "triangleCount": 408
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "c6ce9": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@c6ce9",
+      "displayName": "",
+      "id": "c6ce9",
+      "name": "MAP001_edge_cover_04_clump_mesh.mesh",
+      "userData": {
+        "gltfIndex": 155,
+        "triangleCount": 1128
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "fcd5a": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@fcd5a",
+      "displayName": "",
+      "id": "fcd5a",
+      "name": "MAP001_edge_cover_06_clump_mesh.mesh",
+      "userData": {
+        "gltfIndex": 157,
+        "triangleCount": 1128
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "aa10d": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@aa10d",
+      "displayName": "",
+      "id": "aa10d",
+      "name": "MAP001_edge_cover_07_leaves_mesh.mesh",
+      "userData": {
+        "gltfIndex": 158,
+        "triangleCount": 408
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "0bf36": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@0bf36",
+      "displayName": "",
+      "id": "0bf36",
+      "name": "MAP001_edge_cover_08_clump_mesh.mesh",
+      "userData": {
+        "gltfIndex": 159,
+        "triangleCount": 1128
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "e75a8": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@e75a8",
+      "displayName": "",
+      "id": "e75a8",
+      "name": "MAP001_edge_cover_09_clump_mesh.mesh",
+      "userData": {
+        "gltfIndex": 160,
+        "triangleCount": 1128
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "64c36": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@64c36",
+      "displayName": "",
+      "id": "64c36",
+      "name": "MAP001_edge_cover_11_clump_mesh.mesh",
+      "userData": {
+        "gltfIndex": 162,
+        "triangleCount": 1128
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "6f85a": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@6f85a",
+      "displayName": "",
+      "id": "6f85a",
+      "name": "MAP001_edge_cover_12_leaves_mesh.mesh",
+      "userData": {
+        "gltfIndex": 163,
+        "triangleCount": 408
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "f3f6f": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@f3f6f",
+      "displayName": "",
+      "id": "f3f6f",
+      "name": "MAP001_edge_cover_13_leaves_mesh.mesh",
+      "userData": {
+        "gltfIndex": 164,
+        "triangleCount": 408
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "33a5c": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@33a5c",
+      "displayName": "",
+      "id": "33a5c",
+      "name": "MAP001_edge_cover_14_clump_mesh.mesh",
+      "userData": {
+        "gltfIndex": 165,
+        "triangleCount": 1128
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "4065d": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@4065d",
+      "displayName": "",
+      "id": "4065d",
+      "name": "MAP001_edge_cover_15_clump_mesh.mesh",
+      "userData": {
+        "gltfIndex": 166,
+        "triangleCount": 1128
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "02445": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@02445",
+      "displayName": "",
+      "id": "02445",
+      "name": "MAP001_edge_cover_16_leaves_mesh.mesh",
+      "userData": {
+        "gltfIndex": 167,
+        "triangleCount": 408
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "0551a": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@0551a",
+      "displayName": "",
+      "id": "0551a",
+      "name": "MAP001_edge_cover_17_leaves_mesh.mesh",
+      "userData": {
+        "gltfIndex": 168,
+        "triangleCount": 408
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "5d013": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@5d013",
+      "displayName": "",
+      "id": "5d013",
+      "name": "MAP001_curb_00_stone_mesh.mesh",
+      "userData": {
+        "gltfIndex": 169,
+        "triangleCount": 1368
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "8adc8": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@8adc8",
+      "displayName": "",
+      "id": "8adc8",
+      "name": "MAP001_low_wall_00_stone_mesh.mesh",
+      "userData": {
+        "gltfIndex": 170,
+        "triangleCount": 4928
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "d5f47": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@d5f47",
+      "displayName": "",
+      "id": "d5f47",
+      "name": "MAP001_railing_00_metal_mesh.mesh",
+      "userData": {
+        "gltfIndex": 171,
+        "triangleCount": 22440
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "47abd": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@47abd",
+      "displayName": "",
+      "id": "47abd",
+      "name": "MAP001_steps_stone_mesh.mesh",
+      "userData": {
+        "gltfIndex": 172,
+        "triangleCount": 308
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "ec3e4": {
+      "importer": "gltf-material",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@ec3e4",
+      "displayName": "",
+      "id": "ec3e4",
+      "name": "ENG_MAT_ink.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "360e7": {
+      "importer": "gltf-material",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@360e7",
+      "displayName": "",
+      "id": "360e7",
+      "name": "ENG_MAT_ground_soil.material",
+      "userData": {
+        "gltfIndex": 1
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "d8b3c": {
+      "importer": "gltf-material",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@d8b3c",
+      "displayName": "",
+      "id": "d8b3c",
+      "name": "ENG_MAT_ground_skirt.material",
+      "userData": {
+        "gltfIndex": 2
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "19dfa": {
+      "importer": "gltf-material",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@19dfa",
+      "displayName": "",
+      "id": "19dfa",
+      "name": "ENG_MAT_stone_base.material",
+      "userData": {
+        "gltfIndex": 3
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "c90be": {
+      "importer": "gltf-material",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@c90be",
+      "displayName": "",
+      "id": "c90be",
+      "name": "ENG_MAT_stone_light.material",
+      "userData": {
+        "gltfIndex": 4
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "dbbd8": {
+      "importer": "gltf-material",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@dbbd8",
+      "displayName": "",
+      "id": "dbbd8",
+      "name": "ENG_MAT_stone_dark.material",
+      "userData": {
+        "gltfIndex": 5
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "787c3": {
+      "importer": "gltf-material",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@787c3",
+      "displayName": "",
+      "id": "787c3",
+      "name": "ENG_MAT_mortar.material",
+      "userData": {
+        "gltfIndex": 6
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "cc40c": {
+      "importer": "gltf-material",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@cc40c",
+      "displayName": "",
+      "id": "cc40c",
+      "name": "ENG_MAT_leaf_deep.material",
+      "userData": {
+        "gltfIndex": 7
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "b1c91": {
+      "importer": "gltf-material",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@b1c91",
+      "displayName": "",
+      "id": "b1c91",
+      "name": "ENG_MAT_leaf_olive.material",
+      "userData": {
+        "gltfIndex": 8
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "540dd": {
+      "importer": "gltf-material",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@540dd",
+      "displayName": "",
+      "id": "540dd",
+      "name": "ENG_MAT_leaf_far.material",
+      "userData": {
+        "gltfIndex": 9
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "26ccb": {
+      "importer": "gltf-material",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@26ccb",
+      "displayName": "",
+      "id": "26ccb",
+      "name": "ENG_MAT_leaf_ochre.material",
+      "userData": {
+        "gltfIndex": 10
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "0387c": {
+      "importer": "gltf-material",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@0387c",
+      "displayName": "",
+      "id": "0387c",
+      "name": "ENG_MAT_leaf_gold.material",
+      "userData": {
+        "gltfIndex": 11
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "4b5b5": {
+      "importer": "gltf-material",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@4b5b5",
+      "displayName": "",
+      "id": "4b5b5",
+      "name": "ENG_MAT_leaf_amber.material",
+      "userData": {
+        "gltfIndex": 12
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "293c2": {
+      "importer": "gltf-material",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@293c2",
+      "displayName": "",
+      "id": "293c2",
+      "name": "ENG_MAT_wood_dark.material",
+      "userData": {
+        "gltfIndex": 13
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "bb96a": {
+      "importer": "gltf-material",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@bb96a",
+      "displayName": "",
+      "id": "bb96a",
+      "name": "ENG_MAT_soil.material",
+      "userData": {
+        "gltfIndex": 14
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "b5090": {
+      "importer": "gltf-material",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@b5090",
+      "displayName": "",
+      "id": "b5090",
+      "name": "ENG_MAT_grass_dry.material",
+      "userData": {
+        "gltfIndex": 15
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "6330d": {
+      "importer": "gltf-material",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@6330d",
+      "displayName": "",
+      "id": "6330d",
+      "name": "ENG_MAT_grass_pale.material",
+      "userData": {
+        "gltfIndex": 16
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "37a69": {
+      "importer": "gltf-material",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@37a69",
+      "displayName": "",
+      "id": "37a69",
+      "name": "ENG_MAT_flower_rose.material",
+      "userData": {
+        "gltfIndex": 17
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "4ab4a": {
+      "importer": "gltf-material",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@4ab4a",
+      "displayName": "",
+      "id": "4ab4a",
+      "name": "ENG_MAT_wood_old.material",
+      "userData": {
+        "gltfIndex": 19
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "c5aa5": {
+      "importer": "gltf-material",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@c5aa5",
+      "displayName": "",
+      "id": "c5aa5",
+      "name": "ENG_MAT_bench_wood.material",
+      "userData": {
+        "gltfIndex": 20
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "054b8": {
+      "importer": "gltf-material",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@054b8",
+      "displayName": "",
+      "id": "054b8",
+      "name": "ENG_MAT_bench_metal.material",
+      "userData": {
+        "gltfIndex": 21
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "ab52e": {
+      "importer": "gltf-material",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@ab52e",
+      "displayName": "",
+      "id": "ab52e",
+      "name": "ENG_MAT_paper_kraft.material",
+      "userData": {
+        "gltfIndex": 22
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "57d42": {
+      "importer": "gltf-material",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@57d42",
+      "displayName": "",
+      "id": "57d42",
+      "name": "ENG_MAT_metal_brass.material",
+      "userData": {
+        "gltfIndex": 23
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "f2a6c": {
+      "importer": "gltf-material",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@f2a6c",
+      "displayName": "",
+      "id": "f2a6c",
+      "name": "ENG_MAT_paper_cream.material",
+      "userData": {
+        "gltfIndex": 24
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "2df4c": {
+      "importer": "gltf-material",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@2df4c",
+      "displayName": "",
+      "id": "2df4c",
+      "name": "ENG_MAT_metal_rust.material",
+      "userData": {
+        "gltfIndex": 25
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "8f784": {
+      "importer": "gltf-material",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@8f784",
+      "displayName": "",
+      "id": "8f784",
+      "name": "ENG_MAT_metal_iron.material",
+      "userData": {
+        "gltfIndex": 26
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "4f6d8": {
+      "importer": "gltf-scene",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@4f6d8",
+      "displayName": "",
+      "id": "4f6d8",
+      "name": "MAP001_courtyard.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "c02a69cf-19af-40d7-940d-23fa794c2850@a58d0",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@fc4c7",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@2b122",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@d9e86",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@96af2",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@03df1",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@833ed",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@ba737",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@3a2b8",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@4ba2d",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@07f7d",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@82607",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@1ebf8",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@daa78",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@10abe",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@778e1",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@00e63",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@6549e",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@56118",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@b471c",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@890cb",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@f8ed0",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@9e8ee",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@44a28",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@e4372",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@9a0f6",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@65333",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@090a5",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@cd5e4",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@3dcfb",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@3300a",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@d22c5",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@32f10",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@be9df",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@84a9b",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@a1d55",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@499b0",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@d142d",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@ac42d",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@00fe0",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@90d9c",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@ef7c9",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@3aa0c",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@6c0f1",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@c87f0",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@3099f",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@78ed8",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@92a17",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@0d83a",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@2068f",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@7e586",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@5bb2d",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@ebc82",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@8d18f",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@dcd39",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@64a00",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@68cc9",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@677b2",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@a3237",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@a30eb",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@958ff",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@497a6",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@fbc6e",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@a38da",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@5ae7e",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@8a47e",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@4f413",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@b7b80",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@ef3b1",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@010dc",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@80ee9",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@6a98b",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@5d650",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@21528",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@02885",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@0f0a8",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@673d2",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@4eb1e",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@d59a9",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@10d48",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@44790",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@e2fee",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@ee30e",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@e5d09",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@7315c",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@8b927",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@7e4e4",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@35d0e",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@f44c2",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@863ff",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@13e4d",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@842ea",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@b9fe5",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@05bd0",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@3c94e",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@da9be",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@d9df0",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@f910f",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@12c78",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@ba58e",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@ee1f2",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@48efd",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@1f899",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@1705a",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@92f61",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@b3ef4",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@51285",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@29b59",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@c294a",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@3f3c0",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@9ad69",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@48b99",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@90b35",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@dd5ce",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@d9b62",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@c3bab",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@46db5",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@ab239",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@38839",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@e1152",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@c48bb",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@6bc02",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@361b2",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@7b0c9",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@70620",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@98bd1",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@609af",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@600bd",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@f70ff",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@69458",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@cd9f3",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@2945c",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@700f7",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@27223",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@180e1",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@d46a5",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@00d38",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@b2bcb",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@c9e59",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@a9e6f",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@3d7d6",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@b99b1",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@8117e",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@2dd6d",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@83706",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@c766d",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@326ab",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@f6fb5",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@753c7",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@86841",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@b26f5",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@5fc94",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@ee14a",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@20c52",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@6fe9e",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@c6ce9",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@99841",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@fcd5a",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@aa10d",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@0bf36",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@e75a8",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@71211",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@64c36",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@6f85a",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@f3f6f",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@33a5c",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@4065d",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@02445",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@0551a",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@5d013",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@8adc8",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@d5f47",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@47abd"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "c02a69cf-19af-40d7-940d-23fa794c2850@ec3e4",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@360e7",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@d8b3c",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@19dfa",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@c90be",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@dbbd8",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@787c3",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@cc40c",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@b1c91",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@540dd",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@26ccb",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@0387c",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@4b5b5",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@293c2",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@bb96a",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@b5090",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@6330d",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@37a69",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@54852",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@4ab4a",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@c5aa5",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@054b8",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@ab52e",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@57d42",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@f2a6c",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@2df4c",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@8f784",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@62670"
+      ],
+      "scenes": [
+        "c02a69cf-19af-40d7-940d-23fa794c2850@4f6d8"
+      ]
+    }
+  }
+}

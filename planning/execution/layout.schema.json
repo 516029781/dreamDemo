@@ -1,0 +1,282 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Courtyard exchange layout v1",
+  "type": "object",
+  "required": [
+    "markers",
+    "layout_owner",
+    "bounds",
+    "instances",
+    "coordinate_system",
+    "planning_only",
+    "map_id",
+    "revision",
+    "camera",
+    "colliders",
+    "schema_version"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "planning_only": {
+      "type": "boolean"
+    },
+    "map_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "layout_owner": {
+      "enum": [
+        "blender",
+        "forge"
+      ]
+    },
+    "coordinate_system": {
+      "const": "right_handed_y_up_xz_ground"
+    },
+    "bounds": {
+      "type": "object",
+      "required": [
+        "x_min",
+        "x_max",
+        "z_min",
+        "z_max",
+        "walk_surface_y"
+      ],
+      "properties": {
+        "x_min": {
+          "type": "number"
+        },
+        "x_max": {
+          "type": "number"
+        },
+        "z_min": {
+          "type": "number"
+        },
+        "z_max": {
+          "type": "number"
+        },
+        "walk_surface_y": {
+          "type": "number"
+        }
+      }
+    },
+    "camera": {
+      "type": "object",
+      "required": [
+        "follow_offset",
+        "vertical_fov_deg",
+        "resolution"
+      ],
+      "properties": {
+        "follow_offset": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 3,
+          "maxItems": 3
+        },
+        "vertical_fov_deg": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "exclusiveMaximum": 180
+        },
+        "resolution": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "minItems": 2,
+          "maxItems": 2
+        }
+      }
+    },
+    "instances": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "instance_id",
+          "asset_id",
+          "position",
+          "rotation_quat",
+          "scale",
+          "material_variant",
+          "occlusion_group"
+        ],
+        "properties": {
+          "instance_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "asset_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "position": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            },
+            "minItems": 3,
+            "maxItems": 3
+          },
+          "rotation_quat": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            },
+            "minItems": 4,
+            "maxItems": 4
+          },
+          "scale": {
+            "type": "array",
+            "items": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "minItems": 3,
+            "maxItems": 3
+          },
+          "material_variant": {
+            "type": "string"
+          },
+          "occlusion_group": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "colliders": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "shape",
+          "center_xz"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "shape": {
+            "enum": [
+              "circle",
+              "rect"
+            ]
+          },
+          "center_xz": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            },
+            "minItems": 2,
+            "maxItems": 2
+          },
+          "radius": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "half_extents_xz": {
+            "type": "array",
+            "items": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "minItems": 2,
+            "maxItems": 2
+          },
+          "yaw_deg": {
+            "type": "number"
+          }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "shape": {
+                  "const": "circle"
+                }
+              }
+            },
+            "then": {
+              "required": [
+                "radius"
+              ]
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "shape": {
+                  "const": "rect"
+                }
+              }
+            },
+            "then": {
+              "required": [
+                "half_extents_xz",
+                "yaw_deg"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "markers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "marker_id",
+          "kind",
+          "position",
+          "interaction_radius"
+        ],
+        "properties": {
+          "marker_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "kind": {
+            "enum": [
+              "spawn",
+              "npc",
+              "pickup",
+              "interaction"
+            ]
+          },
+          "position": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            },
+            "minItems": 3,
+            "maxItems": 3
+          },
+          "interaction_radius": {
+            "type": "number",
+            "minimum": 0
+          }
+        }
+      }
+    },
+    "unresolved": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

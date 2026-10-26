@@ -1,0 +1,34 @@
+{
+  "PROJECT_TASKS.json": {
+    "sha256": "4ec587c78ead4f3cfb57c2cc72931d071ed694c72372bf6701beb1b09a78b067",
+    "bytes": 170649
+  },
+  "delivery/next_cycle/last_checkpoint.json": {
+    "sha256": "1e98305b7441fbde3b171401e483849083a33786253afacaa91eb688ecde91de",
+    "bytes": 3603
+  },
+  "tools/art_harness.py": {
+    "sha256": "15efc535f43e9a5daf0702b8a205202eda9d2b422a5428c1d480bc480c9633e0",
+    "bytes": 31102
+  },
+  "tools/art_gate/migrate_catalog.py": {
+    "sha256": "a94e8b128ee2a6cae470f8857c14f11afd309784c45700dc7930404315918232",
+    "bytes": 14351
+  },
+  "art_review/vnext/harness_contract.json": {
+    "sha256": "c2a581a8cba9e2b28d8f0e44ff21903c2694ab9494084e6c87f52e0539682519",
+    "bytes": 7490
+  },
+  "art_review/vnext/asset_status.schema.json": {
+    "sha256": "d9064ede2e34a6b1b10cf75d0b3b635fb119a52843a820a5f0a775be358a802b",
+    "bytes": 6641
+  },
+  "art_review/vnext/asset_status_migrated.json": {
+    "sha256": "e63e573fa7a78af8f027160dc8a9d749baf42468551594c888a09e5cdf3aee65",
+    "bytes": 71645
+  },
+  "delivery/next_cycle/T0/p03_selfcheck.json": {
+    "sha256": "83d784d1d8b6dba0d53ae5b70ee3d4d90177a20db20df39ffe9f616f9d56e024",
+    "bytes": 3317
+  }
+}

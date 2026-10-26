@@ -1,0 +1,149 @@
+{
+  "quality_checks_version": "vnext.quality_checks/1.0.0",
+  "vnext_effective": false,
+  "source_plan": "NEXT_ITERATION_PLAN.md §5",
+  "contract_version": "1.4.0-draft",
+  "severity_policy": {
+    "missing_evidence": "pending",
+    "hard_failure": "fail",
+    "statistical_warning": "warning_only",
+    "na_policy": "Q03/Q04/Q05/Q09 不允许制作方自行填 not_required；例外须独立评审写明条款与理由。",
+    "meaning": "pending/fail 都不能放行；warning 不单独阻塞，但必须进入审核记录。"
+  },
+  "thresholds": {
+    "q01_character_height_px": {"min": 86, "max": 130},
+    "q03_foot_shadow_drift_m": 0.005,
+    "q04_locked_displacement_m": 0.001,
+    "q06_warning": {"draw_calls": 400, "triangles": 400000}
+  },
+  "solution_neutrality": {
+    "rule": "检查验证可观察结果与可编辑性，不强制单一贴图或材质方案。",
+    "accepted_editables": ["native_blend", "procedural_material", "node_material", "baked_texture", "svg_component", "krita_layer"],
+    "note": "Q06/Q07 不得要求必须使用烘焙贴图集；任何原生可编辑路线只要证据匹配均可通过。"
+  },
+  "checks": [
+    {
+      "id": "Q01",
+      "title": "正式机位",
+      "applies_to": ["scene_demo", "art_complete"],
+      "required_evidence": ["no_ui_shot", "with_ui_shot", "dialogue_shot", "camera_json"],
+      "required_measurements": ["character_height_px", "same_camera"],
+      "hard_fails": [
+        "三张正式图不是同一相机",
+        "角色可见高度不在 86-130px 且无独立评审例外",
+        "缺少 camera.json 或角色实际显示边界"
+      ],
+      "warnings": []
+    },
+    {
+      "id": "Q02",
+      "title": "P1母版对照",
+      "applies_to": ["scene_demo", "art_complete"],
+      "required_evidence": ["reference_regions", "candidate_comparison"],
+      "required_measurements": ["regions_compared", "differences"],
+      "hard_fails": [
+        "差异清单为空或只有“都是秋天”等泛化结论",
+        "缺少原尺寸局部对照"
+      ],
+      "warnings": []
+    },
+    {
+      "id": "Q03",
+      "title": "世界遮挡",
+      "applies_to": ["scene_demo", "art_complete"],
+      "required_evidence": ["front_shot", "behind_shot", "world_position_log"],
+      "required_measurements": ["cases", "foot_shadow_drift_m"],
+      "hard_fails": [
+        "缺少树前/树后（或栏杆前/后）任一实际案例",
+        "behind 场景未证明前景遮挡",
+        "脚底或阴影漂移超过 0.005m",
+        "只改 UI sibling 顺序冒充 3D 遮挡"
+      ],
+      "warnings": []
+    },
+    {
+      "id": "Q04",
+      "title": "状态行为",
+      "applies_to": ["scene_demo", "art_complete"],
+      "required_evidence": ["normal_move_log", "pause_log", "dialogue_log", "resume_log"],
+      "required_measurements": ["runs"],
+      "hard_fails": [
+        "缺少触控输入 run（不可只用键盘替代）",
+        "暂停/对白位移超过 0.001m 或仍在播放 Move",
+        "恢复后响应旧输入而非只响应新输入",
+        "正常移动没有实际位移"
+      ],
+      "warnings": []
+    },
+    {
+      "id": "Q05",
+      "title": "留言板与FX",
+      "applies_to": ["scene_demo", "art_complete"],
+      "required_evidence": ["empty_shot", "full_shot", "reset_shot", "child_visibility_log"],
+      "required_measurements": ["states", "reset_residue"],
+      "hard_fails": [
+        "缺少 empty→full→reset 任一状态",
+        "三张卡未真实切换或只显示“完成”字样",
+        "reset 有残影或子物件仍可见"
+      ],
+      "warnings": []
+    },
+    {
+      "id": "Q06",
+      "title": "最终构建统计",
+      "applies_to": ["scene_demo", "art_complete"],
+      "required_evidence": ["final_glb", "runtime_stats_log", "decode_stats"],
+      "required_measurements": ["final_glb_sha256", "stats_source", "scopes"],
+      "hard_fails": [
+        "缺少最终 GLB hash 或解码统计",
+        "统计不是来自最终构建的真实 runtime（沿用旧值）",
+        "无手机证据却下手机结论"
+      ],
+      "warnings": [
+        "draw calls 高于预警线 400",
+        "triangles 高于预警线 400000"
+      ]
+    },
+    {
+      "id": "Q07",
+      "title": "交付可编辑",
+      "applies_to": ["scene_demo", "art_complete"],
+      "required_evidence": ["edited_source", "reexport", "same_camera_shot", "reopen_log"],
+      "required_measurements": ["edit"],
+      "hard_fails": [
+        "只证明文件能打开，未做局部改动",
+        "改参数/组件后指定对象未更新或无关对象改变",
+        "未保存重开或未重新导出"
+      ],
+      "warnings": []
+    },
+    {
+      "id": "Q08",
+      "title": "证据同源",
+      "applies_to": ["scene_demo", "art_complete"],
+      "required_evidence": ["evidence_binding_manifest"],
+      "required_measurements": ["evidence_binding"],
+      "hard_fails": [
+        "source/export/build/capture/contract/rubric/review 任一 hash 缺失",
+        "采集 build_id 与证据清单不一致",
+        "构建或相机变化后仍引用旧截图"
+      ],
+      "warnings": []
+    },
+    {
+      "id": "Q09",
+      "title": "UI与适配",
+      "applies_to": ["scene_demo", "art_complete"],
+      "required_evidence": ["state_index", "landscape_shot", "portrait_shot", "text_native_size_shot"],
+      "required_measurements": ["viewports", "safe_area", "device_tested"],
+      "hard_fails": [
+        "用 1280×720 示意代替 720×1280",
+        "竖屏截图尺寸与视口不一致",
+        "缺少安全区或原尺寸文本截图"
+      ],
+      "warnings": [
+        "device_tested=false：只能声明浏览器适配，不能声明真机通过"
+      ]
+    }
+  ]
+}

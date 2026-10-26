@@ -1,0 +1,25 @@
+{
+  "defect_id": null,
+  "asset_id": null,
+  "asset_version": null,
+  "asset_sha256": null,
+  "feature_ids": [],
+  "card": null,
+  "dimension_id": null,
+  "severity": null,
+  "evidence": {
+    "path": null,
+    "frame_index": null,
+    "time_range_seconds": null,
+    "normalized_rect": null
+  },
+  "observation": null,
+  "cause_hypothesis": null,
+  "primary_fix": null,
+  "alternative_fix": null,
+  "recheck_steps": [],
+  "regression_dimensions": [],
+  "status": "open",
+  "before_review_id": null,
+  "after_review_id": null
+}

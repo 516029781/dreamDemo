@@ -1,0 +1,53 @@
+{
+  "status": "pass",
+  "checks": {
+    "Q01": {
+      "status": "pass",
+      "reason": null
+    },
+    "Q02": {
+      "status": "pass",
+      "reason": null
+    },
+    "Q03": {
+      "status": "pass",
+      "reason": null
+    },
+    "Q04": {
+      "status": "pass",
+      "reason": null
+    },
+    "Q05": {
+      "status": "pass",
+      "reason": null
+    },
+    "Q06": {
+      "status": "pass",
+      "reason": null
+    },
+    "Q07": {
+      "status": "pass",
+      "reason": null
+    },
+    "Q08": {
+      "status": "pass",
+      "reason": null
+    },
+    "Q09": {
+      "status": "pass",
+      "reason": null
+    },
+    "capture_binding": {
+      "status": "pass",
+      "reason": null,
+      "binding_id": "cap-final4-formal_no_ui"
+    }
+  },
+  "warnings": [
+    "Q06 MAP001 draws 631 above warning line",
+    "Q06 LOOK001 draws 631 above warning line",
+    "Q09 device_tested=false: browser adaptation only; no real-device claim"
+  ],
+  "failed": [],
+  "pending": []
+}

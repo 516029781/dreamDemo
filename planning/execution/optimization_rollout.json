@@ -1,0 +1,153 @@
+{
+  "kind": "optimization_implementation_status_not_benchmark",
+  "updated_at": "2026-10-24T16:53:59.762406+00:00",
+  "source": "PERFORMANCE_OPTIMIZATION_PLAN.md",
+  "measures": [
+    {
+      "id": "OPT01",
+      "title": "工作包/紧凑上下文/恢复防错",
+      "status": "implemented",
+      "task_ids": [
+        "P00"
+      ],
+      "package_ids": [
+        "B01",
+        "B02"
+      ],
+      "evidence": [
+        "tools/workflow.py",
+        "START_HERE.md",
+        "EXECUTION_PROTOCOL.md"
+      ],
+      "remaining": "没有后台执行/自动批准；无提速实测。"
+    },
+    {
+      "id": "OPT02",
+      "title": "局部目标与依赖失效/失败传播",
+      "status": "partial",
+      "task_ids": [
+        "P04",
+        "P06",
+        "P07"
+      ],
+      "package_ids": [
+        "B01"
+      ],
+      "evidence": [
+        "tools/art_gate/check_bindings.py",
+        "delivery/next_cycle/T0/p04_selfcheck.json (content-hash dirty closure)",
+        "tools/blender/run_courtyard_build.ps1 (-Stage, stop on first failure)",
+        "tools/art_gate/build_log_gate.py"
+      ],
+      "remaining": "绑定级失效+定向构建/失败传播已实现（dry-run验证）；尚未用真实构建证明端到端收益，复杂缓存不推广。"
+    },
+    {
+      "id": "OPT03",
+      "title": "正确画布/同会话子集采集",
+      "status": "partial",
+      "task_ids": [
+        "P04",
+        "P06",
+        "P07"
+      ],
+      "package_ids": [
+        "B01"
+      ],
+      "evidence": [
+        "art_review/vnext/capture_binding.schema.json",
+        "tools/capture/canvas_capture.js + _p06_canvas selftest",
+        "delivery/next_cycle/T0/p06_selfcheck.json"
+      ],
+      "remaining": "真实canvas采集能力已实现并自测；游戏T1/T2受影响图尚未重采，需在V返修后统一重采。"
+    },
+    {
+      "id": "OPT04",
+      "title": "最小样板/小配置/3候选对比",
+      "status": "execution_rule_not_fully_automated",
+      "task_ids": [
+        "V01",
+        "V04"
+      ],
+      "package_ids": [
+        "B02"
+      ],
+      "evidence": [
+        "tools/blender/build_env_courtyard.py (3 crown candidates)",
+        "tools/blender/run_courtyard_build.ps1 -Stage",
+        "delivery/next_cycle/T4/tree_before_after_v2.png"
+      ],
+      "remaining": "定向阶段构建与最多3候选已实际使用；候选对比仍由人工选择，未自动化。"
+    },
+    {
+      "id": "OPT05",
+      "title": "母版与UI组件集中复用",
+      "status": "execution_rule_not_fully_automated",
+      "task_ids": [
+        "V05"
+      ],
+      "package_ids": [
+        "B04",
+        "B05",
+        "B06",
+        "B07",
+        "B08"
+      ],
+      "evidence": [
+        "demo/assets/scripts/CourtyardBootstrap.ts",
+        "delivery/next_cycle/T4/ui_comparison_v2.png"
+      ],
+      "remaining": "UI在现有Cocos组件上统一改色/透明度/点缀，未逐界面重画；扩到全部状态仍待V07制作预检后。"
+    },
+    {
+      "id": "OPT06",
+      "title": "同候选共享检查与完整出口",
+      "status": "pending",
+      "task_ids": [
+        "I01",
+        "I02",
+        "I07"
+      ],
+      "package_ids": [
+        "B11",
+        "B12"
+      ],
+      "evidence": [],
+      "remaining": "先绑定真实源/构建/配置；不沿用已失效批准。"
+    },
+    {
+      "id": "OPT08",
+      "title": "真实计时与净收益验证",
+      "status": "partial",
+      "task_ids": [
+        "P06",
+        "I07"
+      ],
+      "package_ids": [
+        "B01",
+        "B11"
+      ],
+      "evidence": [
+        "tools/workflow.py",
+        "tools/blender/run_courtyard_build.ps1 (per-stage wall time+log hash)",
+        "delivery/next_cycle/T0/p06_selfcheck.json"
+      ],
+      "remaining": "已有单命令与分阶段计时；仍无端到端模型开发/审核等待A-B结果。"
+    },
+    {
+      "id": "OPT09",
+      "title": "GPU/高级平台/Forge/MCP",
+      "status": "deferred_not_blocking",
+      "task_ids": [
+        "O01",
+        "O02"
+      ],
+      "package_ids": [
+        "B16"
+      ],
+      "evidence": [],
+      "remaining": "先测瓶颈再决定，禁止挤占主线或默认有硬件提速。"
+    }
+  ],
+  "workflow_mode": "candidate_first_final_review",
+  "production_review_separation": "V07后继续全量候选，I07后集中独立评审；正式发布标准不变。"
+}

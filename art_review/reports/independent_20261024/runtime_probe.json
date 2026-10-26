@@ -1,0 +1,201 @@
+{
+  "build_root": "C:/软件/鼠鼠/demo/build/web-desktop",
+  "checks": [
+    {
+      "id": "normal_keyboard_positive_control",
+      "before": [
+        0,
+        0,
+        -5.2
+      ],
+      "after": [
+        0.9000000000000001,
+        0,
+        -5.2
+      ],
+      "moved": 0.9000000000000001
+    },
+    {
+      "id": "pause_keyboard_lock",
+      "before": [
+        0,
+        0,
+        -5.2
+      ],
+      "after": [
+        0.9000000000000001,
+        0,
+        -5.2
+      ],
+      "moved": 0.9000000000000001
+    },
+    {
+      "id": "dialogue_keyboard_lock",
+      "before": [
+        0,
+        0,
+        -5.2
+      ],
+      "after": [
+        0,
+        0,
+        -5.2
+      ],
+      "moved": 0
+    }
+  ],
+  "errors": [],
+  "baseline": {
+    "ready": true,
+    "uiVisible": true,
+    "dialogueVisible": false,
+    "dialoguePage": 1,
+    "accepted": false,
+    "moving": false,
+    "anim": "Relax",
+    "animNames": [],
+    "player": [
+      0,
+      0,
+      -5.2
+    ],
+    "viewer": "",
+    "loadErrors": [],
+    "boneBounds": 450,
+    "metrics": {
+      "px": 29.32882687450703,
+      "h": 450,
+      "scale": 0.13035034166447568,
+      "feet": [
+        0,
+        -167.26127197057156
+      ],
+      "head": [
+        0,
+        -137.93244509606453
+      ],
+      "depth": 35.7274039950626,
+      "player": [
+        0,
+        0,
+        -5.2
+      ],
+      "canvas": [
+        1280,
+        720
+      ],
+      "view": [
+        1280,
+        720
+      ]
+    },
+    "spine": {
+      "width": 100,
+      "height": 100,
+      "premultipliedAlpha": false
+    }
+  },
+  "behind_tree": {
+    "ready": true,
+    "uiVisible": true,
+    "dialogueVisible": false,
+    "dialoguePage": 1,
+    "accepted": false,
+    "moving": false,
+    "anim": "Relax",
+    "animNames": [],
+    "player": [
+      0,
+      0,
+      3
+    ],
+    "viewer": "",
+    "loadErrors": [],
+    "boneBounds": 450,
+    "metrics": {
+      "px": 29.0567175654364,
+      "h": 450,
+      "scale": 0.1291409669574951,
+      "feet": [
+        0,
+        8.395398006255556
+      ],
+      "head": [
+        0,
+        37.452115571691955
+      ],
+      "depth": 41.77206794470868,
+      "player": [
+        0,
+        0,
+        3
+      ],
+      "canvas": [
+        1280,
+        720
+      ],
+      "view": [
+        1280,
+        720
+      ]
+    },
+    "spine": {
+      "width": 100,
+      "height": 100,
+      "premultipliedAlpha": false
+    }
+  },
+  "portrait": {
+    "note": "Capture inherited fixed1280x720 producer CSS; diagnostic only, not a device-safe-area test.",
+    "state": {
+      "ready": true,
+      "uiVisible": true,
+      "dialogueVisible": true,
+      "dialoguePage": 1,
+      "accepted": false,
+      "moving": false,
+      "anim": "Relax",
+      "animNames": [],
+      "player": [
+        0,
+        0,
+        -5.2
+      ],
+      "viewer": "",
+      "loadErrors": [],
+      "boneBounds": 450,
+      "metrics": {
+        "px": 29.32882687450703,
+        "h": 450,
+        "scale": 0.13035034166447568,
+        "feet": [
+          0,
+          -167.26127197057156
+        ],
+        "head": [
+          0,
+          -137.93244509606453
+        ],
+        "depth": 35.7274039950626,
+        "player": [
+          0,
+          0,
+          -5.2
+        ],
+        "canvas": [
+          1280,
+          720
+        ],
+        "view": [
+          1280,
+          720
+        ]
+      },
+      "spine": {
+        "width": 100,
+        "height": 100,
+        "premultipliedAlpha": false
+      }
+    }
+  }
+}

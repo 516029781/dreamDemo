@@ -1,0 +1,3919 @@
+{
+  "schema_version": "1.0.0",
+  "kind": "execution_backlog_not_implemented_scheduler",
+  "updated_at": "2026-10-25T00:08:00+08:00",
+  "current_scope": "art_required",
+  "current_art_release_task": "I09",
+  "game_release_task": "W05",
+  "status_semantics": {
+    "todo": "尚未核对/实施，已有文件可在核对后复用",
+    "in_progress": "正在实施",
+    "waiting_review": "制作/证据已齐，等待指定独立角色",
+    "blocked": "有明确外部或依赖阻碍，需填blocker",
+    "rework": "被拒绝，按问题返修",
+    "done": "满足本任务的全部验收及所需审查；不自动代表全局放行"
+  },
+  "selection_rule": "Within current_scope choose earliest unfinished producer task with all dependencies done; when waiting reviews continue other ready producer tasks. Never auto-complete independent/controller tasks. Preparatory repairs before V09 are allowed; A-* batch requires V09.",
+  "policy_file": "EXECUTION_PROTOCOL.md",
+  "tasks": [
+    {
+      "id": "P00",
+      "title": "锁定本轮基线和既有证据",
+      "phase": "规则",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [],
+      "status": "done",
+      "inputs": [
+        "NEXT_ITERATION_PLAN.md",
+        "art_review/reports/independent_20261024/REPORT.md"
+      ],
+      "outputs": [
+        "delivery/next_cycle/baseline.json"
+      ],
+      "acceptance": [
+        "记录当前合同/rubric/manifest/hash及独立审核结论；不覆盖历史包",
+        "现有资产只登记复用，不因路径存在标任务done"
+      ],
+      "evidence_paths": [
+        "delivery/next_cycle/baseline.json"
+      ],
+      "commands_run": [
+        "sha256sum harness_contract.json rubric.json manifests REPORT.md review_gate.json toolchain.json PROJECT_TASKS.json",
+        "wrote delivery/next_cycle/baseline.json (contract 1.3.0, rubric 1.2.0, review blocked/H02, GLB lineage, reuse registry)"
+      ],
+      "actual_exit_codes": [
+        0,
+        0
+      ],
+      "related_defects": [],
+      "attempts": 1,
+      "blocker": null,
+      "resume_action": "",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "P01",
+      "title": "统一活动文档与角色来源",
+      "phase": "规则",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "P00"
+      ],
+      "status": "done",
+      "inputs": [
+        "NEXT_ITERATION_PLAN.md",
+        "art_review/reports/independent_20261024/REPORT.md"
+      ],
+      "outputs": [
+        "delivery/next_cycle/T0/active_spec_index.json"
+      ],
+      "acceptance": [
+        "核对本轮统一后的文档；角色ID只读当前合同",
+        "清除活动任务中的旧阶段指令，不重新安装现有工具"
+      ],
+      "evidence_paths": [
+        "delivery/next_cycle/T0/active_spec_index.json (sha256 a6700870da1e0c72fb6bebd87650c4e16d2bdb3156d6e93b7ec18dbd1201a51b)",
+        "EDITABLE_ART_RESEARCH.md (post-P01 sha256 454a31b649ddb4b719ba5db43cb160cb225aae63a20533c92048caf9e8086150；补角色换源横幅，正文未删改)"
+      ],
+      "commands_run": [
+        "grep 291|原创信使|原创 across root *.md → 15份文档分类：clean/retirement_self_reference/fixed_in_p01（结果记录于active_spec_index.json stale_reference_scan）",
+        "sha256sum EDITABLE_ART_RESEARCH.md delivery/next_cycle/T0/active_spec_index.json → exit 0",
+        "python json.load active_spec_index.json → json_ok (15 scan results)"
+      ],
+      "actual_exit_codes": [0, 0, 0],
+      "self_check_note": "角色ID唯一读取harness_contract.json locked_sources/character_source(1015_aglna2)；EDITABLE_ART_RESEARCH.md补横幅降级291表述为调研历史；rubric.json/harness_contract.json/工具脚本未改（vNext迁移属P02）；审查状态self_check_only_not_reviewed，不替代独立审核",
+      "related_defects": [
+        "R10"
+      ],
+      "attempts": 1,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "P02",
+      "title": "实现技术/视觉/行为/放行状态及问题迁移",
+      "phase": "规则",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "P01"
+      ],
+      "status": "done",
+      "inputs": [
+        "NEXT_ITERATION_PLAN.md",
+        "art_review/reports/independent_20261024/REPORT.md"
+      ],
+      "outputs": [
+        "delivery/next_cycle/T0/rule_migration.md",
+        "art_review/vnext/asset_status.schema.json",
+        "tools/art_gate/migrate_catalog.py"
+      ],
+      "acceptance": [
+        "技术自检不能变视觉pass；未解major禁止released",
+        "旧冻结目录保留，迁移到新路径，非空历史问题不误判"
+      ],
+      "evidence_paths": [
+        "art_review/vnext/asset_status.schema.json (sha256 d9064ede2e34a6b1b10cf75d0b3b635fb119a52843a820a5f0a775be358a802b)",
+        "art_review/vnext/asset_status_migrated.json (sha256 e63e573fa7a78af8f027160dc8a9d749baf42468551594c888a09e5cdf3aee65; items=47 rework=6 blocked=7 package=blocked)",
+        "tools/art_gate/migrate_catalog.py (sha256 a94e8b128ee2a6cae470f8857c14f11afd309784c45700dc7930404315918232)",
+        "delivery/next_cycle/T0/rule_migration.md (sha256 c011c04596a35010f68323cf53eb47a079f0d4256abe7319dd78f34de44061c6)"
+      ],
+      "commands_run": [
+        "python tools/art_gate/migrate_catalog.py → exit 0 (items=47 rework=6 blocked=7)",
+        "sha256sum -c 前后两次校验 art/full/art_complete_catalog.json 与 reviews → OK (旧冻结目录未被改动)",
+        "负向测试 --out art/full/vnext_should_fail.json → 拒绝 exit 3 (输出强制限于art_review/vnext/)",
+        "check_invariants 合成违例(visual pass + blocked无issue) → 全部捕获",
+        "vnext_effective=false；rubric.json/harness_contract.json/tools/art_harness.py 未改（P03+任务）"
+      ],
+      "actual_exit_codes": [0, 0, 3, 0],
+      "self_check_note": "迁移永不输出visual pass/released；47项historical_notes原文保留不参与放行；阻断仅来自independent_20261024未解blocking/major；审查状态self_check_only_not_reviewed，vNext门禁效力待独立审核确认",
+      "related_defects": [
+        "R08",
+        "R10"
+      ],
+      "attempts": 1,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "P03",
+      "title": "实现样板前序批准与扩批依赖",
+      "phase": "规则",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "P02"
+      ],
+      "status": "done",
+      "inputs": [
+        "NEXT_ITERATION_PLAN.md",
+        "art_review/reports/independent_20261024/REPORT.md"
+      ],
+      "outputs": [
+        "tools/art_harness.py",
+        "art_review/vnext/harness_contract.json",
+        "art_review/vnext/stage_certificate.schema.json"
+      ],
+      "acceptance": [
+        "prepare可保存draft；放行必须有真实前序证书",
+        "布尔previous_passed或伪造证书不能放行"
+      ],
+      "evidence_paths": [
+        "delivery/next_cycle/T0/p03_selfcheck.json (12步链路自检+6项拒绝路径全部符合预期)",
+        "tools/art_harness.py (sha256 15efc535…633e0；旧版本保留于tools/art_gate/legacy/art_harness_pre_certificate.py sha256 c12d3d97…984)",
+        "art_review/vnext/harness_contract.json (1.4.0-draft, vnext_effective=false, sha256 c2a581a8…2519)",
+        "art_review/vnext/stage_certificate.schema.json (sha256 bc7f71d1…ca2d)",
+        "delivery/next_cycle/T0/p03_chain_test.py (可复跑自检脚本)"
+      ],
+      "commands_run": [
+        "python -X utf8 tools/test_art_harness.py → exit 0 (25/25 回归通过)",
+        "python -X utf8 delivery/next_cycle/T0/p03_chain_test.py → exit 0 (draft保存/attest/certify/链式verify接受；伪造签名、布尔dependencies、缺证书、无密钥、缺前序证书全部exit 2拒绝)",
+        "py_compile tools/art_harness.py → OK"
+      ],
+      "actual_exit_codes": [0, 0, 0],
+      "self_check_note": "证书链仅由外部控制器密钥可验证，制作环境无密钥时失败关闭；自检用临时合成密钥与夹具，未生成任何真实批准；1.3.0合同/rubric未改，vNext合同为vnext/下草案待独立审核确认",
+      "related_defects": [
+        "R08"
+      ],
+      "attempts": 1,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "P04",
+      "title": "实现源/导出/构建/截图绑定与失效",
+      "phase": "规则",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "P02"
+      ],
+      "status": "todo",
+      "inputs": [
+        "NEXT_ITERATION_PLAN.md",
+        "art_review/reports/independent_20261024/REPORT.md"
+      ],
+      "outputs": [
+        "art_review/vnext/capture_binding.schema.json",
+        "tools/art_gate/check_bindings.py"
+      ],
+      "acceptance": [
+        "每份采集记录构建、source/export/camera/hash与后端",
+        "更新样板基线使受影响旧批准失效，单道具改动只重审相关依赖"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "P05",
+      "title": "将Q01-Q09检查接入审核合同",
+      "phase": "规则",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "P03",
+        "P04"
+      ],
+      "status": "todo",
+      "inputs": [
+        "NEXT_ITERATION_PLAN.md",
+        "art_review/reports/independent_20261024/REPORT.md"
+      ],
+      "outputs": [
+        "art_review/vnext/quality_checks.json",
+        "art_review/vnext/behavior_results.schema.json",
+        "art_review/vnext/review_template.json"
+      ],
+      "acceptance": [
+        "缺遮挡/暂停/空满重置/实际viewport证据保持pending或fail",
+        "不得要求单一贴图方案；明确统计预警与真实硬失败的区别"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "P06",
+      "title": "改进audit汇总与CLI/PowerShell状态",
+      "phase": "规则",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "P05"
+      ],
+      "status": "todo",
+      "inputs": [
+        "NEXT_ITERATION_PLAN.md",
+        "art_review/reports/independent_20261024/REPORT.md"
+      ],
+      "outputs": [
+        "tools/art_harness.py",
+        "run-art-harness.ps1",
+        "HARNESS.md"
+      ],
+      "acceptance": [
+        "返回目标stage最新独立review、所有failed_checks与可执行next_action",
+        "组合合同hash与退出码定义一致；不只显示历史291检查"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "P07",
+      "title": "新增失败夹具并运行规则回归",
+      "phase": "规则",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "P06"
+      ],
+      "status": "todo",
+      "inputs": [
+        "NEXT_ITERATION_PLAN.md",
+        "art_review/reports/independent_20261024/REPORT.md"
+      ],
+      "outputs": [
+        "delivery/next_cycle/T0/gate_regression.json",
+        "tools/test_art_harness.py"
+      ],
+      "acceptance": [
+        "覆盖无前序、假批准、技术冒充视觉、未解major、旧构建截图、未知状态、允许N/A、缺控制器、包装器返回",
+        "使用临时夹具和测试密钥，绝不对生产包自签"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "P08",
+      "title": "独立审核规则差异与迁移",
+      "phase": "规则审核",
+      "scope": "art_required",
+      "owner_role": "independent_reviewer",
+      "depends_on": [
+        "P07"
+      ],
+      "status": "todo",
+      "inputs": [
+        "NEXT_ITERATION_PLAN.md",
+        "art_review/reports/independent_20261024/REPORT.md"
+      ],
+      "outputs": [
+        "delivery/next_cycle/T0/independent_rule_review.json"
+      ],
+      "acceptance": [
+        "逐项核查实际代码与夹具，不只读报告",
+        "门槛不降低，旧包仍可审计；未通过返回P02-P07返修"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "K01",
+      "title": "正式GameCamera和InspectionCamera分开",
+      "phase": "局部技术修复",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "P00"
+      ],
+      "status": "done",
+      "inputs": [
+        "NEXT_ITERATION_PLAN.md",
+        "art_review/reports/independent_20261024/REPORT.md"
+      ],
+      "outputs": [
+        "delivery/next_cycle/T1/camera.json",
+        "demo/assets/scripts/CourtyardBootstrap.ts"
+      ],
+      "acceptance": [
+        "正式人物初始约86-130px，按实际可见边界度量；不得单纯放大UI小人",
+        "同一机位可复现，地图边缘无空洞"
+      ],
+      "evidence_paths": [
+        "delivery/next_cycle/T1/camera.json",
+        "delivery/next_cycle/T1/anchor_results.json",
+        "delivery/next_cycle/T1/viewport_results.json"
+      ],
+      "commands_run": [
+        "node delivery/next_cycle/_t1_capture.js"
+      ],
+      "actual_exit_codes": [
+        0
+      ],
+      "related_defects": [
+        "R02"
+      ],
+      "attempts": 1,
+      "blocker": null,
+      "resume_action": "px=97.84 in 86-130 at spawn; game follow + inspect modes recorded in camera.json; same rig reproducible in captures",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "K02",
+      "title": "主角/NPC/世界FX进入世界深度",
+      "phase": "局部技术修复",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "K01"
+      ],
+      "status": "done",
+      "inputs": [
+        "NEXT_ITERATION_PLAN.md",
+        "art_review/reports/independent_20261024/REPORT.md"
+      ],
+      "outputs": [
+        "demo/assets/scripts/CourtyardBootstrap.ts",
+        "delivery/next_cycle/T1/occlusion.mp4",
+        "delivery/next_cycle/T1/depth_method.md"
+      ],
+      "acceptance": [
+        "树/栏杆前后连续移动遮挡正确",
+        "优先现有3.8.8能力，后备原Spine真实RT；非全屏UI叠加"
+      ],
+      "evidence_paths": [
+        "delivery/next_cycle/T1/depth_method.md",
+        "delivery/next_cycle/T1/occlusion_front.png",
+        "delivery/next_cycle/T1/occlusion_behind.png",
+        "delivery/next_cycle/T1/occlusion_results.json",
+        "delivery/next_cycle/_final_npc_crop.png"
+      ],
+      "commands_run": [
+        "node delivery/next_cycle/_final_check.js"
+      ],
+      "actual_exit_codes": [
+        0
+      ],
+      "related_defects": [
+        "R01"
+      ],
+      "attempts": 1,
+      "blocker": null,
+      "resume_action": "occlusion.mp4 substituted by PNG pair+JSON per output_policy; NPC/FX world quads verified upright vs source pose",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "K03",
+      "title": "固定脚底锚点与原动画尺度",
+      "phase": "局部技术修复",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "K02"
+      ],
+      "status": "done",
+      "inputs": [
+        "NEXT_ITERATION_PLAN.md",
+        "art_review/reports/independent_20261024/REPORT.md"
+      ],
+      "outputs": [
+        "delivery/next_cycle/T1/anchor_results.json",
+        "delivery/next_cycle/T1/idle_move.mp4"
+      ],
+      "acceptance": [
+        "不每帧按骨骼极值改变人物缩放；不裁切漂移",
+        "原动作/附件不换，脚底阴影随实际锚点"
+      ],
+      "evidence_paths": [
+        "delivery/next_cycle/T1/anchor_results.json",
+        "delivery/next_cycle/T1/idle_move.gif",
+        "delivery/next_cycle/T1/idle_move_timestamps.json"
+      ],
+      "commands_run": [
+        "node delivery/next_cycle/_t1_capture.js"
+      ],
+      "actual_exit_codes": [
+        0
+      ],
+      "related_defects": [
+        "R01"
+      ],
+      "attempts": 1,
+      "blocker": null,
+      "resume_action": "idle_move.mp4 substituted by GIF+timestamps per output_policy; fixed 1.75m quad, no per-frame bone scaling; contact shadow follows anchor",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "K04",
+      "title": "统一输入锁并核对正常/暂停/对白/恢复",
+      "phase": "局部技术修复",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "P00"
+      ],
+      "status": "done",
+      "inputs": [
+        "NEXT_ITERATION_PLAN.md",
+        "art_review/reports/independent_20261024/REPORT.md"
+      ],
+      "outputs": [
+        "delivery/next_cycle/T1/input_lock.mp4",
+        "delivery/next_cycle/T1/behavior_results.json"
+      ],
+      "acceptance": [
+        "键盘/触控均有正常移动正向对照；锁定时位移<=1e-3",
+        "进入清keys/joy/manualMoving，恢复只响应新输入"
+      ],
+      "evidence_paths": [
+        "delivery/next_cycle/T1/behavior_results.json",
+        "delivery/next_cycle/T1/input_lock_results.json",
+        "delivery/next_cycle/T1/input_lock_pause_on.png",
+        "delivery/next_cycle/T1/input_lock_pause_key.png",
+        "delivery/next_cycle/T1/dialogue_lock.png"
+      ],
+      "commands_run": [
+        "node delivery/next_cycle/_t1_capture.js",
+        "node delivery/next_cycle/_t1_supplement.js"
+      ],
+      "actual_exit_codes": [
+        0,
+        0
+      ],
+      "related_defects": [
+        "R05"
+      ],
+      "attempts": 1,
+      "blocker": null,
+      "resume_action": "paused/dialogue displacement 0 (<=1e-3); keyboard positive control delta 0.45; resume responds to new input (delta 0.45)",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "K05",
+      "title": "留言板真实empty/full/reset与FX回收",
+      "phase": "局部技术修复",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "P00"
+      ],
+      "status": "done",
+      "inputs": [
+        "NEXT_ITERATION_PLAN.md",
+        "art_review/reports/independent_20261024/REPORT.md"
+      ],
+      "outputs": [
+        "delivery/next_cycle/T1/board_transition.mp4",
+        "delivery/next_cycle/T1/board_empty.png",
+        "delivery/next_cycle/T1/board_full.png",
+        "delivery/next_cycle/T1/board_reset.png",
+        "delivery/next_cycle/T1/board_states.json"
+      ],
+      "acceptance": [
+        "真实三卡节点切换；恢复初始不留残影",
+        "无需整条任务逻辑，不能用完成文字或静态FX贴片替代"
+      ],
+      "evidence_paths": [
+        "delivery/next_cycle/T1/board_states.json",
+        "delivery/next_cycle/T1/board_empty.png",
+        "delivery/next_cycle/T1/board_A.png",
+        "delivery/next_cycle/T1/board_B.png",
+        "delivery/next_cycle/T1/board_full.png",
+        "delivery/next_cycle/T1/board_reset.png",
+        "delivery/next_cycle/T1/board_transition.gif",
+        "delivery/next_cycle/T1/board_transition_timestamps.json"
+      ],
+      "commands_run": [
+        "node delivery/next_cycle/_t1_capture.js",
+        "node delivery/next_cycle/_t1_supplement.js"
+      ],
+      "actual_exit_codes": [
+        0,
+        0
+      ],
+      "related_defects": [
+        "R07"
+      ],
+      "attempts": 1,
+      "blocker": null,
+      "resume_action": "real card node actives probed per state (0/1/2/3/0) all pass; board_transition.mp4 substituted by GIF+timestamps",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "K06",
+      "title": "真实viewport与安全区/提示检查",
+      "phase": "局部技术修复",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "P00"
+      ],
+      "status": "done",
+      "inputs": [
+        "NEXT_ITERATION_PLAN.md",
+        "art_review/reports/independent_20261024/REPORT.md"
+      ],
+      "outputs": [
+        "delivery/next_cycle/T1/viewport_results.json",
+        "delivery/next_cycle/T1/viewport_1280x720.png",
+        "delivery/next_cycle/T1/viewport_720x1280.png",
+        "delivery/next_cycle/T1/viewport_wide.png"
+      ],
+      "acceptance": [
+        "竖屏实际resize，不用横屏示意图替代",
+        "正文可读，Toast不压HUD，未知手机安全区保持未测"
+      ],
+      "evidence_paths": [
+        "delivery/next_cycle/T1/viewport_results.json",
+        "delivery/next_cycle/T1/viewport_1280x720.png",
+        "delivery/next_cycle/T1/viewport_720x1280.png",
+        "delivery/next_cycle/T1/viewport_1600x720.png",
+        "delivery/next_cycle/T1/viewport_portrait_toast_720x1280.png"
+      ],
+      "commands_run": [
+        "node delivery/next_cycle/_t1_capture.js",
+        "node delivery/next_cycle/_t1_supplement.js"
+      ],
+      "actual_exit_codes": [
+        0,
+        0
+      ],
+      "related_defects": [
+        "R09"
+      ],
+      "attempts": 1,
+      "blocker": null,
+      "resume_action": "real engine resize: canvas buffers 1280x720 / 720x1280 / 1600x720; portrait toast readable, no HUD overlap; unknown-phone safe-area remains untested by scope",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "K07",
+      "title": "导出/运行时面数drawcall统计",
+      "phase": "局部技术修复",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "P00"
+      ],
+      "status": "done",
+      "inputs": [
+        "NEXT_ITERATION_PLAN.md",
+        "art_review/reports/independent_20261024/REPORT.md"
+      ],
+      "outputs": [
+        "delivery/next_cycle/T1/performance_results.json"
+      ],
+      "acceptance": [
+        "区分源基础网格/修改器后/GLB存储/运行时可见提交",
+        "记录最终hash/机位/后端/设备/时段；不得沿用92976旧值"
+      ],
+      "evidence_paths": [
+        "delivery/next_cycle/T1/performance_results.json"
+      ],
+      "commands_run": [
+        "node tools/engine_capture.js",
+        "node tools/engine_viewer_capture.js",
+        "node delivery/next_cycle/_t1_capture.js"
+      ],
+      "actual_exit_codes": [
+        0,
+        0,
+        0
+      ],
+      "related_defects": [
+        "R06"
+      ],
+      "attempts": 1,
+      "blocker": null,
+      "resume_action": "GLB storage decode 132040 tris/175 prims/24 mats/0 textures (sha 00483c58); runtime per-scope draws/tris recorded with backend/device/time; 92976 old value corrected",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "K08",
+      "title": "验证最小自有地图编辑/重导出能力M0",
+      "phase": "局部技术修复",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "P00"
+      ],
+      "status": "done",
+      "inputs": [
+        "NEXT_ITERATION_PLAN.md",
+        "art_review/reports/independent_20261024/REPORT.md"
+      ],
+      "outputs": [
+        "delivery/next_cycle/T1/source_edit_reexport.mp4",
+        "delivery/next_cycle/T1/map_project.json",
+        "delivery/next_cycle/T1/export_recipe.json"
+      ],
+      "acceptance": [
+        "改单件或布局→保存重开→重导出→Cocos一致",
+        "原生源/交换布局/派生场景职责清楚，受管实例不重复，不重写无关源"
+      ],
+      "evidence_paths": [
+        "delivery/next_cycle/T1/source_edit_before.png",
+        "delivery/next_cycle/T1/source_edit_after.png",
+        "delivery/next_cycle/T1/map_project.json",
+        "delivery/next_cycle/T1/export_recipe.json"
+      ],
+      "commands_run": [
+        "tools/blender/build_map001.py rebuild (exit 0)",
+        "cp GLB to demo/assets",
+        "CocosCreator --build (log build_cycle2_k08b.out.txt)",
+        "bench reverted and rebuilt (exit 0, hash 00483c58 restored)"
+      ],
+      "actual_exit_codes": [
+        0,
+        0,
+        36,
+        0
+      ],
+      "related_defects": [],
+      "attempts": 1,
+      "blocker": null,
+      "resume_action": "bench z -4.4->-2.4 edit survived full cycle: Blender->GLB hash change->layout.json->Cocos parity (before/after PNG pair per output_policy); test edit reverted to reviewed position afterwards",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "V01",
+      "title": "重做主树冠与分枝层次",
+      "phase": "风格样板",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "K01"
+      ],
+      "status": "done",
+      "inputs": [
+        "NEXT_ITERATION_PLAN.md",
+        "art_review/reports/independent_20261024/REPORT.md"
+      ],
+      "outputs": [
+        "art/iterations/cycle_02/ENV006/source_export_index.json",
+        "delivery/next_cycle/T2/tree_before_after.png"
+      ],
+      "acceptance": [
+        "先大/中叶簇与轮廓，再少量叶卡；禁止球堆/稀疏碎片",
+        "保留通路和树冠遮挡分组"
+      ],
+      "evidence_paths": [
+        "art/iterations/cycle_02/ENV006/source_export_index.json",
+        "delivery/next_cycle/T2/tree_before_after.png",
+        "delivery/next_cycle/T2/tree_crown_before.png",
+        "delivery/next_cycle/T2/tree_crown_after.png",
+        "delivery/next_cycle/T2/tree_before_formal.png",
+        "delivery/next_cycle/T2/tree_after_formal.png"
+      ],
+      "commands_run": [
+        "blender.exe --background --factory-startup --python tools/blender/build_env_courtyard.py -- tree (exit 0, tris=9844)",
+        "blender.exe --background --factory-startup --python tools/blender/build_map001.py (exit 0)",
+        "cp art/full/source/layout/MAP001_courtyard.glb demo/assets/resources/models/ (sha c01dd774)",
+        "CocosCreator.exe --project demo --build configPath=demo/build-config-web-desktop.json (exit 0)",
+        "node delivery/next_cycle/_v01_shots.js before|after ; node delivery/next_cycle/_v01_crown.js crown_before|crown_after"
+      ],
+      "actual_exit_codes": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "related_defects": [
+        "R03"
+      ],
+      "attempts": 1,
+      "blocker": null,
+      "resume_action": "",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "V02",
+      "title": "石/木/金属在引擎中建立材质分离",
+      "phase": "风格样板",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "K01"
+      ],
+      "status": "done",
+      "inputs": [
+        "NEXT_ITERATION_PLAN.md",
+        "art_review/reports/independent_20261024/REPORT.md"
+      ],
+      "outputs": [
+        "art/iterations/cycle_02/materials/source_export_index.json",
+        "delivery/next_cycle/T2/material_closeups.png"
+      ],
+      "acceptance": [
+        "石暖灰、木纹沿木条、金属有受控高光",
+        "贴图/程序材质均可，但必须是Cocos实际效果"
+      ],
+      "evidence_paths": [
+        "art/iterations/cycle_02/materials/source_export_index.json",
+        "delivery/next_cycle/T2/material_comparison.png",
+        "delivery/next_cycle/T2/mat_after_bench.png",
+        "delivery/next_cycle/T2/mat_after_paving.png",
+        "delivery/next_cycle/T2/mat_formal_after.png"
+      ],
+      "commands_run": [
+        "python tools/textures/make_procedural_textures.py (exit 0)",
+        "blender.exe --background --factory-startup --python tools/blender/build_map001.py (exit 0, UVs baked 82 meshes)",
+        "cp art/full/source/layout/MAP001_courtyard.glb demo/assets/resources/models/ (sha 3e712dae)",
+        "CocosCreator.exe --project demo --build configPath=demo/build-config-web-desktop.json (exit 0)",
+        "node delivery/next_cycle/_v02_shots.js before|after ; node delivery/next_cycle/_v02_composite.js"
+      ],
+      "actual_exit_codes": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "related_defects": [
+        "R04"
+      ],
+      "attempts": 1,
+      "blocker": null,
+      "resume_action": "",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "V03",
+      "title": "花坛/灌木/干草与落叶密度",
+      "phase": "风格样板",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "V01"
+      ],
+      "status": "done",
+      "inputs": [
+        "NEXT_ITERATION_PLAN.md",
+        "art_review/reports/independent_20261024/REPORT.md"
+      ],
+      "outputs": [
+        "art/iterations/cycle_02/plants/source_export_index.json",
+        "delivery/next_cycle/T2/plant_group.png"
+      ],
+      "acceptance": [
+        "花坛不空，层次成簇，路中留白",
+        "固定种子，不随机改变正式资产身份"
+      ],
+      "evidence_paths": [
+        "art/iterations/cycle_02/plants/source_export_index.json",
+        "delivery/next_cycle/T2/plant_group.png",
+        "delivery/next_cycle/T2/plant_planter_before.png",
+        "delivery/next_cycle/T2/plant_planter_after.png",
+        "delivery/next_cycle/T2/plant_formal_after.png"
+      ],
+      "commands_run": [
+        "blender.exe --background --factory-startup --python tools/blender/build_env_courtyard.py -- shrub_a|shrub_b|dry_grass (exit 0)",
+        "blender.exe --background --factory-startup --python tools/blender/build_map001.py (exit 0, 139 instances)",
+        "cp art/full/source/layout/MAP001_courtyard.glb demo/assets/resources/models/ (sha d9d86eae)",
+        "CocosCreator.exe --project demo --build configPath=demo/build-config-web-desktop.json (exit 0)",
+        "node delivery/next_cycle/_v03_planter.js planter_before|planter_after ; node delivery/next_cycle/_v03_formal.js ; node delivery/next_cycle/_v03_composite.js"
+      ],
+      "actual_exit_codes": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "related_defects": [
+        "R03"
+      ],
+      "attempts": 1,
+      "blocker": null,
+      "resume_action": "",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "V04",
+      "title": "锁曝光并校准暖光/冷灰填充",
+      "phase": "风格样板",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "V02"
+      ],
+      "status": "done",
+      "inputs": [
+        "NEXT_ITERATION_PLAN.md",
+        "art_review/reports/independent_20261024/REPORT.md"
+      ],
+      "outputs": [
+        "delivery/next_cycle/T2/lighting_profile.json",
+        "delivery/next_cycle/T2/lighting_comparison.png"
+      ],
+      "acceptance": [
+        "不靠全局橙滤镜、DOF掩盖粗简",
+        "接触阴影/方向关系成立"
+      ],
+      "evidence_paths": [
+        "delivery/next_cycle/T2/lighting_profile.json",
+        "delivery/next_cycle/T2/lighting_comparison.png",
+        "delivery/next_cycle/T2/mat_light_before_paving.png",
+        "delivery/next_cycle/T2/mat_light_after2_paving.png",
+        "delivery/next_cycle/T2/mat_light_after2_bench.png"
+      ],
+      "commands_run": [
+        "node delivery/next_cycle/_v02_shots.js light_before|light_after|light_after2 (fixed poses)",
+        "CocosCreator.exe --project demo --build configPath=demo/build-config-web-desktop.json (exit 0, twice: SOFT_2X then SOFT_4X iteration)",
+        "OpenCV shadow-region measurement (lit R-B 24.4->25.7, shadow R-B ~22.9, ratio 0.874->0.869)"
+      ],
+      "actual_exit_codes": [
+        0,
+        0,
+        0
+      ],
+      "related_defects": [
+        "R04"
+      ],
+      "attempts": 1,
+      "blocker": null,
+      "resume_action": "",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "V05",
+      "title": "纸片/图标/对白UI局部精修",
+      "phase": "风格样板",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "K01"
+      ],
+      "status": "done",
+      "inputs": [
+        "NEXT_ITERATION_PLAN.md",
+        "art_review/reports/independent_20261024/REPORT.md"
+      ],
+      "outputs": [
+        "art/iterations/cycle_02/ui/source_export_index.json",
+        "delivery/next_cycle/T2/ui_comparison.png"
+      ],
+      "acceptance": [
+        "保留组件/中文，轻薄透景与少量涂鸦",
+        "修Toast重叠和重复厚边框"
+      ],
+      "evidence_paths": [
+        "delivery/next_cycle/T2/ui_toast_landscape_after.png",
+        "delivery/next_cycle/T2/ui_toast_border_zoom.png",
+        "delivery/next_cycle/T2/ui_toast_portrait_after.png",
+        "delivery/next_cycle/T2/ui_dialogue_after.png",
+        "delivery/next_cycle/T2/ui_comparison.png",
+        "art/iterations/cycle_02/ui/source_export_index.json"
+      ],
+      "commands_run": [
+        "node delivery/next_cycle/_v05_shots.js (Puppeteer capture after Toast y 180->130 and nine-slice inset 32->96 in CourtyardBootstrap.ts)",
+        "CocosCreator.exe --project demo --build configPath=demo/build-config-web-desktop.json (rebuild before capture)"
+      ],
+      "actual_exit_codes": [
+        0,
+        0
+      ],
+      "related_defects": [
+        "R09"
+      ],
+      "attempts": 1,
+      "blocker": null,
+      "resume_action": "",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "V06",
+      "title": "冻结正式同屏样板及同源证据",
+      "phase": "风格样板",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "P08",
+        "K01",
+        "K02",
+        "K03",
+        "K04",
+        "K05",
+        "K06",
+        "K07",
+        "K08",
+        "V01",
+        "V02",
+        "V03",
+        "V04",
+        "V05"
+      ],
+      "status": "todo",
+      "inputs": [
+        "NEXT_ITERATION_PLAN.md",
+        "art_review/reports/independent_20261024/REPORT.md"
+      ],
+      "outputs": [
+        "delivery/next_cycle/T2/sample_manifest.json",
+        "delivery/next_cycle/T2/sample_no_ui.png",
+        "delivery/next_cycle/T2/sample_hud.png",
+        "delivery/next_cycle/T2/sample_dialogue.png",
+        "delivery/next_cycle/T2/reference_comparison.png"
+      ],
+      "acceptance": [
+        "同一正式机位，标记参考/候选，不把参考像素合成进候选",
+        "场景真实含石路/树/长椅/花坛/角色/NPC/UI；构建ID与capture绑定"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "V07",
+      "title": "制作方完成样板预检和问题表",
+      "phase": "风格样板",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "V06"
+      ],
+      "status": "todo",
+      "inputs": [
+        "NEXT_ITERATION_PLAN.md",
+        "art_review/reports/independent_20261024/REPORT.md"
+      ],
+      "outputs": [
+        "delivery/next_cycle/T2/producer_check.json"
+      ],
+      "acceptance": [
+        "逐项Q检查和四卡自评都有证据；真实缺陷如实保留",
+        "自评不填写独立审核身份，不自动扩批"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "V08",
+      "title": "独立复核正式样板",
+      "phase": "样板审核",
+      "scope": "art_required",
+      "owner_role": "independent_reviewer",
+      "depends_on": [
+        "V07"
+      ],
+      "status": "todo",
+      "inputs": [
+        "NEXT_ITERATION_PLAN.md",
+        "art_review/reports/independent_20261024/REPORT.md"
+      ],
+      "outputs": [
+        "delivery/next_cycle/T3/independent_review.json",
+        "delivery/next_cycle/T3/defects.json"
+      ],
+      "acceptance": [
+        "自己看原尺寸图、重开代表源、复现遮挡/输入/重置",
+        "各卡>=85、核心>=3、任维>=2，开放blocking/major为0，否则返修关联任务"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "V09",
+      "title": "控制器批准样板与批量基线",
+      "phase": "样板放行",
+      "scope": "art_required",
+      "owner_role": "controller",
+      "depends_on": [
+        "V08"
+      ],
+      "status": "todo",
+      "inputs": [
+        "NEXT_ITERATION_PLAN.md",
+        "art_review/reports/independent_20261024/REPORT.md"
+      ],
+      "outputs": [
+        "delivery/next_cycle/T3/sample_release_certificate.json"
+      ],
+      "acceptance": [
+        "真实外部批准绑定当前manifest/review/合同与风格基线",
+        "无密钥/外部批准则waiting_review，不能自行生成密钥或改状态"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "A-MAP001",
+      "title": "复核/返修并交付：完整秋庭地图",
+      "phase": "47组全量交付",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "V09",
+        "A-ENV001",
+        "A-ENV002",
+        "A-ENV003",
+        "A-ENV004",
+        "A-ENV005",
+        "A-ENV006",
+        "A-ENV007",
+        "A-ENV008",
+        "A-ENV009",
+        "A-ENV010",
+        "A-ENV011",
+        "A-ENV012",
+        "A-PROP001",
+        "A-PROP002",
+        "A-PROP003",
+        "A-PROP004",
+        "A-PROP005",
+        "A-PROP006",
+        "A-MAT001",
+        "A-MAT002",
+        "A-MAT003",
+        "A-MAT004",
+        "A-MAT005",
+        "A-LOOK001"
+      ],
+      "status": "todo",
+      "inputs": [
+        "批准的样板基线",
+        "planning/execution/asset_briefs.json",
+        "art/full/source/layout/MAP001_courtyard.blend",
+        "art/full/source/layout/MAP001_courtyard.glb",
+        "art/full/source/layout/layout.json",
+        "art/full/engine_viewer_state_map.json",
+        "art/full/art_complete_catalog.json（仅作为既有源索引，非本轮批准）"
+      ],
+      "outputs": [
+        "art/iterations/cycle_02/MAP001/source_export_index.json",
+        "art/iterations/cycle_02/MAP001/previews/",
+        "art/iterations/cycle_02/MAP001/item_review.json"
+      ],
+      "acceptance": [
+        "地图整体、路线、场景边界、全图摆放与遮挡规则",
+        "已有合格内容可复用；先核对当前hash/样板基线，只修受影响部分",
+        "技术/视觉/行为分别登记；不得直接沿用producer pass当独立pass",
+        "旧冻结包内文件只读；复用时登记原hash，新修改保存cycle_02派生路径，不覆盖原件"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "A-ENV001",
+      "title": "复核/返修并交付：石铺地模块",
+      "phase": "47组全量交付",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "V09",
+        "A-MAT001",
+        "A-MAT002",
+        "A-MAT003",
+        "A-MAT004",
+        "A-MAT005"
+      ],
+      "status": "todo",
+      "inputs": [
+        "批准的样板基线",
+        "planning/execution/asset_briefs.json",
+        "art/full/source/environment/ENV001_stone_paving.blend",
+        "art/full/source/environment/ENV001_stone_paving.glb",
+        "tools/blender/env001_stone_paving.py",
+        "art/full/engine_viewer_state_map.json",
+        "art/full/art_complete_catalog.json（仅作为既有源索引，非本轮批准）"
+      ],
+      "outputs": [
+        "art/iterations/cycle_02/ENV001/source_export_index.json",
+        "art/iterations/cycle_02/ENV001/previews/",
+        "art/iterations/cycle_02/ENV001/item_review.json"
+      ],
+      "acceptance": [
+        "可平铺纹理、砖缝与轻磨损",
+        "已有合格内容可复用；先核对当前hash/样板基线，只修受影响部分",
+        "技术/视觉/行为分别登记；不得直接沿用producer pass当独立pass",
+        "旧冻结包内文件只读；复用时登记原hash，新修改保存cycle_02派生路径，不覆盖原件"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "A-ENV002",
+      "title": "复核/返修并交付：路缘模块",
+      "phase": "47组全量交付",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "V09",
+        "A-MAT001",
+        "A-MAT002",
+        "A-MAT003",
+        "A-MAT004",
+        "A-MAT005"
+      ],
+      "status": "todo",
+      "inputs": [
+        "批准的样板基线",
+        "planning/execution/asset_briefs.json",
+        "art/full/source/environment/ENV002_curb.blend",
+        "art/full/source/environment/ENV002_curb.glb",
+        "art/full/engine_viewer_state_map.json",
+        "art/full/art_complete_catalog.json（仅作为既有源索引，非本轮批准）"
+      ],
+      "outputs": [
+        "art/iterations/cycle_02/ENV002/source_export_index.json",
+        "art/iterations/cycle_02/ENV002/previews/",
+        "art/iterations/cycle_02/ENV002/item_review.json"
+      ],
+      "acceptance": [
+        "与地面和花坛拼接",
+        "已有合格内容可复用；先核对当前hash/样板基线，只修受影响部分",
+        "技术/视觉/行为分别登记；不得直接沿用producer pass当独立pass",
+        "旧冻结包内文件只读；复用时登记原hash，新修改保存cycle_02派生路径，不覆盖原件"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "A-ENV003",
+      "title": "复核/返修并交付：矮墙模块",
+      "phase": "47组全量交付",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "V09",
+        "A-MAT001",
+        "A-MAT002",
+        "A-MAT003",
+        "A-MAT004",
+        "A-MAT005"
+      ],
+      "status": "todo",
+      "inputs": [
+        "批准的样板基线",
+        "planning/execution/asset_briefs.json",
+        "art/full/source/environment/ENV003_low_wall.blend",
+        "art/full/source/environment/ENV003_low_wall.glb",
+        "art/full/engine_viewer_state_map.json",
+        "art/full/art_complete_catalog.json（仅作为既有源索引，非本轮批准）"
+      ],
+      "outputs": [
+        "art/iterations/cycle_02/ENV003/source_export_index.json",
+        "art/iterations/cycle_02/ENV003/previews/",
+        "art/iterations/cycle_02/ENV003/item_review.json"
+      ],
+      "acceptance": [
+        "地图边缘封闭、简化阻挡",
+        "已有合格内容可复用；先核对当前hash/样板基线，只修受影响部分",
+        "技术/视觉/行为分别登记；不得直接沿用producer pass当独立pass",
+        "旧冻结包内文件只读；复用时登记原hash，新修改保存cycle_02派生路径，不覆盖原件"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "A-ENV004",
+      "title": "复核/返修并交付：栏杆模块",
+      "phase": "47组全量交付",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "V09",
+        "A-MAT001",
+        "A-MAT002",
+        "A-MAT003",
+        "A-MAT004",
+        "A-MAT005"
+      ],
+      "status": "todo",
+      "inputs": [
+        "批准的样板基线",
+        "planning/execution/asset_briefs.json",
+        "art/full/source/environment/ENV004_railing.blend",
+        "art/full/source/environment/ENV004_railing.glb",
+        "art/full/engine_viewer_state_map.json",
+        "art/full/art_complete_catalog.json（仅作为既有源索引，非本轮批准）"
+      ],
+      "outputs": [
+        "art/iterations/cycle_02/ENV004/source_export_index.json",
+        "art/iterations/cycle_02/ENV004/previews/",
+        "art/iterations/cycle_02/ENV004/item_review.json"
+      ],
+      "acceptance": [
+        "细节、接缝、碰撞代理",
+        "已有合格内容可复用；先核对当前hash/样板基线，只修受影响部分",
+        "技术/视觉/行为分别登记；不得直接沿用producer pass当独立pass",
+        "旧冻结包内文件只读；复用时登记原hash，新修改保存cycle_02派生路径，不覆盖原件"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "A-ENV005",
+      "title": "复核/返修并交付：边缘装饰台阶",
+      "phase": "47组全量交付",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "V09",
+        "A-MAT001",
+        "A-MAT002",
+        "A-MAT003",
+        "A-MAT004",
+        "A-MAT005"
+      ],
+      "status": "todo",
+      "inputs": [
+        "批准的样板基线",
+        "planning/execution/asset_briefs.json",
+        "art/full/source/environment/ENV005_steps.blend",
+        "art/full/source/environment/ENV005_steps.glb",
+        "art/full/engine_viewer_state_map.json",
+        "art/full/art_complete_catalog.json（仅作为既有源索引，非本轮批准）"
+      ],
+      "outputs": [
+        "art/iterations/cycle_02/ENV005/source_export_index.json",
+        "art/iterations/cycle_02/ENV005/previews/",
+        "art/iterations/cycle_02/ENV005/item_review.json"
+      ],
+      "acceptance": [
+        "仅景观、不新增楼层玩法",
+        "已有合格内容可复用；先核对当前hash/样板基线，只修受影响部分",
+        "技术/视觉/行为分别登记；不得直接沿用producer pass当独立pass",
+        "旧冻结包内文件只读；复用时登记原hash，新修改保存cycle_02派生路径，不覆盖原件"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "A-ENV006",
+      "title": "复核/返修并交付：秋日主树",
+      "phase": "47组全量交付",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "V09",
+        "A-MAT001",
+        "A-MAT002",
+        "A-MAT003",
+        "A-MAT004",
+        "A-MAT005"
+      ],
+      "status": "todo",
+      "inputs": [
+        "批准的样板基线",
+        "planning/execution/asset_briefs.json",
+        "art/full/source/environment/ENV006_autumn_tree.blend",
+        "art/full/source/environment/ENV006_autumn_tree.glb",
+        "art/full/engine_viewer_state_map.json",
+        "art/full/art_complete_catalog.json（仅作为既有源索引，非本轮批准）"
+      ],
+      "outputs": [
+        "art/iterations/cycle_02/ENV006/source_export_index.json",
+        "art/iterations/cycle_02/ENV006/previews/",
+        "art/iterations/cycle_02/ENV006/item_review.json"
+      ],
+      "acceptance": [
+        "主枝、叶簇、透空、遮挡处理",
+        "已有合格内容可复用；先核对当前hash/样板基线，只修受影响部分",
+        "技术/视觉/行为分别登记；不得直接沿用producer pass当独立pass",
+        "旧冻结包内文件只读；复用时登记原hash，新修改保存cycle_02派生路径，不覆盖原件"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "A-ENV007",
+      "title": "复核/返修并交付：中央环形花坛",
+      "phase": "47组全量交付",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "V09",
+        "A-MAT001",
+        "A-MAT002",
+        "A-MAT003",
+        "A-MAT004",
+        "A-MAT005"
+      ],
+      "status": "todo",
+      "inputs": [
+        "批准的样板基线",
+        "planning/execution/asset_briefs.json",
+        "art/full/source/environment/ENV007_ring_planter.blend",
+        "art/full/source/environment/ENV007_ring_planter.glb",
+        "art/full/engine_viewer_state_map.json",
+        "art/full/art_complete_catalog.json（仅作为既有源索引，非本轮批准）"
+      ],
+      "outputs": [
+        "art/iterations/cycle_02/ENV007/source_export_index.json",
+        "art/iterations/cycle_02/ENV007/previews/",
+        "art/iterations/cycle_02/ENV007/item_review.json"
+      ],
+      "acceptance": [
+        "主树底座与环形通路",
+        "已有合格内容可复用；先核对当前hash/样板基线，只修受影响部分",
+        "技术/视觉/行为分别登记；不得直接沿用producer pass当独立pass",
+        "旧冻结包内文件只读；复用时登记原hash，新修改保存cycle_02派生路径，不覆盖原件"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "A-ENV008",
+      "title": "复核/返修并交付：侧花坛",
+      "phase": "47组全量交付",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "V09",
+        "A-MAT001",
+        "A-MAT002",
+        "A-MAT003",
+        "A-MAT004",
+        "A-MAT005"
+      ],
+      "status": "todo",
+      "inputs": [
+        "批准的样板基线",
+        "planning/execution/asset_briefs.json",
+        "art/full/source/environment/ENV008_side_planter.blend",
+        "art/full/source/environment/ENV008_side_planter.glb",
+        "art/full/engine_viewer_state_map.json",
+        "art/full/art_complete_catalog.json（仅作为既有源索引，非本轮批准）"
+      ],
+      "outputs": [
+        "art/iterations/cycle_02/ENV008/source_export_index.json",
+        "art/iterations/cycle_02/ENV008/previews/",
+        "art/iterations/cycle_02/ENV008/item_review.json"
+      ],
+      "acceptance": [
+        "B点与站立区留白",
+        "已有合格内容可复用；先核对当前hash/样板基线，只修受影响部分",
+        "技术/视觉/行为分别登记；不得直接沿用producer pass当独立pass",
+        "旧冻结包内文件只读；复用时登记原hash，新修改保存cycle_02派生路径，不覆盖原件"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "A-ENV009",
+      "title": "复核/返修并交付：灌木A",
+      "phase": "47组全量交付",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "V09",
+        "A-MAT001",
+        "A-MAT002",
+        "A-MAT003",
+        "A-MAT004",
+        "A-MAT005"
+      ],
+      "status": "todo",
+      "inputs": [
+        "批准的样板基线",
+        "planning/execution/asset_briefs.json",
+        "art/full/source/plants/ENV009_shrub_a.blend",
+        "art/full/source/plants/ENV009_shrub_a.glb",
+        "art/full/engine_viewer_state_map.json",
+        "art/full/art_complete_catalog.json（仅作为既有源索引，非本轮批准）"
+      ],
+      "outputs": [
+        "art/iterations/cycle_02/ENV009/source_export_index.json",
+        "art/iterations/cycle_02/ENV009/previews/",
+        "art/iterations/cycle_02/ENV009/item_review.json"
+      ],
+      "acceptance": [
+        "黄绿植被变体",
+        "已有合格内容可复用；先核对当前hash/样板基线，只修受影响部分",
+        "技术/视觉/行为分别登记；不得直接沿用producer pass当独立pass",
+        "旧冻结包内文件只读；复用时登记原hash，新修改保存cycle_02派生路径，不覆盖原件"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "A-ENV010",
+      "title": "复核/返修并交付：灌木B",
+      "phase": "47组全量交付",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "V09",
+        "A-MAT001",
+        "A-MAT002",
+        "A-MAT003",
+        "A-MAT004",
+        "A-MAT005"
+      ],
+      "status": "todo",
+      "inputs": [
+        "批准的样板基线",
+        "planning/execution/asset_briefs.json",
+        "art/full/source/plants/ENV010_shrub_b.blend",
+        "art/full/source/plants/ENV010_shrub_b.glb",
+        "art/full/engine_viewer_state_map.json",
+        "art/full/art_complete_catalog.json（仅作为既有源索引，非本轮批准）"
+      ],
+      "outputs": [
+        "art/iterations/cycle_02/ENV010/source_export_index.json",
+        "art/iterations/cycle_02/ENV010/previews/",
+        "art/iterations/cycle_02/ENV010/item_review.json"
+      ],
+      "acceptance": [
+        "与A同风格的轮廓变体",
+        "已有合格内容可复用；先核对当前hash/样板基线，只修受影响部分",
+        "技术/视觉/行为分别登记；不得直接沿用producer pass当独立pass",
+        "旧冻结包内文件只读；复用时登记原hash，新修改保存cycle_02派生路径，不覆盖原件"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "A-ENV011",
+      "title": "复核/返修并交付：干草簇",
+      "phase": "47组全量交付",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "V09",
+        "A-MAT001",
+        "A-MAT002",
+        "A-MAT003",
+        "A-MAT004",
+        "A-MAT005"
+      ],
+      "status": "todo",
+      "inputs": [
+        "批准的样板基线",
+        "planning/execution/asset_briefs.json",
+        "art/full/source/plants/ENV011_dry_grass.blend",
+        "art/full/source/plants/ENV011_dry_grass.glb",
+        "art/full/engine_viewer_state_map.json",
+        "art/full/art_complete_catalog.json（仅作为既有源索引，非本轮批准）"
+      ],
+      "outputs": [
+        "art/iterations/cycle_02/ENV011/source_export_index.json",
+        "art/iterations/cycle_02/ENV011/previews/",
+        "art/iterations/cycle_02/ENV011/item_review.json"
+      ],
+      "acceptance": [
+        "边缘成组、不覆盖主路",
+        "已有合格内容可复用；先核对当前hash/样板基线，只修受影响部分",
+        "技术/视觉/行为分别登记；不得直接沿用producer pass当独立pass",
+        "旧冻结包内文件只读；复用时登记原hash，新修改保存cycle_02派生路径，不覆盖原件"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "A-ENV012",
+      "title": "复核/返修并交付：落叶簇或贴花",
+      "phase": "47组全量交付",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "V09",
+        "A-MAT001",
+        "A-MAT002",
+        "A-MAT003",
+        "A-MAT004",
+        "A-MAT005"
+      ],
+      "status": "todo",
+      "inputs": [
+        "批准的样板基线",
+        "planning/execution/asset_briefs.json",
+        "art/full/source/plants/ENV012_fallen_leaves.blend",
+        "art/full/source/plants/ENV012_fallen_leaves.glb",
+        "art/full/engine_viewer_state_map.json",
+        "art/full/art_complete_catalog.json（仅作为既有源索引，非本轮批准）"
+      ],
+      "outputs": [
+        "art/iterations/cycle_02/ENV012/source_export_index.json",
+        "art/iterations/cycle_02/ENV012/previews/",
+        "art/iterations/cycle_02/ENV012/item_review.json"
+      ],
+      "acceptance": [
+        "材质/透明开销可控",
+        "已有合格内容可复用；先核对当前hash/样板基线，只修受影响部分",
+        "技术/视觉/行为分别登记；不得直接沿用producer pass当独立pass",
+        "旧冻结包内文件只读；复用时登记原hash，新修改保存cycle_02派生路径，不覆盖原件"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "A-PROP001",
+      "title": "复核/返修并交付：长椅",
+      "phase": "47组全量交付",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "V09",
+        "A-MAT001",
+        "A-MAT002",
+        "A-MAT003",
+        "A-MAT004",
+        "A-MAT005"
+      ],
+      "status": "todo",
+      "inputs": [
+        "批准的样板基线",
+        "planning/execution/asset_briefs.json",
+        "art/full/source/props/PROP001_bench.blend",
+        "art/full/source/props/PROP001_bench.glb",
+        "tools/blender/prop001_bench.py",
+        "art/full/engine_viewer_state_map.json",
+        "art/full/art_complete_catalog.json（仅作为既有源索引，非本轮批准）"
+      ],
+      "outputs": [
+        "art/iterations/cycle_02/PROP001/source_export_index.json",
+        "art/iterations/cycle_02/PROP001/previews/",
+        "art/iterations/cycle_02/PROP001/item_review.json"
+      ],
+      "acceptance": [
+        "木条、金属腿、接地与接缝",
+        "已有合格内容可复用；先核对当前hash/样板基线，只修受影响部分",
+        "技术/视觉/行为分别登记；不得直接沿用producer pass当独立pass",
+        "旧冻结包内文件只读；复用时登记原hash，新修改保存cycle_02派生路径，不覆盖原件"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "A-PROP002",
+      "title": "复核/返修并交付：小廊架",
+      "phase": "47组全量交付",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "V09",
+        "A-MAT001",
+        "A-MAT002",
+        "A-MAT003",
+        "A-MAT004",
+        "A-MAT005"
+      ],
+      "status": "todo",
+      "inputs": [
+        "批准的样板基线",
+        "planning/execution/asset_briefs.json",
+        "art/full/source/props/PROP002_pergola.blend",
+        "art/full/source/props/PROP002_pergola.glb",
+        "art/full/engine_viewer_state_map.json",
+        "art/full/art_complete_catalog.json（仅作为既有源索引，非本轮批准）"
+      ],
+      "outputs": [
+        "art/iterations/cycle_02/PROP002/source_export_index.json",
+        "art/iterations/cycle_02/PROP002/previews/",
+        "art/iterations/cycle_02/PROP002/item_review.json"
+      ],
+      "acceptance": [
+        "C点，不遮角色与拾取物",
+        "已有合格内容可复用；先核对当前hash/样板基线，只修受影响部分",
+        "技术/视觉/行为分别登记；不得直接沿用producer pass当独立pass",
+        "旧冻结包内文件只读；复用时登记原hash，新修改保存cycle_02派生路径，不覆盖原件"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "A-PROP003",
+      "title": "复核/返修并交付：留言板",
+      "phase": "47组全量交付",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "V09",
+        "A-MAT001",
+        "A-MAT002",
+        "A-MAT003",
+        "A-MAT004",
+        "A-MAT005"
+      ],
+      "status": "todo",
+      "inputs": [
+        "批准的样板基线",
+        "planning/execution/asset_briefs.json",
+        "art/full/source/props/PROP003_message_board.blend",
+        "art/full/source/props/PROP003_message_board.glb",
+        "art/full/engine_viewer_state_map.json",
+        "art/full/art_complete_catalog.json（仅作为既有源索引，非本轮批准）"
+      ],
+      "outputs": [
+        "art/iterations/cycle_02/PROP003/source_export_index.json",
+        "art/iterations/cycle_02/PROP003/previews/",
+        "art/iterations/cycle_02/PROP003/item_review.json"
+      ],
+      "acceptance": [
+        "空板和布置后两状态，三张卡可分别控制",
+        "已有合格内容可复用；先核对当前hash/样板基线，只修受影响部分",
+        "技术/视觉/行为分别登记；不得直接沿用producer pass当独立pass",
+        "旧冻结包内文件只读；复用时登记原hash，新修改保存cycle_02派生路径，不覆盖原件"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "A-PROP004",
+      "title": "复核/返修并交付：路灯",
+      "phase": "47组全量交付",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "V09",
+        "A-MAT001",
+        "A-MAT002",
+        "A-MAT003",
+        "A-MAT004",
+        "A-MAT005"
+      ],
+      "status": "todo",
+      "inputs": [
+        "批准的样板基线",
+        "planning/execution/asset_briefs.json",
+        "art/full/source/props/PROP004_lamp.blend",
+        "art/full/source/props/PROP004_lamp.glb",
+        "art/full/engine_viewer_state_map.json",
+        "art/full/art_complete_catalog.json（仅作为既有源索引，非本轮批准）"
+      ],
+      "outputs": [
+        "art/iterations/cycle_02/PROP004/source_export_index.json",
+        "art/iterations/cycle_02/PROP004/previews/",
+        "art/iterations/cycle_02/PROP004/item_review.json"
+      ],
+      "acceptance": [
+        "统一造型，不强制独立动态投影灯",
+        "已有合格内容可复用；先核对当前hash/样板基线，只修受影响部分",
+        "技术/视觉/行为分别登记；不得直接沿用producer pass当独立pass",
+        "旧冻结包内文件只读；复用时登记原hash，新修改保存cycle_02派生路径，不覆盖原件"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "A-PROP005",
+      "title": "复核/返修并交付：导视牌",
+      "phase": "47组全量交付",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "V09",
+        "A-MAT001",
+        "A-MAT002",
+        "A-MAT003",
+        "A-MAT004",
+        "A-MAT005"
+      ],
+      "status": "todo",
+      "inputs": [
+        "批准的样板基线",
+        "planning/execution/asset_briefs.json",
+        "art/full/source/props/PROP005_direction_sign.blend",
+        "art/full/source/props/PROP005_direction_sign.glb",
+        "art/full/engine_viewer_state_map.json",
+        "art/full/art_complete_catalog.json（仅作为既有源索引，非本轮批准）"
+      ],
+      "outputs": [
+        "art/iterations/cycle_02/PROP005/source_export_index.json",
+        "art/iterations/cycle_02/PROP005/previews/",
+        "art/iterations/cycle_02/PROP005/item_review.json"
+      ],
+      "acceptance": [
+        "方向与原创可编辑文字/图形",
+        "已有合格内容可复用；先核对当前hash/样板基线，只修受影响部分",
+        "技术/视觉/行为分别登记；不得直接沿用producer pass当独立pass",
+        "旧冻结包内文件只读；复用时登记原hash，新修改保存cycle_02派生路径，不覆盖原件"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "A-PROP006",
+      "title": "复核/返修并交付：明信片物件",
+      "phase": "47组全量交付",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "V09",
+        "A-MAT001",
+        "A-MAT002",
+        "A-MAT003",
+        "A-MAT004",
+        "A-MAT005"
+      ],
+      "status": "todo",
+      "inputs": [
+        "批准的样板基线",
+        "planning/execution/asset_briefs.json",
+        "art/full/source/props/PROP006_postcards.blend",
+        "art/full/source/props/PROP006_postcards.glb",
+        "art/full/engine_viewer_state_map.json",
+        "art/full/art_complete_catalog.json（仅作为既有源索引，非本轮批准）"
+      ],
+      "outputs": [
+        "art/iterations/cycle_02/PROP006/source_export_index.json",
+        "art/iterations/cycle_02/PROP006/previews/",
+        "art/iterations/cycle_02/PROP006/item_review.json"
+      ],
+      "acceptance": [
+        "三处拾取、收集后消失、板上显示",
+        "已有合格内容可复用；先核对当前hash/样板基线，只修受影响部分",
+        "技术/视觉/行为分别登记；不得直接沿用producer pass当独立pass",
+        "旧冻结包内文件只读；复用时登记原hash，新修改保存cycle_02派生路径，不覆盖原件"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "A-MAT001",
+      "title": "复核/返修并交付：石材材质族",
+      "phase": "47组全量交付",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "V09"
+      ],
+      "status": "todo",
+      "inputs": [
+        "批准的样板基线",
+        "planning/execution/asset_briefs.json",
+        "art/full/source/materials/MAT001_stone.blend",
+        "art/full/source/materials/MAT001_stone.glb",
+        "art/full/source/materials/MAT_families.json",
+        "art/full/engine_viewer_state_map.json",
+        "art/full/art_complete_catalog.json（仅作为既有源索引，非本轮批准）"
+      ],
+      "outputs": [
+        "art/iterations/cycle_02/MAT001/source_export_index.json",
+        "art/iterations/cycle_02/MAT001/previews/",
+        "art/iterations/cycle_02/MAT001/item_review.json"
+      ],
+      "acceptance": [
+        "引擎支持贴图及参数，非仅Blender预览",
+        "已有合格内容可复用；先核对当前hash/样板基线，只修受影响部分",
+        "技术/视觉/行为分别登记；不得直接沿用producer pass当独立pass",
+        "旧冻结包内文件只读；复用时登记原hash，新修改保存cycle_02派生路径，不覆盖原件"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "A-MAT002",
+      "title": "复核/返修并交付：木材材质族",
+      "phase": "47组全量交付",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "V09"
+      ],
+      "status": "todo",
+      "inputs": [
+        "批准的样板基线",
+        "planning/execution/asset_briefs.json",
+        "art/full/source/materials/MAT002_wood.blend",
+        "art/full/source/materials/MAT002_wood.glb",
+        "art/full/source/materials/MAT_families.json",
+        "art/full/engine_viewer_state_map.json",
+        "art/full/art_complete_catalog.json（仅作为既有源索引，非本轮批准）"
+      ],
+      "outputs": [
+        "art/iterations/cycle_02/MAT002/source_export_index.json",
+        "art/iterations/cycle_02/MAT002/previews/",
+        "art/iterations/cycle_02/MAT002/item_review.json"
+      ],
+      "acceptance": [
+        "方向统一、磨损克制",
+        "已有合格内容可复用；先核对当前hash/样板基线，只修受影响部分",
+        "技术/视觉/行为分别登记；不得直接沿用producer pass当独立pass",
+        "旧冻结包内文件只读；复用时登记原hash，新修改保存cycle_02派生路径，不覆盖原件"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "A-MAT003",
+      "title": "复核/返修并交付：金属材质族",
+      "phase": "47组全量交付",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "V09"
+      ],
+      "status": "todo",
+      "inputs": [
+        "批准的样板基线",
+        "planning/execution/asset_briefs.json",
+        "art/full/source/materials/MAT003_metal.blend",
+        "art/full/source/materials/MAT003_metal.glb",
+        "art/full/source/materials/MAT_families.json",
+        "art/full/engine_viewer_state_map.json",
+        "art/full/art_complete_catalog.json（仅作为既有源索引，非本轮批准）"
+      ],
+      "outputs": [
+        "art/iterations/cycle_02/MAT003/source_export_index.json",
+        "art/iterations/cycle_02/MAT003/previews/",
+        "art/iterations/cycle_02/MAT003/item_review.json"
+      ],
+      "acceptance": [
+        "粗糙度与石木分离",
+        "已有合格内容可复用；先核对当前hash/样板基线，只修受影响部分",
+        "技术/视觉/行为分别登记；不得直接沿用producer pass当独立pass",
+        "旧冻结包内文件只读；复用时登记原hash，新修改保存cycle_02派生路径，不覆盖原件"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "A-MAT004",
+      "title": "复核/返修并交付：树叶草材质族",
+      "phase": "47组全量交付",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "V09"
+      ],
+      "status": "todo",
+      "inputs": [
+        "批准的样板基线",
+        "planning/execution/asset_briefs.json",
+        "art/full/source/materials/MAT004_leaf_grass.blend",
+        "art/full/source/materials/MAT004_leaf_grass.glb",
+        "art/full/source/materials/MAT_families.json",
+        "art/full/engine_viewer_state_map.json",
+        "art/full/art_complete_catalog.json（仅作为既有源索引，非本轮批准）"
+      ],
+      "outputs": [
+        "art/iterations/cycle_02/MAT004/source_export_index.json",
+        "art/iterations/cycle_02/MAT004/previews/",
+        "art/iterations/cycle_02/MAT004/item_review.json"
+      ],
+      "acceptance": [
+        "黄赭与橄榄绿，透明规则",
+        "已有合格内容可复用；先核对当前hash/样板基线，只修受影响部分",
+        "技术/视觉/行为分别登记；不得直接沿用producer pass当独立pass",
+        "旧冻结包内文件只读；复用时登记原hash，新修改保存cycle_02派生路径，不覆盖原件"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "A-MAT005",
+      "title": "复核/返修并交付：纸片材质族",
+      "phase": "47组全量交付",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "V09"
+      ],
+      "status": "todo",
+      "inputs": [
+        "批准的样板基线",
+        "planning/execution/asset_briefs.json",
+        "art/full/source/materials/MAT005_paper.blend",
+        "art/full/source/materials/MAT005_paper.glb",
+        "art/full/source/materials/MAT_families.json",
+        "art/full/engine_viewer_state_map.json",
+        "art/full/art_complete_catalog.json（仅作为既有源索引，非本轮批准）"
+      ],
+      "outputs": [
+        "art/iterations/cycle_02/MAT005/source_export_index.json",
+        "art/iterations/cycle_02/MAT005/previews/",
+        "art/iterations/cycle_02/MAT005/item_review.json"
+      ],
+      "acceptance": [
+        "明信片/板上卡片，UI纸感协调",
+        "已有合格内容可复用；先核对当前hash/样板基线，只修受影响部分",
+        "技术/视觉/行为分别登记；不得直接沿用producer pass当独立pass",
+        "旧冻结包内文件只读；复用时登记原hash，新修改保存cycle_02派生路径，不覆盖原件"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "A-LOOK001",
+      "title": "复核/返修并交付：相机灯光预览场景",
+      "phase": "47组全量交付",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "V09"
+      ],
+      "status": "todo",
+      "inputs": [
+        "批准的样板基线",
+        "planning/execution/asset_briefs.json",
+        "art/full/source/layout/LOOK001_camera_light.blend",
+        "art/full/source/layout/LOOK001_look_profile.json",
+        "art/full/engine_viewer_state_map.json",
+        "art/full/art_complete_catalog.json（仅作为既有源索引，非本轮批准）"
+      ],
+      "outputs": [
+        "art/iterations/cycle_02/LOOK001/source_export_index.json",
+        "art/iterations/cycle_02/LOOK001/previews/",
+        "art/iterations/cycle_02/LOOK001/item_review.json"
+      ],
+      "acceptance": [
+        "固定机位、暖光冷填充、阴影/色调记录",
+        "已有合格内容可复用；先核对当前hash/样板基线，只修受影响部分",
+        "技术/视觉/行为分别登记；不得直接沿用producer pass当独立pass",
+        "旧冻结包内文件只读；复用时登记原hash，新修改保存cycle_02派生路径，不覆盖原件"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "A-CHAR001",
+      "title": "复核/返修并交付：目标主角原Spine资产",
+      "phase": "47组全量交付",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "V09"
+      ],
+      "status": "todo",
+      "inputs": [
+        "批准的样板基线",
+        "planning/execution/asset_briefs.json",
+        "reference/character_sources/ark_models/1015_aglna2/build_char_1015_aglna2.skel",
+        "reference/character_sources/ark_models/1015_aglna2/build_char_1015_aglna2.atlas",
+        "reference/character_sources/ark_models/1015_aglna2/build_char_1015_aglna2.png",
+        "art/full/engine_viewer_state_map.json",
+        "art/full/art_complete_catalog.json（仅作为既有源索引，非本轮批准）"
+      ],
+      "outputs": [
+        "art/iterations/cycle_02/CHAR001/source_export_index.json",
+        "art/iterations/cycle_02/CHAR001/previews/",
+        "art/iterations/cycle_02/CHAR001/item_review.json"
+      ],
+      "acceptance": [
+        "291_aglina候选原包存在，需核对皮肤与运行",
+        "已有合格内容可复用；先核对当前hash/样板基线，只修受影响部分",
+        "技术/视觉/行为分别登记；不得直接沿用producer pass当独立pass",
+        "旧冻结包内文件只读；复用时登记原hash，新修改保存cycle_02派生路径，不覆盖原件"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "A-CHAR002",
+      "title": "复核/返修并交付：主角动作与状态映射",
+      "phase": "47组全量交付",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "V09"
+      ],
+      "status": "todo",
+      "inputs": [
+        "批准的样板基线",
+        "planning/execution/asset_briefs.json",
+        "art/phase1/character_playback_1015/clip_inventory.json",
+        "art/phase1/character_playback_1015/runtime_log.txt",
+        "art/full/engine_viewer_state_map.json",
+        "art/full/art_complete_catalog.json（仅作为既有源索引，非本轮批准）"
+      ],
+      "outputs": [
+        "art/iterations/cycle_02/CHAR002/source_export_index.json",
+        "art/iterations/cycle_02/CHAR002/previews/",
+        "art/iterations/cycle_02/CHAR002/item_review.json"
+      ],
+      "acceptance": [
+        "原待机/Move，交互动作存在性，朝向能力表",
+        "已有合格内容可复用；先核对当前hash/样板基线，只修受影响部分",
+        "技术/视觉/行为分别登记；不得直接沿用producer pass当独立pass",
+        "旧冻结包内文件只读；复用时登记原hash，新修改保存cycle_02派生路径，不覆盖原件"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "A-CHAR003",
+      "title": "复核/返修并交付：固定NPC形象",
+      "phase": "47组全量交付",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "V09"
+      ],
+      "status": "todo",
+      "inputs": [
+        "批准的样板基线",
+        "planning/execution/asset_briefs.json",
+        "art/full/source/characters/CHAR003_NPC_GARDENER/npc_source_crop_490x670.png",
+        "art/full/source/characters/CHAR003_NPC_GARDENER/npc_gardener_mask.svg",
+        "art/full/source/characters/CHAR003_NPC_GARDENER/npc_gardener_static_slice.png",
+        "art/full/source/characters/CHAR003_NPC_GARDENER/npc_gardener_slice_record.json",
+        "art/full/engine_viewer_state_map.json",
+        "art/full/source/characters/CHAR003_NPC_GARDENER/npc_gardener_static_slice_final.png",
+        "art/full/art_complete_catalog.json（仅作为既有源索引，非本轮批准）"
+      ],
+      "outputs": [
+        "art/iterations/cycle_02/CHAR003/source_export_index.json",
+        "art/iterations/cycle_02/CHAR003/previews/",
+        "art/iterations/cycle_02/CHAR003/item_review.json"
+      ],
+      "acceptance": [
+        "按P1相应人物选定资源，确认角色ID及服装；非原创信使替换",
+        "已有合格内容可复用；先核对当前hash/样板基线，只修受影响部分",
+        "技术/视觉/行为分别登记；不得直接沿用producer pass当独立pass",
+        "旧冻结包内文件只读；复用时登记原hash，新修改保存cycle_02派生路径，不覆盖原件"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "A-CHAR004",
+      "title": "复核/返修并交付：主角头像",
+      "phase": "47组全量交付",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "V09"
+      ],
+      "status": "todo",
+      "inputs": [
+        "批准的样板基线",
+        "planning/execution/asset_briefs.json",
+        "art/full/source/characters/CHAR004_PLAYER/portrait_1015_head_512.png",
+        "art/full/source/characters/CHAR004_PLAYER/portrait_record.json",
+        "art/full/engine_viewer_state_map.json",
+        "art/full/art_complete_catalog.json（仅作为既有源索引，非本轮批准）"
+      ],
+      "outputs": [
+        "art/iterations/cycle_02/CHAR004/source_export_index.json",
+        "art/iterations/cycle_02/CHAR004/previews/",
+        "art/iterations/cycle_02/CHAR004/item_review.json"
+      ],
+      "acceptance": [
+        "与确认人物相同，源与裁切范围可追溯",
+        "已有合格内容可复用；先核对当前hash/样板基线，只修受影响部分",
+        "技术/视觉/行为分别登记；不得直接沿用producer pass当独立pass",
+        "旧冻结包内文件只读；复用时登记原hash，新修改保存cycle_02派生路径，不覆盖原件"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "A-CHAR005",
+      "title": "复核/返修并交付：NPC头像",
+      "phase": "47组全量交付",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "V09"
+      ],
+      "status": "todo",
+      "inputs": [
+        "批准的样板基线",
+        "planning/execution/asset_briefs.json",
+        "art/full/source/characters/CHAR003_NPC_GARDENER/npc_gardener_portrait_512.png",
+        "art/full/source/characters/CHAR003_NPC_GARDENER/npc_gardener_slice_record.json",
+        "art/full/engine_viewer_state_map.json",
+        "art/full/art_complete_catalog.json（仅作为既有源索引，非本轮批准）"
+      ],
+      "outputs": [
+        "art/iterations/cycle_02/CHAR005/source_export_index.json",
+        "art/iterations/cycle_02/CHAR005/previews/",
+        "art/iterations/cycle_02/CHAR005/item_review.json"
+      ],
+      "acceptance": [
+        "与NPC一致、对话尺寸下清晰",
+        "已有合格内容可复用；先核对当前hash/样板基线，只修受影响部分",
+        "技术/视觉/行为分别登记；不得直接沿用producer pass当独立pass",
+        "旧冻结包内文件只读；复用时登记原hash，新修改保存cycle_02派生路径，不覆盖原件"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "A-UI001",
+      "title": "复核/返修并交付：标题与进入界面",
+      "phase": "47组全量交付",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "V09"
+      ],
+      "status": "todo",
+      "inputs": [
+        "批准的样板基线",
+        "planning/execution/asset_briefs.json",
+        "art/full/ui/tokens.json",
+        "art/full/ui/index.html",
+        "art/full/ui/js/states.js",
+        "art/full/ui/css/ui.css",
+        "art/full/ui/js/components.js",
+        "art/full/engine_viewer_state_map.json",
+        "art/full/art_complete_catalog.json（仅作为既有源索引，非本轮批准）"
+      ],
+      "outputs": [
+        "art/iterations/cycle_02/UI001/source_export_index.json",
+        "art/iterations/cycle_02/UI001/previews/",
+        "art/iterations/cycle_02/UI001/item_review.json"
+      ],
+      "acceptance": [
+        "标题、进入按钮及状态",
+        "已有合格内容可复用；先核对当前hash/样板基线，只修受影响部分",
+        "技术/视觉/行为分别登记；不得直接沿用producer pass当独立pass",
+        "旧冻结包内文件只读；复用时登记原hash，新修改保存cycle_02派生路径，不覆盖原件"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "A-UI002",
+      "title": "复核/返修并交付：加载与失败重试",
+      "phase": "47组全量交付",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "V09"
+      ],
+      "status": "todo",
+      "inputs": [
+        "批准的样板基线",
+        "planning/execution/asset_briefs.json",
+        "art/full/ui/tokens.json",
+        "art/full/ui/index.html",
+        "art/full/ui/js/states.js",
+        "art/full/ui/css/ui.css",
+        "art/full/ui/js/components.js",
+        "art/full/engine_viewer_state_map.json",
+        "art/full/art_complete_catalog.json（仅作为既有源索引，非本轮批准）"
+      ],
+      "outputs": [
+        "art/iterations/cycle_02/UI002/source_export_index.json",
+        "art/iterations/cycle_02/UI002/previews/",
+        "art/iterations/cycle_02/UI002/item_review.json"
+      ],
+      "acceptance": [
+        "加载阶段、失败反馈、重试",
+        "已有合格内容可复用；先核对当前hash/样板基线，只修受影响部分",
+        "技术/视觉/行为分别登记；不得直接沿用producer pass当独立pass",
+        "旧冻结包内文件只读；复用时登记原hash，新修改保存cycle_02派生路径，不覆盖原件"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "A-UI003",
+      "title": "复核/返修并交付：任务HUD全部状态",
+      "phase": "47组全量交付",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "V09"
+      ],
+      "status": "todo",
+      "inputs": [
+        "批准的样板基线",
+        "planning/execution/asset_briefs.json",
+        "art/full/ui/tokens.json",
+        "art/full/ui/index.html",
+        "art/full/ui/js/states.js",
+        "art/full/ui/css/ui.css",
+        "art/full/ui/js/components.js",
+        "art/full/engine_viewer_state_map.json",
+        "art/full/art_complete_catalog.json（仅作为既有源索引，非本轮批准）"
+      ],
+      "outputs": [
+        "art/iterations/cycle_02/UI003/source_export_index.json",
+        "art/iterations/cycle_02/UI003/previews/",
+        "art/iterations/cycle_02/UI003/item_review.json"
+      ],
+      "acceptance": [
+        "未接、0/3、1/3、2/3、3/3、可提交、完成",
+        "已有合格内容可复用；先核对当前hash/样板基线，只修受影响部分",
+        "技术/视觉/行为分别登记；不得直接沿用producer pass当独立pass",
+        "旧冻结包内文件只读；复用时登记原hash，新修改保存cycle_02派生路径，不覆盖原件"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "A-UI004",
+      "title": "复核/返修并交付：摇杆全部状态",
+      "phase": "47组全量交付",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "V09"
+      ],
+      "status": "todo",
+      "inputs": [
+        "批准的样板基线",
+        "planning/execution/asset_briefs.json",
+        "art/full/ui/tokens.json",
+        "art/full/ui/index.html",
+        "art/full/ui/js/states.js",
+        "art/full/ui/css/ui.css",
+        "art/full/ui/js/components.js",
+        "art/full/engine_viewer_state_map.json",
+        "art/full/art_complete_catalog.json（仅作为既有源索引，非本轮批准）"
+      ],
+      "outputs": [
+        "art/iterations/cycle_02/UI004/source_export_index.json",
+        "art/iterations/cycle_02/UI004/previews/",
+        "art/iterations/cycle_02/UI004/item_review.json"
+      ],
+      "acceptance": [
+        "待机、拖动、锁定隐藏、安全区",
+        "已有合格内容可复用；先核对当前hash/样板基线，只修受影响部分",
+        "技术/视觉/行为分别登记；不得直接沿用producer pass当独立pass",
+        "旧冻结包内文件只读；复用时登记原hash，新修改保存cycle_02派生路径，不覆盖原件"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "A-UI005",
+      "title": "复核/返修并交付：交互按钮状态族",
+      "phase": "47组全量交付",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "V09"
+      ],
+      "status": "todo",
+      "inputs": [
+        "批准的样板基线",
+        "planning/execution/asset_briefs.json",
+        "art/full/ui/tokens.json",
+        "art/full/ui/index.html",
+        "art/full/ui/js/states.js",
+        "art/full/ui/css/ui.css",
+        "art/full/ui/js/components.js",
+        "art/full/engine_viewer_state_map.json",
+        "art/full/art_complete_catalog.json（仅作为既有源索引，非本轮批准）"
+      ],
+      "outputs": [
+        "art/iterations/cycle_02/UI005/source_export_index.json",
+        "art/iterations/cycle_02/UI005/previews/",
+        "art/iterations/cycle_02/UI005/item_review.json"
+      ],
+      "acceptance": [
+        "交谈、拾取、布置、查看及按下/不可用",
+        "已有合格内容可复用；先核对当前hash/样板基线，只修受影响部分",
+        "技术/视觉/行为分别登记；不得直接沿用producer pass当独立pass",
+        "旧冻结包内文件只读；复用时登记原hash，新修改保存cycle_02派生路径，不覆盖原件"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "A-UI006",
+      "title": "复核/返修并交付：对话组件",
+      "phase": "47组全量交付",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "V09"
+      ],
+      "status": "todo",
+      "inputs": [
+        "批准的样板基线",
+        "planning/execution/asset_briefs.json",
+        "art/full/ui/tokens.json",
+        "art/full/ui/index.html",
+        "art/full/ui/js/states.js",
+        "art/full/ui/css/ui.css",
+        "art/full/ui/js/components.js",
+        "art/full/ui/portraits/player_1015.png",
+        "art/full/ui/portraits/npc_gardener.png",
+        "art/full/source/characters/CHAR004_PLAYER/portrait_record.json",
+        "art/full/source/characters/CHAR003_NPC_GARDENER/npc_gardener_slice_record.json",
+        "art/full/engine_viewer_state_map.json",
+        "art/full/art_complete_catalog.json（仅作为既有源索引，非本轮批准）"
+      ],
+      "outputs": [
+        "art/iterations/cycle_02/UI006/source_export_index.json",
+        "art/iterations/cycle_02/UI006/previews/",
+        "art/iterations/cycle_02/UI006/item_review.json"
+      ],
+      "acceptance": [
+        "姓名、头像、正文、下一页/结束，实际任务文案",
+        "已有合格内容可复用；先核对当前hash/样板基线，只修受影响部分",
+        "技术/视觉/行为分别登记；不得直接沿用producer pass当独立pass",
+        "旧冻结包内文件只读；复用时登记原hash，新修改保存cycle_02派生路径，不覆盖原件"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "A-UI007",
+      "title": "复核/返修并交付：暂停菜单",
+      "phase": "47组全量交付",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "V09"
+      ],
+      "status": "todo",
+      "inputs": [
+        "批准的样板基线",
+        "planning/execution/asset_briefs.json",
+        "art/full/ui/tokens.json",
+        "art/full/ui/index.html",
+        "art/full/ui/js/states.js",
+        "art/full/ui/css/ui.css",
+        "art/full/ui/js/components.js",
+        "art/full/engine_viewer_state_map.json",
+        "art/full/art_complete_catalog.json（仅作为既有源索引，非本轮批准）"
+      ],
+      "outputs": [
+        "art/iterations/cycle_02/UI007/source_export_index.json",
+        "art/iterations/cycle_02/UI007/previews/",
+        "art/iterations/cycle_02/UI007/item_review.json"
+      ],
+      "acceptance": [
+        "继续、静音开关、重新开始",
+        "已有合格内容可复用；先核对当前hash/样板基线，只修受影响部分",
+        "技术/视觉/行为分别登记；不得直接沿用producer pass当独立pass",
+        "旧冻结包内文件只读；复用时登记原hash，新修改保存cycle_02派生路径，不覆盖原件"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "A-UI008",
+      "title": "复核/返修并交付：完成界面",
+      "phase": "47组全量交付",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "V09"
+      ],
+      "status": "todo",
+      "inputs": [
+        "批准的样板基线",
+        "planning/execution/asset_briefs.json",
+        "art/full/ui/tokens.json",
+        "art/full/ui/index.html",
+        "art/full/ui/js/states.js",
+        "art/full/ui/css/ui.css",
+        "art/full/ui/js/components.js",
+        "art/full/engine_viewer_state_map.json",
+        "art/full/art_complete_catalog.json（仅作为既有源索引，非本轮批准）"
+      ],
+      "outputs": [
+        "art/iterations/cycle_02/UI008/source_export_index.json",
+        "art/iterations/cycle_02/UI008/previews/",
+        "art/iterations/cycle_02/UI008/item_review.json"
+      ],
+      "acceptance": [
+        "完成反馈、继续漫步、重新开始",
+        "已有合格内容可复用；先核对当前hash/样板基线，只修受影响部分",
+        "技术/视觉/行为分别登记；不得直接沿用producer pass当独立pass",
+        "旧冻结包内文件只读；复用时登记原hash，新修改保存cycle_02派生路径，不覆盖原件"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "A-UI009",
+      "title": "复核/返修并交付：拾取与任务提示",
+      "phase": "47组全量交付",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "V09"
+      ],
+      "status": "todo",
+      "inputs": [
+        "批准的样板基线",
+        "planning/execution/asset_briefs.json",
+        "art/full/ui/tokens.json",
+        "art/full/ui/index.html",
+        "art/full/ui/js/states.js",
+        "art/full/ui/css/ui.css",
+        "art/full/ui/js/components.js",
+        "art/full/engine_viewer_state_map.json",
+        "art/full/art_complete_catalog.json（仅作为既有源索引，非本轮批准）"
+      ],
+      "outputs": [
+        "art/iterations/cycle_02/UI009/source_export_index.json",
+        "art/iterations/cycle_02/UI009/previews/",
+        "art/iterations/cycle_02/UI009/item_review.json"
+      ],
+      "acceptance": [
+        "轻量toast与任务更新反馈",
+        "已有合格内容可复用；先核对当前hash/样板基线，只修受影响部分",
+        "技术/视觉/行为分别登记；不得直接沿用producer pass当独立pass",
+        "旧冻结包内文件只读；复用时登记原hash，新修改保存cycle_02派生路径，不覆盖原件"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "A-UI010",
+      "title": "复核/返修并交付：首次操作提示",
+      "phase": "47组全量交付",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "V09"
+      ],
+      "status": "todo",
+      "inputs": [
+        "批准的样板基线",
+        "planning/execution/asset_briefs.json",
+        "art/full/ui/tokens.json",
+        "art/full/ui/index.html",
+        "art/full/ui/js/states.js",
+        "art/full/ui/css/ui.css",
+        "art/full/ui/js/components.js",
+        "art/full/engine_viewer_state_map.json",
+        "art/full/art_complete_catalog.json（仅作为既有源索引，非本轮批准）"
+      ],
+      "outputs": [
+        "art/iterations/cycle_02/UI010/source_export_index.json",
+        "art/iterations/cycle_02/UI010/previews/",
+        "art/iterations/cycle_02/UI010/item_review.json"
+      ],
+      "acceptance": [
+        "移动和交互简明说明、可收起",
+        "已有合格内容可复用；先核对当前hash/样板基线，只修受影响部分",
+        "技术/视觉/行为分别登记；不得直接沿用producer pass当独立pass",
+        "旧冻结包内文件只读；复用时登记原hash，新修改保存cycle_02派生路径，不覆盖原件"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "A-UI011",
+      "title": "复核/返修并交付：旋转与安全区适配",
+      "phase": "47组全量交付",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "V09"
+      ],
+      "status": "todo",
+      "inputs": [
+        "批准的样板基线",
+        "planning/execution/asset_briefs.json",
+        "art/full/ui/tokens.json",
+        "art/full/ui/index.html",
+        "art/full/ui/js/states.js",
+        "art/full/ui/css/ui.css",
+        "art/full/ui/js/components.js",
+        "art/full/engine_viewer_state_map.json",
+        "art/full/art_complete_catalog.json（仅作为既有源索引，非本轮批准）"
+      ],
+      "outputs": [
+        "art/iterations/cycle_02/UI011/source_export_index.json",
+        "art/iterations/cycle_02/UI011/previews/",
+        "art/iterations/cycle_02/UI011/item_review.json"
+      ],
+      "acceptance": [
+        "横屏旋转提示/遮挡避让示意",
+        "已有合格内容可复用；先核对当前hash/样板基线，只修受影响部分",
+        "技术/视觉/行为分别登记；不得直接沿用producer pass当独立pass",
+        "旧冻结包内文件只读；复用时登记原hash，新修改保存cycle_02派生路径，不覆盖原件"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "A-UI012",
+      "title": "复核/返修并交付：基础图标族",
+      "phase": "47组全量交付",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "V09"
+      ],
+      "status": "todo",
+      "inputs": [
+        "批准的样板基线",
+        "planning/execution/asset_briefs.json",
+        "art/full/ui/components/icons.svg",
+        "art/full/ui/components/icons/icon_arrow.svg",
+        "art/full/ui/components/icons/icon_check.svg",
+        "art/full/ui/components/icons/icon_close.svg",
+        "art/full/ui/components/icons/icon_continue.svg",
+        "art/full/ui/components/icons/icon_copy.svg",
+        "art/full/ui/components/icons/icon_info.svg",
+        "art/full/ui/components/icons/icon_leaf.svg",
+        "art/full/ui/components/icons/icon_lock.svg",
+        "art/full/ui/components/icons/icon_menu.svg",
+        "art/full/ui/components/icons/icon_pickup.svg",
+        "art/full/ui/components/icons/icon_pin.svg",
+        "art/full/ui/components/icons/icon_place.svg",
+        "art/full/ui/components/icons/icon_postcard.svg",
+        "art/full/ui/components/icons/icon_restart.svg",
+        "art/full/ui/components/icons/icon_retry.svg",
+        "art/full/ui/components/icons/icon_rotate.svg",
+        "art/full/ui/components/icons/icon_sound_off.svg",
+        "art/full/ui/components/icons/icon_sound_on.svg",
+        "art/full/ui/components/icons/icon_sparkle.svg",
+        "art/full/ui/components/icons/icon_talk.svg",
+        "art/full/ui/components/icons/icon_view.svg",
+        "art/full/engine_viewer_state_map.json",
+        "art/full/art_complete_catalog.json（仅作为既有源索引，非本轮批准）"
+      ],
+      "outputs": [
+        "art/iterations/cycle_02/UI012/source_export_index.json",
+        "art/iterations/cycle_02/UI012/previews/",
+        "art/iterations/cycle_02/UI012/item_review.json"
+      ],
+      "acceptance": [
+        "交谈/卡片/布置/菜单原SVG存在，需手绘语言与新状态审核",
+        "已有合格内容可复用；先核对当前hash/样板基线，只修受影响部分",
+        "技术/视觉/行为分别登记；不得直接沿用producer pass当独立pass",
+        "旧冻结包内文件只读；复用时登记原hash，新修改保存cycle_02派生路径，不覆盖原件"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "A-UI013",
+      "title": "复核/返修并交付：UI变量与中文字体",
+      "phase": "47组全量交付",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "V09"
+      ],
+      "status": "todo",
+      "inputs": [
+        "批准的样板基线",
+        "planning/execution/asset_briefs.json",
+        "art/full/ui/tokens.json",
+        "art/full/ui/css/tokens.css",
+        "art/full/ui/fonts/FONT_MANIFEST.json",
+        "art/full/ui/fonts/OFL.txt",
+        "art/full/engine_viewer_state_map.json",
+        "art/full/art_complete_catalog.json（仅作为既有源索引，非本轮批准）"
+      ],
+      "outputs": [
+        "art/iterations/cycle_02/UI013/source_export_index.json",
+        "art/iterations/cycle_02/UI013/previews/",
+        "art/iterations/cycle_02/UI013/item_review.json"
+      ],
+      "acceptance": [
+        "色板/线宽/字号/内边距/字体文件及来源，字形验证",
+        "已有合格内容可复用；先核对当前hash/样板基线，只修受影响部分",
+        "技术/视觉/行为分别登记；不得直接沿用producer pass当独立pass",
+        "旧冻结包内文件只读；复用时登记原hash，新修改保存cycle_02派生路径，不覆盖原件"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "A-FX001",
+      "title": "复核/返修并交付：角色脚底接触阴影",
+      "phase": "47组全量交付",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "V09"
+      ],
+      "status": "todo",
+      "inputs": [
+        "批准的样板基线",
+        "planning/execution/asset_briefs.json",
+        "art/full/source/fx/FX001_foot_shadow.svg",
+        "art/full/source/fx/FX001_spec.json",
+        "art/full/engine_viewer_state_map.json",
+        "art/full/art_complete_catalog.json（仅作为既有源索引，非本轮批准）"
+      ],
+      "outputs": [
+        "art/iterations/cycle_02/FX001/source_export_index.json",
+        "art/iterations/cycle_02/FX001/previews/",
+        "art/iterations/cycle_02/FX001/item_review.json"
+      ],
+      "acceptance": [
+        "随角色位移，非跟随屏幕的假阴影",
+        "已有合格内容可复用；先核对当前hash/样板基线，只修受影响部分",
+        "技术/视觉/行为分别登记；不得直接沿用producer pass当独立pass",
+        "旧冻结包内文件只读；复用时登记原hash，新修改保存cycle_02派生路径，不覆盖原件"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "A-FX002",
+      "title": "复核/返修并交付：目标与拾取反馈",
+      "phase": "47组全量交付",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "V09"
+      ],
+      "status": "todo",
+      "inputs": [
+        "批准的样板基线",
+        "planning/execution/asset_briefs.json",
+        "art/full/source/fx/FX002_pickup_feedback.svg",
+        "art/full/source/fx/FX002_spec.json",
+        "art/full/engine_viewer_state_map.json",
+        "art/full/art_complete_catalog.json（仅作为既有源索引，非本轮批准）"
+      ],
+      "outputs": [
+        "art/iterations/cycle_02/FX002/source_export_index.json",
+        "art/iterations/cycle_02/FX002/previews/",
+        "art/iterations/cycle_02/FX002/item_review.json"
+      ],
+      "acceptance": [
+        "近距离提示、轻量拾取效果、状态变化",
+        "已有合格内容可复用；先核对当前hash/样板基线，只修受影响部分",
+        "技术/视觉/行为分别登记；不得直接沿用producer pass当独立pass",
+        "旧冻结包内文件只读；复用时登记原hash，新修改保存cycle_02派生路径，不覆盖原件"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "A-FX003",
+      "title": "复核/返修并交付：留言板完成变化",
+      "phase": "47组全量交付",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "V09"
+      ],
+      "status": "todo",
+      "inputs": [
+        "批准的样板基线",
+        "planning/execution/asset_briefs.json",
+        "art/full/source/fx/FX003_board_completion.svg",
+        "art/full/source/fx/FX003_spec.json",
+        "art/full/source/props/PROP003_message_board.blend",
+        "art/full/engine_viewer_state_map.json",
+        "art/full/art_complete_catalog.json（仅作为既有源索引，非本轮批准）"
+      ],
+      "outputs": [
+        "art/iterations/cycle_02/FX003/source_export_index.json",
+        "art/iterations/cycle_02/FX003/previews/",
+        "art/iterations/cycle_02/FX003/item_review.json"
+      ],
+      "acceptance": [
+        "三张卡显现与完成视觉反馈，可重置",
+        "已有合格内容可复用；先核对当前hash/样板基线，只修受影响部分",
+        "技术/视觉/行为分别登记；不得直接沿用producer pass当独立pass",
+        "旧冻结包内文件只读；复用时登记原hash，新修改保存cycle_02派生路径，不覆盖原件"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "A-PACK001",
+      "title": "复核/返修并交付：全美术清单与依赖包",
+      "phase": "47组全量交付",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "V09",
+        "A-MAP001",
+        "A-ENV001",
+        "A-ENV002",
+        "A-ENV003",
+        "A-ENV004",
+        "A-ENV005",
+        "A-ENV006",
+        "A-ENV007",
+        "A-ENV008",
+        "A-ENV009",
+        "A-ENV010",
+        "A-ENV011",
+        "A-ENV012",
+        "A-PROP001",
+        "A-PROP002",
+        "A-PROP003",
+        "A-PROP004",
+        "A-PROP005",
+        "A-PROP006",
+        "A-MAT001",
+        "A-MAT002",
+        "A-MAT003",
+        "A-MAT004",
+        "A-MAT005",
+        "A-LOOK001",
+        "A-CHAR001",
+        "A-CHAR002",
+        "A-CHAR003",
+        "A-CHAR004",
+        "A-CHAR005",
+        "A-UI001",
+        "A-UI002",
+        "A-UI003",
+        "A-UI004",
+        "A-UI005",
+        "A-UI006",
+        "A-UI007",
+        "A-UI008",
+        "A-UI009",
+        "A-UI010",
+        "A-UI011",
+        "A-UI012",
+        "A-UI013",
+        "A-FX001",
+        "A-FX002",
+        "A-FX003"
+      ],
+      "status": "todo",
+      "inputs": [
+        "批准的样板基线",
+        "planning/execution/asset_briefs.json",
+        "art/full/PACK001_manifest.json",
+        "art_review/full_art_catalog.json",
+        "art/full/engine_viewer_state_map.json",
+        "art/full/art_complete_catalog.json（仅作为既有源索引，非本轮批准）"
+      ],
+      "outputs": [
+        "art/iterations/cycle_02/PACK001/source_export_index.json",
+        "art/iterations/cycle_02/PACK001/previews/",
+        "art/iterations/cycle_02/PACK001/item_review.json"
+      ],
+      "acceptance": [
+        "源文件、贴图/字体、预览、版本哈希、操作配方和审核",
+        "已有合格内容可复用；先核对当前hash/样板基线，只修受影响部分",
+        "技术/视觉/行为分别登记；不得直接沿用producer pass当独立pass",
+        "旧冻结包内文件只读；复用时登记原hash，新修改保存cycle_02派生路径，不覆盖原件"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "I01",
+      "title": "全图正式机位/遮挡/站位回归",
+      "phase": "全量复核",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "A-MAP001",
+        "A-CHAR001",
+        "A-CHAR002",
+        "A-CHAR003",
+        "A-FX001"
+      ],
+      "status": "todo",
+      "inputs": [
+        "NEXT_ITERATION_PLAN.md",
+        "art_review/reports/independent_20261024/REPORT.md"
+      ],
+      "outputs": [
+        "delivery/next_cycle/T4/map_checkpoint_results.json",
+        "delivery/next_cycle/T4/map_walkthrough.mp4"
+      ],
+      "acceptance": [
+        "正式镜头所有点可读，无空洞，遮挡正确；近景不替代全图范围核对"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "I02",
+      "title": "全UI状态与行为回归",
+      "phase": "全量复核",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "A-UI001",
+        "A-UI002",
+        "A-UI003",
+        "A-UI004",
+        "A-UI005",
+        "A-UI006",
+        "A-UI007",
+        "A-UI008",
+        "A-UI009",
+        "A-UI010",
+        "A-UI011",
+        "A-UI012",
+        "A-UI013",
+        "A-FX002",
+        "A-FX003"
+      ],
+      "status": "todo",
+      "inputs": [
+        "NEXT_ITERATION_PLAN.md",
+        "art_review/reports/independent_20261024/REPORT.md"
+      ],
+      "outputs": [
+        "delivery/next_cycle/T4/ui_state_results.json",
+        "delivery/next_cycle/T4/ui_behavior.mp4"
+      ],
+      "acceptance": [
+        "状态索引无漏项，暂停/对白锁定及重置成立；不只截图"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "I03",
+      "title": "最终构建预算与手机代表性检查",
+      "phase": "全量复核",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "A-MAP001",
+        "K07"
+      ],
+      "status": "todo",
+      "inputs": [
+        "NEXT_ITERATION_PLAN.md",
+        "art_review/reports/independent_20261024/REPORT.md"
+      ],
+      "outputs": [
+        "delivery/next_cycle/T4/performance_results.json",
+        "delivery/next_cycle/T4/device_results.json"
+      ],
+      "acceptance": [
+        "同口径记录，超预警解释/优化；未测手机如实待测，不作性能通过结论"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "I04",
+      "title": "原生修改/依赖/导入一致性复查",
+      "phase": "全量复核",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "A-MAP001",
+        "A-ENV001",
+        "A-ENV002",
+        "A-ENV003",
+        "A-ENV004",
+        "A-ENV005",
+        "A-ENV006",
+        "A-ENV007",
+        "A-ENV008",
+        "A-ENV009",
+        "A-ENV010",
+        "A-ENV011",
+        "A-ENV012",
+        "A-PROP001",
+        "A-PROP002",
+        "A-PROP003",
+        "A-PROP004",
+        "A-PROP005",
+        "A-PROP006",
+        "A-MAT001",
+        "A-MAT002",
+        "A-MAT003",
+        "A-MAT004",
+        "A-MAT005",
+        "A-LOOK001",
+        "A-CHAR001",
+        "A-CHAR002",
+        "A-CHAR003",
+        "A-CHAR004",
+        "A-CHAR005",
+        "A-UI001",
+        "A-UI002",
+        "A-UI003",
+        "A-UI004",
+        "A-UI005",
+        "A-UI006",
+        "A-UI007",
+        "A-UI008",
+        "A-UI009",
+        "A-UI010",
+        "A-UI011",
+        "A-UI012",
+        "A-UI013",
+        "A-FX001",
+        "A-FX002",
+        "A-FX003",
+        "A-PACK001"
+      ],
+      "status": "todo",
+      "inputs": [
+        "NEXT_ITERATION_PLAN.md",
+        "art_review/reports/independent_20261024/REPORT.md"
+      ],
+      "outputs": [
+        "delivery/next_cycle/T4/dependency_audit.json",
+        "delivery/next_cycle/T4/edit_reimport_results.json"
+      ],
+      "acceptance": [
+        "代表源局部修改重开，全部依赖扫描；版本冲突不覆盖新文件"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "I05",
+      "title": "横竖viewport/字体/安全区全覆盖",
+      "phase": "全量复核",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "I02"
+      ],
+      "status": "todo",
+      "inputs": [
+        "NEXT_ITERATION_PLAN.md",
+        "art_review/reports/independent_20261024/REPORT.md"
+      ],
+      "outputs": [
+        "delivery/next_cycle/T4/viewport_font_results.json"
+      ],
+      "acceptance": [
+        "实际resize无布局溢出，中文不缺字；真机限制单列"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "I06",
+      "title": "10条独立缺陷逐项关闭核查",
+      "phase": "全量复核",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "I01",
+        "I02",
+        "I03",
+        "I04",
+        "I05"
+      ],
+      "status": "todo",
+      "inputs": [
+        "NEXT_ITERATION_PLAN.md",
+        "art_review/reports/independent_20261024/REPORT.md"
+      ],
+      "outputs": [
+        "delivery/next_cycle/T4/defect_closure.json"
+      ],
+      "acceptance": [
+        "R01-R10分别有修复与新证据；未解决major不进入最终批准"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "I07",
+      "title": "冻结全量新包并跑机械检查",
+      "phase": "全量复核",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "I06",
+        "A-PACK001"
+      ],
+      "status": "todo",
+      "inputs": [
+        "NEXT_ITERATION_PLAN.md",
+        "art_review/reports/independent_20261024/REPORT.md"
+      ],
+      "outputs": [
+        "art_review/submissions/cycle_02/art_complete/manifest.json",
+        "art_review/submissions/cycle_02/art_complete/mechanical_gate.json",
+        "delivery/next_cycle/RUN_ART.md"
+      ],
+      "acceptance": [
+        "引用有效样板证书，新目录/源/导出/截图一致；保留旧包"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "I08",
+      "title": "独立全量美术复审",
+      "phase": "全量复核",
+      "scope": "art_required",
+      "owner_role": "independent_reviewer",
+      "depends_on": [
+        "I07"
+      ],
+      "status": "todo",
+      "inputs": [
+        "NEXT_ITERATION_PLAN.md",
+        "art_review/reports/independent_20261024/REPORT.md"
+      ],
+      "outputs": [
+        "art_review/submissions/cycle_02/art_complete/independent_review.json",
+        "art_review/submissions/cycle_02/art_complete/review_gate.json"
+      ],
+      "acceptance": [
+        "47项证据覆盖，关键/变更项目原尺寸检查；四卡和行为门槛满足"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "I09",
+      "title": "控制器正式放行完整美术",
+      "phase": "全量复核",
+      "scope": "art_required",
+      "owner_role": "controller",
+      "depends_on": [
+        "I08"
+      ],
+      "status": "todo",
+      "inputs": [
+        "NEXT_ITERATION_PLAN.md",
+        "art_review/reports/independent_20261024/REPORT.md"
+      ],
+      "outputs": [
+        "art_review/submissions/cycle_02/art_complete/attestation.json",
+        "art_review/submissions/cycle_02/art_complete/release_gate.json"
+      ],
+      "acceptance": [
+        "accepted=true且证书绑定当前内容，未签认不能宣布美术完成"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "G01",
+      "title": "单一任务/场景状态数据",
+      "phase": "后续游戏集成",
+      "scope": "game_deferred",
+      "owner_role": "producer",
+      "depends_on": [
+        "I09"
+      ],
+      "status": "todo",
+      "inputs": [
+        "NEXT_ITERATION_PLAN.md",
+        "art_review/reports/independent_20261024/REPORT.md"
+      ],
+      "outputs": [
+        "demo/assets/scripts/GameFlow.ts",
+        "demo/assets/scripts/QuestSystem.ts",
+        "delivery/game/G01_results.json"
+      ],
+      "acceptance": [
+        "按DEMO_EXECUTION_SPEC.md真实完成该项",
+        "本任务当前deferred，不能把当前资产查看器标作已完成游戏",
+        "脚本职责可合并到现有模块，但须在结果中列出实际路径与职责映射，避免重复状态源"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "G02",
+      "title": "正式触控/键盘移动与碰撞",
+      "phase": "后续游戏集成",
+      "scope": "game_deferred",
+      "owner_role": "producer",
+      "depends_on": [
+        "G01"
+      ],
+      "status": "todo",
+      "inputs": [
+        "NEXT_ITERATION_PLAN.md",
+        "art_review/reports/independent_20261024/REPORT.md"
+      ],
+      "outputs": [
+        "demo/assets/scripts/PlayerController.ts",
+        "delivery/game/G02_results.json"
+      ],
+      "acceptance": [
+        "按DEMO_EXECUTION_SPEC.md真实完成该项",
+        "本任务当前deferred，不能把当前资产查看器标作已完成游戏",
+        "脚本职责可合并到现有模块，但须在结果中列出实际路径与职责映射，避免重复状态源"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "G03",
+      "title": "NPC对话与接受任务",
+      "phase": "后续游戏集成",
+      "scope": "game_deferred",
+      "owner_role": "producer",
+      "depends_on": [
+        "G01",
+        "G02"
+      ],
+      "status": "todo",
+      "inputs": [
+        "NEXT_ITERATION_PLAN.md",
+        "art_review/reports/independent_20261024/REPORT.md"
+      ],
+      "outputs": [
+        "demo/assets/scripts/DialogueSystem.ts",
+        "delivery/game/G03_results.json"
+      ],
+      "acceptance": [
+        "按DEMO_EXECUTION_SPEC.md真实完成该项",
+        "本任务当前deferred，不能把当前资产查看器标作已完成游戏",
+        "脚本职责可合并到现有模块，但须在结果中列出实际路径与职责映射，避免重复状态源"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "G04",
+      "title": "三明信片拾取去重与HUD",
+      "phase": "后续游戏集成",
+      "scope": "game_deferred",
+      "owner_role": "producer",
+      "depends_on": [
+        "G03"
+      ],
+      "status": "todo",
+      "inputs": [
+        "NEXT_ITERATION_PLAN.md",
+        "art_review/reports/independent_20261024/REPORT.md"
+      ],
+      "outputs": [
+        "demo/assets/scripts/InteractionSystem.ts",
+        "delivery/game/G04_results.json"
+      ],
+      "acceptance": [
+        "按DEMO_EXECUTION_SPEC.md真实完成该项",
+        "本任务当前deferred，不能把当前资产查看器标作已完成游戏",
+        "脚本职责可合并到现有模块，但须在结果中列出实际路径与职责映射，避免重复状态源"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "G05",
+      "title": "留言板提交/完成/继续漫步",
+      "phase": "后续游戏集成",
+      "scope": "game_deferred",
+      "owner_role": "producer",
+      "depends_on": [
+        "G04"
+      ],
+      "status": "todo",
+      "inputs": [
+        "NEXT_ITERATION_PLAN.md",
+        "art_review/reports/independent_20261024/REPORT.md"
+      ],
+      "outputs": [
+        "demo/assets/scripts/QuestSystem.ts",
+        "delivery/game/G05_results.json"
+      ],
+      "acceptance": [
+        "按DEMO_EXECUTION_SPEC.md真实完成该项",
+        "本任务当前deferred，不能把当前资产查看器标作已完成游戏",
+        "脚本职责可合并到现有模块，但须在结果中列出实际路径与职责映射，避免重复状态源"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "G06",
+      "title": "暂停/静音/重玩全量重置",
+      "phase": "后续游戏集成",
+      "scope": "game_deferred",
+      "owner_role": "producer",
+      "depends_on": [
+        "G05"
+      ],
+      "status": "todo",
+      "inputs": [
+        "NEXT_ITERATION_PLAN.md",
+        "art_review/reports/independent_20261024/REPORT.md"
+      ],
+      "outputs": [
+        "demo/assets/scripts/GameFlow.ts",
+        "delivery/game/G06_results.json"
+      ],
+      "acceptance": [
+        "按DEMO_EXECUTION_SPEC.md真实完成该项",
+        "本任务当前deferred，不能把当前资产查看器标作已完成游戏",
+        "脚本职责可合并到现有模块，但须在结果中列出实际路径与职责映射，避免重复状态源"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "G07",
+      "title": "加载失败/重试/微信前后台恢复",
+      "phase": "后续游戏集成",
+      "scope": "game_deferred",
+      "owner_role": "producer",
+      "depends_on": [
+        "G06"
+      ],
+      "status": "todo",
+      "inputs": [
+        "NEXT_ITERATION_PLAN.md",
+        "art_review/reports/independent_20261024/REPORT.md"
+      ],
+      "outputs": [
+        "demo/assets/scripts/PlatformAdapter.ts",
+        "delivery/game/G07_results.json"
+      ],
+      "acceptance": [
+        "按DEMO_EXECUTION_SPEC.md真实完成该项",
+        "本任务当前deferred，不能把当前资产查看器标作已完成游戏",
+        "脚本职责可合并到现有模块，但须在结果中列出实际路径与职责映射，避免重复状态源"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "G08",
+      "title": "完整任务闭环与功能独立验收",
+      "phase": "后续游戏集成",
+      "scope": "game_deferred",
+      "owner_role": "independent_reviewer",
+      "depends_on": [
+        "G07"
+      ],
+      "status": "todo",
+      "inputs": [
+        "NEXT_ITERATION_PLAN.md",
+        "art_review/reports/independent_20261024/REPORT.md"
+      ],
+      "outputs": [
+        "delivery/game/independent_function_review.json",
+        "delivery/game/complete_walkthrough.mp4"
+      ],
+      "acceptance": [
+        "按DEMO_EXECUTION_SPEC.md真实完成该项",
+        "本任务当前deferred，不能把当前资产查看器标作已完成游戏",
+        "脚本职责可合并到现有模块，但须在结果中列出实际路径与职责映射，避免重复状态源"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "W01",
+      "title": "微信开发者工具构建与入口",
+      "phase": "后续微信交付",
+      "scope": "game_deferred",
+      "owner_role": "producer",
+      "depends_on": [
+        "G08"
+      ],
+      "status": "todo",
+      "inputs": [
+        "NEXT_ITERATION_PLAN.md",
+        "art_review/reports/independent_20261024/REPORT.md"
+      ],
+      "outputs": [
+        "delivery/wechat/build_manifest.json",
+        "delivery/wechat/RUN_WECHAT.md"
+      ],
+      "acceptance": [
+        "明确设备/版本与实测结果，缺设备记blocked",
+        "未处理的发布依赖保留，不能将本地预览称为微信发布"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "W02",
+      "title": "手机触控/安全区/旋转与生命周期",
+      "phase": "后续微信交付",
+      "scope": "game_deferred",
+      "owner_role": "producer",
+      "depends_on": [
+        "W01"
+      ],
+      "status": "todo",
+      "inputs": [
+        "NEXT_ITERATION_PLAN.md",
+        "art_review/reports/independent_20261024/REPORT.md"
+      ],
+      "outputs": [
+        "delivery/wechat/device_interaction_results.json"
+      ],
+      "acceptance": [
+        "明确设备/版本与实测结果，缺设备记blocked",
+        "未处理的发布依赖保留，不能将本地预览称为微信发布"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "W03",
+      "title": "代表性手机性能/包体优化",
+      "phase": "后续微信交付",
+      "scope": "game_deferred",
+      "owner_role": "producer",
+      "depends_on": [
+        "W02"
+      ],
+      "status": "todo",
+      "inputs": [
+        "NEXT_ITERATION_PLAN.md",
+        "art_review/reports/independent_20261024/REPORT.md"
+      ],
+      "outputs": [
+        "delivery/wechat/performance_results.json"
+      ],
+      "acceptance": [
+        "明确设备/版本与实测结果，缺设备记blocked",
+        "未处理的发布依赖保留，不能将本地预览称为微信发布"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "W04",
+      "title": "离线完整闭环/重玩复验",
+      "phase": "后续微信交付",
+      "scope": "game_deferred",
+      "owner_role": "producer",
+      "depends_on": [
+        "W03"
+      ],
+      "status": "todo",
+      "inputs": [
+        "NEXT_ITERATION_PLAN.md",
+        "art_review/reports/independent_20261024/REPORT.md"
+      ],
+      "outputs": [
+        "delivery/wechat/offline_restart_results.json"
+      ],
+      "acceptance": [
+        "明确设备/版本与实测结果，缺设备记blocked",
+        "未处理的发布依赖保留，不能将本地预览称为微信发布"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "W05",
+      "title": "最终源码/构建/运行指南与发布准备结论",
+      "phase": "后续微信交付",
+      "scope": "game_deferred",
+      "owner_role": "producer",
+      "depends_on": [
+        "W04"
+      ],
+      "status": "todo",
+      "inputs": [
+        "NEXT_ITERATION_PLAN.md",
+        "art_review/reports/independent_20261024/REPORT.md"
+      ],
+      "outputs": [
+        "delivery/wechat/DELIVERY.md",
+        "delivery/wechat/release_readiness.json"
+      ],
+      "acceptance": [
+        "明确设备/版本与实测结果，缺设备记blocked",
+        "未处理的发布依赖保留，不能将本地预览称为微信发布"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "O01",
+      "title": "Forge探索编辑页M1",
+      "phase": "可选工具支线",
+      "scope": "optional_deferred",
+      "owner_role": "producer",
+      "depends_on": [
+        "I09"
+      ],
+      "status": "todo",
+      "inputs": [
+        "NEXT_ITERATION_PLAN.md",
+        "art_review/reports/independent_20261024/REPORT.md"
+      ],
+      "outputs": [
+        "tools/map_workbench/README.md",
+        "delivery/optional/forge_editor_results.json"
+      ],
+      "acceptance": [
+        "仅用户明确纳入当前范围时领取，不阻塞当前美术",
+        "遵守MAP_WORKBENCH_EXTENSION.md，无AI Image"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "O02",
+      "title": "MCP包装/高级网页3D预览",
+      "phase": "可选工具支线",
+      "scope": "optional_deferred",
+      "owner_role": "producer",
+      "depends_on": [
+        "I09"
+      ],
+      "status": "todo",
+      "inputs": [
+        "NEXT_ITERATION_PLAN.md",
+        "art_review/reports/independent_20261024/REPORT.md"
+      ],
+      "outputs": [
+        "tools/map_workbench/mcp/README.md",
+        "delivery/optional/bridge_results.json"
+      ],
+      "acceptance": [
+        "仅用户明确纳入当前范围时领取，不阻塞当前美术",
+        "遵守MAP_WORKBENCH_EXTENSION.md，无AI Image"
+      ],
+      "evidence_paths": [],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": 0,
+      "blocker": null,
+      "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
+      "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    }
+  ],
+  "artifact_write_policy": "Read-only old frozen dependencies. New or changed asset content goes to art/iterations/cycle_02/<asset_id>/. Record unchanged reused originals by hash; never overwrite old evidence to make the new package pass.",
+  "revision": "1.0.116"
+}

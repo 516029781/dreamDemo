@@ -1,0 +1,23 @@
+{
+  "name": "courtyard_scene_demo",
+  "platform": "web-desktop",
+  "debug": true,
+  "buildPath": "C:/软件/鼠鼠/demo_n4/build",
+  "outputName": "web-desktop",
+  "startScene": "0b1f4c5e-6a7d-4e2f-9b3c-5d8e0f1a2b3c",
+  "scenes": [
+    {
+      "url": "db://assets/scenes/main.scene",
+      "uuid": "0b1f4c5e-6a7d-4e2f-9b3c-5d8e0f1a2b3c"
+    }
+  ],
+  "packages": {
+    "web-desktop": {
+      "useWebGPU": false,
+      "resolution": {
+        "designWidth": 1280,
+        "designHeight": 720
+      }
+    }
+  }
+}

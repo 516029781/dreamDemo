@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0.0",
+  "review_kind": "P08_independent_rule_review",
+  "decision": "needs_changes",
+  "review_scope": "art_complete",
+  "reviewer": {
+    "id": "Codex independent audit 2026-10-25 candidate",
+    "mode": "independent"
+  },
+  "manifest_sha256": "2f8e63bf0e4c82d8a63a20286ff064ce89196a0d33cbfa0d5091aff9a3f58a3a",
+  "review_path": "art_review/reports/independent_20261025_candidate/independent_review.json",
+  "blocking_findings": [
+    "N04",
+    "N05"
+  ],
+  "major_findings": [
+    "N01",
+    "N02",
+    "N03",
+    "N06",
+    "N07",
+    "N08"
+  ],
+  "minor_findings": [
+    "N09"
+  ],
+  "tests_and_integrity": "52 harness regression tests passed; five producer selfchecks passed in isolated replay; 555 manifest records/380 unique paths hash-match. These do not override visual/gate failures.",
+  "next_step": "制作侧集中自修所列缺陷与ENV/UI/MIX视觉差距，重新采集证据并生成新manifest，再进行一次最终独立审核；不增加中途外部审核阻塞。"
+}

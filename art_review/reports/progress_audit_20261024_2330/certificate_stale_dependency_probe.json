@@ -1,0 +1,61 @@
+{
+  "scope": "synthetic isolated fixtures; no production signing or approval",
+  "fixture_root": "C:\\Users\\tt\\AppData\\Local\\Temp\\p03_chain_a15jatpe",
+  "normal": {
+    "exit": 0,
+    "body": {
+      "status": "accepted",
+      "accepted": true,
+      "stage": "scene_demo",
+      "mechanical_checks": "pass",
+      "computed_scores": {
+        "ENV": 100.0,
+        "CHAR": 100.0
+      },
+      "certificate": {
+        "certificate_id": "cert-scene_demo-001",
+        "stage": "scene_demo",
+        "signature": "d18e8f4c3a50262af60473fbad346b99aaad511ed3ef8e29e5a8e1d58bcf98d9",
+        "manifest_sha256": "4bc4b82e040f15bb838451eeeba9c80184c9c094f72fd7e80a9f0b13d05021c5",
+        "review_sha256": "05f28b9caadc3c8aedbc8533305f4a63c95f2f622f1b461ea9012cbab79ab966",
+        "dependencies": [
+          {
+            "stage": "character_playback",
+            "certificate_id": "cert-character_playback-001"
+          }
+        ]
+      },
+      "next_action": "Stage accepted for these exact inputs only."
+    }
+  },
+  "after_predecessor_artifact_mutation": {
+    "exit": 0,
+    "body": {
+      "status": "accepted",
+      "accepted": true,
+      "stage": "scene_demo",
+      "mechanical_checks": "pass",
+      "computed_scores": {
+        "ENV": 100.0,
+        "CHAR": 100.0
+      },
+      "certificate": {
+        "certificate_id": "cert-scene_demo-001",
+        "stage": "scene_demo",
+        "signature": "d18e8f4c3a50262af60473fbad346b99aaad511ed3ef8e29e5a8e1d58bcf98d9",
+        "manifest_sha256": "4bc4b82e040f15bb838451eeeba9c80184c9c094f72fd7e80a9f0b13d05021c5",
+        "review_sha256": "05f28b9caadc3c8aedbc8533305f4a63c95f2f622f1b461ea9012cbab79ab966",
+        "dependencies": [
+          {
+            "stage": "character_playback",
+            "certificate_id": "cert-character_playback-001"
+          }
+        ]
+      },
+      "next_action": "Stage accepted for these exact inputs only."
+    },
+    "stderr": ""
+  },
+  "explicit_predecessor_check_error": "Artifacts changed after snapshot; regenerate manifest and review",
+  "defect_reproduced": true
+}

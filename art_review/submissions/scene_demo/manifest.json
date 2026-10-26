@@ -1,0 +1,137 @@
+{
+  "manifest_version": "1.0.0",
+  "status": "draft_not_accepted",
+  "stage": "scene_demo",
+  "character_mode": "reference_spine",
+  "production_methods": [
+    "reference_spine",
+    "cocos_scene_edit",
+    "svg_editable",
+    "blender_editable"
+  ],
+  "contract_sha256": "72396f78d5b4c7fab5cac0a9e714866aa786d16666a0098ee67f533e96a46ea5",
+  "rubric_version": "1.2.0",
+  "artifacts": [
+    {
+      "role": "clip_inventory",
+      "path": "art/phase1/character_playback_1015/clip_inventory.json",
+      "sha256": "b3a5ad698976dc20ec976f1c39b5778cd00a19572de481ea7ab29bdf10fddb00",
+      "bytes": 8421
+    },
+    {
+      "role": "idle_preview",
+      "path": "art/phase1/character_playback_1015/idle_preview.png",
+      "sha256": "a94cbf779a7942493ba750c1363f457c629031b54a89d3d99f11e382b8481bd6",
+      "bytes": 496832,
+      "width": 768,
+      "height": 768,
+      "alpha_channel_declared": true
+    },
+    {
+      "role": "move_preview",
+      "path": "art/phase1/character_playback_1015/move_preview.gif",
+      "sha256": "015db46945c373c40c066fb33ec4de730f6123db07acce7550e1ba1258e41cd1",
+      "bytes": 1949195
+    },
+    {
+      "role": "reference_comparison",
+      "path": "art/phase1/character_playback_1015/reference_comparison.png",
+      "sha256": "eb88a5ffd91d62049e2a0b80bd75790bc8f34335a8591e245046d45f095ae98a",
+      "bytes": 878967,
+      "width": 1700,
+      "height": 1250,
+      "alpha_channel_declared": false
+    },
+    {
+      "role": "runtime_log",
+      "path": "art/phase1/character_playback_1015/runtime_log.txt",
+      "sha256": "1e27cf05c89fa550760e1415c6e1986e8dfc111f75fbd18f577d804fd471a900",
+      "bytes": 1706
+    },
+    {
+      "role": "scene_screenshot",
+      "path": "art/full/previews/engine/scene_gameplay_1280x720.png",
+      "sha256": "78b2bcfa2c8321dc19bc60c50736cebcfc5e0f15ac3a2c7196b412b6b2b5d07f",
+      "bytes": 371861,
+      "width": 1280,
+      "height": 720,
+      "alpha_channel_declared": false
+    },
+    {
+      "role": "dialogue_screenshot",
+      "path": "art/full/previews/engine/dialogue_npc_1280x720.png",
+      "sha256": "7475591963df4e3fe87b688ca1f1cf389de1f20b00003acaec63f62c8cbc8430",
+      "bytes": 296431,
+      "width": 1280,
+      "height": 720,
+      "alpha_channel_declared": false
+    },
+    {
+      "role": "demo_recording",
+      "path": "art/full/previews/engine/demo_recording.gif",
+      "sha256": "a3fe4faeac068284f2792f93af5b9b44eddeab5fb1f9176082037c8f28e91ff2",
+      "bytes": 1746605
+    },
+    {
+      "role": "engine_sources",
+      "path": "delivery/courtyard_scene_demo_sources_v3.zip",
+      "sha256": "4c1c8cba06e36ef71f3f874068c53c02fa2931f5da4014cbacc3f2ed66040c12",
+      "bytes": 30519474
+    },
+    {
+      "role": "run_instructions",
+      "path": "delivery/RUN_DEMO.md",
+      "sha256": "cb7200a5ca429b429149b04ef72b311a9a4c5000a09afb0099d9a4f3ceb6fdef",
+      "bytes": 3998
+    },
+    {
+      "role": "map_editable_source",
+      "path": "art/full/source/layout/MAP001_courtyard.blend",
+      "sha256": "ada7e0eca83ccec87698b39beb04e382378bc938ab68d5499e8ccf3d556055e8",
+      "bytes": 7369851
+    },
+    {
+      "role": "ui_editable_source",
+      "path": "art/full/ui/components/paper_panel.svg",
+      "sha256": "4f518b89b5df3250f74df9d9ef0015135da9fdbc114eed1cac5b4a65893f326d",
+      "bytes": 1503
+    },
+    {
+      "role": "engine_capture_log",
+      "path": "art/full/previews/engine/engine_capture.log",
+      "sha256": "d0d38d7d331afcc6f545abc11e551e59ebc36f92cba8a1242eda79c0e121a1c3",
+      "bytes": 3387
+    },
+    {
+      "role": "engine_runtime_state",
+      "path": "art/full/previews/engine/engine_state.json",
+      "sha256": "5c082d84e2e9f7e1ae0b53b4279c4f899c211bdf5cbab6d3e8a2bc35418d47b0",
+      "bytes": 870
+    },
+    {
+      "role": "scene_demo_report",
+      "path": "art/full/reports/SCENE_DEMO_MAP001_REPORT.md",
+      "sha256": "843d95d8342570f53efc2a75056638ce3679592b6a92519e4f8951e20094ec02",
+      "bytes": 4029
+    },
+    {
+      "role": "map_layout_json",
+      "path": "art/full/source/layout/layout.json",
+      "sha256": "919685e86fc4716549649b69dbd32e3813cbbc55a3eb4c328300e3f92b0133a0",
+      "bytes": 92006
+    },
+    {
+      "role": "cocos_build_config",
+      "path": "demo/build-config-web-desktop.json",
+      "sha256": "78fee9c18e87e760ed44dc71a8cfab9346b000ba6750461ee8f35ee954f8833c",
+      "bytes": 507
+    },
+    {
+      "role": "engine_viewer_state_map",
+      "path": "art/full/engine_viewer_state_map.json",
+      "sha256": "12de99f5f411d352f7ff4c773fe2a711539e2806cdaf49430b3c7845b5e06fa5",
+      "bytes": 2364
+    }
+  ],
+  "catalog_members": []
+}

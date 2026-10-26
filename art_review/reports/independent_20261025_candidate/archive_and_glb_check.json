@@ -1,0 +1,60 @@
+{
+  "archives": [
+    {
+      "path": "delivery/courtyard_scene_demo_sources_v4.zip",
+      "entries": 265,
+      "entries_matching_disk_paths": 265,
+      "changed_payload_entries": [],
+      "not_on_current_disk": [],
+      "bad_crc": null,
+      "first_entries": [
+        "art/full/source/characters/CHAR003_NPC_GARDENER/npc_erode10.png",
+        "art/full/source/characters/CHAR003_NPC_GARDENER/npc_erode10_preview.png",
+        "art/full/source/characters/CHAR003_NPC_GARDENER/npc_erode12.png",
+        "art/full/source/characters/CHAR003_NPC_GARDENER/npc_erode12_preview.png",
+        "art/full/source/characters/CHAR003_NPC_GARDENER/npc_erode14.png",
+        "art/full/source/characters/CHAR003_NPC_GARDENER/npc_erode14_preview.png",
+        "art/full/source/characters/CHAR003_NPC_GARDENER/npc_erode8.png",
+        "art/full/source/characters/CHAR003_NPC_GARDENER/npc_erode8_preview.png",
+        "art/full/source/characters/CHAR003_NPC_GARDENER/npc_gardener_mask.svg",
+        "art/full/source/characters/CHAR003_NPC_GARDENER/npc_gardener_portrait_512.png",
+        "art/full/source/characters/CHAR003_NPC_GARDENER/npc_gardener_slice_final_preview.png",
+        "art/full/source/characters/CHAR003_NPC_GARDENER/npc_gardener_slice_preview.png"
+      ]
+    },
+    {
+      "path": "delivery/candidate_full_review_pack_20261025_final.zip",
+      "entries": 199,
+      "entries_matching_disk_paths": 199,
+      "changed_payload_entries": [
+        "delivery/next_cycle/T4/producer_self_review.json",
+        "delivery/next_cycle/T7/I07_complete_candidate_package.json"
+      ],
+      "not_on_current_disk": [],
+      "bad_crc": null,
+      "first_entries": [
+        "art/iterations/cycle_02/full_art_catalog.json",
+        "art/iterations/cycle_02/reviews/CHAR001.json",
+        "art/iterations/cycle_02/reviews/CHAR002.json",
+        "art/iterations/cycle_02/reviews/CHAR003.json",
+        "art/iterations/cycle_02/reviews/CHAR004.json",
+        "art/iterations/cycle_02/reviews/CHAR005.json",
+        "art/iterations/cycle_02/reviews/ENV001.json",
+        "art/iterations/cycle_02/reviews/ENV002.json",
+        "art/iterations/cycle_02/reviews/ENV003.json",
+        "art/iterations/cycle_02/reviews/ENV004.json",
+        "art/iterations/cycle_02/reviews/ENV005.json",
+        "art/iterations/cycle_02/reviews/ENV006.json"
+      ]
+    }
+  ],
+  "glb": {
+    "glb_bytes": 12821604,
+    "meshes": 125,
+    "primitives": 336,
+    "triangle_indices_decoded": 189864,
+    "materials": 25,
+    "textures": 0,
+    "note": "Stored exported geometry; not GPU-visible triangle count. Cocos runtime material overrides are separate."
+  }
+}

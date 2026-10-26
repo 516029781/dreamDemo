@@ -1,0 +1,236 @@
+{
+  "initial": {
+    "ready": true,
+    "uiVisible": true,
+    "dialogueVisible": false,
+    "dialoguePage": 1,
+    "accepted": false,
+    "moving": false,
+    "paused": false,
+    "inputLocked": false,
+    "boardState": "full",
+    "cameraMode": "game",
+    "anim": "Relax",
+    "animNames": [],
+    "player": [
+      0,
+      0,
+      -5.2
+    ],
+    "viewer": "",
+    "loadErrors": [],
+    "boneBounds": 450,
+    "metrics": {
+      "px": 97.84413872565966,
+      "feet": [
+        198.46772880309163,
+        -294.45630238540286
+      ],
+      "head": [
+        213.86475974204365,
+        -196.6121636597432
+      ],
+      "depth": 14.382365029021415,
+      "player": [
+        0,
+        0,
+        -5.2
+      ],
+      "canvas": [
+        1280,
+        720
+      ],
+      "view": [
+        1280,
+        720
+      ],
+      "method": "RenderTexture->world transparent quad"
+    },
+    "spine": {
+      "width": 1024,
+      "height": 1024,
+      "premultipliedAlpha": false
+    }
+  },
+  "orientation": {
+    "afterResize": {
+      "ready": true,
+      "uiVisible": true,
+      "dialogueVisible": false,
+      "dialoguePage": 1,
+      "accepted": false,
+      "moving": false,
+      "paused": false,
+      "inputLocked": false,
+      "boardState": "full",
+      "cameraMode": "game",
+      "anim": "Relax",
+      "animNames": [],
+      "player": [
+        0,
+        0,
+        -5.2
+      ],
+      "viewer": "",
+      "loadErrors": [],
+      "boneBounds": 450,
+      "metrics": {
+        "px": 97.84413872565966,
+        "feet": [
+          198.46772880309163,
+          -294.45630238540286
+        ],
+        "head": [
+          213.86475974204365,
+          -196.6121636597432
+        ],
+        "depth": 14.382365029021415,
+        "player": [
+          0,
+          0,
+          -5.2
+        ],
+        "canvas": [
+          1280,
+          720
+        ],
+        "view": [
+          1280,
+          720
+        ],
+        "method": "RenderTexture->world transparent quad"
+      },
+      "spine": {
+        "width": 1024,
+        "height": 1024,
+        "premultipliedAlpha": false
+      }
+    },
+    "canvas": {
+      "width": 1280,
+      "height": 720,
+      "rect": {
+        "x": 0,
+        "y": 84.875,
+        "width": 1280,
+        "height": 720,
+        "top": 84.875,
+        "right": 1280,
+        "bottom": 804.875,
+        "left": 0
+      }
+    },
+    "freshPortrait": {
+      "ready": true,
+      "uiVisible": true,
+      "dialogueVisible": false,
+      "dialoguePage": 1,
+      "accepted": false,
+      "moving": false,
+      "paused": false,
+      "inputLocked": false,
+      "boardState": "full",
+      "cameraMode": "game",
+      "anim": "Relax",
+      "animNames": [],
+      "player": [
+        0,
+        0,
+        -5.2
+      ],
+      "viewer": "",
+      "loadErrors": [],
+      "boneBounds": 450,
+      "metrics": {
+        "px": 97.84413872565966,
+        "feet": [
+          198.46772880309163,
+          -294.45630238540286
+        ],
+        "head": [
+          213.86475974204365,
+          -196.6121636597432
+        ],
+        "depth": 14.382365029021415,
+        "player": [
+          0,
+          0,
+          -5.2
+        ],
+        "canvas": [
+          1280,
+          720
+        ],
+        "view": [
+          1280,
+          720
+        ],
+        "method": "RenderTexture->world transparent quad"
+      },
+      "spine": {
+        "width": 1024,
+        "height": 1024,
+        "premultipliedAlpha": false
+      }
+    }
+  },
+  "touch": [
+    {
+      "mode": "normal",
+      "before": [
+        0,
+        0,
+        -5.2
+      ],
+      "after": [
+        1.0984148379029808,
+        0,
+        -4.7219554157853745
+      ],
+      "distance": 1.1979322938389991
+    },
+    {
+      "mode": "paused",
+      "before": [
+        0,
+        0,
+        -5.2
+      ],
+      "after": [
+        0,
+        0,
+        -5.2
+      ],
+      "distance": 0
+    },
+    {
+      "mode": "dialogue",
+      "before": [
+        0,
+        0,
+        -5.2
+      ],
+      "after": [
+        0,
+        0,
+        -5.2
+      ],
+      "distance": 0
+    },
+    {
+      "mode": "resumed",
+      "before": [
+        0,
+        0,
+        -5.2
+      ],
+      "after": [
+        0.9275042637355408,
+        0,
+        -4.708096728892564
+      ],
+      "distance": 1.0498728434309572
+    }
+  ],
+  "errors": []
+}

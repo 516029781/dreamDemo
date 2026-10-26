@@ -1,0 +1,71 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "art_review/vnext/stage_certificate.schema.json",
+  "title": "vNext stage certificate (external controller)",
+  "description": "阶段证书记录。证书由外部控制器在制作环境之外产生（HMAC签名密钥ART_HARNESS_REVIEW_KEY不在制作环境保管）；制作方不能生成有效签名，布尔previous_passed不被接受。证书绑定确切的manifest字节与review字节hash，并按合同certificate_policy.requires_certificates携带前序证书链。vNext未生效前（vnext_effective=false）本schema仅为草案。",
+  "type": "object",
+  "required": [
+    "certificate_version", "certificate_id", "stage", "issued_at",
+    "manifest", "review", "approver", "approval_scope", "dependencies", "signature"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "certificate_version": {"type": "string", "const": "vnext.stage_certificate/1.0.0"},
+    "certificate_id": {"type": "string", "minLength": 1, "description": "证书唯一ID，如 cert-scene-demo-2026xxxx-xxxx。"},
+    "stage": {"type": "string", "minLength": 1, "description": "被批准的阶段；必须等于manifest.stage并存在于合同stages。"},
+    "issued_at": {"type": "string"},
+    "manifest": {
+      "type": "object",
+      "required": ["path", "sha256"],
+      "additionalProperties": false,
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$", "description": "被批准manifest的确切字节hash。"}
+      }
+    },
+    "review": {
+      "type": "object",
+      "required": ["path", "sha256"],
+      "additionalProperties": false,
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$", "description": "绑定该manifest的独立review字节hash。"}
+      }
+    },
+    "approver": {
+      "type": "object",
+      "required": ["id", "role", "key_id"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "role": {"type": "string", "const": "external_controller"},
+        "key_id": {"type": "string", "minLength": 1, "description": "签名密钥标识；密钥本体在制作环境外保管。"}
+      }
+    },
+    "approval_scope": {
+      "type": "string",
+      "minLength": 1,
+      "description": "批准的确切范围（阶段/资产/机位/基线），不自动外推到其他内容。"
+    },
+    "dependencies": {
+      "type": "array",
+      "description": "前序证书链；按合同certificate_policy.requires_certificates逐项给出，缺一不放行。",
+      "items": {
+        "type": "object",
+        "required": ["stage", "certificate_id", "path", "signature"],
+        "additionalProperties": false,
+        "properties": {
+          "stage": {"type": "string"},
+          "certificate_id": {"type": "string"},
+          "path": {"type": "string", "description": "前序证书文件路径（内容hash复核）。"},
+          "signature": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+        }
+      }
+    },
+    "signature": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$",
+      "description": "HMAC-SHA256(ART_HARNESS_REVIEW_KEY, canonical(certificate_binding))；certificate_binding={certificate_id, stage, manifest_sha256, review_sha256, approval_scope, issued_at, approver_id, approver_key_id, dependency_signatures=[sorted]}。"
+    }
+  }
+}
