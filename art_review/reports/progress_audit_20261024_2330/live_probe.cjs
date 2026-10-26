@@ -1,0 +1,15 @@
+const fs=require('fs'), path=require('path');
+const req=require('module').createRequire('C:/软件/鼠鼠/.tooling/package.json');
+const puppeteer=req('puppeteer-core');
+const out='C:/软件/鼠鼠/art_review/reports/progress_audit_20261024_2330';
+(async()=>{const browser=await puppeteer.launch({executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe',headless:'new',args:['--use-gl=angle','--use-angle=swiftshader','--enable-webgl','--ignore-gpu-blocklist','--no-sandbox'],defaultViewport:{width:1280,height:720,deviceScaleFactor:1}});
+try{const page=await browser.newPage();const errors=[];page.on('pageerror',e=>errors.push(String(e)));
+await page.goto('http://127.0.0.1:8801/',{waitUntil:'networkidle2',timeout:20000});
+await page.waitForFunction(()=>window.__COURTYARD_READY__===true,{timeout:20000});
+await page.evaluate(()=>{window.__courtyard.resetView();window.__courtyard.reset();window.__courtyard.closeDialogue();window.__courtyard.setUi(true);});
+await new Promise(r=>setTimeout(r,900));
+const layout=await page.evaluate(()=>({url:location.href,viewport:[innerWidth,innerHeight],canvas:[...document.querySelectorAll('canvas')].map(c=>({id:c.id,width:c.width,height:c.height,rect:JSON.parse(JSON.stringify(c.getBoundingClientRect()))})),state:window.__courtyard.state?.(),stats:window.__courtyard.renderStats()}));
+await page.screenshot({path:path.join(out,'live_page.png')});
+const canvas=await page.$('#GameCanvas')||await page.$('canvas');await canvas.screenshot({path:path.join(out,'live_canvas.png')});
+fs.writeFileSync(path.join(out,'live_layout.json'),JSON.stringify({layout,errors,scope:'existing local server; current source/build lineage not independently frozen by this probe'},null,2));console.log(JSON.stringify({layout,errors}));
+}finally{await browser.close();}})().catch(e=>{fs.writeFileSync(path.join(out,'live_probe_error.txt'),String(e));console.error(String(e));process.exitCode=1;});

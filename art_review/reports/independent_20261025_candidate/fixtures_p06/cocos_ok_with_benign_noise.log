@@ -1,0 +1,4 @@
+trackTimeEnd failed! missing track time
+Check build parameter x failed, and the default value will be used instead
+Error: Exit process with code:null, signal:SIGTERM in task build-script
+build Task (web-desktop) Finished in (17 s)ms

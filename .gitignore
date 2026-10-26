@@ -77,3 +77,12 @@ delivery/**/*.txt
 /tools/cocos/logs/
 /tools/blender/out/
 /tools/source_search/*.json
+/tools/source_search/work/
+/tools/blender/logs/
+/tools/blender_n3/logs/
+/tools/blender_n4/logs/
+/tools/blender_n5/logs/
+/planning/performance/*.log
+/.gitattributes
+/.git-next/
+*.sha256

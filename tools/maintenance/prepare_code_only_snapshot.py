@@ -13,8 +13,8 @@ from datetime import datetime, timezone
 
 ROOT = Path(__file__).resolve().parents[2]
 TEXT_SUFFIXES = {
-    '.py', '.ts', '.js', '.json', '.jsonl', '.md', '.scene', '.meta',
-    '.ps1', '.sh', '.toml', '.yaml', '.yml', '.css', '.html', '.txt',
+    '.py', '.ts', '.js', '.cjs', '.json', '.jsonl', '.md', '.scene', '.meta',
+    '.ps1', '.sh', '.toml', '.yaml', '.yml', '.css', '.html', '.txt', '.csv',
 }
 EXCLUDE_PREFIXES = (
     'reference/', 'art/candidates/', 'art/phase1/', 'art/full/',
@@ -29,6 +29,7 @@ ASSET_ROOTS = (
 REQUIRED_CODE = {
     'demo_n5/assets/scripts/CourtyardBootstrap.ts',
     'demo_n5/assets/scenes/main.scene',
+    'art_review/reports/independent_20261025_candidate/runtime_probe.cjs',
     'tools/cocos/build_web_desktop.py',
     'tools/maintenance/prepare_code_only_snapshot.py',
     'planning/performance/CODE_ONLY_GIT_POLICY.md',
@@ -42,6 +43,8 @@ FORBIDDEN_BINARY_SUFFIXES = {
 
 def wanted(relative: str) -> bool:
     path = Path(relative)
+    if 'fixtures_' in relative and path.suffix == '.log':
+        return True
     if relative.startswith(EXCLUDE_PREFIXES):
         return False
     if relative.startswith('tools/source_search/') and path.suffix == '.json':
