@@ -1,5 +1,7 @@
 # 给执行模型：完整制作后集中评审
 
+当前视觉锚点先读 `planning/art/P1_VISUAL_TARGET_LOCK_20261027.md`：整画面固定对照 P1 `t084s.jpg`。本轮仍需制作可编辑场景和真实运行证据；旧 t015/t044 多帧平均、T5 试验变体不能自动作为整画面验收结果。
+
 ## 当前指令：candidate_n2 退回后的返修
 
 下一制作轮先读 `art_review/reports/candidate_n4_provisional_20261026/REPORT.md` 和 `planning/performance/N5_EXECUTION_DESIGN_AND_GAP_AUDIT.md`。前者记录 n4 的 90 分差距、证据链错误和关闭标准；后者给出 n5 各类变更该跑什么、何时升级到 Cocos/全量采集、工具缺口与时间目标的计算口径。按活动返修指针使用新候选号。下一候选必须保存 `events.jsonl`、原始命令/日志、返修决策和阶段汇总，缺日志的“已提速”不得作为结论。

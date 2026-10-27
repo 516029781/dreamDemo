@@ -10,6 +10,7 @@
    每批自我总结、主动找反例、经验入库/失效按 `planning/execution/SELF_LEARNING_LOOP.md`；短经验索引为 `planning/execution/LESSONS.md`，仅作参考，不覆盖合同与证据。
 4. `PROJECT_TASKS.json`、运行 `tools/workflow.py storage --enforce` 与 `tools/workflow.py summary --write` 后生成的 `delivery/workflow/STORAGE_STATUS.json` 和 `CURRENT_WORK_PACKAGE.md`：容量预检、制作任务状态和当下动作；生成摘要不能批准候选。容量分类与复用见 `planning/performance/ARTIFACT_REUSE_AND_STORAGE.md`，细则见 `tools/maintenance/STORAGE_POLICY.md`。
 5. `art_review/harness_contract.json`、`art_review/rubric.json`、`planning/execution/producer_review_policy.json`：当前合同、评分与制作侧提交筛选。角色来源只读有效合同。
+   当前 n5 的**视觉目标与参考取样**另见 `planning/art/P1_VISUAL_TARGET_LOCK_20261027.md`：整画面主参考固定为 `P1/t084s.jpg`，它不修改合同或冻结证据。
 6. `FULL_ART_DELIVERY.md`、`PHASE1_ART_ACCEPTANCE.md`、`P1_ART_STYLE_GUIDE.md`：资产范围、画面特征与制作方法。发生执行顺序冲突时按本索引第1–4项。
 7. `planning/performance/END_TO_END_DEVELOPMENT_CHAIN_PLAN.md` 与 `planning/performance/N5_EXECUTION_DESIGN_AND_GAP_AUDIT.md`：当前优化方案及 n5 可执行细化；它们不能覆盖账本状态、合同和独立审核结论。
 

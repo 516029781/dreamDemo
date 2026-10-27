@@ -2,6 +2,8 @@
 
 当前规则的责任与历史文件分类见 `planning/execution/CURRENT_INSTRUCTION_INDEX.md`。先按该索引判断文件是否仍是活动指令。
 
+当前 n5 整画面视觉目标见 `planning/art/P1_VISUAL_TARGET_LOCK_20261027.md`：唯一主参考固定为 P1 `t084s.jpg`；其他时间点只承担该文档列出的辅助用途。旧多帧平均和 t015 区域数值保留为历史研究，不能代替本轮主参考或直接成为新候选硬门槛。
+
 按问题检索规范、可复用操作用例和真实失败案例，可读 `knowledge/README.md`；它是知识入口，不替代当前账本、合同或审核结论。
 
 **当前恢复点（2026-10-25）：独立审核退回后的制作侧返修。**先读 `planning/execution/ACTIVE_REWORK_CYCLE.json`，以其中 `next_candidate` 和 `open_findings` 为当前值，再读它指向的审核报告与返修工作单。`source_candidate` 及已完成尝试的证据只读；从原生源继续新候选。旧的 V06/V07/47项首次制作路线已完成，不从头重做。`PROJECT_TASKS.json` 仍是唯一任务账本。低于自审门槛时，工作包的下一动作是**实际修改一个开放缺陷并重新看图**，不是只写下一轮计划。
