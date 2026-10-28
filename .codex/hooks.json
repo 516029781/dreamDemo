@@ -1,0 +1,31 @@
+{
+  "description": "Project-only P1 static-map completion gate. Per-session opt-in; no user/global Codex settings are changed.",
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$(git rev-parse --show-toplevel)/.codex/hooks/static_map_quality_hook.py\" --event UserPromptSubmit",
+            "commandWindows": "\"C:/Users/tt/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe\" \"C:/软件/鼠鼠/.codex/hooks/static_map_quality_hook.py\" --event UserPromptSubmit",
+            "timeout": 10,
+            "statusMessage": "Checking whether this project session starts P1 map production"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$(git rev-parse --show-toplevel)/.codex/hooks/static_map_quality_hook.py\" --event Stop",
+            "commandWindows": "\"C:/Users/tt/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe\" \"C:/软件/鼠鼠/.codex/hooks/static_map_quality_hook.py\" --event Stop",
+            "timeout": 120,
+            "statusMessage": "Checking P1 static-map quality evidence"
+          }
+        ]
+      }
+    ]
+  }
+}

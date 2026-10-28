@@ -1,26 +1,19 @@
-# 鼠鼠：执行入口
+# 鼠鼠：当前执行入口
 
-当前规则的责任与历史文件分类见 `planning/execution/CURRENT_INSTRUCTION_INDEX.md`。先按该索引判断文件是否仍是活动指令。
+当前任务：制作以秋日 P1 画面为唯一整图视觉目标的静态环境地图与可编辑 Blender 场景。明日方舟 CW-8/CW-9 数据只用于地图参数与 Harness 结构规则研究，不是美术主参考。
 
-当前 n5 整画面视觉目标见 `planning/art/P1_VISUAL_TARGET_LOCK_20261027.md`：唯一主参考固定为 P1 `t084s.jpg`；其他时间点只承担该文档列出的辅助用途。旧多帧平均和 t015 区域数值保留为历史研究，不能代替本轮主参考或直接成为新候选硬门槛。
+按顺序阅读：
+1. AGENTS.md
+2. planning/art/STATIC_MAP_WORKFLOW_20261028.md
+3. planning/art/P1_T084_ART_DIRECTION_STANDARD_20261028.md
+4. knowledge/MAP_PARAMETER_HARNESS_RULES_20261029.md
+5. .agents/skills/p1-art-director/SKILL.md
+6. .agents/skills/p1-map-environment-art/SKILL.md
 
-按问题检索规范、可复用操作用例和真实失败案例，可读 `knowledge/README.md`；它是知识入口，不替代当前账本、合同或审核结论。
+只做地图环境静帧，不做人物/UI/玩法/Cocos/微信。唯一整图目标是 `reference/_raw_screenshots/P1/t084s.jpg`；固定它的 SHA、锚点和画面语言。一次连续完成四个制作关口；先由制作侧自评返修，候选预检达到目标后再做两份盲评；低分就按工作单继续返修，不等待阶段批准。最终交付按工作流清单，包括可编辑源、灰模/色块/组合/最终图、细节板、REVIEW.md、DELIVERY.json、GATE_REPORT.json 和真实状态。地图参数 Harness 规则按知识库文档执行，不能覆盖或稀释视觉标准。
 
-**当前恢复点（2026-10-25）：独立审核退回后的制作侧返修。**先读 `planning/execution/ACTIVE_REWORK_CYCLE.json`，以其中 `next_candidate` 和 `open_findings` 为当前值，再读它指向的审核报告与返修工作单。`source_candidate` 及已完成尝试的证据只读；从原生源继续新候选。旧的 V06/V07/47项首次制作路线已完成，不从头重做。`PROJECT_TASKS.json` 仍是唯一任务账本。低于自审门槛时，工作包的下一动作是**实际修改一个开放缺陷并重新看图**，不是只写下一轮计划。
+当前 v05 保持原样；任何对其继续制作或评分都必须固定到 P1 秋日参考，并记录新候选证据；不覆盖旧绑定。最终评分低于 85、任一维低于 3 或硬门槛失败时，必须回到原生源返修、同机位重渲并复评；不得以 `quality_below_target` 结束正常任务。仅真实外部阻塞可结束为未完成，并说明阻塞和已尝试的替代办法。
 
-**2026-10-25用户新要求：完整候选做完后集中评审，取消制作途中的P08/V09外部审核阻塞。** 当前制作范围art_required，目标I07全套美术候选；独立审核和正式放行仍保留。
+Codex 项目级静态地图 Stop hook 已配置：首次在 Codex `/hooks` 中审阅并信任后，只有明确启动 P1 静态地图制作的当前会话才会被 85 分质量门禁约束；未启动任务的对话不受影响。契约见 `planning/art/CODEX_STATIC_MAP_QUALITY_HOOK_20261029.md`。
 
-1. 读MODEL_EXECUTION_GUIDE.md、AGENTS.md、EXECUTION_PROTOCOL.md。
-2. 在项目根运行 `tools/workflow.py storage --enforce`，记录容量基线；再运行 `tools/workflow.py summary --write`，读取 `delivery/workflow/CURRENT_WORK_PACKAGE.md`。10 GiB 预警；超过 12 GiB 只暂停新的大构建/导出/审阅包，不暂停返修和容量恢复。预计新增 ≥50 MiB 时用 `storage --planned-growth-mib <预计值> --enforce` 再检查一次。
-3. 若当前有开放的独立返修周期，优先按返修工作单完成新候选；否则按真实制作依赖连续完成当前范围。P07→V06→V07→47组候选→I01—I07 是历史首次制作路线，不重复执行。
-4. 全套候选完成后先按PRODUCER_SELF_REVIEW自行评分/返修；四卡各>=90且机械检查通过后，再交证据和问题表，由用户安排集中评审。90是制作侧提交筛选线；独立验收仍按 `art_review/rubric.json` 的标准。候选不叫accepted/released，独立任务不自签。
-
-PROJECT_TASKS是唯一状态源；depends_on为制作前序，review_dependencies/release_dependencies为最终批准。旧计划“V09前禁止A-*”已由用户本次要求撤销，历史版本仅归档参考。
-
-范围/画法见FULL_ART_DELIVERY、PHASE1_ART_ACCEPTANCE、P1_ART_STYLE_GUIDE。Q01–Q09 的旧设计背景可查 NEXT_ITERATION_PLAN 第5节，但实际执行以有效合同、当前质量检查代码和本轮返修工作单为准。当前有效合同/rubric及角色源读art_review/harness_contract.json与rubric.json；vNext未审核不生效。
-
-缺陷见planning/execution/workflow_fixes.json与实际新证据；性能状态见optimization_rollout.json。旧独立报告保留历史，不用旧结论自动覆盖新成果。禁止AI Image/扩散，复用原生源和锁定角色。
-
-workflow.py只生成任务摘要/命令计时，不后台开发、不自动批准。评分与正式放行证书验证未取消。后续游戏/微信scope及可选工具本轮不自动开启。
-
-制作侧自审提交过滤已接入workflow摘要。低分自行修改，不是外部审核阻塞；机器只能验算与核证据，不能替代实际看图。
+完整游戏、旧账本和发布审核目前暂停；`delivery/workflow/CURRENT_WORK_PACKAGE.md` 属于旧账本，不要运行 `tools/workflow.py summary --write` 领取静态地图任务。美术工具调研文档仅在需要选择工具时查阅，不是每轮必读。

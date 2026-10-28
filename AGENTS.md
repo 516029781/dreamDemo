@@ -1,47 +1,31 @@
-# 鼠鼠项目执行规则
+# 鼠鼠项目当前执行规则
 
-当前处于独立审核退回后的制作返修。先读 `planning/execution/ACTIVE_REWORK_CYCLE.json` 指向的报告与返修工作单，以其 `next_candidate`、`open_findings` 为准；冻结候选只读。`tools/workflow.py summary --write` 的当前返修提示优先于首次 V06/V07 路线；账本仍为唯一任务状态。自审低于提交门槛时，在同一制作轮实际修改原生源并同机位预览，不能仅记录下一步后结束。
+## 当前范围：P1 秋日风格静态地图
 
-更新：2026-10-25，用户明确要求“完整制作后统一评审”。workflow_mode=candidate_first_final_review。先读START_HERE及MODEL_EXECUTION_GUIDE，运行tools/workflow.py summary --write读取当前工作包。PROJECT_TASKS是唯一任务状态。
+当前只制作一张以 `reference/_raw_screenshots/P1/t084s.jpg` 为唯一整图视觉目标的秋日风格静态环境地图和可编辑 Blender 场景。唯一执行清单为 `planning/art/STATIC_MAP_WORKFLOW_20261028.md`；视觉目标与评分只以 `planning/art/P1_T084_ART_DIRECTION_STANDARD_20261028.md` 为准。明日方舟 CW-8/CW-9 的结构化数据只用于地图数据解析与 Harness 规则研究，不得替换秋日主参考或把其格子、路线数量当成本项目地图指标。项目美术 skill 提供制作建议，不创建额外审批门。
 
-## 持续制作到完整候选
+`reference/_raw_screenshots/P1/t084s.jpg` 是已锁定的秋日整图参考，SHA256 `13706e7eab96726565156a9e6440727de5d5bac82ee9c09c293a5745dd7446de`。地图数据/Harness 规则与视觉参考分离；不得因研究了明日方舟关卡数据而改动该参考身份。继续静态地图时使用未占用的 P1 秋日目标版本目录；不得覆盖旧 v05 和冻结候选/哈希证据。
 
-- 当前范围仍为art_required，制作终点I07完整美术候选：地图、47组资产、角色、全部UI状态、反馈、可编辑源及同源检查/运行证据。后续玩法/微信当前不自动启用。
-- P08、V08、V09、I08、I09集中在I07之后处理；不得因等待它们停在半成品。V06依制作侧P07等，A-*依V07候选预检，不等V09证书。
-- depends_on是制作前序；review_dependencies/release_dependencies是最终审核/放行要求。制作侧done表示完成相应制作验收，不代表独立批准。
-- 逐项保存证据、命令/退出码、问题及checkpoint，重算摘要并继续ready任务。不要做完一项或一包就停。
-- 从 candidate_n5 起每轮提交 `performance/events.jsonl`、`commands.txt`、原始 `logs/`、`decisions.jsonl`、`summary.json`；阶段字段、起止/耗时、输入输出hash、返修原因与未记录时间的处理按 `art_review/reports/candidate_n4_provisional_20261026/REPORT.md`。缺日志不能声称已缩短整轮耗时。
-- 每个变更批次按 `planning/execution/SELF_LEARNING_LOOP.md` 先写可证伪预期，再做原生源修改、同机位验证、主动找反例和批次复盘；将可复用经验提案写入 `planning/execution/LESSONS.md`。经验不得覆盖生效合同或替代独立审核。
-- 真正缺资源、设备、构建/运行失败仍须如实处理；可修错误继续修，其他无依赖任务继续。仅在完整候选提交且制作侧自审筛选通过、真实外部资源阻塞且无可做工作、用户暂停或运行限制必须交接时停。
+本任务不含人物、UI、动画、游戏玩法、Cocos/GLB、微信真机、全游戏 Q、release 审核或完整游戏候选。`delivery/workflow/CURRENT_WORK_PACKAGE.md` 和完整游戏账本属于暂停流程；不要用它们领取静态地图任务，也不要运行 workflow summary。历史游戏规则不对当前任务生效。
 
-## 最终审核仍独立
+静态地图任务不要运行 `tools/art_harness.py` 或 `tools/producer_review.py`：它们默认使用完整游戏 `art_review/harness_contract.json`、四卡 rubric 和 47 项目录，不是当前 P1 静态图的验收器。当前静态图按 P1 标准的 G0–G3 和 85 分规则自评、返修并结案；地图参数 Harness 按 `knowledge/MAP_PARAMETER_HARNESS_RULES_20261029.md`，不要将完整游戏 90 分过滤器或 Q01–Q09 套进来。
 
-- 制作模型不能自签review、attestation或certificate，不能造生产密钥、改独立分数或把未测填pass。
-- 保留当前合同/评分与正式release证书验证；无批准可prepare/freeze候选，不能accepted=true或宣称正式放行。
-- vNext规则未获审可用于明确标注版本的候选自检，不能偷偷替换生效合同。完整候选后集中审规则、样板、全量包。
+## 当前制作约束
 
-## 资产与性能
+- 新建独立 Blender 场景和输出目录；固定参考、相机与验收目标后再绘制细节。
+- 最终地图使用可编辑 Blender 源和本地素材，不用 AI Image 直接生成整图、贴图或图生图修补；素材记录来源和许可。
+- 按 P1 秋日标准执行；分数、逐维最低项与硬门槛只读目标标准。低于 85、任一维低于 3 或有硬门槛失败时，进入最终质量闭环，诊断并返修 Blender 原生源，直到复评达标；不得改阈值或伪造分数。仅在真实外部阻塞时报告未完成。CW-8/CW-9 原始参数仅作解析器黄金样例；抽象出的结构规则可以用于本项目 Harness，但必须按本项目地图语义配置，不复制源关卡数值。
+- 旧 `style.json`、`regions.json`、`target_layout_v04.json` 和读取它们的视觉脚本未经当前 P1 profile 校准；不得用其结果给新候选报通过/失败。
+- 每个返修批次记录一个假设、同机位前后图、参数、命令/退出码、耗时和 SHA；连续两次没有改善就换方法并继续闭环，不作为结束条件。只有达标或真实外部阻塞才结束。
+- Git 只提交代码、配置和小型规范；不入 Git 的本地源、图片、模型和证据仍要保留并列入 manifest，不能因未跟踪而删除。
+- 项目目录（含 `.git` 和项目内工具）控制在 15 GiB 内，12 GiB 预警。开始和结束统计空间；预计新增 ≥50 MiB 的完整输出前先做容量预检。清理先 dry-run，保护当前源、正式证据、冻结候选和依赖包。自动清理被拒绝时停止，不绕过。
 
-- 禁AI Image、扩散/图生图/局部生成修补（含概念）。使用Blender真实对象/材质、SVG/Krita原生图层、锁定原Spine和可追溯资源；PNG不是唯一可编辑源。
-- 角色唯一来源是有效harness_contract的locked_sources/character_source。复用已有工具与有效成果，不重装/重选引擎/重画角色，不让Forge/MCP平台挡住主线。
-- 新内容按候选目录版本化，保留当前冻结载荷/报告；源→导出→构建→canvas采集按hash绑定。**Git 只提交代码、配置、场景结构、必要 `.meta` 与规范/规则；Blender 源、图片、模型、字体、视频、构建及审阅大包留在本地素材目录，用 `LOCAL_ASSET_MANIFEST.json` 校验，不能因不入 Git 就删除。当前没有异地素材备份，代码仓库不能单独还原完整游戏。**单命令exit0或文件存在不代表画质通过。
-- 当前包显示execution_optimization动作；共享组件/会话、定向构建、受影响检查减少重复，正式全量覆盖不减。wrapper只计命令时间，不代表整个模型工期。
+## Codex 项目级静态地图质量钩子
 
-## 磁盘与临时文件
+项目内 `.codex/hooks.json` 接入 `UserPromptSubmit` 与 `Stop`；`tools/static_map_quality_gate.py` 核验固定参考、文件 SHA、评分算术、85 分/逐维门槛、四项组合检查、八项硬门槛，并检查报告中登记的 Blender 重开复现结果。gate 不会启动 Blender 来复现。钩子只在本仓库目录受信任时加载，并按 Codex `session_id` 单独启用；只有明确开始/继续 P1 静态地图制作的用户提示才会 armed。方案讨论、未 armed 的项目对话、其他项目和其他会话不会被质量门禁阻止。状态只写入已忽略的 `.codex/state/`，不修改用户级 Codex 配置。首次使用须在 Codex `/hooks` 审阅并信任项目钩子。
 
-- 项目文件夹（含 `.git` 与项目内工具）目标低于 **12 GiB**；10 GiB 开始预警。细则见 `tools/maintenance/STORAGE_POLICY.md`，用 `tools/maintenance/storage_report.py` 按目录统计。
-- 每轮开始、每次预计新增 ≥50 MiB 的完整构建/导出/审阅包前、每轮结束，运行 `tools/workflow.py storage --planned-growth-mib <本次预计值> --enforce`；状态会写入 `delivery/workflow/STORAGE_STATUS.json` 并显示在工作包摘要。超 12 GiB 时只暂停新的大产物生成，继续原生源返修、局部验证、归档核对和容量恢复；不得删当前候选或冻结证据凑数。经 `tools/workflow.py run` 发起大命令时必须传同一 `--planned-growth-mib`，预检不通过则不执行命令。
-- 保留最近 2 个候选的可复查结果；当前 n5 制作期间为 n4/n5。n3 原生项目不再属于常驻窗口；清退前核对当前构建依赖和引用。项目内 Cocos 编辑器迁出只改变项目文件夹大小，不算释放整块磁盘空间；迁出前后验证构建路径和功能。
-- 每个产出批次结束后运行 `python tools/workflow.py clean` 先看报告；确认范围后 `--apply` 只删除旧 demo 构建/缓存、非活动候选的 Blender 备份与 Python 缓存。`tools/n5_build.py` 在写 pin 之后会执行受保护的清理（保留 demo_n5 的 build）。
-- `.git/lfs/tmp` **只报告、不由清理器自动删除**：它可能被 Git LFS 写入；没有写入进程且完成远端/引用核对后才能在合适维护窗口处理。2026-10-26 曾累积至 66 GB 导致 ENOSPC；`git lfs prune --verify-remote` 只处理不再需要的 LFS 对象，不能清掉这一临时区。自动审批若拒绝删除，不能换命令绕过。
-- 过时但仍属审计链的内容（旧候选、旧源包 ZIP）只报告不删除，由人决定。
+Stop 未通过时必须根据门禁输出在同一会话实际返修，不可只复述计划；只有 `target_met` 或具备两种替代尝试与哈希证据的真实 `blocked_external` 才可结束。门禁能校验评分报告和证据完整性，不能从 JSON 自证视觉判断或盲评独立性；需按固定 P1 图像标准查看最终图，不能把机械通过称作独立艺术验收。完整配置和 `GATE_REPORT.json` 契约见 `planning/art/CODEX_STATIC_MAP_QUALITY_HOOK_20261029.md`。
 
-## 修改边界
+## 暂停的完整游戏流程
 
-用户已授权本次改变制作排程，把中途独立审核移到最终；原因与旧依赖保留于dependency_history。门禁算法和评分未因此降低。
-
-tools/art_harness.py、tests、合同/rubric仍只在明确P任务中版本化修改；不能改历史包或伪造批准让失败包通过。workflow摘要不是权限隔离、后台执行器或批准器。
-
-## 制作模型自行审核与返修
-
-用户要求低质量先自己改。按PRODUCER_SELF_REVIEW和producer_review_policy执行：样板各卡>=85，完整提交各卡>=90，核心>=3、任维>=2，Q/绑定通过且无未解严重问题。使用真实证据逐维评分，缺证据不填高分；连续三轮无改善换方法，不自动停下来找外部审核。完整自审通过才请求最终评审；保持producer_self_review身份，不能给自己签独立批准。90是制作侧筛选线，独立验收按 art_review/rubric.json。
+完整游戏、角色/UI、Cocos、微信、Q 检查、制作账本、独立审核与发布规则目前暂停。恢复时由用户明确启动，并重新读取当时有效的游戏执行入口和合同；不要把本节历史规则混入静态地图任务。

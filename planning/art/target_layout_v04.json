@@ -1,0 +1,76 @@
+{
+  "_meta": {
+    "version": "v04.1",
+    "created": "2026-10-28",
+    "status": "corrected",
+    "reference": "reference/_raw_screenshots/P1/t084s.jpg",
+    "canvas": [1920, 1078],
+    "authority": "planning/art/P1_T084_ART_DIRECTION_STANDARD_20261028.md 的六锚点",
+    "correction": "v04 的四条水平带作废：物件在纵向互相重叠（台阶 67–100 切进平台 51–88），水平带无法表达，且与官方六锚点不一致。改为六锚点 + 三条基准线。",
+    "units": "所有坐标均为画面百分比；y 向下为正"
+  },
+  "anchors": [
+    { "id": "A01", "name": "左树",        "bbox": [5, 3, 30, 46],   "tol_pct": 3, "scored": true },
+    { "id": "A02", "name": "前景台阶/栏杆", "bbox": [13, 67, 40, 100], "tol_pct": 3, "scored": true },
+    { "id": "A03", "name": "主石板平台",   "bbox": [0, 51, 76, 88],  "tol_pct": 3, "scored": true },
+    { "id": "A04", "name": "中景设施",     "bbox": [32, 28, 55, 55], "tol_pct": 3, "scored": true },
+    { "id": "A05", "name": "右侧圆筒草池", "bbox": [50, 14, 100, 63], "tol_pct": 4, "scored": true },
+    { "id": "A06", "name": "冷色远景",     "bbox": [30, 13, 54, 27], "tol_pct": 3, "scored": true },
+    { "id": "A07", "name": "角色",         "bbox": [46, 38, 57, 56], "tol_pct": 3, "scored": false, "note": "展示层，不进环境六维评分" }
+  ],
+  "guides": [
+    { "id": "G1", "name": "远景下缘",   "y": 27, "tol_pct": 2 },
+    { "id": "G2", "name": "主平台上缘", "y": 51, "tol_pct": 2 },
+    { "id": "G3", "name": "台阶上缘",   "y": 67, "tol_pct": 2 }
+  ],
+  "light": {
+    "key_from": "upper_right",
+    "azimuth_deg": 35,
+    "elevation_deg": 32,
+    "shadow_to": "lower_left",
+    "key_color": "#ffe9c8",
+    "fill_color": "#8a7a68",
+    "note": "主光右上，阴影落左下；广场需出现斜向长影"
+  },
+  "palette": {
+    "stone_lit": "#ceb89e",
+    "stone_shadow": "#8e7567",
+    "leaf_lit": "#d2ab72",
+    "leaf_shadow": "#604331",
+    "soil": "#59473f",
+    "metal_dark": "#564b3d",
+    "far": "#877e75",
+    "accent": "#4fd1c5",
+    "cool_share_max_pct": 3
+  },
+  "acceptance": {
+    "anchor_abs_error_max_pct": 3,
+    "guide_abs_error_max_pct": 2,
+    "must_pass": ["A01", "A02", "A03", "A04", "A05", "A06"],
+    "environment_rubric": "六维加权 ≥90，各项 ≥3（P1_T084_ART_DIRECTION_STANDARD）",
+    "presentation_layer": "角色/UI 单独清单：占屏 13–15%、脚底接触影、青色选中框、UI 不抢中心；不进入环境六维评分",
+    "note": "11 区与四边遮挡降为体检，不作交付门槛"
+  },
+  "density": {
+    "_note": "2026-10-28 20:40 追加；数值按六锚点口径重算。密度感来自缝对比度与平台面积，不是石板尺寸。",
+    "reference": { "slabs_across_width": 8.7, "joint_delta_L": 9, "platform_share_pct": 37, "cracks_per_4_slabs": 2.5 },
+    "v03_8": { "slabs_across_width": 4.3, "joint_delta_L": 121, "platform_share_pct": 54, "cracks_per_4_slabs": 0.5 },
+    "targets": {
+      "slabs_across_width": [7.5, 9.5],
+      "joint_delta_L_max": 20,
+      "joint_width_px": [1, 2],
+      "joint_bed_z": -0.008,
+      "cracks_per_4_slabs_min": 2,
+      "within_slab_L_range_min": 8,
+      "open_plaza_share_max_pct": 55
+    },
+    "stage": "S2/S3（与石板尺寸回退同一次改）"
+  },
+  "stop_rules": {
+    "p0_max_rounds": 2,
+    "p0_fallback": "用参考图做相机背景板描图定位，不再盲调参数",
+    "p3_card_max_rounds": 3,
+    "p3_fallback": "转 2D 剪影卡补边",
+    "forbidden": "为刷指标添加画面中不存在的物件"
+  }
+}

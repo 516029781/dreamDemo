@@ -1,0 +1,280 @@
+{
+  "_meta": {
+    "version": "1.0.0",
+    "created": "2026-10-28",
+    "purpose": "区域级美术验收的唯一数据源。语义对齐：同名区域在两张图里允许处于不同位置，比的是同类物体的观感，不是同一块像素。",
+    "source": "reference/_raw_screenshots/P1/t084s.jpg 与 art/static_map/p1_autumn_courtyard/v02/renders/03_final.png 叠 10% 网格逐格读出",
+    "coord": "x1,y1,x2,y2 均为画面百分比；null 表示该图没有这个物件",
+    "tolerance": {
+      "L_abs_max": 14,
+      "sat_abs_max": 9,
+      "edge_ratio_max": 0.3,
+      "_note": "edge_ratio = |edge_t - edge_r| / max(edge_r, 1)，衡量细节密度是否同档"
+    }
+  },
+  "regions": [
+    {
+      "id": "R01",
+      "name": "主树冠",
+      "class": "foliage",
+      "why": "画面左上重音，决定'树像不像树'",
+      "ref": [
+        24,
+        4,
+        46,
+        14
+      ],
+      "target": [
+        24,
+        4,
+        46,
+        14
+      ],
+      "_note": "",
+      "bbox_check": false
+    },
+    {
+      "id": "R02",
+      "name": "树干与支撑",
+      "class": "bark",
+      "why": "贯穿冠下的竖向骨架",
+      "ref": [
+        16,
+        13,
+        23,
+        27
+      ],
+      "target": [
+        20,
+        28,
+        31,
+        46
+      ],
+      "_note": "参考图中树干几乎全被树冠与任务卡片遮挡，无法稳定取样；仅作造型参考",
+      "measure": false,
+      "bbox_check": false
+    },
+    {
+      "id": "R03",
+      "name": "叉车",
+      "class": "prop_accent",
+      "why": "左边界唯一的高饱和暖色块，负责压住左框",
+      "ref": [
+        0,
+        34,
+        12,
+        50
+      ],
+      "target": [
+        12,
+        39,
+        29,
+        58
+      ],
+      "bbox_check": false
+    },
+    {
+      "id": "R04",
+      "name": "格栅门与管线组",
+      "class": "metal",
+      "why": "中景最密的金属结构，提供'工业感'信息量",
+      "ref": [
+        30,
+        22,
+        48,
+        42
+      ],
+      "target": [
+        39,
+        23,
+        53,
+        46
+      ],
+      "bbox_check": false
+    },
+    {
+      "id": "R05",
+      "name": "圆筒草池",
+      "class": "concrete_planter",
+      "why": "中右的圆形重音，混凝土 + 金草两种材质交界",
+      "ref": [
+        48,
+        20,
+        60,
+        34
+      ],
+      "target": [
+        52,
+        20,
+        71,
+        43
+      ],
+      "bbox_check": false
+    },
+    {
+      "id": "R06",
+      "name": "顶部金属轮",
+      "class": "metal",
+      "why": "顶边唯一的高对比剪影，破掉'顶边一条直线'",
+      "ref": [
+        54,
+        0,
+        64,
+        10
+      ],
+      "target": [
+        46,
+        15,
+        55,
+        29
+      ],
+      "bbox_check": true
+    },
+    {
+      "id": "R07",
+      "name": "彩旗串",
+      "class": "accent",
+      "why": "唯一跨越中景的横向斜线，串起左右两边",
+      "ref": [
+        64,
+        20,
+        84,
+        34
+      ],
+      "target": [
+        58,
+        20,
+        88,
+        32
+      ],
+      "_note": "",
+      "_target_note": "2026-10-28 修复：原 target 为 null，永远报“整块缺失”",
+      "bbox_check": true
+    },
+    {
+      "id": "R08",
+      "name": "右侧金色草墙",
+      "class": "grass",
+      "why": "压住右框的竖向高饱和色带，v02 完全缺失",
+      "ref": [
+        86,
+        8,
+        100,
+        44
+      ],
+      "target": [
+        84,
+        4,
+        100,
+        40
+      ],
+      "_note": "",
+      "_target_note": "2026-10-28 修复：原 target 为 null，永远报“整块缺失”",
+      "bbox_check": true
+    },
+    {
+      "id": "R09",
+      "name": "远景水岸带",
+      "class": "far",
+      "why": "全图唯一低饱和冷调区，提供空气透视",
+      "ref": [
+        40,
+        6,
+        56,
+        24
+      ],
+      "target": [
+        40,
+        6,
+        56,
+        24
+      ],
+      "_note": "",
+      "bbox_check": false
+    },
+    {
+      "id": "R10",
+      "name": "广场受光铺装",
+      "class": "stone",
+      "why": "画面主面积，决定'有没有阳光'",
+      "ref": [
+        24,
+        50,
+        44,
+        62
+      ],
+      "target": [
+        24,
+        50,
+        44,
+        62
+      ],
+      "_note": "",
+      "bbox_check": false
+    },
+    {
+      "id": "R11",
+      "name": "前景台阶",
+      "class": "step",
+      "why": "近景唯一的强透视结构，负责'纵深起点'",
+      "ref": [
+        22,
+        60,
+        46,
+        88
+      ],
+      "target": [
+        22,
+        60,
+        46,
+        88
+      ],
+      "bbox_check": false
+    },
+    {
+      "id": "R12",
+      "name": "侧向挡墙",
+      "class": "stone_dark",
+      "why": "左右两侧的暗带，压住画面边缘",
+      "ref": [
+        46,
+        60,
+        56,
+        86
+      ],
+      "target": null,
+      "_note": "参考图挡墙面积小且被台阶栏杆切割，取样不稳定；仅作造型参考",
+      "measure": false,
+      "bbox_check": false
+    },
+    {
+      "id": "R13",
+      "name": "角色",
+      "class": "char",
+      "why": "画面焦点，且是 3D 场景与 2D 立绘的融合点",
+      "ref": [
+        47,
+        38,
+        56,
+        52
+      ],
+      "target": [
+        46,
+        38,
+        57,
+        56
+      ],
+      "_note": "",
+      "_target_note": "2026-10-28 修复：原 target 为 null，永远报“整块缺失”",
+      "bbox_check": true
+    }
+  ],
+  "composition": {
+    "_note": "四边遮挡带。原「受光铺装逐行覆盖率」已删除——同一条调色 LUT 能把 v02 的峰值从 42% 抬到 76%，属假阳性（见 REGION_PLAYBOOK §1）。",
+    "border_occlusion": {
+      "min_ratio_vs_ref": 0.5,
+      "_impl": "对比度归一化边缘密度（阈值=2×全图中位梯度），只判该边有没有物件",
+      "why": "空边是结构性缺失，调色救不回来：v02 上边比值 0.09、加曲线后 0.01"
+    }
+  }
+}

@@ -86,3 +86,5 @@ delivery/**/*.txt
 /.gitattributes
 /.git-next/
 *.sha256
+
+/.codex/state/

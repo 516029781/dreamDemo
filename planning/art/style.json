@@ -1,0 +1,65 @@
+{
+  "_meta": {
+    "version": "1.0.0",
+    "created": "2026-10-28",
+    "purpose": "唯一色彩来源。所有材质只引用 token，代码里不得出现字面 hex 值。",
+    "derived_from": "reference/_raw_screenshots/P1/t084s.jpg（HSV 聚类，占比>1.2% 的簇）",
+    "metric": "sat = (max-min)/max (HSV)；L = 0.2126R+0.7152G+0.0722B",
+    "rule_hue": "所有 albedo token 的 hue 必须落在 8-40 度；色相由 sun/sky/fill 注入，不写进 albedo",
+    "rule_value": "六个 L 档都必须有 token 落位：<40 / 40-75 / 75-110 / 110-145 / 145-180 / >180"
+  },
+
+  "tokens": {
+    "stone.lit":      { "hex": "#ceb89e", "L": 187, "sat": 24, "hue": 32, "use": "受光石板高处", "ev": "ref 簇 9.1%" },
+    "stone.mid":      { "hex": "#c9af9a", "L": 179, "sat": 23, "hue": 27, "use": "受光石板主面", "ev": "ref 簇 5.8%" },
+    "stone.shadow":   { "hex": "#8e7567", "L": 121, "sat": 28, "hue": 21, "use": "背光石板、挡墙", "ev": "ref 簇 6.4%" },
+
+    "leaf.lit":       { "hex": "#d2ab72", "L": 175, "sat": 46, "hue": 36, "use": "树冠/草受光面", "ev": "ref 簇 2.9%" },
+    "leaf.mid":       { "hex": "#9a7150", "L": 119, "sat": 48, "hue": 26, "use": "树冠中间调", "ev": "ref 簇 3.2%" },
+    "leaf.shadow":    { "hex": "#604331", "L": 72,  "sat": 49, "hue": 23, "use": "树冠背光、冠内", "ev": "ref 簇 8.0%" },
+    "grass.dry":      { "hex": "#a87e42", "L": 126, "sat": 61, "hue": 33, "use": "干草主色（项目既有）", "ev": "项目草色，需复核 hue" },
+
+    "metal.lit":      { "hex": "#beaca0", "L": 175, "sat": 16, "hue": 23, "use": "金属受光（低饱和、亮）", "ev": "ref 簇 6.5%" },
+    "metal.dark":     { "hex": "#564b3d", "L": 76,  "sat": 30, "hue": 33, "use": "金属暗部、铸铁", "ev": "v02 参考值，待复核" },
+
+    "soil":           { "hex": "#59473f", "L": 74,  "sat": 29, "hue": 17, "use": "土、木作暗部（全图占比最大）", "ev": "ref 簇 20.3%" },
+    "ink":            { "hex": "#342623", "L": 41,  "sat": 33, "hue": 11, "use": "最暗部、缝内、遮挡", "ev": "ref 簇 3.9%" },
+    "far":            { "hex": "#877e75", "L": 126, "sat": 14, "hue": 16, "use": "远景带（低饱和暖灰，不是蓝）", "ev": "ref 簇 3.8%" },
+
+    "sun":            { "hex": "#ffe9c8", "L": 235, "sat": 22, "hue": 38, "use": "主光色（对应 ref L max 235）", "ev": "ref L max" },
+    "sky":            { "hex": "#c9c2b6", "L": 196, "sat": 9,  "hue": 38, "use": "天空/环境光，暖中性（不许偏蓝）", "ev": "推算，待首轮标定" },
+    "fill":           { "hex": "#8a7a68", "L": 125, "sat": 25, "hue": 29, "use": "补光，暖，强度低", "ev": "推算，待首轮标定" },
+    "accent":         { "hex": "#4fd1c5", "L": 180, "sat": 62, "hue": 174, "use": "唯一强调色：角色选中框、UI 关键态", "ev": "唯一允许出暖轴的 token" }
+  },
+
+  "global_targets": {
+    "L_p25": 70,
+    "L_p50": 102,
+    "L_p75": 156,
+    "L_p90": 194,
+    "L_p99": 211,
+    "share_above_180_pct": [18, 22],
+    "sat_p50": 26,
+    "cool_pixel_share_pct_max": 3,
+    "value_ladder_pct": {
+      "_note": "全像素直方图口径（不是过滤后的色簇统计）。参考实测 4.6/25.8/23.6/12.2/13.6/20.1，目标为实测 ±40% 容差。",
+      "lt40":      [3, 10],
+      "40_75":     [18, 33],
+      "75_110":    [16, 31],
+      "110_145":   [8, 17],
+      "145_180":   [9, 19],
+      "gt180":     [15, 25]
+    },
+    "max_single_cluster_share_pct": 25
+  },
+
+  "detail_frequency_px": {
+    "_note": "在这个机位下每类细节的屏幕尺寸；用于判断是否出现'微缩模型感'",
+    "grass_blade_width": [0.8, 3.0],
+    "leaf_length":       [10, 18],
+    "bolt":              [4, 5],
+    "slab_joint":        [1, 4],
+    "slab_length":       [300, 500],
+    "railing_upright":   [15, 18]
+  }
+}

@@ -1,18 +1,17 @@
-# 当前规范速查卡
+# 当前规范速查
 
-更新：2026-10-26。本页帮助定位和执行规范，**不复制合同数值作为新权威**。运行前读 `planning/execution/CURRENT_INSTRUCTION_INDEX.md`、活动返修指针和当前工作包；若本页与生效合同、账本或新独立报告冲突，回到原文件核实并更新本页。
+更新：2026-10-29。本文只定位规范，不复制完整阈值，避免产生第二套标准。
 
-| 主题 | 执行要求 | 权威来源 / 核验 |
+| 事项 | 当前规则 | 唯一依据 |
 |---|---|---|
-| 当前目标 | 以 `PROJECT_TASKS.json` 的 scope、活动返修指针的 `next_candidate/open_findings` 和生成工作包确定下一步；低分不是停工出口 | `START_HERE.md`、`EXECUTION_PROTOCOL.md`；运行 `tools/workflow.py summary --write` |
-| 角色与权利 | 角色源只读有效合同的锁定来源；复用资源的技术可用性不等于微信商业发布权利 | `art_review/harness_contract.json`、`P1_ART_STYLE_GUIDE.md`；核原源、动作、来源记录及许可状态 |
-| 可编辑美术 | 环境/道具保留 Blender 原生源，UI 保留 SVG/Krita 原生结构，角色保留原 Spine/兼容动作；PNG 是导出/预览，不是唯一源；当前生产禁 AI Image 直接出图 | `AGENTS.md`、`ART_WORKBENCH_SPEC.md`、`FULL_ART_DELIVERY.md`；重开源、改单个参数、重新导出并在 Cocos 看结果 |
-| P1 风格 | 用指定 P1 原帧对照构图、材质/植物层次、角色/UI 关系；以目标引擎真实 canvas 原尺寸图判最终画面 | `P1_ART_STYLE_GUIDE.md`、`PHASE1_ART_ACCEPTANCE.md`、`reference/_raw_screenshots/P1/`；同机位前后图和逐维观察 |
-| 质量检查 | 制作侧提交筛选与正式独立验收分开；四卡逐卡、核心维度和最低维度均按当前文件执行，不用平均分掩盖失败 | `planning/execution/producer_review_policy.json`、`art_review/rubric.json`、`PRODUCER_SELF_REVIEW.md`；保存真实自评分和独立复核 |
-| 证据同源 | 源→导出→构建→真实 canvas/Q/绑定→自审→独立审核保持可追溯；改源/相机/全局 UI 后重新计算受影响范围 | `art_review/harness_contract.json`、`HARNESS.md`、当前返修报告；核 SHA、显式 build report 和实际输入结果 |
-| 候选冻结 | 旧候选只读；源 ZIP 先锁定，再由 manifest 引用其 SHA；外层审阅 ZIP 的 SHA 放包外。哈希或 build_id 错配要重建证据，不能改字段伪装通过 | `art_review/reports/candidate_n4_provisional_20261026/REPORT.md`、`planning/performance/N5_EXECUTION_DESIGN_AND_GAP_AUDIT.md`；负例及最终完整校验 |
-| 自我学习 | 每批先记可证伪假设，再改源、预览、找反例、复验和总结；一次成功只算经验提案 | `planning/execution/SELF_LEARNING_LOOP.md`、`planning/execution/LESSONS.md`；核 decisions/events 与前后图 |
-| 性能与效率 | 局部预览减少无效构建，正式完整检查不减；试点运行次数和时间收益须按全轮日志实测 | n5 执行设计、`planning/performance/PERFORMANCE_TEST_PROTOCOL.md`；分别报告命令时长、整轮墙钟、unknown 和画质 |
-| 微信与地图后续 | 浏览器 Q 和地图工具方案不代表微信真机或完整玩法已交付；宿舍区地图属于后续方案，启动范围以账本为准 | `PROJECT_TASKS.json`、`SPACE_CITY_DORMITORY_MVP_REFERENCE_AND_ART_PLAN.md`；未测明确写未测 |
+| 范围 | 一张静态环境地图和可编辑 Blender 源；人物、UI、玩法、Cocos、微信与完整游戏 Harness 暂停 | planning/art/STATIC_MAP_WORKFLOW_20261028.md |
+| 主参考 | 秋日 `t084s.jpg` 是唯一整图视觉目标；CW-8/CW-9 不替代它 | planning/art/P1_T084_ART_DIRECTION_STANDARD_20261028.md |
+| 风格与评分 | 六维量表、秋日锚点和硬门槛只从 P1 标准读取 | planning/art/P1_T084_ART_DIRECTION_STANDARD_20261028.md |
+| 地图参数与 Harness | CW-8/CW-9 参数只作解析器 fixture；项目结构约束按自有 schema，分数不从地图数据计算 | MAP_PARAMETER_HARNESS_RULES_20261029.md |
+| 地图资料与解包 | 关卡 JSON/地图 PNG/解包工具/生产素材分开标记；游戏资源只读，不进入产品、构建或 Git | ARKNIGHTS_MAP_DATA_AND_HARNESS_AUDIT_20261029.md + 样本目录 SOURCE_MANIFEST.md |
+| Harness 范围 | 当前静帧不使用旧 ENV/CHAR/UI/MIX、47 项、Q01–Q09 或完整游戏门槛；静帧数据检查与视觉评审分层 | 静态图工作流、MAP_PARAMETER_HARNESS_RULES 和 P1 标准 |
+| 可编辑源 | 交付 Blender 原生场景；导出图不替代源；本地素材记录来源并绑定 SHA | planning/art/STATIC_MAP_WORKFLOW_20261028.md |
+| 返修与证据 | 固定相机比较；机械检查与视觉评审分开；失败记为 rework 并继续返修；只有真实外部阻塞可结束未完成 | 工作流与对应候选的 REVIEW.md |
+| 磁盘 | 项目目录含工具与 `.git` 上限 15 GiB、12 GiB 预警；清理先 dry-run；保护源、候选和证据 | tools/maintenance/STORAGE_POLICY.md |
 
-更新任一规范时，先改权威文件及其版本/审批流程，再检查本页、`knowledge/RECIPES.md` 与工作包文字是否需同步。知识库不能自行提高或降低门槛。
+发生冲突时按 AGENTS.md 的当前执行范围处理；细节回到右栏唯一依据，不在本页再复制数值。

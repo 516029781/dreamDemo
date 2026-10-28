@@ -1,19 +1,19 @@
 ---
 name: p1-map-environment-art
-description: Create and critique one static P1 autumn map image and its editable Blender scene using t084s.jpg as the fixed visual target. Use for composition, models, materials, vegetation, lighting, and same-camera art review; not for gameplay, UI, Cocos, or WeChat implementation.
+description: Create and critique the project's P1 autumn-style static map image and editable Blender scene. Use the fixed P1 screenshot for all art decisions; use Arknights CW data only for Harness structure research.
 ---
 
-# P1 地图环境美术
+# P1 秋日静态地图环境美术
 
-先按项目根目录 `planning/art/STATIC_MAP_WORKFLOW_20261028.md` 执行 S0–S5，再用 `planning/art/P1_MAP_ART_ONLY_REVIEW_20261028.md` 查具体画面差距；外部 skill、Blender 插件和素材的试用边界见 `planning/art/STATIC_MAP_ART_SKILLS_AND_TOOLS_20261028.md`。固定整图参考是 `reference/_raw_screenshots/P1/t084s.jpg`。当前只交静态地图画面和可编辑 Blender 源。只在用户重新开启完整游戏阶段后，才把游戏行为、UI 和微信性能加入交付范围。若阶段说明被用户更新，以最新用户要求为准。
+先按项目根目录 `planning/art/STATIC_MAP_WORKFLOW_20261028.md` 执行四个制作关口，并读取 `planning/art/P1_T084_ART_DIRECTION_STANDARD_20261028.md`。唯一整图视觉参考是秋日 `t084s.jpg`；CW-8/CW-9 数据仅用于 Harness 结构规则，不作为画风、构图、色板或相机依据。当前只交静态地图画面和可编辑 Blender 源；角色/UI/玩法/Cocos/微信不在本阶段范围。
 
 ## 工作方式
 
-1. **先看图。** 实际打开 t084 原图和候选的无 UI 固定机位图，记录四到六个有名的画面区域：近景台阶、平台/石板、花池草、树、设施、远景。对每区写出参考中的形体、尺度、表面、光线和候选的具体缺口。角色仅作比例尺；不拿旧 t015/t090 代替整画面目标。
-2. **先改空间。** 用灰模反推新相机，确定高差、阶梯、栏杆、平台厚度、主体设施和近中远遮挡。灰模与早期色块/灯光图通过后才锁相机；方块和简单球体只作灰模。记录位置、焦距/FOV、目标点、输出尺寸；布局没过关时不大量生成树叶或铺地细节。
-3. **物件有结构。** 每类主物件至少能读出主体、接合/边缘和使用痕迹。石板用同一尺寸家族加有限边板/破损板；树先做枝干层级再布叶；枯草先做根密顶疏的簇，再按花池成片种植。以可见轮廓和局部画面验证，不用增加随机实例数或三角面数代替造型。
-4. **材质能进入最终静帧。** Blender 内使用可编辑节点、UV、手工或程序化贴图；先在固定机位验证石/金属/木/土/叶的实际原尺寸像素。本阶段不要求 GLB/Cocos 导出。将来若要导入引擎，再检查 base color、normal、roughness/AO 等贴图；旧 `courtyard_lib.py` 的 `_flat_material` 会简化多数程序材质，不能拿 Blender 静帧冒充引擎效果。
+1. **先核参考身份。** 校验 P1 主参考路径与 SHA。标出主要地图区域、地面/台阶、树、圆筒草池、设施、遮挡和不可观察区域。其他图片或关卡数据不得替换 P1 作为整图目标。
+2. **先改空间。** 用临时机位完成灰模和早期色块，确认原创地图范围、地面连续性、高差、建筑/设施支撑、遮挡与整体构图；确认后再锁相机并记录参数。CW 网格/敌方路线是源数据语义，不直接变成 P1 的布局。布局没过关时不做细节；本阶段不验收实际可行走性。
+3. **物件有结构。** 按锁定参考里真实出现的地面、地形、建筑、设施或植被设计资产；每类主物件有明确轮廓、尺度、连接和接触关系。用固定镜头的剪影、局部和缩图验证，不用增加随机实例数或三角面数代替造型。
+4. **材质能进入最终静帧。** Blender 内使用可编辑节点、UV、手绘或可追溯的程序化贴图；在固定镜头下检查实际像素尺寸、材质区分和色彩层级。本阶段不要求 GLB/Cocos 导出。
 5. **同机位返修。** 每次只处理一个主因，保留修改前后全图和相应局部图，写参数、原生源路径、命令、退出码、耗时和 SHA。主图不合格继续改源；连续数轮无改善就换建模/材质方法，不通过改评分结束。冻结的候选和哈希证据不覆盖。
-6. **独立看图判断。** 先在同镜头组合试图中逐项验证地板、树、草、整体光色；失败就内部返修，不等用户批准。按总方案止损后仍低于目标，也须交完整可编辑静帧并标 `quality_below_target`。全图出现方块拼装、尖片、大片同色平面即记返修；组合关过后再按六维目标 ≥90 且各项 ≥3 评最终静帧。分数是制作自评，不是独立批准。
+6. **最终质量闭环。** 每轮先由制作模型按 P1 目标自评并人工核对机械资料；自动 preflight 尚未实现。自查低于 85、任一维低于 3、四项组合门槛失败或机械硬门槛失败时，先修 Blender 原生源、同机位重渲，不启动盲评。制作侧认为候选达到目标且资料齐备后，再由两个分开的盲评过程检查同一最终图；两份都须达到 85、每维至少 3、组合与硬门槛全过。任何盲评失败都按反例返修；新最终图 SHA 改变后重新收集两份盲评。自评只用于筛查和返修导航，不冒充盲评或最终放行票。连续两轮无改善就换方法，不设置普通尝试轮数上限，不等用户中途审批。只有所有门槛真实通过才标 `target_met`；只有真实外部阻塞才报告未完成。画面分数以 P1 标准为唯一依据；参数检查以 Harness 规则文档为依据。
 
-交付一张最终静帧、`.blend`、源贴图/来源与许可记录、固定机位灰模/材质/最终图、石板/树/草/设施局部图和修改记录。静帧只称“地图美术预览”。项目禁止 AI Image、扩散生图及图生图修补，包括概念图；用可编辑原生素材。
+交付最终静帧、`.blend`、源贴图/来源与许可记录、灰模/组合/最终图、地形与设施局部图和修改记录。角色/UI 展示层已排除。静帧只称“地图美术预览”。项目素材生成按 `STATIC_MAP_WORKFLOW` 当前规则执行。
