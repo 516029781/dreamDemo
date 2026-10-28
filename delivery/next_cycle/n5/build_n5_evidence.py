@@ -44,7 +44,7 @@ def ev(role, path):
 
 def main():
     checker = load_module("check_bindings", "tools/art_gate/check_bindings.py")
-    shots = load(T3 / "game_finalN5_shots.json")
+    shots = load(T3 / "game_finalN5h_shots.json")
     sys.path.insert(0, str(ROOT / "delivery/next_cycle/n5"))
     import importlib.util as _ilu
     _spec = _ilu.spec_from_file_location("n5_pin", ROOT / "delivery/next_cycle/n5/n5_pin.py")
@@ -134,13 +134,13 @@ def main():
     write(T5 / "q03_occlusion.json", q03)
 
     q02 = {
-        "kind": "q02_reference_comparison_n4",
+        "kind": "q02_reference_comparison_n5",
         "reference_regions": [
-            {"region": "courtyard_scale_density", "path": "reference/_raw_screenshots/P1/t015s.jpg", "sha256": sha(ROOT / "reference/_raw_screenshots/P1/t015s.jpg")},
-            {"region": "player_hud", "path": "reference/_raw_screenshots/P1/t084s.jpg", "sha256": sha(ROOT / "reference/_raw_screenshots/P1/t084s.jpg")},
-            {"region": "dialogue_composition", "path": "reference/_raw_screenshots/P1/t044s.jpg", "sha256": sha(ROOT / "reference/_raw_screenshots/P1/t044s.jpg")},
+            {"region": "full_scene_primary", "role": "fixed_whole_scene_anchor", "path": "reference/_raw_screenshots/P1/t084s.jpg", "sha256": sha(ROOT / "reference/_raw_screenshots/P1/t084s.jpg")},
+            {"region": "dialogue_ui_supplement", "role": "dialogue_state_only", "path": "reference/_raw_screenshots/P1/t090s.jpg", "sha256": sha(ROOT / "reference/_raw_screenshots/P1/t090s.jpg")},
+            {"region": "character_identity_supplement", "role": "character_detail_only", "path": "reference/_raw_screenshots/P1/t054s.jpg", "sha256": sha(ROOT / "reference/_raw_screenshots/P1/t054s.jpg")},
         ],
-        "candidate_comparison": "delivery/next_cycle/n5/T2/reference_comparison.png",
+        "candidate_comparison": "delivery/next_cycle/n5/T2/reference_comparison_t084.png",
         "differences": [
             {"region": "tree canopy", "difference": "n4 has finer leaf cards and a fuller crown than n2, but still reads as clustered low-poly foliage; P1 has finer silhouette and branch taper"},
             {"region": "hedge/planting", "difference": "n4 hedge is denser and finer, with foreground benches; P1 still fills beds and depth more naturally"},
@@ -217,9 +217,9 @@ def main():
         "build_id": binding_doc["build"]["build_id"], "generated_at": datetime.now(timezone.utc).isoformat(),
         "results": [
             {"check_id": "Q01", "asset_id": "MAP001", "status": "pass", "evidence": [
-                ev("no_ui_shot", T3 / "game_finalN5_formal_no_ui.png"),
-                ev("with_ui_shot", T3 / "game_finalN5_formal_ui.png"),
-                ev("dialogue_shot", T3 / "game_finalN5_dialogue.png"),
+                ev("no_ui_shot", T3 / "game_finalN5h_formal_no_ui.png"),
+                ev("with_ui_shot", T3 / "game_finalN5h_formal_ui.png"),
+                ev("dialogue_shot", T3 / "game_finalN5h_dialogue.png"),
                 ev("camera_json", T5 / "q01_camera.json"), ev("bbox_measurement", T4 / "N04_bbox.json")],
              "measurements": {"character_height_px": bbox["height"], "same_camera": True,
                               "method": "real visible-minus-hidden PlayerWorldQuad bbox", "target_px": [86, 130], "camera": q01["camera"]},
@@ -275,7 +275,7 @@ def main():
              "measurements": {"evidence_binding": evidence_binding}, "tested_by": "producer_self_review", "tested_at": datetime.now(timezone.utc).isoformat()},
             {"check_id": "Q09", "asset_id": "MAP001", "status": "pass", "evidence": [
                 ev("state_index", T6 / "state_index.json"), ev("landscape_shot", T4 / "N05_landscape_before.png"),
-                ev("portrait_shot", T4 / "N05_resize_portrait.png"), ev("text_native_size_shot", T3 / "game_finalN5_dialogue.png")],
+                ev("portrait_shot", T4 / "N05_resize_portrait.png"), ev("text_native_size_shot", T3 / "game_finalN5h_dialogue.png")],
              "measurements": {"viewports": q09["viewports"], "device_tested": False, "orientation_response": n05["checks"]},
              "tested_by": "producer_self_review", "tested_at": datetime.now(timezone.utc).isoformat()},
         ],

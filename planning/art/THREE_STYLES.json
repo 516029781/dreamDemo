@@ -1,0 +1,152 @@
+{
+  "_note": "Three look directions on the same courtyard. Each is a real rebuild: geometry changes come from the Blender env, colour/texture changes come from ?style= at runtime. Nothing is a filter applied to a screenshot.",
+  "_what_differs": {
+    "geometry": "N5_STYLE=o cards / c solid low-poly blobs + flat pads + solid hedges (no card skin) / r cards again but larger and fewer",
+    "materials": "style o keeps the tiling detail maps, c drops every map and flattens colour, r puts an alpha-cut leaf-cluster atlas on the five card materials",
+    "light": "cartoon needs a much softer key and far less fog; realistic keeps the strong key and pushes fog further out"
+  },
+  "_20261027": "Pass 2. Leaf albedo lifted ~20% and desaturated (reference crown: lum 93.6 / sat 36.7, measured 74.6 / 54.1). Grass blades wider and fewer (reference edge density 16.3, measured 31.1). Fog pushed back everywhere: fog started inside the courtyard, which is what greyed out the grass and washed the far hedge white.",
+  "variants": {
+    "O": {
+      "label": "O 自有程序化 · 大板铺地 + 浅色叶 + 宽叶草",
+      "url_style": "o",
+      "style": "o",
+      "leaf_shape": "trilobe",
+      "leaf_fold": 0.04,
+      "leaf_scale": 3.2,
+      "leaf_count_scale": 0.28,
+      "grass_keep": 0.4,
+      "grass_ring_keep": 0.72,
+      "grass_width": 2.1,
+      "grass_height": 0.6,
+      "grass_count_scale": 0.55,
+      "paving_unify": 1,
+      "paving_joint_scale": 1.0,
+      "paving_cracks": 0,
+      "palette": {
+        "leaf_olive": "#A99A85",
+        "leaf_deep": "#93816C",
+        "leaf_ochre": "#C9B08E",
+        "leaf_amber": "#BCA184",
+        "leaf_gold": "#E0D0B4",
+        "leaf_mass": "#87735E",
+        "leaf_far": "#635441",
+        "leaf_mid_haze": "#5B4D3C",
+        "leaf_haze": "#544737",
+        "grass_dry": "#A87E42",
+        "grass_pale": "#C0985A",
+        "mortar": "#4A4038",
+        "stone_base": "#9E8C78",
+        "stone_light": "#B4A08A"
+      },
+      "lights": {
+        "ambient": 13500,
+        "sky": "#C6D0D8",
+        "fill_color": "#BFC8CE",
+        "fill_illum": 6400,
+        "key_illum": 112000,
+        "fog": [
+          208,
+          200,
+          188
+        ],
+        "fog_start": 80
+      }
+    },
+    "C": {
+      "label": "C 卡通低模 · 圆冠团块 + 平涂 + 宽叶草",
+      "url_style": "c",
+      "style": "c",
+      "blob_keep": 0.85,
+      "blob_radius_scale": 1.05,
+      "blob_subdiv": 1,
+      "leaf_shape": "diamond",
+      "leaf_fold": 0.0,
+      "leaf_scale": 1.4,
+      "leaf_count_scale": 1.0,
+      "grass_keep": 0.55,
+      "grass_ring_keep": 0.8,
+      "grass_width": 1.6,
+      "grass_height": 0.58,
+      "grass_count_scale": 0.6,
+      "paving_unify": 1,
+      "paving_joint_scale": 1.0,
+      "paving_cracks": 0,
+      "palette": {
+        "leaf_olive": "#B08A3C",
+        "leaf_deep": "#A85C2A",
+        "leaf_ochre": "#D9A03F",
+        "leaf_amber": "#C87A2C",
+        "leaf_gold": "#EFC96A",
+        "leaf_mass": "#9E6528",
+        "leaf_far": "#8F753C",
+        "leaf_mid_haze": "#856C36",
+        "leaf_haze": "#7A6330",
+        "grass_dry": "#B08C3E",
+        "grass_pale": "#C7A257",
+        "mortar": "#9C8F76",
+        "stone_base": "#BFB49C",
+        "stone_light": "#D5CAB2"
+      },
+      "lights": {
+        "ambient": 14500,
+        "sky": "#E8DCC8",
+        "fill_color": "#DCD8CE",
+        "fill_illum": 6000,
+        "key_illum": 82000,
+        "fog": [
+          220,
+          210,
+          194
+        ],
+        "fog_start": 80
+      }
+    },
+    "R": {
+      "label": "R 写实贴图 · 叶图集 alpha 裁剪 + 中性调",
+      "url_style": "r",
+      "style": "o",
+      "leaf_shape": "trilobe",
+      "leaf_fold": 0.04,
+      "leaf_scale": 3.4,
+      "leaf_count_scale": 0.24,
+      "grass_keep": 0.44,
+      "grass_ring_keep": 0.75,
+      "grass_width": 2.0,
+      "grass_height": 0.6,
+      "grass_count_scale": 0.58,
+      "paving_unify": 1,
+      "paving_joint_scale": 1.0,
+      "paving_cracks": 0,
+      "palette": {
+        "leaf_olive": "#A69781",
+        "leaf_deep": "#8F7E69",
+        "leaf_ochre": "#C6AE8C",
+        "leaf_amber": "#B99E80",
+        "leaf_gold": "#DCCCB0",
+        "leaf_mass": "#83705B",
+        "leaf_far": "#675846",
+        "leaf_mid_haze": "#5F5140",
+        "leaf_haze": "#584A3A",
+        "grass_dry": "#A2793C",
+        "grass_pale": "#BA9252",
+        "mortar": "#4A4038",
+        "stone_base": "#A08E7A",
+        "stone_light": "#B6A28C"
+      },
+      "lights": {
+        "ambient": 13500,
+        "sky": "#C6D0D8",
+        "fill_color": "#BFC8CE",
+        "fill_illum": 6400,
+        "key_illum": 118000,
+        "fog": [
+          210,
+          202,
+          190
+        ],
+        "fog_start": 78
+      }
+    }
+  }
+}

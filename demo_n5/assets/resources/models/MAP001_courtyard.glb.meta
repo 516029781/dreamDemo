@@ -12,7 +12,7 @@
       "id": "21528",
       "name": "MAP001_bedshrub_01_stems_mesh.mesh",
       "userData": {
-        "gltfIndex": 76,
+        "gltfIndex": 78,
         "triangleCount": 100
       },
       "ver": "1.1.1",
@@ -30,8 +30,8 @@
       "id": "27223",
       "name": "MAP001_dry_grass_16_clump_mesh.mesh",
       "userData": {
-        "gltfIndex": 136,
-        "triangleCount": 1128
+        "gltfIndex": 134,
+        "triangleCount": 1164
       },
       "ver": "1.1.1",
       "imported": true,
@@ -48,8 +48,8 @@
       "id": "38839",
       "name": "MAP001_dry_grass_01_clump_mesh.mesh",
       "userData": {
-        "gltfIndex": 121,
-        "triangleCount": 1128
+        "gltfIndex": 123,
+        "triangleCount": 1164
       },
       "ver": "1.1.1",
       "imported": true,
@@ -66,13 +66,29 @@
       "id": "44790",
       "name": "MAP001_bedshrub_04_leaves_mesh.mesh",
       "userData": {
-        "gltfIndex": 83,
-        "triangleCount": 2632
+        "gltfIndex": 85,
+        "triangleCount": 942
       },
       "ver": "1.1.1",
       "imported": true,
       "files": [
         ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "48863": {
+      "importer": "gltf-material",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@48863",
+      "displayName": "",
+      "id": "48863",
+      "name": "ENG_MAT_flag_teal.material",
+      "userData": {
+        "gltfIndex": 24
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
         ".json"
       ],
       "subMetas": {}
@@ -84,8 +100,8 @@
       "id": "51285",
       "name": "MAP001_planter_00_shrub_b_leaves_mesh.mesh",
       "userData": {
-        "gltfIndex": 109,
-        "triangleCount": 2632
+        "gltfIndex": 111,
+        "triangleCount": 942
       },
       "ver": "1.1.1",
       "imported": true,
@@ -102,7 +118,7 @@
       "id": "54852",
       "name": "ENG_MAT_flower_cream.material",
       "userData": {
-        "gltfIndex": 20
+        "gltfIndex": 22
       },
       "ver": "1.0.14",
       "imported": true,
@@ -119,7 +135,7 @@
       "name": "MAP001_fg_bed_0_flowers_mesh.mesh",
       "userData": {
         "gltfIndex": 21,
-        "triangleCount": 576
+        "triangleCount": 768
       },
       "ver": "1.1.1",
       "imported": true,
@@ -136,7 +152,7 @@
       "id": "62670",
       "name": "ENG_MAT_lamp_glass.material",
       "userData": {
-        "gltfIndex": 29
+        "gltfIndex": 35
       },
       "ver": "1.0.14",
       "imported": true,
@@ -152,44 +168,8 @@
       "id": "65333",
       "name": "MAP001_garden_beds_soil_mesh.mesh",
       "userData": {
-        "gltfIndex": 29,
+        "gltfIndex": 32,
         "triangleCount": 48
-      },
-      "ver": "1.1.1",
-      "imported": true,
-      "files": [
-        ".bin",
-        ".json"
-      ],
-      "subMetas": {}
-    },
-    "69458": {
-      "importer": "gltf-mesh",
-      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@69458",
-      "displayName": "",
-      "id": "69458",
-      "name": "MAP001_dry_grass_12_clump_mesh.mesh",
-      "userData": {
-        "gltfIndex": 132,
-        "triangleCount": 1128
-      },
-      "ver": "1.1.1",
-      "imported": true,
-      "files": [
-        ".bin",
-        ".json"
-      ],
-      "subMetas": {}
-    },
-    "70620": {
-      "importer": "gltf-mesh",
-      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@70620",
-      "displayName": "",
-      "id": "70620",
-      "name": "MAP001_dry_grass_07_clump_mesh.mesh",
-      "userData": {
-        "gltfIndex": 127,
-        "triangleCount": 1128
       },
       "ver": "1.1.1",
       "imported": true,
@@ -206,8 +186,8 @@
       "id": "71211",
       "name": "MAP001_edge_cover_10_clump_mesh.mesh",
       "userData": {
-        "gltfIndex": 164,
-        "triangleCount": 1128
+        "gltfIndex": 157,
+        "triangleCount": 1164
       },
       "ver": "1.1.1",
       "imported": true,
@@ -225,7 +205,7 @@
       "name": "MAP001_bg_tree_crowns_mesh.mesh",
       "userData": {
         "gltfIndex": 14,
-        "triangleCount": 18000
+        "triangleCount": 6300
       },
       "ver": "1.1.1",
       "imported": true,
@@ -242,8 +222,8 @@
       "id": "83706",
       "name": "MAP001_fallen_leaves_07_leaves_mesh.mesh",
       "userData": {
-        "gltfIndex": 147,
-        "triangleCount": 408
+        "gltfIndex": 140,
+        "triangleCount": 596
       },
       "ver": "1.1.1",
       "imported": true,
@@ -260,8 +240,8 @@
       "id": "86841",
       "name": "MAP001_ring_cover_02_leaves_mesh.mesh",
       "userData": {
-        "gltfIndex": 152,
-        "triangleCount": 408
+        "gltfIndex": 145,
+        "triangleCount": 596
       },
       "ver": "1.1.1",
       "imported": true,
@@ -278,8 +258,8 @@
       "id": "99841",
       "name": "MAP001_edge_cover_05_leaves_mesh.mesh",
       "userData": {
-        "gltfIndex": 159,
-        "triangleCount": 408
+        "gltfIndex": 152,
+        "triangleCount": 596
       },
       "ver": "1.1.1",
       "imported": true,
@@ -405,7 +385,7 @@
       "name": "MAP001_paving_slabs_mesh.mesh",
       "userData": {
         "gltfIndex": 6,
-        "triangleCount": 8940
+        "triangleCount": 1800
       },
       "ver": "1.1.1",
       "imported": true,
@@ -459,7 +439,7 @@
       "name": "MAP001_bg_hedge_cards_mesh.mesh",
       "userData": {
         "gltfIndex": 9,
-        "triangleCount": 219184
+        "triangleCount": 97864
       },
       "ver": "1.1.1",
       "imported": true,
@@ -495,7 +475,7 @@
       "name": "MAP001_bg_hedge_far_cards_mesh.mesh",
       "userData": {
         "gltfIndex": 11,
-        "triangleCount": 73480
+        "triangleCount": 30360
       },
       "ver": "1.1.1",
       "imported": true,
@@ -567,7 +547,7 @@
       "name": "MAP001_bg_treeline_cards_mesh.mesh",
       "userData": {
         "gltfIndex": 16,
-        "triangleCount": 10288
+        "triangleCount": 3684
       },
       "ver": "1.1.1",
       "imported": true,
@@ -621,7 +601,7 @@
       "name": "MAP001_fg_bed_0_leaves_mesh.mesh",
       "userData": {
         "gltfIndex": 19,
-        "triangleCount": 1080
+        "triangleCount": 378
       },
       "ver": "1.1.1",
       "imported": true,
@@ -639,7 +619,7 @@
       "name": "MAP001_fg_bed_0_grass_mesh.mesh",
       "userData": {
         "gltfIndex": 20,
-        "triangleCount": 6965
+        "triangleCount": 4575
       },
       "ver": "1.1.1",
       "imported": true,
@@ -693,7 +673,7 @@
       "name": "MAP001_fg_bed_1_leaves_mesh.mesh",
       "userData": {
         "gltfIndex": 24,
-        "triangleCount": 1080
+        "triangleCount": 378
       },
       "ver": "1.1.1",
       "imported": true,
@@ -711,7 +691,7 @@
       "name": "MAP001_fg_bed_1_grass_mesh.mesh",
       "userData": {
         "gltfIndex": 25,
-        "triangleCount": 6970
+        "triangleCount": 4505
       },
       "ver": "1.1.1",
       "imported": true,
@@ -729,7 +709,7 @@
       "name": "MAP001_fg_bed_1_flowers_mesh.mesh",
       "userData": {
         "gltfIndex": 26,
-        "triangleCount": 576
+        "triangleCount": 768
       },
       "ver": "1.1.1",
       "imported": true,
@@ -747,7 +727,61 @@
       "name": "MAP001_fg_leaf_drift_mesh.mesh",
       "userData": {
         "gltfIndex": 27,
-        "triangleCount": 2376
+        "triangleCount": 864
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "eb92a": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@eb92a",
+      "displayName": "",
+      "id": "eb92a",
+      "name": "MAP001_accent_jars_mesh.mesh",
+      "userData": {
+        "gltfIndex": 28,
+        "triangleCount": 312
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "b4ef2": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@b4ef2",
+      "displayName": "",
+      "id": "b4ef2",
+      "name": "MAP001_accent_bunting_mesh.mesh",
+      "userData": {
+        "gltfIndex": 29,
+        "triangleCount": 47
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "4a910": {
+      "importer": "gltf-mesh",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@4a910",
+      "displayName": "",
+      "id": "4a910",
+      "name": "MAP001_accent_bunting_string_mesh.mesh",
+      "userData": {
+        "gltfIndex": 30,
+        "triangleCount": 510
       },
       "ver": "1.1.1",
       "imported": true,
@@ -764,7 +798,7 @@
       "id": "9a0f6",
       "name": "MAP001_garden_beds_stone_mesh.mesh",
       "userData": {
-        "gltfIndex": 28,
+        "gltfIndex": 31,
         "triangleCount": 11880
       },
       "ver": "1.1.1",
@@ -782,8 +816,8 @@
       "id": "090a5",
       "name": "MAP001_garden_moss_mesh.mesh",
       "userData": {
-        "gltfIndex": 30,
-        "triangleCount": 17476
+        "gltfIndex": 33,
+        "triangleCount": 6552
       },
       "ver": "1.1.1",
       "imported": true,
@@ -800,8 +834,8 @@
       "id": "cd5e4",
       "name": "MAP001_garden_flowers_mesh.mesh",
       "userData": {
-        "gltfIndex": 31,
-        "triangleCount": 5688
+        "gltfIndex": 34,
+        "triangleCount": 7584
       },
       "ver": "1.1.1",
       "imported": true,
@@ -818,8 +852,8 @@
       "id": "3dcfb",
       "name": "MAP001_garden_pebbles_mesh.mesh",
       "userData": {
-        "gltfIndex": 32,
-        "triangleCount": 380
+        "gltfIndex": 35,
+        "triangleCount": 420
       },
       "ver": "1.1.1",
       "imported": true,
@@ -836,8 +870,8 @@
       "id": "3300a",
       "name": "MAP001_garden_ring_cobbles_mesh.mesh",
       "userData": {
-        "gltfIndex": 33,
-        "triangleCount": 5440
+        "gltfIndex": 36,
+        "triangleCount": 5530
       },
       "ver": "1.1.1",
       "imported": true,
@@ -854,8 +888,8 @@
       "id": "d22c5",
       "name": "MAP001_garden_grass_mesh.mesh",
       "userData": {
-        "gltfIndex": 34,
-        "triangleCount": 222825
+        "gltfIndex": 37,
+        "triangleCount": 176575
       },
       "ver": "1.1.1",
       "imported": true,
@@ -872,7 +906,7 @@
       "id": "32f10",
       "name": "MAP001_ring_planter_blocks_mesh.mesh",
       "userData": {
-        "gltfIndex": 35,
+        "gltfIndex": 38,
         "triangleCount": 8208
       },
       "ver": "1.1.1",
@@ -890,7 +924,7 @@
       "id": "be9df",
       "name": "MAP001_ring_planter_plinth_mesh.mesh",
       "userData": {
-        "gltfIndex": 36,
+        "gltfIndex": 39,
         "triangleCount": 2304
       },
       "ver": "1.1.1",
@@ -908,7 +942,7 @@
       "id": "84a9b",
       "name": "MAP001_ring_planter_cap_mesh.mesh",
       "userData": {
-        "gltfIndex": 37,
+        "gltfIndex": 40,
         "triangleCount": 2304
       },
       "ver": "1.1.1",
@@ -926,7 +960,7 @@
       "id": "a1d55",
       "name": "MAP001_ring_planter_soil_mesh.mesh",
       "userData": {
-        "gltfIndex": 38,
+        "gltfIndex": 41,
         "triangleCount": 140
       },
       "ver": "1.1.1",
@@ -944,26 +978,8 @@
       "id": "499b0",
       "name": "MAP001_tree_bark_mesh.mesh",
       "userData": {
-        "gltfIndex": 39,
-        "triangleCount": 31802
-      },
-      "ver": "1.1.1",
-      "imported": true,
-      "files": [
-        ".bin",
-        ".json"
-      ],
-      "subMetas": {}
-    },
-    "d142d": {
-      "importer": "gltf-mesh",
-      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@d142d",
-      "displayName": "",
-      "id": "d142d",
-      "name": "MAP001_tree_crown_mass_mesh.mesh",
-      "userData": {
-        "gltfIndex": 40,
-        "triangleCount": 400
+        "gltfIndex": 42,
+        "triangleCount": 32452
       },
       "ver": "1.1.1",
       "imported": true,
@@ -980,8 +996,8 @@
       "id": "ac42d",
       "name": "MAP001_tree_canopy_mesh.mesh",
       "userData": {
-        "gltfIndex": 41,
-        "triangleCount": 178656
+        "gltfIndex": 43,
+        "triangleCount": 57654
       },
       "ver": "1.1.1",
       "imported": true,
@@ -998,7 +1014,7 @@
       "id": "00fe0",
       "name": "MAP001_west_planter_stone_mesh.mesh",
       "userData": {
-        "gltfIndex": 42,
+        "gltfIndex": 44,
         "triangleCount": 2808
       },
       "ver": "1.1.1",
@@ -1016,7 +1032,7 @@
       "id": "90d9c",
       "name": "MAP001_west_planter_soil_mesh.mesh",
       "userData": {
-        "gltfIndex": 43,
+        "gltfIndex": 45,
         "triangleCount": 12
       },
       "ver": "1.1.1",
@@ -1034,7 +1050,7 @@
       "id": "ef7c9",
       "name": "MAP001_east_planter_stone_mesh.mesh",
       "userData": {
-        "gltfIndex": 44,
+        "gltfIndex": 46,
         "triangleCount": 2808
       },
       "ver": "1.1.1",
@@ -1052,7 +1068,7 @@
       "id": "3aa0c",
       "name": "MAP001_east_planter_soil_mesh.mesh",
       "userData": {
-        "gltfIndex": 45,
+        "gltfIndex": 47,
         "triangleCount": 12
       },
       "ver": "1.1.1",
@@ -1070,7 +1086,7 @@
       "id": "6c0f1",
       "name": "PROP001_bench_wood_mesh.mesh",
       "userData": {
-        "gltfIndex": 46,
+        "gltfIndex": 48,
         "triangleCount": 1504
       },
       "ver": "1.1.1",
@@ -1088,7 +1104,7 @@
       "id": "c87f0",
       "name": "PROP001_bench_metal_mesh.mesh",
       "userData": {
-        "gltfIndex": 47,
+        "gltfIndex": 49,
         "triangleCount": 4888
       },
       "ver": "1.1.1",
@@ -1106,7 +1122,7 @@
       "id": "3099f",
       "name": "PROP001_bench_wood_mesh.001.mesh",
       "userData": {
-        "gltfIndex": 48,
+        "gltfIndex": 50,
         "triangleCount": 1504
       },
       "ver": "1.1.1",
@@ -1124,7 +1140,7 @@
       "id": "78ed8",
       "name": "PROP001_bench_metal_mesh.001.mesh",
       "userData": {
-        "gltfIndex": 49,
+        "gltfIndex": 51,
         "triangleCount": 4888
       },
       "ver": "1.1.1",
@@ -1142,7 +1158,7 @@
       "id": "92a17",
       "name": "PROP001_bench_wood_mesh.002.mesh",
       "userData": {
-        "gltfIndex": 50,
+        "gltfIndex": 52,
         "triangleCount": 1504
       },
       "ver": "1.1.1",
@@ -1160,7 +1176,7 @@
       "id": "0d83a",
       "name": "PROP001_bench_metal_mesh.002.mesh",
       "userData": {
-        "gltfIndex": 51,
+        "gltfIndex": 53,
         "triangleCount": 4888
       },
       "ver": "1.1.1",
@@ -1178,7 +1194,7 @@
       "id": "2068f",
       "name": "MAP001_message_board_wood_mesh.mesh",
       "userData": {
-        "gltfIndex": 52,
+        "gltfIndex": 54,
         "triangleCount": 1508
       },
       "ver": "1.1.1",
@@ -1196,7 +1212,7 @@
       "id": "7e586",
       "name": "MAP001_message_board_cork_mesh.mesh",
       "userData": {
-        "gltfIndex": 53,
+        "gltfIndex": 55,
         "triangleCount": 12
       },
       "ver": "1.1.1",
@@ -1214,7 +1230,7 @@
       "id": "5bb2d",
       "name": "MAP001_message_board_label_plate_mesh.mesh",
       "userData": {
-        "gltfIndex": 54,
+        "gltfIndex": 56,
         "triangleCount": 12
       },
       "ver": "1.1.1",
@@ -1232,8 +1248,8 @@
       "id": "ebc82",
       "name": "MAP001_message_board_card_A_mesh.mesh",
       "userData": {
-        "gltfIndex": 55,
-        "triangleCount": 260
+        "gltfIndex": 57,
+        "triangleCount": 262
       },
       "ver": "1.1.1",
       "imported": true,
@@ -1250,8 +1266,8 @@
       "id": "8d18f",
       "name": "MAP001_message_board_card_B_mesh.mesh",
       "userData": {
-        "gltfIndex": 56,
-        "triangleCount": 460
+        "gltfIndex": 58,
+        "triangleCount": 466
       },
       "ver": "1.1.1",
       "imported": true,
@@ -1268,7 +1284,7 @@
       "id": "dcd39",
       "name": "MAP001_message_board_card_C_mesh.mesh",
       "userData": {
-        "gltfIndex": 57,
+        "gltfIndex": 59,
         "triangleCount": 412
       },
       "ver": "1.1.1",
@@ -1286,7 +1302,7 @@
       "id": "64a00",
       "name": "MAP001_pergola_frame_mesh.mesh",
       "userData": {
-        "gltfIndex": 58,
+        "gltfIndex": 60,
         "triangleCount": 1296
       },
       "ver": "1.1.1",
@@ -1304,7 +1320,7 @@
       "id": "68cc9",
       "name": "MAP001_pergola_roof_mesh.mesh",
       "userData": {
-        "gltfIndex": 59,
+        "gltfIndex": 61,
         "triangleCount": 756
       },
       "ver": "1.1.1",
@@ -1322,7 +1338,7 @@
       "id": "677b2",
       "name": "MAP001_pergola_metal_mesh.mesh",
       "userData": {
-        "gltfIndex": 60,
+        "gltfIndex": 62,
         "triangleCount": 368
       },
       "ver": "1.1.1",
@@ -1340,7 +1356,7 @@
       "id": "a3237",
       "name": "MAP001_lamp_0_iron_mesh.mesh",
       "userData": {
-        "gltfIndex": 61,
+        "gltfIndex": 63,
         "triangleCount": 2436
       },
       "ver": "1.1.1",
@@ -1358,7 +1374,7 @@
       "id": "a30eb",
       "name": "MAP001_lamp_0_glass_mesh.mesh",
       "userData": {
-        "gltfIndex": 62,
+        "gltfIndex": 64,
         "triangleCount": 48
       },
       "ver": "1.1.1",
@@ -1376,7 +1392,7 @@
       "id": "958ff",
       "name": "MAP001_lamp_1_iron_mesh.mesh",
       "userData": {
-        "gltfIndex": 63,
+        "gltfIndex": 65,
         "triangleCount": 2436
       },
       "ver": "1.1.1",
@@ -1394,7 +1410,7 @@
       "id": "497a6",
       "name": "MAP001_lamp_1_glass_mesh.mesh",
       "userData": {
-        "gltfIndex": 64,
+        "gltfIndex": 66,
         "triangleCount": 48
       },
       "ver": "1.1.1",
@@ -1412,7 +1428,7 @@
       "id": "fbc6e",
       "name": "MAP001_lamp_2_iron_mesh.mesh",
       "userData": {
-        "gltfIndex": 65,
+        "gltfIndex": 67,
         "triangleCount": 2436
       },
       "ver": "1.1.1",
@@ -1430,7 +1446,7 @@
       "id": "a38da",
       "name": "MAP001_lamp_2_glass_mesh.mesh",
       "userData": {
-        "gltfIndex": 66,
+        "gltfIndex": 68,
         "triangleCount": 48
       },
       "ver": "1.1.1",
@@ -1448,7 +1464,7 @@
       "id": "5ae7e",
       "name": "MAP001_lamp_3_iron_mesh.mesh",
       "userData": {
-        "gltfIndex": 67,
+        "gltfIndex": 69,
         "triangleCount": 2436
       },
       "ver": "1.1.1",
@@ -1466,7 +1482,7 @@
       "id": "8a47e",
       "name": "MAP001_lamp_3_glass_mesh.mesh",
       "userData": {
-        "gltfIndex": 68,
+        "gltfIndex": 70,
         "triangleCount": 48
       },
       "ver": "1.1.1",
@@ -1484,7 +1500,7 @@
       "id": "4f413",
       "name": "MAP001_direction_sign_body_mesh.mesh",
       "userData": {
-        "gltfIndex": 69,
+        "gltfIndex": 71,
         "triangleCount": 900
       },
       "ver": "1.1.1",
@@ -1502,8 +1518,8 @@
       "id": "b7b80",
       "name": "MAP001_direction_sign_leaf_mesh.mesh",
       "userData": {
-        "gltfIndex": 70,
-        "triangleCount": 4
+        "gltfIndex": 72,
+        "triangleCount": 6
       },
       "ver": "1.1.1",
       "imported": true,
@@ -1520,8 +1536,8 @@
       "id": "ef3b1",
       "name": "MAP001_pickup_A_mesh.mesh",
       "userData": {
-        "gltfIndex": 71,
-        "triangleCount": 220
+        "gltfIndex": 73,
+        "triangleCount": 222
       },
       "ver": "1.1.1",
       "imported": true,
@@ -1538,8 +1554,8 @@
       "id": "010dc",
       "name": "MAP001_pickup_B_mesh.mesh",
       "userData": {
-        "gltfIndex": 72,
-        "triangleCount": 420
+        "gltfIndex": 74,
+        "triangleCount": 426
       },
       "ver": "1.1.1",
       "imported": true,
@@ -1556,7 +1572,7 @@
       "id": "80ee9",
       "name": "MAP001_pickup_C_mesh.mesh",
       "userData": {
-        "gltfIndex": 73,
+        "gltfIndex": 75,
         "triangleCount": 372
       },
       "ver": "1.1.1",
@@ -1574,7 +1590,7 @@
       "id": "6a98b",
       "name": "MAP001_bedshrub_00_stems_mesh.mesh",
       "userData": {
-        "gltfIndex": 74,
+        "gltfIndex": 76,
         "triangleCount": 120
       },
       "ver": "1.1.1",
@@ -1592,8 +1608,8 @@
       "id": "5d650",
       "name": "MAP001_bedshrub_00_leaves_mesh.mesh",
       "userData": {
-        "gltfIndex": 75,
-        "triangleCount": 2632
+        "gltfIndex": 77,
+        "triangleCount": 942
       },
       "ver": "1.1.1",
       "imported": true,
@@ -1610,8 +1626,8 @@
       "id": "02885",
       "name": "MAP001_bedshrub_01_leaves_mesh.mesh",
       "userData": {
-        "gltfIndex": 77,
-        "triangleCount": 2156
+        "gltfIndex": 79,
+        "triangleCount": 780
       },
       "ver": "1.1.1",
       "imported": true,
@@ -1628,7 +1644,7 @@
       "id": "0f0a8",
       "name": "MAP001_bedshrub_02_stems_mesh.mesh",
       "userData": {
-        "gltfIndex": 78,
+        "gltfIndex": 80,
         "triangleCount": 100
       },
       "ver": "1.1.1",
@@ -1646,8 +1662,8 @@
       "id": "673d2",
       "name": "MAP001_bedshrub_02_leaves_mesh.mesh",
       "userData": {
-        "gltfIndex": 79,
-        "triangleCount": 2156
+        "gltfIndex": 81,
+        "triangleCount": 780
       },
       "ver": "1.1.1",
       "imported": true,
@@ -1664,7 +1680,7 @@
       "id": "4eb1e",
       "name": "MAP001_bedshrub_03_stems_mesh.mesh",
       "userData": {
-        "gltfIndex": 80,
+        "gltfIndex": 82,
         "triangleCount": 100
       },
       "ver": "1.1.1",
@@ -1682,8 +1698,8 @@
       "id": "d59a9",
       "name": "MAP001_bedshrub_03_leaves_mesh.mesh",
       "userData": {
-        "gltfIndex": 81,
-        "triangleCount": 2156
+        "gltfIndex": 83,
+        "triangleCount": 780
       },
       "ver": "1.1.1",
       "imported": true,
@@ -1700,7 +1716,7 @@
       "id": "10d48",
       "name": "MAP001_bedshrub_04_stems_mesh.mesh",
       "userData": {
-        "gltfIndex": 82,
+        "gltfIndex": 84,
         "triangleCount": 120
       },
       "ver": "1.1.1",
@@ -1718,7 +1734,7 @@
       "id": "e2fee",
       "name": "MAP001_bedshrub_05_stems_mesh.mesh",
       "userData": {
-        "gltfIndex": 84,
+        "gltfIndex": 86,
         "triangleCount": 100
       },
       "ver": "1.1.1",
@@ -1736,8 +1752,8 @@
       "id": "ee30e",
       "name": "MAP001_bedshrub_05_leaves_mesh.mesh",
       "userData": {
-        "gltfIndex": 85,
-        "triangleCount": 2156
+        "gltfIndex": 87,
+        "triangleCount": 780
       },
       "ver": "1.1.1",
       "imported": true,
@@ -1754,7 +1770,7 @@
       "id": "e5d09",
       "name": "MAP001_bedshrub_06_stems_mesh.mesh",
       "userData": {
-        "gltfIndex": 86,
+        "gltfIndex": 88,
         "triangleCount": 120
       },
       "ver": "1.1.1",
@@ -1772,8 +1788,8 @@
       "id": "7315c",
       "name": "MAP001_bedshrub_06_leaves_mesh.mesh",
       "userData": {
-        "gltfIndex": 87,
-        "triangleCount": 2632
+        "gltfIndex": 89,
+        "triangleCount": 942
       },
       "ver": "1.1.1",
       "imported": true,
@@ -1790,7 +1806,7 @@
       "id": "8b927",
       "name": "MAP001_bedshrub_07_stems_mesh.mesh",
       "userData": {
-        "gltfIndex": 88,
+        "gltfIndex": 90,
         "triangleCount": 100
       },
       "ver": "1.1.1",
@@ -1808,8 +1824,8 @@
       "id": "7e4e4",
       "name": "MAP001_bedshrub_07_leaves_mesh.mesh",
       "userData": {
-        "gltfIndex": 89,
-        "triangleCount": 2156
+        "gltfIndex": 91,
+        "triangleCount": 780
       },
       "ver": "1.1.1",
       "imported": true,
@@ -1826,7 +1842,7 @@
       "id": "35d0e",
       "name": "MAP001_env009_00_stems_mesh.mesh",
       "userData": {
-        "gltfIndex": 90,
+        "gltfIndex": 92,
         "triangleCount": 100
       },
       "ver": "1.1.1",
@@ -1844,8 +1860,8 @@
       "id": "f44c2",
       "name": "MAP001_env009_00_leaves_mesh.mesh",
       "userData": {
-        "gltfIndex": 91,
-        "triangleCount": 2156
+        "gltfIndex": 93,
+        "triangleCount": 780
       },
       "ver": "1.1.1",
       "imported": true,
@@ -1862,7 +1878,7 @@
       "id": "863ff",
       "name": "MAP001_env010_01_stems_mesh.mesh",
       "userData": {
-        "gltfIndex": 92,
+        "gltfIndex": 94,
         "triangleCount": 120
       },
       "ver": "1.1.1",
@@ -1880,8 +1896,8 @@
       "id": "13e4d",
       "name": "MAP001_env010_01_leaves_mesh.mesh",
       "userData": {
-        "gltfIndex": 93,
-        "triangleCount": 2632
+        "gltfIndex": 95,
+        "triangleCount": 942
       },
       "ver": "1.1.1",
       "imported": true,
@@ -1898,7 +1914,7 @@
       "id": "842ea",
       "name": "MAP001_env009_02_stems_mesh.mesh",
       "userData": {
-        "gltfIndex": 94,
+        "gltfIndex": 96,
         "triangleCount": 100
       },
       "ver": "1.1.1",
@@ -1916,8 +1932,8 @@
       "id": "b9fe5",
       "name": "MAP001_env009_02_leaves_mesh.mesh",
       "userData": {
-        "gltfIndex": 95,
-        "triangleCount": 2156
+        "gltfIndex": 97,
+        "triangleCount": 780
       },
       "ver": "1.1.1",
       "imported": true,
@@ -1934,7 +1950,7 @@
       "id": "05bd0",
       "name": "MAP001_env010_03_stems_mesh.mesh",
       "userData": {
-        "gltfIndex": 96,
+        "gltfIndex": 98,
         "triangleCount": 120
       },
       "ver": "1.1.1",
@@ -1952,8 +1968,8 @@
       "id": "3c94e",
       "name": "MAP001_env010_03_leaves_mesh.mesh",
       "userData": {
-        "gltfIndex": 97,
-        "triangleCount": 2632
+        "gltfIndex": 99,
+        "triangleCount": 942
       },
       "ver": "1.1.1",
       "imported": true,
@@ -1970,7 +1986,7 @@
       "id": "da9be",
       "name": "MAP001_env009_04_stems_mesh.mesh",
       "userData": {
-        "gltfIndex": 98,
+        "gltfIndex": 100,
         "triangleCount": 100
       },
       "ver": "1.1.1",
@@ -1988,8 +2004,8 @@
       "id": "d9df0",
       "name": "MAP001_env009_04_leaves_mesh.mesh",
       "userData": {
-        "gltfIndex": 99,
-        "triangleCount": 2156
+        "gltfIndex": 101,
+        "triangleCount": 780
       },
       "ver": "1.1.1",
       "imported": true,
@@ -2006,7 +2022,7 @@
       "id": "f910f",
       "name": "MAP001_env010_05_stems_mesh.mesh",
       "userData": {
-        "gltfIndex": 100,
+        "gltfIndex": 102,
         "triangleCount": 120
       },
       "ver": "1.1.1",
@@ -2024,8 +2040,8 @@
       "id": "12c78",
       "name": "MAP001_env010_05_leaves_mesh.mesh",
       "userData": {
-        "gltfIndex": 101,
-        "triangleCount": 2632
+        "gltfIndex": 103,
+        "triangleCount": 942
       },
       "ver": "1.1.1",
       "imported": true,
@@ -2042,7 +2058,7 @@
       "id": "ba58e",
       "name": "MAP001_env009_06_stems_mesh.mesh",
       "userData": {
-        "gltfIndex": 102,
+        "gltfIndex": 104,
         "triangleCount": 100
       },
       "ver": "1.1.1",
@@ -2060,8 +2076,8 @@
       "id": "ee1f2",
       "name": "MAP001_env009_06_leaves_mesh.mesh",
       "userData": {
-        "gltfIndex": 103,
-        "triangleCount": 2156
+        "gltfIndex": 105,
+        "triangleCount": 780
       },
       "ver": "1.1.1",
       "imported": true,
@@ -2078,7 +2094,7 @@
       "id": "48efd",
       "name": "MAP001_env010_07_stems_mesh.mesh",
       "userData": {
-        "gltfIndex": 104,
+        "gltfIndex": 106,
         "triangleCount": 120
       },
       "ver": "1.1.1",
@@ -2096,8 +2112,8 @@
       "id": "1f899",
       "name": "MAP001_env010_07_leaves_mesh.mesh",
       "userData": {
-        "gltfIndex": 105,
-        "triangleCount": 2632
+        "gltfIndex": 107,
+        "triangleCount": 942
       },
       "ver": "1.1.1",
       "imported": true,
@@ -2114,7 +2130,7 @@
       "id": "1705a",
       "name": "MAP001_planter_00_shrub_a_stems_mesh.mesh",
       "userData": {
-        "gltfIndex": 106,
+        "gltfIndex": 108,
         "triangleCount": 100
       },
       "ver": "1.1.1",
@@ -2132,8 +2148,8 @@
       "id": "92f61",
       "name": "MAP001_planter_00_shrub_a_leaves_mesh.mesh",
       "userData": {
-        "gltfIndex": 107,
-        "triangleCount": 2156
+        "gltfIndex": 109,
+        "triangleCount": 780
       },
       "ver": "1.1.1",
       "imported": true,
@@ -2150,7 +2166,7 @@
       "id": "b3ef4",
       "name": "MAP001_planter_00_shrub_b_stems_mesh.mesh",
       "userData": {
-        "gltfIndex": 108,
+        "gltfIndex": 110,
         "triangleCount": 120
       },
       "ver": "1.1.1",
@@ -2168,8 +2184,8 @@
       "id": "29b59",
       "name": "MAP001_planter_00_grass_2_clump_mesh.mesh",
       "userData": {
-        "gltfIndex": 110,
-        "triangleCount": 1128
+        "gltfIndex": 112,
+        "triangleCount": 1164
       },
       "ver": "1.1.1",
       "imported": true,
@@ -2186,8 +2202,8 @@
       "id": "c294a",
       "name": "MAP001_planter_00_grass_3_clump_mesh.mesh",
       "userData": {
-        "gltfIndex": 111,
-        "triangleCount": 1128
+        "gltfIndex": 113,
+        "triangleCount": 1164
       },
       "ver": "1.1.1",
       "imported": true,
@@ -2204,8 +2220,8 @@
       "id": "3f3c0",
       "name": "MAP001_planter_00_litter_4_leaves_mesh.mesh",
       "userData": {
-        "gltfIndex": 112,
-        "triangleCount": 408
+        "gltfIndex": 114,
+        "triangleCount": 596
       },
       "ver": "1.1.1",
       "imported": true,
@@ -2222,7 +2238,7 @@
       "id": "9ad69",
       "name": "MAP001_planter_01_shrub_b_stems_mesh.mesh",
       "userData": {
-        "gltfIndex": 113,
+        "gltfIndex": 115,
         "triangleCount": 120
       },
       "ver": "1.1.1",
@@ -2240,8 +2256,8 @@
       "id": "48b99",
       "name": "MAP001_planter_01_shrub_b_leaves_mesh.mesh",
       "userData": {
-        "gltfIndex": 114,
-        "triangleCount": 2632
+        "gltfIndex": 116,
+        "triangleCount": 942
       },
       "ver": "1.1.1",
       "imported": true,
@@ -2258,7 +2274,7 @@
       "id": "90b35",
       "name": "MAP001_planter_01_shrub_a_stems_mesh.mesh",
       "userData": {
-        "gltfIndex": 115,
+        "gltfIndex": 117,
         "triangleCount": 100
       },
       "ver": "1.1.1",
@@ -2276,8 +2292,8 @@
       "id": "dd5ce",
       "name": "MAP001_planter_01_shrub_a_leaves_mesh.mesh",
       "userData": {
-        "gltfIndex": 116,
-        "triangleCount": 2156
+        "gltfIndex": 118,
+        "triangleCount": 780
       },
       "ver": "1.1.1",
       "imported": true,
@@ -2294,8 +2310,8 @@
       "id": "d9b62",
       "name": "MAP001_planter_01_grass_2_clump_mesh.mesh",
       "userData": {
-        "gltfIndex": 117,
-        "triangleCount": 1128
+        "gltfIndex": 119,
+        "triangleCount": 1164
       },
       "ver": "1.1.1",
       "imported": true,
@@ -2312,8 +2328,8 @@
       "id": "c3bab",
       "name": "MAP001_planter_01_grass_3_clump_mesh.mesh",
       "userData": {
-        "gltfIndex": 118,
-        "triangleCount": 1128
+        "gltfIndex": 120,
+        "triangleCount": 1164
       },
       "ver": "1.1.1",
       "imported": true,
@@ -2330,8 +2346,8 @@
       "id": "46db5",
       "name": "MAP001_planter_01_litter_4_leaves_mesh.mesh",
       "userData": {
-        "gltfIndex": 119,
-        "triangleCount": 408
+        "gltfIndex": 121,
+        "triangleCount": 596
       },
       "ver": "1.1.1",
       "imported": true,
@@ -2348,8 +2364,8 @@
       "id": "ab239",
       "name": "MAP001_dry_grass_00_clump_mesh.mesh",
       "userData": {
-        "gltfIndex": 120,
-        "triangleCount": 1128
+        "gltfIndex": 122,
+        "triangleCount": 1164
       },
       "ver": "1.1.1",
       "imported": true,
@@ -2366,8 +2382,8 @@
       "id": "e1152",
       "name": "MAP001_dry_grass_02_clump_mesh.mesh",
       "userData": {
-        "gltfIndex": 122,
-        "triangleCount": 1128
+        "gltfIndex": 124,
+        "triangleCount": 1164
       },
       "ver": "1.1.1",
       "imported": true,
@@ -2384,8 +2400,8 @@
       "id": "c48bb",
       "name": "MAP001_dry_grass_03_clump_mesh.mesh",
       "userData": {
-        "gltfIndex": 123,
-        "triangleCount": 1128
+        "gltfIndex": 125,
+        "triangleCount": 1164
       },
       "ver": "1.1.1",
       "imported": true,
@@ -2402,8 +2418,8 @@
       "id": "6bc02",
       "name": "MAP001_dry_grass_04_clump_mesh.mesh",
       "userData": {
-        "gltfIndex": 124,
-        "triangleCount": 1128
+        "gltfIndex": 126,
+        "triangleCount": 1164
       },
       "ver": "1.1.1",
       "imported": true,
@@ -2420,8 +2436,8 @@
       "id": "361b2",
       "name": "MAP001_dry_grass_05_clump_mesh.mesh",
       "userData": {
-        "gltfIndex": 125,
-        "triangleCount": 1128
+        "gltfIndex": 127,
+        "triangleCount": 1164
       },
       "ver": "1.1.1",
       "imported": true,
@@ -2438,8 +2454,8 @@
       "id": "7b0c9",
       "name": "MAP001_dry_grass_06_clump_mesh.mesh",
       "userData": {
-        "gltfIndex": 126,
-        "triangleCount": 1128
+        "gltfIndex": 128,
+        "triangleCount": 1164
       },
       "ver": "1.1.1",
       "imported": true,
@@ -2456,26 +2472,8 @@
       "id": "98bd1",
       "name": "MAP001_dry_grass_08_clump_mesh.mesh",
       "userData": {
-        "gltfIndex": 128,
-        "triangleCount": 1128
-      },
-      "ver": "1.1.1",
-      "imported": true,
-      "files": [
-        ".bin",
-        ".json"
-      ],
-      "subMetas": {}
-    },
-    "609af": {
-      "importer": "gltf-mesh",
-      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@609af",
-      "displayName": "",
-      "id": "609af",
-      "name": "MAP001_dry_grass_09_clump_mesh.mesh",
-      "userData": {
         "gltfIndex": 129,
-        "triangleCount": 1128
+        "triangleCount": 1164
       },
       "ver": "1.1.1",
       "imported": true,
@@ -2493,7 +2491,7 @@
       "name": "MAP001_dry_grass_10_clump_mesh.mesh",
       "userData": {
         "gltfIndex": 130,
-        "triangleCount": 1128
+        "triangleCount": 1164
       },
       "ver": "1.1.1",
       "imported": true,
@@ -2511,7 +2509,7 @@
       "name": "MAP001_dry_grass_11_clump_mesh.mesh",
       "userData": {
         "gltfIndex": 131,
-        "triangleCount": 1128
+        "triangleCount": 1164
       },
       "ver": "1.1.1",
       "imported": true,
@@ -2528,8 +2526,8 @@
       "id": "cd9f3",
       "name": "MAP001_dry_grass_13_clump_mesh.mesh",
       "userData": {
-        "gltfIndex": 133,
-        "triangleCount": 1128
+        "gltfIndex": 132,
+        "triangleCount": 1164
       },
       "ver": "1.1.1",
       "imported": true,
@@ -2546,26 +2544,8 @@
       "id": "2945c",
       "name": "MAP001_dry_grass_14_clump_mesh.mesh",
       "userData": {
-        "gltfIndex": 134,
-        "triangleCount": 1128
-      },
-      "ver": "1.1.1",
-      "imported": true,
-      "files": [
-        ".bin",
-        ".json"
-      ],
-      "subMetas": {}
-    },
-    "700f7": {
-      "importer": "gltf-mesh",
-      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@700f7",
-      "displayName": "",
-      "id": "700f7",
-      "name": "MAP001_dry_grass_15_clump_mesh.mesh",
-      "userData": {
-        "gltfIndex": 135,
-        "triangleCount": 1128
+        "gltfIndex": 133,
+        "triangleCount": 1164
       },
       "ver": "1.1.1",
       "imported": true,
@@ -2582,8 +2562,8 @@
       "id": "180e1",
       "name": "MAP001_dry_grass_17_clump_mesh.mesh",
       "userData": {
-        "gltfIndex": 137,
-        "triangleCount": 1128
+        "gltfIndex": 135,
+        "triangleCount": 1164
       },
       "ver": "1.1.1",
       "imported": true,
@@ -2600,98 +2580,8 @@
       "id": "d46a5",
       "name": "MAP001_dry_grass_18_clump_mesh.mesh",
       "userData": {
-        "gltfIndex": 138,
-        "triangleCount": 1128
-      },
-      "ver": "1.1.1",
-      "imported": true,
-      "files": [
-        ".bin",
-        ".json"
-      ],
-      "subMetas": {}
-    },
-    "00d38": {
-      "importer": "gltf-mesh",
-      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@00d38",
-      "displayName": "",
-      "id": "00d38",
-      "name": "MAP001_dry_grass_19_clump_mesh.mesh",
-      "userData": {
-        "gltfIndex": 139,
-        "triangleCount": 1128
-      },
-      "ver": "1.1.1",
-      "imported": true,
-      "files": [
-        ".bin",
-        ".json"
-      ],
-      "subMetas": {}
-    },
-    "b2bcb": {
-      "importer": "gltf-mesh",
-      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@b2bcb",
-      "displayName": "",
-      "id": "b2bcb",
-      "name": "MAP001_fallen_leaves_00_leaves_mesh.mesh",
-      "userData": {
-        "gltfIndex": 140,
-        "triangleCount": 408
-      },
-      "ver": "1.1.1",
-      "imported": true,
-      "files": [
-        ".bin",
-        ".json"
-      ],
-      "subMetas": {}
-    },
-    "c9e59": {
-      "importer": "gltf-mesh",
-      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@c9e59",
-      "displayName": "",
-      "id": "c9e59",
-      "name": "MAP001_fallen_leaves_01_leaves_mesh.mesh",
-      "userData": {
-        "gltfIndex": 141,
-        "triangleCount": 408
-      },
-      "ver": "1.1.1",
-      "imported": true,
-      "files": [
-        ".bin",
-        ".json"
-      ],
-      "subMetas": {}
-    },
-    "a9e6f": {
-      "importer": "gltf-mesh",
-      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@a9e6f",
-      "displayName": "",
-      "id": "a9e6f",
-      "name": "MAP001_fallen_leaves_02_leaves_mesh.mesh",
-      "userData": {
-        "gltfIndex": 142,
-        "triangleCount": 408
-      },
-      "ver": "1.1.1",
-      "imported": true,
-      "files": [
-        ".bin",
-        ".json"
-      ],
-      "subMetas": {}
-    },
-    "3d7d6": {
-      "importer": "gltf-mesh",
-      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@3d7d6",
-      "displayName": "",
-      "id": "3d7d6",
-      "name": "MAP001_fallen_leaves_03_leaves_mesh.mesh",
-      "userData": {
-        "gltfIndex": 143,
-        "triangleCount": 408
+        "gltfIndex": 136,
+        "triangleCount": 1164
       },
       "ver": "1.1.1",
       "imported": true,
@@ -2708,8 +2598,8 @@
       "id": "b99b1",
       "name": "MAP001_fallen_leaves_04_leaves_mesh.mesh",
       "userData": {
-        "gltfIndex": 144,
-        "triangleCount": 408
+        "gltfIndex": 137,
+        "triangleCount": 596
       },
       "ver": "1.1.1",
       "imported": true,
@@ -2726,8 +2616,8 @@
       "id": "8117e",
       "name": "MAP001_fallen_leaves_05_leaves_mesh.mesh",
       "userData": {
-        "gltfIndex": 145,
-        "triangleCount": 408
+        "gltfIndex": 138,
+        "triangleCount": 596
       },
       "ver": "1.1.1",
       "imported": true,
@@ -2744,8 +2634,8 @@
       "id": "2dd6d",
       "name": "MAP001_fallen_leaves_06_leaves_mesh.mesh",
       "userData": {
-        "gltfIndex": 146,
-        "triangleCount": 408
+        "gltfIndex": 139,
+        "triangleCount": 596
       },
       "ver": "1.1.1",
       "imported": true,
@@ -2762,8 +2652,8 @@
       "id": "c766d",
       "name": "MAP001_fallen_leaves_08_leaves_mesh.mesh",
       "userData": {
-        "gltfIndex": 148,
-        "triangleCount": 408
+        "gltfIndex": 141,
+        "triangleCount": 596
       },
       "ver": "1.1.1",
       "imported": true,
@@ -2780,8 +2670,8 @@
       "id": "326ab",
       "name": "MAP001_fallen_leaves_09_leaves_mesh.mesh",
       "userData": {
-        "gltfIndex": 149,
-        "triangleCount": 408
+        "gltfIndex": 142,
+        "triangleCount": 596
       },
       "ver": "1.1.1",
       "imported": true,
@@ -2798,8 +2688,8 @@
       "id": "f6fb5",
       "name": "MAP001_ring_cover_00_leaves_mesh.mesh",
       "userData": {
-        "gltfIndex": 150,
-        "triangleCount": 408
+        "gltfIndex": 143,
+        "triangleCount": 596
       },
       "ver": "1.1.1",
       "imported": true,
@@ -2816,8 +2706,8 @@
       "id": "753c7",
       "name": "MAP001_ring_cover_01_leaves_mesh.mesh",
       "userData": {
-        "gltfIndex": 151,
-        "triangleCount": 408
+        "gltfIndex": 144,
+        "triangleCount": 596
       },
       "ver": "1.1.1",
       "imported": true,
@@ -2834,8 +2724,8 @@
       "id": "b26f5",
       "name": "MAP001_ring_cover_03_clump_mesh.mesh",
       "userData": {
-        "gltfIndex": 153,
-        "triangleCount": 1128
+        "gltfIndex": 146,
+        "triangleCount": 1164
       },
       "ver": "1.1.1",
       "imported": true,
@@ -2852,8 +2742,8 @@
       "id": "5fc94",
       "name": "MAP001_edge_cover_00_clump_mesh.mesh",
       "userData": {
-        "gltfIndex": 154,
-        "triangleCount": 1128
+        "gltfIndex": 147,
+        "triangleCount": 1164
       },
       "ver": "1.1.1",
       "imported": true,
@@ -2870,8 +2760,8 @@
       "id": "ee14a",
       "name": "MAP001_edge_cover_01_clump_mesh.mesh",
       "userData": {
-        "gltfIndex": 155,
-        "triangleCount": 1128
+        "gltfIndex": 148,
+        "triangleCount": 1164
       },
       "ver": "1.1.1",
       "imported": true,
@@ -2888,8 +2778,8 @@
       "id": "20c52",
       "name": "MAP001_edge_cover_02_clump_mesh.mesh",
       "userData": {
-        "gltfIndex": 156,
-        "triangleCount": 1128
+        "gltfIndex": 149,
+        "triangleCount": 1164
       },
       "ver": "1.1.1",
       "imported": true,
@@ -2906,8 +2796,8 @@
       "id": "6fe9e",
       "name": "MAP001_edge_cover_03_leaves_mesh.mesh",
       "userData": {
-        "gltfIndex": 157,
-        "triangleCount": 408
+        "gltfIndex": 150,
+        "triangleCount": 596
       },
       "ver": "1.1.1",
       "imported": true,
@@ -2924,8 +2814,8 @@
       "id": "c6ce9",
       "name": "MAP001_edge_cover_04_clump_mesh.mesh",
       "userData": {
-        "gltfIndex": 158,
-        "triangleCount": 1128
+        "gltfIndex": 151,
+        "triangleCount": 1164
       },
       "ver": "1.1.1",
       "imported": true,
@@ -2942,8 +2832,8 @@
       "id": "fcd5a",
       "name": "MAP001_edge_cover_06_clump_mesh.mesh",
       "userData": {
-        "gltfIndex": 160,
-        "triangleCount": 1128
+        "gltfIndex": 153,
+        "triangleCount": 1164
       },
       "ver": "1.1.1",
       "imported": true,
@@ -2960,8 +2850,8 @@
       "id": "aa10d",
       "name": "MAP001_edge_cover_07_leaves_mesh.mesh",
       "userData": {
-        "gltfIndex": 161,
-        "triangleCount": 408
+        "gltfIndex": 154,
+        "triangleCount": 596
       },
       "ver": "1.1.1",
       "imported": true,
@@ -2978,8 +2868,8 @@
       "id": "0bf36",
       "name": "MAP001_edge_cover_08_clump_mesh.mesh",
       "userData": {
-        "gltfIndex": 162,
-        "triangleCount": 1128
+        "gltfIndex": 155,
+        "triangleCount": 1164
       },
       "ver": "1.1.1",
       "imported": true,
@@ -2996,8 +2886,8 @@
       "id": "e75a8",
       "name": "MAP001_edge_cover_09_clump_mesh.mesh",
       "userData": {
-        "gltfIndex": 163,
-        "triangleCount": 1128
+        "gltfIndex": 156,
+        "triangleCount": 1164
       },
       "ver": "1.1.1",
       "imported": true,
@@ -3014,8 +2904,8 @@
       "id": "64c36",
       "name": "MAP001_edge_cover_11_clump_mesh.mesh",
       "userData": {
-        "gltfIndex": 165,
-        "triangleCount": 1128
+        "gltfIndex": 158,
+        "triangleCount": 1164
       },
       "ver": "1.1.1",
       "imported": true,
@@ -3032,8 +2922,8 @@
       "id": "6f85a",
       "name": "MAP001_edge_cover_12_leaves_mesh.mesh",
       "userData": {
-        "gltfIndex": 166,
-        "triangleCount": 408
+        "gltfIndex": 159,
+        "triangleCount": 596
       },
       "ver": "1.1.1",
       "imported": true,
@@ -3050,8 +2940,8 @@
       "id": "f3f6f",
       "name": "MAP001_edge_cover_13_leaves_mesh.mesh",
       "userData": {
-        "gltfIndex": 167,
-        "triangleCount": 408
+        "gltfIndex": 160,
+        "triangleCount": 596
       },
       "ver": "1.1.1",
       "imported": true,
@@ -3068,8 +2958,8 @@
       "id": "33a5c",
       "name": "MAP001_edge_cover_14_clump_mesh.mesh",
       "userData": {
-        "gltfIndex": 168,
-        "triangleCount": 1128
+        "gltfIndex": 161,
+        "triangleCount": 1164
       },
       "ver": "1.1.1",
       "imported": true,
@@ -3086,8 +2976,8 @@
       "id": "4065d",
       "name": "MAP001_edge_cover_15_clump_mesh.mesh",
       "userData": {
-        "gltfIndex": 169,
-        "triangleCount": 1128
+        "gltfIndex": 162,
+        "triangleCount": 1164
       },
       "ver": "1.1.1",
       "imported": true,
@@ -3104,8 +2994,8 @@
       "id": "02445",
       "name": "MAP001_edge_cover_16_leaves_mesh.mesh",
       "userData": {
-        "gltfIndex": 170,
-        "triangleCount": 408
+        "gltfIndex": 163,
+        "triangleCount": 596
       },
       "ver": "1.1.1",
       "imported": true,
@@ -3122,8 +3012,8 @@
       "id": "0551a",
       "name": "MAP001_edge_cover_17_leaves_mesh.mesh",
       "userData": {
-        "gltfIndex": 171,
-        "triangleCount": 408
+        "gltfIndex": 164,
+        "triangleCount": 596
       },
       "ver": "1.1.1",
       "imported": true,
@@ -3140,7 +3030,7 @@
       "id": "5d013",
       "name": "MAP001_curb_00_stone_mesh.mesh",
       "userData": {
-        "gltfIndex": 172,
+        "gltfIndex": 165,
         "triangleCount": 1276
       },
       "ver": "1.1.1",
@@ -3158,7 +3048,7 @@
       "id": "8adc8",
       "name": "MAP001_low_wall_00_stone_mesh.mesh",
       "userData": {
-        "gltfIndex": 173,
+        "gltfIndex": 166,
         "triangleCount": 4916
       },
       "ver": "1.1.1",
@@ -3176,7 +3066,7 @@
       "id": "d5f47",
       "name": "MAP001_railing_00_metal_mesh.mesh",
       "userData": {
-        "gltfIndex": 174,
+        "gltfIndex": 167,
         "triangleCount": 22242
       },
       "ver": "1.1.1",
@@ -3194,13 +3084,56 @@
       "id": "47abd",
       "name": "MAP001_steps_stone_mesh.mesh",
       "userData": {
-        "gltfIndex": 175,
+        "gltfIndex": 168,
         "triangleCount": 308
       },
       "ver": "1.1.1",
       "imported": true,
       "files": [
         ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "db3ce": {
+      "importer": "gltf-embeded-image",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@db3ce",
+      "displayName": "",
+      "id": "db3ce",
+      "name": "tex_leaf_atlas.image",
+      "userData": {
+        "gltfIndex": 0,
+        "fixAlphaTransparencyArtifacts": true,
+        "hasAlpha": true,
+        "type": "texture"
+      },
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".json",
+        ".png"
+      ],
+      "subMetas": {}
+    },
+    "e39f7": {
+      "importer": "texture",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@e39f7",
+      "displayName": "",
+      "id": "e39f7",
+      "name": "UnnamedTexture.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "linear",
+        "anisotropy": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "c02a69cf-19af-40d7-940d-23fa794c2850@db3ce"
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
         ".json"
       ],
       "subMetas": {}
@@ -3317,12 +3250,12 @@
       ],
       "subMetas": {}
     },
-    "cc40c": {
+    "0eea9": {
       "importer": "gltf-material",
-      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@cc40c",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@0eea9",
       "displayName": "",
-      "id": "cc40c",
-      "name": "ENG_MAT_leaf_deep.material",
+      "id": "0eea9",
+      "name": "ENG_MAT_leaf_mass.material",
       "userData": {
         "gltfIndex": 7
       },
@@ -3397,6 +3330,22 @@
       ],
       "subMetas": {}
     },
+    "cc40c": {
+      "importer": "gltf-material",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@cc40c",
+      "displayName": "",
+      "id": "cc40c",
+      "name": "ENG_MAT_leaf_deep.material",
+      "userData": {
+        "gltfIndex": 12
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
     "540dd": {
       "importer": "gltf-material",
       "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@540dd",
@@ -3404,7 +3353,7 @@
       "id": "540dd",
       "name": "ENG_MAT_leaf_far.material",
       "userData": {
-        "gltfIndex": 12
+        "gltfIndex": 13
       },
       "ver": "1.0.14",
       "imported": true,
@@ -3420,7 +3369,7 @@
       "id": "a8148",
       "name": "ENG_MAT_leaf_mid_haze.material",
       "userData": {
-        "gltfIndex": 13
+        "gltfIndex": 14
       },
       "ver": "1.0.14",
       "imported": true,
@@ -3436,7 +3385,23 @@
       "id": "293c2",
       "name": "ENG_MAT_wood_dark.material",
       "userData": {
-        "gltfIndex": 14
+        "gltfIndex": 15
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "fec84": {
+      "importer": "gltf-material",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@fec84",
+      "displayName": "",
+      "id": "fec84",
+      "name": "ENG_MAT_leaf_atlas.material",
+      "userData": {
+        "gltfIndex": 16
       },
       "ver": "1.0.14",
       "imported": true,
@@ -3452,7 +3417,7 @@
       "id": "1db9e",
       "name": "ENG_MAT_leaf_haze.material",
       "userData": {
-        "gltfIndex": 15
+        "gltfIndex": 17
       },
       "ver": "1.0.14",
       "imported": true,
@@ -3468,7 +3433,7 @@
       "id": "bb96a",
       "name": "ENG_MAT_soil.material",
       "userData": {
-        "gltfIndex": 16
+        "gltfIndex": 18
       },
       "ver": "1.0.14",
       "imported": true,
@@ -3484,7 +3449,7 @@
       "id": "b5090",
       "name": "ENG_MAT_grass_dry.material",
       "userData": {
-        "gltfIndex": 17
+        "gltfIndex": 19
       },
       "ver": "1.0.14",
       "imported": true,
@@ -3500,7 +3465,7 @@
       "id": "6330d",
       "name": "ENG_MAT_grass_pale.material",
       "userData": {
-        "gltfIndex": 18
+        "gltfIndex": 20
       },
       "ver": "1.0.14",
       "imported": true,
@@ -3516,22 +3481,6 @@
       "id": "37a69",
       "name": "ENG_MAT_flower_rose.material",
       "userData": {
-        "gltfIndex": 19
-      },
-      "ver": "1.0.14",
-      "imported": true,
-      "files": [
-        ".json"
-      ],
-      "subMetas": {}
-    },
-    "4ab4a": {
-      "importer": "gltf-material",
-      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@4ab4a",
-      "displayName": "",
-      "id": "4ab4a",
-      "name": "ENG_MAT_wood_old.material",
-      "userData": {
         "gltfIndex": 21
       },
       "ver": "1.0.14",
@@ -3541,28 +3490,12 @@
       ],
       "subMetas": {}
     },
-    "c5aa5": {
+    "54e50": {
       "importer": "gltf-material",
-      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@c5aa5",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@54e50",
       "displayName": "",
-      "id": "c5aa5",
-      "name": "ENG_MAT_bench_wood.material",
-      "userData": {
-        "gltfIndex": 22
-      },
-      "ver": "1.0.14",
-      "imported": true,
-      "files": [
-        ".json"
-      ],
-      "subMetas": {}
-    },
-    "054b8": {
-      "importer": "gltf-material",
-      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@054b8",
-      "displayName": "",
-      "id": "054b8",
-      "name": "ENG_MAT_bench_metal.material",
+      "id": "54e50",
+      "name": "ENG_MAT_ceramic_teal.material",
       "userData": {
         "gltfIndex": 23
       },
@@ -3573,14 +3506,30 @@
       ],
       "subMetas": {}
     },
-    "ab52e": {
+    "d0dbd": {
       "importer": "gltf-material",
-      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@ab52e",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@d0dbd",
       "displayName": "",
-      "id": "ab52e",
-      "name": "ENG_MAT_paper_kraft.material",
+      "id": "d0dbd",
+      "name": "ENG_MAT_flag_orange.material",
       "userData": {
-        "gltfIndex": 24
+        "gltfIndex": 25
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "b9a4d": {
+      "importer": "gltf-material",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@b9a4d",
+      "displayName": "",
+      "id": "b9a4d",
+      "name": "ENG_MAT_flag_cream.material",
+      "userData": {
+        "gltfIndex": 26
       },
       "ver": "1.0.14",
       "imported": true,
@@ -3596,7 +3545,71 @@
       "id": "57d42",
       "name": "ENG_MAT_metal_brass.material",
       "userData": {
-        "gltfIndex": 25
+        "gltfIndex": 27
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "4ab4a": {
+      "importer": "gltf-material",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@4ab4a",
+      "displayName": "",
+      "id": "4ab4a",
+      "name": "ENG_MAT_wood_old.material",
+      "userData": {
+        "gltfIndex": 28
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "c5aa5": {
+      "importer": "gltf-material",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@c5aa5",
+      "displayName": "",
+      "id": "c5aa5",
+      "name": "ENG_MAT_bench_wood.material",
+      "userData": {
+        "gltfIndex": 29
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "054b8": {
+      "importer": "gltf-material",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@054b8",
+      "displayName": "",
+      "id": "054b8",
+      "name": "ENG_MAT_bench_metal.material",
+      "userData": {
+        "gltfIndex": 30
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "ab52e": {
+      "importer": "gltf-material",
+      "uuid": "c02a69cf-19af-40d7-940d-23fa794c2850@ab52e",
+      "displayName": "",
+      "id": "ab52e",
+      "name": "ENG_MAT_paper_kraft.material",
+      "userData": {
+        "gltfIndex": 31
       },
       "ver": "1.0.14",
       "imported": true,
@@ -3612,7 +3625,7 @@
       "id": "f2a6c",
       "name": "ENG_MAT_paper_cream.material",
       "userData": {
-        "gltfIndex": 26
+        "gltfIndex": 32
       },
       "ver": "1.0.14",
       "imported": true,
@@ -3628,7 +3641,7 @@
       "id": "2df4c",
       "name": "ENG_MAT_metal_rust.material",
       "userData": {
-        "gltfIndex": 27
+        "gltfIndex": 33
       },
       "ver": "1.0.14",
       "imported": true,
@@ -3644,7 +3657,7 @@
       "id": "8f784",
       "name": "ENG_MAT_metal_iron.material",
       "userData": {
-        "gltfIndex": 28
+        "gltfIndex": 34
       },
       "ver": "1.0.14",
       "imported": true,
@@ -3671,7 +3684,12 @@
     }
   },
   "userData": {
-    "imageMetas": [],
+    "imageMetas": [
+      {
+        "name": "tex_leaf_atlas",
+        "uri": "c02a69cf-19af-40d7-940d-23fa794c2850@db3ce"
+      }
+    ],
     "lods": {
       "enable": false,
       "hasBuiltinLOD": false,
@@ -3720,6 +3738,9 @@
         "c02a69cf-19af-40d7-940d-23fa794c2850@9e8ee",
         "c02a69cf-19af-40d7-940d-23fa794c2850@44a28",
         "c02a69cf-19af-40d7-940d-23fa794c2850@e4372",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@eb92a",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@b4ef2",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@4a910",
         "c02a69cf-19af-40d7-940d-23fa794c2850@9a0f6",
         "c02a69cf-19af-40d7-940d-23fa794c2850@65333",
         "c02a69cf-19af-40d7-940d-23fa794c2850@090a5",
@@ -3732,7 +3753,6 @@
         "c02a69cf-19af-40d7-940d-23fa794c2850@84a9b",
         "c02a69cf-19af-40d7-940d-23fa794c2850@a1d55",
         "c02a69cf-19af-40d7-940d-23fa794c2850@499b0",
-        "c02a69cf-19af-40d7-940d-23fa794c2850@d142d",
         "c02a69cf-19af-40d7-940d-23fa794c2850@ac42d",
         "c02a69cf-19af-40d7-940d-23fa794c2850@00fe0",
         "c02a69cf-19af-40d7-940d-23fa794c2850@90d9c",
@@ -3819,23 +3839,14 @@
         "c02a69cf-19af-40d7-940d-23fa794c2850@6bc02",
         "c02a69cf-19af-40d7-940d-23fa794c2850@361b2",
         "c02a69cf-19af-40d7-940d-23fa794c2850@7b0c9",
-        "c02a69cf-19af-40d7-940d-23fa794c2850@70620",
         "c02a69cf-19af-40d7-940d-23fa794c2850@98bd1",
-        "c02a69cf-19af-40d7-940d-23fa794c2850@609af",
         "c02a69cf-19af-40d7-940d-23fa794c2850@600bd",
         "c02a69cf-19af-40d7-940d-23fa794c2850@f70ff",
-        "c02a69cf-19af-40d7-940d-23fa794c2850@69458",
         "c02a69cf-19af-40d7-940d-23fa794c2850@cd9f3",
         "c02a69cf-19af-40d7-940d-23fa794c2850@2945c",
-        "c02a69cf-19af-40d7-940d-23fa794c2850@700f7",
         "c02a69cf-19af-40d7-940d-23fa794c2850@27223",
         "c02a69cf-19af-40d7-940d-23fa794c2850@180e1",
         "c02a69cf-19af-40d7-940d-23fa794c2850@d46a5",
-        "c02a69cf-19af-40d7-940d-23fa794c2850@00d38",
-        "c02a69cf-19af-40d7-940d-23fa794c2850@b2bcb",
-        "c02a69cf-19af-40d7-940d-23fa794c2850@c9e59",
-        "c02a69cf-19af-40d7-940d-23fa794c2850@a9e6f",
-        "c02a69cf-19af-40d7-940d-23fa794c2850@3d7d6",
         "c02a69cf-19af-40d7-940d-23fa794c2850@b99b1",
         "c02a69cf-19af-40d7-940d-23fa794c2850@8117e",
         "c02a69cf-19af-40d7-940d-23fa794c2850@2dd6d",
@@ -3870,7 +3881,9 @@
         "c02a69cf-19af-40d7-940d-23fa794c2850@47abd"
       ],
       "skeletons": [],
-      "textures": [],
+      "textures": [
+        "c02a69cf-19af-40d7-940d-23fa794c2850@e39f7"
+      ],
       "materials": [
         "c02a69cf-19af-40d7-940d-23fa794c2850@ec3e4",
         "c02a69cf-19af-40d7-940d-23fa794c2850@360e7",
@@ -3879,25 +3892,31 @@
         "c02a69cf-19af-40d7-940d-23fa794c2850@c90be",
         "c02a69cf-19af-40d7-940d-23fa794c2850@dbbd8",
         "c02a69cf-19af-40d7-940d-23fa794c2850@787c3",
-        "c02a69cf-19af-40d7-940d-23fa794c2850@cc40c",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@0eea9",
         "c02a69cf-19af-40d7-940d-23fa794c2850@b1c91",
         "c02a69cf-19af-40d7-940d-23fa794c2850@26ccb",
         "c02a69cf-19af-40d7-940d-23fa794c2850@0387c",
         "c02a69cf-19af-40d7-940d-23fa794c2850@4b5b5",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@cc40c",
         "c02a69cf-19af-40d7-940d-23fa794c2850@540dd",
         "c02a69cf-19af-40d7-940d-23fa794c2850@a8148",
         "c02a69cf-19af-40d7-940d-23fa794c2850@293c2",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@fec84",
         "c02a69cf-19af-40d7-940d-23fa794c2850@1db9e",
         "c02a69cf-19af-40d7-940d-23fa794c2850@bb96a",
         "c02a69cf-19af-40d7-940d-23fa794c2850@b5090",
         "c02a69cf-19af-40d7-940d-23fa794c2850@6330d",
         "c02a69cf-19af-40d7-940d-23fa794c2850@37a69",
         "c02a69cf-19af-40d7-940d-23fa794c2850@54852",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@54e50",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@48863",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@d0dbd",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@b9a4d",
+        "c02a69cf-19af-40d7-940d-23fa794c2850@57d42",
         "c02a69cf-19af-40d7-940d-23fa794c2850@4ab4a",
         "c02a69cf-19af-40d7-940d-23fa794c2850@c5aa5",
         "c02a69cf-19af-40d7-940d-23fa794c2850@054b8",
         "c02a69cf-19af-40d7-940d-23fa794c2850@ab52e",
-        "c02a69cf-19af-40d7-940d-23fa794c2850@57d42",
         "c02a69cf-19af-40d7-940d-23fa794c2850@f2a6c",
         "c02a69cf-19af-40d7-940d-23fa794c2850@2df4c",
         "c02a69cf-19af-40d7-940d-23fa794c2850@8f784",

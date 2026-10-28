@@ -229,8 +229,8 @@ def _add_leaf_sprig(bark_bm, leaf_bm, anchor, direction, scale, rng,
         return
     dark = [2, 3, 2, 1]
     for t, cr, bright_count, dark_count, leaf_lo, leaf_hi in (
-            (0.17, 0.30, 58, 38, 0.165, 0.215),
-            (0.30, 0.190, 29, 19, 0.145, 0.185)):
+            (0.17, 0.30, 46, 30, 0.240, 0.310),
+            (0.30, 0.190, 23, 15, 0.210, 0.270)):
         center = anchor + d0 * (t * scale) + Vector(
             (rng.uniform(-0.045, 0.045), rng.uniform(-0.045, 0.045),
              rng.uniform(-0.035, 0.035))) * scale
@@ -297,17 +297,14 @@ def create_tree(collection, origin=(0, 0, 0), rot=0.0, prefix="ENV006", seed=202
     sprig_counts = {"volume": 0, "tip": 0, "tip_secondary": 0,
                     "anchor": 0, "outer_silhouette": 0, "c_anchor": 0}
     bark_mats = [cl.mat_wood_dark(), cl.mat_wood()]
-    leaf_mats = [cl.mat_leaf_ochre(), cl.mat_leaf_amber(),
-                 cl.mat_leaf_olive(), cl.mat_leaf_deep(), cl.mat_leaf_gold()]
+    leaf_mats = [cl.mat_leaf_atlas()]
     # The inner core must read as shadow inside the canopy. leaf_deep (#746337)
     # is warm enough that smooth-shaded lobes read as bald tan patches, so the
     # core uses the desaturated far tone and is kept small enough for the
     # coating cards to cover it.
-    mass_mats = [cl.mat_leaf_mass(), cl.mat_leaf_far()]
 
     bark_bm = bmesh.new()
     leaf_bm = bmesh.new()
-    mass_bm = bmesh.new()
     trunk_pts = [(0.0, 0.0, 0.0), (0.025, 0.012, 0.55),
                  (0.065, 0.030, 1.15), (0.100, 0.022, 1.72),
                  (0.110, 0.015, 2.06)]
@@ -427,21 +424,66 @@ def create_tree(collection, origin=(0, 0, 0), rot=0.0, prefix="ENV006", seed=202
                         origin="anchor", records=cluster_records)
         sprig_counts["anchor"] += 1
 
-    # Deep interior mass only: it closes see-through gaps but never reaches
-    # the silhouette, so it cannot read as a ball of foliage.
-    for (mx, my, mz, mr) in ((0.08, 0.04, 3.52, 0.50), (-0.36, 0.26, 3.70, 0.44),
-                             (0.34, -0.30, 3.80, 0.46), (0.02, 0.38, 3.98, 0.42),
-                             (-0.22, -0.18, 3.90, 0.44)):
-        cl.add_mass_lobe(mass_bm, (mx, my, mz), mr * 0.82, rng, flatten=0.72,
-                         subdiv=2, displace=0.18, mat_index=1)
-        # Coat the inner core in leaf cards so it reads as deep foliage rather
-        # than a smooth sphere when a gap opens.
-        cl.add_leaf_cluster(leaf_bm, (mx, my, mz), mr * 1.12, 90, rng,
-                            [2, 3, 2, 1, 2], leaf_size=rng.uniform(0.12, 0.16),
-                            flatten=0.74, shell_inner=0.82, z_min=-0.70)
-        cluster_records.append({"origin": "mass", "kind": "mass_coat",
-                                "center": (mx, my, mz), "base": (mx, my, mz),
-                                "radius": mr * 1.12, "leaves": 90})
+    # n5c: there is no solid interior core any more. The smooth mass lobes were
+    # exactly the "green blob" the user saw whenever leaf coverage dropped, so
+    # the see-through gaps are now closed with leaf clusters instead: anything
+    # the player can see is made of leaves, not a hidden sphere.
+    for _ in range(52):
+        u = rng.uniform(-1.0, 1.0)
+        theta = rng.uniform(0.0, math.tau)
+        rr = 0.55 * math.sqrt(max(0.0, 1.0 - u * u))
+        pos = (rr * 1.30 * math.cos(theta), rr * 1.30 * math.sin(theta),
+               3.86 + u * 0.58)
+        cl.add_leaf_cluster(leaf_bm, pos, rng.uniform(0.32, 0.48), 14, rng,
+                            [3, 1, 3, 2], leaf_size=rng.uniform(0.18, 0.25),
+                            flatten=0.70, shell_inner=0.22, z_min=-0.72)
+        cluster_records.append({"origin": "inner", "kind": "inner_shell",
+                                "center": pos, "base": pos,
+                                "radius": 0.40, "leaves": 10})
+
+    # South-side skirt: the Q03 behind-tree test exposes the crown's lower rim
+    # where the character peeks between leaf clusters. Close that band with a
+    # dedicated ring biased toward the camera side (+Y in Blender).
+    for i in range(20):
+        a = math.radians(-115.0 + i * 11.5)
+        rr = rng.uniform(0.95, 1.35)
+        pos = (rr * math.cos(a), rr * math.sin(a) + 0.25, rng.uniform(2.35, 3.25))
+        cl.add_leaf_cluster(leaf_bm, pos, rng.uniform(0.30, 0.44), 12, rng,
+                            [3, 1, 2, 3], leaf_size=rng.uniform(0.17, 0.24),
+                            flatten=0.62, shell_inner=0.18, z_min=-0.80)
+        cluster_records.append({"origin": "south_skirt", "kind": "south_skirt",
+                                "center": pos, "base": pos,
+                                "radius": 0.38, "leaves": 12})
+
+    # Low bough: the Q03 behind-tree view sees past the bare trunk below the
+    # crown, and a real tree of this size carries foliage down to chest height
+    # on its shaded side. This also fixes the top-heavy "mushroom" read.
+    for i in range(16):
+        a = math.radians(150.0 + i * 9.0)
+        rr = rng.uniform(0.85, 1.30)
+        z = rng.uniform(1.75, 2.55)
+        pos = (rr * math.cos(a), rr * math.sin(a) + 0.15, z)
+        cl.add_leaf_cluster(leaf_bm, pos, rng.uniform(0.28, 0.42), 12, rng,
+                            [1, 3, 2, 1], leaf_size=rng.uniform(0.19, 0.26),
+                            flatten=0.58, shell_inner=0.16, z_min=-0.85)
+        cluster_records.append({"origin": "low_bough", "kind": "low_bough",
+                                "center": pos, "base": pos,
+                                "radius": 0.36, "leaves": 12})
+
+    # Inner curtain: the behind-tree view needs the trunk-side band closed
+    # without a solid core (the core was the complaint we just removed). Dense
+    # overlapping cards read as foliage at every angle the camera can reach.
+    for i in range(40):
+        a = math.radians(i * 9.0 + rng.uniform(-4.0, 4.0))
+        rr = rng.uniform(0.35, 0.85)
+        z = rng.uniform(1.95, 3.35)
+        pos = (rr * math.cos(a), rr * math.sin(a), z)
+        cl.add_leaf_cluster(leaf_bm, pos, rng.uniform(0.30, 0.46), 20, rng,
+                            [3, 1, 3, 2, 1], leaf_size=rng.uniform(0.24, 0.32),
+                            flatten=0.55, shell_inner=0.10, z_min=-0.90)
+        cluster_records.append({"origin": "inner_curtain", "kind": "inner_curtain",
+                                "center": pos, "base": pos,
+                                "radius": 0.40, "leaves": 20})
 
     # A few outer silhouette sprigs, still attached by short twigs.
     for (x, y, z, sc) in ((1.85, 0.25, 4.30, 1.22), (-1.75, -0.15, 4.45, 1.18),
@@ -479,7 +521,7 @@ def create_tree(collection, origin=(0, 0, 0), rot=0.0, prefix="ENV006", seed=202
             cl.add_leaf_cluster(leaf_bm, p, cr,
                                 cnt, rng,
                                 _leaf_palette_for(p.z, 1.4, rng, leaf_mats),
-                                leaf_size=rng.uniform(0.085, 0.125),
+                                leaf_size=rng.uniform(0.170, 0.240),
                                 flatten=0.62, shell_inner=0.30, z_min=-0.70)
             cluster_records.append({"origin": "wispy", "kind": "wispy_leaf",
                                     "center": tuple(p), "base": tuple(anchor),
@@ -530,6 +572,34 @@ def create_tree(collection, origin=(0, 0, 0), rot=0.0, prefix="ENV006", seed=202
             "cluster_records": cluster_records,
         })
 
+    if cl.STYLE == "c":
+        # Cartoon crown: a dome of overlapping lobes instead of 84 small tip
+        # clusters. Blobbing every cluster leaves the branch skeleton visible
+        # (the first pass looked like a dead tree), so the crown has to be built
+        # as volume.
+        # 2026-10-27: the first dome was seven lobes of r=1.0-1.55 at fixed
+        # offsets. Seven spheres of that size cannot overlap enough to read as
+        # one canopy, so each one kept a hard silhouette and the crown looked
+        # like a pile of orange boulders. Eleven smaller, deliberately
+        # interpenetrating lobes (squashed to 0.72) close the volume and the
+        # outline becomes a wide lozenge, which is what the reference shows.
+        crown_center = (0.0, 0.0, 4.62)
+        crown_lobes = [(0.0, 0.0, 0.16, 1.24)]
+        for i in range(6):
+            a = math.tau * i / 6.0 + 0.25
+            crown_lobes.append((math.cos(a) * 1.16, math.sin(a) * 1.16,
+                                -0.28, 1.02))
+        for i in range(4):
+            a = math.tau * i / 4.0 + 0.9
+            crown_lobes.append((math.cos(a) * 0.64, math.sin(a) * 0.64,
+                                0.52, 0.96))
+        for (dx, dy, dz, lr) in crown_lobes:
+            cl.add_mass_lobe(
+                leaf_bm,
+                (crown_center[0] + dx, crown_center[1] + dy,
+                 crown_center[2] + dz),
+                lr, crng, flatten=0.72, subdiv=1, displace=0.13, mat_index=0)
+
     bark = cl.finish_mesh(prefix + "_bark", bark_bm, bark_mats, collection)
     bpy.ops.object.select_all(action="DESELECT")
     bark.select_set(True)
@@ -537,23 +607,17 @@ def create_tree(collection, origin=(0, 0, 0), rot=0.0, prefix="ENV006", seed=202
     bpy.ops.object.shade_smooth()
     bark.select_set(False)
 
-    mass = cl.finish_mesh(prefix + "_crown_mass", mass_bm, mass_mats, collection)
-    bpy.ops.object.select_all(action="DESELECT")
-    mass.select_set(True)
-    bpy.context.view_layer.objects.active = mass
-    bpy.ops.object.shade_smooth()
-    mass.select_set(False)
     canopy = cl.finish_mesh(prefix + "_canopy", leaf_bm, leaf_mats, collection)
-    for obj in (canopy, mass):
+    for obj in (canopy,):
         obj["occlusion_group"] = "OCC_tree_main"
         obj["asset_id"] = "ENV006"
         cl.set_instance(obj, origin, rot)
-    for obj in (bark, canopy, mass):
+    for obj in (bark, canopy):
         obj.scale = (0.94, 0.94, 0.94)
     bark["collision"] = "circle radius 0.36 at trunk base"
-    bark["canopy_occlusion"] = "OCC_tree_main (hide canopy + crown_mass only)"
+    bark["canopy_occlusion"] = "OCC_tree_main (hide canopy only; no solid core)"
     print("ENV006 sprig_tree tips=%d anchors=%d" % (len(tips), len(anchors)))
-    return [bark, canopy, mass]
+    return [bark, canopy]
 
 
 def create_ring_planter(collection, origin=(0, 0, 0), rot=0.0, prefix="ENV007"):

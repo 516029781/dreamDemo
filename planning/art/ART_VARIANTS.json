@@ -1,0 +1,180 @@
+{
+  "_note": "Look-dev bench for n5, now derived from measurements instead of guesses. Baselines measured with tools/art/image_metrics.js on the reference frame and on game_finalN5h_formal_no_ui.png (see delivery/performance/ref_vs_current_metrics.json).",
+  "_how_numbers_were_derived": {
+    "leaf_scale": "Edge density is proportional to 1 / leaf size once coverage is full (perimeter grows k, area grows k^2, so density scales 1/k). Current crown edgeDensity 34.6, reference 13.9 -> k = 34.6 / target. A targets 18 -> k 1.9; B 24 -> 1.45; C 12 -> 2.9.",
+    "leaf_count_scale": "Set so coverage stays >= 1.5x after scaling: count = 1.5 / k^2, clamped. Prevents scaling leaves into a sparse crown.",
+    "grass_width": "Same 1/k relation on the grass region: 31.1 -> 18 needs 1.7x; A 1.9, B 1.45, C 2.4.",
+    "paving": "Joints per scanline 30 (ours) vs 21 (reference) means our slabs are 1.4x too narrow. Unifying every module to the plaza language enlarges the average slab and removes the three mutually inconsistent scales.",
+    "colour": "Crown median luminance 56 vs 84 (-28/255) and mean saturation 54.1 vs 36.7 (+17). Grass mean saturation 30.9 vs 42.8 (-12). Paving joint contrast 41.3 vs 29.5 (+12)."
+  },
+  "_measured": {
+    "reference": {
+      "tree": {
+        "edgeDensity": 13.9,
+        "lumP50": 84,
+        "satMean": 36.7,
+        "gapShare": 10.9
+      },
+      "grass": {
+        "edgeDensity": 16.31,
+        "lumP50": 112,
+        "satMean": 42.8
+      },
+      "paving": {
+        "edgeDensity": 17.14,
+        "lumP50": 130,
+        "jointWidthPx": 3,
+        "jointContrast": 29.5,
+        "jointsPerRow": 21
+      }
+    },
+    "current": {
+      "tree": {
+        "edgeDensity": 34.62,
+        "lumP50": 56,
+        "satMean": 54.1,
+        "gapShare": 11.7
+      },
+      "grass": {
+        "edgeDensity": 31.11,
+        "lumP50": 145,
+        "satMean": 30.9
+      },
+      "paving": {
+        "edgeDensity": 35.15,
+        "lumP50": 138,
+        "jointWidthPx": 2,
+        "jointContrast": 41.3,
+        "jointsPerRow": 30
+      }
+    }
+  },
+  "variants": {
+    "A": {
+      "label": "复刻档 · 按参考实测反推，目标所有指标进参考 ±30%",
+      "intent": "Every knob is the number the measurement asked for: leaf 2.0x / count 0.4x to halve edge density, grass 1.9x wider, all paving unified, joints lightened. This is the 'answer' variant.",
+      "palette": {
+        "leaf_olive": "#8A7458",
+        "leaf_deep": "#7A5A44",
+        "leaf_ochre": "#B5885F",
+        "leaf_amber": "#A87B55",
+        "leaf_gold": "#D8C4A4",
+        "leaf_mass": "#6B5540",
+        "leaf_far": "#8E7A60",
+        "leaf_mid_haze": "#9E8A6C",
+        "leaf_haze": "#BCA783",
+        "grass_dry": "#CC9466",
+        "grass_pale": "#E0B583",
+        "mortar": "#9A8570",
+        "stone_base": "#9E8C78",
+        "stone_light": "#B4A08A"
+      },
+      "leaf_scale": 2.0,
+      "leaf_count_scale": 0.4,
+      "grass_keep": 1.0,
+      "grass_ring_keep": 1.0,
+      "grass_width": 1.9,
+      "grass_height": 1.1,
+      "grass_count_scale": 0.72,
+      "paving_joint_scale": 0.8,
+      "paving_unify": 1,
+      "lights": {
+        "ambient": 13200,
+        "sky": "#E6D8C0",
+        "fill_color": "#C8CFC6",
+        "fill_illum": 9000,
+        "key_illum": 188000,
+        "fog": [
+          226,
+          200,
+          168
+        ],
+        "fog_start": 32
+      }
+    },
+    "B": {
+      "label": "克制档 · 只做一半，保留一点现有的细密感",
+      "intent": "Half the change: leaf 1.45x / count 0.72x, grass 1.45x wider, paving unified but joints still visible. Tests whether the full step is necessary.",
+      "palette": {
+        "leaf_olive": "#7A664E",
+        "leaf_deep": "#6B4C38",
+        "leaf_ochre": "#AE8259",
+        "leaf_amber": "#A07450",
+        "leaf_gold": "#CDB795",
+        "leaf_mass": "#5F4B38",
+        "leaf_far": "#847056",
+        "leaf_mid_haze": "#94805F",
+        "leaf_haze": "#B29D79",
+        "grass_dry": "#C99A70",
+        "grass_pale": "#DDB98C",
+        "mortar": "#94806D",
+        "stone_base": "#A08E7A",
+        "stone_light": "#B6A28C"
+      },
+      "leaf_scale": 1.45,
+      "leaf_count_scale": 0.72,
+      "grass_keep": 1.0,
+      "grass_ring_keep": 1.0,
+      "grass_width": 1.45,
+      "grass_height": 1.05,
+      "grass_count_scale": 0.7,
+      "paving_joint_scale": 0.9,
+      "paving_unify": 1,
+      "lights": {
+        "ambient": 12500,
+        "sky": "#DFD5C4",
+        "fill_color": "#C4CBC4",
+        "fill_illum": 9800,
+        "key_illum": 188000,
+        "fog": [
+          220,
+          196,
+          166
+        ],
+        "fog_start": 30
+      }
+    },
+    "C": {
+      "label": "强化档 · 越过参考再走一步，形体最整",
+      "intent": "Push past the reference: leaf 2.9x / count 0.22x, grass 2.4x wider, widest hand-cut joints. Most graphic, least literal.",
+      "palette": {
+        "leaf_olive": "#967E62",
+        "leaf_deep": "#84624A",
+        "leaf_ochre": "#C08A55",
+        "leaf_amber": "#B0805A",
+        "leaf_gold": "#E0CCAC",
+        "leaf_mass": "#745C46",
+        "leaf_far": "#9A8568",
+        "leaf_mid_haze": "#AA9576",
+        "leaf_haze": "#C6B18C",
+        "grass_dry": "#D09055",
+        "grass_pale": "#E6BC88",
+        "mortar": "#A08C78",
+        "stone_base": "#A4927E",
+        "stone_light": "#BAA690"
+      },
+      "leaf_scale": 2.9,
+      "leaf_count_scale": 0.22,
+      "grass_keep": 1.0,
+      "grass_ring_keep": 1.0,
+      "grass_width": 2.4,
+      "grass_height": 1.15,
+      "grass_count_scale": 0.6,
+      "paving_joint_scale": 1.0,
+      "paving_unify": 1,
+      "lights": {
+        "ambient": 14000,
+        "sky": "#EEDFC6",
+        "fill_color": "#CDD2C8",
+        "fill_illum": 8600,
+        "key_illum": 176000,
+        "fog": [
+          232,
+          208,
+          176
+        ],
+        "fog_start": 36
+      }
+    }
+  }
+}

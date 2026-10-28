@@ -23,7 +23,7 @@ def sha(path):
 
 def main():
     checker = load("check_bindings", ROOT / "tools/art_gate/check_bindings.py")
-    shots = json.loads((T3 / "game_finalN5_shots.json").read_text(encoding="utf-8-sig"))
+    shots = json.loads((T3 / "game_finalN5h_shots.json").read_text(encoding="utf-8-sig"))
     pin_path = ROOT / "delivery/next_cycle/n5/performance/formal_build.json"
     if not pin_path.is_file():
         raise SystemExit("no formal build pin; run tools/n5_build.py before binding")

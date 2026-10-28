@@ -14,7 +14,11 @@ param(
 )
 $ErrorActionPreference = "Continue"
 $Root = Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
-$Blender = Join-Path $Root ".tools\blender\blender-4.5.15-windows-x64\blender.exe"
+$Blender = if ($env:P1_BLENDER_EXE) {
+    $env:P1_BLENDER_EXE
+} else {
+    Join-Path $env:USERPROFILE ".cache\blender\5.2.3\blender-5.2.3-windows-x64\blender.exe"
+}
 $Python = "C:\Users\tt\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe"
 $LogDir = Join-Path $PSScriptRoot "logs"
 $Summary = Join-Path $LogDir "courtyard_build_summary.log"

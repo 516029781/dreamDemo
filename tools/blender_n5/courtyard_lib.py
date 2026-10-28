@@ -25,6 +25,7 @@ from mathutils import Euler, Matrix, Vector
 
 TOOLS_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT = os.path.dirname(os.path.dirname(TOOLS_DIR))
+ROOT = PROJECT
 N3 = os.path.join(PROJECT, "art", "candidates", "candidate_n5")
 SRC_ENV = os.path.join(N3, "source", "environment")
 SRC_PROP = os.path.join(N3, "source", "props")
@@ -39,31 +40,31 @@ PREVIEW_LAYOUT = os.path.join(N3, "previews", "layout")
 
 # P1_ART_STYLE_GUIDE.md 3.1 starter palette (sRGB hex).
 PALETTE = {
-    "stone_base": "#B0A48D",
-    "stone_light": "#C4B9A2",
-    "stone_dark": "#877C67",
-    "mortar": "#5E5445",
-    "soil": "#5C4936",
+    "stone_base": "#A2907A",
+    "stone_light": "#B7A488",
+    "stone_dark": "#6B5B4A",
+    "mortar": "#75685A",
+    "soil": "#4C3A2B",
     "wood": "#866C50",
     "wood_dark": "#5A4634",
     "wood_pale": "#A58C6B",
     "metal": "#494744",
     "metal_rust": "#7A5540",
     "metal_brass": "#A9834B",
-    "leaf_ochre": "#D3A24C",
-    "leaf_amber": "#BE7A3A",
-    "leaf_olive": "#7D8C4E",
-    "leaf_deep": "#746337",
-    "leaf_gold": "#E0C068",
-    "leaf_mass": "#4B4328",
-    "leaf_far": "#68705E",
+    "leaf_ochre": "#B8702F",
+    "leaf_amber": "#9A5326",
+    "leaf_olive": "#5F5230",
+    "leaf_deep": "#5A3221",
+    "leaf_gold": "#D89B54",
+    "leaf_mass": "#402C1F",
+    "leaf_far": "#6B5B48",
     # n5 aerial perspective. n4 graded distance DARKER than the near hedge,
     # which inverted depth and produced the "dark band" at the top of frame.
     # Farther layers must move toward the sky value instead.
-    "leaf_mid_haze": "#8A8F74",
-    "leaf_haze": "#A3A78F",
-    "grass_dry": "#BEAA72",
-    "grass_pale": "#D6C48C",
+    "leaf_mid_haze": "#7E6B4E",
+    "leaf_haze": "#A08E6C",
+    "grass_dry": "#CDB784",
+    "grass_pale": "#E3CFA0",
     "paper_cream": "#F3F0E6",
     "paper_kraft": "#D8C39D",
     "ink": "#2E3234",
@@ -74,6 +75,52 @@ PALETTE = {
     "flower_rose": "#D98F9B",
     "flower_cream": "#EFE2C6",
 }
+
+
+def _apply_palette_override():
+    """Overlay colour tokens from N5_PALETTE so one build can render a variant.
+
+    Value format: "leaf_olive=#6E5A44;leaf_deep=#5A4438". Env vars are used
+    instead of a JSON file because Blender's bundled Python cannot open paths
+    containing the CJK characters in this project root (Errno 22).
+    """
+    spec = os.environ.get("N5_PALETTE", "").strip()
+    if not spec:
+        return []
+    applied = []
+    for pair in spec.split(";"):
+        pair = pair.strip()
+        if not pair or "=" not in pair:
+            continue
+        key, value = pair.split("=", 1)
+        key, value = key.strip(), value.strip()
+        if key in PALETTE and value.startswith("#"):
+            applied.append("%s %s->%s" % (key, PALETTE[key], value))
+            PALETTE[key] = value
+    return applied
+
+
+PALETTE_OVERRIDES = _apply_palette_override()
+ART_VARIANT = os.environ.get("N5_ART_VARIANT", "")
+# Look-dev knobs: leaf cards are the dominant geometry, so one scale factor on
+# the shared cluster builder moves tree crowns, hedge skin and shrub masses
+# together instead of editing twenty call sites.
+LEAF_SCALE = float(os.environ.get("N5_LEAF_SCALE", "1") or 1)
+LEAF_COUNT_SCALE = float(os.environ.get("N5_LEAF_COUNT_SCALE", "1") or 1)
+# Shape knobs, separate from size/density: the silhouette is a different defect
+# from "too small / too many" and has to be judged on its own build.
+LEAF_SHAPE = os.environ.get("N5_LEAF_SHAPE", "diamond").strip().lower()
+LEAF_FOLD = float(os.environ.get("N5_LEAF_FOLD", "0.11") or 0.11)
+# Whole-scene style switch. o = the shipped procedural look, c = low-poly
+# cartoon (solid blobs, flat colour, no cards), r = textured (alpha atlas on
+# the cards). It lives here rather than in build_map001 because every foliage
+# generator funnels through add_leaf_cluster.
+STYLE = os.environ.get("N5_STYLE", "o").strip().lower()
+# Low-poly only needs a fraction of the clusters: one blob replaces a whole
+# cluster of cards, so the blob count is what sets the triangle budget.
+BLOB_KEEP = float(os.environ.get("N5_BLOB_KEEP", "0.30") or 0.30)
+BLOB_RADIUS_SCALE = float(os.environ.get("N5_BLOB_RADIUS_SCALE", "1.55") or 1.55)
+BLOB_SUBDIV = int(os.environ.get("N5_BLOB_SUBDIV", "1") or 1)
 
 FONT_PATH_CANDIDATES = [
     os.path.join(os.environ.get("WINDIR", r"C:\Windows"), "Fonts",
@@ -276,6 +323,44 @@ def mat_metal_brass():
         "MAT_metal_brass", PALETTE["metal_brass"], roughness=0.34, metallic=0.80,
         noise_scale=6.0, color_variation=0.07, roughness_variation=0.06,
         bump_strength=0.05)
+
+
+def mat_leaf_atlas():
+    """Single textured leaf material: the card UVs index a procedural atlas
+    (alpha shape + tip-to-base gradient). Engine keeps the embedded texture."""
+    name = "MAT_leaf_atlas"
+    mat = bpy.data.materials.get(name)
+    if mat is None:
+        mat = bpy.data.materials.new(name)
+    mat.use_nodes = True
+    nt = mat.node_tree
+    bsdf = nt.nodes.get("Principled BSDF")
+    tex_path = os.environ.get(
+        "N5_LEAF_ATLAS_PATH",
+        os.path.join(ROOT, "demo_n5/assets/resources/textures/tex_leaf_atlas.png"))
+    # Do not reuse a same-named image appended from an asset .blend. Blender's
+    # check_existing matches datablocks by source path/basename and can silently
+    # keep the old atlas after a candidate path override.
+    img = bpy.data.images.load(tex_path, check_existing=False)
+    tex = next((node for node in nt.nodes if node.type == "TEX_IMAGE"), None)
+    if tex is None:
+        tex = nt.nodes.new("ShaderNodeTexImage")
+    tex.name = "N5_P1_leaf_atlas"
+    tex.image = img
+    tex.interpolation = "Linear"
+    for link in list(nt.links):
+        if link.to_node == bsdf and link.to_socket.name in ("Base Color", "Alpha"):
+            nt.links.remove(link)
+    nt.links.new(tex.outputs["Color"], bsdf.inputs["Base Color"])
+    nt.links.new(tex.outputs["Alpha"], bsdf.inputs["Alpha"])
+    bsdf.inputs["Roughness"].default_value = 0.62
+    mat.blend_method = "CLIP"
+    mat.alpha_threshold = 0.5
+    mat["engine_base_color"] = (1.0, 1.0, 1.0, 1.0)
+    mat["engine_roughness"] = 0.62
+    mat["engine_texture_path"] = os.environ.get(
+        "N5_LEAF_ATLAS_ENGINE_PATH", tex_path)
+    return mat
 
 
 def mat_leaf_ochre():
@@ -585,30 +670,66 @@ def add_arc_block(bm, angle_deg, r_in, r_out, z0, z1, half_gap_deg=0.5,
     return faces
 
 
-def add_leaf(bm, center, normal, size, spin, mat_index, tilt=0.0):
-    """Folded diamond leaf, 4 triangles, real double-sided geometry."""
+def _leaf_profile(shape):
+    """Leaf silhouette as a list of (x, y) points around the centre, tip = +Y.
+
+    The default 'diamond' is the original 4-triangle card: a smooth outline with
+    no notches, which at 720p reads as a brown chip rather than a leaf. The lobed
+    profiles alternate tip/recess radii so the silhouette carries visible teeth -
+    the reference frame's foliage has deep lobes (see plan appendix D).
+    """
+    if shape == "trilobe":
+        spec = [(90, 0.55), (30, 0.28), (-30, 0.40), (-90, 0.18),
+                (-150, 0.40), (150, 0.28)]
+    elif shape == "pentalobe":
+        spec = [(90, 0.55), (54, 0.30), (18, 0.42), (-18, 0.26), (-54, 0.36),
+                (-90, 0.18), (-126, 0.36), (-162, 0.26), (162, 0.42), (126, 0.30)]
+    else:
+        return None
+    return [(math.cos(math.radians(a)) * r, math.sin(math.radians(a)) * r)
+            for a, r in spec]
+
+
+def add_leaf(bm, center, normal, size, spin, mat_index, tilt=0.0,
+             uv_cell=None, shape=None):
+    """Leaf card: lobed fan (shape dependent) or the original folded diamond.
+
+    When uv_cell is given, the card's loops are UV-mapped into that cell of the
+    4x2 leaf atlas so the engine samples an alpha shape with a gradient.
+    """
     q = Vector(normal).normalized().to_track_quat("Z", "Y")
     rot = (q.to_matrix().to_4x4()
            @ Matrix.Rotation(spin, 4, "Z")
            @ Matrix.Rotation(tilt, 4, "X"))
     m = Matrix.Translation(Vector(center)) @ rot @ Matrix.Scale(size, 4)
-    local = [
-        (0.0, 0.50, 0.00),    # tip
-        (0.31, 0.02, 0.03),   # right
-        (0.0, -0.50, 0.00),   # base
-        (-0.31, 0.02, 0.03),  # left
-        (0.0, 0.00, 0.11),    # raised centre
-    ]
+    profile = _leaf_profile(shape or LEAF_SHAPE)
+    if profile is None:
+        local = [
+            (0.0, 0.50, 0.00),    # tip
+            (0.31, 0.02, 0.03),   # right
+            (0.0, -0.50, 0.00),   # base
+            (-0.31, 0.02, 0.03),  # left
+            (0.0, 0.00, LEAF_FOLD),  # raised centre
+        ]
+        faces_idx = [(0, 1, 4), (1, 2, 4), (2, 3, 4), (3, 0, 4)]
+    else:
+        n = len(profile)
+        local = [(x, y, 0.0) for (x, y) in profile] + [(0.0, 0.0, LEAF_FOLD)]
+        faces_idx = [(i, (i + 1) % n, n) for i in range(n)]
     vs = [bm.verts.new(m @ Vector(p)) for p in local]
-    faces = [
-        (vs[0], vs[1], vs[4]),
-        (vs[1], vs[2], vs[4]),
-        (vs[2], vs[3], vs[4]),
-        (vs[3], vs[0], vs[4]),
-    ]
-    for tri in faces:
-        f = bm.faces.new(tri)
+    for idx in faces_idx:
+        f = bm.faces.new(tuple(vs[i] for i in idx))
         f.material_index = mat_index
+    if uv_cell is not None:
+        uv = bm.loops.layers.uv.verify()
+        col = uv_cell % 4
+        row = uv_cell // 4
+        for f in {f for v in vs for f in v.link_faces}:
+            for loop in f.loops:
+                lp = m.inverted() @ loop.vert.co
+                u = (col + 0.5 + lp.x * 1.35) / 4.0
+                v = (row + 0.5 + lp.y * 0.92) / 2.0
+                loop[uv].uv = (u, v)
     return vs
 
 
@@ -617,6 +738,42 @@ def rand_unit(rng, z_min=-1.0):
         v = Vector((rng.uniform(-1, 1), rng.uniform(-1, 1), rng.uniform(z_min, 1)))
         if 0.05 < v.length <= 1.0:
             return v.normalized()
+
+
+def _add_leaf_blob(bm, center, radius, rng, mat_indices, flatten=0.78):
+    """One flat-shaded low-poly blob instead of a cluster of leaf cards.
+
+    Cartoon style: the silhouette has to read as a solid lump at 720p, and a
+    lump is 80 triangles where a card cluster is 42x7. BLOB_KEEP thins the
+    clusters out so the crown does not become a bag of beads, and the radius
+    is scaled up by roughly the cube root of that thinning to keep the volume.
+    """
+    if rng.random() > BLOB_KEEP:
+        return 0
+    r = radius * BLOB_RADIUS_SCALE
+    jitter = 0.10 if BLOB_SUBDIV > 0 else 0.0
+    res = bmesh.ops.create_icosphere(bm, subdivisions=BLOB_SUBDIV, radius=r)
+    verts = res["verts"]
+    center = Vector(center)
+    for vert in verts:
+        co = vert.co.copy()
+        n = co.normalized() if co.length else Vector((0.0, 0.0, 1.0))
+        vert.co = co * (1.0 + rng.uniform(-jitter, jitter))
+        # 2026-10-27: the blob used to be a fixed ball, so ground litter -
+        # authored as a flat 0.1-height patch of leaves - came out as a
+        # scattering of little grey rocks lying on the flagstones. The blob now
+        # honours the cluster's flatten, which keeps crowns round and makes
+        # litter read as a patch again.
+        vert.co.z *= max(0.10, flatten)
+        vert.co += center
+    mat = mat_indices[0] if isinstance(mat_indices, (list, tuple)) else mat_indices
+    faces = set()
+    for vert in verts:
+        faces.update(vert.link_faces)
+    for face in faces:
+        face.material_index = mat
+        face.smooth = False
+    return 1
 
 
 def add_leaf_cluster(bm, center, radius, count, rng, mat_indices,
@@ -630,19 +787,29 @@ def add_leaf_cluster(bm, center, radius, count, rng, mat_indices,
     density test differs from its baseline only by the removed leaves.
     """
     center = Vector(center)
+    if STYLE == "c":
+        return _add_leaf_blob(bm, center, radius, rng, mat_indices, flatten)
+    if LEAF_COUNT_SCALE != 1.0:
+        count = max(1, int(round(count * LEAF_COUNT_SCALE)))
     built = 0
     for i in range(count):
         d = rand_unit(rng, z_min=z_min)
         r = radius * rng.uniform(shell_inner, 1.0)
         pos = center + Vector((d.x * r, d.y * r, d.z * r * flatten))
         normal = Vector((d.x, d.y, d.z * 0.6 + 0.4)).normalized()
-        size = leaf_size * rng.uniform(0.72, 1.15)
+        size = leaf_size * LEAF_SCALE * rng.uniform(0.72, 1.15)
         spin = rng.uniform(0.0, math.tau)
         mat = rng.choice(mat_indices)
         tilt = rng.uniform(-0.25, 0.25)
         if keep < 1.0 and ((i * 2654435761) % 1000) / 1000.0 >= keep:
             continue
-        add_leaf(bm, pos, normal, size, spin, mat, tilt=tilt)
+        shape = None
+        if LEAF_SHAPE == "mix":
+            # 70/30 lobed vs plain: identical leaves everywhere read as a
+            # repeating stamp, so the mix keeps some cards plain.
+            shape = "trilobe" if rng.random() < 0.7 else "diamond"
+        add_leaf(bm, pos, normal, size, spin, mat, tilt=tilt,
+                 uv_cell=(i * 3 + int(spin * 7)) % 8, shape=shape)
         built += 1
     return built
 
@@ -739,6 +906,13 @@ def clean_mesh_object(obj, min_area=1e-9):
 
 def finish_mesh(name, bm, materials, collection=None):
     bm.normal_update()
+    # A style pass can legitimately empty a mesh (low-poly skips the hedge card
+    # skin entirely). Emitting a zero-face object would then trip the UV baker,
+    # which takes max() over an empty corner list, and would also ship an empty
+    # node in the GLB. Drop it here.
+    if not bm.faces:
+        bm.free()
+        return None
     mesh = bpy.data.meshes.new(name + "_mesh")
     bm.to_mesh(mesh)
     bm.free()
@@ -880,11 +1054,10 @@ def add_text(name, body, size=0.16, location=(0, 0, 0), rot_deg=(90, 0, 0),
 def _flat_material(mat):
     name = "ENG_" + mat.name
     existing = bpy.data.materials.get(name)
-    if existing is not None:
-        return existing
-    flat = bpy.data.materials.new(name)
+    flat = existing or bpy.data.materials.new(name)
     flat.use_nodes = True
     bsdf = flat.node_tree.nodes.get("Principled BSDF")
+    tex_rel = mat.get("engine_texture_path")
     base = tuple(mat.get("engine_base_color", (0.7, 0.7, 0.7, 1.0)))
     bsdf.inputs["Base Color"].default_value = base
     bsdf.inputs["Roughness"].default_value = float(mat.get("engine_roughness", 0.7))
@@ -893,6 +1066,23 @@ def _flat_material(mat):
     bsdf.inputs["Emission Color"].default_value = emis
     bsdf.inputs["Emission Strength"].default_value = float(
         mat.get("engine_emission_strength", 0.0))
+    if tex_rel:
+        img_path = tex_rel if os.path.isabs(tex_rel) else os.path.join(ROOT, tex_rel)
+        img = bpy.data.images.load(img_path, check_existing=False)
+        tex = next((node for node in flat.node_tree.nodes
+                    if node.type == "TEX_IMAGE"), None)
+        if tex is None:
+            tex = flat.node_tree.nodes.new("ShaderNodeTexImage")
+        tex.name = "N5_P1_engine_leaf_atlas"
+        tex.image = img
+        for link in list(flat.node_tree.links):
+            if link.to_node == bsdf and link.to_socket.name in ("Base Color", "Alpha"):
+                flat.node_tree.links.remove(link)
+        flat.node_tree.links.new(tex.outputs["Color"], bsdf.inputs["Base Color"])
+        flat.node_tree.links.new(tex.outputs["Alpha"], bsdf.inputs["Alpha"])
+        flat.blend_method = "CLIP"
+        flat.alpha_threshold = 0.5
+        flat.show_transparent_back = False
     flat.use_backface_culling = mat.use_backface_culling
     flat.diffuse_color = base
     flat["engine_fallback_for"] = mat.name
@@ -914,6 +1104,118 @@ def _text_copies(objects):
         bpy.context.view_layer.objects.active = copies[0]
         bpy.ops.object.convert(target="MESH")
     return copies
+
+
+def apply_vertex_ao(objects, ground_names=("paving", "soil"),
+                    foliage_names=("canopy", "leaf", "hedge", "moss",
+                                   "grass", "treeline", "bg_tree", "flowers"),
+                    contact_exclude=("paving", "soil", "grass", "leaf",
+                                     "hedge", "moss", "flowers", "treeline",
+                                     "bg_tree"),
+                    cell=0.35, near=0.45, far=0.95):
+    """Bake cheap, deterministic ambient occlusion into a POINT colour layer.
+
+    Grounding, not lighting: object bases darken by height, foliage faces that
+    point down read darker than sky-facing cards, and ground near solid props
+    gets a contact ring built from a 2-D occupancy grid of those props' low
+    geometry.  Values are multiplied in the engine via USE_VERTEX_COLOR, so no
+    extra texture or light costs anything on the build.
+
+    Returns a summary dict for the build log.
+    """
+    import numpy as np
+
+    def world_xyz(obj):
+        me = obj.data
+        n = len(me.vertices)
+        if not n:
+            return np.zeros((0, 3))
+        co = np.empty(n * 3, dtype=np.float64)
+        me.vertices.foreach_get("co", co)
+        co = co.reshape(-1, 3)
+        mw = np.array(obj.matrix_world, dtype=np.float64)
+        return co @ mw[:3, :3].T + mw[:3, 3]
+
+    def world_nz(obj):
+        me = obj.data
+        n = len(me.vertices)
+        if not n:
+            return np.zeros(0)
+        try:
+            nor = np.empty(n * 3, dtype=np.float64)
+            me.vertex_normals.foreach_get("vector", nor)
+        except Exception:  # noqa: BLE001 - normals unavailable on ancient meshes
+            return np.zeros(n)
+        nor = nor.reshape(-1, 3)
+        mw = np.array(obj.matrix_world, dtype=np.float64)
+        return nor @ mw[:3, :3].T[:, 2]
+
+    # Occupancy grid of solid objects' low geometry: the cells a prop stands on.
+    solid = [o for o in objects
+             if o.type == "MESH"
+             and not any(k in o.name.lower() for k in contact_exclude)]
+    cells = set()
+    for obj in solid:
+        xyz = world_xyz(obj)
+        low = xyz[xyz[:, 2] < 1.4]
+        for x, y in zip(low[:, 0], low[:, 1]):
+            cells.add((int(math.floor(x / cell)), int(math.floor(y / cell))))
+    cell_list = np.array(sorted(cells), dtype=np.int64) if cells else np.zeros((0, 2), dtype=np.int64)
+    cell_keys = np.sort(cell_list[:, 0] * 100003 + cell_list[:, 1]) if len(cell_list) else np.zeros(0, dtype=np.int64)
+
+    stats = {"objects": 0, "contact_cells": len(cell_list),
+             "min_factor": 1.0, "ground_contact_vertices": 0}
+    for obj in objects:
+        if obj.type != "MESH" or not obj.data.vertices:
+            continue
+        name = obj.name.lower()
+        xyz = world_xyz(obj)
+        nz = world_nz(obj)
+        n = len(xyz)
+
+        f = 0.78 + 0.22 * np.clip(xyz[:, 2] / 0.9, 0.0, 1.0)
+
+        is_ground = any(k in name for k in ground_names)
+        is_foliage = any(k in name for k in foliage_names)
+        if is_foliage:
+            f *= 0.86 + 0.14 * np.clip(nz * 0.5 + 0.5, 0.0, 1.0)
+        if is_ground and len(cell_keys):
+            ci = np.floor(xyz[:, :2] / cell).astype(np.int64)
+            base_key = ci[:, 0] * 100003 + ci[:, 1]
+            best = np.full(n, np.inf)
+            for dx in range(-3, 4):
+                for dy in range(-3, 4):
+                    probe = base_key + (dx * 100003 + dy)
+                    pos = np.clip(np.searchsorted(cell_keys, probe), 0, len(cell_keys) - 1)
+                    hit = cell_keys[pos] == probe
+                    dist = math.hypot(dx, dy) * cell
+                    best = np.where(hit, np.minimum(best, dist), best)
+            contact = np.clip((far - best) / max(far - near, 1e-6), 0.0, 1.0)
+            f *= 1.0 - 0.22 * contact
+            stats["ground_contact_vertices"] += int((contact > 0).sum())
+            # Per-slab value variation so big surfaces stop reading as paper.
+            h = np.sin(xyz[:, 0] * 3.1 + xyz[:, 1] * 1.7) * np.sin(xyz[:, 1] * 2.3 - xyz[:, 0] * 1.1)
+            f *= 0.955 + 0.045 * (h * 0.5 + 0.5)
+        f = np.clip(f, 0.55, 1.0)
+
+        rgba = np.empty((n, 4), dtype=np.float32)
+        rgba[:, 0] = f
+        rgba[:, 1] = f * 0.985
+        rgba[:, 2] = f * 0.960
+        rgba[:, 3] = 1.0
+        me = obj.data
+        layer = me.color_attributes.get("Col")
+        if layer is None:
+            layer = me.color_attributes.new(name="Col", type="FLOAT_COLOR", domain="POINT")
+        layer.data.foreach_set("color", rgba.ravel())
+        me.color_attributes.active_color = layer
+        try:
+            me.color_attributes.render_color_index = me.color_attributes.find("Col")
+        except Exception:  # noqa: BLE001 - older API without render index
+            pass
+        stats["objects"] += 1
+        stats["min_factor"] = min(stats["min_factor"], float(f.min()))
+    return stats
 
 
 def export_glb(objects, path, use_flat_materials=True):
@@ -946,7 +1248,8 @@ def export_glb(objects, path, use_flat_materials=True):
     bpy.ops.export_scene.gltf(
         filepath=tmp, export_format="GLB", use_selection=True,
         export_apply=True, export_yup=True, export_cameras=False,
-        export_lights=False, export_extras=True, export_tangents=False)
+        export_lights=False, export_extras=True, export_tangents=False,
+        export_vertex_color="ACTIVE", export_all_vertex_colors=True)
     import time
     last = None
     for _ in range(8):

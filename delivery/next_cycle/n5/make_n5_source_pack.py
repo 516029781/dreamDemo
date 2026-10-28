@@ -10,7 +10,7 @@ changing while the run is in progress, which is what made the n4 archive drift.
 They are archived separately, if at all, after the run ends.
 
 Usage:
-  python delivery/next_cycle/n5/make_n5_source_pack.py            # write v8
+  python delivery/next_cycle/n5/make_n5_source_pack.py            # write v10
   python delivery/next_cycle/n5/make_n5_source_pack.py --check    # verify only
 """
 import argparse
@@ -21,8 +21,8 @@ from hashlib import sha256
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
-OUT = ROOT / "delivery/courtyard_scene_demo_sources_v9.zip"
-STAMP = ROOT / "delivery/next_cycle/n5/source_package_v9.json"
+OUT = ROOT / "delivery/courtyard_scene_demo_sources_v11.zip"
+STAMP = ROOT / "delivery/next_cycle/n5/source_package_v11.json"
 
 INCLUDE_DIRS = [
     "art/candidates/candidate_n5/source",

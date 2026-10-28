@@ -23,7 +23,14 @@ import courtyard_lib as cl  # noqa: E402
 
 SLAB_TOP = 0.14
 SLAB_BOTTOM = 0.04
-MORTAR_TOP = 0.04
+# 2026-10-27: the mortar bed used to top out 100 mm under the slab face, so
+# every joint was a 10 cm deep slot. Whatever the geometry did at the seam -
+# an inset corner, a bevel, a 3.5 mm lift difference - the eye found the mortar
+# plane at the bottom of the slot, lit head-on, and the joint read as a bright
+# white chip instead of a dark line. Raising the bed to 6 mm under the face
+# turns the joint into a shallow dark groove: there is no lit floor to see, and
+# the slab side walls are buried in the bed so their slope cannot catch light.
+MORTAR_TOP = 0.134
 MORTAR_BOTTOM = 0.0
 JOINT = 0.02
 MODULE_HALF = 2.0
@@ -37,40 +44,78 @@ def add_paving_module(slabs_bm, mortar_bm, center, z_top=SLAB_TOP,
                       seed=20261024, variant=0):
     """Append one 4x4 m paving module (slabs + mortar) at center=(x, y).
 
-    variant 0 keeps ENV001's delivered bond exactly. MAP001 passes 1..3 so the
-    same 4 m module does not repeat with an identical joint pattern across the
-    courtyard (n4 review: "regular paving tiles dominate the frame").
+    Big-format only: three 1.33 m courses per module. The reference uses large
+    slabs with joints that barely differ in value; dense 0.5 m tiles turned the
+    ground into a high-frequency grid (measured 2.4x the reference edge density).
     """
     rng = random.Random(seed)
     cx, cy = center
     slab_bottom = z_top - (SLAB_TOP - SLAB_BOTTOM)
     mortar_top = z_top - (SLAB_TOP - MORTAR_TOP)
     mortar_bottom = z_top - (SLAB_TOP - MORTAR_BOTTOM)
-    for row in range(8):
-        y0 = cy - 1.99 + row * 0.5
-        y1 = y0 + 0.48
+    courses = 3
+    course_h = 3.98 / courses
+    joint = 0.018
+    repair_row = rng.randint(0, courses - 2)
+    repair_piece = 0
+    for row in range(courses):
+        y0 = cy - 1.99 + row * course_h
+        y1 = y0 + course_h - joint
         if variant == 1:
-            # Large-format: two 2 m slabs per course.
-            pieces = [(-1.99, -0.01), (0.01, 1.99)]
+            pieces = [(-1.99, -0.02), (-0.01, 1.99)]
         elif variant == 2:
-            # Paired courses share one bond, so slabs read 1 m deep.
-            pieces = EVEN_X if (row // 2) % 2 == 0 else ODD_X
-        elif variant == 3:
-            # Running bond with a half-slab offset.
-            base = EVEN_X if row % 2 == 0 else ODD_X
-            pieces = [(min(1.99, a + 0.25), min(1.99, b + 0.25)) for (a, b) in base]
-            pieces[0] = (-1.99, pieces[0][1])
+            pieces = [(-1.99, -0.68), (-0.66, 0.66), (0.68, 1.99)]
         else:
-            pieces = EVEN_X if row % 2 == 0 else ODD_X
-        for (x0, x1) in pieces:
-            lift = rng.uniform(0.0, 0.0035)
-            w = x1 - x0
+            # Running bond: alternate courses shift their vertical joints.
+            off = 0.0 if row % 2 == 0 else 0.44
+            pieces = [(-1.99, -1.10 + off), (-1.08 + off, 0.10 + off),
+                      (0.12 + off, 1.99)]
+        # Repair group: one deterministic run of 2-4 adjacent slabs reads as a
+        # mend, not as a random dirty tile. Group column shifts per row so the
+        # patch forms an L instead of a stripe.
+        repair = repair_row if row == repair_row else (repair_row - 1)
+        for pi, (x0, x1) in enumerate(pieces):
+            # 2026-10-27: every slab used to ride 0-3.5 mm high on its own
+            # random lift. Neighbours therefore stepped against each other and
+            # the joint walls of the neighbouring slab caught the key light -
+            # at 720p that resolved as a dotted bright line along every joint,
+            # the last remaining "white speck" on the paving. The draw is kept
+            # so the shared RNG stream (and the whole layout) stays identical.
+            rng.uniform(0.0, 0.0035)
+            lift = 0.0
+            patched = (row in (repair, repair + 1)
+                       and pi in (repair_piece, repair_piece + 1))
             cl.add_box(slabs_bm, (cx + (x0 + x1) / 2.0, (y0 + y1) / 2.0,
                                   (slab_bottom + z_top + lift) / 2.0),
-                       (w, y1 - y0, z_top + lift - slab_bottom), mat_index=0)
+                       (x1 - x0 - joint, y1 - y0, z_top + lift - slab_bottom),
+                       mat_index=2 if patched else 0)
     cl.add_box(mortar_bm, (cx, cy, (mortar_bottom + mortar_top) / 2.0),
                (2 * MODULE_HALF, 2 * MODULE_HALF, mortar_top - mortar_bottom),
                mat_index=0)
+    # Hairline cracks: thin strips along the joints, two per module.
+    #
+    # They were authored as 6 mm tall boxes lifted 4 mm off the slab - a ridge,
+    # not a groove. The top face catches the key light, so 32 of them rendered
+    # as a regular grid of white scratches that read as grass on the paving.
+    # N5_PAVING_CRACKS: 1 = original ridge, 2 = flush dark inlay, 0 = none.
+    crack_mode = os.environ.get("N5_PAVING_CRACKS", "0")
+    if crack_mode != "0":
+        flush = crack_mode == "2"
+        crack_z = z_top + 0.0008 if flush else z_top + 0.004
+        crack_h = 0.0016 if flush else 0.006
+        for ci in range(2):
+            along_x = rng.random() < 0.5
+            length = rng.uniform(1.1, 2.2)
+            if along_x:
+                x0 = cx + rng.uniform(-1.6, 1.6 - length * 0.5)
+                y0 = cy + rng.choice([-1.99, -0.66, 0.67, 1.99]) * rng.uniform(0.92, 0.98)
+                cl.add_box(slabs_bm, (x0 + length / 2.0, y0, crack_z),
+                           (length, 0.022, crack_h), mat_index=2)
+            else:
+                y0 = cy + rng.uniform(-1.6, 1.6 - length * 0.5)
+                x0 = cx + rng.choice([-1.99, -0.66, 0.67, 1.99]) * rng.uniform(0.92, 0.98)
+                cl.add_box(slabs_bm, (x0, y0 + length / 2.0, crack_z),
+                           (0.022, length, crack_h), mat_index=2)
 
 
 def _add_slab(bm, cx, cy, w, d, z_bottom, z_top, rng, mat_index=0,
@@ -86,12 +131,23 @@ def _add_slab(bm, cx, cy, w, d, z_bottom, z_top, rng, mat_index=0,
     hw, hd = w / 2.0, d / 2.0
     j = corner_jitter
     corners = [(1, 1), (-1, 1), (-1, -1), (1, -1)]
+    # One inset for all four corners, not four independent ones.
+    #
+    # The old version moved each top corner by an independent uniform(0, j).
+    # Two neighbours in a junction therefore both pulled back, and the slab
+    # sides sloped outward toward the bottom, so every junction opened into a
+    # V-shaped notch up to ~5 cm wide. Ten centimetres under that notch sits
+    # the mortar slab, a horizontal face pointing at the key light, which is
+    # why the map showed a regular grid of bright white blocks on the paving
+    # (reported as "grass growing on the flagstones"). A single inset per slab
+    # can only narrow it, so neighbours keep one continuous joint and no void
+    # is ever created.
+    e = rng.uniform(0.0, j) if j else 0.0
+    hw_t, hd_t = hw - e, hd - e
     top = []
     for sx, sy in corners:
-        jx = rng.uniform(0.0, j) if j else 0.0
-        jy = rng.uniform(0.0, j) if j else 0.0
-        x = cx + sx * (hw - jx)
-        y = cy + sy * (hd - jy)
+        x = cx + sx * hw_t
+        y = cy + sy * hd_t
         top.append(bm.verts.new((x, y, z_top)))
     bottom = []
     for sx, sy in corners:
@@ -130,11 +186,26 @@ def add_paving_module_style(slabs_bm, mortar_bm, center, style, z_top=SLAB_TOP,
     mortar_bottom = z_top - (SLAB_TOP - MORTAR_BOTTOM)
 
     if style == 'plaza':
-        courses, dims, jitter, joint = 8, (2, 3), 0.020, 0.020
+        # 2026-10-27: one language for the whole yard. Big hand-cut flags -
+        # three courses of 1.33 m per 4 m module, 2-3 pieces per course. The
+        # eight 0.5 m courses read as small tiles and, together with the three
+        # different bond patterns, produced the "paving format is inconsistent"
+        # note. Reference slabs are roughly 1.2 x 0.6 m.
+        courses, dims, jitter, joint = 3, (2, 3), 0.0, 0.014
     elif style == 'path':
-        courses, dims, jitter, joint = 8, (5, 6), 0.016, 0.014
+        courses, dims, jitter, joint = 8, (5, 6), 0.005, 0.011
     else:
-        courses, dims, jitter, joint = 10, (9, 10), 0.012, 0.010
+        courses, dims, jitter, joint = 10, (9, 10), 0.004, 0.010
+
+    # Look-dev knobs. UNIFY collapses the three paving languages into the plaza
+    # one so the whole yard reads as a single flagstone field; JOINT_SCALE
+    # narrows the gap without touching slab sizes.
+    # Default flipped to 1 on 2026-10-27: mixing 1.33 m flags with 0.4 m cobbles
+    # in the same frame is what the reviewer called "格式不统一".
+    if os.environ.get("N5_PAVING_UNIFY", "1") == "1":
+        style = 'plaza'
+        courses, dims, jitter, joint = 3, (2, 3), 0.0, 0.014
+    joint = joint * float(os.environ.get("N5_PAVING_JOINT_SCALE", "1") or 1)
 
     course_h = 3.98 / courses
     # Unequal course heights: with every course 0.5 m the joints still line up
@@ -166,7 +237,14 @@ def add_paving_module_style(slabs_bm, mortar_bm, center, style, z_top=SLAB_TOP,
             if x1 - x0 < 0.05:
                 continue
             depth = course_h - joint
-            lift = rng.uniform(0.0, 0.0035)
+            # 2026-10-27: every slab used to ride 0-3.5 mm high on its own
+            # random lift. Neighbours therefore stepped against each other and
+            # the joint walls of the neighbouring slab caught the key light -
+            # at 720p that resolved as a dotted bright line along every joint,
+            # the last remaining "white speck" on the paving. The draw is kept
+            # so the shared RNG stream (and the whole layout) stays identical.
+            rng.uniform(0.0, 0.0035)
+            lift = 0.0
             worn = 0.0
             if style == 'edge' and rng.random() < 0.05:
                 # a settled cobble: 8 mm low, catches a shadow line
@@ -178,6 +256,21 @@ def add_paving_module_style(slabs_bm, mortar_bm, center, style, z_top=SLAB_TOP,
     cl.add_box(mortar_bm, (cx, cy, (mortar_bottom + mortar_top) / 2.0),
                (2 * MODULE_HALF, 2 * MODULE_HALF, mortar_top - mortar_bottom),
                mat_index=0)
+    # Hairline cracks: thin dark strips sitting just above the slab top along
+    # the joints. Two per module, deterministic, never floating.
+    for ci in range(2):
+        along_x = rng.random() < 0.5
+        length = rng.uniform(1.1, 2.2)
+        if along_x:
+            x0 = cx + rng.uniform(-1.6, 1.6 - length * 0.5)
+            y0 = cy + rng.choice([-1.99, -0.66, 0.67, 1.99]) * rng.uniform(0.92, 0.98)
+            cl.add_box(slabs_bm, (x0 + length / 2.0, y0, z_top + 0.004),
+                       (length, 0.022, 0.006), mat_index=2)
+        else:
+            y0 = cy + rng.uniform(-1.6, 1.6 - length * 0.5)
+            x0 = cx + rng.choice([-1.99, -0.66, 0.67, 1.99]) * rng.uniform(0.92, 0.98)
+            cl.add_box(slabs_bm, (x0, y0 + length / 2.0, z_top + 0.004),
+                       (0.022, length, 0.006), mat_index=2)
 
 
 def create_paving(collection, centers, z_top=SLAB_TOP, prefix="PAVING",

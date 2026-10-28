@@ -1,0 +1,69 @@
+{
+  "_note": "Shape-only bench: colour, density and light stay at the shipped baseline so the silhouette is judged on its own. Leaf scale 1.7 / count 0.55 is applied to all three so a leaf is actually resolvable at 720p - the real numbers come later from ART_VARIANTS.json.",
+  "_baseline_lights_note": "These four match CourtyardBootstrap setupCamera/setupLights exactly; they are listed so the capture script does not need a special case, not because the bench changes them.",
+  "variants": {
+    "S1": {
+      "label": "S1 三裂叶 · 弧形草 · 删裂纹",
+      "leaf_shape": "trilobe",
+      "leaf_fold": 0.04,
+      "leaf_scale": 1.7,
+      "leaf_count_scale": 0.55,
+      "grass_segments": 3,
+      "grass_curve": 2.6,
+      "grass_taper": 0.94,
+      "grass_spike": 0,
+      "paving_cracks": 0,
+      "lights": {
+        "ambient": 11500,
+        "sky": "#C3D2D2",
+        "fill_color": "#A9C2D6",
+        "fill_illum": 11000,
+        "key_illum": 188000,
+        "fog": [206, 180, 150],
+        "fog_start": 34
+      }
+    },
+    "S2": {
+      "label": "S2 五裂叶 · 弧形草带穗 · 删裂纹",
+      "leaf_shape": "pentalobe",
+      "leaf_fold": 0.04,
+      "leaf_scale": 1.7,
+      "leaf_count_scale": 0.55,
+      "grass_segments": 3,
+      "grass_curve": 2.6,
+      "grass_taper": 0.94,
+      "grass_spike": 1,
+      "paving_cracks": 0,
+      "lights": {
+        "ambient": 11500,
+        "sky": "#C3D2D2",
+        "fill_color": "#A9C2D6",
+        "fill_illum": 11000,
+        "key_illum": 188000,
+        "fog": [206, 180, 150],
+        "fog_start": 34
+      }
+    },
+    "S3": {
+      "label": "S3 三裂混搭整叶 · 弧形草 · 裂纹改凹槽",
+      "leaf_shape": "mix",
+      "leaf_fold": 0.04,
+      "leaf_scale": 1.7,
+      "leaf_count_scale": 0.55,
+      "grass_segments": 3,
+      "grass_curve": 2.6,
+      "grass_taper": 0.94,
+      "grass_spike": 0,
+      "paving_cracks": 2,
+      "lights": {
+        "ambient": 11500,
+        "sky": "#C3D2D2",
+        "fill_color": "#A9C2D6",
+        "fill_illum": 11000,
+        "key_illum": 188000,
+        "fog": [206, 180, 150],
+        "fog_start": 34
+      }
+    }
+  }
+}

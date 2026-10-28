@@ -3,7 +3,7 @@ import {
     MeshRenderer, Material, primitives, utils, resources, Prefab, instantiate, Sprite,
     SpriteFrame, Label, UITransform, Canvas, Layers, view, ResolutionPolicy, Graphics,
     input, Input, KeyCode, EventTouch, Texture2D, ImageAsset, director,
-    sp, Font, UIOpacity, profiler, RenderTexture,
+    sp, Font, UIOpacity, profiler, RenderTexture, EffectAsset,
 } from 'cc';
 
 const { ccclass } = _decorator;
@@ -111,6 +111,10 @@ export class CourtyardBootstrap extends Component {
     private playerAnchor: Node = null!;
     private spineNode: Node | null = null;
     private spine: sp.Skeleton | null = null;
+    private postRT: RenderTexture | null = null;
+    private postSprite: Sprite | null = null;
+    private postMat: Material | null = null;
+    private postEffect: EffectAsset | null = null;
     private shadowNode: Node | null = null;
     private paperFrame: SpriteFrame | null = null;
     private shadowMaterial: Material | null = null;
@@ -451,22 +455,22 @@ export class CourtyardBootstrap extends Component {
         cam.near = 0.1;
         cam.far = 120;
         cam.clearFlags = Camera.ClearFlag.SOLID_COLOR;
-        cam.clearColor = hexToColor('#D7CEBC');
+        cam.clearColor = hexToColor('#C3D2D2');
         cam.visibility = Layers.Enum.DEFAULT;
 
         const globals = scene.globals;
         globals.skybox.enabled = false;
-        globals.ambient.skyColor = new Vec4(0.62, 0.69, 0.73, 1);
-        globals.ambient.skyIllum = 12500;
-        globals.ambient.groundLightingColor = new Color(158, 124, 88, 255);
+        globals.ambient.skyColor = new Vec4(0.56, 0.50, 0.45, 1);
+        globals.ambient.skyIllum = 11500;
+        globals.ambient.groundLightingColor = new Color(150, 106, 74, 255);
         // n5: fog closes the exposed horizon behind the treeline and gives the
         // far layers the same aerial recession the haze palette is aiming at.
         // It starts past the player's depth (~14) so the character is untouched.
         globals.fog.enabled = true;
         globals.fog.type = 0;
-        globals.fog.fogColor = new Color(201, 194, 176, 255);
-        globals.fog.fogStart = 26;
-        globals.fog.fogEnd = 72;
+        globals.fog.fogColor = new Color(206, 180, 150, 255);
+        globals.fog.fogStart = 34;
+        globals.fog.fogEnd = 88;
         globals.fog.accurate = false;
         globals.shadows.enabled = true;
         (globals.shadows as any).type = 0; // ShadowMap
@@ -494,12 +498,18 @@ export class CourtyardBootstrap extends Component {
         // instead of sitting in a flat pool directly under themselves.
         keyNode.setRotationFromEuler(-41, -58, 0);
         const key = keyNode.getComponent(DirectionalLight)!;
-        key.color = hexToColor('#FFCC96');
-        key.illuminance = 112000;
+        key.color = hexToColor('#FFECD8');
+        key.illuminance = 188000;
         key.shadowEnabled = true;
         (key as any).shadowPcf = 3; // SOFT_4X: dappled, not ink-sharp
-        (key as any).shadowBias = 0.00016;
-        (key as any).shadowNormalBias = 0.32;
+        // 2026-10-27: bias was small enough that the slabs shadow-acne'd
+        // against themselves - a regular diagonal stipple of bright dots over
+        // the whole yard at 720p. An unlit replacement material made the dots
+        // vanish outright, which is what pinned them to the shadow map rather
+        // than to any texture. Bias is pushed until the stipple is gone; the
+        // crown shadow is soft enough that the slight offset stays invisible.
+        (key as any).shadowBias = 0.0016;
+        (key as any).shadowNormalBias = 0.85;
         (key as any).shadowDistance = 38;
         (key as any).shadowSaturation = 0.42;
 
@@ -571,7 +581,17 @@ export class CourtyardBootstrap extends Component {
                 || low.includes('shrub') || low.includes('clump')
                 || low.includes('petal') || low.includes('litter')
                 || low.includes('ring_cover');
-            mr.shadowCastingMode = (flat || lightCaster || shadowOff) ? MeshRenderer.ShadowCastingMode.OFF : MeshRenderer.ShadowCastingMode.ON;
+            // 2026-10-27: the main crown is the one foliage volume that has
+            // to cast. With every leaf shadow switched off the plaza was lit
+            // dead flat and the frame measured one full stop brighter than the
+            // reference (P50 140 vs 102); the reference's depth is mostly the
+            // dappled shade the tree throws across the slabs.
+            const crownCaster = low.indexOf('tree_canopy') >= 0
+                || low.indexOf('tree_bark') >= 0;
+            mr.shadowCastingMode = (flat || lightCaster
+                || (shadowOff && !crownCaster))
+                ? MeshRenderer.ShadowCastingMode.OFF
+                : MeshRenderer.ShadowCastingMode.ON;
         }
         for (const key of ['A', 'B', 'C']) {
             const card = this.findNode(map, 'MAP001_message_board_card_' + key);
@@ -582,20 +602,136 @@ export class CourtyardBootstrap extends Component {
         this.boardManual = false;
         this.refreshQuestHud();
         this.applyMaterialOverrides(map);
+        this.debugVertexColor(map);
         console.log('[COURTYARD] full MAP001 instantiated renderers=' + renderers.length + ' cards=' + this.cardNodes.length);
+    }
+
+    private debugVertexColor(map: Node): void {
+        let total = 0;
+        let withColor = 0;
+        const samples: string[] = [];
+        let macro = 'n/a';
+        const walk = (n: Node) => {
+            const mr = n.getComponent(MeshRenderer);
+            if (mr && mr.mesh) {
+                total += 1;
+                const attrs: string[] = [];
+                for (const vb of mr.mesh.struct.vertexBundles) {
+                    for (const a of vb.attributes) attrs.push(a.name);
+                }
+                if (attrs.indexOf('a_color') >= 0) {
+                    withColor += 1;
+                    if (samples.length < 3) samples.push(n.name);
+                }
+                if (macro === 'n/a' && mr.getMaterial(0) && mr.getMaterial(0)!.passes.length) {
+                    const defs = (mr.getMaterial(0)!.passes[0] as any).defines || {};
+                    macro = String(defs.USE_VERTEX_COLOR);
+                }
+            }
+            for (const c of n.children) walk(c);
+        };
+        walk(map);
+        console.log('[VC] meshes=' + total + ' withAColor=' + withColor +
+            ' macro=' + macro + ' samples=' + samples.join(','));
     }
 
     // V02 material separation: procedural texture sources in
     // art/full/source/textures/ (tools/textures/make_procedural_textures.py)
     // + world-space box UVs baked in build_map001.py. Palette tints carry the
     // color; textures carry pattern; roughness/metallic separate families.
+    /**
+     * Three look directions, selected with ?style=o|c|r.
+     *
+     * The colour table below is the shared baseline; a style does not redefine
+     * 30 colours, it moves them. That keeps the three shots comparable (same
+     * materials, same light rig) while letting each direction be evaluated on
+     * its own terms: cartoon needs flat, bright, saturated surfaces with no
+     * texture at all; the realistic pass keeps the maps but warms and calms
+     * them. Geometry is switched separately in Blender via N5_STYLE.
+     */
+    private static readonly LEAF_ATLAS = 'textures/tex_leaf_atlas';
+    private static readonly CARD_MATS: Record<string, boolean> = {
+        ENG_MAT_leaf_ochre: true, ENG_MAT_leaf_amber: true,
+        ENG_MAT_leaf_olive: true, ENG_MAT_leaf_deep: true,
+        ENG_MAT_leaf_gold: true,
+    };
+
+    private static readonly STYLE_NAME: string = (() => {
+        try {
+            const q = (globalThis as any).location && (globalThis as any).location.search;
+            const m = q ? /[?&]style=([a-z])/i.exec(q) : null;
+            return m ? m[1].toLowerCase() : 'o';
+        } catch (e) {
+            return 'o';
+        }
+    })();
+
+    /** Shift a hex colour toward the requested look, in HSL. */
+    private static styleColor(hex: string, style: string): Color {
+        if (style === 'o') return hexToColor(hex);
+        const n = parseInt(hex.replace('#', ''), 16);
+        const r = ((n >> 16) & 255) / 255;
+        const g = ((n >> 8) & 255) / 255;
+        const b = (n & 255) / 255;
+        const mx = Math.max(r, g, b), mn = Math.min(r, g, b);
+        let h = 0;
+        const l0 = (mx + mn) / 2;
+        let s0 = 0;
+        const d = mx - mn;
+        if (d > 0) {
+            s0 = l0 > 0.5 ? d / (2 - mx - mn) : d / (mx + mn);
+            if (mx === r) h = ((g - b) / d + (g < b ? 6 : 0)) / 6;
+            else if (mx === g) h = ((b - r) / d + 2) / 6;
+            else h = ((r - g) / d + 4) / 6;
+        }
+        let s = s0, l = l0;
+        if (style === 'c') {
+            // Ghibli-ish: push saturation up and clear the muddy 20-35% band.
+            // The first pass lifted lightness to l*0.62+0.34, which washed the
+            // whole courtyard out to sand; 0.72/0.18 keeps the darks readable
+            // while still lifting nothing above ~0.85.
+            s = Math.min(1, s0 * 1.30 + 0.05);
+            l = Math.min(0.80, l0 * 0.70 + 0.08);
+        } else if (style === 'r') {
+            // Filmic: calmer chroma, but no global lift. The old +10% lightness
+            // pushed every pale material (dry grass, mortar, stone) into the
+            // same washed cream and the grass read as white spikes.
+            s = Math.min(1, s0 * 0.90);
+            l = Math.min(0.92, l0 * 1.0 + 0.01);
+        }
+        const hue2 = (t: number) => {
+            if (t < 0) t += 1;
+            if (t > 1) t -= 1;
+            if (t < 1 / 6) return p + (q2 - p) * 6 * t;
+            if (t < 1 / 2) return q2;
+            if (t < 2 / 3) return p + (q2 - p) * (2 / 3 - t) * 6;
+            return p;
+        };
+        const q2 = l < 0.5 ? l * (1 + s) : l + s - l * s;
+        const p = 2 * l - q2;
+        const rr = s === 0 ? l : hue2(h + 1 / 3);
+        const gg = s === 0 ? l : hue2(h);
+        const bb = s === 0 ? l : hue2(h - 1 / 3);
+        return new Color(Math.round(rr * 255), Math.round(gg * 255), Math.round(bb * 255), 255);
+    }
+
     private static readonly MAT_OVERRIDES: Record<string, { tex: string; color: string; rough: number; metal: number }> = {
-        ENG_MAT_stone_base: { tex: 'textures/tex_stone_tiles/texture', color: '#B2A68F', rough: 0.90, metal: 0.0 },
-        ENG_MAT_stone_light: { tex: 'textures/tex_stone_tiles/texture', color: '#C6BBA4', rough: 0.86, metal: 0.0 },
-        ENG_MAT_stone_dark: { tex: 'textures/tex_stone_tiles/texture', color: '#8A7F6A', rough: 0.94, metal: 0.0 },
-        ENG_MAT_mortar: { tex: 'textures/tex_stone_tiles/texture', color: '#786F5F', rough: 0.96, metal: 0.0 },
+        // Stone no longer uses tex_stone_tiles. That atlas carries 4x4 cells
+        // separated by light grout lines, so tiling it on a slab painted a
+        // second, finer grid on top of the real joints: the white dashes on the
+        // flagstones and the "tiles are all different sizes" read. Slabs need
+        // only mottling - joints are geometry. tex_stone_noise has no grid.
+        // Colours are divided by the map's mean (0.878) so the rendered value
+        // stays where the swatch says it is.
+        ENG_MAT_stone_base: { tex: 'textures/tex_stone_noise/texture', color: '#A08E6E', rough: 0.62, metal: 0.0 },
+        ENG_MAT_stone_light: { tex: 'textures/tex_stone_noise/texture', color: '#B3A07E', rough: 0.58, metal: 0.0 },
+        ENG_MAT_stone_dark: { tex: 'textures/tex_stone_noise/texture', color: '#8A7A5E', rough: 0.72, metal: 0.0 },
+        ENG_MAT_mortar: { tex: 'textures/tex_stone_noise/texture', color: '#4A423A', rough: 0.90, metal: 0.0 },
         ENG_MAT_ground_soil: { tex: 'textures/tex_soil_noise/texture', color: '#6B5B47', rough: 0.98, metal: 0.0 },
-        ENG_MAT_soil: { tex: 'textures/tex_soil_noise/texture', color: '#5F4B37', rough: 0.98, metal: 0.0 },
+        ENG_MAT_soil: { tex: 'textures/tex_soil_noise/texture', color: '#4C3A2B', rough: 0.98, metal: 0.0 },
+        // Was unmapped, so the apron around the yard kept the raw GLB
+        // colour and showed as a bright slab at the left edge of frame.
+        ENG_MAT_ground_skirt: { tex: 'textures/tex_soil_noise/texture', color: '#5A4A38', rough: 0.98, metal: 0.0 },
         ENG_MAT_wood_dark: { tex: 'textures/tex_wood_grain/texture', color: '#5C4733', rough: 0.72, metal: 0.0 },
         ENG_MAT_wood_old: { tex: 'textures/tex_wood_grain/texture', color: '#7C6146', rough: 0.66, metal: 0.0 },
         ENG_MAT_bench_wood: { tex: 'textures/tex_wood_grain/texture', color: '#7A5B3D', rough: 0.62, metal: 0.0 },
@@ -603,17 +739,21 @@ export class CourtyardBootstrap extends Component {
         ENG_MAT_metal_iron: { tex: 'textures/tex_metal_brushed/texture', color: '#3F4145', rough: 0.36, metal: 0.90 },
         ENG_MAT_metal_brass: { tex: 'textures/tex_metal_brushed/texture', color: '#A9834B', rough: 0.35, metal: 0.85 },
         ENG_MAT_metal_rust: { tex: 'textures/tex_metal_brushed/texture', color: '#72513D', rough: 0.85, metal: 0.30 },
-        ENG_MAT_leaf_ochre: { tex: 'textures/tex_leaf_detail/texture', color: '#DDB35A', rough: 0.58, metal: 0.0 },
-        ENG_MAT_leaf_amber: { tex: 'textures/tex_leaf_detail/texture', color: '#C9823F', rough: 0.60, metal: 0.0 },
-        ENG_MAT_leaf_olive: { tex: 'textures/tex_leaf_detail/texture', color: '#7E8F4C', rough: 0.62, metal: 0.0 },
-        ENG_MAT_leaf_deep: { tex: 'textures/tex_leaf_detail/texture', color: '#7B6B3A', rough: 0.62, metal: 0.0 },
-        ENG_MAT_leaf_gold: { tex: 'textures/tex_leaf_detail/texture', color: '#E0C068', rough: 0.54, metal: 0.0 },
-        ENG_MAT_leaf_mass: { tex: 'textures/tex_leaf_detail/texture', color: '#514A2C', rough: 0.82, metal: 0.0 },
-        ENG_MAT_leaf_far: { tex: 'textures/tex_leaf_detail/texture', color: '#68705E', rough: 0.70, metal: 0.0 },
-        ENG_MAT_leaf_mid_haze: { tex: 'textures/tex_leaf_detail/texture', color: '#8A8F74', rough: 0.74, metal: 0.0 },
-        ENG_MAT_leaf_haze: { tex: 'textures/tex_leaf_detail/texture', color: '#A3A78F', rough: 0.78, metal: 0.0 },
-        ENG_MAT_grass_dry: { tex: 'textures/tex_leaf_detail/texture', color: '#C3AD72', rough: 0.72, metal: 0.0 },
-        ENG_MAT_grass_pale: { tex: 'textures/tex_leaf_detail/texture', color: '#DCC991', rough: 0.70, metal: 0.0 },
+        ENG_MAT_ceramic_teal: { tex: 'textures/tex_stone_tiles/texture', color: '#4F7C74', rough: 0.30, metal: 0.0 },
+        ENG_MAT_flag_teal: { tex: 'textures/tex_leaf_detail/texture', color: '#3E6E6A', rough: 0.78, metal: 0.0 },
+        ENG_MAT_flag_orange: { tex: 'textures/tex_leaf_detail/texture', color: '#C4653A', rough: 0.78, metal: 0.0 },
+        ENG_MAT_flag_cream: { tex: 'textures/tex_leaf_detail/texture', color: '#D8C7A6', rough: 0.80, metal: 0.0 },
+        ENG_MAT_leaf_ochre: { tex: 'textures/tex_leaf_detail/texture', color: '#C9B08E', rough: 0.58, metal: 0.0 },
+        ENG_MAT_leaf_amber: { tex: 'textures/tex_leaf_detail/texture', color: '#BCA184', rough: 0.60, metal: 0.0 },
+        ENG_MAT_leaf_olive: { tex: 'textures/tex_leaf_detail/texture', color: '#A99A85', rough: 0.62, metal: 0.0 },
+        ENG_MAT_leaf_deep: { tex: 'textures/tex_leaf_detail/texture', color: '#93816C', rough: 0.62, metal: 0.0 },
+        ENG_MAT_leaf_gold: { tex: 'textures/tex_leaf_detail/texture', color: '#E0D0B4', rough: 0.54, metal: 0.0 },
+        ENG_MAT_leaf_mass: { tex: 'textures/tex_leaf_detail/texture', color: '#5C4732', rough: 0.82, metal: 0.0 },
+        ENG_MAT_leaf_far: { tex: 'textures/tex_leaf_detail/texture', color: '#8E7A50', rough: 0.70, metal: 0.0 },
+        ENG_MAT_leaf_mid_haze: { tex: 'textures/tex_leaf_detail/texture', color: '#9C8558', rough: 0.74, metal: 0.0 },
+        ENG_MAT_leaf_haze: { tex: 'textures/tex_leaf_detail/texture', color: '#B49B6E', rough: 0.78, metal: 0.0 },
+        ENG_MAT_grass_dry: { tex: 'textures/tex_leaf_detail/texture', color: '#B0823F', rough: 0.72, metal: 0.0 },
+        ENG_MAT_grass_pale: { tex: 'textures/tex_leaf_detail/texture', color: '#CBA05C', rough: 0.70, metal: 0.0 },
         ENG_MAT_roof_tile: { tex: 'textures/tex_stone_tiles/texture', color: '#8C5B48', rough: 0.82, metal: 0.0 },
         ENG_MAT_flower_rose: { tex: 'textures/tex_leaf_detail/texture', color: '#D98F9B', rough: 0.62, metal: 0.0 },
         ENG_MAT_flower_cream: { tex: 'textures/tex_leaf_detail/texture', color: '#EFE2C6', rough: 0.60, metal: 0.0 },
@@ -624,6 +764,13 @@ export class CourtyardBootstrap extends Component {
         const texPaths = Array.from(new Set(Object.values(CourtyardBootstrap.MAT_OVERRIDES).map(o => o.tex)));
         texPaths.push('textures/tex_bark/texture');
         texPaths.push('textures/tex_leaf_detail/texture');
+        // Realistic pass only: alpha-cut leaf clusters on the card geometry.
+        // The cards already carry UVs into a 4x2 grid (add_leaf uv_cell), so
+        // swapping the map is enough to change the silhouette from diamond
+        // to foliage. Only the five card materials are eligible - leaf_mass
+        // and the haze set are solid volumes and would be punched full of
+        // holes by an alpha cutout.
+        texPaths.push(CourtyardBootstrap.LEAF_ATLAS);
         const texMap: Record<string, Texture2D> = {};
         let pending = texPaths.length;
         for (const p of texPaths) {
@@ -649,6 +796,30 @@ export class CourtyardBootstrap extends Component {
                 const src = mr.getMaterial(i);
                 const name = src ? src.name : '';
                 const isBark = mr.node.name.toLowerCase().indexOf('tree_bark') >= 0;
+                // Every leaf card shares one alpha-atlas material; the colour
+                // comes from the baked vertex colour. That material is not in
+                // MAT_OVERRIDES, so it used to fall through untouched - which
+                // is why the low-poly blobs vanished: they have no UVs, so
+                // they sampled the transparent corner of the atlas and were
+                // discarded by alpha. Handle the atlas per style instead.
+                if (name === 'ENG_MAT_leaf_atlas') {
+                    // o and r keep the material exported with the GLB: the
+                    // atlas is baked into it at build time (Blender loads
+                    // textures/tex_leaf_atlas/texture.png), so re-loading it at
+                    // runtime only risks a missing asset - the first attempt
+                    // came back empty and painted every leaf white.
+                    if (style !== 'c') continue;
+                    const am = new Material();
+                    am.initialize({ effectName: 'builtin-standard',
+                                    defines: { USE_VERTEX_COLOR: false } });
+                    am.setProperty('mainColor',
+                        CourtyardBootstrap.styleColor('#C08A3A', 'c'));
+                    am.setProperty('roughness', 0.92);
+                    am.setProperty('metallic', 0.0);
+                    mr.setMaterial(am, i);
+                    replaced += 1;
+                    continue;
+                }
                 const ov = isBark
                     ? { tex: 'textures/tex_bark/texture', color: '#4A3A2C', rough: 0.88, metal: 0.0 }
                     : CourtyardBootstrap.MAT_OVERRIDES[name];
@@ -658,22 +829,63 @@ export class CourtyardBootstrap extends Component {
                 }
                 const tex = texMap[ov.tex];
                 if (!tex) continue;
+                const kind = isBark ? 'wood' : this.surfaceKind(name);
+                const maps = isBark ? null : this.surfaceMaps(kind);
+                const style = CourtyardBootstrap.STYLE_NAME;
+                // Cartoon drops every map on purpose: a surface that still
+                // carries a stone normal map stops reading as flat colour.
+                const flat = style === 'c';
+                const cutout = !flat && style === 'r' && !!CourtyardBootstrap.CARD_MATS[name];
+                const albedo = cutout ? texMap[CourtyardBootstrap.LEAF_ATLAS] : tex;
                 const m = new Material();
-                m.initialize({ effectName: 'builtin-standard' });
-                m.setProperty('mainTexture', tex);
-                m.setProperty('mainColor', hexToColor(ov.color));
-                m.setProperty('roughness', ov.rough);
-                m.setProperty('metallic', ov.metal);
-                if (!isBark) {
-                    const kind = this.surfaceKind(name);
-                    const maps = this.surfaceMaps(kind);
-                    if (maps) {
-                        m.setProperty('normalMap', maps.normal);
-                        m.setProperty('pbrMap', maps.pbr);
-                        m.setProperty('normalStrength', kind === 'stone' ? 0.55 : kind === 'wood' ? 0.70 : kind === 'metal' ? 0.35 : 0.45);
-                        m.setProperty('occlusion', kind === 'soil' ? 0.90 : 0.95);
-                        m.recompileShaders({ USE_NORMAL_MAP: true, USE_PBR_MAP: true });
-                    }
+                // Grass meshes carry a uint16 colour attribute that the engine
+                // reads as float, so every blade clamps to white. Dropping
+                // vertex colour on grass restores its mainColor (the baked
+                // per-blade variation was invisible anyway).
+                // 2026-10-27: hard surfaces get the same treatment. On the
+                // paving the vertex colour attribute is what produced a fine
+                // diagonal lattice of 1-pixel dots over every slab - switching
+                // the slab material to a bare unlit one removed them outright.
+                // Slab variation already comes from three material slots, so
+                // nothing is lost here.
+                const hardSurface = !!this.surfaceKind(name);
+                // 2026-10-27: foliage loses vertex colour too. Half the
+                // foliage meshes (bg hedge cards, solid lobes, hedge skirts)
+                // never got a COLOR_0 layer from Blender, so the engine fed
+                // them the default white attribute - with a white mainColor
+                // that rendered as big cream blobs behind the fence. Hue now
+                // comes from the material slot, which is deterministic.
+                const isLeaf = name.indexOf('leaf') >= 0;
+                const vertexColor = !flat && !cutout && !hardSurface && !isLeaf
+                    && name.indexOf('grass') < 0;
+                const initDefs: Record<string, boolean> = { USE_VERTEX_COLOR: vertexColor };
+                // 2026-10-27: the procedural stone normal map is the source of
+                // the last paving artifact. Clearing mainTexture + normalMap +
+                // pbrMap at runtime removed the dotted diagonal stipple in one
+                // step, and the albedo/PBR maps alone bring nothing back - the
+                // stipple is the 512px normal map aliasing at this grazing
+                // angle. Slab detail now comes from the albedo noise only.
+                const useNormalMap = !!maps && !flat && !cutout
+                    && kind !== 'stone';
+                if (maps && !flat && !cutout) {
+                    initDefs.USE_NORMAL_MAP = useNormalMap;
+                    initDefs.USE_PBR_MAP = true;
+                }
+                if (cutout) initDefs.USE_ALPHA_TEST = true;
+                m.initialize({ effectName: 'builtin-standard', defines: initDefs });
+                if (!flat && albedo) m.setProperty('mainTexture', albedo);
+                if (cutout) {
+                    m.setProperty('alphaThreshold', 0.35);
+                    m.setProperty('mainColor', new Color(255, 255, 255, 255));
+                }
+                if (!cutout) m.setProperty('mainColor', CourtyardBootstrap.styleColor(ov.color, style));
+                m.setProperty('roughness', flat ? 0.92 : ov.rough);
+                m.setProperty('metallic', flat ? 0.0 : ov.metal);
+                if (maps && !flat) {
+                    if (useNormalMap) m.setProperty('normalMap', maps.normal);
+                    m.setProperty('pbrMap', maps.pbr);
+                    m.setProperty('normalStrength', kind === 'stone' ? 0.55 : kind === 'wood' ? 0.70 : kind === 'metal' ? 0.35 : 0.45);
+                    m.setProperty('occlusion', kind === 'soil' ? 0.90 : 0.95);
                 }
                 mr.setMaterial(m, i);
                 replaced += 1;
@@ -889,6 +1101,7 @@ export class CourtyardBootstrap extends Component {
         };
 
         load('models/MAP001_courtyard/MAP001_courtyard', Prefab, (_e, p) => { this.prefabs['map'] = p; });
+        load('effects/post-grade', EffectAsset, (_e, fx) => { this.postEffect = fx; });
         load('ui/paper_panel_wash/texture', Texture2D, (_e, t) => { this.paperTexture = t; });
         load('ui/portrait_npc_gardener/texture', Texture2D, (_e, t) => { this.portraitTextures['npc'] = t; });
         load('ui/portrait_player_1015/texture', Texture2D, (_e, t) => { this.portraitTextures['player'] = t; });
@@ -1198,6 +1411,12 @@ export class CourtyardBootstrap extends Component {
 
     private setupPostFx(): void {
         if (!this.canvasNode) return;
+        // S1: the 3D scene renders into a RenderTexture; a dedicated ortho
+        // camera draws one full-screen quad with post-grade.effect. UI, HUD
+        // and dialogue live on their own cameras and stay ungraded.
+        // S1-lite: the legacy pipeline cannot host a screen-space grade (see
+        // decisions.jsonl n5d-s1). The grade ships as palette + lighting instead;
+        // the vignette below is the only screen-space layer.
         const size = 512;
         const canvas = document.createElement('canvas');
         canvas.width = size;
@@ -1609,7 +1828,7 @@ export class CourtyardBootstrap extends Component {
         return node;
     }
 
-    private deckleOutline(parent: Node, w: number, h: number, alpha = 46): Node {
+    private deckleOutline(parent: Node, w: number, h: number, alpha = 30): Node {
         const node = this.uiNode('DeckleInk', parent, 0, 0, w, h);
         const g = node.addComponent(Graphics);
         g.strokeColor = new Color(74, 64, 49, alpha);
@@ -1684,11 +1903,9 @@ export class CourtyardBootstrap extends Component {
         const card = this.paperPanel(this.hudRoot, -428, 272, 368, 118, 'QuestCard', new Color(249, 245, 234, 200));
         this.decoratePaper(card.node, 368, 118);
         this.tape(card.node, -156, 54, 62, 17, -13);
-        this.tape(card.node, 152, -48, 52, 15, 7);
         this.doodle(card.node, 'leaf', -166, -38, 30, C.goldDeep, 22, 128);
         this.doodle(card.node, 'star', 150, 36, 20, C.mintDeep, 0, 135);
-        this.doodle(card.node, 'stitch', 72, -42, 26, C.ink, -4, 82);
-        this.deckleOutline(card.node, 368, 118, 38);
+                this.deckleOutline(card.node, 368, 118, 38);
         const badgeNode = this.uiNode('QuestBadge', card.node, 138, 12, 80, 26);
         const badgeG = badgeNode.addComponent(Graphics);
         badgeG.fillColor = new Color(159, 216, 200, 90);
@@ -1901,14 +2118,12 @@ export class CourtyardBootstrap extends Component {
         const W = 380, H = 340;
         this.paperUnder(root, 4, -6, W + 16, H + 14, 'PauseUnder', -0.8, 150);
         const card = this.paperPanel(root, 0, 0, W, H, 'PausePaper',
-            new Color(250, 247, 238, 246));
+            new Color(250, 247, 238, 205));
         this.tape(card.node, -150, 142, 74, 18, -8);
-        this.tape(card.node, 152, 140, 60, 16, 6);
         this.deckleOutline(card.node, W, H, 44);
         this.doodle(card.node, 'leaf', -150, -112, 30, C.mintDeep, -18, 132);
         this.doodle(card.node, 'star', 150, -116, 20, C.goldDeep, 12, 140);
         this.doodle(card.node, 'flower', 128, 116, 26, C.mintDeep, -10, 120);
-        this.doodle(card.node, 'stitch', -128, 96, 24, C.ink, 6, 70);
 
         this.label(card.node, '已暂停', 34, C.ink, 0, 96, 260, 44,
             Label.HorizontalAlign.CENTER, Label.VerticalAlign.CENTER, true);
@@ -3329,6 +3544,17 @@ export class CourtyardBootstrap extends Component {
                 this.setUiVisible(true);
                 this.manualMoving = false;
                 this.playerPos.set(0, PAVING_TOP, -5.2);
+            },
+            /** A/B hook: bypass the scene RenderTexture pass. */
+            setPostGrade: (on: boolean) => {
+                if (!this.mainCamera) return;
+                if (on && this.postRT) {
+                    this.mainCamera.targetTexture = this.postRT;
+                    if (this.postSprite) this.postSprite.node.active = true;
+                } else {
+                    this.mainCamera.targetTexture = null;
+                    if (this.postSprite) this.postSprite.node.active = false;
+                }
             },
         };
         (globalThis as any).__courtyard = api;

@@ -33,16 +33,28 @@ if TOOLS_DIR not in sys.path:
     sys.path.insert(0, TOOLS_DIR)
 
 import courtyard_lib as cl  # noqa: E402
+
+# Whole-scene style switch, owned by courtyard_lib so foliage and grass agree.
+STYLE = cl.STYLE
 import courtyard_postcard as pc  # noqa: E402
 import env001_layout  # noqa: E402
 import build_env_courtyard as env  # noqa: E402
 import build_props_courtyard as props  # noqa: E402
 
-BLEND = os.path.join(cl.SRC_LAYOUT, "MAP001_courtyard.blend")
-GLB = os.path.join(cl.SRC_LAYOUT, "MAP001_courtyard.glb")
-LAYOUT = os.path.join(cl.SRC_LAYOUT, "layout.json")
-PNG = os.path.join(cl.PREVIEW_LAYOUT, "MAP001_courtyard.png")
-PNG_TOP = os.path.join(cl.PREVIEW_LAYOUT, "MAP001_topdown.png")
+BUILD_OUTPUT_ROOT = os.environ.get("N5_BUILD_OUTPUT_ROOT", "").strip()
+if BUILD_OUTPUT_ROOT:
+    BUILD_LAYOUT = os.path.join(BUILD_OUTPUT_ROOT, "source")
+    BUILD_PREVIEW = os.path.join(BUILD_OUTPUT_ROOT, "previews")
+    os.makedirs(BUILD_LAYOUT, exist_ok=True)
+    os.makedirs(BUILD_PREVIEW, exist_ok=True)
+else:
+    BUILD_LAYOUT = cl.SRC_LAYOUT
+    BUILD_PREVIEW = cl.PREVIEW_LAYOUT
+BLEND = os.path.join(BUILD_LAYOUT, "MAP001_courtyard.blend")
+GLB = os.path.join(BUILD_LAYOUT, "MAP001_courtyard.glb")
+LAYOUT = os.path.join(BUILD_LAYOUT, "layout.json")
+PNG = os.path.join(BUILD_PREVIEW, "MAP001_courtyard.png")
+PNG_TOP = os.path.join(BUILD_PREVIEW, "MAP001_topdown.png")
 
 MAP_SIZE = (28.0, 20.0)
 SOIL_TOP = -0.02
@@ -59,9 +71,15 @@ PAVING_CENTERS = [
 PAVING_HALF = 2.0
 
 
-def on_paving(x, z, inset=0.12):
-    """True when a map-space point falls inside a paving module."""
-    limit = PAVING_HALF - inset
+def on_paving(x, z, inset=0.12, margin=0.0):
+    """True when a map-space point falls inside a paving module.
+
+    `inset` shrinks the module before testing (tolerates a prop that is a little
+    inside the stone). `margin` grows it - that is the one planting needs, since
+    a tuft must keep its whole radius clear of the slabs. Passing a positive
+    radius as `inset` would do the opposite and let more grass onto the paving.
+    """
+    limit = PAVING_HALF - inset + margin
     return any(abs(x - cx) <= limit and abs(z - cz) <= limit
                for (cx, cz) in PAVING_CENTERS)
 
@@ -88,7 +106,7 @@ N5_GRASS_SCALE = float(os.environ.get("N5_GRASS_SCALE", "1.0"))
 # Per-group multipliers on top of the master scale: the ring planter is the
 # focal prop at the formal camera, the background strips are not. Defaults keep
 # every group at master scale, so an unset environment builds as before.
-N5_GRASS_AREAS = float(os.environ.get("N5_GRASS_AREAS", "1.0"))
+N5_GRASS_AREAS = float(os.environ.get("N5_GRASS_AREAS", "2.0"))
 N5_GRASS_BEDS = float(os.environ.get("N5_GRASS_BEDS", "1.0"))
 N5_GRASS_RING = float(os.environ.get("N5_GRASS_RING", "1.0"))
 N5_GRASS_SIDES = float(os.environ.get("N5_GRASS_SIDES", "1.0"))
@@ -109,20 +127,35 @@ N5_GRASS_BLADE_KEEP = float(os.environ.get("N5_GRASS_BLADE_KEEP", "0.44"))
 # silently made the ring inherit the stricter global value.
 N5_GRASS_RING_BLADE_KEEP = float(os.environ.get("N5_GRASS_RING_BLADE_KEEP", "0.55"))
 
+# Look-dev knobs (bench A/B/C): every blade in the map is built by _add_blade,
+# so scaling width/height there covers lawn, ring bed and side planters at once
+# without touching the individual tuft call sites.
+N5_GRASS_WIDTH_SCALE = float(os.environ.get("N5_GRASS_WIDTH_SCALE", "1") or 1)
+N5_GRASS_HEIGHT_SCALE = float(os.environ.get("N5_GRASS_HEIGHT_SCALE", "1") or 1)
+# Blades per tuft. Widening blades without thinning them keeps the same edge
+# count per pixel (just chunkier), so the look-dev bench moves width and count
+# together: fewer, wider blades read calmer at 720p than many thin ones.
+N5_GRASS_COUNT_SCALE = float(os.environ.get("N5_GRASS_COUNT_SCALE", "1") or 1)
+# Blade silhouette: segments / bend exponent / tip taper / awn forks.
+N5_GRASS_SEGMENTS = int(os.environ.get("N5_GRASS_SEGMENTS", "2") or 2)
+N5_GRASS_CURVE = float(os.environ.get("N5_GRASS_CURVE", "2.0") or 2.0)
+N5_GRASS_TAPER = float(os.environ.get("N5_GRASS_TAPER", "0.82") or 0.82)
+N5_GRASS_SPIKE = os.environ.get("N5_GRASS_SPIKE", "0") == "1"
+
 # 2026-10-26 D2: hedge leaf-card density. Cards are 4 tris each and the two
 # hedge rows carried 467,624 of the map's triangles (41%) for a band a few
 # dozen pixels tall at the formal camera. `*_BACK_KEEP` addresses the flank
 # that faces away from the courtyard: those cards sit behind the solid hedge
 # volume from every shipped camera, so 0 removes them without touching the
 # silhouette. Top caps are never thinned. Defaults 1.0 keep the old build.
-N5_HEDGE_KEEP = float(os.environ.get("N5_HEDGE_KEEP", "0.53"))
+N5_HEDGE_KEEP = float(os.environ.get("N5_HEDGE_KEEP", "0.78"))
 # W3 vegetation_depth: the back face used to be stripped to zero, so the hedge
 # read as one flat card from the front. Keeping a thin back layer lets the
 # near face, the mid band and the far foliage separate by density instead of
 # by a silhouette line.
-N5_HEDGE_BACK_KEEP = float(os.environ.get("N5_HEDGE_BACK_KEEP", "0.26"))
-N5_HEDGE_FAR_KEEP = float(os.environ.get("N5_HEDGE_FAR_KEEP", "0.53"))
-N5_HEDGE_FAR_BACK_KEEP = float(os.environ.get("N5_HEDGE_FAR_BACK_KEEP", "0.32"))
+N5_HEDGE_BACK_KEEP = float(os.environ.get("N5_HEDGE_BACK_KEEP", "0.42"))
+N5_HEDGE_FAR_KEEP = float(os.environ.get("N5_HEDGE_FAR_KEEP", "0.74"))
+N5_HEDGE_FAR_BACK_KEEP = float(os.environ.get("N5_HEDGE_FAR_BACK_KEEP", "0.45"))
 
 
 def _try_render(path, label):
@@ -142,10 +175,14 @@ def _try_render(path, label):
 
 
 def _gs(count, group=1.0):
-    """Scale a patch count without ever reaching zero."""
+    """Scale a patch count without ever reaching zero.
+
+    2026-10-27: this used to clamp at `count` so the knobs could only thin the
+    sward. Filling the bare ground on the right of frame needs the opposite
+    direction, so the scale is now symmetric. Defaults are still 1.0, which is
+    exactly the old behaviour.
+    """
     scale = N5_GRASS_SCALE * group
-    if scale >= 0.999:
-        return count
     return max(1, int(round(count * scale)))
 
 STATE = {
@@ -223,9 +260,16 @@ def add_ground(collection):
     return [ground, skirt]
 
 
-def _add_blade(bm, base, height, lean, width, mat_index, rng, segments=2):
+def _add_blade(bm, base, height, lean, width, mat_index, rng, segments=None):
     base = Vector(base)
     lean = Vector(lean)
+    if segments is None:
+        segments = N5_GRASS_SEGMENTS
+    if N5_GRASS_HEIGHT_SCALE != 1.0:
+        height = height * N5_GRASS_HEIGHT_SCALE
+        lean = lean * N5_GRASS_HEIGHT_SCALE
+    if N5_GRASS_WIDTH_SCALE != 1.0:
+        width = width * N5_GRASS_WIDTH_SCALE
     wdir = Vector((-lean.y, lean.x, 0.0))
     if wdir.length < 1e-5:
         wdir = Vector((1.0, 0.0, 0.0))
@@ -233,15 +277,29 @@ def _add_blade(bm, base, height, lean, width, mat_index, rng, segments=2):
     prev = None
     for s in range(segments + 1):
         t = s / segments
-        p = base + Vector((lean.x * t * t, lean.y * t * t, height * t))
-        w = width * (1.0 - 0.82 * t) * 0.5
+        # A straight t^2 lean gives a rigid needle. A higher exponent bends the
+        # blade over near the tip, which is what the reference sward does and
+        # what stops the grass reading as pins stuck in the ground.
+        k = t ** N5_GRASS_CURVE
+        p = base + Vector((lean.x * k, lean.y * k, height * t))
+        w = width * (1.0 - N5_GRASS_TAPER * t) * 0.5
         l = bm.verts.new(p - wdir * w)
         r = bm.verts.new(p + wdir * w)
         if prev is not None:
             f = bm.faces.new((prev[0], l, r, prev[1]))
             f.material_index = mat_index
         prev = (l, r)
-    tip = bm.verts.new(base + Vector((lean.x, lean.y, height)) + Vector((0, 0, height * 0.08)))
+    top = base + Vector((lean.x, lean.y, height))
+    if N5_GRASS_SPIKE:
+        # Dry-grass awns: two short forks off the tip instead of a single point.
+        for sign in (-1, 1):
+            tp = top + Vector((0, 0, height * (0.10 if sign > 0 else 0.02))) \
+                + wdir * (width * 0.30 * sign)
+            v = bm.verts.new(tp)
+            f = bm.faces.new((prev[0], v, prev[1]))
+            f.material_index = mat_index
+        return
+    tip = bm.verts.new(top + Vector((0, 0, height * 0.08)))
     f = bm.faces.new((prev[0], tip, prev[1]))
     f.material_index = mat_index
 
@@ -261,9 +319,38 @@ def _add_flower(bm, center, rng, size, petal_index=0, core_index=1,
                 size * 0.30, spin, core_index, tilt=0.0)
 
 
+def _add_grass_pad(bm, center, rng, radius, height, blade_width, mats, count):
+    """Cartoon tuft: 5 wide flat blades, no subdivision, 1 triangle each.
+
+    Low-poly grass reads as a few chunky blades with a hard edge; subdividing
+    them (the o/r path) only produces thin needles that alias into noise.
+    """
+    n = max(3, min(7, int(round(count * 0.45))))
+    for _ in range(n):
+        a = rng.uniform(0, math.tau)
+        rr = radius * math.sqrt(rng.uniform(0, 1)) * 0.7
+        bx = center[0] + rr * math.cos(a)
+        by = center[1] + rr * math.sin(a)
+        bz = center[2] + 0.004
+        h = height * rng.uniform(0.78, 1.25)
+        lean = 0.34 * h
+        w = blade_width * rng.uniform(1.5, 2.3)
+        mat = rng.choice(mats)
+        tip = bm.verts.new((bx + math.cos(a) * lean, by + math.sin(a) * lean, bz + h))
+        left = bm.verts.new((bx - math.sin(a) * w, by + math.cos(a) * w, bz))
+        right = bm.verts.new((bx + math.sin(a) * w, by - math.cos(a) * w, bz))
+        face = bm.faces.new((left, right, tip))
+        face.material_index = mat
+        face.smooth = False
+
+
 def _add_grass_tuft(bm, center, rng, radius, height, blade_width, mats, count=14,
                     keep=None):
+    if STYLE == "c":
+        return _add_grass_pad(bm, center, rng, radius, height, blade_width, mats, count)
     blade_keep = N5_GRASS_BLADE_KEEP if keep is None else keep
+    if N5_GRASS_COUNT_SCALE != 1.0:
+        count = max(1, int(round(count * N5_GRASS_COUNT_SCALE)))
     for i in range(count):
         a = rng.uniform(0, math.tau)
         rr = radius * math.sqrt(rng.uniform(0, 1))
@@ -283,8 +370,12 @@ def _add_grass_tuft(bm, center, rng, radius, height, blade_width, mats, count=14
         _add_blade(bm, base, h, lean, w, mat, rng)
 
 
+VEG_AUDIT = []
+
+
 def _add_turf_patch(bm, center, rng, spread, mats, density, height,
-                    blade_width, z=0.0, keep=None):
+                    blade_width, z=0.0, keep=None, blocked=None,
+                    container="unknown"):
     """A tight sward of overlapping tufts so ground reads as planted, not sticked.
 
     Blades are shorter and wider than a lone tuft and each patch re-uses one of
@@ -295,8 +386,24 @@ def _add_turf_patch(bm, center, rng, spread, mats, density, height,
         rr = spread * math.sqrt(rng.uniform(0, 1))
         cx = center[0] + rr * math.cos(a)
         cz = center[1] + rr * math.sin(a)
-        _add_grass_tuft(bm, (cx, cz, center[2] + z), rng,
-                        rng.uniform(0.10, 0.20) * spread + 0.07,
+        tuft_r = rng.uniform(0.10, 0.20) * spread + 0.07
+        # A tuft is not a point: blades reach roughly tuft_r plus their lean
+        # beyond the centre. Testing only the centre let the sward spill up to
+        # ~0.15 m onto the flagstones, which is what read as "grass on the
+        # paving". Test the tuft's own radius against the paving edge instead.
+        hit = False
+        if blocked is not None:
+            try:
+                hit = bool(blocked(cx, cz, margin=tuft_r + 0.16))
+            except TypeError:
+                hit = bool(blocked(cx, cz))
+        VEG_AUDIT.append({"x": round(cx, 3), "z": round(cz, 3),
+                          "h": round(center[2] + z, 3),
+                          "on_paving": hit, "container": container,
+                          "dropped": hit})
+        if hit:
+            continue
+        _add_grass_tuft(bm, (cx, cz, center[2] + z), rng, tuft_r,
                         height * rng.uniform(0.72, 1.18),
                         blade_width * rng.uniform(1.15, 1.75), mats,
                         count=rng.randint(10, 14), keep=keep)
@@ -367,6 +474,10 @@ def _hedge_leaf_skin(bm, axis, fixed, start, end, z0, z1, thick, rng,
     angle of the side hedges a thinned ridge lets the pale outer ground show
     through.
     """
+    if STYLE == "c":
+        # Low-poly hedges are the solid box already built underneath; a card
+        # skin on top would only add 40x the triangles for a fuzzier edge.
+        return 0
     if keep_back is None:
         keep_back = keep
     # Hedges ring the courtyard, so the visible flank is always the one facing
@@ -387,7 +498,7 @@ def _hedge_leaf_skin(bm, axis, fixed, start, end, z0, z1, thick, rng,
                     center = (fixed + side * off, u, z + rng.uniform(-0.05, 0.05))
                 layer_keep = 1.0 if t >= 0.9 else side_keep
                 cl.add_leaf_cluster(bm, center, rng.uniform(0.56, 0.78), 42, rng,
-                                    mats, leaf_size=rng.uniform(0.16, 0.23),
+                                    mats, leaf_size=_bg_leaf(rng.uniform(0.16, 0.23)),
                                     flatten=0.38, shell_inner=0.34, z_min=-0.80,
                                     keep=layer_keep)
         # A leaf cap along the wavy top closes the silhouette.
@@ -397,7 +508,7 @@ def _hedge_leaf_skin(bm, axis, fixed, start, end, z0, z1, thick, rng,
             else:
                 center = (fixed + rng.uniform(-0.24, 0.24), u + dx, top + 0.06)
             cl.add_leaf_cluster(bm, center, rng.uniform(0.48, 0.66), 34, rng,
-                                mats, leaf_size=rng.uniform(0.17, 0.235),
+                                mats, leaf_size=_bg_leaf(rng.uniform(0.17, 0.235)),
                                 flatten=0.52, shell_inner=0.26, z_min=-0.45)
         if tall_shoots and i % 5 == 2:
             if axis == "x":
@@ -410,8 +521,19 @@ def _hedge_leaf_skin(bm, axis, fixed, start, end, z0, z1, thick, rng,
             cl.add_smooth_tube(bm, [anchor, endp], [0.014, 0.003], segments=4,
                                mat_index=mats[0], ring_noise=0.04, rng=rng)
             cl.add_leaf_cluster(bm, endp, 0.22, 10, rng, mats,
-                                leaf_size=0.15, flatten=0.8, shell_inner=0.25,
+                                leaf_size=_bg_leaf(0.15), flatten=0.8, shell_inner=0.25,
                                 z_min=-0.5)
+
+
+def _bg_leaf(size):
+    """Undo N5_LEAF_SCALE for background foliage.
+
+    The hero crown needs oversized cards to read at 4 m, but the same multiplier
+    on a hedge 14 m away inflates every background leaf to about a metre and the
+    horizon becomes a heap of flat brown triangles. Background clusters keep the
+    size they were authored at.
+    """
+    return size / max(1.0, cl.LEAF_SCALE ** 0.55)
 
 
 def add_background_scenery(collection):
@@ -428,8 +550,12 @@ def add_background_scenery(collection):
     # paying for a full MAP001 rebuild per hypothesis.
     far_mass_bm = bmesh.new()
     far_leaf_bm = bmesh.new()
-    mass_mats = [cl.mat_leaf_deep(), cl.mat_leaf_amber(), cl.mat_leaf_olive(),
-                 cl.mat_leaf_far()]
+    # 2026-10-27: the volume under the leaf skin used to borrow the leaf
+    # palette, and with no cards covering the crown of the hedge it showed
+    # through as a band of smooth cream "dunes" across the top of frame. The
+    # volume is interior shadow now; every lit surface is a leaf card.
+    mass_mats = [cl.mat_leaf_mass(), cl.mat_leaf_mass(),
+                 cl.mat_leaf_mass(), cl.mat_leaf_mass()]
     # One merged slot list for every card mesh; the palettes below are slot
     # indices, so a row can be graded without rebuilding the mesh.
     leaf_cards_mats = [cl.mat_leaf_olive(), cl.mat_leaf_ochre(),
@@ -478,7 +604,7 @@ def add_background_scenery(collection):
             continue
         cl.add_leaf_cluster(leaf_bm, (x, -9.42, rng.uniform(0.38, 0.82)),
                             rng.uniform(0.24, 0.42), 14, rng,
-                            [2, 1, 0, 3], leaf_size=0.115, flatten=0.44,
+                            [2, 1, 0, 3], leaf_size=_bg_leaf(0.115), flatten=0.44,
                             shell_inner=0.18, z_min=-0.45)
 
     hedge = cl.finish_mesh("MAP001_bg_hedge", mass_bm, mass_mats, collection)
@@ -490,6 +616,8 @@ def add_background_scenery(collection):
     hedge_cards = cl.finish_mesh("MAP001_bg_hedge_cards", leaf_bm,
                                  leaf_cards_mats, collection)
     for obj in (hedge, hedge_cards):
+        if obj is None:
+            continue
         obj["asset_id"] = "SCENERY"
         obj["role"] = "continuous background hedge outside the playable area"
 
@@ -503,6 +631,8 @@ def add_background_scenery(collection):
     far_hedge_cards = cl.finish_mesh("MAP001_bg_hedge_far_cards", far_leaf_bm,
                                      leaf_cards_mats, collection)
     for obj in (far_hedge, far_hedge_cards):
+        if obj is None:
+            continue
         obj["asset_id"] = "SCENERY"
         obj["role"] = "second, higher hedge row behind the north hedge"
 
@@ -514,9 +644,9 @@ def add_background_scenery(collection):
     for i in range(9):
         mx = -13.0 + i * 3.25 + rng.uniform(-0.8, 0.8)
         my = rng.uniform(-15.6, -12.3)
-        mr = rng.uniform(1.5, 2.7)
-        cl.add_mass_lobe(far_bm, (mx, my, rng.uniform(0.22, 0.72)), mr, rng,
-                         flatten=0.32, subdiv=1, displace=0.10, mat_index=1)
+        mr = rng.uniform(1.25, 1.75)
+        cl.add_mass_lobe(far_bm, (mx, my, rng.uniform(0.18, 0.36)), mr, rng,
+                         flatten=0.18, subdiv=2, displace=0.025, mat_index=1)
     far_rises = cl.finish_mesh("MAP001_far_rises", far_bm, far_mats, collection)
     far_rises["asset_id"] = "SCENERY"
     far_rises["role"] = "low haze-toned ground rises between hedge and treeline"
@@ -528,14 +658,18 @@ def add_background_scenery(collection):
     # Far layers step LIGHTER, not darker (aerial perspective). n4 graded
     # distance darker than the near hedge, which inverted depth and read as a
     # dark band across the top of frame.
-    tree_mats = [cl.mat_leaf_olive(), cl.mat_leaf_deep(), cl.mat_leaf_amber(),
-                 cl.mat_leaf_gold(), cl.mat_leaf_far(),
-                 cl.mat_leaf_mid_haze(), cl.mat_leaf_haze()]
-    bg_tree_specs = (((-12.2, -13.9, 6.7, 1.18),
-                      (-6.0, -14.6, 7.3, 1.28),
-                      (0.8, -14.2, 6.6, 1.12),
-                      (6.8, -14.9, 7.5, 1.32),
-                      (12.0, -14.0, 6.8, 1.15)) if N5_LAYERS["bg_trees"] else ())
+    tree_mats = [cl.mat_leaf_atlas()]
+    # Background crowns get only haze mats: with the warm key they used to
+    # render as dark maroon lumps that pull the eye to the top of frame.
+    # Far crowns assign card material indices 0..2. A one-slot list silently
+    # exported indices 1 and 2 as the glTF default white material, which caused
+    # the pale triangular foliage band in the game camera.
+    bg_tree_mats = [cl.mat_leaf_atlas(), cl.mat_leaf_atlas(), cl.mat_leaf_atlas()]
+    bg_tree_specs = (((-12.2, -13.9, 5.8, 0.95),
+                      (-6.0, -14.6, 6.1, 1.02),
+                      (0.8, -14.2, 5.7, 0.90),
+                      (6.8, -14.9, 6.0, 1.00),
+                      (12.0, -14.0, 5.8, 0.92)) if N5_LAYERS["bg_trees"] else ())
     for ti, (tx, ty, th, tr) in enumerate(bg_tree_specs):
         cl.add_smooth_tube(tree_trunk_bm,
                            [(tx, ty, 0.0), (tx + 0.08, ty + 0.04, th * 0.42),
@@ -554,13 +688,13 @@ def add_background_scenery(collection):
                     (center[0] + tr * rr * ox,
                      center[1] + tr * rr * 0.55 * oy,
                      center[2] + tr * rr * oz),
-                    tr * rr * cr, 60, rng, [5, 2, 5, 1, 3, 5],
-                    leaf_size=rng.uniform(0.17, 0.25),
+                    tr * rr * cr, 60, rng, [1, 2, 1, 0, 2, 1],
+                    leaf_size=_bg_leaf(rng.uniform(0.20, 0.29)),
                     flatten=0.78, shell_inner=0.28, z_min=-0.58)
     tree_trunks = cl.finish_mesh("MAP001_bg_tree_trunks", tree_trunk_bm,
                                  [cl.mat_wood_dark()], collection)
     tree_crowns = cl.finish_mesh("MAP001_bg_tree_crowns", tree_leaf_bm,
-                                 tree_mats, collection)
+                                 bg_tree_mats, collection)
     for obj in (tree_trunks, tree_crowns):
         obj["asset_id"] = "SCENERY"
         obj["role"] = "background autumn trees behind hedge"
@@ -570,27 +704,29 @@ def add_background_scenery(collection):
     band_bm = bmesh.new()
     band_leaf_bm = bmesh.new()
     if N5_LAYERS["treeline"]:
-        _hedge_volume(band_bm, "x", -16.2, -16.0, 16.0, 2.1, 4.1, 1.5, rng, 0)
-    for i in range(34 if N5_LAYERS["treeline"] else 0):
+        # P1-foreground pass: keep the horizon as a soft, low canopy instead
+        # of a tall brown wall at the top of the playable camera.
+        _hedge_volume(band_bm, "x", -16.2, -16.0, 16.0, 2.0, 3.35, 1.15, rng, 0)
+    for i in range(27 if N5_LAYERS["treeline"] else 0):
         x = -15.6 + i * 0.95 + rng.uniform(-0.25, 0.25)
-        z = 4.9 + 1.15 * math.sin(i * 0.55) + rng.uniform(-0.2, 0.35)
-        cl.add_leaf_cluster(band_leaf_bm, (x, -16.1, z), rng.uniform(1.35, 1.85),
-                            46, rng, [6, 6, 5, 6, 3],
-                            leaf_size=rng.uniform(0.20, 0.28),
+        z = 3.9 + 0.72 * math.sin(i * 0.55) + rng.uniform(-0.15, 0.20)
+        cl.add_leaf_cluster(band_leaf_bm, (x, -16.1, z), rng.uniform(0.95, 1.35),
+                            32, rng, [2, 2, 1, 2, 0],
+                            leaf_size=_bg_leaf(rng.uniform(0.20, 0.26)),
                             flatten=0.80, shell_inner=0.22, z_min=-0.65)
-    # A taller, broken crown line above the ridge reads as distant trees rather
-    # than a green hill.
-    for i in range(24 if N5_LAYERS["treeline"] else 0):
-        x = -15.2 + i * 1.3 + rng.uniform(-0.35, 0.35)
-        z = 6.05 + 0.75 * math.sin(i * 0.8 + 0.7) + rng.uniform(-0.25, 0.35)
-        cl.add_leaf_cluster(band_leaf_bm, (x, -16.3, z), rng.uniform(0.95, 1.4),
-                            42, rng, [6, 5, 6, 6, 4, 6],
-                            leaf_size=rng.uniform(0.20, 0.27),
+    # A light, lower crown line closes the skyline without making a jagged
+    # mountain silhouette. Fewer cards also reduce far-scene overdraw.
+    for i in range(17 if N5_LAYERS["treeline"] else 0):
+        x = -15.2 + i * 1.9 + rng.uniform(-0.30, 0.30)
+        z = 4.75 + 0.45 * math.sin(i * 0.8 + 0.7) + rng.uniform(-0.15, 0.20)
+        cl.add_leaf_cluster(band_leaf_bm, (x, -16.3, z), rng.uniform(0.70, 1.05),
+                            28, rng, [2, 1, 2, 2, 0, 2],
+                            leaf_size=_bg_leaf(rng.uniform(0.20, 0.26)),
                             flatten=0.76, shell_inner=0.25, z_min=-0.55)
     band = cl.finish_mesh("MAP001_bg_treeline_mass", band_bm,
                           [cl.mat_leaf_haze(), cl.mat_leaf_mid_haze()], collection)
     band_cards = cl.finish_mesh("MAP001_bg_treeline_cards", band_leaf_bm,
-                                tree_mats, collection)
+                                bg_tree_mats, collection)
     for obj in (band, band_cards):
         obj["asset_id"] = "SCENERY"
         obj["role"] = "distant treeline behind the hedge"
@@ -634,6 +770,70 @@ def add_proxy_circle(collection, name, x, z, radius, height):
     return obj
 
 
+def add_accents(collection):
+    """Colour accents the reference uses to break the warm monochrome: a few
+    glazed jars and two short bunting lines (teal/orange/cream). Small saturated
+    objects at human scale do the colour work that post-processing cannot."""
+    rng = random.Random(20261027 + 5)
+    teal = cl.make_procedural_material("MAT_ceramic_teal", "#4F7C74", roughness=0.34,
+                                       noise_scale=5.0, color_variation=0.05,
+                                       roughness_variation=0.08, bump_strength=0.05)
+    flag_teal = cl.make_procedural_material("MAT_flag_teal", "#3E6E6A", roughness=0.78)
+    flag_orange = cl.make_procedural_material("MAT_flag_orange", "#C4653A", roughness=0.78)
+    flag_cream = cl.make_procedural_material("MAT_flag_cream", "#D8C7A6", roughness=0.80)
+
+    jars_bm = bmesh.new()
+    for (jx, jz) in ((2.15, -0.85), (-2.35, -0.70)):
+        base = (jx, -jz, 0.0)
+        cl.add_cylinder(jars_bm, (base[0], base[1], 0.02), (base[0], base[1], 0.34),
+                        0.24, 0.20, segments=14, mat_index=0)
+        cl.add_cylinder(jars_bm, (base[0], base[1], 0.34), (base[0], base[1], 0.40),
+                        0.13, 0.16, segments=14, mat_index=0)
+        cl.add_cylinder(jars_bm, (base[0], base[1], 0.40), (base[0], base[1], 0.44),
+                        0.19, 0.18, segments=14, mat_index=0)
+    jars = cl.finish_mesh("MAP001_accent_jars", jars_bm, [teal], collection)
+    for obj in (jars,):
+        obj["asset_id"] = "SCENERY"
+        obj["role"] = "glazed jars: cool accent near the ring planter"
+
+    flags_bm = bmesh.new()
+    string_bm = bmesh.new()
+    def bunting(x0, y0, x1, y1, z, sag, step=0.42):
+        import math as _m
+        n = max(2, int(_m.hypot(x1 - x0, y1 - y0) / step))
+        pts = []
+        for i in range(n + 1):
+            t = i / n
+            x = x0 + (x1 - x0) * t
+            y = y0 + (y1 - y0) * t
+            zz = z - sag * 4.0 * t * (1.0 - t)
+            pts.append((x, y, zz))
+        cl.add_smooth_tube(string_bm, pts, [0.008] * len(pts), segments=5, mat_index=0)
+        for i in range(1, n):
+            (sx, sy, sz), (ex, ey, ez) = pts[i - 1], pts[i]
+            mx, my, mz = (sx + ex) / 2.0, (sy + ey) / 2.0, (sz + ez) / 2.0
+            mat = (i * 7) % 3
+            for side in (1.0, -1.0):
+                yoff = 0.0
+                v0 = flags_bm.verts.new((mx - 0.14, my + yoff, mz))
+                v1 = flags_bm.verts.new((mx + 0.14, my + yoff, mz))
+                v2 = flags_bm.verts.new((mx, my + yoff, mz - 0.26))
+                if side < 0:
+                    f = flags_bm.faces.new((v0, v2, v1))
+                else:
+                    f = flags_bm.faces.new((v0, v1, v2))
+                f.material_index = mat
+    bunting(-7.0, -8.4, 7.0, -8.4, 2.35, 0.35)
+    bunting(-8.5, -3.2, -8.5, 3.8, 2.15, 0.30)
+    flags = cl.finish_mesh("MAP001_accent_bunting", flags_bm,
+                           [flag_teal, flag_orange, flag_cream], collection)
+    strings = cl.finish_mesh("MAP001_accent_bunting_string", string_bm,
+                             [cl.mat_metal_brass()], collection)
+    for obj in (flags, strings):
+        obj["asset_id"] = "SCENERY"
+        obj["role"] = "bunting lines: teal/orange/cream accents"
+
+
 def add_foreground_details(collection):
     """Low native planting beds and leaf drifts that break the empty paving
     without changing the playable route or the camera."""
@@ -642,7 +842,7 @@ def add_foreground_details(collection):
     soil_mat = cl.mat_soil()
     leaf_mats = [cl.mat_leaf_ochre(), cl.mat_leaf_amber(),
                  cl.mat_leaf_olive(), cl.mat_leaf_deep()]
-    beds = ((-4.6, -5.8, 2.4, 1.2), (4.6, -5.8, 2.4, 1.2))
+    beds = ((-4.6, -5.8, 3.2, 1.35), (4.6, -5.8, 3.2, 1.35))
     for bi, (bx, bz, bw, bd) in enumerate(beds):
         border = bmesh.new()
         cl.add_box(border, (0, 0, 0.05), (bw, bd, 0.10), mat_index=2)
@@ -683,9 +883,9 @@ def add_foreground_details(collection):
             gx = rng.uniform(-bw / 2 + 0.24, bw / 2 - 0.24)
             gz = rng.uniform(-bd / 2 + 0.20, bd / 2 - 0.20)
             _add_turf_patch(bed_grass, (gx, gz, 0.205), rng,
-                            rng.uniform(0.18, 0.32), [0, 0, 1, 2, 3],
-                            rng.randint(4, 6), rng.uniform(0.22, 0.38),
-                            rng.uniform(0.020, 0.030))
+                            rng.uniform(0.20, 0.34), [0, 0, 1, 2, 3],
+                            rng.randint(5, 7), rng.uniform(0.42, 0.60),
+                            rng.uniform(0.050, 0.064), container="fg_bed")
         bed_grass_obj = cl.finish_mesh("MAP001_fg_bed_%d_grass" % bi, bed_grass,
                                        [cl.mat_grass_dry(), cl.mat_grass_pale(),
                                         cl.mat_leaf_olive(), cl.mat_leaf_deep()],
@@ -769,9 +969,8 @@ def add_garden_ground(collection, plants_collection, proxy_collection):
 
     # Grass cover: dense overlapping turf patches rather than lone tall tufts.
     grass_bm = bmesh.new()
-    grass_mats = [cl.mat_grass_dry(), cl.mat_grass_pale(),
-                  cl.mat_leaf_olive(), cl.mat_leaf_deep()]
-    turf_mats = [0, 0, 1, 1, 2, 3]
+    grass_mats = [cl.mat_grass_dry(), cl.mat_grass_pale()]
+    turf_mats = [0, 0, 1, 1, 0, 1]
     areas = [(-12.2, 0.0, 1.8, 9.2, 150), (12.2, 0.0, 1.8, 9.2, 150),
              (-9.1, -4.6, 1.1, 3.4, 60), (9.1, -4.6, 1.1, 3.4, 60),
              (-9.1, 4.6, 1.1, 3.4, 60), (9.1, 4.6, 1.1, 3.4, 60),
@@ -791,13 +990,16 @@ def add_garden_ground(collection, plants_collection, proxy_collection):
                 continue
             bx = ax + u * rx
             bz = az + v * rz
-            if on_paving(bx, bz):
+            # Keep the whole patch (centre + its spread) off the flagstones;
+            # per-tuft testing inside the patch would otherwise cull most of it.
+            if on_paving(bx, bz, margin=0.38):
                 continue
             placed += 1
             _add_turf_patch(grass_bm, (bx, -bz, 0.012), rng,
-                            rng.uniform(0.20, 0.42), turf_mats,
+                            rng.uniform(0.28, 0.50), turf_mats,
                             rng.randint(4, 6), rng.uniform(0.17, 0.29),
-                            rng.uniform(0.020, 0.030))
+                            rng.uniform(0.042, 0.056),
+                            blocked=on_paving, container="open_ground")
     for (bx, bz, bw, bd) in beds:
         by = -bz
         if on_paving(bx, bz):
@@ -808,7 +1010,8 @@ def add_garden_ground(collection, plants_collection, proxy_collection):
             _add_turf_patch(grass_bm, (gx, gz, 0.24), rng,
                             rng.uniform(0.22, 0.40), [0, 0, 1, 2, 3],
                             rng.randint(4, 6), rng.uniform(0.24, 0.42),
-                            rng.uniform(0.022, 0.032))
+                            rng.uniform(0.042, 0.056),
+                            blocked=on_paving, container="bed")
     # Ring-planter soil: P1's planters overflow, so fill the whole disc with a
     # golden sward instead of a few sparse tufts around the trunk.
     for _ in range(_gs(190, N5_GRASS_RING)):
@@ -817,8 +1020,9 @@ def add_garden_ground(collection, plants_collection, proxy_collection):
         _add_turf_patch(grass_bm, (r * math.cos(a), r * math.sin(a), 0.625),
                         rng, rng.uniform(0.16, 0.30), [1, 0, 1, 0, 2],
                         rng.randint(4, 6), rng.uniform(0.26, 0.46),
-                        rng.uniform(0.020, 0.030),
-                        keep=(N5_GRASS_RING_BLADE_KEEP or None))
+                        rng.uniform(0.042, 0.056),
+                        keep=(N5_GRASS_RING_BLADE_KEEP or None),
+                        container="ring_planter")
     # Side planters read as empty boxes at the formal camera; give them the same
     # overflowing sward as the ring planter, in each planter's local frame.
     side_planters = ((-11.8, -4.6, 0.0), (11.8, 4.8, math.radians(90)))
@@ -832,7 +1036,8 @@ def add_garden_ground(collection, plants_collection, proxy_collection):
             _add_turf_patch(grass_bm, (wx, wy, 0.42), rng,
                             rng.uniform(0.16, 0.28), [1, 0, 1, 2, 3],
                             rng.randint(4, 6), rng.uniform(0.24, 0.44),
-                            rng.uniform(0.020, 0.030))
+                            rng.uniform(0.042, 0.056),
+                            container="side_planter")
     # Moss/leaf edges along paving modules and bed feet.
     moss_bm = bmesh.new()
     moss_mats = [cl.mat_leaf_olive(), cl.mat_leaf_deep(),
@@ -1109,6 +1314,7 @@ def build():
     }
     add_background_scenery(c_env)
     add_foreground_details(c_env)
+    add_accents(c_env)
     add_garden_ground(c_env, c_plants, c_col)
 
     # Paving modules (same 4x4 layout as ENV001, map LOD bevel).
@@ -1187,8 +1393,13 @@ def build():
     rail_objs = []
     rail_index = 0
     rail_specs = []
+    # The near rail sits at -8.8 so it enters the bottom of the game frame and
+    # gives the paving the foreground occlusion the reference has.
     for x in range(-13, 14, 2):
-        rail_specs.append((x, -9.9, 0.0))
+        # Open a 4 m gate for the foreground stair at x=8.0.
+        if x in (7, 9):
+            continue
+        rail_specs.append((x, -8.8, 0.0))
     for z in range(-9, 10, 2):
         rail_specs.append((13.9, z, 90.0))
         rail_specs.append((-13.9, z, 90.0))
@@ -1206,13 +1417,15 @@ def build():
         if inst["asset_id"] == "ENV004":
             inst["merged_object"] = rail_merged.name
 
-    # Decorative edge steps (landscape only, blocked).
-    step_objs = env.create_steps(c_edge, (-4.6, 9.05, 0), 180.0,
+    # Decorative foreground steps (landscape only, blocked). Keep them left of
+    # the traversal lane and inside the formal camera's lower frame.
+    step_objs = env.create_steps(c_edge, (-2.0, 6.8, 0), 180.0,
                                  "MAP001_steps", lod=True)
-    record("ENV005", "edge_steps", -4.6, -9.05, 180.0,
-           collider=box_collider(-4.6, -9.05, 2.7, 1.4, 180.0, 0.49),
+    record("ENV005", "edge_steps", -2.0, -6.8, 180.0,
+           collider=box_collider(-2.0, -6.8, 2.7, 1.4, 180.0, 0.49),
            source="art/full/source/environment/ENV005_steps.blend",
-           note="landscape only at the south edge; no climbing", objects=step_objs)
+           note="landscape foreground left of traversal lane; no climbing",
+           objects=step_objs)
 
     # Central ring planter + hero tree.
     planter_objs = env.create_ring_planter(c_env, (0, 0, 0), 0.0,
@@ -1452,6 +1665,12 @@ def build():
                    (-3.7, 9.0, -20.0, 1.00), (6.0, -9.0, 75.0, 1.00),
                    (-10.6, -8.6, 10.0, 1.00), (10.8, 6.9, 200.0, 1.00)]
     for i, (x, z, rot, scale) in enumerate(grass_specs):
+        # These spots predate the paving layout and four of them sit inside a
+        # module. A tuft is ~0.5 m across, so inset by its own radius: this is
+        # what put dry grass on the flagstones.
+        if on_paving(x, z, margin=0.55):
+            print("PLANTING_SKIP dry_grass_%02d at %.2f,%.2f on paving" % (i, x, z))
+            continue
         objs = env.create_dry_grass(c_plants, (x, -z, 0.0), rot,
                                     "MAP001_dry_grass_%02d" % i)
         if scale != 1.0:
@@ -1467,6 +1686,11 @@ def build():
                   (-6.5, 8.7, 10.0, 1.10), (6.5, 8.7, 60.0, 1.15),
                   (-11.8, 4.6, 30.0, 1.10), (11.8, -5.0, 90.0, 1.10)]
     for i, (x, z, rot, scale) in enumerate(leaf_specs):
+        # Same story as the dry grass: four leaf piles were authored on top of
+        # paving modules. Leaves on stone read as debris, not as planting.
+        if on_paving(x, z, margin=0.35):
+            print("PLANTING_SKIP fallen_leaves_%02d at %.2f,%.2f on paving" % (i, x, z))
+            continue
         objs = env.create_fallen_leaves(c_plants, (x, -z, 0.0), rot,
                                         "MAP001_fallen_leaves_%02d" % i)
         if scale != 1.0:
@@ -1583,13 +1807,35 @@ def build():
                   "MAT_bench_wood"}
     for o in export_meshes:
         names = {m.name for m in o.data.materials if m}
+        if "ENG_MAT_leaf_atlas" in names or "MAT_leaf_atlas" in names:
+            continue  # cards carry their own atlas UVs
         cl.bake_box_uvs(o, density=1.0, grain=bool(names & wood_names))
     print("MAP001 UVs baked: %d meshes" % len(export_meshes))
+
+    audit_path = os.path.join(BUILD_OUTPUT_ROOT or cl.N3, "vegetation_audit.json")
+    # `on_paving` is the expanded exclusion-zone test used before placement.
+    # A hit is normally dropped, so it is a blocked candidate, not rendered
+    # grass. Keep actual violations separate from successful prevention.
+    on_pave = sum(1 for r in VEG_AUDIT
+                  if r["on_paving"] and not r.get("dropped", False))
+    blocked_by_paving = sum(1 for r in VEG_AUDIT
+                            if r["on_paving"] and r.get("dropped", False))
+    containers = {}
+    for r in VEG_AUDIT:
+        containers[r["container"]] = containers.get(r["container"], 0) + 1
+    with open(audit_path, "w", encoding="utf-8") as fh:
+        json.dump({"kind": "n5_vegetation_audit", "total": len(VEG_AUDIT),
+                   "violations": on_pave,
+                   "blocked_by_paving": blocked_by_paving,
+                   "by_container": containers,
+                   "tufts": VEG_AUDIT}, fh, ensure_ascii=False)
+    print("VEG_AUDIT total=%d violations=%d blocked_by_paving=%d containers=%s"
+          % (len(VEG_AUDIT), on_pave, blocked_by_paving, containers))
 
     if N5_VARIANT:
         # Ablation/variant run: preview only, never overwrite the canonical
         # blend/GLB/layout that the formal build depends on.
-        cl.render_to(os.path.join(cl.PREVIEW_LAYOUT,
+        cl.render_to(os.path.join(BUILD_PREVIEW,
                                   "MAP001_courtyard_%s.png" % N5_VARIANT))
         print("VARIANT_RENDER=%s" % N5_VARIANT)
         return
@@ -1617,6 +1863,11 @@ def build():
     print("GEOMETRY_CLEAN objects=%d removed=%d sample=%s" % (
         len(cleaned), sum(d + u for _, d, u in cleaned),
         [(n[:28], d, u) for n, d, u in cleaned[:6]]))
+
+    ao_stats = cl.apply_vertex_ao(export_meshes)
+    print("VERTEX_AO objects=%d contact_cells=%d ground_contact_verts=%d min_factor=%.3f"
+          % (ao_stats["objects"], ao_stats["contact_cells"],
+             ao_stats["ground_contact_vertices"], ao_stats["min_factor"]))
 
     cl.export_glb(export_meshes, GLB)
     _try_render(PNG, "overview")

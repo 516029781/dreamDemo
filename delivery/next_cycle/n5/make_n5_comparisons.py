@@ -38,29 +38,30 @@ def panel(sheet, d, im, xy, size, label):
 
 def reference():
     items = [
-        ("P1 t015 · courtyard", P1 / "t015s.jpg"),
-        ("candidate_n5 · formal no UI", N4 / "T3/game_finalN5_formal_no_ui.png"),
-        ("P1 t044 · dialogue", P1 / "t044s.jpg"),
-        ("candidate_n5 · dialogue", N4 / "T3/game_finalN5_dialogue.png"),
-        ("P1 t084 · HUD", P1 / "t084s.jpg"),
-        ("candidate_n5 · HUD", N4 / "T3/game_finalN5_formal_ui.png"),
+        ("P1 t084 · fixed full-scene anchor", P1 / "t084s.jpg"),
+        ("candidate_n5 · formal no UI", N4 / "T3/game_finalN5h_formal_no_ui.png"),
+        ("P1 t084 · fixed full-scene anchor", P1 / "t084s.jpg"),
+        ("candidate_n5 · HUD", N4 / "T3/game_finalN5h_formal_ui.png"),
+        ("P1 t090 · dialogue UI supplement", P1 / "t090s.jpg"),
+        ("candidate_n5 · dialogue", N4 / "T3/game_finalN5h_dialogue.png"),
     ]
     W, H = 560, 315
     sheet = Image.new("RGB", (2 * W + 90, 3 * (H + 62) + 54), BG)
     d = ImageDraw.Draw(sheet)
-    text(d, (30, 16), "candidate_n5 vs P1: same reference regions", 26, INK, True)
+    text(d, (30, 16), "candidate_n5 vs P1: t084 is the fixed full-scene anchor", 26, INK, True)
     for i, (label, path) in enumerate(items):
         col, row = i % 2, i // 2
         x = 30 + col * (W + 30)
         y = 74 + row * (H + 62)
         panel(sheet, d, Image.open(path), (x, y), (W, H), label)
-    sheet.save(N4 / "T2/reference_comparison.png")
-    print(N4 / "T2/reference_comparison.png")
+    out = N4 / "T2/reference_comparison_t084.png"
+    sheet.save(out)
+    print(out)
 
 
 def before_after():
     n2 = Image.open(N2 / "T3/game_finalN2_formal_no_ui.png")
-    n4 = Image.open(N4 / "T3/game_finalN5_formal_no_ui.png")
+    n4 = Image.open(N4 / "T3/game_finalN5h_formal_no_ui.png")
     W, H = 600, 338
     sheet = Image.new("RGB", (2 * W + 90, 3 * (H + 60) + 56), BG)
     d = ImageDraw.Draw(sheet)
@@ -96,7 +97,7 @@ def before_after():
 
 def ui_compare():
     n2 = Image.open(N2 / "T3/game_finalN2_dialogue.png")
-    n4 = Image.open(N4 / "T3/game_finalN5_dialogue.png")
+    n4 = Image.open(N4 / "T3/game_finalN5h_dialogue.png")
     W, H = 600, 338
     sheet = Image.new("RGB", (2 * W + 90, H + 120), BG)
     d = ImageDraw.Draw(sheet)

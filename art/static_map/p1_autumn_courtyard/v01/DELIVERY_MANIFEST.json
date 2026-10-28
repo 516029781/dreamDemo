@@ -1,0 +1,24 @@
+{
+  "status": "quality_below_target",
+  "target": "P1 static map, fixed reference t084s.jpg",
+  "reference_sha256": "13706e7eab96726565156a9e6440727de5d5bac82ee9c09c293a5745dd7446de",
+  "score": 35,
+  "score_target": 90,
+  "combo_gates": {
+    "floor": "rework",
+    "tree": "rework",
+    "grass": "rework",
+    "whole_image_color_and_depth": "rework"
+  },
+  "blend": "scene.blend",
+  "blend_sha256": "746967c53b6eabf29c6972805c50b3b80990f250bed655b866a7b19a66fe26ad",
+  "render": "renders/03_final.png",
+  "render_sha256": "28240c1e90ca0109a4299044bd680d29e1cf0b2374d73a742012f1a2209a5ac5",
+  "resolution": [1920, 1078],
+  "engine": "Cycles",
+  "samples": 32,
+  "blender_version": "5.2.3 LTS",
+  "ai_image_used": false,
+  "n5_modified": false,
+  "required_reports": ["METHOD_PROOF.md", "REVIEW.md", "COMMANDS.md", "render_log.json", "camera_and_render.json"]
+}

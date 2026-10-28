@@ -47,9 +47,9 @@ def main():
                 "delivery/next_cycle/n5/T4/N02_material_closeups.png",
                 "delivery/next_cycle/n5/T4/N03_ui_before_after.png",
                 "delivery/next_cycle/n5/T5/q04_behavior_moved.json",
-                "delivery/next_cycle/n5/T3/game_finalN5_formal_no_ui.png",
-                "delivery/next_cycle/n5/T3/game_finalN5_formal_ui.png",
-                "delivery/next_cycle/n5/T3/game_finalN5_dialogue.png",
+                "delivery/next_cycle/n5/T3/game_finalN5h_formal_no_ui.png",
+                "delivery/next_cycle/n5/T3/game_finalN5h_formal_ui.png",
+                "delivery/next_cycle/n5/T3/game_finalN5h_dialogue.png",
             ]
             t["commands_run"] = [
                 "candidate_n5 directed Blender build (tree/planter/bench/map)",
@@ -148,9 +148,9 @@ def main():
         ]),
         "artifacts": {
             "reference_comparison": "delivery/next_cycle/n5/T2/reference_comparison.png",
-            "formal_no_ui": "delivery/next_cycle/n5/T3/game_finalN5_formal_no_ui.png",
-            "formal_ui": "delivery/next_cycle/n5/T3/game_finalN5_formal_ui.png",
-            "dialogue": "delivery/next_cycle/n5/T3/game_finalN5_dialogue.png",
+            "formal_no_ui": "delivery/next_cycle/n5/T3/game_finalN5h_formal_no_ui.png",
+            "formal_ui": "delivery/next_cycle/n5/T3/game_finalN5h_formal_ui.png",
+            "dialogue": "delivery/next_cycle/n5/T3/game_finalN5h_dialogue.png",
             "n01": "delivery/next_cycle/n5/T4/N01_geometry_before_after.png",
             "n02": "delivery/next_cycle/n5/T4/N02_material_closeups.png",
             "n03": "delivery/next_cycle/n5/T4/N03_ui_before_after.png",

@@ -91,9 +91,9 @@ def main():
                 if extra.is_file():
                     preview_paths.append(extra.relative_to(ROOT).as_posix())
         if iid == "MAP001":
-            for p in ["delivery/next_cycle/n5/T3/game_finalN5_formal_no_ui.png",
-                      "delivery/next_cycle/n5/T3/game_finalN5_formal_ui.png",
-                      "delivery/next_cycle/n5/T3/game_finalN5_dialogue.png",
+            for p in ["delivery/next_cycle/n5/T3/game_finalN5h_formal_no_ui.png",
+                      "delivery/next_cycle/n5/T3/game_finalN5h_formal_ui.png",
+                      "delivery/next_cycle/n5/T3/game_finalN5h_dialogue.png",
                       "delivery/next_cycle/n5/T4/N01_geometry_before_after.png",
                       "delivery/next_cycle/n5/T4/N04_actor_bbox.png",
                       "delivery/next_cycle/n5/T4/N05_orientation.png"]:
@@ -149,7 +149,7 @@ def main():
             "ui_states": 41, "asset_previews": 34, "canvas_frames": 24,
             "state_index": "delivery/next_cycle/n5/T6/state_index.json",
             "ui_contact_sheet": "delivery/next_cycle/n5/T6/contact_sheet.png",
-            "anchor_screenshot": "delivery/next_cycle/n5/T3/game_finalN5_formal_ui.png",
+            "anchor_screenshot": "delivery/next_cycle/n5/T3/game_finalN5h_formal_ui.png",
             "caveat": "Current-build previews; not independent visual approval and not a real-device test.",
         },
         "items": items,

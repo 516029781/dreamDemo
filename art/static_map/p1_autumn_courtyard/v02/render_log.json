@@ -1,0 +1,28 @@
+{
+  "status": "rendered",
+  "blender": "5.2.3 LTS",
+  "engine": "CYCLES",
+  "samples": 32,
+  "denoising": true,
+  "resolution": [
+    1920,
+    1078
+  ],
+  "camera_location": [
+    0.25,
+    -25.0,
+    15.2
+  ],
+  "camera_rotation_euler": [
+    1.058709,
+    -0.0,
+    0.009862
+  ],
+  "lens_mm": 53.0,
+  "focus_distance_m": 27.0,
+  "f_stop": 5.599999904632568,
+  "elapsed_seconds": 46.53,
+  "object_count": 8168,
+  "blend_sha256": "b9fe48309ee26bf386e09d5b947897f43acb2617c885351b6a84c005becd75f9",
+  "render_sha256": "dc9677d7603cdf2097c16b5ef7bccec5fc3d1060b106f8725e677754d1ff0a09"
+}
