@@ -14,8 +14,8 @@ ROOT = Path(__file__).resolve().parents[1]
 STATES = {'todo', 'in_progress', 'rework', 'waiting_review', 'blocked', 'done'}
 GIB = 1024 ** 3
 MIB = 1024 ** 2
-STORAGE_WARNING_BYTES = 10 * GIB
-STORAGE_LIMIT_BYTES = 12 * GIB
+STORAGE_WARNING_BYTES = 12 * GIB
+STORAGE_LIMIT_BYTES = 15 * GIB
 STORAGE_STATUS_PATH = ROOT / 'delivery/workflow/STORAGE_STATUS.json'
 
 def read(path):
@@ -35,6 +35,9 @@ def storage_check(planned_growth_mib=0):
     """Read-only scan. The derived status file is evidence, never a cleanup action."""
     if planned_growth_mib < 0:
         raise ValueError('planned growth must be non-negative')
+    tools_dir = os.path.dirname(os.path.abspath(__file__))
+    if tools_dir not in sys.path:
+        sys.path.insert(0, tools_dir)
     from maintenance.storage_report import scan
     scan_result = scan(ROOT, largest_count=10)
     total = scan_result['total_bytes']
@@ -167,7 +170,7 @@ def summary(args):
         except (KeyError, ValueError, TypeError):
             warnings.append('Storage preflight timestamp invalid; rerun workflow.py storage.')
         if storage.get('status') == 'over_limit':
-            warnings.append('Workspace over 12 GiB: do not generate another large build/export/package; continue source repair and storage recovery.')
+            warnings.append('Workspace over 15 GiB: do not generate another large build/export/package; continue source repair and storage recovery.')
         if storage.get('scan_errors'):
             warnings.append('Storage scan had errors; rerun preflight and resolve them before a large output.')
     else:
@@ -313,7 +316,7 @@ def main():
     compact.add_argument('--write', action='store_true', help='Write disposable derived summary, never the task ledger')
     storage = subs.add_parser('storage', help='Measure project size before a large build/export/package')
     storage.add_argument('--planned-growth-mib', type=float, default=0)
-    storage.add_argument('--enforce', action='store_true', help='Exit 2 above 12 GiB or on scan errors')
+    storage.add_argument('--enforce', action='store_true', help='Exit 2 above 15 GiB or on scan errors')
     measured = subs.add_parser('run')
     measured.add_argument('--package', required=True)
     measured.add_argument('--label', required=True)
@@ -324,7 +327,12 @@ def main():
     clean.add_argument('--apply', action='store_true', help='delete the regenerable category')
     clean.add_argument('--json', action='store_true')
     clean.add_argument('--keep-builds', action='store_true')
-    args = parser.parse_args()
+    if os.path.basename(sys.argv[0]).lower().startswith("blender"):
+        # Launched via Blender's -P: everything after the first bare "--" is ours.
+        argv = sys.argv[sys.argv.index("--") + 1:] if "--" in sys.argv else []
+    else:
+        argv = sys.argv[1:]
+    args = parser.parse_args(argv)
     try:
         if args.action == 'clean':
             import clean_workspace

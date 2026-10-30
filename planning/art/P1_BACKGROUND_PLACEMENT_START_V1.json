@@ -1,0 +1,227 @@
+{
+  "status": "direction_selected_start_values_not_validated_render",
+  "date": "2026-10-31",
+  "scope": "P1 static background only",
+  "reference": "reference/_raw_screenshots/P1/t084s.jpg",
+  "baseline_scene": "art/static_map/p1_autumn_courtyard/v16/scene.blend",
+  "units": "Blender world units as used by V16; x increases screen-right, y goes away from camera, z up",
+  "screen_coords": "normalized x/y, origin top-left; projections below come from V16 fixed camera and are approximate for proposed geometry",
+  "measured_v16": {
+    "camera_location": [0.25, -20.5, 8.2],
+    "camera_rotation_euler_rad": [1.23617494, 0.0, 0.01198983],
+    "lens_mm": 53.0,
+    "focus_distance": 22.5,
+    "fstop": 0.55,
+    "render": [1920, 1078],
+    "preview_percent": 50,
+    "engine": "CYCLES",
+    "view_transform": "Standard",
+    "look": "None",
+    "exposure": -0.25,
+    "sun_rotation_euler_rad": [0.82705253, 0.0, 0.86853945],
+    "sun_energy": 5.0,
+    "sun_angle_rad": 0.035,
+    "rear_terrain_top_z": 0.035,
+    "existing_water_z": 0.041,
+    "existing_water_world_bbox_xy": [[-4.9, 12.451], [0.8, 20.73]],
+    "existing_bridge_deck_world_bbox_xyz": [[-5.15, 7.77, 0.23], [-2.4, 8.53, 0.68]],
+    "existing_right_planters_world_bboxes_xy": [
+      [[-0.13, 2.67], [3.83, 6.63]],
+      [[3.19, 3.59], [6.91, 7.31]],
+      [[4.73, 1.33], [7.37, 3.97]]
+    ]
+  },
+  "proposed_groups": [
+    {
+      "id": "B01_bridge_landings",
+      "action": "retain_and_verify",
+      "world_bbox_xy": [[-5.15, 7.68], [-2.4, 8.62]],
+      "z_range": [0.035, 0.68],
+      "screen_role": "left-middle crossing around x 0.25-0.39, y 0.30-0.37",
+      "requirements": ["both ends have support", "no rail crosses an intended walking opening"]
+    },
+    {
+      "id": "B02_service_walk",
+      "action": "new",
+      "world_bbox_xy": [[-2.7, 8.35], [-1.15, 12.35]],
+      "top_z_start": 0.055,
+      "thickness_start": 0.16,
+      "bridge_transition": {
+        "type": "three_short_steps_preferred_or_one_ramp_after_confirming_actual_walking_surface",
+        "world_bbox_xy_start": [[-2.7, 8.53], [-1.15, 9.3]],
+        "bridge_right_end_vertex_z_observed_range": [0.23, 0.43],
+        "provisional_top_z": 0.43,
+        "provisional_riser_count": 3,
+        "provisional_riser_height": 0.125,
+        "provisional_total_drop_to_walk": 0.375,
+        "must_land_on": ["actual bridge right endpoint surface", "B02_service_walk top"]
+      },
+      "screen_anchor_world": [-1.7, 11.2, 0.04],
+      "screen_anchor_normalized": [0.429, 0.282],
+      "material_role": "worn warm-grey service stone",
+      "connects": ["bridge right landing via measured step or ramp", "near-bank working zone"],
+      "requirements": ["minimum one continuous human-width route", "verify that Z=0.43 is the actual walkable deck top before using provisional risers", "do not cover water or central equipment"]
+    },
+    {
+      "id": "B03_near_bank_working_zone",
+      "action": "new",
+      "world_bbox_xy": [[-3.0, 11.8], [1.0, 13.25]],
+      "footprint_world_xy_start": [[-3.0, 11.8], [0.8, 11.85], [0.7, 13.1], [-2.65, 12.8]],
+      "top_z_start": 0.10,
+      "thickness_start": 0.24,
+      "screen_anchor_world": [-2.2, 12.9, 0.12],
+      "screen_anchor_normalized": [0.412, 0.244],
+      "material_role": "same stone family as platform, slightly darker and more worn",
+      "connects": ["B02_service_walk", "B04_near_lip", "central equipment maintenance interface"],
+      "requirements": ["do not fill the old x=-5.5..1.0 envelope", "clip working-zone mesh to shoreward side of B05 cut polygon", "the left shore remains mainly tree/earth, not a second stone pad", "visible support and shadow"]
+    },
+    {
+      "id": "B04_near_lip",
+      "action": "new",
+      "centerline_world_xy_start": [[-5.2, 12.9], [-3.7, 12.75], [-2.1, 12.9], [-0.6, 13.15], [0.8, 13.3]],
+      "width_start": 0.18,
+      "top_z_start": 0.12,
+      "lower_wall_z_start": -0.18,
+      "material_role": "warm pale stone top, dark grey-brown vertical face",
+      "requirements": ["not straight across full image", "several portions hidden by foreground structures"]
+    },
+    {
+      "id": "B05_channel_void",
+      "action": "cut_from_rear_terrain_before_placing_water",
+      "footprint_world_xy_start": [[-5.35, 13.05], [-3.7, 12.85], [-2.1, 13.0], [-0.55, 13.25], [0.9, 13.45], [1.15, 18.75], [-0.8, 19.45], [-3.1, 19.7], [-5.65, 19.2]],
+      "cut_z_range": [-1.4, 0.55],
+      "requirements": ["disable old water face and both old water-edge curves before preview", "no old terrain surface crosses water", "no boolean artifacts or floating shore", "if Boolean Exact fails, rebuild local ground as mesh strips with opening"]
+    },
+    {
+      "id": "B06_water_surface",
+      "action": "replace_existing_leaf_shape",
+      "uses_footprint": "B05_channel_void with margins inside banks",
+      "z_start": -0.18,
+      "screen_anchor_world": [-2.1, 16.4, -0.18],
+      "screen_anchor_normalized": [0.425, 0.207],
+      "screen_target_envelope": [[0.30, 0.13], [0.54, 0.27]],
+      "material_role": "muted blue-grey, low-frequency variation",
+      "requirements": ["only a partial segment visible", "do not display complete leaf outline", "left and right ends occluded", "no high-frequency waves"]
+    },
+    {
+      "id": "B07_far_bank",
+      "action": "new_or_rework_existing_bank",
+      "world_bbox_xy": [[-5.8, 19.1], [1.25, 21.5]],
+      "segments_world_xy_start": [
+        [[-5.8, 19.1], [-3.55, 19.45], [-3.7, 21.3], [-5.7, 21.1]],
+        [[-1.4, 19.5], [1.25, 19.1], [1.15, 21.35], [-1.2, 21.5]]
+      ],
+      "top_z_range_start": [0.035, 0.22],
+      "screen_anchor_world": [-2.3, 19.7, 0.08],
+      "screen_anchor_normalized": [0.425, 0.143],
+      "material_role": "warm desaturated earth with small stone edge only where exposed",
+      "requirements": ["build only two irregular edge segments, not a filled full-width bbox", "the center reads as softer existing far terrain, not a hard gap or sky hole", "clip both segments to far side of B05 cut polygon", "rooted vegetation interrupts edges", "no high sharp ridge"]
+    },
+    {
+      "id": "B08_left_bank_understory",
+      "action": "extend_existing_left_understory",
+      "world_bbox_xy": [[-7.9, 9.0], [-4.8, 19.2]],
+      "far_left_water_edge_root_strip_world_xy": [[-6.3, 15.5], [-5.7, 19.2]],
+      "foliage_may_overhang_to_x": -4.8,
+      "base_z_start": 0.035,
+      "clump_height_range_start": [0.35, 1.1],
+      "screen_anchor_world": [-6.0, 13.7, 0.1],
+      "screen_anchor_normalized": [0.255, 0.23],
+      "material_role": "deep amber-brown foliage, sparse pink accent only near existing bed",
+      "requirements": ["2-3 unequal connected masses, not equally spaced balls", "far-side edge roots stay outside B05 void", "foliage can overhang water but roots may not", "occlude near and far portions of left water end"]
+    },
+    {
+      "id": "B09_right_low_retaining_wall",
+      "action": "conditional_new_after_grey_blockout",
+      "build_condition": "Only if the fixed-camera grey blockout still shows an unbounded pale gap between the right planter family and the near right water edge after B10/B15 are placed; otherwise omit B09 entirely",
+      "world_bbox_xy": [[0.85, 7.25], [3.6, 13.6]],
+      "centerline_world_xy_start": [[3.45, 7.25], [3.65, 9.0], [3.35, 11.1], [2.0, 13.35], [0.95, 13.6]],
+      "wall_thickness_start": 0.18,
+      "base_z_start": 0.035,
+      "height_range_start": [0.3, 0.55],
+      "screen_anchor_world": [2.0, 11.6, 0.4],
+      "screen_anchor_normalized": [0.596, 0.247],
+      "material_role": "same pale cast stone and dark ribs as existing right planters",
+      "requirements": ["optional background closure; omit if existing planter plus reeds already closes the view", "the bbox is an envelope for a narrow polyline wall, not a solid rectangle", "the near end physically connects to the existing planter wall reaching Y=7.31 using a short curved plinth", "keep the wall clear of existing wheel footings", "clip wall against B05 channel edge", "does not create a freestanding large building", "frames the near right water edge; B15 hides the far right end"]
+    },
+    {
+      "id": "B10_right_vegetation_link",
+      "action": "new",
+      "world_bbox_xy": [[1.1, 10.8], [4.1, 15.0]],
+      "base_z": "on a separate verified landward soil strip or verified terrain; this strip exists even if optional B09 is omitted",
+      "soil_strip_width_start": 0.55,
+      "clump_height_range_start": [0.35, 1.0],
+      "material_role": "gold-brown muted grass sharing existing planter grass family",
+      "requirements": ["construct soil strip on landward side of B09 and clip it against B05 channel", "unequal continuous patches", "no isolated cones", "keep main water opening readable"]
+    },
+    {
+      "id": "B11_far_left_tree_mass",
+      "action": "recompose_existing_or_new_low_detail",
+      "world_bbox_xy": [[-8.0, 19.5], [-5.0, 24.0]],
+      "base_z": "verified terrain top",
+      "height_range_start": [2.0, 3.5],
+      "screen_anchor_world": [-7.0, 21.5, 0.04],
+      "screen_anchor_normalized": [0.266, 0.122],
+      "material_role": "soft dark warm canopy with visible breaks",
+      "requirements": ["not three complete evenly spaced trees", "lower edge rooted", "do not hide central bright gap"]
+    },
+    {
+      "id": "B12_far_right_tree_mass",
+      "action": "recompose_existing_or_new_low_detail",
+      "world_bbox_xy": [[1.5, 19.5], [4.5, 24.0]],
+      "base_z": "verified terrain top",
+      "height_range_start": [1.8, 3.2],
+      "screen_anchor_world": [2.5, 22.0, 0.04],
+      "screen_anchor_normalized": [0.595, 0.118],
+      "material_role": "low contrast warm-cool mixed tree silhouette",
+      "requirements": ["partly hidden by right planter", "not a hard triangular mountain"]
+    },
+    {
+      "id": "B13_center_light_gap",
+      "action": "reserve_empty_space",
+      "world_bbox_xy": [[-4.0, 20.5], [0.35, 25.0]],
+      "screen_anchor_world": [-2.0, 22.2, 0.04],
+      "screen_anchor_normalized": [0.441, 0.115],
+      "requirements": ["no tall opaque object", "no bright sky rectangle", "warm far ground and soft low forms may appear"]
+    },
+    {
+      "id": "B14_distant_wheel_support",
+      "action": "retain_but_simplify_if_needed",
+      "existing_footing_xy": [[0.49, 10.19], [2.71, 10.71]],
+      "requirements": ["wheel and frame connected to ground", "does not divide central sky/water gap with a rectangular gate", "less visual weight than right grass planters"]
+    },
+    {
+      "id": "B15_right_water_edge_reeds",
+      "action": "new_small_edge_group",
+      "root_strip_world_xy": [[1.25, 15.0], [2.0, 19.0]],
+      "foliage_overhang_x_start": [0.35, 1.15],
+      "base_z": "verified right-bank soil outside B05 cut polygon",
+      "height_range_start": [0.4, 0.8],
+      "material_role": "muted gold-brown reeds, same family as right planter but lower contrast",
+      "requirements": ["only 2 unequal patches, not a continuous reed wall", "roots outside water void", "leaf tips partly hide far right water boundary", "do not cover the center of the water opening"]
+    }
+  ],
+  "replace_or_rework_existing": [
+    {"object": "Curved blue green watercourse", "decision": "hide_in_new_candidate_before_B06; retain only as V16 history"},
+    {"object": "Soft near water edge", "decision": "hide_in_new_candidate_before_B04; do not leave ghost curves"},
+    {"object": "Soft far water edge", "decision": "hide_in_new_candidate_before_B07; do not leave ghost curves"},
+    {"object": "Far pale sand bank | west rolling shoulder", "decision": "hide_or_rework_to_fit_B07_B11_B13; avoid continuous pale stripe"},
+    {"object": "Far pale sand bank | east rolling shoulder", "decision": "hide_or_rework_to_fit_B07_B12_B13; avoid continuous pale stripe"},
+    {"object": "v16 far garden | separated shallow terrain forms", "decision": "re-evaluate_screen_contribution; retain only if no hard hill or continuous beige band"},
+    {"object": "Rear service terrace ground", "decision": "duplicate_in_new_candidate_and_cut_B05; do_not_edit_V16_source"}
+  ],
+  "material_start_ranges": {
+    "service_stone_roughness": [0.72, 0.88],
+    "bank_face_roughness": [0.78, 0.92],
+    "water_roughness": [0.25, 0.42],
+    "painted_metal_roughness": [0.38, 0.62],
+    "note": "starting node values, not sampled original shader values; tune against fixed-camera rendered color roles"
+  },
+  "evaluation": {
+    "first_preview": [960, 539],
+    "full_render": [1920, 1078],
+    "first_pass": ["object-ID audit for every old water and far-bank contributor", "bridge transition height/support check", "ground opening and water-ray check", "fixed-camera grey blockout", "fixed-camera flat-color preview"],
+    "reject_if": ["old water and new water both visible", "shore or soil intersects the water surface", "bridge route has unbridged height jump", "near or far bank creates a continuous pale band", "right wall is a solid rectangle", "either water end is completely exposed as a pointed tip", "B15 reed roots fall in the channel void", "top background contains a continuous pale band"],
+    "visual_target_rule": "P1 visual standard and existing 85 point gate; these proposed world numbers are adjustable to fit fixed-camera screen target, not an extra pass threshold"
+  }
+}

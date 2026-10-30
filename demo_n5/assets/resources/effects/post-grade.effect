@@ -1,0 +1,84 @@
+// Post-grade for the scene RT shown through a full-screen Sprite. Grade
+// constants are in the shader: the legacy pipeline has no descriptor layout
+// for custom uniform blocks. Tuning = edit constants and rebuild.
+CCEffect %{
+  techniques:
+  - passes:
+    - vert: post-grade-vs:vert
+      frag: post-grade-fs:frag
+      depthStencilState:
+        depthTest: false
+        depthWrite: false
+      blendState:
+        targets:
+        - blend: true
+          blendSrc: src_alpha
+          blendDst: one_minus_src_alpha
+          blendDstAlpha: one_minus_src_alpha
+      rasterizerState:
+        cullMode: none
+      properties:
+        alphaThreshold: { value: 0.5 }
+}%
+
+CCProgram post-grade-vs %{
+  precision highp float;
+  #include <builtin/uniforms/cc-global>
+  in vec3 a_position;
+  in vec2 a_texCoord;
+  in vec4 a_color;
+  out vec4 color;
+  out vec2 uv0;
+  vec4 vert () {
+    vec4 pos = vec4(a_position, 1);
+    #if USE_LOCAL
+      pos = cc_matWorld * pos;
+    #endif
+    pos = cc_matViewProj * pos;
+    uv0 = a_texCoord;
+    color = a_color;
+    return pos;
+  }
+}%
+
+CCProgram post-grade-fs %{
+  precision highp float;
+  #include <builtin/internal/embedded-alpha>
+  #include <builtin/internal/alpha-test>
+  in vec4 color;
+  #if USE_TEXTURE
+    in vec2 uv0;
+    #pragma builtin(local)
+    layout(set = 2, binding = 12) uniform sampler2D cc_spriteTexture;
+  #endif
+
+  const vec3 SHADOW_TINT = vec3(1.0, 0.88, 0.78);
+  const vec3 HIGHLIGHT_TINT = vec3(1.0, 0.97, 0.90);
+  const float CONTRAST = 0.10;
+  const float SATURATION = 0.06;
+  const float WARM_BOOST = 0.10;
+  const float VIGNETTE = 0.12;
+
+  vec4 frag () {
+    vec4 o = vec4(1.0, 1.0, 1.0, 1.0);
+    #if USE_TEXTURE
+      o *= CCSampleWithAlphaSeparated(cc_spriteTexture, uv0);
+    #endif
+    vec3 c = o.rgb;
+    float l = dot(c, vec3(0.2126, 0.7152, 0.0722));
+    float s = smoothstep(0.0, 1.0, l);
+    l = mix(l, s, clamp(CONTRAST * 2.0, 0.0, 0.6));
+    float sw = 1.0 - smoothstep(0.0, 0.55, l);
+    float hw = smoothstep(0.5, 1.0, l);
+    c *= mix(vec3(1.0), SHADOW_TINT, sw * 0.55);
+    c *= mix(vec3(1.0), HIGHLIGHT_TINT, hw);
+    float warm = smoothstep(0.0, 0.5, c.r - max(c.g, c.b) * 0.85);
+    c = mix(vec3(l), c, 1.0 + SATURATION + WARM_BOOST * warm);
+    float d = distance(uv0, vec2(0.5));
+    c *= 1.0 - VIGNETTE * smoothstep(0.42, 0.95, d);
+    o.rgb = clamp(c, 0.0, 1.0);
+    o.a = 1.0;
+    ALPHA_TEST(o);
+    return o;
+  }
+}%
