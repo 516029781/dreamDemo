@@ -230,6 +230,18 @@
         "O02"
       ],
       "reopened_task_ids": []
+    },
+    {
+      "id": "B17",
+      "title": "N5D 渲染层返修（步骤0/S3+S4/S1/B4/B5+B6）",
+      "task_ids": [
+        "N5D-S0",
+        "N5D-S34",
+        "N5D-S1",
+        "N5D-B4",
+        "N5D-B56"
+      ],
+      "reopened_task_ids": []
     }
   ],
   "workflow_mode": "candidate_first_final_review",

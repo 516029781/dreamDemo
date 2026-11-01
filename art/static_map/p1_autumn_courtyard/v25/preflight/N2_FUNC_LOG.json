@@ -1,0 +1,218 @@
+{
+ "deleted": [
+  "v15 grounded gantry ladder stile",
+  "v15 grounded gantry ladder stile.001",
+  "v15 ladder top bracket",
+  "v15 ladder top bracket.001",
+  "v15 ladder foot bracket",
+  "v15 ladder foot bracket.001",
+  "v15 short warm bulb 02",
+  "v15 short warm bulb 03",
+  "v15 short warm bulb 04",
+  "v15 short warm bulb 05",
+  "v15 short warm bulb 06",
+  "Fence support",
+  "Fence support.001",
+  "Fence support.002",
+  "Pump panel bolt",
+  "v15 centered tree planter | east wall",
+  "v15 centered tree planter | north wall",
+  "v15 centered tree planter | south wall",
+  "v15 centered tree planter | west wall",
+  "v15 centered tree planter | soil body",
+  "P1 foreground table | dark thin tabletop",
+  "P1 foreground table | front apron",
+  "P1 foreground table | rear apron",
+  "P1 foreground table | left apron",
+  "P1 foreground table | right apron",
+  "v15 safety cone 1 rubber foot",
+  "v15 safety cone 1 body"
+ ],
+ "moved": [
+  {
+   "name": "Foreground wooden crate",
+   "delta": [
+    -9.9,
+    2.99,
+    0.0
+   ]
+  },
+  {
+   "name": "Foreground wooden crate.001",
+   "delta": [
+    -9.9,
+    2.99,
+    0.0
+   ]
+  },
+  {
+   "name": "Foreground wooden crate.002",
+   "delta": [
+    -9.9,
+    2.99,
+    0.0
+   ]
+  },
+  {
+   "name": "Crate lid board",
+   "delta": [
+    -9.9,
+    2.99,
+    0.0
+   ]
+  },
+  {
+   "name": "Foreground barrel",
+   "delta": [
+    -9.9,
+    2.99,
+    0.0
+   ]
+  },
+  {
+   "name": "Barrel bottom hoop",
+   "delta": [
+    -9.9,
+    2.99,
+    0.0
+   ]
+  },
+  {
+   "name": "Barrel top hoop",
+   "delta": [
+    -9.9,
+    2.99,
+    0.0
+   ]
+  },
+  {
+   "name": "Barrel lid",
+   "delta": [
+    -9.9,
+    2.99,
+    0.0
+   ]
+  },
+  {
+   "name": "P1 yard | dumpster",
+   "delta": [
+    -1.13,
+    -1.56,
+    0.0
+   ]
+  },
+  {
+   "name": "P1 yard | dumpster | band 0",
+   "delta": [
+    -1.13,
+    -1.56,
+    0.0
+   ]
+  },
+  {
+   "name": "P1 yard | dumpster | band 1",
+   "delta": [
+    -1.13,
+    -1.56,
+    0.0
+   ]
+  },
+  {
+   "name": "P1 yard | cabinet",
+   "delta": [
+    3.02,
+    0.57,
+    0.0
+   ]
+  },
+  {
+   "name": "P1 yard | cabinet | band 0",
+   "delta": [
+    3.02,
+    0.57,
+    0.0
+   ]
+  },
+  {
+   "name": "P1 yard | cabinet | band 1",
+   "delta": [
+    3.02,
+    0.57,
+    0.0
+   ]
+  },
+  {
+   "name": "Coiled hose",
+   "delta": [
+    -1.8,
+    1.4,
+    0.0
+   ]
+  },
+  {
+   "name": "Coiled hose.001",
+   "delta": [
+    -1.8,
+    1.4,
+    0.0
+   ]
+  },
+  {
+   "name": "Coiled hose.002",
+   "delta": [
+    -1.8,
+    1.4,
+    0.0
+   ]
+  },
+  {
+   "name": "P1 yard | kerb A",
+   "delta": [
+    4.6,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "name": "P1 yard | kerb A | soil",
+   "delta": [
+    4.6,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "name": "P1 yard | kerb A | dry grass bed",
+   "delta": [
+    4.6,
+    0.0,
+    0.0
+   ]
+  }
+ ],
+ "added": [
+  "P1 pipe cluster base"
+ ],
+ "corridor_check": {
+  "zone": "x[-4.55,-1.75] y[-0.9,2.5] z>0.10",
+  "intruders": [
+   "P1 broadleaf foliage overlay | widened canopy",
+   "Service platform base",
+   "Service platform pale top",
+   "Open metal deck grate",
+   "Pump access housing",
+   "Pump housing vent",
+   "Pump housing vent.001",
+   "Pump housing vent.002",
+   "Pump panel bolt.001",
+   "Pump panel bolt.002",
+   "Pump panel bolt.003",
+   "Foreground barrel",
+   "Barrel top hoop",
+   "Barrel bottom hoop",
+   "Barrel lid",
+   "v15 short warm bulb 01"
+  ]
+ },
+ "elapsed_s": 1.6
+}

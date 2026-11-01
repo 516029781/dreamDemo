@@ -1,0 +1,12 @@
+{
+ "shore_screen": 8,
+ "plate_cooled": [
+  "M02 | far bank plate mat",
+  "M03 | distant air plate mat"
+ ],
+ "grass_scatter": 203,
+ "tower_top_grass": 8,
+ "paving_rough": true,
+ "understory_warm": true,
+ "elapsed_s": 1.1
+}

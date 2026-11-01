@@ -1,0 +1,13 @@
+{
+ "tree_scaled": [
+  "LOD1",
+  "overlay"
+ ],
+ "tree_scale": 1.1,
+ "clumps_scaled": 3,
+ "grass_scaled": "see blender log",
+ "densify_clones": 36,
+ "mulch_shrunk": "see blender log",
+ "note": "rerun of failed json write; geometry changes were saved before the error",
+ "elapsed_s": null
+}

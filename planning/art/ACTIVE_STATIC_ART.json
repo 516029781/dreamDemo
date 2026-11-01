@@ -1,0 +1,84 @@
+{
+  "schema": "active-static-art-v1",
+  "updated_on": "2026-11-01",
+  "updated_at": "2026-11-01T22:26+08:00",
+  "scope": "P1 autumn static environment image and editable Blender source",
+  "reference": {
+    "path": "reference/_raw_screenshots/P1/t084s.jpg",
+    "sha256": "13706e7eab96726565156a9e6440727de5d5bac82ee9c09c293a5745dd7446de",
+    "verified_at": "2026-11-01T22:26+08:00",
+    "verified_exists": true,
+    "sha_matches_state_file": true
+  },
+  "current_working_state": {
+    "label": "V27 working image stored in v25 directory",
+    "scene_path": "art/static_map/p1_autumn_courtyard/v25/scene.blend",
+    "scene_sha256": "3ea1b0e90d67fb8bc482d09366a6a66211279ad6af6c96011d0e216ff5417b9f",
+    "scene_bytes": 276510947,
+    "scene_mtime": "2026-11-01 16:52",
+    "image_path": "art/static_map/p1_autumn_courtyard/v25/renders/final_v27.png",
+    "image_sha256": "2d698729d9c2cb312cd5828d32e75d65361b7442a32e0db10e726c3149d10ad6",
+    "image_bytes": 2702369,
+    "image_mtime": "2026-11-01 22:11",
+    "image_resolution": [1920, 1078],
+    "verified_at": "2026-11-01T22:26+08:00",
+    "verified_exists": true,
+    "sha_matches_state_file": true,
+    "source_image_binding": "unverified",
+    "source_image_binding_note": "A recovery re-render from scene.blend produced this image on 2026-11-01 ~22:05-22:11, but no archived reproduction record (isolated copy, command, hashes) was kept; therefore binding remains unverified.",
+    "quality_status": "unverified_current_image",
+    "release_status": "not_approved",
+    "warning": "All three artifacts exist and match their recorded hashes, which proves file identity only. The V27 image has no review bound to its own SHA and no archived reproduction evidence. Old v25 DELIVERY.json (final.png 3db2b42c; r2 block 1113cb01) and GATE_REPORT.json (final.png 3db2b42c, scene 02a67405) describe earlier images that no longer exist; their reviews and scores do not attest to this V27 image."
+  },
+  "current_authorities": {
+    "execution_rules": "AGENTS.md",
+    "workflow": "planning/art/STATIC_MAP_WORKFLOW_20261028.md",
+    "visual_standard": "planning/art/P1_T084_ART_DIRECTION_STANDARD_20261028.md",
+    "correction_plan": "planning/art/STATIC_ART_INFORMATION_CORRECTION_20261101.md",
+    "verification_record": "planning/art/STATIC_ART_VERIFICATION_20261101_2226.md"
+  },
+  "next_production_plan": {
+    "path": "planning/art/P1_WORKORDER_20261101_NEXT.md",
+    "status": "ready_not_started",
+    "gaps": [
+      "value structure missing (high-key flat light; weak contact shadows)",
+      "left tree reads as bare skeleton / isolated dark clump",
+      "grass distribution imbalanced (planters only; banks and foreground bare)"
+    ],
+    "note": "No new candidate started. One hypothesis per batch; same-camera re-render plus manual crop comparison."
+  },
+  "evidence_integrity": {
+    "old_delivery_applies_to": "renders/final.png sha16 3db2b42c (v25 initial) and appended v25-r2 block sha16 1113cb01; scene 02a67405 / 4bc610cd",
+    "old_gate_applies_to": "renders/final.png sha16 3db2b42c; scene 02a67405; blind reviews on 72196214 / 8f7a0b27 variants",
+    "old_scores_reusable_for_current_image": false,
+    "missing_evidence_files": [
+      "renders/final.png",
+      "renders/blockout.png",
+      "renders/color_key.png",
+      "renders/no_dof_diagnostic.png",
+      "renders/details.png",
+      "renders/combined.png"
+    ],
+    "missing_reason": "User-authorized space cleanup on 2026-11-01 (REVIEW.md section 15); blockout/color_key/no_dof are unrecoverable, their SHA-16 remain only in DELIVERY.json text.",
+    "review_note": "REVIEW.md section 14 recorded image sha af229992... for the pre-cleanup V27 render; current file is 2d698729..., so section 14 hashes no longer bind to the current file."
+  },
+  "historical_only": [
+    "planning/art/P1_LAYERED_BACKGROUND_V2_PLAN_20261031.md",
+    "planning/art/P1_LAYERED_BACKGROUND_BUILD_SPEC_V2.json",
+    "planning/art/P1_EXECUTION_TABLE_20261101.md",
+    "planning/art/V24_SCENE_LOGIC_AND_ART_REVIEW_20261101.md",
+    "planning/art/P1_V25_ART_REPAIR_PLAN_20261101.md",
+    "planning/art/P1_V26_VEGETATION_ROLLBACK_PLAN_20261101.md",
+    "planning/art/P1_V27_HANDPAINTED_FOLIAGE_PLAN_20261101.md"
+  ],
+  "diagnostic_only": [
+    "planning/art/P1_REFERENCE_FEATURE_AUDIT_20261101.md"
+  ],
+  "open_items": {
+    "i3_mask_and_roi_calibration": "not_started",
+    "source_image_reproduction_proof": "not_verified",
+    "new_candidate_packaging": "not_started",
+    "current_image_review_bound_to_its_sha": "not_done"
+  },
+  "next_production_start": "Follow P1_WORKORDER_20261101_NEXT.md gap order 1->2->3, one hypothesis per batch, same-camera re-render with crop comparison. Calibrate I3 mask before using any numeric color gate; keep full-image color statistics diagnostic_only. Verify source-image binding by isolated rerender before packaging a candidate. Do not inherit old review scores."
+}

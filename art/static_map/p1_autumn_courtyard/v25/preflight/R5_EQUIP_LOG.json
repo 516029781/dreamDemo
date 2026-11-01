@@ -1,0 +1,23 @@
+{
+ "tank_dress": [
+  "P1 tank hoop 0",
+  "P1 tank hoop 1",
+  "P1 tank flange plate",
+  "P1 tank flange stub",
+  "P1 crossover elbow A",
+  "P1 crossover elbow B"
+ ],
+ "crossover": "P1 crossover pipe",
+ "front_barrel": [
+  "P1 cabinet front barrel",
+  "P1 cabinet barrel rim"
+ ],
+ "fabric_desat": [
+  "Faded ochre fabric",
+  "Faded teal fabric",
+  "Dusty cream fabric"
+ ],
+ "sunlit_calm": true,
+ "fallen_leaves": 10,
+ "elapsed_s": 2.5
+}

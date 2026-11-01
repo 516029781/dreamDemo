@@ -1,0 +1,35 @@
+{
+ "P1 broadleaf | Poly Haven Tree Small 02 LOD1": {
+  "scale": 0.5,
+  "z": 0.06
+ },
+ "P1 broadleaf foliage overlay | widened canopy": {
+  "scale": 0.5,
+  "z": 0.06
+ },
+ "P1 canopy inner A": {
+  "loc": [
+   -9.2,
+   5.9,
+   2.2
+  ],
+  "scale": 0.3
+ },
+ "P1 canopy inner B": {
+  "loc": [
+   -8.1,
+   6.6,
+   1.7
+  ],
+  "scale": 0.26
+ },
+ "P1 canopy inner C": {
+  "loc": [
+   -8.7,
+   5.2,
+   2.7
+  ],
+  "scale": 0.28
+ },
+ "elapsed_s": 2.6
+}

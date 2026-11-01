@@ -1,0 +1,12 @@
+{
+ "wood_ramp_flattened": true,
+ "wood_noise_added": true,
+ "metal_spec": 0.28,
+ "kerb_grass_doubled": 2,
+ "farbank_base": [
+  0.085,
+  0.078,
+  0.062
+ ],
+ "elapsed_s": 2.0
+}

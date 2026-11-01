@@ -1,0 +1,9 @@
+{
+ "emission": {
+  "M02 | far bank plate mat": 1.72,
+  "M03 | distant air plate mat": 0.892
+ },
+ "hidden": [
+  "P1 far shore edge"
+ ]
+}

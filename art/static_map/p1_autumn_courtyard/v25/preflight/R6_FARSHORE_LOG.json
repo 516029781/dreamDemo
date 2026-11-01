@@ -1,0 +1,9 @@
+{
+ "fog_tomax": 0.33,
+ "near_tier": [
+  "P1 farbank near silhouette 0",
+  "P1 farbank near silhouette 1",
+  "P1 farbank near silhouette 2"
+ ],
+ "elapsed_s": 0.8
+}

@@ -1,0 +1,20 @@
+﻿object,role,evidence_bbox_x,evidence_bbox_y,evidence_bbox_z,decision,reason
+P1 steps | 00..08,broad foreground stair (DELETE),x[-10.40,3.50] 9 treads spanning 13.9 m,y[-7.36,-4.30],z[-1.37,0.04],delete,R01: third competing entrance across frame bottom v0.78-1.0; independent boxes from s7_steps.py, clean removal; overlaps main stair x[-4.47,-1.83]
+Broad worn curved stair tread 00..08,main stair (KEEP),x[-4.47,-1.83],y[-4.31,-0.90],z[-1.25,-0.09],keep+verify landing,R01: only stair to keep; bottom z-1.25 sits on lowland ground -1.27; top z-0.09 vs paving -0.02 gap 0.07m needs thin closure step or joint check in N1
+Left stair cheek / Right stair cheek,stair side walls (KEEP),x[-4.43,-4.27] and x[-2.03,-1.87],y[-4.00,-1.00],z[-1.33,0.02],keep,bounds the stair channel; top meets plinth opening
+Curved stair handrail ±1 / lower rail ±1 / newel 01_00..09,stair ironwork (KEEP),x[-4.42,-1.88],y[-3.83,-1.05],z[-0.96,0.96],keep,R01: required stair guard; rails follow 9 treads
+Deep platform plinth left / right,terrace front retaining wall (KEEP),left x[-10.40,-4.55] right x[-1.75,3.54],y[-4.00,3.00],z[-1.31,-0.10],keep,R01: wall from terrace base down to lowland; stair opening x[-4.55,-1.75] aligns with stair width
+Landing front fascia left / right,old terrace fascia (HIDDEN),x[-10.40,-4.55] and x[-1.75,3.54],y[-4.16,-3.94],z[-0.72,-0.07],keep hidden,already hide_render=True since s7; superseded by plinth wall
+Landing fascia recessed expansion joint .000-.006,thin decor strips floating (REVIEW),7 strips 0.02 m wide,y[-4.17,-4.16],z[-0.70,-0.10],delete-or-reattach,fascia they decorated is hidden; strips now float 0.16 m in front of plinth face -> N1 gray render check then remove if visible
+Landing iron rail ×3 + Landing rail post ×9,terrace front guard (KEEP),posts x[-10.29,5.74],y[-4.08,-4.01],z[-0.24,0.69],keep,posts embedded into plinth top; gap between rail segments x[-6.40,-0.60] leaves stair exit open (stair x[-4.47,-1.83] inside gap)
+Continuous warm bed below paving,terrace paving bed (KEEP),x[-10.40,3.54],y[-4.00,3.00],z=-0.02,keep,main paving base on terrace top
+Service apron continuous limestone slab 00_00..04_02,right service apron paving (KEEP),x[3.54,7.14],y[-4.00,3.00],z[-0.14,0.04],keep,right terrace apron slabs
+P1 tier | upper terrace,terrace body (KEEP),x[-22,22],y[2.60,8.00],z[-0.60,0.06],keep,central raised platform
+P1 tier | curb / curb cap,terrace-to-lowland edge (KEEP),x[-22,22],y[7.82,8.18],z[-0.30,0.14],keep,edge trim between terrace and back lowland
+P1 tier | low ground S/W/E/N,back lowland (KEEP),y[8.00,19.90],z[-0.60,-0.30],keep,R02: continuous back lowland around pool; south face at y=8 (0.97 m above front lowland) needs slope/connection check in N1 side view
+Ground plane beneath courtyard,front lowland base (KEEP),x[-12,12],y[-12.50,15.20],z[-1.45,-1.27],keep+improve,foreground lowland surface after stair deletion; main stair lands here; dark earth/tone per R01
+P1 pool | basin/inner wall/stone rim/water,water pool (KEEP),x[-6.12,3.83],y[13.82,16.57],z[-1.12,-0.36],keep,small water feature retained per R02 (not enlarged)
+P1 tier | far bank,far shore rise (KEEP),x[-22,22],y[19.50,22.00],z[-0.60,0.80],keep-modify in N3,soften with vegetation per R09
+M02 | far bank plate / M03 | distant air plate,background planes (KEEP),y[26.7,40.3],,keep-modify in N3,distant backdrop plates for far shore layering
+P1 crown | 00..13 + toe + treeline,distant tree canopy cards (KEEP),y[18.3,29.4],z[-1.6,6.3],keep-modify in N3,R09: far shore vegetation to interrupt hard bank outline
+Foreground left edge grass,P1 foreground table,Foreground family,foreground props (KEEP),x[-10.14,5.7],y[-4.1,-1.8],z[0.04,0.98],keep-until-N2,foreground lowland edge planting and table; check clutter value in N2

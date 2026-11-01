@@ -1,0 +1,169 @@
+{
+  "schema": "p1-layered-background-build-spec/v2",
+  "status": "current_background_build_start_values_not_new_render_pass",
+  "authority": "planning/art/P1_LAYERED_BACKGROUND_V2_PLAN_20261031.md",
+  "reference": {
+    "path": "reference/_raw_screenshots/P1/t084s.jpg",
+    "sha256": "13706e7eab96726565156a9e6440727de5d5bac82ee9c09c293a5745dd7446de",
+    "frame_px": [1920, 1078],
+    "water_anchor_bbox_px_approx": [576, 140, 1037, 291],
+    "water_anchor_status": "approximate P1 standard envelope; not a filled rectangle or exact segmentation",
+    "reference_mask_rule": "Before viewing new candidate, manually review U/F/W/K/A/X. Existing V20 mask and 3.776 percent are historical draft values, not certified truth."
+  },
+  "comparison_scene": {
+    "path": "art/static_map/p1_autumn_courtyard/v20/scene.blend",
+    "sha256": "1d09a44209209c90408791470a6573b0cd1a1a80eda4436d984b7056dbe6904e",
+    "read_only": true,
+    "new_candidate": "highest existing vNN plus one; do not overwrite V18/V19/V20",
+    "camera_reported_v20": {
+      "location_xyz": [0.25, -20.5, 8.2],
+      "rotation_euler_rad": [1.23617494, 0.0, 0.01198983],
+      "lens_mm": 53.0,
+      "resolution_px": [1920, 1078],
+      "view_transform": "Standard",
+      "exposure": -0.78,
+      "status": "read from V20 report; verify against copied .blend before first preview"
+    },
+    "conflict_to_resolve": "V1 spec recorded V18 exposure -0.25. Do not mix V18/V20 color baselines. Lock actual new-candidate camera and exposure for within-candidate comparisons."
+  },
+  "camera_composition_probe_before_background_geometry": {
+    "purpose": "reduce excessive upper background while preserving P1 foreground/midground anchors",
+    "resolution_px": [960, 539],
+    "same_scene_lens_exposure_and_position": true,
+    "dof": false,
+    "variants": [
+      {"id": "C0", "change": "V20 baseline"},
+      {"id": "C1", "change": "aim camera downward about 1.5 degrees; verify direction in viewport"},
+      {"id": "C2", "change": "aim camera downward about 3 degrees; verify direction in viewport"}
+    ],
+    "choose_only_if": "upper empty background shrinks and left tree, right grass planter, equipment, steps, rails and visible water gap remain readable",
+    "reject_if": "water gap disappears, grass crown or main tree is cut excessively, stairs/wall dominate lower half, or target anchors move farther from P1",
+    "do_not_change_in_same_probe": ["camera height", "lens", "platform geometry", "object positions", "exposure"],
+    "after_choice": "lock actual camera parameters; reproject T01, horizontal water proxy and M02/M03; regenerate candidate mask; preserve P1 reference mask",
+    "camera_height_lowering": "not the first operation; it changes perspective and may reveal more distant background",
+    "platform_height": {
+      "default": "unchanged from baseline",
+      "conditional_trial_delta_m": [0.10, 0.20],
+      "condition": "only after chosen camera proves front height visibly insufficient against P1",
+      "group_adjustment": "platform, steps, rails, equipment, grass planters, T01 connection and water level must be rebuilt as a supported group; never lift only the wall or deck"
+    }
+  },
+  "mask_classes": {
+    "U": "observable environment = F union W union K union A",
+    "F": "visible foreground and midground real scene, including T01",
+    "W": "visible distant water",
+    "K": "visible far bank and far vegetation",
+    "A": "visible sky, atmosphere, far trees and any world backing",
+    "X": "reference UI, character, subtitle or genuinely unobservable region",
+    "background": "W union K union A; include card pixels, proxy meshes and camera-only world",
+    "candidate_measurement": "manual F/W/K/A class mask over final composite; use no-DOF object/material IDs and explicit world color only as aids; paired card on/off difference is supplementary",
+    "area_check": {
+      "max_difference_percentage_points_after_reference_mask_review": 3.0,
+      "also_require": "class location, shoreline silhouette and side-by-side visual comparison; equal area alone cannot pass",
+      "old_v20_candidate_fraction_U": 0.06488,
+      "old_v20_reference_fraction_U": 0.03776,
+      "old_v20_status": "invalid for complete visible background because camera-only world was excluded"
+    }
+  },
+  "color_measurement": {
+    "reference_screen_srgb_approx": {
+      "cool_distant_median": [125, 145, 154],
+      "warm_stone_median": [216, 195, 170],
+      "dark_leaf_median": [99, 61, 41]
+    },
+    "valid_comparison": "same observable U and prelocked matched-class ROIs on final screen render; inspect luminance relationships and 50pct grayscale composition",
+    "invalid_comparison": "raw full-image P50 of P1 versus UI-free candidate; P1 UI and character confound the result"
+  },
+  "t01_v20_geometry_start_only": {
+    "west_shore_cap_x": [-6.2, -4.1],
+    "east_shore_cap_x": [-1.5, 2.2],
+    "shore_y_front_back": [14.2, 14.62],
+    "top_z": 0.13,
+    "dark_sidewall_bottom_z": -0.82,
+    "central_opening_x": [-4.1, -1.5],
+    "landing_connector_x": [-5.15, -2.4],
+    "landing_connector_y": [13.55, 14.22],
+    "landing_connector_z": [0.045, 0.105],
+    "status": "V20 actual geometry to reproject and revise, not a P1 source parameter",
+    "required_screen_proof": "sample visible water aperture every 50-80 final pixels; record far bank/water/near lip depth order, support and projected edge"
+  },
+  "v20_screen_gap_diagnosis": {
+    "m01_source_water_v": [0.126, 0.198],
+    "t01_shore_cap_projected_v_approx": [0.212, 0.225],
+    "nearest_vertical_gap_px_approx_at_1078": 15,
+    "implication": "grey backing can show between source water and real near lip; revise projected contact line, do not only recolor or blur"
+  },
+  "default_water_proxy_design_start": {
+    "type": "low-complexity horizontal or gently curved mesh with editable M01 UV water texture",
+    "bbox_x": [-5.0, 2.5],
+    "bbox_y": [14.4, 17.5],
+    "surface_z_start": -0.18,
+    "status": "unvalidated design start; project to actual new-candidate camera and revise against shore contact",
+    "relation": "below T01 cap z 0.13 and above old dark wall bottom z -0.82",
+    "camera_facing_water_card": "historical V20 method; use only if a new no-DOF blockout proves continuous shore contact"
+  },
+  "layers": [
+    {
+      "id": "M01_water",
+      "depth_order": 1,
+      "source": "Blender Texture Paint or equivalent editable UV source plus packed/exported PNG; Krita .kra/.ora only if tool availability is verified",
+      "content": "continuous low-contrast blue-grey UV water on horizontal proxy, with sparse soft horizontal value changes",
+      "forbidden": ["closed ellipse", "isolated blue patch", "water in front of near bank"],
+      "camera_depth_m_v1_start_only": "historical card depth 38.0; not default for V2"
+    },
+    {
+      "id": "M02_far_bank",
+      "depth_order": 2,
+      "source": "Blender editable image/node source plus alpha PNG; Krita .kra/.ora optional after installation check",
+      "content": "irregular warm pale terrain, grouped far grasses and a few asymmetrical tree shadows",
+      "forbidden": ["visible rectangular side edge", "uniform short grass strip", "equidistant ellipse trees"],
+      "camera_depth_m_v1_start_only": 42.0
+    },
+    {
+      "id": "M03_distant_air",
+      "depth_order": 3,
+      "source": "Blender editable image/node source plus alpha PNG; Krita .kra/.ora optional after installation check",
+      "content": "dark warm upper atmosphere, soft far tree masses, warm haze near horizon",
+      "forbidden": ["large visible uniform grey backing", "unclassified world pixels", "hard full-width ridge"],
+      "camera_depth_m_v1_start_only": 47.0
+    }
+  ],
+  "art_source_rules": {
+    "tool_status": "Krita/GIMP/Inkscape not found in common install locations at 2026-10-31 plan audit; verify before use. Blender 5.2.3 is the project baseline.",
+    "default_editable_source": "Blender Texture Paint and material nodes, with separately named original layer images, masks, exports and packed dependencies",
+    "paint_in_order": ["50pct full-scene color block", "M03 large asymmetrical masses", "M02 terrain and grouped vegetation", "M01 continuous water", "scene integration and controlled softening"],
+    "hidden_edge_extension_final_px_start": [8, 16],
+    "detail_resolution_relative_to_final_projection": [1.0, 1.5],
+    "export_canvas_px_for_camera_uv": [1920, 1078],
+    "keep_clear_source_before_blur": true,
+    "old_v1_gaussian_sigma_2_4_6": "trial values only; not required targets",
+    "ai_generated_whole_final_scene": false,
+    "external_generation_if_used": "only licensed local layers/drafts with model, prompt, source, edits and mapping recorded"
+  },
+  "material_and_world": {
+    "preview_world_camera_color": "diagnostic magenta or violet; any visible U pixel is failure",
+    "formal_world_rule": "prefer zero visible world pixels; if present, include them in A mask and art review",
+    "cards": "sRGB color texture, explicit alpha, controlled emission, camera visible; disable unneeded shadow/diffuse/glossy/transmission/scatter rays",
+    "lighting_probe": "same seed and camera, compare opaque foreground interior ROIs with cards enabled/disabled"
+  },
+  "render_sequence": {
+    "storage_preflight": "project measured 15.085 GiB at 2026-10-31; enforce 15 GiB cap before copying about 194 MiB V20 scene or rendering new full image; dry-run safe cleanup, preserve old bound evidence; G0 mask and read-only low-resolution camera probes may proceed in a separate temporary directory while capacity is unresolved",
+    "g1_preview_px": [960, 539],
+    "g1_samples_start": 8,
+    "g1_dof": false,
+    "g1_required": ["C0/C1/C2 camera contact sheet and chosen camera record", "object ID and world class", "pure color horizontal-water/far-card preview", "water-bank screen profiles", "50pct full-image inspection"],
+    "g2_required": ["editable painted source", "alpha export", "no-DOF seam crop", "manual class mask over final composite including world"],
+    "dof_ab": "only if formal image has clear focus/softness problem; same camera, seed, sources and focus",
+    "full_resolution_px": [1920, 1078],
+    "full_render_only_after": "G1 geometry and G2 full-scene color block pass"
+  },
+  "decision_rules": {
+    "max_trials_per_same_method": 2,
+    "after_water_bank_projection_failure": "default already uses horizontal water proxy; revise T01 contact and curved far-bank proxy, then reproject. Do not retry V20 closed ellipse card.",
+    "after_flat_or_repeated_paint_failure": "switch from procedural ellipse/strip source to editable layered painting with hand-directed large forms",
+    "never_pass_if": ["visible grey world curtain", "closed water ellipse", "visible far-bank rectangle side", "unconnected water and shore", "background area based only on toggled-card difference"],
+    "production_score_threshold": 85,
+    "minimum_score_each_dimension_0_to_4": 3.0,
+    "score_authority": "planning/art/P1_T084_ART_DIRECTION_STANDARD_20261028.md"
+  }
+}

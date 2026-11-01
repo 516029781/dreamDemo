@@ -1,0 +1,9 @@
+{
+ "layers": [
+  "M01_water.png",
+  "M02_far_bank.png",
+  "M03_distant.png"
+ ],
+ "space": "screen 1920x1078, top-left origin, drawn at final resolution",
+ "note": "G1 flat-color stage; to be refined after occlusion check"
+}

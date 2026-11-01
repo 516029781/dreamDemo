@@ -1,0 +1,301 @@
+{
+  "schema": "p1-reference-mask/1",
+  "candidate": "v19",
+  "reference": {
+    "path": "reference/_raw_screenshots/P1/t084s.jpg",
+    "sha256": "13706e7eab96726565156a9e6440727de5d5bac82ee9c09c293a5745dd7446de",
+    "size": [
+      1920,
+      1078
+    ]
+  },
+  "coordinate_origin": "top_left, normalized 0..1",
+  "method": "manual polygon annotation on the reference; not automatic segmentation",
+  "observable_mask": {
+    "definition": "full frame minus UI/text/banner minus character",
+    "excluded_regions": {
+      "top_banner_text": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.425,
+          0.0
+        ],
+        [
+          0.425,
+          0.048
+        ],
+        [
+          0.0,
+          0.048
+        ]
+      ],
+      "esc_button": [
+        [
+          0.018,
+          0.055
+        ],
+        [
+          0.062,
+          0.055
+        ],
+        [
+          0.062,
+          0.115
+        ],
+        [
+          0.018,
+          0.115
+        ]
+      ],
+      "task_card": [
+        [
+          0.0,
+          0.125
+        ],
+        [
+          0.19,
+          0.125
+        ],
+        [
+          0.19,
+          0.255
+        ],
+        [
+          0.0,
+          0.255
+        ]
+      ],
+      "bottom_left_eye": [
+        [
+          0.015,
+          0.875
+        ],
+        [
+          0.075,
+          0.875
+        ],
+        [
+          0.075,
+          0.935
+        ],
+        [
+          0.015,
+          0.935
+        ]
+      ],
+      "bottom_right_rabbit": [
+        [
+          0.835,
+          0.775
+        ],
+        [
+          0.955,
+          0.775
+        ],
+        [
+          0.955,
+          0.905
+        ],
+        [
+          0.835,
+          0.905
+        ]
+      ],
+      "bottom_right_f": [
+        [
+          0.855,
+          0.895
+        ],
+        [
+          0.915,
+          0.895
+        ],
+        [
+          0.915,
+          0.945
+        ],
+        [
+          0.855,
+          0.945
+        ]
+      ],
+      "bottom_right_shift": [
+        [
+          0.945,
+          0.865
+        ],
+        [
+          1.0,
+          0.865
+        ],
+        [
+          1.0,
+          0.94
+        ],
+        [
+          0.945,
+          0.94
+        ]
+      ]
+    },
+    "excluded_character": [
+      [
+        0.485,
+        0.395
+      ],
+      [
+        0.575,
+        0.395
+      ],
+      [
+        0.575,
+        0.565
+      ],
+      [
+        0.485,
+        0.565
+      ]
+    ],
+    "area_px": 1883892,
+    "area_fraction_of_frame": 0.9102,
+    "file": "art/static_map/p1_autumn_courtyard/v19/reference_analysis/P1_OBSERVABLE_MASK.png",
+    "sha256": "2a57f0c253a4ae6e50195614acfd28d189c75292ba3864791aa85ec6147ea4c5"
+  },
+  "background_mask": {
+    "definition": "visible sky/haze, far bank, far water, far trees inside U",
+    "polygons": {
+      "sky_haze_center": [
+        [
+          0.4,
+          0.0
+        ],
+        [
+          0.56,
+          0.0
+        ],
+        [
+          0.56,
+          0.052
+        ],
+        [
+          0.4,
+          0.058
+        ]
+      ],
+      "sky_haze_right": [
+        [
+          0.585,
+          0.0
+        ],
+        [
+          0.645,
+          0.0
+        ],
+        [
+          0.645,
+          0.042
+        ],
+        [
+          0.585,
+          0.048
+        ]
+      ],
+      "far_bank": [
+        [
+          0.252,
+          0.07
+        ],
+        [
+          0.46,
+          0.064
+        ],
+        [
+          0.464,
+          0.132
+        ],
+        [
+          0.256,
+          0.138
+        ]
+      ],
+      "water": [
+        [
+          0.278,
+          0.13
+        ],
+        [
+          0.33,
+          0.126
+        ],
+        [
+          0.398,
+          0.13
+        ],
+        [
+          0.448,
+          0.14
+        ],
+        [
+          0.452,
+          0.182
+        ],
+        [
+          0.42,
+          0.198
+        ],
+        [
+          0.352,
+          0.198
+        ],
+        [
+          0.296,
+          0.186
+        ],
+        [
+          0.278,
+          0.158
+        ]
+      ],
+      "far_trees": [
+        [
+          0.286,
+          0.09
+        ],
+        [
+          0.392,
+          0.086
+        ],
+        [
+          0.436,
+          0.104
+        ],
+        [
+          0.39,
+          0.13
+        ],
+        [
+          0.288,
+          0.132
+        ]
+      ]
+    },
+    "area_px": 71137,
+    "area_fraction_of_frame": 0.03437,
+    "area_fraction_of_U": 0.03776,
+    "file": "art/static_map/p1_autumn_courtyard/v19/reference_analysis/P1_BACKGROUND_MASK.png",
+    "sha256": "e01ee62d8e7510b704ff470058203a11e9651c94973dbb165a45b6bb7d60660e",
+    "note": "measured on 2026-10-31 before any candidate render; do not revise after seeing candidate"
+  },
+  "overlay": {
+    "file": "art/static_map/p1_autumn_courtyard/v19/reference_analysis/P1_MASK_OVERLAY.png",
+    "sha256": "90d59ecbbcad52cd5f7c28d519557bf5a63b454ca3b2558acf7ff807ad43f503"
+  },
+  "design_start_range_for_comparison": {
+    "min": 0.15,
+    "max": 0.25,
+    "status": "superseded by measured value"
+  }
+}

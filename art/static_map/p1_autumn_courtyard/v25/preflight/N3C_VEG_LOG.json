@@ -1,0 +1,24 @@
+{
+ "deleted": [
+  "P1 canopy inner A",
+  "P1 canopy inner B",
+  "P1 canopy inner C",
+  "P1 far crown dup 00",
+  "P1 far crown dup 02",
+  "P1 far crown dup 04",
+  "P1 far crown dup 06",
+  "P1 far crown dup 07",
+  "P1 far crown dup 08",
+  "P1 far crown dup 09"
+ ],
+ "restored": [
+  "overlay mesh materials -> autumn leaves",
+  "dark_leaf multiply wired=True"
+ ],
+ "added": [
+  "P1 canopy inner A",
+  "P1 canopy inner B",
+  "P1 canopy inner C"
+ ],
+ "elapsed_s": 1.4
+}

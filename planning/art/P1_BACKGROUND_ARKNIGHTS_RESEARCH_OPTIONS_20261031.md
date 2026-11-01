@@ -1,5 +1,8 @@
 # P1 背景参考研究与选型（待确认，不制作）
 
+> ⛔ **历史文档（SUPERSEDED）** —— 当前唯一有效方案是 [P1_BACKGROUND_OPTIMIZE_v24_1_PLAN.md](P1_BACKGROUND_OPTIMIZE_v24_1_PLAN.md)（v24.2）。本文仅作决策与方法记录，**不要照此执行**。
+
+
 日期：2026-10-31。状态：**用户已选择 A 方向；选项比较保留作决策依据，实际摆放以 `P1_AUTUMN_MAINTENANCE_COURTYARD_BACKGROUND_DESIGN_20261031.md` 和 `P1_BACKGROUND_PLACEMENT_START_V1.json` 为准。** 本轮不修改 Blender 场景、材质或渲染。整图目标仍为 `reference/_raw_screenshots/P1/t084s.jpg`；《明日方舟》本篇关卡图仅用于研究“怎样让可玩区外的画面成立”，不替换 P1 的秋日色彩和构图。
 
 ## 1. 资料能说明什么

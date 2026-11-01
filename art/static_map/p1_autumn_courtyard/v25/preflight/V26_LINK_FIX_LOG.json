@@ -1,0 +1,17 @@
+{
+ "linked": [],
+ "reappended": [
+  "P1 canopy inner A",
+  "P1 canopy inner B",
+  "P1 canopy inner C",
+  "P1 canopy top layer"
+ ],
+ "errors": [
+  "append failed: P1 edge | barrel -4.2",
+  "append failed: P1 edge | barrel 2.8",
+  "append failed: P1 edge | barrel rim -4",
+  "append failed: P1 edge | barrel rim 2",
+  "append failed: P1 veg | barrel grass -4.2",
+  "append failed: P1 veg | barrel grass 2.8"
+ ]
+}

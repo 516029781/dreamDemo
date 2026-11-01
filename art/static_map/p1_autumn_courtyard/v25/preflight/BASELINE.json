@@ -1,0 +1,59 @@
+{
+  "task": "N0 baseline registration for v25 (P1 autumn courtyard)",
+  "date": "2026-11-01T04:55:00+08:00",
+  "reference": {
+    "image": "reference/_raw_screenshots/P1/t084s.jpg",
+    "sha256": "13706e7eab96726565156a9e6440727de5d5bac82ee9c09c293a5745dd7446de"
+  },
+  "baseline_v24": {
+    "source": "art/static_map/p1_autumn_courtyard/v24/scene.blend",
+    "sha256": "0ac1d9d228452b358d7b0750796f89658c20b429a9dfc9a05de98e9971cea973",
+    "final_render": "v24/renders/v24_final_48spp.png",
+    "render_sha256": "72196214d33460b584fba5f015abd9625d04d95019a4283f21e9fe2d8570fca9",
+    "review_score": "64.7/100 (changes_required, V24_SCENE_LOGIC_AND_ART_REVIEW_20261101.md)"
+  },
+  "candidate_v25": {
+    "dir": "art/static_map/p1_autumn_courtyard/v25/",
+    "created_by": "copy of v24 scene.blend + assets + background_src + reference_analysis + preflight scripts",
+    "scene_blend_copied": true,
+    "renders_copied": false
+  },
+  "blender": {
+    "exe": "C:/Users/tt/.cache/blender/5.2.3/blender-5.2.3-windows-x64/blender.exe",
+    "version": "5.2.3 LTS",
+    "note": "matches v24 authoring version; project .tools/blender only has 4.5.15 which must NOT open this file"
+  },
+  "camera_verified": {
+    "name": "P1 fixed still camera",
+    "location": [0.25, -20.5, 8.2],
+    "rotation_euler_deg": [69.328, 0.0, 0.687],
+    "type": "PERSP", "lens_mm": 53.0, "sensor_mm": 36.0,
+    "dof": true, "focus_distance_m": 24.0,
+    "resolution": [1920, 1078], "resolution_pct_now": 50,
+    "engine": "CYCLES", "view_transform": "Standard", "exposure": 0.34
+  },
+  "units": {"system": "METRIC", "scale_length": 1.0},
+  "external_images": {
+    "total": 4, "missing": 0,
+    "note": "all 4 image links resolve on this machine; see N0_CENSUS.json for paths; re-open validation will be repeated at N5"
+  },
+  "key_levels_verified": {
+    "ground_plane_lowland_front": {"z_top": -1.27, "note": "Ground plane beneath courtyard, foreground lowland where main stair lands"},
+    "upper_terrace_surface": {"z_top": 0.04, "note": "Continuous warm bed below paving z=-0.02 + plinth top -0.10; terrace y 2.6..8.0"},
+    "main_stair": {"tread08_bottom_z": -1.25, "tread00_top_z": -0.09, "treads": 9,
+                   "x_range": [-4.47, -1.83], "gap_to_paving_m": 0.07,
+                   "note": "main stair continuous from lowland to paving within one construction joint"},
+    "low_ground_back": {"z_top": -0.30, "y_range": [8.0, 19.9],
+                        "note": "low ground S/W/E/N behind terrace; 0.97 m above front lowland, south section face at y=8 must be checked in N1 gray render"},
+    "pool": {"water_z": -0.44, "y_range": [14.07, 16.33]},
+    "far_bank": {"z_top": 0.80, "note": "P1 tier | far bank y 19.5..22.0"}
+  },
+  "storage_preflight": {
+    "disk_free_gb": 58, "project_known_dirs_gb": 5.3,
+    "limit_gib": 15, "warning_gib": 12,
+    "v25_initial_mb": 200, "planned_growth": "renders < 100 MB total",
+    "verdict": "OK"
+  },
+  "n0_deliverables": ["preflight/N0_CENSUS.json", "preflight/BASELINE.json", "preflight/OBJECT_DECISIONS.csv"],
+  "census_command": "blender-5.2.3 -b scene.blend -P preflight/n0_census.py  (exit 0, 1248 mesh objects)"
+}

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "kind": "execution_backlog_with_package_summary_not_autonomous_scheduler",
-  "updated_at": "2026-10-26T12:43:54.277368Z",
+  "updated_at": "2026-10-26T20:02:40.043008+00:00",
   "current_scope": "art_required",
   "current_art_release_task": "I09",
   "game_release_task": "W05",
@@ -5881,20 +5881,16 @@
         "delivery/next_cycle/n5/T4/N02_material_closeups.png",
         "delivery/next_cycle/n5/T4/N03_ui_before_after.png",
         "delivery/next_cycle/n5/T5/q04_behavior_moved.json",
-        "delivery/next_cycle/n5/T3/game_finalN5_formal_no_ui.png",
-        "delivery/next_cycle/n5/T3/game_finalN5_formal_ui.png",
-        "delivery/next_cycle/n5/T3/game_finalN5_dialogue.png",
-        "planning/execution/W_CYCLE_W1W2_20261026.md",
-        "delivery/performance/geometry_audit_before.json",
-        "delivery/performance/geometry_audit_after.json",
-        "planning/execution/ACTIVE_REWORK_CYCLE.json"
+        "delivery/next_cycle/n5/T3/game_finalN5h_formal_no_ui.png",
+        "delivery/next_cycle/n5/T3/game_finalN5h_formal_ui.png",
+        "delivery/next_cycle/n5/T3/game_finalN5h_dialogue.png"
       ],
       "commands_run": [
         "candidate_n5 directed Blender build (tree/planter/bench/map)",
         "Cocos web-desktop n4 build -> pass",
-        "Q01-Q09 -> pass; Q06 MAP001 draws 557 / tris 1524457; Q09 no device",
+        "Q01-Q09 -> pass; Q06 MAP001 draws 564 / tris 977356; Q09 no device",
         "N09 moved-position Q04 -> keyboard 1.05m / touch 1.80m; resume 0; portrait return 0",
-        "producer_review check -> producer_rework_required; ENV 77.5 / CHAR 93.75 / UI 87.5 / MIX 80.0"
+        "producer_review check -> producer_rework_required; ENV 80.0 / CHAR 93.75 / UI 87.5 / MIX 80.0"
       ],
       "actual_exit_codes": [
         0,
@@ -5917,7 +5913,7 @@
         "N08"
       ],
       "attempts": 1,
-      "blocker": "candidate_n5 self-review is 77.5/93.75/87.5/80.0 (gate 90); N09 fixed, ENV/UI/MIX visual gap to P1 remains.",
+      "blocker": "candidate_n5 self-review is 80.0/93.75/87.5/80.0 (gate 90); N09 fixed, ENV/UI/MIX visual gap to P1 remains.",
       "resume_action": "Continue producer repair on ENV geometry/crown, lighting depth and MIX; do not submit candidate_n5 as a final candidate until self-review reaches 90.",
       "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution.",
       "execution_optimization": {
@@ -6602,13 +6598,192 @@
       "blocker": null,
       "resume_action": "先核对输入版本与已有产物；复用有效成果，只补缺陷。完成后更新本条并继续下一条ready任务。",
       "output_policy": "These are required planned paths, not claims that files exist. New asset revisions must not overwrite frozen originals. If a validated encoder is unavailable, replace requested .mp4 with real PNG frame sequence plus timestamp JSON and record the substitution."
+    },
+    {
+      "id": "N5D-S0",
+      "title": "步骤0：n5c 重建与验证落账",
+      "phase": "渲染层返修",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "I06"
+      ],
+      "status": "todo",
+      "inputs": [
+        "delivery/next_cycle/n5/N5D_RENDER_UPGRADE_PLAN.md"
+      ],
+      "outputs": [
+        "art/candidates/candidate_n5/vegetation_audit.json"
+      ],
+      "acceptance": [
+        "经 n5_build 通道重建，audit 含 h/container",
+        "violations==0 且 orphans==0",
+        "三角面数对比旧构建无整组元素缺失",
+        "probe 指标对照 n5c-01-plan 预测落账"
+      ],
+      "evidence_paths": [
+        "delivery/next_cycle/n5/performance/decisions.jsonl"
+      ],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": [],
+      "blocker": null,
+      "resume_action": "按 N5D 方案批次执行并记录证据",
+      "output_policy": "candidate_n5 supersede-in-place",
+      "review_history": [],
+      "self_check_note": null,
+      "completed_at": null
+    },
+    {
+      "id": "N5D-S34",
+      "title": "S3+S4：顶点色 AO 与树叶图集",
+      "phase": "渲染层返修",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "N5D-S0"
+      ],
+      "status": "todo",
+      "inputs": [
+        "delivery/next_cycle/n5/N5D_RENDER_UPGRADE_PLAN.md"
+      ],
+      "outputs": [
+        "art/candidates/candidate_n5/source/layout/MAP001_courtyard.glb"
+      ],
+      "acceptance": [
+        "根部/接缝亮度降 8-15% 且色相<=30",
+        "edge_pct 变化<=±1.5%",
+        "四机位无光滑色块"
+      ],
+      "evidence_paths": [
+        "delivery/next_cycle/n5/performance/decisions.jsonl"
+      ],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": [],
+      "blocker": null,
+      "resume_action": "按 N5D 方案批次执行并记录证据",
+      "output_policy": "candidate_n5 supersede-in-place",
+      "review_history": [],
+      "self_check_note": null,
+      "completed_at": null
+    },
+    {
+      "id": "N5D-S1",
+      "title": "S1：Cocos 后处理调色 A/B",
+      "phase": "渲染层返修",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "N5D-S34"
+      ],
+      "status": "todo",
+      "inputs": [
+        "delivery/next_cycle/n5/N5D_RENDER_UPGRADE_PLAN.md"
+      ],
+      "outputs": [
+        "delivery/next_cycle/n5/T4/POST_GRADE_AB.png"
+      ],
+      "acceptance": [
+        "p95>=0.82",
+        "色彩度+15%",
+        "阴影色相<=30",
+        "p5>=0.16",
+        "角色-环境融合复核"
+      ],
+      "evidence_paths": [
+        "delivery/next_cycle/n5/performance/decisions.jsonl"
+      ],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": [],
+      "blocker": null,
+      "resume_action": "按 N5D 方案批次执行并记录证据",
+      "output_policy": "candidate_n5 supersede-in-place",
+      "review_history": [],
+      "self_check_note": null,
+      "completed_at": null
+    },
+    {
+      "id": "N5D-B4",
+      "title": "B4：铺装/土壤/前景构图",
+      "phase": "渲染层返修",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "N5D-S1"
+      ],
+      "status": "todo",
+      "inputs": [
+        "delivery/next_cycle/n5/N5D_RENDER_UPGRADE_PLAN.md"
+      ],
+      "outputs": [
+        "art/candidates/candidate_n5/source/layout/MAP001_courtyard.glb"
+      ],
+      "acceptance": [
+        "深色砖成组率>=90%",
+        "土壤亮度std>=0.05",
+        "铺装占画面<=45%"
+      ],
+      "evidence_paths": [
+        "delivery/next_cycle/n5/performance/decisions.jsonl"
+      ],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": [],
+      "blocker": null,
+      "resume_action": "按 N5D 方案批次执行并记录证据",
+      "output_policy": "candidate_n5 supersede-in-place",
+      "review_history": [],
+      "self_check_note": null,
+      "completed_at": null
+    },
+    {
+      "id": "N5D-B56",
+      "title": "B5 UI 减重 + B6 正式冻结与自评",
+      "phase": "渲染层返修",
+      "scope": "art_required",
+      "owner_role": "producer",
+      "depends_on": [
+        "N5D-B4"
+      ],
+      "status": "todo",
+      "inputs": [
+        "delivery/next_cycle/n5/N5D_RENDER_UPGRADE_PLAN.md"
+      ],
+      "outputs": [
+        "art_review/submissions/candidate_n5/manifest.json"
+      ],
+      "acceptance": [
+        "面板不透明占比<=参考+10%",
+        "0 证据类 finding",
+        "四卡真实自评",
+        "accepted=false"
+      ],
+      "evidence_paths": [
+        "delivery/next_cycle/n5/performance/decisions.jsonl"
+      ],
+      "commands_run": [],
+      "actual_exit_codes": [],
+      "related_defects": [],
+      "attempts": [],
+      "blocker": null,
+      "resume_action": "按 N5D 方案批次执行并记录证据",
+      "output_policy": "candidate_n5 supersede-in-place",
+      "review_history": [],
+      "self_check_note": null,
+      "completed_at": null
     }
   ],
   "artifact_write_policy": "Read-only old frozen dependencies. New or changed asset content goes to art/iterations/cycle_02/<asset_id>/. Record unchanged reused originals by hash; never overwrite old evidence to make the new package pass.",
-  "revision": "1.0.141",
+  "revision": "1.0.138",
   "workflow_index": "planning/performance/remaining_work_packages.json",
   "workflow_entry": "MODEL_EXECUTION_GUIDE.md",
-  "workflow_review_note": "candidate_n5 (n4b repair pass) produced and Q-validated; N09 fixed; producer self-review 77.5/93.75/87.5/80.0 does not meet the 90 gate. Candidate not submitted for final review.",
+  "workflow_review_note": "candidate_n5 (n4b repair pass) produced and Q-validated; N09 fixed; producer self-review 80.0/93.75/87.5/80.0 does not meet the 90 gate. Candidate not submitted for final review.",
   "workflow_mode": "candidate_first_final_review",
   "candidate_completion_tasks": {
     "art_required": "I07",

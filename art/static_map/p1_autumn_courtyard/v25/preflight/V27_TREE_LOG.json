@@ -1,0 +1,82 @@
+{
+ "deleted": [
+  "P1 canopy inner A",
+  "P1 canopy inner B",
+  "P1 canopy inner C",
+  "P1 canopy top layer",
+  "P1 broadleaf foliage overlay | widened canopy",
+  "Distant grove foliage lobe (grove lobe)",
+  "Distant grove foliage lobe.001 (grove lobe)",
+  "Distant grove foliage lobe.002 (grove lobe)",
+  "Distant grove foliage lobe.003 (grove lobe)",
+  "Distant grove foliage lobe.004 (grove lobe)",
+  "Distant grove foliage lobe.005 (grove lobe)",
+  "Distant grove foliage lobe.006 (grove lobe)",
+  "Distant grove foliage lobe.007 (grove lobe)",
+  "Distant grove foliage lobe.008 (grove lobe)",
+  "Distant grove foliage lobe.009 (grove lobe)",
+  "Distant grove foliage lobe.010 (grove lobe)",
+  "Distant grove foliage lobe.011 (grove lobe)",
+  "Distant grove foliage lobe.012 (grove lobe)",
+  "Distant grove foliage lobe.013 (grove lobe)",
+  "LOD1 leaf faces (0 faces, slot 1)",
+  "branch material warmed (tree_small_02_branches, users=5)"
+ ],
+ "created": [
+  {
+   "name": "P1 HP canopy main",
+   "loc": [
+    -8.95,
+    6.9,
+    1.25
+   ],
+   "size": 3.6
+  },
+  {
+   "name": "P1 HP canopy dark back",
+   "loc": [
+    -9.65,
+    7.3,
+    0.75
+   ],
+   "size": 2.8
+  },
+  {
+   "name": "P1 HP canopy dark low-left",
+   "loc": [
+    -9.95,
+    7.3,
+    0.6
+   ],
+   "size": 2.0
+  },
+  {
+   "name": "P1 HP canopy upper-left",
+   "loc": [
+    -9.5,
+    7.35,
+    1.7
+   ],
+   "size": 2.2
+  },
+  {
+   "name": "P1 HP canopy right",
+   "loc": [
+    -8.05,
+    6.8,
+    1.15
+   ],
+   "size": 1.9
+  },
+  {
+   "name": "P1 HP canopy top",
+   "loc": [
+    -8.75,
+    7.25,
+    1.87
+   ],
+   "size": 1.8
+  }
+ ],
+ "errors": []
+}

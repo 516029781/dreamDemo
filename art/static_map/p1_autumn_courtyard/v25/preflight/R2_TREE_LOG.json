@@ -1,0 +1,14 @@
+{
+ "deleted": [
+  "P1 canopy inner A",
+  "P1 canopy inner B",
+  "P1 canopy inner C",
+  "P1 canopy top layer"
+ ],
+ "clumps": [
+  "P1 canopy clump 00",
+  "P1 canopy clump 01",
+  "P1 canopy clump 02"
+ ],
+ "elapsed_s": 1.1
+}

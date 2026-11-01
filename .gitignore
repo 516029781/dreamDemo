@@ -88,3 +88,7 @@ delivery/**/*.txt
 *.sha256
 
 /.codex/state/
+
+# Cocos build outputs (regenerable, numbered variants)
+demo_n*/build*/
+demo_n*/build_s*/

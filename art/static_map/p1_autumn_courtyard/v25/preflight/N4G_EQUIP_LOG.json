@@ -1,0 +1,12 @@
+{
+ "seated": [
+  "CC0 utility power box | power_box_01_box",
+  "CC0 utility power box | power_box_01_door"
+ ],
+ "spec_cut": [
+  "modular_industrial_pipes_01_group01",
+  "power_box_01"
+ ],
+ "paletop": true,
+ "elapsed_s": 1.7
+}

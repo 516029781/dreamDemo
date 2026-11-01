@@ -1,0 +1,117 @@
+{
+  "status": "historical_superseded_by_P1_LAYERED_BACKGROUND_BUILD_SPEC_V2.json",
+  "audit_status": "changes_required",
+  "audit_report": "P1_LAYERED_BACKGROUND_PLAN_AUDIT_20261031.md",
+  "authority": "P1_LAYERED_BACKGROUND_MATTE_PLAN_20261031.md",
+  "reference": {
+    "path": "reference/_raw_screenshots/P1/t084s.jpg",
+    "sha256": "13706e7eab96726565156a9e6440727de5d5bac82ee9c09c293a5745dd7446de"
+  },
+  "source_scene": {
+    "path": "art/static_map/p1_autumn_courtyard/v18/scene.blend",
+    "sha256": "3b0e10a234a7af88d42292f73c78ef5d32f09b1d9897022cccfa2bcc71bee56f",
+    "read_only": true
+  },
+  "camera_measured_from_v18": {
+    "location_xyz": [0.25, -20.5, 8.2],
+    "rotation_euler_rad": [1.23617494, 0.0, 0.01198983],
+    "lens_mm": 53.0,
+    "sensor_width_mm": 36.0,
+    "sensor_height_mm": 24.0,
+    "sensor_fit": "AUTO",
+    "pixel_aspect": [1.0, 1.0],
+    "resolution_px": [1920, 1078],
+    "view_transform": "Standard",
+    "exposure": -0.25,
+    "old_focus_distance_m": 22.5,
+    "old_fstop": 0.55
+  },
+  "screen_targets": {
+    "coordinate_origin": "top_left",
+    "water_anchor_from_p1_standard_approx": {
+      "normalized_xyxy": [0.30, 0.13, 0.54, 0.27],
+      "pixel_xyxy_rounded": [576, 140, 1037, 291],
+      "use": "visible water envelope, not a filled rectangle"
+    },
+    "transition_zone_design_start": {
+      "normalized_xyxy": [0.24, 0.24, 0.53, 0.42],
+      "pixel_xyxy_rounded": [461, 259, 1018, 453],
+      "use": "rear platform, railings, coping and overlapping equipment; not a solid band"
+    },
+    "background_visible_fraction_design_start": {
+      "target": 0.20,
+      "min": 0.15,
+      "max": 0.25,
+      "status": "unmeasured_design_range; replace with locked P1 mask at G0",
+      "comparison_denominator": "same_P1_observable_mask_U",
+      "post_G0_max_absolute_fraction_difference": 0.03
+    }
+  },
+  "foreground_transition_design_start": {
+    "remove_by_name_after_object_id_audit": [
+      "P1-supported distant arched footbridge deck",
+      "Bridge arched iron handrail*",
+      "Bridge lower iron rail*",
+      "Bridge iron baluster*",
+      "Bridge grounded stone abutment*",
+      "V18 B02 | bridge-side supported landing pad",
+      "V18 B02 | three short bridge transition steps"
+    ],
+    "flat_service_walk_world_bbox_xy": [[-5.15, 7.77], [-2.40, 8.53]],
+    "flat_service_walk_top_z_start": 0.10,
+    "ground_top_z_observed_start": 0.035,
+    "connect_to_existing_rear_service_walk_top_z": 0.055,
+    "single_connection_height_delta_start": 0.045,
+    "rail_height_from_walk_start_m": 0.75,
+    "instructions": "Greybox values only; check tree/equipment collision, contact support, route and fixed-camera silhouette before detailing. Do not recreate an arched bridge on dry land."
+  },
+  "camera_facing_cards_design_start": {
+    "canvas_px_each": [1920, 1078],
+    "uv": "full_frame_0_to_1",
+    "local_coordinates": "parent_to_camera; plane center local (0,0,-depth_m), local XY plane faces camera",
+    "depth_order": ["T01_real_geometry", "M01_water", "M02_far_bank", "M03_distant_trees_air"],
+    "M01_water": {
+      "camera_depth_m": 38.0,
+      "full_frame_world_width_height": [25.811, 14.492],
+      "transparent_outside_painted_water": true,
+      "preblur_gaussian_sigma_px_at_final_resolution_start": 2.0
+    },
+    "M02_far_bank": {
+      "camera_depth_m": 42.0,
+      "full_frame_world_width_height": [28.528, 16.017],
+      "transparent_outside_painted_bank": true,
+      "preblur_gaussian_sigma_px_at_final_resolution_start": 4.0
+    },
+    "M03_distant_trees_air": {
+      "camera_depth_m": 47.0,
+      "full_frame_world_width_height": [31.925, 17.924],
+      "opaque_full_frame_backing": true,
+      "preblur_gaussian_sigma_px_at_final_resolution_start": 6.0
+    },
+    "hidden_edge_overlap_px_start": 12,
+    "ray_visibility": "camera_visible; disable unnecessary shadow and reflection participation only",
+    "size_formula_if_camera_changes": "full_width = depth * sensor_width_mm / lens_mm; full_height = full_width * resolution_y / resolution_x for current AUTO horizontal fit and square pixels; remeasure on camera change"
+  },
+  "render_design_start": {
+    "grey_and_color_preview_px": [960, 539],
+    "preview_cycles_samples": 8,
+    "final_px": [1920, 1078],
+    "final_cycles_samples_start": 16,
+    "final_cycles_samples_if_visible_noise_only": 32,
+    "denoise": true,
+    "G1_dof": false,
+    "G2_same_material_blur_variants": [
+      {"id": "A", "focus_distance_m_start": 22.5, "fstop": 1.2},
+      {"id": "B", "focus_distance_m_start": 22.5, "fstop": 0.8}
+    ],
+    "focus_rule": "Use A and B with the same focus. If central equipment is not sharp in both, measure its camera-space median depth and make one documented focus correction; do not sweep focus values."
+  },
+  "iteration_rules": {
+    "max_trials_per_same_hypothesis": 2,
+    "after_two_failures": "change method: revise T01 occlusion/card projection; if that also fails, use low-complexity curved or 3D proxy for water/far bank",
+    "never_change_to_pass": ["P1 reference", "85 point threshold", "score weights", "old frozen candidate"],
+    "first_check": "G1 no-DOF geometry and background mask before painted detail",
+    "second_check": "G2 only A/B DOF and same source layers",
+    "final_check": "full image, no-DOF seam diagnostic, mask comparison, source reopen, and honest visual review"
+  }
+}

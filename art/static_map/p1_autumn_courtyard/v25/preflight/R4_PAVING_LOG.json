@@ -1,0 +1,19 @@
+{
+ "zones": {
+  "worn_bright": 15,
+  "mid": 7,
+  "aged_a": 7,
+  "aged_b": 22,
+  "warm_dark": 17
+ },
+ "patched": [
+  "Cut limestone slab 03_00_00",
+  "Cut limestone slab 03_02_00",
+  "Cut limestone slab 04_04_00"
+ ],
+ "facade": [
+  "Recessed warm joints -> 3 objs",
+  "Stone worn edges -> 2 objs"
+ ],
+ "elapsed_s": 0.7
+}

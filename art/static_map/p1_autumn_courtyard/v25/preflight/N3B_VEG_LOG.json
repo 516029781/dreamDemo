@@ -1,0 +1,24 @@
+{
+ "deleted": [
+  "P1 canopy dark mass A",
+  "P1 canopy dark mass B",
+  "P1 canopy dark mass C",
+  "P1 canopy dark mass D",
+  "P1 far shrub 00",
+  "P1 far shrub 01",
+  "P1 far shrub 02",
+  "P1 far shrub 03",
+  "P1 far shrub 04",
+  "P1 far shrub 05",
+  "P1 far shrub 06",
+  "P1 far shrub 07",
+  "P1 far shrub 08"
+ ],
+ "added": [
+  "P1 canopy inner A",
+  "P1 canopy inner B",
+  "P1 canopy inner C",
+  "far crown dups x7"
+ ],
+ "elapsed_s": 1.4
+}

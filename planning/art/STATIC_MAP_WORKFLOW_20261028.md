@@ -1,6 +1,8 @@
 # P1 秋日风格静态地图工作流（v6.4 文档修订）
 
-更新：2026-10-31。状态：当前执行规范。本文取代旧版 S0–S5 的冗余指令；唯一整图视觉目标、锚点、评分以 `planning/art/P1_T084_ART_DIRECTION_STANDARD_20261028.md` 为准。地图数据的 Harness 约束以 `knowledge/MAP_PARAMETER_HARNESS_RULES_20261029.md` 为准。当前已提交的 hook/gate 只允许 `target_met` 或证据完整的真实 `blocked_external` 结束；低于门槛必须继续返修。工作区另有一组未提交门禁改动与此规则冲突，不属于本次提交。
+> **当前候选信息入口：**`planning/art/ACTIVE_STATIC_ART.json`；冲突订正与接手步骤见 `planning/art/STATIC_ART_INFORMATION_CORRECTION_20261101.md`。本工作流只规定通用制作关口与结束条件。以状态文件的实际源/图 SHA 为准，旧交付与旧评分不得跨图沿用。视觉标准和85分门槛保持不变。
+
+更新：2026-10-31。状态：当前执行规范。本文取代旧版 S0–S5 的冗余指令；唯一整图视觉目标、锚点、评分以 `planning/art/P1_T084_ART_DIRECTION_STANDARD_20261028.md` 为准。地图数据的 Harness 约束以 `knowledge/MAP_PARAMETER_HARNESS_RULES_20261029.md` 为准。当前项目 hook/gate 只允许 `target_met` 或证据完整的真实 `blocked_external` 结束；低于门槛必须继续返修。
 
 ## 1. 目标与权威文件
 
@@ -11,10 +13,9 @@
 - `planning/art/P1_T084_ART_DIRECTION_STANDARD_20261028.md` 是唯一视觉参考、画面目标、锚点和评分依据。
 - `knowledge/MAP_PARAMETER_HARNESS_RULES_20261029.md` 规定数据 fixture 与项目地图校验规则；其 Arknights 参数不参与视觉评分。
 - 两个项目美术 skill 是制作参考，不额外增加交付门。
-- 2026-10-30 的整画面制作方法见 `planning/art/P1_SCENE_ART_REDESIGN_PLAN_20261030.md`；从 v15 基线处理场所用途、背景、光色与植被，取代旧背景单项返修建议。该方案没有新增评分体系，工具授权边界见本文 §5。
-- 2026-10-31 用户选定的背景方向及可执行参数见 `planning/art/P1_AUTUMN_MAINTENANCE_COURTYARD_BACKGROUND_DESIGN_20261031.md`、`planning/art/P1_BACKGROUND_PLACEMENT_START_V1.json`。当前比较基线为 V16；V17 有实验文件，开工应另选未占用版本。背景坐标只是起始值，必须走 G1 灰模、G2 同机位组合图和 G3 真实评分，不得因参数表齐全跳过视觉复核。
+- 当前工作基线、已完成方法和下一轮有效计划统一从 `planning/art/ACTIVE_STATIC_ART.json` 读取；启动时核验实物与 SHA。`P1_SCENE_ART_REDESIGN_PLAN_20261030.md`、`P1_LAYERED_BACKGROUND_V2_PLAN_20261031.md` 及其 V2 施工表保留作历史方法，不再充当“当前背景制作入口”。它们的旧参考面积、坐标、相机试验和 V20 结论不能直接作为新候选门槛。仍须走 G1 灰模、G2 同机位组合图和 G3 真实评分。
 - 旧 `STATIC_MAP_ART_SKILLS_AND_TOOLS_20261028.md` 不属于当前制作依据；如后续确需评估工具，另做有来源和实测状态的新调研。
-- 仓库里现有 `target_layout_v04.json`、`style.json`、`regions.json`、`grade_lut.json` 及 `consistency_check.js`、`region_report.js`、`composition_check.js`、`p1_style_probe.py`、`make_static_map_overlay.py` 均为未认证的旧 P1 量测配置/工具，不能用其通过或失败结果评价 v06。旧配置存在 90 分口径、UI/角色条目、区域目标框和远景色相等冲突；完成新 P1 reference profile 和复核前不运行这些脚本。
+- 仓库里现有 `target_layout_v04.json`、`style.json`、`regions.json`、`grade_lut.json` 及 `consistency_check.js`、`region_report.js`、`composition_check.js`、`p1_style_probe.py`、`make_static_map_overlay.py` 均为未认证的旧 P1 量测配置/工具，不能用其通过或失败结果评价当前或未来候选。旧配置存在 90 分口径、UI/角色条目、区域目标框和远景色相等冲突；完成新 P1 reference profile 和复核前不运行这些脚本。
 
 主参考 `reference/_raw_screenshots/P1/t084s.jpg` 已重新确认为目标图；按其 SHA 与 P1 标准中的秋日画面特征制作。CW-8/CW-9 的格子、路线数、tile 类型和 view 数值不得替换 P1 的构图锚点、色板或相机参数。v05 及已绑定证据保持原样；新返修必须另记候选和前后证据。
 
@@ -31,7 +32,9 @@
 
 四个关口在同一连续任务内完成，不等待用户阶段批准。关口检查是制作过程，不是额外外部审核。
 
-G1 同时明确主要物件组的用途、支撑和连接，以及背景的轮廓/遮挡/厚度；G2 先把树、草、石材、金属放在同一最终机位与光照下试画，再扩展母版。单件好看不能代替整图协调，增加物件数量不能代替场景关系。
+新候选在 G3 前先完成 `planning/art/STATIC_ART_INFORMATION_CORRECTION_20261101.md` I1–I2 的文件身份与旧证据检查：交付清单每个文件必须存在且 SHA 与当前源/图相符；旧图的盲评不可绑定新图。I3 的遮罩校准只在将数值色彩统计用于自动判定前必需；未校准时全图亮度/HSV 统计只作诊断，不阻止人工视觉评审。这项检查不改变现行六维85分与硬门槛。
+
+G1 同时明确主要物件组的用途、支撑和连接，以及**3D 主景收口的轮廓/遮挡/厚度**；远景景片只负责被遮挡后露出的远形，不冒充可行走或承重几何。G0 先锁参考的可观察区 U 和背景遮罩 B_ref；G1 用纯色类别图在同一 U 上**暂估**候选背景面积，G2/G3 再从最终合成图描类别遮罩并统计包括 world 在内的完整可见背景。G2 先用无 DOF 图检查贴图接缝；若正式图启用景深，再做 A/B 比较主体清晰与远景柔化。G2 仍须把树、草、石材、金属放在同一最终机位与光照下试画，再扩展母版。单件好看不能代替整图协调，增加物件数量不能代替场景关系。
 
 G2 的树/草检查必须覆盖完整主树与完整主草池，不以单枝/单簇取代。正式景深、共享材质和纹理尺度在 G2 扩散前确定；锁定与改动后的重检范围见整体方案 §8.2–8.5，均为现有关口内的内部检查。
 
@@ -58,16 +61,18 @@ G2 的树/草检查必须覆盖完整主树与完整主草池，不以单枝/单
 | scene.blend | 可编辑、可独立重开的完整场景 |
 | assets/ 与 ASSET_SOURCES.md | 场景实际使用的外部素材及来源；若无外部素材可简写 |
 | reference_analysis/P1_REFERENCE_PROFILE.json | P1 主参考 SHA、锚点/ROI/遮挡与容差的机器可读配置；每个数值标注标准来源或复测记录 |
+| reference_analysis/background_masks/ | 锁定的可观察区 U、P1 远景 B_ref、候选远景 B_candidate 遮罩及面积口径；标明来源和 SHA |
 | renders/blockout.png | G1 构图证据 |
 | renders/color_key.png | G1 初步色块与光色分工 |
 | renders/combined.png | G2 同机位环境组合证据 |
+| renders/no_dof_diagnostic.png 与景深 A/B 记录 | 分别核对无虚化时的 3D/景片接缝、正式画面的主体清晰/远景柔化；景深参数和比较结论写入 REVIEW.md |
 | renders/final.png | 无角色/UI 的最终静态环境图 |
 | renders/details.png | 地面/地形/设施及参考中确有的植被局部拼成一张细节板 |
 | REVIEW.md | 参考来源、逐项对照、六维分数、硬门槛、扣分原因、返修决策和状态 |
 | DELIVERY.json | 全部参考 SHA、相机/渲染设置、Blender 版本、命令/退出码/耗时、交付文件大小与 SHA |
 | GATE_REPORT.json | 按 `planning/art/CODEX_STATIC_MAP_QUALITY_HOOK_20261029.md` 的 schema 记录参考/源/最终图/评审/交付/profile 的 SHA、制作者诊断性自评、两份绑定同一最终图且各自记录六维/四项组合/八项硬门槛的盲评、复现结果与返修队列；只在最终候选自检资料齐备后生成完整评审记录，项目 Stop hook 重算两份盲评分数并校验这些字段 |
 
-方法记录合并进 REVIEW.md，相机参数和文件绑定合并进 DELIVERY.json；不再为同一事实重复维护 METHOD_PROOF、单独相机文件和重复日志。只保留对判断或复现有用的阶段图，不生成 Cocos 包、重复 ZIP、角色/UI 展示层或大量同类局部图。
+方法记录合并进 REVIEW.md，相机参数和文件绑定合并进 DELIVERY.json；不再为同一事实重复维护 METHOD_PROOF、单独相机文件和重复日志。使用分层景片时，`assets/background/` 还须包含分层绘画源、逐层透明导出图和映射/来源记录；复制候选到另一临时目录重开 `.blend` 复现，不能只在原电脑的绝对路径下成功。只保留对判断或复现有用的阶段图，不生成 Cocos 包、重复 ZIP、角色/UI 展示层或大量同类局部图。
 
 ## 5. 素材与工具边界
 
@@ -91,7 +96,7 @@ G2 的树/草检查必须覆盖完整主树与完整主草池，不以单枝/单
 
 ## 8. 当前阶段的明确排除项
 
-门禁实现现状（2026-10-31）：已提交版本只允许 `target_met` 或证据完整的真实 `blocked_external` 结束；低分继续返修。工作区当前另有未提交 hook/gate 改动加入 `quality_below_target` 结束分支，与本节及 `AGENTS.md` 冲突；不得与本工作流一起提交，须先按项目规则单独修正和核验。
+门禁实现现状（2026-10-31）：项目 hook/gate 只允许 `target_met` 或证据完整的真实 `blocked_external` 结束；低分继续返修。先前未提交的 `quality_below_target` 结束分支已从工作区撤回；历史低分报告仍保留作审计证据。
 
 不运行 tools/workflow.py summary --write 领取本任务；它属于暂停的完整游戏账本。冻结游戏候选保持只读。静态地图完成状态只描述静态画面，不宣称可玩、已导入 Cocos、微信可发布或真机性能通过。
 

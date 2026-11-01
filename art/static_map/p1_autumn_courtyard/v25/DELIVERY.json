@@ -1,0 +1,118 @@
+{
+ "delivery": "v25 P1 autumn courtyard static map candidate",
+ "date": "2026-11-01T23:15:00+08:00",
+ "workflow": "planning/art/V24_SCENE_LOGIC_AND_ART_REVIEW_20261101.md section 8.3 tasks N0-N5",
+ "reference": {
+  "image": "reference/_raw_screenshots/P1/t084s.jpg",
+  "sha256": "13706e7eab96726565156a9e6440727de5d5bac82ee9c09c293a5745dd7446de"
+ },
+ "blender": {
+  "exe": "C:/Users/tt/.cache/blender/5.2.3/blender-5.2.3-windows-x64/blender.exe",
+  "version": "5.2.3 LTS"
+ },
+ "camera_locked": {
+  "name": "P1 fixed still camera",
+  "location": [
+   0.25,
+   -20.5,
+   8.2
+  ],
+  "rotation_euler_deg": [
+   69.328,
+   0.0,
+   0.687
+  ],
+  "lens_mm": 53.0,
+  "sensor_mm": 36.0,
+  "dof": true,
+  "focus_m": 24.0
+ },
+ "final_render": {
+  "file": "renders/final.png",
+  "resolution": [
+   1920,
+   1078
+  ],
+  "samples": 96,
+  "engine": "CYCLES",
+  "sha256_16": "3db2b42cb4284305",
+  "command": "blender -b scene.blend --python-expr (render 1920x1078 @96spp with DOF) -> renders/final.png",
+  "exit_code": 0,
+  "elapsed_s": 297.7
+ },
+ "scene_blend": {
+  "file": "scene.blend",
+  "sha256_16": "02a67405edbc760a",
+  "textures_relative": true,
+  "reopen_verified": true,
+  "reopen_command": "copy scene.blend + assets + background_src to isolated dir; blender -b scene.blend (render check)",
+  "reopen_result": "TRUE_MISSING: NONE, no missing-texture magenta in render"
+ },
+ "deliverable_files": {
+  "scene.blend": "02a67405edbc760a",
+  "renders/final.png": "3db2b42cb4284305",
+  "renders/details.png": "744f1bb3bec5ab11",
+  "renders/combined.png": "3db2b42cb4284305",
+  "renders/no_dof_diagnostic.png": "77c7309a59d8be1e",
+  "renders/blockout.png": "f7e2c00a3b904b10",
+  "renders/color_key.png": "689735e75398db1f",
+  "REVIEW.md": "see file",
+  "preflight/BASELINE.json": "see file",
+  "preflight/OBJECT_DECISIONS.csv": "see file",
+  "preflight/N0_CENSUS.json": "f8d5ceb19dd49f82",
+  "preflight/N1..N5 logs": "N1_SPACE_LOG / N2_FUNC_LOG / N2B_FUNC_LOG / N3_VEG_LOG / N3B / N3C / N3D_TREE / N4_MAT / N4B / N4D / N4E / N4F / N4G / N5A_CROWN / N5B_DARKEN / N5C_WOOD / N5D_DEEPEN / N5E_LAST / N5H_REWORK / N5J_ATMO / N5K_WORLD / N5L_REARTERRACE / N5M_MIST / N5N_MIST / N5O_FOGWARM (.json each)"
+ },
+ "asset_sources": {
+  "assets/": "grass_tall/dense/drape (procedural v24 cards), stone_floor.png, leaf.png",
+  "background_src/": "M01_water, M02_bank(+_cool recolored), M03_air(+_cool recolored), M02_far_bank, M03_distant, BANDS/LAYERS/PALETTE.json",
+  "embedded_packed_images": "42 image datablocks are packed inside scene.blend (concrete floor, tree_small_02, industrial pipes, power box families); their filepath fields are historical and rendering does not depend on disk"
+ },
+ "quality_state": {
+  "status": "rework_required",
+  "honest_summary": "Structural goals of N1 (stair/lowland/terrace logic, no broad stair) and N2 (functional zoning) were built and held across all review rounds. The far-shore hard gate failed for three rounds until root-caused to the compositor mist amount (To Max 0.125) and warm fog color; after fix, blind reviews E/F confirmed far_shore_hard_brown ok and reviewer G passed the light combo. However the asset-precision layer remains below the 85 line: grass blades read as upright stalk bundles, the tree crown lacks the reference's dense amber mass, paving lacks wear/roughness distribution, and several equipment boxes read as featureless. Five blind review rounds scored 55.3/55.3, 67.8/61.3, 60.6/61.3, 65.4/51.6, 65.4(uncertain G)/51.6(H) - all below 85; no round was fabricated or suppressed.",
+  "rework_queue_next": [
+   "rebuild grass geometry method (curved multi-blade tufts with root-dense profile replacing v16 upright cards) for tower crown and planters",
+   "rebuild tree crown foliage with non-repeating leaf masses (vary card shapes/scales, reduce visible duplicates)",
+   "add paving wear/roughness distribution along walk paths and edge chipping",
+   "give grey boxes functional detail (panel lines, hinges, labels) or remove",
+   "replace kerb planter crumpled filler with the tower-crown grass language"
+  ]
+ },
+ "evidence_policy": "All five blind review rounds are recorded verbatim in GATE_REPORT.json. No score was edited, threshold lowered, or evidence overwritten. Prior candidates and their evidence were not modified.",
+ "status": "rework_required",
+ "version": "v25-r2 (art repair round)",
+ "final_image": "renders/final.png",
+ "final_sha16": "1113cb015d899391",
+ "scene_sha16": "4bc610cdcb019b35",
+ "blind_scores": {
+  "round_art_R": [
+   52.9,
+   67.5
+  ],
+  "round_art_S": [
+   66.6,
+   66.9
+  ],
+  "round_art_T": [
+   61.5,
+   58.1
+  ],
+  "note": "art-repair rounds on top of earlier v25 gates; structural fixes confirmed across rounds"
+ },
+ "art_repair_summary": {
+  "light_direction": "sun moved to screen right-back, elevation 55deg; shadows now lower-left matching reference; quaternion rotation_mode was the trap (R1)",
+  "tree": "dark cards removed, real-leaf clumps added, tree enlarged x1.34 and moved to terrace corner (press-corner composition)",
+  "grass": "127 instances re-prototyped to 3 arching tuft variants; 27 barrel-grass bundles wind-bent; 48 densify clones; front pool densified",
+  "paving": "68 slabs zoned 5 tonal blocks, warm amber push, stair-mouth wear zone, 3 repair slabs, facades aged",
+  "equipment": "tank hoops+flange, crossover pipe, front barrel; pennant fabrics desaturated; fallen leaves scatter",
+  "farshore": "fog 0.42->0.33, 5 near-tier silhouette clumps",
+  "orange_board": "root cause found via binary hide-search: legacy v15 tree-bed soil surface card; removed; orange pixels 6700->1129"
+ },
+ "rework_queue": [
+  "left tree: foliage mass layering (inner dark + lit outer) still below reference density",
+  "grass pools: root density at small cylinder pools, bare base visible (grass_pool_sparse_spikes)",
+  "planter gold crumple fillers: replace with proper mulch geometry",
+  "paving: unify three paving color families, add edge wear at close range",
+  "equipment: industrial stacking language (pipes/grids/brackets)"
+ ]
+}

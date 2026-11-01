@@ -1,0 +1,11 @@
+{
+ "P1 broadleaf | Poly Haven Tree": "xy0.74 z0.52",
+ "P1 broadleaf foliage overlay |": "xy0.74 z0.52",
+ "top_layer": "widened",
+ "inner": [
+  "P1 canopy inner A",
+  "P1 canopy inner B",
+  "P1 canopy inner C"
+ ],
+ "elapsed_s": 1.0
+}

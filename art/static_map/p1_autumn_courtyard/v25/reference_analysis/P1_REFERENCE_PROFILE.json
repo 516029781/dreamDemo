@@ -1,0 +1,175 @@
+{
+  "schema": "p1-reference-profile-v1",
+  "candidate": "v18",
+  "reference_sha256": "13706e7eab96726565156a9e6440727de5d5bac82ee9c09c293a5745dd7446de",
+  "reference": {
+    "path": "reference/_raw_screenshots/P1/t084s.jpg",
+    "sha256": "13706e7eab96726565156a9e6440727de5d5bac82ee9c09c293a5745dd7446de",
+    "dimensions_px": [
+      1920,
+      1078
+    ],
+    "coordinate_origin": "top-left; normalized x,y in [0,1]",
+    "visual_standard": "planning/art/P1_T084_ART_DIRECTION_STANDARD_20261028.md"
+  },
+  "scope": "Only visible environment; character, game UI and subtitle overlays are not scored or reconstructed as facts.",
+  "screen_anchors": [
+    {
+      "id": "A01_left_tree",
+      "bbox_norm": [
+        0.05,
+        0.03,
+        0.3,
+        0.46
+      ],
+      "observable": "dark amber-brown irregular canopy, readable trunk and branch directions, canopy gaps"
+    },
+    {
+      "id": "A02_front_steps_rail",
+      "bbox_norm": [
+        0.13,
+        0.67,
+        0.4,
+        1.0
+      ],
+      "observable": "multiple thick steps, softened wear, dark railing and clear foreground height change"
+    },
+    {
+      "id": "A03_main_stone_platform",
+      "bbox_norm": [
+        0,
+        0.51,
+        0.76,
+        0.88
+      ],
+      "observable": "large warm pale slab family, restrained seams, edge wear and object shadows"
+    },
+    {
+      "id": "A04_midground_equipment",
+      "bbox_norm": [
+        0.32,
+        0.28,
+        0.55,
+        0.55
+      ],
+      "observable": "layered service equipment, rails, grates, pipes and supports"
+    },
+    {
+      "id": "A05_right_cylindrical_grass_planters",
+      "bbox_norm": [
+        0.5,
+        0.14,
+        1,
+        0.63
+      ],
+      "observable": "large cylindrical pale walls with dark ribs and connected billowing gold-brown grass"
+    },
+    {
+      "id": "A06_cool_soft_distant_layer",
+      "bbox_norm": [
+        0.3,
+        0.13,
+        0.54,
+        0.27
+      ],
+      "observable": "soft blue-grey water/distant layer against warm pale land, lower contrast than foreground"
+    }
+  ],
+  "color_samples_srgb_median": [
+    {
+      "name": "clean stone",
+      "roi_px": [
+        600,
+        630,
+        710,
+        680
+      ],
+      "rgb": [
+        216,
+        195,
+        170
+      ],
+      "role": "warm pale neutral stone"
+    },
+    {
+      "name": "stone shadow",
+      "roi_px": [
+        500,
+        870,
+        570,
+        930
+      ],
+      "rgb": [
+        181,
+        156,
+        136
+      ],
+      "role": "warm shadow retains detail"
+    },
+    {
+      "name": "gold grass",
+      "roi_px": [
+        1080,
+        195,
+        1170,
+        245
+      ],
+      "rgb": [
+        174,
+        133,
+        91
+      ],
+      "role": "grass mass midtone"
+    },
+    {
+      "name": "dark leaves",
+      "roi_px": [
+        165,
+        65,
+        245,
+        125
+      ],
+      "rgb": [
+        99,
+        61,
+        41
+      ],
+      "role": "deep amber-brown foliage"
+    },
+    {
+      "name": "dark metal",
+      "roi_px": [
+        1700,
+        145,
+        1760,
+        205
+      ],
+      "rgb": [
+        94,
+        74,
+        59
+      ],
+      "role": "dark rim and equipment"
+    },
+    {
+      "name": "blue-grey distance",
+      "roi_px": [
+        840,
+        185,
+        910,
+        210
+      ],
+      "rgb": [
+        125,
+        145,
+        154
+      ],
+      "role": "cool distant role"
+    }
+  ],
+  "occlusion_limits": [
+    "UI, subtitles and characters in the reference are overlays, not environment geometry.",
+    "Only infer material and form from visible non-occluded regions."
+  ],
+  "project_specific_background": "The V18 background follows P1_AUTUMN_MAINTENANCE_COURTYARD_BACKGROUND_DESIGN_20261031.md and P1_BACKGROUND_PLACEMENT_START_V1.json as original additions, not claims about hidden source geometry."
+}

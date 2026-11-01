@@ -1,0 +1,112 @@
+{
+ "exposure": 0.26,
+ "sun_dir": [
+  0.5792,
+  -0.5792,
+  -0.5736
+ ],
+ "sun_energy": 10.0,
+ "key_energy": 45.0,
+ "bounce_energy": 34.0,
+ "fill_energy": 6.0,
+ "far_fill_energy": 0.0,
+ "grass_emis": 0.38,
+ "kicker_energy": 70.0,
+ "m02_em": 1.72,
+ "m03_em": 0.8916,
+ "yard_gain": 0.62,
+ "yard_h": 0.88,
+ "hide_far_shore": true,
+ "yard_dy": -0.3,
+ "sun_angle_deg": 2.4,
+ "sun_color": [
+  1.0,
+  0.93,
+  0.86
+ ],
+ "key_loc": [
+  -9.5,
+  -2.0,
+  8.5
+ ],
+ "key_target": [
+  -1.0,
+  4.0,
+  0.0
+ ],
+ "key_color": [
+  1.0,
+  0.92,
+  0.8
+ ],
+ "bounce_loc": [
+  9.0,
+  4.0,
+  2.6
+ ],
+ "bounce_target": [
+  0.0,
+  4.0,
+  0.6
+ ],
+ "bounce_color": [
+  1.0,
+  0.86,
+  0.7
+ ],
+ "fill_loc": [
+  10.0,
+  -5.0,
+  2.4
+ ],
+ "fill_target": [
+  0.0,
+  2.0,
+  1.0
+ ],
+ "fill_color": [
+  0.84,
+  0.9,
+  1.0
+ ],
+ "sky_color": [
+  0.63,
+  0.585,
+  0.545,
+  1.0
+ ],
+ "sky_strength": 0.7,
+ "glow_threshold": 0.92,
+ "glow_size": 7,
+ "glow_mix": -0.55,
+ "fog_color": [
+  0.8,
+  0.76,
+  0.7
+ ],
+ "fog_start": 0.04,
+ "fog_span": 0.3,
+ "vig_size": [
+  1.12,
+  0.74
+ ],
+ "vig_blur": 260,
+ "vig_strength": 0.09,
+ "grain": 0.03,
+ "view_transform": "Standard",
+ "look": "None",
+ "fog_max": 0.2,
+ "mist_start": 14.0,
+ "mist_depth": 55.0,
+ "glow_strength": 0.42,
+ "lift_color": [
+  1.01,
+  1.0,
+  0.985
+ ],
+ "gain_color": [
+  1.04,
+  1.0,
+  0.965
+ ]
+}

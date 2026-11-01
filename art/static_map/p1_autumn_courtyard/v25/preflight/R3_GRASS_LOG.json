@@ -1,0 +1,28 @@
+{
+ "grass_mat": "Grass gold green",
+ "instances": 31,
+ "variants": [
+  "v16 grass tuft A | arching",
+  "v16 grass tuft B | drooping",
+  "v16 grass tuft C | windswept"
+ ],
+ "assigned": [
+  12,
+  11,
+  8
+ ],
+ "elapsed_s": 0.7,
+ "patch_second_pass": {
+  "instances": 96,
+  "assigned": [
+   30,
+   33,
+   33
+  ],
+  "elapsed_s": 0.7
+ },
+ "barrel_bend": {
+  "count": 27,
+  "elapsed_s": 0.8
+ }
+}

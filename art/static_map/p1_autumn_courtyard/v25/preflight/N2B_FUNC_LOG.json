@@ -1,0 +1,233 @@
+{
+ "deleted": [
+  "v15 short warm bulb 01"
+ ],
+ "moved": [
+  {
+   "name": "Foreground wooden crate",
+   "delta": [
+    -0.5,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "name": "Foreground wooden crate.001",
+   "delta": [
+    -0.5,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "name": "Foreground wooden crate.002",
+   "delta": [
+    -0.5,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "name": "Crate lid board",
+   "delta": [
+    -0.5,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "name": "Foreground barrel",
+   "delta": [
+    -0.5,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "name": "Barrel bottom hoop",
+   "delta": [
+    -0.5,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "name": "Barrel top hoop",
+   "delta": [
+    -0.5,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "name": "Barrel lid",
+   "delta": [
+    -0.5,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "name": "P1 yard | cabinet",
+   "delta": [
+    0.84,
+    -1.07,
+    0.0
+   ]
+  },
+  {
+   "name": "P1 yard | cabinet | band 0",
+   "delta": [
+    0.84,
+    -1.07,
+    0.0
+   ]
+  },
+  {
+   "name": "P1 yard | cabinet | band 1",
+   "delta": [
+    0.84,
+    -1.07,
+    0.0
+   ]
+  },
+  {
+   "name": "P1 yard | kerb B",
+   "delta": [
+    0.7,
+    -1.04,
+    0.0
+   ]
+  },
+  {
+   "name": "P1 yard | kerb B | soil",
+   "delta": [
+    0.7,
+    -1.04,
+    0.0
+   ]
+  },
+  {
+   "name": "P1 yard | kerb B | dry grass bed",
+   "delta": [
+    0.7,
+    -1.04,
+    0.0
+   ]
+  },
+  {
+   "name": "P1 yard | kerb A",
+   "delta": [
+    0.7,
+    -1.04,
+    0.0
+   ]
+  },
+  {
+   "name": "P1 yard | kerb A | soil",
+   "delta": [
+    0.7,
+    -1.04,
+    0.0
+   ]
+  },
+  {
+   "name": "P1 yard | kerb A | dry grass bed",
+   "delta": [
+    0.7,
+    -1.04,
+    0.0
+   ]
+  },
+  {
+   "name": "CC0 industrial pipe | modular_industrial_pipes_01_pipe01",
+   "delta": [
+    0.4,
+    -0.62,
+    0.0
+   ]
+  },
+  {
+   "name": "CC0 industrial pipe | modular_industrial_pipes_01_pipe02",
+   "delta": [
+    0.4,
+    -0.62,
+    0.0
+   ]
+  },
+  {
+   "name": "CC0 industrial pipe | modular_industrial_pipes_01_pipe03",
+   "delta": [
+    0.4,
+    -0.62,
+    0.0
+   ]
+  },
+  {
+   "name": "CC0 industrial pipe | modular_industrial_pipes_01_pipe04",
+   "delta": [
+    0.4,
+    -0.62,
+    0.0
+   ]
+  },
+  {
+   "name": "CC0 industrial pipe | modular_industrial_pipes_01_pipe05",
+   "delta": [
+    0.4,
+    -0.62,
+    0.0
+   ]
+  },
+  {
+   "name": "CC0 industrial pipe | modular_industrial_pipes_01_pipe06",
+   "delta": [
+    0.4,
+    -0.62,
+    0.0
+   ]
+  },
+  {
+   "name": "CC0 industrial pipe | modular_industrial_pipes_01_pipe07",
+   "delta": [
+    0.4,
+    -0.62,
+    0.0
+   ]
+  },
+  {
+   "name": "CC0 industrial pipe | modular_industrial_pipes_01_pipe08",
+   "delta": [
+    0.4,
+    -0.62,
+    0.0
+   ]
+  },
+  {
+   "name": "Coiled hose",
+   "delta": [
+    1.0,
+    -1.1,
+    0.0
+   ]
+  },
+  {
+   "name": "Coiled hose.001",
+   "delta": [
+    1.0,
+    -1.1,
+    0.0
+   ]
+  },
+  {
+   "name": "Coiled hose.002",
+   "delta": [
+    1.0,
+    -1.1,
+    0.0
+   ]
+  }
+ ],
+ "rebuilt_base": true,
+ "elapsed_s": 2.1
+}

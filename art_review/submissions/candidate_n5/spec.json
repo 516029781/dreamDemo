@@ -31,11 +31,11 @@
     },
     {
       "role": "scene_screenshot",
-      "path": "delivery/next_cycle/n5/T3/game_finalN5_formal_no_ui.png"
+      "path": "delivery/next_cycle/n5/T3/game_finalN5h_formal_no_ui.png"
     },
     {
       "role": "dialogue_screenshot",
-      "path": "delivery/next_cycle/n5/T3/game_finalN5_dialogue.png"
+      "path": "delivery/next_cycle/n5/T3/game_finalN5h_dialogue.png"
     },
     {
       "role": "demo_recording",
@@ -43,7 +43,7 @@
     },
     {
       "role": "engine_sources",
-      "path": "delivery/courtyard_scene_demo_sources_v9.zip"
+      "path": "delivery/courtyard_scene_demo_sources_v11.zip"
     },
     {
       "role": "run_instructions",
@@ -91,15 +91,15 @@
     },
     {
       "role": "sample_no_ui",
-      "path": "delivery/next_cycle/n5/T3/game_finalN5_formal_no_ui.png"
+      "path": "delivery/next_cycle/n5/T3/game_finalN5h_formal_no_ui.png"
     },
     {
       "role": "sample_hud",
-      "path": "delivery/next_cycle/n5/T3/game_finalN5_formal_ui.png"
+      "path": "delivery/next_cycle/n5/T3/game_finalN5h_formal_ui.png"
     },
     {
       "role": "sample_dialogue",
-      "path": "delivery/next_cycle/n5/T3/game_finalN5_dialogue.png"
+      "path": "delivery/next_cycle/n5/T3/game_finalN5h_dialogue.png"
     },
     {
       "role": "reference_comparison_scene",
@@ -291,7 +291,7 @@
     },
     {
       "role": "finalN5_shots",
-      "path": "delivery/next_cycle/n5/T3/game_finalN5_shots.json"
+      "path": "delivery/next_cycle/n5/T3/game_finalN5h_shots.json"
     },
     {
       "role": "capture_bindings_summary",
@@ -311,7 +311,7 @@
     },
     {
       "role": "build_report",
-      "path": "delivery/performance/cocos_build_20261026_090949.json"
+      "path": "delivery/performance/cocos_build_20261027_035920.json"
     },
     {
       "role": "build_log",

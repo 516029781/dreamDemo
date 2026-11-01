@@ -1,0 +1,173 @@
+{
+ "bands": [
+  {
+   "v": "0",
+   "ref": 82.2,
+   "now": 80.6,
+   "lo": 80,
+   "hi": 95,
+   "pass": true
+  },
+  {
+   "v": "8",
+   "ref": 88.2,
+   "now": 101.6,
+   "lo": 85,
+   "hi": 100,
+   "pass": false
+  },
+  {
+   "v": "10",
+   "ref": 102.8,
+   "now": 124.3,
+   "lo": 95,
+   "hi": 115,
+   "pass": false
+  },
+  {
+   "v": "12",
+   "ref": 116.6,
+   "now": 118.9,
+   "lo": 110,
+   "hi": 130,
+   "pass": true
+  },
+  {
+   "v": "16",
+   "ref": 140.8,
+   "now": 133.9,
+   "lo": 130,
+   "hi": 150,
+   "pass": true
+  },
+  {
+   "v": "20",
+   "ref": 133.9,
+   "now": 123.6,
+   "lo": 125,
+   "hi": 145,
+   "pass": false
+  },
+  {
+   "v": "24",
+   "ref": 116.6,
+   "now": 111.1,
+   "lo": 110,
+   "hi": 135,
+   "pass": true
+  },
+  {
+   "v": "28",
+   "ref": 110.2,
+   "now": 118.4,
+   "lo": 100,
+   "hi": 125,
+   "pass": true
+  },
+  {
+   "v": "32",
+   "ref": 106.8,
+   "now": 119.9,
+   "lo": 100,
+   "hi": 120,
+   "pass": true
+  },
+  {
+   "v": "38",
+   "ref": 91.0,
+   "now": 98.5,
+   "lo": 85,
+   "hi": 105,
+   "pass": true
+  },
+  {
+   "v": "44",
+   "ref": 84.9,
+   "now": 79.7,
+   "lo": 80,
+   "hi": 95,
+   "pass": false
+  },
+  {
+   "v": "52",
+   "ref": 133.6,
+   "now": 127.9,
+   "lo": 125,
+   "hi": 145,
+   "pass": true
+  },
+  {
+   "v": "58",
+   "ref": 172.6,
+   "now": 179.3,
+   "lo": 160,
+   "hi": 180,
+   "pass": true
+  },
+  {
+   "v": "66",
+   "ref": 190.1,
+   "now": 185.8,
+   "lo": 175,
+   "hi": 200,
+   "pass": true
+  },
+  {
+   "v": "76",
+   "ref": 166.7,
+   "now": 148.7,
+   "lo": 150,
+   "hi": 180,
+   "pass": false
+  },
+  {
+   "v": "86",
+   "ref": 150.1,
+   "now": 161.6,
+   "lo": 145,
+   "hi": 170,
+   "pass": true
+  }
+ ],
+ "bands_pass": 11,
+ "bands_total": 16,
+ "cold": {
+  "ratio": 0.291,
+  "b_minus_r": 33.1,
+  "pass": true,
+  "target": "0.25-0.40"
+ },
+ "anchors": {
+  "ref": {
+   "top_v0_8": 87.6,
+   "far_v10_22": 127.4,
+   "stage_v56_90": 167.2,
+   "valley_v44_50": 85.6,
+   "stage_minus_valley": 81.6,
+   "local_min_v": 46,
+   "local_min_val": 82.4,
+   "v22_to_44_max_rise": 0.0,
+   "v48_to_58_rise": 83.2
+  },
+  "now": {
+   "top_v0_8": 91.0,
+   "far_v10_22": 126.9,
+   "stage_v56_90": 184.0,
+   "valley_v44_50": 80.6,
+   "stage_minus_valley": 103.4,
+   "local_min_v": 46,
+   "local_min_val": 77.7,
+   "v22_to_44_max_rise": 0.9,
+   "v48_to_58_rise": 95.0
+  }
+ },
+ "blown_pct": 3.74,
+ "render": "renders/v24_final_48spp.png",
+ "note": "未达标：v8(+1.6)、v10(+21.5,已知偏差)、v20(-1.4)、v44(-1.3)、v76(-1.3)。v32/v52/v58/v66/v86/v0/v12/v16/v24/v28/v38 达标；冷色 0.291% 达标",
+ "session_summary": {
+  "blown_before": "14.47%",
+  "blown_after": 3.74,
+  "bands_pass_before": 9,
+  "bands_pass_after": 11
+ }
+}

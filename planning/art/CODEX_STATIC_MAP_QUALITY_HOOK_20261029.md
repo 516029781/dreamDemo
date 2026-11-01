@@ -2,6 +2,8 @@
 
 更新：2026-10-29。作用范围只限本仓库中的 Codex 会话，不配置用户级或全局 hook。
 
+> 2026-10-31 复核：项目 hook 与 gate 已恢复为当前 `AGENTS.md` 的结束规则：低分使用 `rework_required` 继续返修；只有 `target_met` 或证据完整的真实 `blocked_external` 可以结束。旧 `quality_below_target` 仅保留在历史候选报告中，不是新候选的有效结束状态。
+
 ## 1. 运行边界
 
 - Hook 定义在 `.codex/hooks.json`，处理程序是 `.codex/hooks/static_map_quality_hook.py`；评分与证据核验器是 `tools/static_map_quality_gate.py`。
@@ -23,11 +25,13 @@
 
 返修阶段按制作侧预检分流：当报告状态为 `rework_required`，且制作自评低于 85、任一维低于 3、或汇总组合/硬门槛尚未通过时，gate 反馈这些制作侧修复项，暂不要求两份盲评。制作侧预检达到目标后，即使仍有盲评/复现/哈希问题，gate 才要求补齐最终评审并继续阻止结束。最终状态 `target_met` 始终必须含两份完整盲评；制作者自评分数本身不作为放行票。
 
+同一方法两轮无改善时，记录反例并换技术路线继续返修；尝试次数或完整低分包均不构成正常结束条件。只有外部状态真正阻断继续工作时，才按下文 `blocked_external` 的证据契约报告未完成。
+
 任何报告缺失、字段错误、源图或参考 hash 不一致、分数不足、组合项失败、硬门槛失败、复现失败，Stop hook 都返回 `decision: block`，让同一 Codex 会话继续；提示中包含失败项和报告里的修复队列。没有固定次数上限。达标后自动解除本会话状态。只有结构完整的 `blocked_external`（具体外部依赖、至少两种替代尝试、候选目录内的带 SHA 证据和恢复条件）可允许任务以“未完成”结束；不会被写成 `target_met`。
 
 ## 3. 当前候选与文件结构
 
-启动时从未被占用的最高版本号之后预留新目录（当前预计 `v06`，若已存在则递增），不覆盖旧版：
+启动时检查实际版本目录，从当前最高版本号之后预留新目录，不覆盖旧版。不从历史文档中的 v06/v08 示例选择新候选；以下结构与 JSON 的版本号仅为 schema 示例：
 
 ```
 art/static_map/p1_autumn_courtyard/vNN/
@@ -69,7 +73,7 @@ art/static_map/p1_autumn_courtyard/vNN/
 }
 ```
 
-`status` 仅允许 `target_met`、`rework_required` 或 `blocked_external`。`producer_review.dimensions` 与两个盲评都必须包含六个维度对象，每个有 `score: 0..4`、至少 20 字符的可见证据；每份评审有重算一致的 `total_score`。制作者评审也必须包含当前 `reference_sha256` 和 `render_sha256`，但其低分不触发最终放行失败；在 `rework_required` 且制作侧预检未过时，gate 不要求盲评。制作侧预检通过后，两个盲评必须有不同 reviewer_id、`blind: true`、当前 reference/render SHA，不能把制作者 ID 作为审阅人；每份盲评内部还必须含完整 `combo_checks` 和 `hard_gates`。低分/门槛失败时，`repair_queue` 必须逐项说明 defect、cause、action、expected_effect、verification，否则仍不放行。四项组合检查 key 为 `floor/tree/grass/lighting`；硬门槛 key 为 `foreground_steps_railings`、`right_grass_cylinder`、`cohesive_non_checkerboard_ground`、`tree_branching_negative_space`、`dense_wavy_grass_canopy`、`functional_midground_structure`、`cool_soft_background`、`materials_resolve`；每项为 `{ "status": "pass", "evidence": "..." }`。
+`status` 允许 `target_met`、`rework_required` 或 `blocked_external`。`producer_review.dimensions` 与盲评（若 target_met）都必须包含六个维度对象，每个有 `score: 0..4`、至少 20 字符的可见证据；每份评审有重算一致的 `total_score`。制作者评审也必须包含当前 `reference_sha256` 和 `render_sha256`；在 `rework_required` 且制作侧预检未过时，gate 不要求盲评。制作侧预检通过后，`target_met` 的两个盲评必须有不同 reviewer_id、`blind: true`、当前 reference/render SHA，不能把制作者 ID 作为审阅人；每份盲评内部还必须含完整 `combo_checks` 和 `hard_gates`。低分/门槛失败时，`repair_queue` 必须逐项说明 defect、cause、action、expected_effect、verification，供同一会话返修。四项组合检查 key 为 `floor/tree/grass/lighting`；硬门槛 key 为 `foreground_steps_railings`、`right_grass_cylinder`、`cohesive_non_checkerboard_ground`、`tree_branching_negative_space`、`dense_wavy_grass_canopy`、`functional_midground_structure`、`cool_soft_background`、`materials_resolve`；每项为 `{ "status": "pass", "evidence": "..." }`。
 
 `DELIVERY.json` 须包含：
 

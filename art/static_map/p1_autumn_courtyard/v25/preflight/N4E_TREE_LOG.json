@@ -1,0 +1,11 @@
+{
+ "P1 broadleaf | Poly Haven Tree Small 02 LOD1": "scaled to 0.58",
+ "P1 broadleaf foliage overlay | widened canopy": "scaled to 0.58",
+ "top_layer": true,
+ "inner_moved": [
+  "P1 canopy inner A",
+  "P1 canopy inner B",
+  "P1 canopy inner C"
+ ],
+ "elapsed_s": 1.1
+}

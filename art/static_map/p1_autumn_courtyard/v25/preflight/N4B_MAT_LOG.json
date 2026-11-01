@@ -1,0 +1,18 @@
+{
+ "wood_ramp": "walnut pair",
+ "kerb_lowered": [
+  "P1 yard | kerb A",
+  "P1 yard | kerb A | soil",
+  "P1 yard | kerb A | dry grass bed",
+  "P1 yard | kerb A | dry grass bed fill",
+  "P1 yard | kerb B",
+  "P1 yard | kerb B | soil",
+  "P1 yard | kerb B | dry grass bed",
+  "P1 yard | kerb B | dry grass bed fill"
+ ],
+ "soil_desat": true,
+ "plane_noise": [
+  "Recessed warm joints"
+ ],
+ "elapsed_s": 2.6
+}

@@ -1,0 +1,10 @@
+{
+ "paving_warmed": 5,
+ "sunlit_to_repair": true,
+ "frontpool": {
+  "scaled": 22,
+  "clones": 12
+ },
+ "cb_skipped": "Color Balance",
+ "elapsed_s": 0.8
+}

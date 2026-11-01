@@ -1,0 +1,9146 @@
+[
+{
+"i": 0,
+"name": "P1 broadleaf | Poly Haven Tree Small 02 LOD1",
+"rgb": [
+0.55,
+0.2475,
+0.2475
+]
+},
+{
+"i": 1,
+"name": "P1 broadleaf foliage overlay | widened canopy",
+"rgb": [
+0.2135,
+0.3292,
+0.61
+]
+},
+{
+"i": 2,
+"name": "P1 distant broadleaf left_back_01",
+"rgb": [
+0.4608,
+0.67,
+0.1675
+]
+},
+{
+"i": 3,
+"name": "P1 distant broadleaf foliage left_back_01",
+"rgb": [
+0.73,
+0.1095,
+0.6527
+]
+},
+{
+"i": 4,
+"name": "P1 distant broadleaf center_left_01",
+"rgb": [
+0.0395,
+0.79,
+0.6645
+]
+},
+{
+"i": 5,
+"name": "P1 distant broadleaf foliage center_left_01",
+"rgb": [
+0.85,
+0.6354,
+0.3825
+]
+},
+{
+"i": 6,
+"name": "P1 distant broadleaf center_far_01",
+"rgb": [
+0.4659,
+0.3185,
+0.91
+]
+},
+{
+"i": 7,
+"name": "P1 distant broadleaf foliage center_far_01",
+"rgb": [
+0.1551,
+0.55,
+0.1375
+]
+},
+{
+"i": 8,
+"name": "P1 distant broadleaf right_back_01",
+"rgb": [
+0.61,
+0.0915,
+0.2649
+]
+},
+{
+"i": 9,
+"name": "P1 distant broadleaf foliage right_back_01",
+"rgb": [
+0.0335,
+0.4321,
+0.67
+]
+},
+{
+"i": 10,
+"name": "CC0 industrial pipe | modular_industrial_pipes_01_pipe01",
+"rgb": [
+0.6971,
+0.73,
+0.3285
+]
+},
+{
+"i": 11,
+"name": "CC0 industrial pipe | modular_industrial_pipes_01_pipe02",
+"rgb": [
+0.6823,
+0.2765,
+0.79
+]
+},
+{
+"i": 12,
+"name": "CC0 industrial pipe | modular_industrial_pipes_01_pipe03",
+"rgb": [
+0.2125,
+0.85,
+0.5303
+]
+},
+{
+"i": 13,
+"name": "CC0 industrial pipe | modular_industrial_pipes_01_pipe04",
+"rgb": [
+0.91,
+0.2963,
+0.1365
+]
+},
+{
+"i": 14,
+"name": "CC0 industrial pipe | modular_industrial_pipes_01_pipe05",
+"rgb": [
+0.0275,
+0.072,
+0.55
+]
+},
+{
+"i": 15,
+"name": "CC0 industrial pipe | modular_industrial_pipes_01_pipe06",
+"rgb": [
+0.401,
+0.61,
+0.2745
+]
+},
+{
+"i": 16,
+"name": "CC0 industrial pipe | modular_industrial_pipes_01_pipe07",
+"rgb": [
+0.67,
+0.2345,
+0.5257
+]
+},
+{
+"i": 17,
+"name": "CC0 industrial pipe | modular_industrial_pipes_01_pipe08",
+"rgb": [
+0.1825,
+0.7084,
+0.73
+]
+},
+{
+"i": 18,
+"name": "CC0 utility power box | power_box_01_box",
+"rgb": [
+0.79,
+0.6206,
+0.1185
+]
+},
+{
+"i": 19,
+"name": "CC0 utility power box | power_box_01_door",
+"rgb": [
+0.4106,
+0.0425,
+0.85
+]
+},
+{
+"i": 20,
+"name": "P1-supported distant arched footbridge deck",
+"rgb": [
+0.4095,
+0.91,
+0.4916
+]
+},
+{
+"i": 22,
+"name": "v15 natural grass mass 1",
+"rgb": [
+0.1525,
+0.3444,
+0.61
+]
+},
+{
+"i": 23,
+"name": "v15 natural grass mass 2",
+"rgb": [
+0.5056,
+0.67,
+0.1005
+]
+},
+{
+"i": 24,
+"name": "v15 natural grass mass 3",
+"rgb": [
+0.7278,
+0.0365,
+0.73
+]
+},
+{
+"i": 25,
+"name": "v15 dense grounded tower crown grass",
+"rgb": [
+0.3555,
+0.79,
+0.6619
+]
+},
+{
+"i": 36,
+"name": "v15 safety cone 2 rubber foot",
+"rgb": [
+0.4136,
+0.61,
+0.2135
+]
+},
+{
+"i": 37,
+"name": "v15 safety cone 2 body",
+"rgb": [
+0.67,
+0.1675,
+0.5677
+]
+},
+{
+"i": 38,
+"name": "v15 planted tree-bed soil surface",
+"rgb": [
+0.1095,
+0.73,
+0.6752
+]
+},
+{
+"i": 39,
+"name": "v15 native curved clump underlay 23",
+"rgb": [
+0.79,
+0.5048,
+0.0395
+]
+},
+{
+"i": 40,
+"name": "v15 native curved clump underlay 24",
+"rgb": [
+0.5359,
+0.3825,
+0.85
+]
+},
+{
+"i": 41,
+"name": "v15 native curved clump underlay 25",
+"rgb": [
+0.3185,
+0.91,
+0.34
+]
+},
+{
+"i": 42,
+"name": "v15 native curved clump underlay 26",
+"rgb": [
+0.55,
+0.1375,
+0.2429
+]
+},
+{
+"i": 44,
+"name": "v15 rim-guarded tuft mother | group 1",
+"rgb": [
+0.5675,
+0.67,
+0.0335
+]
+},
+{
+"i": 45,
+"name": "v15 rim-guarded tuft mother | group 2",
+"rgb": [
+0.6775,
+0.3285,
+0.73
+]
+},
+{
+"i": 46,
+"name": "v15 rim-guarded tuft mother | group 3",
+"rgb": [
+0.2765,
+0.79,
+0.573
+]
+},
+{
+"i": 47,
+"name": "v15 rim-guarded tuft mother | group 4",
+"rgb": [
+0.85,
+0.3946,
+0.2125
+]
+},
+{
+"i": 48,
+"name": "V18 R30 | existing autumn leaf canopy left",
+"rgb": [
+0.1365,
+0.1413,
+0.91
+]
+},
+{
+"i": 50,
+"name": "V18 R30 | existing autumn leaf canopy right",
+"rgb": [
+0.61,
+0.2745,
+0.4724
+]
+},
+{
+"i": 52,
+"name": "T01 | shore grass 00",
+"rgb": [
+0.73,
+0.6351,
+0.1825
+]
+},
+{
+"i": 53,
+"name": "T01 | shore grass 01",
+"rgb": [
+0.4776,
+0.1185,
+0.79
+]
+},
+{
+"i": 54,
+"name": "T01 | shore grass 02",
+"rgb": [
+0.0425,
+0.85,
+0.2387
+]
+},
+{
+"i": 55,
+"name": "T01 | shore grass 03",
+"rgb": [
+0.91,
+0.4095,
+0.4339
+]
+},
+{
+"i": 56,
+"name": "T01 | shore grass 04",
+"rgb": [
+0.1925,
+0.3143,
+0.55
+]
+},
+{
+"i": 57,
+"name": "T01 | shore grass 05",
+"rgb": [
+0.4418,
+0.61,
+0.1525
+]
+},
+{
+"i": 58,
+"name": "M03 | distant air plate",
+"rgb": [
+0.67,
+0.1005,
+0.6268
+]
+},
+{
+"i": 59,
+"name": "M02 | far bank plate",
+"rgb": [
+0.0365,
+0.73,
+0.5802
+]
+},
+{
+"i": 60,
+"name": "P1 far shore edge",
+"rgb": [
+0.79,
+0.5694,
+0.3555
+]
+},
+{
+"i": 61,
+"name": "P1 pool | inner wall",
+"rgb": [
+0.4082,
+0.2975,
+0.85
+]
+},
+{
+"i": 62,
+"name": "P1 pool | basin floor",
+"rgb": [
+0.2899,
+0.91,
+0.2275
+]
+},
+{
+"i": 63,
+"name": "P1 pool | water surface",
+"rgb": [
+0.55,
+0.0825,
+0.2616
+]
+},
+{
+"i": 64,
+"name": "P1 pool | stone rim",
+"rgb": [
+0.0305,
+0.4216,
+0.61
+]
+},
+{
+"i": 65,
+"name": "P1 yard | crate L1",
+"rgb": [
+0.6577,
+0.67,
+0.3015
+]
+},
+{
+"i": 66,
+"name": "P1 yard | crate L1 | band 0",
+"rgb": [
+0.6073,
+0.2555,
+0.73
+]
+},
+{
+"i": 67,
+"name": "P1 yard | crate L1 | band 1",
+"rgb": [
+0.1975,
+0.79,
+0.4639
+]
+},
+{
+"i": 68,
+"name": "P1 yard | crate L2",
+"rgb": [
+0.85,
+0.2416,
+0.1275
+]
+},
+{
+"i": 69,
+"name": "P1 yard | crate L2 | band 0",
+"rgb": [
+0.0455,
+0.1613,
+0.91
+]
+},
+{
+"i": 70,
+"name": "P1 yard | crate L2 | band 1",
+"rgb": [
+0.3763,
+0.55,
+0.2475
+]
+},
+{
+"i": 71,
+"name": "P1 yard | dumpster",
+"rgb": [
+0.61,
+0.2135,
+0.498
+]
+},
+{
+"i": 72,
+"name": "P1 yard | dumpster | band 0",
+"rgb": [
+0.1675,
+0.67,
+0.6653
+]
+},
+{
+"i": 73,
+"name": "P1 yard | dumpster | band 1",
+"rgb": [
+0.73,
+0.5432,
+0.1095
+]
+},
+{
+"i": 74,
+"name": "P1 yard | cabinet",
+"rgb": [
+0.345,
+0.0395,
+0.79
+]
+},
+{
+"i": 75,
+"name": "P1 yard | cabinet | band 0",
+"rgb": [
+0.3825,
+0.85,
+0.4364
+]
+},
+{
+"i": 76,
+"name": "P1 yard | cabinet | band 1",
+"rgb": [
+0.91,
+0.3185,
+0.4229
+]
+},
+{
+"i": 77,
+"name": "P1 yard | crate R1",
+"rgb": [
+0.1375,
+0.3307,
+0.55
+]
+},
+{
+"i": 78,
+"name": "P1 yard | crate R1 | band 0",
+"rgb": [
+0.4856,
+0.61,
+0.0915
+]
+},
+{
+"i": 79,
+"name": "P1 yard | crate R1 | band 1",
+"rgb": [
+0.637,
+0.0335,
+0.67
+]
+},
+{
+"i": 80,
+"name": "P1 yard | crate R2",
+"rgb": [
+0.3285,
+0.73,
+0.592
+]
+},
+{
+"i": 81,
+"name": "P1 yard | crate R2 | band 0",
+"rgb": [
+0.79,
+0.4637,
+0.2765
+]
+},
+{
+"i": 82,
+"name": "P1 yard | crate R2 | band 1",
+"rgb": [
+0.2589,
+0.2125,
+0.85
+]
+},
+{
+"i": 83,
+"name": "P1 yard | crate R3",
+"rgb": [
+0.306,
+0.91,
+0.1365
+]
+},
+{
+"i": 84,
+"name": "P1 yard | crate R3 | band 0",
+"rgb": [
+0.55,
+0.0275,
+0.2944
+]
+},
+{
+"i": 85,
+"name": "P1 yard | crate R3 | band 1",
+"rgb": [
+0.2745,
+0.5438,
+0.61
+]
+},
+{
+"i": 86,
+"name": "P1 yard | tank R",
+"rgb": [
+0.67,
+0.6289,
+0.2345
+]
+},
+{
+"i": 87,
+"name": "P1 yard | tank R | cap",
+"rgb": [
+0.5185,
+0.1825,
+0.73
+]
+},
+{
+"i": 88,
+"name": "P1 yard | tank R | band 42",
+"rgb": [
+0.1185,
+0.79,
+0.3347
+]
+},
+{
+"i": 89,
+"name": "P1 yard | drum a",
+"rgb": [
+0.85,
+0.0668,
+0.0425
+]
+},
+{
+"i": 90,
+"name": "P1 yard | drum a | cap",
+"rgb": [
+0.4095,
+0.5405,
+0.91
+]
+},
+{
+"i": 91,
+"name": "P1 yard | drum b",
+"rgb": [
+0.3904,
+0.55,
+0.1925
+]
+},
+{
+"i": 92,
+"name": "P1 yard | drum b | cap",
+"rgb": [
+0.61,
+0.1525,
+0.5392
+]
+},
+{
+"i": 93,
+"name": "P1 yard | drum c",
+"rgb": [
+0.1005,
+0.67,
+0.592
+]
+},
+{
+"i": 94,
+"name": "P1 yard | drum c | cap",
+"rgb": [
+0.73,
+0.4326,
+0.0365
+]
+},
+{
+"i": 95,
+"name": "P1 yard | drum d",
+"rgb": [
+0.4769,
+0.3555,
+0.79
+]
+},
+{
+"i": 96,
+"name": "P1 yard | drum d | cap",
+"rgb": [
+0.3044,
+0.85,
+0.2975
+]
+},
+{
+"i": 97,
+"name": "P1 yard | pipe spool",
+"rgb": [
+0.91,
+0.2275,
+0.4351
+]
+},
+{
+"i": 98,
+"name": "P1 yard | pipe coil 0",
+"rgb": [
+0.0825,
+0.3611,
+0.55
+]
+},
+{
+"i": 99,
+"name": "P1 yard | pipe coil 1",
+"rgb": [
+0.545,
+0.61,
+0.0305
+]
+},
+{
+"i": 100,
+"name": "P1 yard | pipe coil 2",
+"rgb": [
+0.6038,
+0.3015,
+0.67
+]
+},
+{
+"i": 101,
+"name": "P1 yard | pipe run A",
+"rgb": [
+0.2555,
+0.73,
+0.5063
+]
+},
+{
+"i": 102,
+"name": "P1 yard | pipe run B",
+"rgb": [
+0.79,
+0.3378,
+0.1975
+]
+},
+{
+"i": 103,
+"name": "P1 yard | pipe run C",
+"rgb": [
+0.1275,
+0.1672,
+0.85
+]
+},
+{
+"i": 104,
+"name": "P1 yard | kerb A",
+"rgb": [
+0.3453,
+0.91,
+0.0455
+]
+},
+{
+"i": 105,
+"name": "P1 yard | kerb A | soil",
+"rgb": [
+0.55,
+0.2475,
+0.4407
+]
+},
+{
+"i": 106,
+"name": "P1 yard | kerb A | dry grass bed",
+"rgb": [
+0.2135,
+0.5824,
+0.61
+]
+},
+{
+"i": 107,
+"name": "P1 yard | kerb B",
+"rgb": [
+0.67,
+0.5584,
+0.1675
+]
+},
+{
+"i": 108,
+"name": "P1 yard | kerb B | soil",
+"rgb": [
+0.4111,
+0.1095,
+0.73
+]
+},
+{
+"i": 109,
+"name": "P1 yard | kerb B | dry grass bed",
+"rgb": [
+0.0395,
+0.79,
+0.1853
+]
+},
+{
+"i": 110,
+"name": "P1 yard | pallet A",
+"rgb": [
+0.85,
+0.3825,
+0.4281
+]
+},
+{
+"i": 111,
+"name": "P1 yard | pallet B",
+"rgb": [
+0.3185,
+0.5488,
+0.91
+]
+},
+{
+"i": 112,
+"name": "P1 yard | ladder rung 0",
+"rgb": [
+0.4185,
+0.55,
+0.1375
+]
+},
+{
+"i": 113,
+"name": "P1 yard | ladder rung 1",
+"rgb": [
+0.61,
+0.0915,
+0.596
+]
+},
+{
+"i": 114,
+"name": "P1 yard | ladder rung 2",
+"rgb": [
+0.0335,
+0.67,
+0.5015
+]
+},
+{
+"i": 115,
+"name": "P1 yard | ladder rung 3",
+"rgb": [
+0.73,
+0.5065,
+0.3285
+]
+},
+{
+"i": 116,
+"name": "P1 yard | ladder rung 4",
+"rgb": [
+0.3544,
+0.2765,
+0.79
+]
+},
+{
+"i": 117,
+"name": "P1 bank | shrub A00",
+"rgb": [
+0.3018,
+0.85,
+0.2125
+]
+},
+{
+"i": 118,
+"name": "P1 bank | shrub A01",
+"rgb": [
+0.91,
+0.1365,
+0.4706
+]
+},
+{
+"i": 119,
+"name": "P1 bank | shrub A02",
+"rgb": [
+0.0275,
+0.4057,
+0.55
+]
+},
+{
+"i": 120,
+"name": "P1 bank | shrub A03",
+"rgb": [
+0.61,
+0.6048,
+0.2745
+]
+},
+{
+"i": 121,
+"name": "P1 bank | shrub A04",
+"rgb": [
+0.5362,
+0.2345,
+0.67
+]
+},
+{
+"i": 122,
+"name": "P1 bank | shrub A05",
+"rgb": [
+0.1825,
+0.73,
+0.402
+]
+},
+{
+"i": 123,
+"name": "P1 bank | shrub A06",
+"rgb": [
+0.79,
+0.1917,
+0.1185
+]
+},
+{
+"i": 124,
+"name": "P1 bank | shrub A07",
+"rgb": [
+0.0425,
+0.19,
+0.85
+]
+},
+{
+"i": 125,
+"name": "P1 bank | shrub A08",
+"rgb": [
+0.647,
+0.91,
+0.4095
+]
+},
+{
+"i": 126,
+"name": "P1 bank | shrub A09",
+"rgb": [
+0.55,
+0.1925,
+0.4665
+]
+},
+{
+"i": 127,
+"name": "P1 bank | shrub A10",
+"rgb": [
+0.1525,
+0.61,
+0.5834
+]
+},
+{
+"i": 128,
+"name": "P1 bank | shrub A11",
+"rgb": [
+0.67,
+0.4707,
+0.1005
+]
+},
+{
+"i": 129,
+"name": "P1 bank | shrub A12",
+"rgb": [
+0.285,
+0.0365,
+0.73
+]
+},
+{
+"i": 130,
+"name": "P1 bank | shrub A13",
+"rgb": [
+0.3555,
+0.79,
+0.3844
+]
+},
+{
+"i": 131,
+"name": "P1 bank | shrub A14",
+"rgb": [
+0.85,
+0.2975,
+0.422
+]
+},
+{
+"i": 132,
+"name": "P1 bank | shrub A15",
+"rgb": [
+0.2275,
+0.5804,
+0.91
+]
+},
+{
+"i": 133,
+"name": "P1 bank | shrub A16",
+"rgb": [
+0.4607,
+0.55,
+0.0825
+]
+},
+{
+"i": 134,
+"name": "P1 bank | shrub A17",
+"rgb": [
+0.5517,
+0.0305,
+0.61
+]
+},
+{
+"i": 135,
+"name": "P1 bank | shrub A18",
+"rgb": [
+0.3015,
+0.67,
+0.5254
+]
+},
+{
+"i": 136,
+"name": "P1 bank | shrub A19",
+"rgb": [
+0.73,
+0.4053,
+0.2555
+]
+},
+{
+"i": 137,
+"name": "P1 bank | shrub A20",
+"rgb": [
+0.2117,
+0.1975,
+0.79
+]
+},
+{
+"i": 138,
+"name": "P1 bank | shrub A21",
+"rgb": [
+0.321,
+0.85,
+0.1275
+]
+},
+{
+"i": 139,
+"name": "P1 bank | shrub A22",
+"rgb": [
+0.91,
+0.0455,
+0.5293
+]
+},
+{
+"i": 140,
+"name": "P1 bank | shrub A23",
+"rgb": [
+0.2475,
+0.5051,
+0.55
+]
+},
+{
+"i": 141,
+"name": "P1 bank | shrub A24",
+"rgb": [
+0.61,
+0.5532,
+0.2135
+]
+},
+{
+"i": 142,
+"name": "P1 bank | shrub A25",
+"rgb": [
+0.4514,
+0.1675,
+0.67
+]
+},
+{
+"i": 143,
+"name": "P1 bank | shrub A26",
+"rgb": [
+0.1095,
+0.73,
+0.279
+]
+},
+{
+"i": 144,
+"name": "P1 bank | shrub A27",
+"rgb": [
+0.79,
+0.0395,
+0.0535
+]
+},
+{
+"i": 145,
+"name": "P1 bank | shrub A28",
+"rgb": [
+0.3825,
+0.5276,
+0.85
+]
+},
+{
+"i": 146,
+"name": "P1 bank | shrub B00",
+"rgb": [
+0.6747,
+0.91,
+0.3185
+]
+},
+{
+"i": 147,
+"name": "P1 bank | shrub B01",
+"rgb": [
+0.55,
+0.1375,
+0.5063
+]
+},
+{
+"i": 148,
+"name": "P1 bank | shrub B02",
+"rgb": [
+0.0915,
+0.61,
+0.5137
+]
+},
+{
+"i": 149,
+"name": "P1 bank | shrub B03",
+"rgb": [
+0.67,
+0.366,
+0.0335
+]
+},
+{
+"i": 150,
+"name": "P1 bank | shrub B04",
+"rgb": [
+0.4211,
+0.3285,
+0.73
+]
+},
+{
+"i": 151,
+"name": "P1 bank | shrub B05",
+"rgb": [
+0.3079,
+0.79,
+0.2765
+]
+},
+{
+"i": 152,
+"name": "P1 bank | shrub B06",
+"rgb": [
+0.85,
+0.2125,
+0.4375
+]
+},
+{
+"i": 153,
+"name": "P1 bank | shrub B07",
+"rgb": [
+0.1365,
+0.6353,
+0.91
+]
+},
+{
+"i": 154,
+"name": "P1 bank | shrub B08",
+"rgb": [
+0.5169,
+0.55,
+0.0275
+]
+},
+{
+"i": 155,
+"name": "P1 bank | shrub B09",
+"rgb": [
+0.5334,
+0.2745,
+0.61
+]
+},
+{
+"i": 156,
+"name": "P1 bank | shrub B10",
+"rgb": [
+0.2345,
+0.67,
+0.4435
+]
+},
+{
+"i": 157,
+"name": "P1 bank | shrub B11",
+"rgb": [
+0.73,
+0.2854,
+0.1825
+]
+},
+{
+"i": 158,
+"name": "P1 bank | shrub B12",
+"rgb": [
+0.1185,
+0.1882,
+0.79
+]
+},
+{
+"i": 159,
+"name": "P1 bank | shrub B13",
+"rgb": [
+0.3619,
+0.85,
+0.0425
+]
+},
+{
+"i": 160,
+"name": "P1 bank | shrub B14",
+"rgb": [
+0.91,
+0.4095,
+0.7535
+]
+},
+{
+"i": 161,
+"name": "P1 bank | shrub B15",
+"rgb": [
+0.1925,
+0.5426,
+0.55
+]
+},
+{
+"i": 162,
+"name": "P1 bank | shrub B17",
+"rgb": [
+0.61,
+0.486,
+0.1525
+]
+},
+{
+"i": 163,
+"name": "P1 bank | shrub B18",
+"rgb": [
+0.3495,
+0.1005,
+0.67
+]
+},
+{
+"i": 164,
+"name": "P1 bank | shrub B19",
+"rgb": [
+0.0365,
+0.73,
+0.1374
+]
+},
+{
+"i": 165,
+"name": "P1 bank | shrub B20",
+"rgb": [
+0.79,
+0.3555,
+0.4191
+]
+},
+{
+"i": 166,
+"name": "P1 bank | shrub C0",
+"rgb": [
+0.2975,
+0.5396,
+0.85
+]
+},
+{
+"i": 167,
+"name": "P1 bank | shrub C1",
+"rgb": [
+0.7257,
+0.91,
+0.2275
+]
+},
+{
+"i": 168,
+"name": "P1 bank | shrub C2",
+"rgb": [
+0.5398,
+0.0825,
+0.55
+]
+},
+{
+"i": 169,
+"name": "P1 bank | shrub C3",
+"rgb": [
+0.0305,
+0.61,
+0.4283
+]
+},
+{
+"i": 171,
+"name": "P1 tier | upper terrace",
+"rgb": [
+0.3043,
+0.2555,
+0.73
+]
+},
+{
+"i": 172,
+"name": "P1 tier | curb",
+"rgb": [
+0.3094,
+0.79,
+0.1975
+]
+},
+{
+"i": 173,
+"name": "P1 tier | curb cap",
+"rgb": [
+0.85,
+0.1275,
+0.4748
+]
+},
+{
+"i": 174,
+"name": "P1 tier | far bank",
+"rgb": [
+0.0455,
+0.7133,
+0.91
+]
+},
+{
+"i": 175,
+"name": "P1 tier | low ground S",
+"rgb": [
+0.55,
+0.5305,
+0.2475
+]
+},
+{
+"i": 176,
+"name": "P1 tier | low ground N",
+"rgb": [
+0.4688,
+0.2135,
+0.61
+]
+},
+{
+"i": 177,
+"name": "P1 tier | low ground W",
+"rgb": [
+0.1675,
+0.67,
+0.3444
+]
+},
+{
+"i": 178,
+"name": "P1 tier | low ground E",
+"rgb": [
+0.73,
+0.1469,
+0.1095
+]
+},
+{
+"i": 179,
+"name": "P1 edge | barrel -4.2.0",
+"rgb": [
+0.0395,
+0.2132,
+0.79
+]
+},
+{
+"i": 180,
+"name": "P1 edge | barrel -4.2.1",
+"rgb": [
+0.6271,
+0.85,
+0.3825
+]
+},
+{
+"i": 181,
+"name": "P1 edge | barrel rim -4.2",
+"rgb": [
+0.91,
+0.3185,
+0.8006
+]
+},
+{
+"i": 182,
+"name": "P1 edge | barrel 2.8.0",
+"rgb": [
+0.1375,
+0.55,
+0.5059
+]
+},
+{
+"i": 183,
+"name": "P1 edge | barrel 2.8.1",
+"rgb": [
+0.61,
+0.4033,
+0.0915
+]
+},
+{
+"i": 184,
+"name": "P1 edge | barrel rim 2.8",
+"rgb": [
+0.2305,
+0.0335,
+0.67
+]
+},
+{
+"i": 185,
+"name": "P1 edge | rail top 0",
+"rgb": [
+0.3285,
+0.73,
+0.3356
+]
+},
+{
+"i": 186,
+"name": "P1 edge | rail mid 0",
+"rgb": [
+0.79,
+0.2765,
+0.4172
+]
+},
+{
+"i": 187,
+"name": "P1 edge | rail post 0 -7.0",
+"rgb": [
+0.2125,
+0.5732,
+0.85
+]
+},
+{
+"i": 188,
+"name": "P1 edge | rail post 0 -4.8",
+"rgb": [
+0.7999,
+0.91,
+0.1365
+]
+},
+{
+"i": 189,
+"name": "P1 edge | rail top 1",
+"rgb": [
+0.4719,
+0.0275,
+0.55
+]
+},
+{
+"i": 190,
+"name": "P1 edge | rail mid 1",
+"rgb": [
+0.2745,
+0.61,
+0.462
+]
+},
+{
+"i": 191,
+"name": "P1 edge | rail post 1 -2.6",
+"rgb": [
+0.67,
+0.3508,
+0.2345
+]
+},
+{
+"i": 192,
+"name": "P1 edge | rail post 1 0.2",
+"rgb": [
+0.1825,
+0.1961,
+0.73
+]
+},
+{
+"i": 193,
+"name": "P1 edge | rail top 2",
+"rgb": [
+0.3311,
+0.79,
+0.1185
+]
+},
+{
+"i": 194,
+"name": "P1 edge | rail mid 2",
+"rgb": [
+0.85,
+0.0425,
+0.5338
+]
+},
+{
+"i": 195,
+"name": "P1 edge | rail post 2 3.4",
+"rgb": [
+0.4095,
+0.8601,
+0.91
+]
+},
+{
+"i": 196,
+"name": "P1 edge | rail post 2 5.2",
+"rgb": [
+0.55,
+0.4813,
+0.1925
+]
+},
+{
+"i": 197,
+"name": "P1 edge | sandbag 0.0",
+"rgb": [
+0.3886,
+0.1525,
+0.61
+]
+},
+{
+"i": 198,
+"name": "P1 edge | sandbag 0.1",
+"rgb": [
+0.1005,
+0.67,
+0.2283
+]
+},
+{
+"i": 199,
+"name": "P1 edge | sandbag 1.0",
+"rgb": [
+0.73,
+0.0365,
+0.0833
+]
+},
+{
+"i": 200,
+"name": "P1 edge | sandbag 1.1",
+"rgb": [
+0.3555,
+0.5116,
+0.79
+]
+},
+{
+"i": 201,
+"name": "P1 edge | sandbag 2.0",
+"rgb": [
+0.6572,
+0.85,
+0.2975
+]
+},
+{
+"i": 202,
+"name": "P1 edge | sandbag 2.1",
+"rgb": [
+0.91,
+0.2275,
+0.871
+]
+},
+{
+"i": 203,
+"name": "P1 edge | sandbag 3.0",
+"rgb": [
+0.0825,
+0.55,
+0.4403
+]
+},
+{
+"i": 204,
+"name": "P1 edge | sandbag 3.1",
+"rgb": [
+0.61,
+0.305,
+0.0305
+]
+},
+{
+"i": 205,
+"name": "P1 edge | sandbag 3.2",
+"rgb": [
+0.3685,
+0.3015,
+0.67
+]
+},
+{
+"i": 206,
+"name": "P1 edge | downstep 0",
+"rgb": [
+0.3077,
+0.73,
+0.2555
+]
+},
+{
+"i": 207,
+"name": "P1 edge | downstep 1",
+"rgb": [
+0.79,
+0.1975,
+0.4356
+]
+},
+{
+"i": 208,
+"name": "P1 edge | downstep 2",
+"rgb": [
+0.1275,
+0.6286,
+0.85
+]
+},
+{
+"i": 209,
+"name": "P1 veg | low grass 0",
+"rgb": [
+0.8974,
+0.91,
+0.0455
+]
+},
+{
+"i": 210,
+"name": "P1 veg | low grass 1",
+"rgb": [
+0.4662,
+0.2475,
+0.55
+]
+},
+{
+"i": 211,
+"name": "P1 veg | low grass 2",
+"rgb": [
+0.2135,
+0.61,
+0.3844
+]
+},
+{
+"i": 212,
+"name": "P1 veg | low grass 3",
+"rgb": [
+0.67,
+0.2375,
+0.1675
+]
+},
+{
+"i": 213,
+"name": "P1 veg | low grass 4",
+"rgb": [
+0.1095,
+0.2042,
+0.73
+]
+},
+{
+"i": 214,
+"name": "P1 veg | low grass 5",
+"rgb": [
+0.373,
+0.79,
+0.0395
+]
+},
+{
+"i": 215,
+"name": "P1 veg | low grass 6",
+"rgb": [
+0.85,
+0.3825,
+0.7267
+]
+},
+{
+"i": 216,
+"name": "P1 veg | low grass 7",
+"rgb": [
+0.3185,
+0.91,
+0.8935
+]
+},
+{
+"i": 217,
+"name": "P1 veg | low grass 8",
+"rgb": [
+0.55,
+0.4181,
+0.1375
+]
+},
+{
+"i": 218,
+"name": "P1 veg | low grass 9",
+"rgb": [
+0.2929,
+0.0915,
+0.61
+]
+},
+{
+"i": 219,
+"name": "P1 veg | low grass 10",
+"rgb": [
+0.0335,
+0.67,
+0.095
+]
+},
+{
+"i": 220,
+"name": "P1 veg | low grass 11",
+"rgb": [
+0.73,
+0.3285,
+0.4068
+]
+},
+{
+"i": 221,
+"name": "P1 veg | low grass 12",
+"rgb": [
+0.2765,
+0.5265,
+0.79
+]
+},
+{
+"i": 222,
+"name": "P1 veg | low grass 13",
+"rgb": [
+0.7089,
+0.85,
+0.2125
+]
+},
+{
+"i": 223,
+"name": "P1 veg | low grass 14",
+"rgb": [
+0.8555,
+0.1365,
+0.91
+]
+},
+{
+"i": 224,
+"name": "P1 veg | low grass 15",
+"rgb": [
+0.0275,
+0.55,
+0.3607
+]
+},
+{
+"i": 225,
+"name": "P1 veg | low grass 16",
+"rgb": [
+0.61,
+0.3905,
+0.2745
+]
+},
+{
+"i": 226,
+"name": "P1 veg | low grass 17",
+"rgb": [
+0.2581,
+0.2345,
+0.67
+]
+},
+{
+"i": 227,
+"name": "P1 veg | low grass 18",
+"rgb": [
+0.3126,
+0.73,
+0.1825
+]
+},
+{
+"i": 228,
+"name": "P1 veg | low grass 19",
+"rgb": [
+0.79,
+0.1185,
+0.4741
+]
+},
+{
+"i": 229,
+"name": "P1 veg | low grass 20",
+"rgb": [
+0.0425,
+0.7057,
+0.85
+]
+},
+{
+"i": 230,
+"name": "P1 veg | low grass 21",
+"rgb": [
+0.91,
+0.8534,
+0.4095
+]
+},
+{
+"i": 231,
+"name": "P1 veg | low grass 22",
+"rgb": [
+0.4053,
+0.1925,
+0.55
+]
+},
+{
+"i": 232,
+"name": "P1 veg | low grass 23",
+"rgb": [
+0.1525,
+0.61,
+0.2913
+]
+},
+{
+"i": 233,
+"name": "P1 veg | low grass 24",
+"rgb": [
+0.67,
+0.1071,
+0.1005
+]
+},
+{
+"i": 234,
+"name": "P1 veg | low grass 25",
+"rgb": [
+0.0365,
+0.2309,
+0.73
+]
+},
+{
+"i": 235,
+"name": "P1 veg | low grass 26",
+"rgb": [
+0.6041,
+0.79,
+0.3555
+]
+},
+{
+"i": 236,
+"name": "P1 veg | low grass 27",
+"rgb": [
+0.85,
+0.2975,
+0.7748
+]
+},
+{
+"i": 237,
+"name": "P1 veg | low grass 28",
+"rgb": [
+0.2275,
+0.91,
+0.8038
+]
+},
+{
+"i": 238,
+"name": "P1 veg | low grass 29",
+"rgb": [
+0.55,
+0.3408,
+0.0825
+]
+},
+{
+"i": 239,
+"name": "P1 veg | low grass 30",
+"rgb": [
+0.1816,
+0.0305,
+0.61
+]
+},
+{
+"i": 240,
+"name": "P1 veg | low grass 31",
+"rgb": [
+0.3129,
+0.67,
+0.3015
+]
+},
+{
+"i": 241,
+"name": "P1 veg | low grass 32",
+"rgb": [
+0.73,
+0.2555,
+0.4087
+]
+},
+{
+"i": 242,
+"name": "P1 veg | low grass 33",
+"rgb": [
+0.1975,
+0.5617,
+0.79
+]
+},
+{
+"i": 243,
+"name": "P1 veg | low grass 34",
+"rgb": [
+0.7824,
+0.85,
+0.1275
+]
+},
+{
+"i": 244,
+"name": "P1 veg | low grass 35",
+"rgb": [
+0.7386,
+0.0455,
+0.91
+]
+},
+{
+"i": 245,
+"name": "P1 veg | low grass 36",
+"rgb": [
+0.2475,
+0.55,
+0.4018
+]
+},
+{
+"i": 246,
+"name": "P1 veg | low grass 37",
+"rgb": [
+0.61,
+0.3,
+0.2135
+]
+},
+{
+"i": 247,
+"name": "P1 veg | low grass 38",
+"rgb": [
+0.1675,
+0.2045,
+0.67
+]
+},
+{
+"i": 248,
+"name": "P1 veg | low grass 39",
+"rgb": [
+0.3362,
+0.73,
+0.1095
+]
+},
+{
+"i": 249,
+"name": "P1 veg | low grass 40",
+"rgb": [
+0.79,
+0.0395,
+0.5327
+]
+},
+{
+"i": 250,
+"name": "P1 veg | low grass 41",
+"rgb": [
+0.3825,
+0.8262,
+0.85
+]
+},
+{
+"i": 251,
+"name": "P1 veg | low grass 42",
+"rgb": [
+0.91,
+0.7676,
+0.3185
+]
+},
+{
+"i": 252,
+"name": "P1 veg | low grass 43",
+"rgb": [
+0.3303,
+0.1375,
+0.55
+]
+},
+{
+"i": 253,
+"name": "P1 veg | low grass 44",
+"rgb": [
+0.0915,
+0.61,
+0.1825
+]
+},
+{
+"i": 254,
+"name": "P1 veg | low grass 45",
+"rgb": [
+0.67,
+0.0335,
+0.1075
+]
+},
+{
+"i": 255,
+"name": "P1 veg | low grass 46",
+"rgb": [
+0.3285,
+0.4923,
+0.73
+]
+},
+{
+"i": 256,
+"name": "P1 veg | low grass 47",
+"rgb": [
+0.6358,
+0.79,
+0.2765
+]
+},
+{
+"i": 257,
+"name": "P1 veg | low grass 48",
+"rgb": [
+0.85,
+0.2125,
+0.8446
+]
+},
+{
+"i": 258,
+"name": "P1 veg | low grass 49",
+"rgb": [
+0.1365,
+0.91,
+0.6908
+]
+},
+{
+"i": 259,
+"name": "P1 veg | low grass 50",
+"rgb": [
+0.55,
+0.2495,
+0.0275
+]
+},
+{
+"i": 260,
+"name": "P1 veg | low grass 51",
+"rgb": [
+0.3191,
+0.2745,
+0.61
+]
+},
+{
+"i": 261,
+"name": "P1 veg | low grass 52",
+"rgb": [
+0.3036,
+0.67,
+0.2345
+]
+},
+{
+"i": 262,
+"name": "P1 veg | low grass 53",
+"rgb": [
+0.73,
+0.1825,
+0.4292
+]
+},
+{
+"i": 263,
+"name": "P1 veg | low grass 54",
+"rgb": [
+0.1185,
+0.617,
+0.79
+]
+},
+{
+"i": 264,
+"name": "P1 veg | low grass 55",
+"rgb": [
+0.85,
+0.8224,
+0.0425
+]
+},
+{
+"i": 265,
+"name": "P1 veg | low grass 56",
+"rgb": [
+0.7469,
+0.4095,
+0.91
+]
+},
+{
+"i": 266,
+"name": "P1 veg | low grass 57",
+"rgb": [
+0.1925,
+0.55,
+0.3292
+]
+},
+{
+"i": 267,
+"name": "P1 veg | low grass 58",
+"rgb": [
+0.61,
+0.1939,
+0.1525
+]
+},
+{
+"i": 268,
+"name": "P1 veg | low grass 59",
+"rgb": [
+0.1005,
+0.2152,
+0.67
+]
+},
+{
+"i": 269,
+"name": "P1 veg | low grass 60",
+"rgb": [
+0.3785,
+0.73,
+0.0365
+]
+},
+{
+"i": 270,
+"name": "P1 veg | low grass 61",
+"rgb": [
+0.79,
+0.3555,
+0.6966
+]
+},
+{
+"i": 271,
+"name": "P1 veg | low grass 62",
+"rgb": [
+0.2975,
+0.85,
+0.8076
+]
+},
+{
+"i": 272,
+"name": "P1 veg | low grass 63",
+"rgb": [
+0.91,
+0.6585,
+0.2275
+]
+},
+{
+"i": 273,
+"name": "P1 veg | barrel grass -4.2.0",
+"rgb": [
+0.2413,
+0.0825,
+0.55
+]
+},
+{
+"i": 274,
+"name": "P1 veg | barrel grass -4.2.1",
+"rgb": [
+0.0305,
+0.61,
+0.0582
+]
+},
+{
+"i": 275,
+"name": "P1 veg | barrel grass -4.2.2",
+"rgb": [
+0.67,
+0.3015,
+0.3914
+]
+},
+{
+"i": 276,
+"name": "P1 veg | barrel grass -4.2.3",
+"rgb": [
+0.2555,
+0.5097,
+0.73
+]
+},
+{
+"i": 277,
+"name": "P1 veg | barrel grass -4.2.4",
+"rgb": [
+0.6878,
+0.79,
+0.1975
+]
+},
+{
+"i": 278,
+"name": "P1 veg | barrel grass -4.2.5",
+"rgb": [
+0.7638,
+0.1275,
+0.85
+]
+},
+{
+"i": 279,
+"name": "P1 veg | barrel grass -4.2.6",
+"rgb": [
+0.0455,
+0.91,
+0.5546
+]
+},
+{
+"i": 280,
+"name": "P1 veg | barrel grass -4.2.7",
+"rgb": [
+0.55,
+0.3374,
+0.2475
+]
+},
+{
+"i": 281,
+"name": "P1 veg | barrel grass -4.2.8",
+"rgb": [
+0.2156,
+0.2135,
+0.61
+]
+},
+{
+"i": 282,
+"name": "P1 veg | barrel grass 2.8.0",
+"rgb": [
+0.3115,
+0.67,
+0.1675
+]
+},
+{
+"i": 283,
+"name": "P1 veg | barrel grass 2.8.1",
+"rgb": [
+0.73,
+0.1095,
+0.4683
+]
+},
+{
+"i": 284,
+"name": "P1 veg | barrel grass 2.8.2",
+"rgb": [
+0.0395,
+0.6925,
+0.79
+]
+},
+{
+"i": 285,
+"name": "P1 veg | barrel grass 2.8.3",
+"rgb": [
+0.85,
+0.7743,
+0.3825
+]
+},
+{
+"i": 286,
+"name": "P1 veg | barrel grass 2.8.4",
+"rgb": [
+0.6417,
+0.3185,
+0.91
+]
+},
+{
+"i": 287,
+"name": "P1 veg | barrel grass 2.8.5",
+"rgb": [
+0.1375,
+0.55,
+0.2425
+]
+},
+{
+"i": 288,
+"name": "P1 veg | barrel grass 2.8.6",
+"rgb": [
+0.61,
+0.0915,
+0.1108
+]
+},
+{
+"i": 289,
+"name": "P1 veg | barrel grass 2.8.7",
+"rgb": [
+0.0335,
+0.2429,
+0.67
+]
+},
+{
+"i": 290,
+"name": "P1 veg | barrel grass 2.8.8",
+"rgb": [
+0.5778,
+0.73,
+0.3285
+]
+},
+{
+"i": 293,
+"name": "P1 canopy gobo",
+"rgb": [
+0.91,
+0.5262,
+0.1365
+]
+},
+{
+"i": 294,
+"name": "P1 stair landing cap",
+"rgb": [
+0.1382,
+0.0275,
+0.55
+]
+},
+{
+"i": 295,
+"name": "P1 stair rear fill",
+"rgb": [
+0.3013,
+0.61,
+0.2745
+]
+},
+{
+"i": 296,
+"name": "P1 pipe cluster base",
+"rgb": [
+0.67,
+0.2345,
+0.3963
+]
+},
+{
+"i": 297,
+"name": "P1 yard | kerb A | dry grass bed fill",
+"rgb": [
+0.1825,
+0.5457,
+0.73
+]
+},
+{
+"i": 298,
+"name": "P1 yard | kerb B | dry grass bed fill",
+"rgb": [
+0.7599,
+0.79,
+0.1185
+]
+},
+{
+"i": 299,
+"name": "P1 yard | kerb A | dry grass bed fill2",
+"rgb": [
+0.6505,
+0.0425,
+0.85
+]
+},
+{
+"i": 300,
+"name": "P1 yard | kerb B | dry grass bed fill2",
+"rgb": [
+0.4095,
+0.91,
+0.6403
+]
+},
+{
+"i": 301,
+"name": "P1 wallbase tuft 00",
+"rgb": [
+0.55,
+0.2531,
+0.1925
+]
+},
+{
+"i": 302,
+"name": "P1 wallbase tuft 01",
+"rgb": [
+0.1525,
+0.2085,
+0.61
+]
+},
+{
+"i": 303,
+"name": "P1 wallbase tuft 02",
+"rgb": [
+0.3364,
+0.67,
+0.1005
+]
+},
+{
+"i": 304,
+"name": "P1 wallbase tuft 04",
+"rgb": [
+0.73,
+0.0365,
+0.5261
+]
+},
+{
+"i": 305,
+"name": "P1 wallbase tuft 05",
+"rgb": [
+0.3555,
+0.789,
+0.79
+]
+},
+{
+"i": 306,
+"name": "P1 wallbase tuft 06",
+"rgb": [
+0.85,
+0.69,
+0.2975
+]
+},
+{
+"i": 307,
+"name": "P1 farbank crown L0",
+"rgb": [
+0.5132,
+0.2275,
+0.91
+]
+},
+{
+"i": 308,
+"name": "P1 farbank crown L1",
+"rgb": [
+0.0825,
+0.55,
+0.1418
+]
+},
+{
+"i": 309,
+"name": "P1 shore screen 00",
+"rgb": [
+0.61,
+0.0305,
+0.1261
+]
+},
+{
+"i": 310,
+"name": "P1 shore screen 01",
+"rgb": [
+0.3015,
+0.4698,
+0.67
+]
+},
+{
+"i": 311,
+"name": "P1 shore screen 02",
+"rgb": [
+0.6107,
+0.73,
+0.2555
+]
+},
+{
+"i": 312,
+"name": "P1 shore screen 03",
+"rgb": [
+0.7661,
+0.1975,
+0.79
+]
+},
+{
+"i": 313,
+"name": "P1 shore screen 04",
+"rgb": [
+0.1275,
+0.85,
+0.61
+]
+},
+{
+"i": 314,
+"name": "P1 shore screen 05",
+"rgb": [
+0.91,
+0.3706,
+0.0455
+]
+},
+{
+"i": 315,
+"name": "P1 shore screen 06",
+"rgb": [
+0.273,
+0.2475,
+0.55
+]
+},
+{
+"i": 316,
+"name": "P1 shore screen 07",
+"rgb": [
+0.2958,
+0.61,
+0.2135
+]
+},
+{
+"i": 317,
+"name": "P1 tower top grass 00",
+"rgb": [
+0.67,
+0.1675,
+0.4184
+]
+},
+{
+"i": 318,
+"name": "P1 tower top grass 01",
+"rgb": [
+0.1095,
+0.6004,
+0.73
+]
+},
+{
+"i": 319,
+"name": "P1 tower top grass 02",
+"rgb": [
+0.79,
+0.7277,
+0.0395
+]
+},
+{
+"i": 320,
+"name": "P1 tower top grass 03",
+"rgb": [
+0.6748,
+0.3825,
+0.85
+]
+},
+{
+"i": 321,
+"name": "P1 tower top grass 04",
+"rgb": [
+0.3185,
+0.91,
+0.5157
+]
+},
+{
+"i": 322,
+"name": "P1 tower top grass 05",
+"rgb": [
+0.55,
+0.1547,
+0.1375
+]
+},
+{
+"i": 323,
+"name": "P1 tower top grass 06",
+"rgb": [
+0.0915,
+0.2212,
+0.61
+]
+},
+{
+"i": 324,
+"name": "P1 tower top grass 07",
+"rgb": [
+0.3784,
+0.67,
+0.0335
+]
+},
+{
+"i": 325,
+"name": "P1 canopy clump 00",
+"rgb": [
+0.73,
+0.3285,
+0.6632
+]
+},
+{
+"i": 326,
+"name": "P1 canopy clump 01",
+"rgb": [
+0.2765,
+0.79,
+0.7255
+]
+},
+{
+"i": 327,
+"name": "P1 canopy clump 02",
+"rgb": [
+0.85,
+0.584,
+0.2125
+]
+},
+{
+"i": 328,
+"name": "P1 farbank near silhouette 0",
+"rgb": [
+0.3615,
+0.1365,
+0.91
+]
+},
+{
+"i": 329,
+"name": "P1 farbank near silhouette 1",
+"rgb": [
+0.028,
+0.55,
+0.0275
+]
+},
+{
+"i": 330,
+"name": "P1 farbank near silhouette 2",
+"rgb": [
+0.61,
+0.2745,
+0.3727
+]
+},
+{
+"i": 331,
+"name": "P1 farbank near silhouette 3",
+"rgb": [
+0.2345,
+0.489,
+0.67
+]
+},
+{
+"i": 332,
+"name": "P1 farbank near silhouette 4",
+"rgb": [
+0.6623,
+0.73,
+0.1825
+]
+},
+{
+"i": 333,
+"name": "P1 densify tuft 00",
+"rgb": [
+0.6771,
+0.1185,
+0.79
+]
+},
+{
+"i": 334,
+"name": "P1 densify tuft 01",
+"rgb": [
+0.0425,
+0.85,
+0.4786
+]
+},
+{
+"i": 335,
+"name": "P1 densify tuft 02",
+"rgb": [
+0.91,
+0.5338,
+0.4095
+]
+},
+{
+"i": 336,
+"name": "P1 densify tuft 03",
+"rgb": [
+0.1925,
+0.208,
+0.55
+]
+},
+{
+"i": 337,
+"name": "P1 densify tuft 04",
+"rgb": [
+0.3059,
+0.61,
+0.1525
+]
+},
+{
+"i": 338,
+"name": "P1 densify tuft 05",
+"rgb": [
+0.67,
+0.1005,
+0.4576
+]
+},
+{
+"i": 339,
+"name": "P1 densify tuft 06",
+"rgb": [
+0.0365,
+0.6737,
+0.73
+]
+},
+{
+"i": 340,
+"name": "P1 densify tuft 07",
+"rgb": [
+0.79,
+0.6985,
+0.3555
+]
+},
+{
+"i": 341,
+"name": "P1 densify tuft 08",
+"rgb": [
+0.5724,
+0.2975,
+0.85
+]
+},
+{
+"i": 342,
+"name": "P1 densify tuft 09",
+"rgb": [
+0.2275,
+0.91,
+0.3679
+]
+},
+{
+"i": 343,
+"name": "P1 densify tuft 10",
+"rgb": [
+0.55,
+0.0825,
+0.1227
+]
+},
+{
+"i": 344,
+"name": "P1 densify tuft 11",
+"rgb": [
+0.0305,
+0.2495,
+0.61
+]
+},
+{
+"i": 345,
+"name": "P1 densify tuft 12",
+"rgb": [
+0.5483,
+0.67,
+0.3015
+]
+},
+{
+"i": 346,
+"name": "P1 densify tuft 13",
+"rgb": [
+0.73,
+0.2555,
+0.7117
+]
+},
+{
+"i": 347,
+"name": "P1 densify tuft 14",
+"rgb": [
+0.1975,
+0.79,
+0.64
+]
+},
+{
+"i": 348,
+"name": "P1 densify tuft 15",
+"rgb": [
+0.85,
+0.4562,
+0.1275
+]
+},
+{
+"i": 349,
+"name": "P1 densify tuft 16",
+"rgb": [
+0.1866,
+0.0455,
+0.91
+]
+},
+{
+"i": 350,
+"name": "P1 densify tuft 17",
+"rgb": [
+0.2864,
+0.55,
+0.2475
+]
+},
+{
+"i": 351,
+"name": "P1 densify tuft 18",
+"rgb": [
+0.61,
+0.2135,
+0.3802
+]
+},
+{
+"i": 352,
+"name": "P1 densify tuft 19",
+"rgb": [
+0.1675,
+0.5254,
+0.67
+]
+},
+{
+"i": 353,
+"name": "P1 densify tuft 20",
+"rgb": [
+0.73,
+0.7275,
+0.1095
+]
+},
+{
+"i": 354,
+"name": "P1 densify tuft 21",
+"rgb": [
+0.568,
+0.0395,
+0.79
+]
+},
+{
+"i": 355,
+"name": "P1 densify tuft 22",
+"rgb": [
+0.3825,
+0.85,
+0.5753
+]
+},
+{
+"i": 356,
+"name": "P1 densify tuft 23",
+"rgb": [
+0.91,
+0.3898,
+0.3185
+]
+},
+{
+"i": 357,
+"name": "P1 densify tuft 24",
+"rgb": [
+0.1375,
+0.2081,
+0.55
+]
+},
+{
+"i": 358,
+"name": "P1 densify tuft 25",
+"rgb": [
+0.3316,
+0.61,
+0.0915
+]
+},
+{
+"i": 359,
+"name": "P1 densify tuft 26",
+"rgb": [
+0.67,
+0.0335,
+0.5139
+]
+},
+{
+"i": 360,
+"name": "P1 densify tuft 27",
+"rgb": [
+0.3285,
+0.73,
+0.7113
+]
+},
+{
+"i": 361,
+"name": "P1 densify tuft 28",
+"rgb": [
+0.79,
+0.6162,
+0.2765
+]
+},
+{
+"i": 362,
+"name": "P1 densify tuft 29",
+"rgb": [
+0.4483,
+0.2125,
+0.85
+]
+},
+{
+"i": 363,
+"name": "P1 densify tuft 30",
+"rgb": [
+0.1365,
+0.91,
+0.1969
+]
+},
+{
+"i": 364,
+"name": "P1 densify tuft 31",
+"rgb": [
+0.55,
+0.0275,
+0.1392
+]
+},
+{
+"i": 365,
+"name": "P1 densify tuft 32",
+"rgb": [
+0.2745,
+0.4441,
+0.61
+]
+},
+{
+"i": 366,
+"name": "P1 densify tuft 33",
+"rgb": [
+0.5818,
+0.67,
+0.2345
+]
+},
+{
+"i": 367,
+"name": "P1 densify tuft 34",
+"rgb": [
+0.6812,
+0.1825,
+0.73
+]
+},
+{
+"i": 368,
+"name": "P1 densify tuft 35",
+"rgb": [
+0.1185,
+0.79,
+0.5342
+]
+},
+{
+"i": 369,
+"name": "P1 frontpool densify 00",
+"rgb": [
+0.85,
+0.3068,
+0.0425
+]
+},
+{
+"i": 370,
+"name": "P1 frontpool densify 01",
+"rgb": [
+0.4272,
+0.4095,
+0.91
+]
+},
+{
+"i": 371,
+"name": "P1 frontpool densify 02",
+"rgb": [
+0.2841,
+0.55,
+0.1925
+]
+},
+{
+"i": 372,
+"name": "P1 frontpool densify 03",
+"rgb": [
+0.61,
+0.1525,
+0.4033
+]
+},
+{
+"i": 373,
+"name": "P1 frontpool densify 04",
+"rgb": [
+0.1005,
+0.5788,
+0.67
+]
+},
+{
+"i": 374,
+"name": "P1 frontpool densify 05",
+"rgb": [
+0.73,
+0.6386,
+0.0365
+]
+},
+{
+"i": 375,
+"name": "P1 frontpool densify 06",
+"rgb": [
+0.606,
+0.3555,
+0.79
+]
+},
+{
+"i": 376,
+"name": "P1 frontpool densify 07",
+"rgb": [
+0.2975,
+0.85,
+0.4548
+]
+},
+{
+"i": 377,
+"name": "P1 frontpool densify 08",
+"rgb": [
+0.91,
+0.2275,
+0.2324
+]
+},
+{
+"i": 378,
+"name": "P1 frontpool densify 09",
+"rgb": [
+0.0825,
+0.2222,
+0.55
+]
+},
+{
+"i": 379,
+"name": "P1 frontpool densify 10",
+"rgb": [
+0.3728,
+0.61,
+0.0305
+]
+},
+{
+"i": 380,
+"name": "P1 frontpool densify 11",
+"rgb": [
+0.67,
+0.3015,
+0.6267
+]
+},
+{
+"i": 381,
+"name": "Deep platform plinth left",
+"rgb": [
+0.2555,
+0.73,
+0.6473
+]
+},
+{
+"i": 382,
+"name": "Deep platform plinth right",
+"rgb": [
+0.79,
+0.5138,
+0.1975
+]
+},
+{
+"i": 383,
+"name": "Ground plane beneath courtyard",
+"rgb": [
+0.3024,
+0.1275,
+0.85
+]
+},
+{
+"i": 384,
+"name": "Right service apron foundation",
+"rgb": [
+0.0885,
+0.91,
+0.0455
+]
+},
+{
+"i": 385,
+"name": "Service apron continuous limestone slab 00_00",
+"rgb": [
+0.55,
+0.2475,
+0.3508
+]
+},
+{
+"i": 386,
+"name": "Service apron continuous limestone slab 00_01",
+"rgb": [
+0.2135,
+0.4646,
+0.61
+]
+},
+{
+"i": 387,
+"name": "Service apron continuous limestone slab 00_02",
+"rgb": [
+0.6324,
+0.67,
+0.1675
+]
+},
+{
+"i": 388,
+"name": "Service apron continuous limestone slab 01_00",
+"rgb": [
+0.5954,
+0.1095,
+0.73
+]
+},
+{
+"i": 389,
+"name": "Service apron continuous limestone slab 01_01",
+"rgb": [
+0.0395,
+0.79,
+0.4082
+]
+},
+{
+"i": 390,
+"name": "Service apron continuous limestone slab 01_02",
+"rgb": [
+0.85,
+0.4758,
+0.3825
+]
+},
+{
+"i": 391,
+"name": "Service apron continuous limestone slab 02_00",
+"rgb": [
+0.3185,
+0.3731,
+0.91
+]
+},
+{
+"i": 392,
+"name": "Service apron continuous limestone slab 02_01",
+"rgb": [
+0.2959,
+0.55,
+0.1375
+]
+},
+{
+"i": 393,
+"name": "Service apron continuous limestone slab 02_02",
+"rgb": [
+0.61,
+0.0915,
+0.4419
+]
+},
+{
+"i": 394,
+"name": "Service apron continuous limestone slab 03_00",
+"rgb": [
+0.0335,
+0.6494,
+0.67
+]
+},
+{
+"i": 395,
+"name": "Service apron continuous limestone slab 03_01",
+"rgb": [
+0.73,
+0.6258,
+0.3285
+]
+},
+{
+"i": 396,
+"name": "Service apron continuous limestone slab 03_02",
+"rgb": [
+0.5069,
+0.2765,
+0.79
+]
+},
+{
+"i": 397,
+"name": "Service apron continuous limestone slab 04_00",
+"rgb": [
+0.2125,
+0.85,
+0.3126
+]
+},
+{
+"i": 398,
+"name": "Service apron continuous limestone slab 04_01",
+"rgb": [
+0.91,
+0.1365,
+0.2408
+]
+},
+{
+"i": 399,
+"name": "Service apron continuous limestone slab 04_02",
+"rgb": [
+0.0275,
+0.2504,
+0.55
+]
+},
+{
+"i": 400,
+"name": "Rear service terrace ground",
+"rgb": [
+0.5155,
+0.61,
+0.2745
+]
+},
+{
+"i": 401,
+"name": "Continuous warm bed below paving",
+"rgb": [
+0.6655,
+0.2345,
+0.67
+]
+},
+{
+"i": 402,
+"name": "Cut limestone slab 00_00_00",
+"rgb": [
+0.1825,
+0.73,
+0.5646
+]
+},
+{
+"i": 404,
+"name": "Cut limestone slab 00_01_00",
+"rgb": [
+0.1349,
+0.0425,
+0.85
+]
+},
+{
+"i": 405,
+"name": "Cut limestone slab 00_02_00",
+"rgb": [
+0.4983,
+0.91,
+0.4095
+]
+},
+{
+"i": 406,
+"name": "Cut limestone slab 00_03_00",
+"rgb": [
+0.55,
+0.1925,
+0.3602
+]
+},
+{
+"i": 407,
+"name": "Cut limestone slab 00_04_00",
+"rgb": [
+0.1525,
+0.5007,
+0.61
+]
+},
+{
+"i": 408,
+"name": "Cut limestone slab 00_06_00",
+"rgb": [
+0.67,
+0.6399,
+0.1005
+]
+},
+{
+"i": 409,
+"name": "Cut limestone slab 00_07_00",
+"rgb": [
+0.491,
+0.0365,
+0.73
+]
+},
+{
+"i": 410,
+"name": "Cut limestone slab 00_08_00",
+"rgb": [
+0.3555,
+0.79,
+0.5135
+]
+},
+{
+"i": 411,
+"name": "Cut limestone slab 00_09_00",
+"rgb": [
+0.85,
+0.3372,
+0.2975
+]
+},
+{
+"i": 413,
+"name": "Cut limestone slab 00_10_00",
+"rgb": [
+0.3218,
+0.55,
+0.0825
+]
+},
+{
+"i": 414,
+"name": "Cut limestone slab 01_00_00",
+"rgb": [
+0.61,
+0.0305,
+0.4962
+]
+},
+{
+"i": 415,
+"name": "Cut limestone slab 01_01_00",
+"rgb": [
+0.3015,
+0.67,
+0.6349
+]
+},
+{
+"i": 417,
+"name": "Cut limestone slab 01_02_00",
+"rgb": [
+0.3877,
+0.1975,
+0.79
+]
+},
+{
+"i": 418,
+"name": "Cut limestone slab 01_03_00",
+"rgb": [
+0.1275,
+0.85,
+0.1486
+]
+},
+{
+"i": 419,
+"name": "Cut limestone slab 01_04_00",
+"rgb": [
+0.91,
+0.0455,
+0.2725
+]
+},
+{
+"i": 420,
+"name": "Cut limestone slab 01_06_00",
+"rgb": [
+0.2475,
+0.4152,
+0.55
+]
+},
+{
+"i": 421,
+"name": "Cut limestone slab 01_07_00",
+"rgb": [
+0.549,
+0.61,
+0.2135
+]
+},
+{
+"i": 422,
+"name": "Cut limestone slab 01_08_00",
+"rgb": [
+0.6007,
+0.1675,
+0.67
+]
+},
+{
+"i": 423,
+"name": "Cut limestone slab 01_09_00",
+"rgb": [
+0.1095,
+0.73,
+0.4633
+]
+},
+{
+"i": 424,
+"name": "Cut limestone slab 01_10_00",
+"rgb": [
+0.79,
+0.2485,
+0.0395
+]
+},
+{
+"i": 426,
+"name": "Cut limestone slab 02_00_00",
+"rgb": [
+0.499,
+0.91,
+0.3185
+]
+},
+{
+"i": 427,
+"name": "Cut limestone slab 02_01_00",
+"rgb": [
+0.55,
+0.1375,
+0.3837
+]
+},
+{
+"i": 428,
+"name": "Cut limestone slab 02_02_00",
+"rgb": [
+0.0915,
+0.5523,
+0.61
+]
+},
+{
+"i": 430,
+"name": "Cut limestone slab 02_03_00",
+"rgb": [
+0.5404,
+0.3285,
+0.73
+]
+},
+{
+"i": 431,
+"name": "Cut limestone slab 02_04_00",
+"rgb": [
+0.2765,
+0.79,
+0.3976
+]
+},
+{
+"i": 432,
+"name": "Cut limestone slab 02_05_00",
+"rgb": [
+0.85,
+0.2125,
+0.2481
+]
+},
+{
+"i": 433,
+"name": "Cut limestone slab 02_06_00",
+"rgb": [
+0.1365,
+0.4054,
+0.91
+]
+},
+{
+"i": 434,
+"name": "Cut limestone slab 02_07_00",
+"rgb": [
+0.3616,
+0.55,
+0.0275
+]
+},
+{
+"i": 435,
+"name": "Cut limestone slab 02_08_00",
+"rgb": [
+0.61,
+0.2745,
+0.5869
+]
+},
+{
+"i": 436,
+"name": "Cut limestone slab 02_09_00",
+"rgb": [
+0.2345,
+0.67,
+0.5728
+]
+},
+{
+"i": 437,
+"name": "Cut limestone slab 02_10_00",
+"rgb": [
+0.73,
+0.4481,
+0.1825
+]
+},
+{
+"i": 438,
+"name": "Cut limestone slab 03_00_00",
+"rgb": [
+0.2483,
+0.1185,
+0.79
+]
+},
+{
+"i": 439,
+"name": "Cut limestone slab 03_01_00",
+"rgb": [
+0.122,
+0.85,
+0.0425
+]
+},
+{
+"i": 440,
+"name": "Cut limestone slab 03_02_00",
+"rgb": [
+0.91,
+0.4095,
+0.6048
+]
+},
+{
+"i": 441,
+"name": "Cut limestone slab 03_03_00",
+"rgb": [
+0.1925,
+0.4363,
+0.55
+]
+},
+{
+"i": 443,
+"name": "Cut limestone slab 03_04_00",
+"rgb": [
+0.5187,
+0.1005,
+0.67
+]
+},
+{
+"i": 444,
+"name": "Cut limestone slab 03_05_00",
+"rgb": [
+0.0365,
+0.73,
+0.3434
+]
+},
+{
+"i": 445,
+"name": "Cut limestone slab 03_06_00",
+"rgb": [
+0.79,
+0.421,
+0.3555
+]
+},
+{
+"i": 446,
+"name": "Cut limestone slab 03_07_00",
+"rgb": [
+0.2975,
+0.3754,
+0.85
+]
+},
+{
+"i": 447,
+"name": "Cut limestone slab 03_08_00",
+"rgb": [
+0.5229,
+0.91,
+0.2275
+]
+},
+{
+"i": 448,
+"name": "Cut limestone slab 03_09_00",
+"rgb": [
+0.55,
+0.0825,
+0.4213
+]
+},
+{
+"i": 449,
+"name": "Cut limestone slab 03_10_00",
+"rgb": [
+0.0305,
+0.61,
+0.6005
+]
+},
+{
+"i": 450,
+"name": "Cut limestone slab 04_00_00",
+"rgb": [
+0.67,
+0.5564,
+0.3015
+]
+},
+{
+"i": 451,
+"name": "Cut limestone slab 04_01_00",
+"rgb": [
+0.4453,
+0.2555,
+0.73
+]
+},
+{
+"i": 452,
+"name": "Cut limestone slab 04_02_00",
+"rgb": [
+0.1975,
+0.79,
+0.2616
+]
+},
+{
+"i": 453,
+"name": "Cut limestone slab 04_03_00",
+"rgb": [
+0.85,
+0.1275,
+0.2602
+]
+},
+{
+"i": 454,
+"name": "Cut limestone slab 04_04_00",
+"rgb": [
+0.0455,
+0.4565,
+0.91
+]
+},
+{
+"i": 456,
+"name": "Cut limestone slab 04_05_00",
+"rgb": [
+0.5866,
+0.2135,
+0.61
+]
+},
+{
+"i": 457,
+"name": "Cut limestone slab 04_06_00",
+"rgb": [
+0.1675,
+0.67,
+0.4937
+]
+},
+{
+"i": 458,
+"name": "Cut limestone slab 04_07_00",
+"rgb": [
+0.73,
+0.3313,
+0.1095
+]
+},
+{
+"i": 459,
+"name": "Cut limestone slab 04_08_00",
+"rgb": [
+0.0887,
+0.0395,
+0.79
+]
+},
+{
+"i": 460,
+"name": "Cut limestone slab 04_09_00",
+"rgb": [
+0.4882,
+0.85,
+0.3825
+]
+},
+{
+"i": 461,
+"name": "Cut limestone slab 04_10_00",
+"rgb": [
+0.91,
+0.3185,
+0.6249
+]
+},
+{
+"i": 468,
+"name": "Rear courtyard limestone extension 00_00",
+"rgb": [
+0.5701,
+0.91,
+0.1365
+]
+},
+{
+"i": 469,
+"name": "Rear courtyard limestone extension 00_01",
+"rgb": [
+0.55,
+0.0275,
+0.4729
+]
+},
+{
+"i": 470,
+"name": "Rear courtyard limestone extension 00_02",
+"rgb": [
+0.2745,
+0.61,
+0.5616
+]
+},
+{
+"i": 471,
+"name": "Rear courtyard limestone extension 00_03",
+"rgb": [
+0.67,
+0.4801,
+0.2345
+]
+},
+{
+"i": 472,
+"name": "Rear courtyard limestone extension 00_04",
+"rgb": [
+0.3316,
+0.1825,
+0.73
+]
+},
+{
+"i": 473,
+"name": "Rear courtyard limestone extension 00_05",
+"rgb": [
+0.1316,
+0.79,
+0.1185
+]
+},
+{
+"i": 474,
+"name": "Rear courtyard limestone extension 00_06",
+"rgb": [
+0.85,
+0.0425,
+0.2939
+]
+},
+{
+"i": 475,
+"name": "Rear courtyard limestone extension 00_07",
+"rgb": [
+0.4095,
+0.7114,
+0.91
+]
+},
+{
+"i": 476,
+"name": "Rear courtyard limestone extension 00_08",
+"rgb": [
+0.5124,
+0.55,
+0.1925
+]
+},
+{
+"i": 477,
+"name": "Rear courtyard limestone extension 00_09",
+"rgb": [
+0.5246,
+0.1525,
+0.61
+]
+},
+{
+"i": 478,
+"name": "Rear courtyard limestone extension 00_10",
+"rgb": [
+0.1005,
+0.67,
+0.3975
+]
+},
+{
+"i": 479,
+"name": "Landing front fascia left",
+"rgb": [
+0.73,
+0.1958,
+0.0365
+]
+},
+{
+"i": 480,
+"name": "Landing front fascia right",
+"rgb": [
+0.3555,
+0.3825,
+0.79
+]
+},
+{
+"i": 481,
+"name": "Broad worn curved stair tread 00",
+"rgb": [
+0.493,
+0.85,
+0.2975
+]
+},
+{
+"i": 482,
+"name": "Broad worn curved stair tread 01",
+"rgb": [
+0.91,
+0.2275,
+0.6682
+]
+},
+{
+"i": 483,
+"name": "Broad worn curved stair tread 02",
+"rgb": [
+0.0825,
+0.5208,
+0.55
+]
+},
+{
+"i": 484,
+"name": "Broad worn curved stair tread 03",
+"rgb": [
+0.61,
+0.4771,
+0.0305
+]
+},
+{
+"i": 485,
+"name": "Broad worn curved stair tread 04",
+"rgb": [
+0.478,
+0.3015,
+0.67
+]
+},
+{
+"i": 486,
+"name": "Broad worn curved stair tread 05",
+"rgb": [
+0.2555,
+0.73,
+0.3443
+]
+},
+{
+"i": 487,
+"name": "Broad worn curved stair tread 06",
+"rgb": [
+0.79,
+0.1975,
+0.2595
+]
+},
+{
+"i": 488,
+"name": "Broad worn curved stair tread 07",
+"rgb": [
+0.1275,
+0.414,
+0.85
+]
+},
+{
+"i": 489,
+"name": "Broad worn curved stair tread 08",
+"rgb": [
+0.6405,
+0.91,
+0.0455
+]
+},
+{
+"i": 490,
+"name": "Stair head riser",
+"rgb": [
+0.55,
+0.2475,
+0.544
+]
+},
+{
+"i": 491,
+"name": "Left stair cheek",
+"rgb": [
+0.2135,
+0.61,
+0.5022
+]
+},
+{
+"i": 492,
+"name": "Right stair cheek",
+"rgb": [
+0.67,
+0.3868,
+0.1675
+]
+},
+{
+"i": 590,
+"name": "Tree joined autumn foliage leaves",
+"rgb": [
+0.3015,
+0.3603,
+0.67
+]
+},
+{
+"i": 591,
+"name": "Tree square planter base",
+"rgb": [
+0.4697,
+0.73,
+0.2555
+]
+},
+{
+"i": 592,
+"name": "Service platform base",
+"rgb": [
+0.79,
+0.1975,
+0.6379
+]
+},
+{
+"i": 593,
+"name": "Service platform pale top",
+"rgb": [
+0.1275,
+0.85,
+0.8247
+]
+},
+{
+"i": 594,
+"name": "Open metal deck grate",
+"rgb": [
+0.91,
+0.6274,
+0.0455
+]
+},
+{
+"i": 595,
+"name": "Open metal deck grate.001",
+"rgb": [
+0.3629,
+0.2475,
+0.55
+]
+},
+{
+"i": 596,
+"name": "Open metal deck grate.002",
+"rgb": [
+0.2135,
+0.61,
+0.249
+]
+},
+{
+"i": 597,
+"name": "Open metal deck grate.003",
+"rgb": [
+0.67,
+0.1675,
+0.2691
+]
+},
+{
+"i": 598,
+"name": "Open metal deck grate.004",
+"rgb": [
+0.1095,
+0.4161,
+0.73
+]
+},
+{
+"i": 614,
+"name": "Pipe flange",
+"rgb": [
+0.0425,
+0.85,
+0.7186
+]
+},
+{
+"i": 615,
+"name": "Pipe flange.001",
+"rgb": [
+0.91,
+0.6825,
+0.4095
+]
+},
+{
+"i": 616,
+"name": "Electrical cabinet",
+"rgb": [
+0.2832,
+0.1925,
+0.55
+]
+},
+{
+"i": 617,
+"name": "Cabinet vent",
+"rgb": [
+0.17,
+0.61,
+0.1525
+]
+},
+{
+"i": 618,
+"name": "Cabinet vent.001",
+"rgb": [
+0.67,
+0.1005,
+0.2884
+]
+},
+{
+"i": 619,
+"name": "Cabinet vent.002",
+"rgb": [
+0.0365,
+0.4677,
+0.73
+]
+},
+{
+"i": 620,
+"name": "Pressure vessel",
+"rgb": [
+0.7524,
+0.79,
+0.3555
+]
+},
+{
+"i": 621,
+"name": "Pressure vessel top hatch",
+"rgb": [
+0.7365,
+0.2975,
+0.85
+]
+},
+{
+"i": 622,
+"name": "Tank iron band",
+"rgb": [
+0.2275,
+0.91,
+0.5707
+]
+},
+{
+"i": 623,
+"name": "Tank iron band.001",
+"rgb": [
+0.55,
+0.1812,
+0.0825
+]
+},
+{
+"i": 627,
+"name": "Ventilator outer iron ring",
+"rgb": [
+0.1975,
+0.764,
+0.79
+]
+},
+{
+"i": 628,
+"name": "Ventilator axle",
+"rgb": [
+0.85,
+0.6709,
+0.1275
+]
+},
+{
+"i": 647,
+"name": "Ventilator mounting bracket",
+"rgb": [
+0.73,
+0.1825,
+0.6162
+]
+},
+{
+"i": 648,
+"name": "Distant ventilator grounded footing",
+"rgb": [
+0.1185,
+0.79,
+0.7337
+]
+},
+{
+"i": 650,
+"name": "Distant ventilator grounded footing.001",
+"rgb": [
+0.5759,
+0.4095,
+0.91
+]
+},
+{
+"i": 656,
+"name": "Right garden retaining wall",
+"rgb": [
+0.2975,
+0.85,
+0.6189
+]
+},
+{
+"i": 657,
+"name": "Retaining wall cap",
+"rgb": [
+0.91,
+0.4254,
+0.2275
+]
+},
+{
+"i": 658,
+"name": "Retaining wall ashlar course 00",
+"rgb": [
+0.0825,
+0.0833,
+0.55
+]
+},
+{
+"i": 659,
+"name": "Retaining wall ashlar course 00.001",
+"rgb": [
+0.2006,
+0.61,
+0.0305
+]
+},
+{
+"i": 660,
+"name": "Retaining wall ashlar course 00.002",
+"rgb": [
+0.67,
+0.3015,
+0.5172
+]
+},
+{
+"i": 661,
+"name": "Retaining wall ashlar course 00.003",
+"rgb": [
+0.2555,
+0.6717,
+0.73
+]
+},
+{
+"i": 662,
+"name": "Retaining wall ashlar course 00.004",
+"rgb": [
+0.79,
+0.6899,
+0.1975
+]
+},
+{
+"i": 663,
+"name": "Retaining wall ashlar course 00.005",
+"rgb": [
+0.5171,
+0.1275,
+0.85
+]
+},
+{
+"i": 664,
+"name": "Retaining wall ashlar course 00.006",
+"rgb": [
+0.0455,
+0.91,
+0.2594
+]
+},
+{
+"i": 665,
+"name": "Retaining wall ashlar course 00.007",
+"rgb": [
+0.55,
+0.2475,
+0.2609
+]
+},
+{
+"i": 666,
+"name": "Retaining wall ashlar course 00.008",
+"rgb": [
+0.2135,
+0.3468,
+0.61
+]
+},
+{
+"i": 667,
+"name": "Retaining wall ashlar course 01",
+"rgb": [
+0.4831,
+0.67,
+0.1675
+]
+},
+{
+"i": 668,
+"name": "Retaining wall ashlar course 01.001",
+"rgb": [
+0.73,
+0.1095,
+0.6802
+]
+},
+{
+"i": 669,
+"name": "Retaining wall ashlar course 01.002",
+"rgb": [
+0.0395,
+0.79,
+0.6312
+]
+},
+{
+"i": 670,
+"name": "Retaining wall ashlar course 01.003",
+"rgb": [
+0.85,
+0.6147,
+0.3825
+]
+},
+{
+"i": 671,
+"name": "Retaining wall ashlar course 01.004",
+"rgb": [
+0.4397,
+0.3185,
+0.91
+]
+},
+{
+"i": 672,
+"name": "Retaining wall ashlar course 01.005",
+"rgb": [
+0.1734,
+0.55,
+0.1375
+]
+},
+{
+"i": 673,
+"name": "Retaining wall ashlar course 01.006",
+"rgb": [
+0.61,
+0.0915,
+0.2879
+]
+},
+{
+"i": 674,
+"name": "Retaining wall ashlar course 01.007",
+"rgb": [
+0.0335,
+0.4603,
+0.67
+]
+},
+{
+"i": 675,
+"name": "Retaining wall ashlar course 01.008",
+"rgb": [
+0.7149,
+0.73,
+0.3285
+]
+},
+{
+"i": 676,
+"name": "Retaining wall ashlar course 01.009",
+"rgb": [
+0.6595,
+0.2765,
+0.79
+]
+},
+{
+"i": 677,
+"name": "Retaining wall ashlar course 02",
+"rgb": [
+0.2125,
+0.85,
+0.502
+]
+},
+{
+"i": 678,
+"name": "Retaining wall ashlar course 02.001",
+"rgb": [
+0.91,
+0.262,
+0.1365
+]
+},
+{
+"i": 679,
+"name": "Retaining wall ashlar course 02.002",
+"rgb": [
+0.0275,
+0.0952,
+0.55
+]
+},
+{
+"i": 680,
+"name": "Retaining wall ashlar course 02.003",
+"rgb": [
+0.4159,
+0.61,
+0.2745
+]
+},
+{
+"i": 681,
+"name": "Retaining wall ashlar course 02.004",
+"rgb": [
+0.67,
+0.2345,
+0.5451
+]
+},
+{
+"i": 682,
+"name": "Retaining wall ashlar course 02.005",
+"rgb": [
+0.1825,
+0.73,
+0.7273
+]
+},
+{
+"i": 683,
+"name": "Retaining wall ashlar course 02.006",
+"rgb": [
+0.79,
+0.5908,
+0.1185
+]
+},
+{
+"i": 684,
+"name": "Retaining wall ashlar course 02.007",
+"rgb": [
+0.3748,
+0.0425,
+0.85
+]
+},
+{
+"i": 685,
+"name": "Retaining wall ashlar course 02.008",
+"rgb": [
+0.4095,
+0.91,
+0.4694
+]
+},
+{
+"i": 686,
+"name": "Retaining wall ashlar course 03",
+"rgb": [
+0.55,
+0.1925,
+0.254
+]
+},
+{
+"i": 687,
+"name": "Retaining wall ashlar course 03.001",
+"rgb": [
+0.1525,
+0.3647,
+0.61
+]
+},
+{
+"i": 688,
+"name": "Retaining wall ashlar course 03.002",
+"rgb": [
+0.5309,
+0.67,
+0.1005
+]
+},
+{
+"i": 689,
+"name": "Retaining wall ashlar course 03.003",
+"rgb": [
+0.6971,
+0.0365,
+0.73
+]
+},
+{
+"i": 690,
+"name": "Retaining wall ashlar course 03.004",
+"rgb": [
+0.3555,
+0.79,
+0.6426
+]
+},
+{
+"i": 691,
+"name": "Retaining wall ashlar course 03.005",
+"rgb": [
+0.85,
+0.5013,
+0.2975
+]
+},
+{
+"i": 692,
+"name": "Retaining wall ashlar course 03.006",
+"rgb": [
+0.2801,
+0.2275,
+0.91
+]
+},
+{
+"i": 693,
+"name": "Retaining wall ashlar course 03.007",
+"rgb": [
+0.1829,
+0.55,
+0.0825
+]
+},
+{
+"i": 694,
+"name": "Retaining wall ashlar course 03.008",
+"rgb": [
+0.61,
+0.0305,
+0.324
+]
+},
+{
+"i": 695,
+"name": "Retaining wall ashlar course 03.009",
+"rgb": [
+0.3015,
+0.5957,
+0.67
+]
+},
+{
+"i": 696,
+"name": "Retaining wall ashlar course 04",
+"rgb": [
+0.73,
+0.6873,
+0.2555
+]
+},
+{
+"i": 697,
+"name": "Retaining wall ashlar course 04.001",
+"rgb": [
+0.5637,
+0.1975,
+0.79
+]
+},
+{
+"i": 698,
+"name": "Retaining wall ashlar course 04.002",
+"rgb": [
+0.1275,
+0.85,
+0.3633
+]
+},
+{
+"i": 699,
+"name": "Retaining wall ashlar course 04.003",
+"rgb": [
+0.91,
+0.0754,
+0.0455
+]
+},
+{
+"i": 700,
+"name": "Retaining wall ashlar course 04.004",
+"rgb": [
+0.2475,
+0.3253,
+0.55
+]
+},
+{
+"i": 701,
+"name": "Retaining wall ashlar course 04.005",
+"rgb": [
+0.4312,
+0.61,
+0.2135
+]
+},
+{
+"i": 702,
+"name": "Retaining wall ashlar course 04.006",
+"rgb": [
+0.67,
+0.1675,
+0.59
+]
+},
+{
+"i": 703,
+"name": "Retaining wall ashlar course 04.007",
+"rgb": [
+0.1095,
+0.73,
+0.6477
+]
+},
+{
+"i": 704,
+"name": "Retaining wall ashlar course 04.008",
+"rgb": [
+0.79,
+0.4715,
+0.0395
+]
+},
+{
+"i": 705,
+"name": "North-east workshop foundation",
+"rgb": [
+0.5152,
+0.3825,
+0.85
+]
+},
+{
+"i": 706,
+"name": "North-east workshop block",
+"rgb": [
+0.3232,
+0.91,
+0.3185
+]
+},
+{
+"i": 707,
+"name": "North-east workshop cornice",
+"rgb": [
+0.55,
+0.1375,
+0.2612
+]
+},
+{
+"i": 708,
+"name": "North-east workshop plinth",
+"rgb": [
+0.0915,
+0.3983,
+0.61
+]
+},
+{
+"i": 709,
+"name": "Workshop facade pier",
+"rgb": [
+0.5958,
+0.67,
+0.0335
+]
+},
+{
+"i": 710,
+"name": "Workshop facade pier.001",
+"rgb": [
+0.6597,
+0.3285,
+0.73
+]
+},
+{
+"i": 711,
+"name": "Workshop facade pier.002",
+"rgb": [
+0.2765,
+0.79,
+0.5502
+]
+},
+{
+"i": 712,
+"name": "Workshop facade pier.003",
+"rgb": [
+0.85,
+0.3663,
+0.2125
+]
+},
+{
+"i": 713,
+"name": "Workshop facade pier.004",
+"rgb": [
+0.1365,
+0.1756,
+0.91
+]
+},
+{
+"i": 714,
+"name": "Workshop upper recessed bay",
+"rgb": [
+0.2064,
+0.55,
+0.0275
+]
+},
+{
+"i": 715,
+"name": "Workshop upper bay lintel",
+"rgb": [
+0.61,
+0.2745,
+0.4873
+]
+},
+{
+"i": 716,
+"name": "Workshop upper bay sill",
+"rgb": [
+0.2345,
+0.6378,
+0.67
+]
+},
+{
+"i": 717,
+"name": "Workshop upper recessed bay.001",
+"rgb": [
+0.73,
+0.6108,
+0.1825
+]
+},
+{
+"i": 718,
+"name": "Workshop upper bay lintel.001",
+"rgb": [
+0.4478,
+0.1185,
+0.79
+]
+},
+{
+"i": 719,
+"name": "Workshop upper bay sill.001",
+"rgb": [
+0.0425,
+0.85,
+0.2029
+]
+},
+{
+"i": 720,
+"name": "Workshop upper recessed bay.002",
+"rgb": [
+0.91,
+0.4095,
+0.4561
+]
+},
+{
+"i": 721,
+"name": "Workshop upper bay lintel.002",
+"rgb": [
+0.1925,
+0.3301,
+0.55
+]
+},
+{
+"i": 722,
+"name": "Workshop upper bay sill.002",
+"rgb": [
+0.4621,
+0.61,
+0.1525
+]
+},
+{
+"i": 723,
+"name": "Workshop upper recessed bay.003",
+"rgb": [
+0.67,
+0.1005,
+0.6521
+]
+},
+{
+"i": 724,
+"name": "Workshop upper bay lintel.003",
+"rgb": [
+0.0365,
+0.73,
+0.5494
+]
+},
+{
+"i": 725,
+"name": "Workshop upper bay sill.003",
+"rgb": [
+0.79,
+0.5501,
+0.3555
+]
+},
+{
+"i": 726,
+"name": "Workshop service door",
+"rgb": [
+0.3837,
+0.2975,
+0.85
+]
+},
+{
+"i": 727,
+"name": "Workshop door horizontal brace",
+"rgb": [
+0.3201,
+0.91,
+0.2275
+]
+},
+{
+"i": 728,
+"name": "Workshop door horizontal brace.001",
+"rgb": [
+0.55,
+0.0825,
+0.2824
+]
+},
+{
+"i": 729,
+"name": "Workshop louver housing",
+"rgb": [
+0.0305,
+0.4474,
+0.61
+]
+},
+{
+"i": 730,
+"name": "Workshop louver slat",
+"rgb": [
+0.67,
+0.6659,
+0.3015
+]
+},
+{
+"i": 731,
+"name": "Workshop louver slat.001",
+"rgb": [
+0.5863,
+0.2555,
+0.73
+]
+},
+{
+"i": 732,
+"name": "Workshop louver slat.002",
+"rgb": [
+0.1975,
+0.79,
+0.4376
+]
+},
+{
+"i": 733,
+"name": "Workshop louver slat.003",
+"rgb": [
+0.85,
+0.2095,
+0.1275
+]
+},
+{
+"i": 734,
+"name": "Workshop louver slat.004",
+"rgb": [
+0.0455,
+0.1997,
+0.91
+]
+},
+{
+"i": 735,
+"name": "Workshop foundation pier",
+"rgb": [
+0.3897,
+0.55,
+0.2475
+]
+},
+{
+"i": 736,
+"name": "Workshop foundation pier.001",
+"rgb": [
+0.61,
+0.2135,
+0.5156
+]
+},
+{
+"i": 737,
+"name": "Workshop roof dark soil bed",
+"rgb": [
+0.1675,
+0.67,
+0.643
+]
+},
+{
+"i": 738,
+"name": "Workshop roof native grass",
+"rgb": [
+0.73,
+0.5156,
+0.1095
+]
+},
+{
+"i": 739,
+"name": "Right retaining wall planting bed",
+"rgb": [
+0.3117,
+0.0395,
+0.79
+]
+},
+{
+"i": 740,
+"name": "Retaining wall native grass",
+"rgb": [
+0.3825,
+0.85,
+0.4157
+]
+},
+{
+"i": 741,
+"name": "P1 cropped round tower | stone footing",
+"rgb": [
+0.91,
+0.3185,
+0.4492
+]
+},
+{
+"i": 742,
+"name": "P1 cropped round tower | limestone drum",
+"rgb": [
+0.1375,
+0.349,
+0.55
+]
+},
+{
+"i": 743,
+"name": "P1 cropped round tower | slate belt course",
+"rgb": [
+0.5086,
+0.61,
+0.0915
+]
+},
+{
+"i": 744,
+"name": "P1 cropped round tower | upper stone collar",
+"rgb": [
+0.6087,
+0.0335,
+0.67
+]
+},
+{
+"i": 745,
+"name": "P1 cropped round tower | timber crown lower rim",
+"rgb": [
+0.3285,
+0.73,
+0.5742
+]
+},
+{
+"i": 746,
+"name": "P1 cropped round tower | timber crown top rim",
+"rgb": [
+0.79,
+0.4409,
+0.2765
+]
+},
+{
+"i": 771,
+"name": "P1 cropped round tower | crown soil",
+"rgb": [
+0.2135,
+0.6,
+0.61
+]
+},
+{
+"i": 772,
+"name": "P1 cropped round tower | golden crown grass",
+"rgb": [
+0.67,
+0.5361,
+0.1675
+]
+},
+{
+"i": 783,
+"name": "Pump access housing",
+"rgb": [
+0.91,
+0.1365,
+0.5049
+]
+},
+{
+"i": 784,
+"name": "Pump housing vent",
+"rgb": [
+0.0275,
+0.4288,
+0.55
+]
+},
+{
+"i": 785,
+"name": "Pump housing vent.001",
+"rgb": [
+0.61,
+0.5899,
+0.2745
+]
+},
+{
+"i": 786,
+"name": "Pump housing vent.002",
+"rgb": [
+0.5168,
+0.2345,
+0.67
+]
+},
+{
+"i": 787,
+"name": "Pump panel bolt.001",
+"rgb": [
+0.1825,
+0.73,
+0.3777
+]
+},
+{
+"i": 788,
+"name": "Pump panel bolt.002",
+"rgb": [
+0.79,
+0.1619,
+0.1185
+]
+},
+{
+"i": 789,
+"name": "Pump panel bolt.003",
+"rgb": [
+0.0425,
+0.2259,
+0.85
+]
+},
+{
+"i": 790,
+"name": "Circular footing",
+"rgb": [
+0.6692,
+0.91,
+0.4095
+]
+},
+{
+"i": 791,
+"name": "Pale cast planter wall",
+"rgb": [
+0.55,
+0.1925,
+0.4823
+]
+},
+{
+"i": 792,
+"name": "Dark continuous crown ring",
+"rgb": [
+0.1525,
+0.61,
+0.5631
+]
+},
+{
+"i": 793,
+"name": "Inner soil",
+"rgb": [
+0.67,
+0.4455,
+0.1005
+]
+},
+{
+"i": 794,
+"name": "Vertical iron planter rib",
+"rgb": [
+0.2542,
+0.0365,
+0.73
+]
+},
+{
+"i": 795,
+"name": "Vertical iron planter rib.001",
+"rgb": [
+0.3555,
+0.79,
+0.3651
+]
+},
+{
+"i": 796,
+"name": "Vertical iron planter rib.002",
+"rgb": [
+0.85,
+0.2975,
+0.4465
+]
+},
+{
+"i": 797,
+"name": "Vertical iron planter rib.003",
+"rgb": [
+0.2275,
+0.6107,
+0.91
+]
+},
+{
+"i": 798,
+"name": "Vertical iron planter rib.004",
+"rgb": [
+0.4814,
+0.55,
+0.0825
+]
+},
+{
+"i": 799,
+"name": "Vertical iron planter rib.005",
+"rgb": [
+0.5259,
+0.0305,
+0.61
+]
+},
+{
+"i": 800,
+"name": "Vertical iron planter rib.006",
+"rgb": [
+0.3015,
+0.67,
+0.509
+]
+},
+{
+"i": 801,
+"name": "Vertical iron planter rib.007",
+"rgb": [
+0.73,
+0.3843,
+0.2555
+]
+},
+{
+"i": 802,
+"name": "Vertical iron planter rib.008",
+"rgb": [
+0.1975,
+0.2096,
+0.79
+]
+},
+{
+"i": 803,
+"name": "Vertical iron planter rib.009",
+"rgb": [
+0.3531,
+0.85,
+0.1275
+]
+},
+{
+"i": 804,
+"name": "Vertical iron planter rib.010",
+"rgb": [
+0.91,
+0.0455,
+0.5677
+]
+},
+{
+"i": 805,
+"name": "Vertical iron planter rib.011",
+"rgb": [
+0.2475,
+0.5185,
+0.55
+]
+},
+{
+"i": 806,
+"name": "Vertical iron planter rib.012",
+"rgb": [
+0.61,
+0.5356,
+0.2135
+]
+},
+{
+"i": 807,
+"name": "Vertical iron planter rib.013",
+"rgb": [
+0.4291,
+0.1675,
+0.67
+]
+},
+{
+"i": 808,
+"name": "Vertical iron planter rib.014",
+"rgb": [
+0.1095,
+0.73,
+0.2515
+]
+},
+{
+"i": 809,
+"name": "Vertical iron planter rib.015",
+"rgb": [
+0.79,
+0.0395,
+0.0868
+]
+},
+{
+"i": 810,
+"name": "Vertical iron planter rib.016",
+"rgb": [
+0.3825,
+0.5484,
+0.85
+]
+},
+{
+"i": 811,
+"name": "Vertical iron planter rib.017",
+"rgb": [
+0.701,
+0.91,
+0.3185
+]
+},
+{
+"i": 812,
+"name": "Vertical iron planter rib.018",
+"rgb": [
+0.55,
+0.1375,
+0.5246
+]
+},
+{
+"i": 813,
+"name": "Vertical iron planter rib.019",
+"rgb": [
+0.0915,
+0.61,
+0.4906
+]
+},
+{
+"i": 814,
+"name": "Vertical iron planter rib.020",
+"rgb": [
+0.67,
+0.3377,
+0.0335
+]
+},
+{
+"i": 815,
+"name": "Vertical iron planter rib.021",
+"rgb": [
+0.4033,
+0.3285,
+0.73
+]
+},
+{
+"i": 816,
+"name": "Vertical iron planter rib.022",
+"rgb": [
+0.3307,
+0.79,
+0.2765
+]
+},
+{
+"i": 817,
+"name": "Vertical iron planter rib.023",
+"rgb": [
+0.85,
+0.2125,
+0.4658
+]
+},
+{
+"i": 818,
+"name": "Vertical iron planter rib.024",
+"rgb": [
+0.1365,
+0.6696,
+0.91
+]
+},
+{
+"i": 819,
+"name": "Vertical iron planter rib.025",
+"rgb": [
+0.5401,
+0.55,
+0.0275
+]
+},
+{
+"i": 820,
+"name": "Vertical iron planter rib.026",
+"rgb": [
+0.5185,
+0.2745,
+0.61
+]
+},
+{
+"i": 821,
+"name": "Vertical iron planter rib.027",
+"rgb": [
+0.2345,
+0.67,
+0.4241
+]
+},
+{
+"i": 822,
+"name": "Vertical iron planter rib.028",
+"rgb": [
+0.73,
+0.2611,
+0.1825
+]
+},
+{
+"i": 823,
+"name": "Vertical iron planter rib.029",
+"rgb": [
+0.1185,
+0.218,
+0.79
+]
+},
+{
+"i": 824,
+"name": "Continuous shaded grass root mound",
+"rgb": [
+0.3978,
+0.85,
+0.0425
+]
+},
+{
+"i": 825,
+"name": "Grass blade patch",
+"rgb": [
+0.91,
+0.4095,
+0.7757
+]
+},
+{
+"i": 826,
+"name": "Fine grass stem canopy",
+"rgb": [
+0.1925,
+0.55,
+0.5416
+]
+},
+{
+"i": 827,
+"name": "Circular footing.001",
+"rgb": [
+0.61,
+0.4657,
+0.1525
+]
+},
+{
+"i": 828,
+"name": "Pale cast planter wall.001",
+"rgb": [
+0.3242,
+0.1005,
+0.67
+]
+},
+{
+"i": 829,
+"name": "Dark continuous crown ring.001",
+"rgb": [
+0.0365,
+0.73,
+0.1066
+]
+},
+{
+"i": 830,
+"name": "Inner soil.001",
+"rgb": [
+0.79,
+0.3555,
+0.4384
+]
+},
+{
+"i": 831,
+"name": "Vertical iron planter rib.030",
+"rgb": [
+0.2975,
+0.5641,
+0.85
+]
+},
+{
+"i": 832,
+"name": "Vertical iron planter rib.031",
+"rgb": [
+0.756,
+0.91,
+0.2275
+]
+},
+{
+"i": 833,
+"name": "Vertical iron planter rib.032",
+"rgb": [
+0.5191,
+0.0825,
+0.55
+]
+},
+{
+"i": 834,
+"name": "Vertical iron planter rib.033",
+"rgb": [
+0.0305,
+0.61,
+0.4026
+]
+},
+{
+"i": 835,
+"name": "Vertical iron planter rib.034",
+"rgb": [
+0.67,
+0.4306,
+0.3015
+]
+},
+{
+"i": 836,
+"name": "Vertical iron planter rib.035",
+"rgb": [
+0.2833,
+0.2555,
+0.73
+]
+},
+{
+"i": 837,
+"name": "Vertical iron planter rib.036",
+"rgb": [
+0.3357,
+0.79,
+0.1975
+]
+},
+{
+"i": 838,
+"name": "Vertical iron planter rib.037",
+"rgb": [
+0.85,
+0.1275,
+0.5069
+]
+},
+{
+"i": 839,
+"name": "Vertical iron planter rib.038",
+"rgb": [
+0.0455,
+0.7517,
+0.91
+]
+},
+{
+"i": 840,
+"name": "Vertical iron planter rib.039",
+"rgb": [
+0.55,
+0.5171,
+0.2475
+]
+},
+{
+"i": 841,
+"name": "Vertical iron planter rib.040",
+"rgb": [
+0.4512,
+0.2135,
+0.61
+]
+},
+{
+"i": 842,
+"name": "Vertical iron planter rib.041",
+"rgb": [
+0.1675,
+0.67,
+0.3221
+]
+},
+{
+"i": 843,
+"name": "Vertical iron planter rib.042",
+"rgb": [
+0.73,
+0.1194,
+0.1095
+]
+},
+{
+"i": 844,
+"name": "Vertical iron planter rib.043",
+"rgb": [
+0.0395,
+0.2465,
+0.79
+]
+},
+{
+"i": 845,
+"name": "Vertical iron planter rib.044",
+"rgb": [
+0.6479,
+0.85,
+0.3825
+]
+},
+{
+"i": 846,
+"name": "Vertical iron planter rib.045",
+"rgb": [
+0.91,
+0.3185,
+0.8269
+]
+},
+{
+"i": 847,
+"name": "Vertical iron planter rib.046",
+"rgb": [
+0.1375,
+0.55,
+0.4876
+]
+},
+{
+"i": 848,
+"name": "Vertical iron planter rib.047",
+"rgb": [
+0.61,
+0.3803,
+0.0915
+]
+},
+{
+"i": 849,
+"name": "Vertical iron planter rib.048",
+"rgb": [
+0.2023,
+0.0335,
+0.67
+]
+},
+{
+"i": 850,
+"name": "Vertical iron planter rib.049",
+"rgb": [
+0.3392,
+0.73,
+0.3285
+]
+},
+{
+"i": 851,
+"name": "Vertical iron planter rib.050",
+"rgb": [
+0.79,
+0.2765,
+0.44
+]
+},
+{
+"i": 852,
+"name": "Vertical iron planter rib.051",
+"rgb": [
+0.2125,
+0.6015,
+0.85
+]
+},
+{
+"i": 853,
+"name": "Vertical iron planter rib.052",
+"rgb": [
+0.8342,
+0.91,
+0.1365
+]
+},
+{
+"i": 854,
+"name": "Vertical iron planter rib.053",
+"rgb": [
+0.4487,
+0.0275,
+0.55
+]
+},
+{
+"i": 855,
+"name": "Vertical iron planter rib.054",
+"rgb": [
+0.2745,
+0.61,
+0.4471
+]
+},
+{
+"i": 856,
+"name": "Vertical iron planter rib.055",
+"rgb": [
+0.67,
+0.3314,
+0.2345
+]
+},
+{
+"i": 857,
+"name": "Vertical iron planter rib.056",
+"rgb": [
+0.1825,
+0.2204,
+0.73
+]
+},
+{
+"i": 858,
+"name": "Vertical iron planter rib.057",
+"rgb": [
+0.3609,
+0.79,
+0.1185
+]
+},
+{
+"i": 859,
+"name": "Vertical iron planter rib.058",
+"rgb": [
+0.85,
+0.0425,
+0.5697
+]
+},
+{
+"i": 860,
+"name": "Vertical iron planter rib.059",
+"rgb": [
+0.4095,
+0.8823,
+0.91
+]
+},
+{
+"i": 861,
+"name": "Continuous shaded grass root mound.001",
+"rgb": [
+0.55,
+0.4655,
+0.1925
+]
+},
+{
+"i": 862,
+"name": "Grass blade patch.001",
+"rgb": [
+0.3683,
+0.1525,
+0.61
+]
+},
+{
+"i": 863,
+"name": "Fine grass stem canopy.001",
+"rgb": [
+0.1005,
+0.67,
+0.203
+]
+},
+{
+"i": 864,
+"name": "Circular footing.002",
+"rgb": [
+0.73,
+0.0365,
+0.114
+]
+},
+{
+"i": 865,
+"name": "Pale cast planter wall.002",
+"rgb": [
+0.3555,
+0.5309,
+0.79
+]
+},
+{
+"i": 866,
+"name": "Dark continuous crown ring.002",
+"rgb": [
+0.6817,
+0.85,
+0.2975
+]
+},
+{
+"i": 867,
+"name": "Inner soil.002",
+"rgb": [
+0.91,
+0.2275,
+0.9013
+]
+},
+{
+"i": 868,
+"name": "Vertical iron planter rib.060",
+"rgb": [
+0.0825,
+0.55,
+0.4196
+]
+},
+{
+"i": 869,
+"name": "Vertical iron planter rib.061",
+"rgb": [
+0.61,
+0.2792,
+0.0305
+]
+},
+{
+"i": 870,
+"name": "Vertical iron planter rib.062",
+"rgb": [
+0.3521,
+0.3015,
+0.67
+]
+},
+{
+"i": 871,
+"name": "Vertical iron planter rib.063",
+"rgb": [
+0.3288,
+0.73,
+0.2555
+]
+},
+{
+"i": 872,
+"name": "Vertical iron planter rib.064",
+"rgb": [
+0.79,
+0.1975,
+0.4619
+]
+},
+{
+"i": 873,
+"name": "Vertical iron planter rib.065",
+"rgb": [
+0.1275,
+0.6607,
+0.85
+]
+},
+{
+"i": 874,
+"name": "Vertical iron planter rib.066",
+"rgb": [
+0.91,
+0.8843,
+0.0455
+]
+},
+{
+"i": 875,
+"name": "Vertical iron planter rib.067",
+"rgb": [
+0.4527,
+0.2475,
+0.55
+]
+},
+{
+"i": 876,
+"name": "Vertical iron planter rib.068",
+"rgb": [
+0.2135,
+0.61,
+0.3668
+]
+},
+{
+"i": 877,
+"name": "Vertical iron planter rib.069",
+"rgb": [
+0.67,
+0.2152,
+0.1675
+]
+},
+{
+"i": 878,
+"name": "Vertical iron planter rib.070",
+"rgb": [
+0.1095,
+0.2317,
+0.73
+]
+},
+{
+"i": 879,
+"name": "Vertical iron planter rib.071",
+"rgb": [
+0.4063,
+0.79,
+0.0395
+]
+},
+{
+"i": 880,
+"name": "Vertical iron planter rib.072",
+"rgb": [
+0.85,
+0.3825,
+0.7474
+]
+},
+{
+"i": 881,
+"name": "Vertical iron planter rib.073",
+"rgb": [
+0.3185,
+0.91,
+0.8672
+]
+},
+{
+"i": 882,
+"name": "Vertical iron planter rib.074",
+"rgb": [
+0.55,
+0.3998,
+0.1375
+]
+},
+{
+"i": 883,
+"name": "Vertical iron planter rib.075",
+"rgb": [
+0.2699,
+0.0915,
+0.61
+]
+},
+{
+"i": 884,
+"name": "Vertical iron planter rib.076",
+"rgb": [
+0.0335,
+0.67,
+0.0668
+]
+},
+{
+"i": 885,
+"name": "Vertical iron planter rib.077",
+"rgb": [
+0.73,
+0.3285,
+0.4247
+]
+},
+{
+"i": 886,
+"name": "Vertical iron planter rib.078",
+"rgb": [
+0.2765,
+0.5493,
+0.79
+]
+},
+{
+"i": 887,
+"name": "Vertical iron planter rib.079",
+"rgb": [
+0.7372,
+0.85,
+0.2125
+]
+},
+{
+"i": 888,
+"name": "Vertical iron planter rib.080",
+"rgb": [
+0.8211,
+0.1365,
+0.91
+]
+},
+{
+"i": 889,
+"name": "Vertical iron planter rib.081",
+"rgb": [
+0.0275,
+0.55,
+0.3375
+]
+},
+{
+"i": 890,
+"name": "Vertical iron planter rib.082",
+"rgb": [
+0.61,
+0.3757,
+0.2745
+]
+},
+{
+"i": 891,
+"name": "Vertical iron planter rib.083",
+"rgb": [
+0.2387,
+0.2345,
+0.67
+]
+},
+{
+"i": 892,
+"name": "Vertical iron planter rib.084",
+"rgb": [
+0.3369,
+0.73,
+0.1825
+]
+},
+{
+"i": 893,
+"name": "Vertical iron planter rib.085",
+"rgb": [
+0.79,
+0.1185,
+0.5039
+]
+},
+{
+"i": 894,
+"name": "Vertical iron planter rib.086",
+"rgb": [
+0.0425,
+0.7415,
+0.85
+]
+},
+{
+"i": 895,
+"name": "Vertical iron planter rib.087",
+"rgb": [
+0.91,
+0.8312,
+0.4095
+]
+},
+{
+"i": 896,
+"name": "Vertical iron planter rib.088",
+"rgb": [
+0.3894,
+0.1925,
+0.55
+]
+},
+{
+"i": 897,
+"name": "Vertical iron planter rib.089",
+"rgb": [
+0.1525,
+0.61,
+0.271
+]
+},
+{
+"i": 898,
+"name": "Continuous shaded grass root mound.002",
+"rgb": [
+0.67,
+0.1005,
+0.1192
+]
+},
+{
+"i": 899,
+"name": "Grass blade patch.002",
+"rgb": [
+0.0365,
+0.2617,
+0.73
+]
+},
+{
+"i": 900,
+"name": "Fine grass stem canopy.002",
+"rgb": [
+0.6234,
+0.79,
+0.3555
+]
+},
+{
+"i": 901,
+"name": "Foreground left edge grass",
+"rgb": [
+0.85,
+0.2975,
+0.7993
+]
+},
+{
+"i": 902,
+"name": "Foreground right edge grass",
+"rgb": [
+0.2275,
+0.91,
+0.7735
+]
+},
+{
+"i": 904,
+"name": "Weathered cloth pennant",
+"rgb": [
+0.1559,
+0.0305,
+0.61
+]
+},
+{
+"i": 905,
+"name": "Weathered cloth pennant.001",
+"rgb": [
+0.3293,
+0.67,
+0.3015
+]
+},
+{
+"i": 906,
+"name": "Weathered cloth pennant.002",
+"rgb": [
+0.73,
+0.2555,
+0.4298
+]
+},
+{
+"i": 907,
+"name": "Weathered cloth pennant.003",
+"rgb": [
+0.1975,
+0.588,
+0.79
+]
+},
+{
+"i": 908,
+"name": "Weathered cloth pennant.004",
+"rgb": [
+0.8145,
+0.85,
+0.1275
+]
+},
+{
+"i": 909,
+"name": "Weathered cloth pennant.005",
+"rgb": [
+0.7003,
+0.0455,
+0.91
+]
+},
+{
+"i": 910,
+"name": "Weathered cloth pennant.006",
+"rgb": [
+0.2475,
+0.55,
+0.3883
+]
+},
+{
+"i": 911,
+"name": "Weathered cloth pennant.007",
+"rgb": [
+0.61,
+0.2824,
+0.2135
+]
+},
+{
+"i": 912,
+"name": "Weathered cloth pennant.008",
+"rgb": [
+0.1675,
+0.2268,
+0.67
+]
+},
+{
+"i": 913,
+"name": "Weathered cloth pennant.009",
+"rgb": [
+0.3638,
+0.73,
+0.1095
+]
+},
+{
+"i": 914,
+"name": "Weathered cloth pennant.010",
+"rgb": [
+0.79,
+0.0395,
+0.5661
+]
+},
+{
+"i": 915,
+"name": "Weathered cloth pennant.011",
+"rgb": [
+0.3825,
+0.8469,
+0.85
+]
+},
+{
+"i": 916,
+"name": "Weathered cloth pennant.012",
+"rgb": [
+0.91,
+0.7413,
+0.3185
+]
+},
+{
+"i": 917,
+"name": "Maintenance cart chassis",
+"rgb": [
+0.312,
+0.1375,
+0.55
+]
+},
+{
+"i": 918,
+"name": "Maintenance tug rear counterweight",
+"rgb": [
+0.0915,
+0.61,
+0.1595
+]
+},
+{
+"i": 919,
+"name": "Maintenance tug hood",
+"rgb": [
+0.67,
+0.0335,
+0.1357
+]
+},
+{
+"i": 920,
+"name": "Cart rubber wheel",
+"rgb": [
+0.3285,
+0.5101,
+0.73
+]
+},
+{
+"i": 921,
+"name": "Forklift wheel steel hub",
+"rgb": [
+0.6586,
+0.79,
+0.2765
+]
+},
+{
+"i": 922,
+"name": "Forklift hub lug",
+"rgb": [
+0.8271,
+0.2125,
+0.85
+]
+},
+{
+"i": 923,
+"name": "Forklift hub lug.001",
+"rgb": [
+0.1365,
+0.91,
+0.6565
+]
+},
+{
+"i": 924,
+"name": "Forklift hub lug.002",
+"rgb": [
+0.55,
+0.2263,
+0.0275
+]
+},
+{
+"i": 925,
+"name": "Forklift hub lug.003",
+"rgb": [
+0.3042,
+0.2745,
+0.61
+]
+},
+{
+"i": 926,
+"name": "Forklift hub lug.004",
+"rgb": [
+0.323,
+0.67,
+0.2345
+]
+},
+{
+"i": 927,
+"name": "Forklift hub lug.005",
+"rgb": [
+0.73,
+0.1825,
+0.4535
+]
+},
+{
+"i": 928,
+"name": "Cart rubber wheel.001",
+"rgb": [
+0.1185,
+0.6468,
+0.79
+]
+},
+{
+"i": 929,
+"name": "Forklift wheel steel hub.001",
+"rgb": [
+0.85,
+0.7866,
+0.0425
+]
+},
+{
+"i": 930,
+"name": "Forklift hub lug.006",
+"rgb": [
+0.7246,
+0.4095,
+0.91
+]
+},
+{
+"i": 931,
+"name": "Forklift hub lug.007",
+"rgb": [
+0.1925,
+0.55,
+0.3133
+]
+},
+{
+"i": 932,
+"name": "Forklift hub lug.008",
+"rgb": [
+0.61,
+0.1736,
+0.1525
+]
+},
+{
+"i": 933,
+"name": "Forklift hub lug.009",
+"rgb": [
+0.1005,
+0.2404,
+0.67
+]
+},
+{
+"i": 934,
+"name": "Forklift hub lug.010",
+"rgb": [
+0.4093,
+0.73,
+0.0365
+]
+},
+{
+"i": 935,
+"name": "Forklift hub lug.011",
+"rgb": [
+0.79,
+0.3555,
+0.7158
+]
+},
+{
+"i": 936,
+"name": "Cart rubber wheel.002",
+"rgb": [
+0.2975,
+0.85,
+0.7831
+]
+},
+{
+"i": 937,
+"name": "Forklift wheel steel hub.002",
+"rgb": [
+0.91,
+0.6282,
+0.2275
+]
+},
+{
+"i": 938,
+"name": "Forklift hub lug.012",
+"rgb": [
+0.2205,
+0.0825,
+0.55
+]
+},
+{
+"i": 939,
+"name": "Forklift hub lug.013",
+"rgb": [
+0.0305,
+0.61,
+0.0325
+]
+},
+{
+"i": 940,
+"name": "Forklift hub lug.014",
+"rgb": [
+0.67,
+0.3015,
+0.4077
+]
+},
+{
+"i": 941,
+"name": "Forklift hub lug.015",
+"rgb": [
+0.2555,
+0.5308,
+0.73
+]
+},
+{
+"i": 942,
+"name": "Forklift hub lug.016",
+"rgb": [
+0.7141,
+0.79,
+0.1975
+]
+},
+{
+"i": 943,
+"name": "Forklift hub lug.017",
+"rgb": [
+0.7317,
+0.1275,
+0.85
+]
+},
+{
+"i": 944,
+"name": "Cart rubber wheel.003",
+"rgb": [
+0.0455,
+0.91,
+0.5162
+]
+},
+{
+"i": 945,
+"name": "Forklift wheel steel hub.003",
+"rgb": [
+0.55,
+0.3239,
+0.2475
+]
+},
+{
+"i": 946,
+"name": "Forklift hub lug.018",
+"rgb": [
+0.2135,
+0.229,
+0.61
+]
+},
+{
+"i": 947,
+"name": "Forklift hub lug.019",
+"rgb": [
+0.3338,
+0.67,
+0.1675
+]
+},
+{
+"i": 948,
+"name": "Forklift hub lug.020",
+"rgb": [
+0.73,
+0.1095,
+0.4959
+]
+},
+{
+"i": 949,
+"name": "Forklift hub lug.021",
+"rgb": [
+0.0395,
+0.7258,
+0.79
+]
+},
+{
+"i": 950,
+"name": "Forklift hub lug.022",
+"rgb": [
+0.85,
+0.7536,
+0.3825
+]
+},
+{
+"i": 951,
+"name": "Forklift hub lug.023",
+"rgb": [
+0.6154,
+0.3185,
+0.91
+]
+},
+{
+"i": 952,
+"name": "Tug cabin roof",
+"rgb": [
+0.1375,
+0.55,
+0.2242
+]
+},
+{
+"i": 957,
+"name": "Tug seat",
+"rgb": [
+0.2125,
+0.85,
+0.6914
+]
+},
+{
+"i": 958,
+"name": "Tug dashboard",
+"rgb": [
+0.91,
+0.4918,
+0.1365
+]
+},
+{
+"i": 965,
+"name": "Tug amber warning lamp",
+"rgb": [
+0.4095,
+0.91,
+0.6181
+]
+},
+{
+"i": 966,
+"name": "Curved blue green watercourse",
+"rgb": [
+0.55,
+0.2372,
+0.1925
+]
+},
+{
+"i": 972,
+"name": "Far pale sand bank | west rolling shoulder",
+"rgb": [
+0.4829,
+0.2275,
+0.91
+]
+},
+{
+"i": 973,
+"name": "Far pale sand bank | east rolling shoulder",
+"rgb": [
+0.0825,
+0.55,
+0.121
+]
+},
+{
+"i": 980,
+"name": "Distant grove foliage lobe",
+"rgb": [
+0.2596,
+0.2475,
+0.55
+]
+},
+{
+"i": 981,
+"name": "Distant grove foliage lobe.001",
+"rgb": [
+0.3134,
+0.61,
+0.2135
+]
+},
+{
+"i": 982,
+"name": "Distant grove foliage lobe.002",
+"rgb": [
+0.67,
+0.1675,
+0.4407
+]
+},
+{
+"i": 983,
+"name": "Distant grove foliage lobe.003",
+"rgb": [
+0.1095,
+0.6279,
+0.73
+]
+},
+{
+"i": 984,
+"name": "Distant grove foliage lobe.004",
+"rgb": [
+0.79,
+0.6944,
+0.0395
+]
+},
+{
+"i": 985,
+"name": "Distant grove foliage lobe.005",
+"rgb": [
+0.6541,
+0.3825,
+0.85
+]
+},
+{
+"i": 986,
+"name": "Distant grove foliage lobe.006",
+"rgb": [
+0.3185,
+0.91,
+0.4895
+]
+},
+{
+"i": 993,
+"name": "Distant grove foliage lobe.007",
+"rgb": [
+0.3272,
+0.1365,
+0.91
+]
+},
+{
+"i": 994,
+"name": "Distant grove foliage lobe.008",
+"rgb": [
+0.0512,
+0.55,
+0.0275
+]
+},
+{
+"i": 995,
+"name": "Distant grove foliage lobe.009",
+"rgb": [
+0.61,
+0.2745,
+0.3876
+]
+},
+{
+"i": 996,
+"name": "Distant grove foliage lobe.010",
+"rgb": [
+0.2345,
+0.5084,
+0.67
+]
+},
+{
+"i": 997,
+"name": "Distant grove foliage lobe.011",
+"rgb": [
+0.6866,
+0.73,
+0.1825
+]
+},
+{
+"i": 998,
+"name": "Distant grove foliage lobe.012",
+"rgb": [
+0.6473,
+0.1185,
+0.79
+]
+},
+{
+"i": 999,
+"name": "Distant grove foliage lobe.013",
+"rgb": [
+0.0425,
+0.85,
+0.4428
+]
+},
+{
+"i": 1000,
+"name": "Foreground wooden crate",
+"rgb": [
+0.91,
+0.5116,
+0.4095
+]
+},
+{
+"i": 1001,
+"name": "Foreground wooden crate.001",
+"rgb": [
+0.1925,
+0.2239,
+0.55
+]
+},
+{
+"i": 1002,
+"name": "Crate lid board",
+"rgb": [
+0.3262,
+0.61,
+0.1525
+]
+},
+{
+"i": 1003,
+"name": "Foreground wooden crate.002",
+"rgb": [
+0.67,
+0.1005,
+0.4829
+]
+},
+{
+"i": 1004,
+"name": "Foreground barrel",
+"rgb": [
+0.0365,
+0.7045,
+0.73
+]
+},
+{
+"i": 1005,
+"name": "Barrel top hoop",
+"rgb": [
+0.79,
+0.6792,
+0.3555
+]
+},
+{
+"i": 1006,
+"name": "Barrel bottom hoop",
+"rgb": [
+0.5479,
+0.2975,
+0.85
+]
+},
+{
+"i": 1007,
+"name": "Barrel lid",
+"rgb": [
+0.2275,
+0.91,
+0.3376
+]
+},
+{
+"i": 1011,
+"name": "Broom shaft",
+"rgb": [
+0.7272,
+0.2555,
+0.73
+]
+},
+{
+"i": 1012,
+"name": "Broom head",
+"rgb": [
+0.1975,
+0.79,
+0.6137
+]
+},
+{
+"i": 1043,
+"name": "P1 left understory | grounded leaf and flower cluster",
+"rgb": [
+0.0825,
+0.243,
+0.55
+]
+},
+{
+"i": 1044,
+"name": "Bridge grounded stone abutment",
+"rgb": [
+0.3985,
+0.61,
+0.0305
+]
+},
+{
+"i": 1045,
+"name": "Bridge grounded stone abutment.001",
+"rgb": [
+0.67,
+0.3015,
+0.6431
+]
+},
+{
+"i": 1077,
+"name": "T01 | flat service walk",
+"rgb": [
+0.2275,
+0.4079,
+0.91
+]
+},
+{
+"i": 1078,
+"name": "T01 | walk connector to rear service",
+"rgb": [
+0.3425,
+0.55,
+0.0825
+]
+},
+{
+"i": 1079,
+"name": "T01 | walk rail post -5.12",
+"rgb": [
+0.61,
+0.0305,
+0.5219
+]
+},
+{
+"i": 1080,
+"name": "T01 | walk rail post -2.43",
+"rgb": [
+0.3015,
+0.67,
+0.6185
+]
+},
+{
+"i": 1081,
+"name": "T01 | walk top rail",
+"rgb": [
+0.73,
+0.5252,
+0.2555
+]
+},
+{
+"i": 1082,
+"name": "T01 | walk mid rail",
+"rgb": [
+0.3614,
+0.1975,
+0.79
+]
+},
+{
+"i": 1083,
+"name": "T01 | west shore cap",
+"rgb": [
+0.1384,
+0.85,
+0.1275
+]
+},
+{
+"i": 1084,
+"name": "T01 | west dark sidewall",
+"rgb": [
+0.91,
+0.0455,
+0.3108
+]
+},
+{
+"i": 1085,
+"name": "T01 | west wall return inner",
+"rgb": [
+0.2475,
+0.4286,
+0.55
+]
+},
+{
+"i": 1086,
+"name": "T01 | west wall return outer",
+"rgb": [
+0.5666,
+0.61,
+0.2135
+]
+},
+{
+"i": 1087,
+"name": "T01 | east shore cap",
+"rgb": [
+0.5784,
+0.1675,
+0.67
+]
+},
+{
+"i": 1088,
+"name": "T01 | east dark sidewall",
+"rgb": [
+0.1095,
+0.73,
+0.4358
+]
+},
+{
+"i": 1089,
+"name": "T01 | east wall return inner",
+"rgb": [
+0.79,
+0.2152,
+0.0395
+]
+},
+{
+"i": 1090,
+"name": "T01 | east wall return outer",
+"rgb": [
+0.3825,
+0.4095,
+0.85
+]
+},
+{
+"i": 1091,
+"name": "T01 | shore landing connector",
+"rgb": [
+0.5252,
+0.91,
+0.3185
+]
+},
+{
+"i": 1092,
+"name": "T01 | far retaining wall",
+"rgb": [
+0.55,
+0.1375,
+0.402
+]
+},
+{
+"i": 1093,
+"name": "T01 | far retaining coping",
+"rgb": [
+0.0915,
+0.5753,
+0.61
+]
+},
+{
+"i": 1094,
+"name": "P1 crown | 00",
+"rgb": [
+0.67,
+0.5269,
+0.0335
+]
+},
+{
+"i": 1095,
+"name": "P1 crown | 01",
+"rgb": [
+0.5225,
+0.3285,
+0.73
+]
+},
+{
+"i": 1096,
+"name": "P1 crown | 02",
+"rgb": [
+0.2765,
+0.79,
+0.3748
+]
+},
+{
+"i": 1097,
+"name": "P1 crown | 03",
+"rgb": [
+0.85,
+0.2125,
+0.2764
+]
+},
+{
+"i": 1098,
+"name": "P1 crown | 04",
+"rgb": [
+0.1365,
+0.4398,
+0.91
+]
+},
+{
+"i": 1099,
+"name": "P1 crown | 05",
+"rgb": [
+0.3848,
+0.55,
+0.0275
+]
+},
+{
+"i": 1100,
+"name": "P1 crown | 06",
+"rgb": [
+0.61,
+0.2745,
+0.6018
+]
+},
+{
+"i": 1101,
+"name": "P1 crown | 07",
+"rgb": [
+0.2345,
+0.67,
+0.5535
+]
+},
+{
+"i": 1102,
+"name": "P1 crown | 08",
+"rgb": [
+0.73,
+0.4238,
+0.1825
+]
+},
+{
+"i": 1103,
+"name": "P1 crown | 09",
+"rgb": [
+0.2185,
+0.1185,
+0.79
+]
+},
+{
+"i": 1104,
+"name": "P1 crown | 10",
+"rgb": [
+0.1579,
+0.85,
+0.0425
+]
+},
+{
+"i": 1105,
+"name": "P1 crown | 11",
+"rgb": [
+0.91,
+0.4095,
+0.627
+]
+},
+{
+"i": 1106,
+"name": "P1 crown | 12",
+"rgb": [
+0.1925,
+0.4522,
+0.55
+]
+},
+{
+"i": 1107,
+"name": "P1 crown | 13",
+"rgb": [
+0.61,
+0.6017,
+0.1525
+]
+},
+{
+"i": 1108,
+"name": "P1 crown | toe 00",
+"rgb": [
+0.4934,
+0.1005,
+0.67
+]
+},
+{
+"i": 1109,
+"name": "P1 crown | toe 01",
+"rgb": [
+0.0365,
+0.73,
+0.3126
+]
+},
+{
+"i": 1110,
+"name": "P1 crown | toe 02",
+"rgb": [
+0.79,
+0.4017,
+0.3555
+]
+},
+{
+"i": 1111,
+"name": "P1 crown | toe 03",
+"rgb": [
+0.2975,
+0.4,
+0.85
+]
+},
+{
+"i": 1112,
+"name": "P1 crown | toe 04",
+"rgb": [
+0.5532,
+0.91,
+0.2275
+]
+},
+{
+"i": 1113,
+"name": "P1 crown | toe 05",
+"rgb": [
+0.55,
+0.0825,
+0.442
+]
+},
+{
+"i": 1114,
+"name": "P1 crown | toe 06",
+"rgb": [
+0.0305,
+0.61,
+0.5748
+]
+},
+{
+"i": 1115,
+"name": "P1 crown | toe 07",
+"rgb": [
+0.67,
+0.5401,
+0.3015
+]
+},
+{
+"i": 1116,
+"name": "P1 crown | toe 08",
+"rgb": [
+0.4242,
+0.2555,
+0.73
+]
+},
+{
+"i": 1117,
+"name": "P1 crown | treeline 00",
+"rgb": [
+0.1975,
+0.79,
+0.2353
+]
+},
+{
+"i": 1118,
+"name": "P1 crown | treeline 01",
+"rgb": [
+0.85,
+0.1275,
+0.2922
+]
+},
+{
+"i": 1119,
+"name": "P1 crown | treeline 02",
+"rgb": [
+0.0455,
+0.4949,
+0.91
+]
+},
+{
+"i": 1120,
+"name": "P1 crown | treeline 03",
+"rgb": [
+0.493,
+0.55,
+0.2475
+]
+},
+{
+"i": 1121,
+"name": "P1 crown | treeline 04",
+"rgb": [
+0.569,
+0.2135,
+0.61
+]
+},
+{
+"i": 1122,
+"name": "P1 crown | treeline 05",
+"rgb": [
+0.1675,
+0.67,
+0.4714
+]
+},
+{
+"i": 1123,
+"name": "P1 crown | treeline 06",
+"rgb": [
+0.73,
+0.3037,
+0.1095
+]
+},
+{
+"i": 1124,
+"name": "P1 crown | treeline 07",
+"rgb": [
+0.0554,
+0.0395,
+0.79
+]
+},
+{
+"i": 1125,
+"name": "P1 crown | treeline 08",
+"rgb": [
+0.509,
+0.85,
+0.3825
+]
+},
+{
+"i": 1126,
+"name": "P1 crown | treeline 09",
+"rgb": [
+0.91,
+0.3185,
+0.6511
+]
+},
+{
+"i": 1127,
+"name": "P1 crown | treeline 10",
+"rgb": [
+0.1375,
+0.4898,
+0.55
+]
+},
+{
+"i": 1128,
+"name": "P1 crown | treeline 11",
+"rgb": [
+0.61,
+0.5343,
+0.0915
+]
+},
+{
+"i": 1129,
+"name": "P1 crown | treeline 12",
+"rgb": [
+0.3914,
+0.0335,
+0.67
+]
+},
+{
+"i": 1130,
+"name": "P1 crown | treeline 13",
+"rgb": [
+0.3285,
+0.73,
+0.4371
+]
+},
+{
+"i": 1131,
+"name": "P1 tank hoop 0",
+"rgb": [
+0.79,
+0.2765,
+0.2875
+]
+},
+{
+"i": 1132,
+"name": "P1 tank hoop 1",
+"rgb": [
+0.2125,
+0.4121,
+0.85
+]
+},
+{
+"i": 1133,
+"name": "P1 tank flange plate",
+"rgb": [
+0.6044,
+0.91,
+0.1365
+]
+},
+{
+"i": 1134,
+"name": "P1 tank flange stub",
+"rgb": [
+0.55,
+0.0275,
+0.496
+]
+},
+{
+"i": 1135,
+"name": "P1 crossover pipe",
+"rgb": [
+0.2745,
+0.61,
+0.5467
+]
+},
+{
+"i": 1136,
+"name": "P1 crossover elbow A",
+"rgb": [
+0.67,
+0.4608,
+0.2345
+]
+},
+{
+"i": 1137,
+"name": "P1 crossover elbow B",
+"rgb": [
+0.3073,
+0.1825,
+0.73
+]
+},
+{
+"i": 1138,
+"name": "P1 cabinet front barrel",
+"rgb": [
+0.1614,
+0.79,
+0.1185
+]
+},
+{
+"i": 1139,
+"name": "P1 cabinet barrel rim",
+"rgb": [
+0.85,
+0.0425,
+0.3297
+]
+},
+{
+"i": 1140,
+"name": "P1 fallen leaf 00",
+"rgb": [
+0.4095,
+0.7336,
+0.91
+]
+},
+{
+"i": 1141,
+"name": "P1 fallen leaf 01",
+"rgb": [
+0.5283,
+0.55,
+0.1925
+]
+},
+{
+"i": 1142,
+"name": "P1 fallen leaf 03",
+"rgb": [
+0.5043,
+0.1525,
+0.61
+]
+},
+{
+"i": 1143,
+"name": "P1 fallen leaf 06",
+"rgb": [
+0.1005,
+0.67,
+0.3722
+]
+},
+{
+"i": 1144,
+"name": "P1 fallen leaf 09",
+"rgb": [
+0.73,
+0.165,
+0.0365
+]
+},
+{
+"i": 1145,
+"name": "P1 fallen leaf 11",
+"rgb": [
+0.3555,
+0.4018,
+0.79
+]
+},
+{
+"i": 1146,
+"name": "P1 fallen leaf 12",
+"rgb": [
+0.5176,
+0.85,
+0.2975
+]
+},
+{
+"i": 1147,
+"name": "P1 fallen leaf 13",
+"rgb": [
+0.91,
+0.2275,
+0.6985
+]
+},
+{
+"i": 1148,
+"name": "P1 fallen leaf 14",
+"rgb": [
+0.0825,
+0.5415,
+0.55
+]
+},
+{
+"i": 1149,
+"name": "P1 fallen leaf 16",
+"rgb": [
+0.61,
+0.4514,
+0.0305
+]
+},
+{
+"i": 1150,
+"name": "P1 foreground table | grounded leg -1 -1",
+"rgb": [
+0.4616,
+0.3015,
+0.67
+]
+},
+{
+"i": 1151,
+"name": "P1 foreground table | grounded leg -1 +1",
+"rgb": [
+0.2555,
+0.73,
+0.3232
+]
+},
+{
+"i": 1152,
+"name": "P1 foreground table | grounded leg +1 -1",
+"rgb": [
+0.79,
+0.1975,
+0.2858
+]
+},
+{
+"i": 1153,
+"name": "P1 foreground table | grounded leg +1 +1",
+"rgb": [
+0.1275,
+0.446,
+0.85
+]
+},
+{
+"i": 1154,
+"name": "P1 foreground table | low stretcher",
+"rgb": [
+0.6789,
+0.91,
+0.0455
+]
+},
+{
+"i": 1156,
+"name": "P1 foreground table | faded pennant 1",
+"rgb": [
+0.2135,
+0.61,
+0.4846
+]
+},
+{
+"i": 1157,
+"name": "P1 foreground table | faded pennant 2",
+"rgb": [
+0.67,
+0.3645,
+0.1675
+]
+},
+{
+"i": 1158,
+"name": "P1 foreground table | faded pennant 3",
+"rgb": [
+0.1716,
+0.1095,
+0.73
+]
+},
+{
+"i": 1159,
+"name": "P1 foreground table | faded pennant 4",
+"rgb": [
+0.1833,
+0.79,
+0.0395
+]
+},
+{
+"i": 1160,
+"name": "v15 natural grass mass 1 | visible grouped drooping arcs",
+"rgb": [
+0.85,
+0.3825,
+0.6085
+]
+},
+{
+"i": 1161,
+"name": "v15 natural grass mass 2 | visible grouped drooping arcs",
+"rgb": [
+0.3185,
+0.7771,
+0.91
+]
+},
+{
+"i": 1162,
+"name": "v15 natural grass mass 3 | visible grouped drooping arcs",
+"rgb": [
+0.55,
+0.5223,
+0.1375
+]
+},
+{
+"i": 1163,
+"name": "v15 dense grounded tower crown grass | visible grouped drooping arcs",
+"rgb": [
+0.4239,
+0.0915,
+0.61
+]
+},
+{
+"i": 1164,
+"name": "P1 embedded limestone crack 1",
+"rgb": [
+0.0335,
+0.67,
+0.2559
+]
+},
+{
+"i": 1165,
+"name": "P1 embedded limestone crack 2",
+"rgb": [
+0.73,
+0.3516,
+0.3285
+]
+},
+{
+"i": 1167,
+"name": "P1 front planter bunting | pennant 1",
+"rgb": [
+0.5478,
+0.85,
+0.2125
+]
+},
+{
+"i": 1168,
+"name": "P1 front planter bunting | pennant 2",
+"rgb": [
+0.91,
+0.1365,
+0.7691
+]
+},
+{
+"i": 1169,
+"name": "P1 front planter bunting | pennant 3",
+"rgb": [
+0.0275,
+0.55,
+0.4927
+]
+},
+{
+"i": 1170,
+"name": "P1 front planter bunting | pennant 4",
+"rgb": [
+0.61,
+0.4753,
+0.2745
+]
+},
+{
+"i": 1171,
+"name": "P1 front planter bunting | pennant 5",
+"rgb": [
+0.3681,
+0.2345,
+0.67
+]
+},
+{
+"i": 1175,
+"name": "P1 center planter bunting | pennant 1",
+"rgb": [
+0.8401,
+0.91,
+0.4095
+]
+},
+{
+"i": 1176,
+"name": "P1 center planter bunting | pennant 2",
+"rgb": [
+0.4956,
+0.1925,
+0.55
+]
+},
+{
+"i": 1177,
+"name": "P1 center planter bunting | pennant 3",
+"rgb": [
+0.1525,
+0.61,
+0.4069
+]
+},
+{
+"i": 1178,
+"name": "P1 center planter bunting | pennant 4",
+"rgb": [
+0.67,
+0.251,
+0.1005
+]
+},
+{
+"i": 1179,
+"name": "P1 center planter bunting | pennant 5",
+"rgb": [
+0.0365,
+0.0556,
+0.73
+]
+},
+{
+"i": 1180,
+"name": "P1 center planter bunting | pennant 6",
+"rgb": [
+0.4943,
+0.79,
+0.3555
+]
+},
+{
+"i": 1183,
+"name": "CC0 ornamental grass | joined master | P1 autumn recolor",
+"rgb": [
+0.55,
+0.459,
+0.0825
+]
+},
+{
+"i": 1184,
+"name": "v16 grass clump | large planter A | 001",
+"rgb": [
+0.328,
+0.0305,
+0.61
+]
+},
+{
+"i": 1185,
+"name": "v16 grass clump | large planter A | 002",
+"rgb": [
+0.3015,
+0.67,
+0.3832
+]
+},
+{
+"i": 1186,
+"name": "v16 grass clump | large planter A | 003",
+"rgb": [
+0.73,
+0.2555,
+0.2888
+]
+},
+{
+"i": 1187,
+"name": "v16 grass clump | large planter A | 004",
+"rgb": [
+0.1975,
+0.4119,
+0.79
+]
+},
+{
+"i": 1188,
+"name": "v16 grass clump | large planter A | 005",
+"rgb": [
+0.5998,
+0.85,
+0.1275
+]
+},
+{
+"i": 1189,
+"name": "v16 grass clump | large planter A | 006",
+"rgb": [
+0.91,
+0.0455,
+0.8629
+]
+},
+{
+"i": 1190,
+"name": "v16 grass clump | large planter A | 007",
+"rgb": [
+0.2475,
+0.55,
+0.4782
+]
+},
+{
+"i": 1191,
+"name": "v16 grass clump | large planter A | 008",
+"rgb": [
+0.61,
+0.4002,
+0.2135
+]
+},
+{
+"i": 1192,
+"name": "v16 grass clump | large planter A | 009",
+"rgb": [
+0.2575,
+0.1675,
+0.67
+]
+},
+{
+"i": 1193,
+"name": "v16 grass clump | large planter A | 010",
+"rgb": [
+0.1794,
+0.73,
+0.1095
+]
+},
+{
+"i": 1194,
+"name": "v16 grass clump | large planter A | 011",
+"rgb": [
+0.79,
+0.0395,
+0.3431
+]
+},
+{
+"i": 1195,
+"name": "v16 grass clump | large planter A | 012",
+"rgb": [
+0.3825,
+0.708,
+0.85
+]
+},
+{
+"i": 1196,
+"name": "v16 grass clump | large planter A | 013",
+"rgb": [
+0.903,
+0.91,
+0.3185
+]
+},
+{
+"i": 1197,
+"name": "v16 grass clump | large planter A | 014",
+"rgb": [
+0.4345,
+0.1375,
+0.55
+]
+},
+{
+"i": 1198,
+"name": "v16 grass clump | large planter A | 015",
+"rgb": [
+0.0915,
+0.61,
+0.3136
+]
+},
+{
+"i": 1199,
+"name": "v16 grass clump | large planter A | 016",
+"rgb": [
+0.67,
+0.1204,
+0.0335
+]
+},
+{
+"i": 1200,
+"name": "v16 grass clump | large planter A | 017",
+"rgb": [
+0.3285,
+0.3908,
+0.73
+]
+},
+{
+"i": 1201,
+"name": "v16 grass clump | large planter A | 018",
+"rgb": [
+0.5061,
+0.79,
+0.2765
+]
+},
+{
+"i": 1202,
+"name": "v16 grass clump | large planter A | 019",
+"rgb": [
+0.85,
+0.2125,
+0.6835
+]
+},
+{
+"i": 1203,
+"name": "v16 grass clump | large planter A | 020",
+"rgb": [
+0.1365,
+0.91,
+0.8863
+]
+},
+{
+"i": 1204,
+"name": "v16 grass clump | large planter A | 021",
+"rgb": [
+0.55,
+0.3815,
+0.0275
+]
+},
+{
+"i": 1205,
+"name": "v16 grass clump | large planter A | 022",
+"rgb": [
+0.4039,
+0.2745,
+0.61
+]
+},
+{
+"i": 1206,
+"name": "v16 grass clump | large planter A | 023",
+"rgb": [
+0.2345,
+0.67,
+0.2754
+]
+},
+{
+"i": 1207,
+"name": "v16 grass clump | large planter A | 024",
+"rgb": [
+0.73,
+0.1825,
+0.2908
+]
+},
+{
+"i": 1208,
+"name": "v16 grass clump | large planter A | 025",
+"rgb": [
+0.1185,
+0.4473,
+0.79
+]
+},
+{
+"i": 1209,
+"name": "v16 grass clump | large planter A | 026",
+"rgb": [
+0.6735,
+0.85,
+0.0425
+]
+},
+{
+"i": 1210,
+"name": "v16 grass clump | large planter A | 027",
+"rgb": [
+0.8733,
+0.4095,
+0.91
+]
+},
+{
+"i": 1211,
+"name": "v16 grass clump | large planter A | 028",
+"rgb": [
+0.1925,
+0.55,
+0.4195
+]
+},
+{
+"i": 1212,
+"name": "v16 grass clump | large planter A | 029",
+"rgb": [
+0.61,
+0.3095,
+0.1525
+]
+},
+{
+"i": 1213,
+"name": "v16 grass clump | large planter A | 030",
+"rgb": [
+0.1298,
+0.1005,
+0.67
+]
+},
+{
+"i": 1214,
+"name": "v16 grass clump | large planter A | 031",
+"rgb": [
+0.2032,
+0.73,
+0.0365
+]
+},
+{
+"i": 1215,
+"name": "v16 grass clump | large planter A | 032",
+"rgb": [
+0.79,
+0.3555,
+0.5868
+]
+},
+{
+"i": 1216,
+"name": "v16 grass clump | large planter A | 033",
+"rgb": [
+0.2975,
+0.7528,
+0.85
+]
+},
+{
+"i": 1217,
+"name": "v16 grass clump | large planter B | 034",
+"rgb": [
+0.91,
+0.831,
+0.2275
+]
+},
+{
+"i": 1218,
+"name": "v16 grass clump | large planter B | 035",
+"rgb": [
+0.3594,
+0.0825,
+0.55
+]
+},
+{
+"i": 1219,
+"name": "v16 grass clump | large planter B | 036",
+"rgb": [
+0.0305,
+0.61,
+0.2047
+]
+},
+{
+"i": 1220,
+"name": "v16 grass clump | large planter B | 037",
+"rgb": [
+0.67,
+0.3047,
+0.3015
+]
+},
+{
+"i": 1221,
+"name": "v16 grass clump | large planter B | 038",
+"rgb": [
+0.2555,
+0.3898,
+0.73
+]
+},
+{
+"i": 1222,
+"name": "v16 grass clump | large planter B | 039",
+"rgb": [
+0.5381,
+0.79,
+0.1975
+]
+},
+{
+"i": 1223,
+"name": "v16 grass clump | large planter B | 040",
+"rgb": [
+0.85,
+0.1275,
+0.7536
+]
+},
+{
+"i": 1224,
+"name": "v16 grass clump | large planter B | 041",
+"rgb": [
+0.0455,
+0.91,
+0.7731
+]
+},
+{
+"i": 1225,
+"name": "v16 grass clump | large planter B | 042",
+"rgb": [
+0.55,
+0.4138,
+0.2475
+]
+},
+{
+"i": 1226,
+"name": "v16 grass clump | large planter B | 043",
+"rgb": [
+0.3158,
+0.2135,
+0.61
+]
+},
+{
+"i": 1227,
+"name": "v16 grass clump | large planter B | 044",
+"rgb": [
+0.1845,
+0.67,
+0.1675
+]
+},
+{
+"i": 1228,
+"name": "v16 grass clump | large planter B | 045",
+"rgb": [
+0.73,
+0.1095,
+0.3115
+]
+},
+{
+"i": 1229,
+"name": "v16 grass clump | large planter B | 046",
+"rgb": [
+0.0395,
+0.5028,
+0.79
+]
+},
+{
+"i": 1230,
+"name": "v16 grass clump | large planter B | 047",
+"rgb": [
+0.8075,
+0.85,
+0.3825
+]
+},
+{
+"i": 1231,
+"name": "v16 grass clump | large planter B | 048",
+"rgb": [
+0.7911,
+0.3185,
+0.91
+]
+},
+{
+"i": 1232,
+"name": "v16 grass clump | large planter B | 049",
+"rgb": [
+0.1375,
+0.55,
+0.3467
+]
+},
+{
+"i": 1233,
+"name": "v16 grass clump | large planter B | 050",
+"rgb": [
+0.61,
+0.2032,
+0.0915
+]
+},
+{
+"i": 1234,
+"name": "v16 grass clump | large planter B | 051",
+"rgb": [
+0.0335,
+0.0821,
+0.67
+]
+},
+{
+"i": 1235,
+"name": "v16 grass clump | large planter B | 052",
+"rgb": [
+0.4763,
+0.73,
+0.3285
+]
+},
+{
+"i": 1236,
+"name": "v16 grass clump | large planter B | 053",
+"rgb": [
+0.79,
+0.2765,
+0.6154
+]
+},
+{
+"i": 1237,
+"name": "v16 grass clump | large planter B | 054",
+"rgb": [
+0.2125,
+0.8192,
+0.85
+]
+},
+{
+"i": 1238,
+"name": "v16 grass clump | large planter B | 055",
+"rgb": [
+0.91,
+0.7216,
+0.1365
+]
+},
+{
+"i": 1239,
+"name": "v16 grass clump | large planter B | 056",
+"rgb": [
+0.2703,
+0.0275,
+0.55
+]
+},
+{
+"i": 1240,
+"name": "v16 grass clump | large planter B | 057",
+"rgb": [
+0.2745,
+0.61,
+0.3325
+]
+},
+{
+"i": 1241,
+"name": "v16 grass clump | large planter B | 058",
+"rgb": [
+0.67,
+0.2345,
+0.2863
+]
+},
+{
+"i": 1242,
+"name": "v16 grass clump | large planter B | 059",
+"rgb": [
+0.1825,
+0.4074,
+0.73
+]
+},
+{
+"i": 1243,
+"name": "v16 grass clump | large planter B | 060",
+"rgb": [
+0.5902,
+0.79,
+0.1185
+]
+},
+{
+"i": 1244,
+"name": "v16 grass clump | large planter B | 061",
+"rgb": [
+0.85,
+0.0425,
+0.8454
+]
+},
+{
+"i": 1245,
+"name": "v16 grass clump | large planter B | 062",
+"rgb": [
+0.4095,
+0.91,
+0.7668
+]
+},
+{
+"i": 1246,
+"name": "v16 grass clump | large planter B | 063",
+"rgb": [
+0.55,
+0.3434,
+0.1925
+]
+},
+{
+"i": 1247,
+"name": "v16 grass clump | large planter B | 064",
+"rgb": [
+0.2121,
+0.1525,
+0.61
+]
+},
+{
+"i": 1248,
+"name": "v16 grass clump | large planter B | 065",
+"rgb": [
+0.1925,
+0.67,
+0.1005
+]
+},
+{
+"i": 1249,
+"name": "v16 grass clump | large planter B | 066",
+"rgb": [
+0.73,
+0.0365,
+0.3509
+]
+},
+{
+"i": 1250,
+"name": "v16 grass clump | front planter C | 067",
+"rgb": [
+0.3555,
+0.6792,
+0.79
+]
+},
+{
+"i": 1251,
+"name": "v16 grass clump | front planter C | 068",
+"rgb": [
+0.85,
+0.8296,
+0.2975
+]
+},
+{
+"i": 1252,
+"name": "v16 grass clump | front planter C | 069",
+"rgb": [
+0.6857,
+0.2275,
+0.91
+]
+},
+{
+"i": 1253,
+"name": "v16 grass clump | front planter C | 070",
+"rgb": [
+0.0825,
+0.55,
+0.2599
+]
+},
+{
+"i": 1254,
+"name": "v16 grass clump | front planter C | 071",
+"rgb": [
+0.61,
+0.0813,
+0.0305
+]
+},
+{
+"i": 1255,
+"name": "v16 grass clump | front planter C | 072",
+"rgb": [
+0.3015,
+0.3767,
+0.67
+]
+},
+{
+"i": 1256,
+"name": "v16 grass clump | front planter C | 073",
+"rgb": [
+0.4908,
+0.73,
+0.2555
+]
+},
+{
+"i": 1257,
+"name": "v16 grass clump | front planter C | 074",
+"rgb": [
+0.79,
+0.1975,
+0.6642
+]
+},
+{
+"i": 1258,
+"name": "v16 grass clump | front planter C | 075",
+"rgb": [
+0.1275,
+0.85,
+0.7926
+]
+},
+{
+"i": 1259,
+"name": "v16 grass clump | front planter C | 076",
+"rgb": [
+0.91,
+0.5891,
+0.0455
+]
+},
+{
+"i": 1260,
+"name": "v16 grass clump | front planter C | 077",
+"rgb": [
+0.3494,
+0.2475,
+0.55
+]
+},
+{
+"i": 1261,
+"name": "v16 grass clump | front planter C | 078",
+"rgb": [
+0.2135,
+0.61,
+0.2314
+]
+},
+{
+"i": 1262,
+"name": "v16 grass clump | front planter C | 079",
+"rgb": [
+0.67,
+0.1675,
+0.2914
+]
+},
+{
+"i": 1263,
+"name": "v16 grass clump | front planter C | 080",
+"rgb": [
+0.1095,
+0.4436,
+0.73
+]
+},
+{
+"i": 1264,
+"name": "v16 grass clump | front planter C | 081",
+"rgb": [
+0.6626,
+0.79,
+0.0395
+]
+},
+{
+"i": 1265,
+"name": "v16 grass clump | front planter C | 082",
+"rgb": [
+0.793,
+0.3825,
+0.85
+]
+},
+{
+"i": 1266,
+"name": "v16 grass clump | front planter C | 083",
+"rgb": [
+0.3185,
+0.91,
+0.6652
+]
+},
+{
+"i": 1267,
+"name": "v16 grass clump | front planter C | 084",
+"rgb": [
+0.55,
+0.2589,
+0.1375
+]
+},
+{
+"i": 1268,
+"name": "v16 grass clump | front planter C | 085",
+"rgb": [
+0.0928,
+0.0915,
+0.61
+]
+},
+{
+"i": 1269,
+"name": "v16 grass clump | front planter C | 086",
+"rgb": [
+0.2176,
+0.67,
+0.0335
+]
+},
+{
+"i": 1270,
+"name": "v16 grass clump | front planter C | 087",
+"rgb": [
+0.73,
+0.3285,
+0.5618
+]
+},
+{
+"i": 1271,
+"name": "v16 grass clump | front planter C | 088",
+"rgb": [
+0.2765,
+0.7247,
+0.79
+]
+},
+{
+"i": 1272,
+"name": "v16 grass clump | tower crown | 089",
+"rgb": [
+0.85,
+0.7451,
+0.2125
+]
+},
+{
+"i": 1273,
+"name": "v16 grass clump | tower crown | 090",
+"rgb": [
+0.557,
+0.1365,
+0.91
+]
+},
+{
+"i": 1274,
+"name": "v16 grass clump | tower crown | 091",
+"rgb": [
+0.0275,
+0.55,
+0.1591
+]
+},
+{
+"i": 1275,
+"name": "v16 grass clump | tower crown | 092",
+"rgb": [
+0.61,
+0.2745,
+0.2879
+]
+},
+{
+"i": 1276,
+"name": "v16 grass clump | tower crown | 093",
+"rgb": [
+0.2345,
+0.379,
+0.67
+]
+},
+{
+"i": 1277,
+"name": "v16 grass clump | tower crown | 094",
+"rgb": [
+0.5239,
+0.73,
+0.1825
+]
+},
+{
+"i": 1278,
+"name": "v16 grass clump | tower crown | 095",
+"rgb": [
+0.79,
+0.1185,
+0.7332
+]
+},
+{
+"i": 1279,
+"name": "v16 grass clump | tower crown | 096",
+"rgb": [
+0.0425,
+0.85,
+0.6827
+]
+},
+{
+"i": 1280,
+"name": "v16 grass clump | tower crown | 097",
+"rgb": [
+0.91,
+0.6603,
+0.4095
+]
+},
+{
+"i": 1281,
+"name": "v16 grass clump | tower crown | 098",
+"rgb": [
+0.2673,
+0.1925,
+0.55
+]
+},
+{
+"i": 1282,
+"name": "v16 grass clump | tower crown | 099",
+"rgb": [
+0.1903,
+0.61,
+0.1525
+]
+},
+{
+"i": 1283,
+"name": "v16 grass clump | tower crown | 100",
+"rgb": [
+0.67,
+0.1005,
+0.3137
+]
+},
+{
+"i": 1284,
+"name": "v16 grass clump | tower crown | 101",
+"rgb": [
+0.0365,
+0.4985,
+0.73
+]
+},
+{
+"i": 1285,
+"name": "v16 grass clump | tower crown | 102",
+"rgb": [
+0.7717,
+0.79,
+0.3555
+]
+},
+{
+"i": 1286,
+"name": "v16 grass clump | tower crown | 103",
+"rgb": [
+0.712,
+0.2975,
+0.85
+]
+},
+{
+"i": 1287,
+"name": "v16 grass clump | tower crown | 104",
+"rgb": [
+0.2275,
+0.91,
+0.5404
+]
+},
+{
+"i": 1288,
+"name": "v16 grass clump | tower crown | 105",
+"rgb": [
+0.55,
+0.1604,
+0.0825
+]
+},
+{
+"i": 1289,
+"name": "v16 grass clump | tower crown | 106",
+"rgb": [
+0.0305,
+0.103,
+0.61
+]
+},
+{
+"i": 1290,
+"name": "v16 grass clump | tower crown | 107",
+"rgb": [
+0.4551,
+0.67,
+0.3015
+]
+},
+{
+"i": 1291,
+"name": "v16 grass clump | tower crown | 108",
+"rgb": [
+0.73,
+0.2555,
+0.5918
+]
+},
+{
+"i": 1292,
+"name": "v16 grass clump | tower crown | 109",
+"rgb": [
+0.1975,
+0.79,
+0.7897
+]
+},
+{
+"i": 1293,
+"name": "v16 grass clump | tower crown | 110",
+"rgb": [
+0.85,
+0.6388,
+0.1275
+]
+},
+{
+"i": 1294,
+"name": "v16 grass clump | tower crown | 111",
+"rgb": [
+0.405,
+0.0455,
+0.91
+]
+},
+{
+"i": 1295,
+"name": "v16 grass clump | tower crown | 112",
+"rgb": [
+0.2475,
+0.55,
+0.285
+]
+},
+{
+"i": 1296,
+"name": "v16 grass clump | tower crown | 113",
+"rgb": [
+0.61,
+0.2135,
+0.28
+]
+},
+{
+"i": 1297,
+"name": "v16 grass clump | tower crown | 114",
+"rgb": [
+0.1675,
+0.3984,
+0.67
+]
+},
+{
+"i": 1298,
+"name": "v16 grass clump | tower crown | 115",
+"rgb": [
+0.5757,
+0.73,
+0.1095
+]
+},
+{
+"i": 1299,
+"name": "v16 grass clump | tower crown | 116",
+"rgb": [
+0.7577,
+0.0395,
+0.79
+]
+},
+{
+"i": 1300,
+"name": "v16 grass clump | tower crown | 117",
+"rgb": [
+0.3825,
+0.85,
+0.6934
+]
+},
+{
+"i": 1301,
+"name": "v16 grass clump | tower crown | 118",
+"rgb": [
+0.91,
+0.5393,
+0.3185
+]
+},
+{
+"i": 1302,
+"name": "v16 grass clump | tower crown | 119",
+"rgb": [
+0.1711,
+0.1375,
+0.55
+]
+},
+{
+"i": 1303,
+"name": "v16 grass clump | tower crown | 120",
+"rgb": [
+0.2005,
+0.61,
+0.0915
+]
+},
+{
+"i": 1304,
+"name": "v16 grass clump | tower crown | 121",
+"rgb": [
+0.67,
+0.0335,
+0.3531
+]
+},
+{
+"i": 1305,
+"name": "V18 TEMP | B05 Boolean channel cutter",
+"rgb": [
+0.3285,
+0.6472,
+0.73
+]
+},
+{
+"i": 1306,
+"name": "V18 B07 | far bank west segment",
+"rgb": [
+0.79,
+0.746,
+0.2765
+]
+},
+{
+"i": 1307,
+"name": "V18 B07 | far bank east segment",
+"rgb": [
+0.6094,
+0.2125,
+0.85
+]
+},
+{
+"i": 1308,
+"name": "V18 B10 | narrow right-bank planting soil strip",
+"rgb": [
+0.1365,
+0.91,
+0.3923
+]
+},
+{
+"i": 1309,
+"name": "V18 B10 | right-bank grass 01",
+"rgb": [
+0.55,
+0.0478,
+0.0275
+]
+},
+{
+"i": 1310,
+"name": "V18 B10 | right-bank grass 02",
+"rgb": [
+0.2745,
+0.3593,
+0.61
+]
+},
+{
+"i": 1311,
+"name": "V18 B10 | right-bank grass 03",
+"rgb": [
+0.4717,
+0.67,
+0.2345
+]
+},
+{
+"i": 1312,
+"name": "V18 B10 | right-bank grass 04",
+"rgb": [
+0.73,
+0.1825,
+0.6405
+]
+},
+{
+"i": 1313,
+"name": "V18 B15 | reed clump 01",
+"rgb": [
+0.1185,
+0.79,
+0.7039
+]
+},
+{
+"i": 1314,
+"name": "V18 B15 | reed clump 02",
+"rgb": [
+0.85,
+0.5108,
+0.0425
+]
+},
+{
+"i": 1315,
+"name": "V18 B15 | reed clump 03",
+"rgb": [
+0.5537,
+0.4095,
+0.91
+]
+},
+{
+"i": 1316,
+"name": "V18 B08 | left bank understory near",
+"rgb": [
+0.1938,
+0.55,
+0.1925
+]
+},
+{
+"i": 1317,
+"name": "V18 B08 | left bank understory far",
+"rgb": [
+0.61,
+0.1525,
+0.2877
+]
+}
+]

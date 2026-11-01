@@ -1,0 +1,49 @@
+{
+ "deleted": [
+  "P1 steps | 00",
+  "P1 steps | 01",
+  "P1 steps | 02",
+  "P1 steps | 03",
+  "P1 steps | 04",
+  "P1 steps | 05",
+  "P1 steps | 06",
+  "P1 steps | 07",
+  "P1 steps | 08",
+  "Landing fascia recessed expansion joint",
+  "Landing fascia recessed expansion joint.001",
+  "Landing fascia recessed expansion joint.002",
+  "Landing fascia recessed expansion joint.003",
+  "Landing fascia recessed expansion joint.004",
+  "Landing fascia recessed expansion joint.005",
+  "Landing fascia recessed expansion joint.006"
+ ],
+ "added": [
+  {
+   "name": "P1 stair landing cap",
+   "bbox": [
+    -4.47,
+    -1.59,
+    -0.09,
+    -1.83,
+    -0.9,
+    -0.02
+   ]
+  },
+  {
+   "name": "P1 stair rear fill",
+   "bbox": [
+    -4.55,
+    -0.9,
+    -1.31,
+    -1.75,
+    3.0,
+    -0.02
+   ]
+  }
+ ],
+ "notes": [
+  "stair rear fill uses plinth material family; cap closes 0.07 m joint to bed z=-0.02"
+ ],
+ "elapsed_s": 1.1,
+ "saved": "C:\\软件\\鼠鼠\\art\\static_map\\p1_autumn_courtyard\\v25\\scene.blend"
+}

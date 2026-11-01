@@ -1,0 +1,6 @@
+const fs=require('fs'),{createRequire}=require('module'),path=require('path');
+const req=createRequire('C:/软件/鼠鼠/.tooling/package.json'); const puppeteer=req('puppeteer-core');
+const {captureCanvas}=require('C:/软件/鼠鼠/tools/capture/canvas_capture.js');
+const out='C:/软件/鼠鼠/delivery/next_cycle/n5/T6/camera_probe'; fs.mkdirSync(out,{recursive:true});
+(async()=>{const b=await puppeteer.launch({executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe',headless:'new',args:['--use-gl=angle','--use-angle=swiftshader','--enable-webgl','--ignore-gpu-blocklist','--no-sandbox','--disable-dev-shm-usage'],defaultViewport:{width:1280,height:720,deviceScaleFactor:1}});const p=await b.newPage();await p.goto('http://127.0.0.1:8806/',{waitUntil:'networkidle2',timeout:60000});await p.waitForFunction(()=>window.__COURTYARD_READY__===true,{timeout:90000});for(const preset of ['game','CHAR001','CHAR003','MAP001']){await p.evaluate((v)=>{window.__courtyard.reset();window.__courtyard.setUi(false);window.__courtyard.resetView();if(v!=='game')window.__courtyard.setCameraPreset(v);},preset);await new Promise(r=>setTimeout(r,1200));await captureCanvas(p,path.join(out,preset+'.png'),{hideStats:true});}await b.close()})().catch(e=>{console.error(e);process.exit(1)});
+
