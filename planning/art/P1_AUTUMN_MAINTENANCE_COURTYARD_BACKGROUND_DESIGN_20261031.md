@@ -1,6 +1,6 @@
 # P1「秋日维护庭院＋局部水道」背景细化设计
 
-> ⛔ **历史文档（SUPERSEDED）** —— 当前唯一有效方案是 [P1_BACKGROUND_OPTIMIZE_v24_1_PLAN.md](P1_BACKGROUND_OPTIMIZE_v24_1_PLAN.md)（v24.2）。本文仅作决策与方法记录，**不要照此执行**。
+> ⛔ **历史方案，已由 2026-11-01 v3 用户目标取代。** 当前 P1 完全无植被，也不要求其他模型独立终审；本文只供追溯，不按其中的植被、背景坐标或旧验收规则制作。现行任务见 `planning/art/P1_WORKORDER_20261101_NEXT.md`，流程见 `planning/art/STATIC_MAP_WORKFLOW_20261028.md`。
 
 
 > **2026-10-31 当前执行方向：**先读 `P1_LAYERED_BACKGROUND_V2_PLAN_20261031.md` 与 V2 JSON。后侧步道、近岸沿/岸壁和水平浅水代理保留真实 3D；水纹、远岸、远树使用可编辑分层源，并将 world 可见部分计入最终背景遮罩。撤掉干地拱桥。本文下方 B01–B15 的坐标、开槽施工及 `P1_BACKGROUND_PLACEMENT_START_V1.json` 均为 V18 历史方案，**不再直接执行**；新候选从复核后的 P1 背景遮罩和选定相机投影生成布置表。冲突时以 V2 方案为准。

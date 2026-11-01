@@ -1,0 +1,64 @@
+{
+  "schema": "test-cases-v1",
+  "request_id": "<YYYYMMDD-slug>",
+  "business_id": "<business_id>",
+  "version": "r01",
+  "bound_brief_sha256": "<sha>",
+  "bound_design_snapshot": "<baselines/design_r01>",
+  "cases": [
+    {
+      "test_id": "TEST-01",
+      "covers": ["REQ-01"],
+      "stage": "requirements_frozen | design_preview | prototype | style_sample | final",
+      "check_type": "mechanical | visual | manual",
+      "responsible": "automated | model_visual | developer_visual | user_decision",
+      "input": {
+        "files": [],
+        "fixed_conditions": "camera/renderer/color management/display size"
+      },
+      "method": "how to check, exact command or comparison",
+      "pass_criteria": "observable, falsifiable; no adjectives alone",
+      "evidence_path": "runs/<run_id>/evidence/TEST-01/",
+      "diagnostic_only": false,
+      "failure_rule": "what to change and which cases to rerun"
+    },
+    {
+      "test_id": "TEST-02",
+      "covers": ["REQ-02"],
+      "stage": "style_sample",
+      "check_type": "visual",
+      "responsible": "model_visual",
+      "input": {
+        "files": ["<candidate image>", "<reference crop>"],
+        "fixed_conditions": "same crop region, same display scale"
+      },
+      "method": "side-by-side crop comparison with named region",
+      "pass_criteria": "3 listed observable conditions all true",
+      "evidence_path": "runs/<run_id>/evidence/TEST-02/",
+      "diagnostic_only": false,
+      "failure_rule": "return to design or prototype; list object-level fix"
+    },
+    {
+      "test_id": "TEST-03",
+      "covers": ["REQ-03"],
+      "stage": "final",
+      "check_type": "mechanical",
+      "responsible": "automated",
+      "input": {
+        "files": ["<scene.blend>", "<final.png>"],
+        "fixed_conditions": "isolated dir reopen"
+      },
+      "method": "sha256 + reopen render script",
+      "pass_criteria": "exists, sha matches manifest, reopen produces image within declared tolerance",
+      "evidence_path": "runs/<run_id>/evidence/TEST-03/",
+      "diagnostic_only": false,
+      "failure_rule": "repair packaging; do not report pass until reproduction recorded"
+    }
+  ],
+  "coverage": {
+    "requirements_total": 0,
+    "requirements_with_cases": 0,
+    "manual_only_requirements": []
+  },
+  "notes": "diagnostic_only=true 的用例只帮助定位，不计 PASS；数值门槛必须有校准依据。"
+}

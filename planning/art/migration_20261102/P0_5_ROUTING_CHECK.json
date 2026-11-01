@@ -1,0 +1,97 @@
+{
+ "schema": "p0-5-routing-check-v1",
+ "generated_at": "2026-11-02T02:54:13",
+ "samples": [
+  "p1_production",
+  "new_business",
+  "planning_only"
+ ],
+ "checks": [
+  {
+   "check_id": "C1",
+   "statement": "all loaded paths exist and sha256 match",
+   "status": "pass",
+   "detail": {
+    "missing": [],
+    "mismatch": []
+   }
+  },
+  {
+   "check_id": "C2",
+   "statement": "P1 sample does not load research pack",
+   "status": "pass",
+   "detail": {
+    "leaked": []
+   }
+  },
+  {
+   "check_id": "C3",
+   "statement": "new-business sample loads no P1 visual docs",
+   "status": "pass",
+   "detail": {
+    "leaked": []
+   }
+  },
+  {
+   "check_id": "C4",
+   "statement": "art baseline stays draft and is information_only",
+   "status": "pass",
+   "detail": {
+    "bad": []
+   }
+  },
+  {
+   "check_id": "C5",
+   "statement": "planning mode has no candidate allocation and no production gate",
+   "status": "pass",
+   "detail": {
+    "path": "none",
+    "write_owner_run": "none",
+    "mode": "readonly"
+   }
+  },
+  {
+   "check_id": "C6",
+   "statement": "business manifest unique ids and p1 present",
+   "status": "pass",
+   "detail": [
+    "p1_autumn_static",
+    "research_arknights_mapdata"
+   ]
+  },
+  {
+   "check_id": "C7",
+   "statement": "scorecard weights sum to 100 and pass_total=85/min=3",
+   "status": "pass",
+   "detail": {
+    "weights_sum": 100
+   }
+  },
+  {
+   "check_id": "C8",
+   "statement": "all required templates exist",
+   "status": "pass",
+   "detail": {
+    "missing": []
+   }
+  },
+  {
+   "check_id": "C9",
+   "statement": "draft entry references exist",
+   "status": "pass",
+   "detail": {
+    "missing": []
+   }
+  },
+  {
+   "check_id": "C10",
+   "statement": "audit entries contain required status fields",
+   "status": "pass",
+   "detail": {
+    "bad": []
+   }
+  }
+ ],
+ "overall": "pass",
+ "note": "manual routing contract only; Hook isolation/concurrency automation and real new-business pilot remain unverified"
+}

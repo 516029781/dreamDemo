@@ -1,0 +1,94 @@
+{
+ "schema": "business-manifest-v1",
+ "updated_at": "2026-11-02T03:40+08:00",
+ "routing_rules": {
+  "selection": "按用户需求中的 deliverable_type + 主题/业务 ID 显式选择；关键词只作候选提示，不自动决定",
+  "no_match": "new_business_bootstrap：只用 common 层 + 用户 Brief，新建业务包，不借用其他业务视觉答案",
+  "multi_business": "Brief 显式声明主业务与辅助业务，并分别列出共享/隔离的验收项"
+ },
+ "businesses": [
+  {
+   "business_id": "p1_autumn_static",
+   "title": "P1 秋日庭院静态地图",
+   "deliverable_types": [
+    "static_map"
+   ],
+   "triggers": [
+    "P1",
+    "秋日庭院",
+    "t084",
+    "继续静态地图"
+   ],
+   "lifecycle": "active",
+   "activation_basis": "用户 2026-10-28 锁定 t084 为唯一整图参考；2026-11-01T23:23 状态文件确认整图无植被、以设备/箱体建立层次",
+   "entry": "knowledge/business/p1_autumn_static/START_HERE.md",
+   "required_docs": [
+    "knowledge/business/p1_autumn_static/BUSINESS_PROFILE.md",
+    "knowledge/business/p1_autumn_static/STYLE_PROFILE.md",
+    "knowledge/business/p1_autumn_static/scorecard.json",
+    "planning/art/STATIC_MAP_WORKFLOW_20261028.md",
+    "planning/art/P1_T084_ART_DIRECTION_STANDARD_20261028.md",
+    "planning/art/ACTIVE_STATIC_ART.json"
+   ],
+   "optional_docs": [
+    "knowledge/business/p1_autumn_static/DRAWING_PLAYBOOK.md",
+    "planning/art/P1_WORKORDER_20261101_NEXT.md",
+    "planning/art/STATIC_ART_INFORMATION_CORRECTION_20261101.md",
+    "planning/art/STATIC_ART_INFORMATION_CORRECTION_20261101.md"
+   ],
+   "excluded_packages": [
+    "research_arknights_mapdata"
+   ],
+   "style_profile_id": "p1_autumn_t084",
+   "skill_refs": [
+    ".agents/skills/p1-art-director/SKILL.md",
+    ".agents/skills/p1-map-environment-art/SKILL.md"
+   ],
+   "scorecard": "knowledge/business/p1_autumn_static/scorecard.json",
+   "harness": "planning/art/CODEX_STATIC_MAP_QUALITY_HOOK_20261029.md",
+   "version": "r03",
+   "notes": "r03 与 2026-11-01T23:19–23:23 的更新记录对齐；21:00 的手绘植被方向已被覆盖并降为历史"
+  },
+  {
+   "business_id": "research_arknights_mapdata",
+   "title": "Arknights 地图参数与 Harness 研究数据包",
+   "deliverable_types": [
+    "research"
+   ],
+   "triggers": [
+    "CW-8",
+    "CW-9",
+    "地图参数",
+    "tileKey",
+    "harness fixture"
+   ],
+   "lifecycle": "active",
+   "activation_basis": "用户 2026-10-29 允许将其作为结构化地图数据研究样本",
+   "entry": "knowledge/ARKNIGHTS_MAP_DATA_AND_HARNESS_AUDIT_20261029.md",
+   "required_docs": [
+    "knowledge/ARKNIGHTS_MAP_DATA_AND_HARNESS_AUDIT_20261029.md",
+    "knowledge/MAP_PARAMETER_HARNESS_RULES_20261029.md"
+   ],
+   "optional_docs": [],
+   "excluded_packages": [
+    "p1_autumn_static"
+   ],
+   "style_profile_id": null,
+   "skill_refs": [],
+   "scorecard": null,
+   "harness": null,
+   "version": "r01",
+   "notes": "只作数据/规则研究，绝不作为视觉参考或色板来源"
+  }
+ ],
+ "new_business_bootstrap": {
+  "template": "knowledge/templates/",
+  "steps": [
+   "建 REQUIREMENTS_BRIEF + OPEN_QUESTIONS",
+   "建 STYLE_PROFILE（无参考则声明原创方向）",
+   "建 SOLUTION_DESIGN + DESIGN_PREVIEW_PACK（新风格须粗色光+代表小样）",
+   "建 test_cases.json（覆盖每条 REQ）",
+   "N4 开发确认 confirmed 后才进入 N5"
+  ]
+ }
+}

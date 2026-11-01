@@ -1,30 +1,48 @@
 # 鼠鼠项目知识库
 
-更新：2026-10-29。当前静态地图唯一整图视觉目标是秋日参考 `reference/_raw_screenshots/P1/t084s.jpg`。Arknights CW-8/CW-9 仅作为结构化地图参数与 Harness 规则研究样本，不作为画面风格或色板目标。当前只制作静态环境图；完整游戏阶段暂停。
+更新：2026-11-02（迁移 P0-1..P0-5）。本文件是知识路由入口，不复制任何业务阈值。
 
-## 当前只读这几份
+## 1. 两层结构
 
-| 需要 | 权威文件 |
-|---|---|
-| 了解任务范围和制作步骤 | planning/art/STATIC_MAP_WORKFLOW_20261028.md |
-| 查看 P1 秋日画面目标、锚点和评分 | planning/art/P1_T084_ART_DIRECTION_STANDARD_20261028.md |
-| 查地图参数如何转成 Harness 校验规则 | MAP_PARAMETER_HARNESS_RULES_20261029.md |
-| 查 Arknights 数据来源、固定样本、解包资源边界 | ARKNIGHTS_MAP_DATA_AND_HARNESS_AUDIT_20261029.md |
-| 按精简流程制作 | RECIPES.md |
-| 查已确认的通用规则 | STANDARDS.md |
-| 查本项目知识库维护状态 | PROJECT_AUDIT.md |
-| 记录跨轮经验 | planning/execution/LESSONS.md |
+| 层 | 位置 | 加载规则 |
+|---|---|---|
+| 通用开发核心 | `common/dev_core/` | 所有开发任务必读：生命周期、证据、身份隔离、通用规范索引 |
+| 通用方法模块 | `common/methods/<type>/` | 按 `deliverable_type` 选读；地图方法不强迫 UI/角色任务加载 |
+| 通用美术基线 | `common/art_base/ART_STYLE_BASE.md` | 仅美术任务；当前 `draft`，未批准前不得作门槛 |
+| 业务知识包 | `business/<id>/` | 由需求显式选中后加载；未选中不读 |
+| 当前运行上下文 | `active/<request_id>/runs/<run_id>/` | 每次任务新建；不是可继承的知识 |
 
-本地两个项目美术 skill 是制作辅助，不代替画面标准。旧工具调研已退出当前入口；若后续需要选工具，先核验当前官网/仓库与本机可用性，再更新独立工具说明。
+## 2. 什么在生效
 
-历史文档与过期指令的处理以 `planning/art/ART_DOCUMENTATION_ARCHIVE_INDEX_20261029.md` 为准；已被覆盖的方案只作追溯，不作为当前制作入口。
+| 包 | 状态 | 入口 |
+|---|---|---|
+| `p1_autumn_static` | active（r03，整图无植被设备化改编；21:00 手绘方向已 superseded） | `business/p1_autumn_static/START_HERE.md` |
+| `research_arknights_mapdata` | active（仅数据研究） | `knowledge/ARKNIGHTS_MAP_DATA_AND_HARNESS_AUDIT_20261029.md` |
+| 案例库 | 暂无验收通过案例 | `cases/README.md` |
+| 项目美术基线 | `draft` | `common/art_base/ART_STYLE_BASE.md` |
 
-## 使用规则
+## 3. 状态契约
 
-- 先读当前工作单和 P1 秋日美术标准；Arknights 参数只用于 Harness 的结构/解析规则，不能拼入视觉目标。
-- 不在知识库重复完整评分表、候选日志、失败截图或旧游戏任务。原始证据只放在对应工作产物目录。
-- 本库只存稳定、可复用的制作规则。流程尚未复现或美术尚未达标的观察标为 proposed，不写成成功案例。
-- P1 秋日主参考已锁定；当前没有经现行标准确认达标的静态地图成功案例。CASEBOOK 暂不收录地图案例。
-- 地图 JSON、地图 PNG、AssetBundle 解包工具、实际生产素材是不同证据类型；来源与用途边界见 `ARKNIGHTS_MAP_DATA_AND_HARNESS_AUDIT_20261029.md`。
-- `reference/_arknights_samples/` 有 6 张当前研究图、CW-8/CW-9 结构化 JSON 和 8 张已退出范围的夏日探索图。它们只作只读样本；CW 参数用于解析器 golden fixture 和 Harness 设计，不是产品地图参数或视觉评审依据。夏日图仍在本地忽略目录，已标为 out-of-scope，不参与分析。
-- 旧完整游戏配方与诊断已退出当前知识入口，见同名文件中的停用说明。
+每条知识用三个独立字段，不得合成单一 `status`：
+
+- `scope`：`common/dev_core` / `common/methods/<type>` / `common/art_base` / `business/<id>` / `active`
+- `lifecycle`：`draft` / `active` / `superseded` / `deprecated` / `historical`
+- `maturity`：`not_applicable` / `proposed` / `observed` / `reproduced` / `reusable`
+
+`needs_evidence` 是证据缺口标记，`unknown` 是未知事实，均不是生命周期。
+未验证经验不得写成成功案例；单业务观察不得升级为 common 的 `reusable`。
+
+## 4. 加载规则
+
+1. 先读通用开发核心与本次类型的方法模块。
+2. 按 `business_id` 只加载选中业务包的 `required_docs`；`optional_docs` 按范围决定。
+3. 记录 `RESOLVED_KNOWLEDGE.json`（路径、SHA、状态、usage、覆盖决定）。
+4. 没有匹配业务包 → `new_business_bootstrap`，用 `templates/` 新建，不借用其他业务答案。
+5. 未校准的数值指标一律 `diagnostic_only`。
+
+## 5. 维护
+
+- 新增/变更知识先过增量审计，写入 `planning/art/KNOWLEDGE_AUDIT_20261102.json` 的同类条目。
+- 每条活动规则只能有一个权威正文；其他文件保留摘要与指针。
+- 归档与过期识别以 `planning/art/ART_DOCUMENTATION_ARCHIVE_INDEX_20261029.md` 为准。
+- 历史与归档文件保留原文，可追溯但不得被当作当前指令。

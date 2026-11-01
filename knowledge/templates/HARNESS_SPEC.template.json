@@ -1,0 +1,66 @@
+{
+  "schema": "harness-spec-v1",
+  "business_id": "<business_id>",
+  "spec_version": "r01",
+  "applies_to": {
+    "deliverable_types": ["static_map"],
+    "task_modes": ["production"],
+    "excluded": ["planning", "other_business", "other_projects"]
+  },
+  "run_identity_required": {
+    "project_root": true,
+    "session_id": true,
+    "request_id": true,
+    "run_id": true,
+    "business_id": true
+  },
+  "checks": [
+    {
+      "check_id": "H-01",
+      "rule_ref": "R-EVID-01",
+      "type": "mechanical",
+      "statement": "candidate scene and final image exist and match manifest SHA256",
+      "command": "<script or manual step>",
+      "evidence_fields": ["scene_sha256", "image_sha256", "manifest_path"],
+      "on_fail": "block_end"
+    },
+    {
+      "check_id": "H-02",
+      "rule_ref": "R-EVID-01",
+      "type": "mechanical",
+      "statement": "reopen reproduction record bound to the same image SHA exists",
+      "command": "<isolated reopen script>",
+      "evidence_fields": ["reproduction_log", "image_sha256"],
+      "on_fail": "block_end"
+    },
+    {
+      "check_id": "H-03",
+      "rule_ref": "R-85-01",
+      "type": "mechanical",
+      "statement": "score arithmetic and thresholds per business scorecard",
+      "command": "<gate script>",
+      "evidence_fields": ["score_json", "thresholds", "recomputed_total"],
+      "on_fail": "block_end"
+    },
+    {
+      "check_id": "H-04",
+      "rule_ref": "R-EVID-01",
+      "type": "model_visual",
+      "statement": "named visual cases pass on the current image SHA",
+      "command": "manual crop comparison, see test_cases.json",
+      "evidence_fields": ["test_ids", "evidence_paths", "image_sha256"],
+      "on_fail": "rework"
+    }
+  ],
+  "end_policy": {
+    "allowed_end_states": ["target_met", "blocked_external"],
+    "blocked_external_requires": ["attempt_1", "attempt_2", "hashes", "recovery_condition"],
+    "stop_request_overrides_quality_gate": true
+  },
+  "capabilities_not_implemented": [
+    "knowledge router automation",
+    "Blender auto run",
+    "automatic visual scoring",
+    "cross-business hook dispatch"
+  ]
+}

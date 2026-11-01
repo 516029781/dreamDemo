@@ -1,0 +1,39 @@
+{
+  "schema": "references-manifest-v1",
+  "business_id": "p1_autumn_static",
+  "references": [
+    {
+      "ref_id": "REF-P1-MAIN",
+      "role": "visual_reference",
+      "path": "reference/_raw_screenshots/P1/t084s.jpg",
+      "sha256": "13706e7eab96726565156a9e6440727de5d5bac82ee9c09c293a5745dd7446de",
+      "bytes": 270828,
+      "usage": "唯一整图视觉目标；锚点、色相与层次对照",
+      "license": "项目内参考，不随交付分发",
+      "observable_notes": "1920×1078 截图；含 UI/人物遮挡，需 I3 遮罩后才可用于数值比较"
+    },
+    {
+      "ref_id": "REF-P1-DATA",
+      "role": "structural_reference",
+      "path": "knowledge/ARKNIGHTS_MAP_DATA_AND_HARNESS_AUDIT_20261029.md",
+      "sha256": null,
+      "usage": "仅地图参数与 Harness 规则研究；不作视觉/构图/色板来源",
+      "license": "研究资料"
+    }
+  ],
+  "camera": {
+    "name": "P1 fixed still camera",
+    "location": [0.25, -20.5, 8.2],
+    "lens_mm": 53.0,
+    "sensor_mm": 36.0,
+    "dof": true,
+    "focus_m": 24.0,
+    "resolution": [1920, 1078],
+    "note": "本项目反推相机，不等于原游戏相机"
+  },
+  "derived_evidence": [
+    "art/static_map/p1_autumn_courtyard/v25/renders/ref_zoom_tree.png",
+    "art/static_map/p1_autumn_courtyard/v25/renders/ref_zoom_grass1.png",
+    "art/static_map/p1_autumn_courtyard/v25/renders/ref_zoom_grass2.png"
+  ]
+}

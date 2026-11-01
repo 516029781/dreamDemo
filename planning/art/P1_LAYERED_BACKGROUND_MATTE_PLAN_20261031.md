@@ -1,6 +1,6 @@
 # P1 秋日静态地图：分层绘制背景实施方案
 
-> ⛔ **历史文档（SUPERSEDED）** —— 当前唯一有效方案是 [P1_BACKGROUND_OPTIMIZE_v24_1_PLAN.md](P1_BACKGROUND_OPTIMIZE_v24_1_PLAN.md)（v24.2）。本文仅作决策与方法记录，**不要照此执行**。
+> ⛔ **历史方案，已由 2026-11-01 v3 用户目标取代。** 当前 P1 完全无植被，也不要求其他模型独立终审；本文只供追溯，不按其中的植被、背景坐标或旧验收规则制作。现行任务见 `planning/art/P1_WORKORDER_20261101_NEXT.md`，流程见 `planning/art/STATIC_MAP_WORKFLOW_20261028.md`。
 
 
 > **历史 V1，已由 [P1_LAYERED_BACKGROUND_V2_PLAN_20261031.md](P1_LAYERED_BACKGROUND_V2_PLAN_20261031.md) 取代。** V20 证明本页的灰底兜底、闭合水形和“只开关景片”的面积验收会误导画面判断；新候选不得继续按本页或 V1 JSON 施工。本文保留作失败溯源。

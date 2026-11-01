@@ -1,5 +1,7 @@
 # P1 标准评审与方案调整（2026-11-01）
 
+> **历史审查记录，已由 2026-11-01 当前流程 v3 取代。** 本文关于两份盲评、独立终审、植被硬门槛和旧 schema 的结论只代表历史版本。当前整图完全无植被，不要求其他模型独立终审；评分、返修、自评反证、SHA 绑定与 gate 按 `STATIC_MAP_WORKFLOW_20261028.md`、`CODEX_STATIC_MAP_QUALITY_HOOK_20261029.md` 和 `P1_T084_ART_DIRECTION_STANDARD_20261028.md` 执行。保留本文件用于追溯，不作为执行清单。
+
 > 评审对象：`P1_T084_ART_DIRECTION_STANDARD_20261028.md`（视觉标准）
 > 与 `STATIC_MAP_WORKFLOW_20261028.md` §2–§3（关口与结束条件）、
 > `CODEX_STATIC_MAP_QUALITY_HOOK_20261029.md`（gate schema）。

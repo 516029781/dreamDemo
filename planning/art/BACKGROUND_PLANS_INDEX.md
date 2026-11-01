@@ -1,6 +1,6 @@
 # 背景方案历史索引（非当前制作入口）
 
-> **状态订正（2026-11-01）：本文是 V24 背景方案时间线，不再是当前制作入口。** 最新实物与有效证据状态见 [ACTIVE_STATIC_ART.json](ACTIVE_STATIC_ART.json)；下一轮信息核对见 [STATIC_ART_INFORMATION_CORRECTION_20261101.md](STATIC_ART_INFORMATION_CORRECTION_20261101.md)。下文“下一轮唯一”“两份有效方案”“前景10级台阶”“v24当前代码基线”均仅为历史原文，不得领取为现行任务。
+> **状态订正（2026-11-01）：本文是 V24 背景方案历史索引，不是当前制作入口。** 当前目标/状态见 [ACTIVE_STATIC_ART.json](ACTIVE_STATIC_ART.json)，现行流程见 [STATIC_MAP_WORKFLOW_20261028.md](STATIC_MAP_WORKFLOW_20261028.md)，活动工作单见 [P1_WORKORDER_20261101_NEXT.md](P1_WORKORDER_20261101_NEXT.md)。下文“下一轮唯一”“两份有效方案”“前景10级台阶”“v24当前代码基线”均已失效；当前 P1 完全无植被，不需要外部独立终审。
 
 ## V24 成图后最新修订
 
@@ -18,7 +18,7 @@ V24 后续执行曾按 [V24 场景逻辑与美术评分、修复方案 §8.3 N0�
 |---|---|---|
 | **`P1_TWO_TIER_TERRAIN_PLAN_20261101.md`** | **空间结构**：两层地块、平台边缘、低地块、水面、前景台阶 | **v3.1（含 12 处核查修正）** |
 | **`P1_EXECUTION_TABLE_20261101.md`** | **执行计划表**：P0–P6、23 个任务、验收值、停止规则 | v1 |
-| `P1_BACKGROUND_OPTIMIZE_v24_1_PLAN.md` | 光色与后期（F0）、材质语言（F4/F5）、景片（F6） | v24.2 |
+| `P1_BACKGROUND_OPTIMIZE_v24_1_PLAN.md` | 历史光色/材质/景片方案，已被 v3 用户目标取代 | v24.2（历史） |
 
 两份冲突时**以 `P1_TWO_TIER_TERRAIN_PLAN` 为准**——它管几何，几何决定其他一切。
 

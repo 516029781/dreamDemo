@@ -16,22 +16,22 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[1]
 REFERENCE = "reference/_raw_screenshots/P1/t084s.jpg"
 REFERENCE_SHA256 = "13706e7eab96726565156a9e6440727de5d5bac82ee9c09c293a5745dd7446de"
-SCHEMA = "p1-static-map-quality-gate/v1"
+SCHEMA = "p1-static-map-quality-gate/v3"
 WEIGHTS = {
     "composition_and_space": 20,
     "object_structure": 20,
     "surface_materials": 20,
-    "vegetation": 15,
+    "scene_layering_and_object_organization": 15,
     "lighting_depth": 15,
     "style_cohesion": 10,
 }
-COMBO_CHECKS = ("floor", "tree", "grass", "lighting")
+COMBO_CHECKS = ("floor", "structures", "lighting", "background")
 HARD_GATES = (
     "foreground_steps_railings",
-    "right_grass_cylinder",
+    "right_cylindrical_equipment",
     "cohesive_non_checkerboard_ground",
-    "tree_branching_negative_space",
-    "dense_wavy_grass_canopy",
+    "left_area_functional_replacement",
+    "no_vegetation",
     "functional_midground_structure",
     "cool_soft_background",
     "materials_resolve",
@@ -58,8 +58,8 @@ def _score_review(review: Any, label: str, failures: list[str], enforce_threshol
     if not isinstance(review, dict):
         failures.append(f"{label}: review object missing")
         return None, {}
-    if not str(review.get("reviewer_id", "")).strip():
-        failures.append(f"{label}: reviewer_id missing")
+    if not str(review.get("producer_id", "")).strip():
+        failures.append(f"{label}: producer_id missing")
     dimensions = review.get("dimensions")
     if not isinstance(dimensions, dict):
         failures.append(f"{label}: dimensions missing")
@@ -91,6 +91,62 @@ def _score_review(review: Any, label: str, failures: list[str], enforce_threshol
     if enforce_threshold and calculated < 85:
         failures.append(f"{label}: computed total {calculated:.2f}, below 85")
     return calculated, values
+
+
+def _check_producer_countercheck(
+    countercheck: Any,
+    producer_review: Any,
+    render_sha256: str | None,
+    failures: list[str],
+) -> None:
+    """Require a same-producer adversarial pass bound to the exact final render."""
+    if not isinstance(countercheck, dict):
+        failures.append("producer_countercheck object missing")
+        return
+    if not isinstance(producer_review, dict):
+        failures.append("producer_countercheck cannot bind to a missing producer_review")
+        return
+    if str(countercheck.get("producer_id", "")).strip() != str(producer_review.get("producer_id", "")).strip():
+        failures.append("producer_countercheck.producer_id must match producer_review.producer_id")
+    if str(countercheck.get("render_sha256", "")).lower() != str(render_sha256 or "").lower():
+        failures.append("producer_countercheck is not bound to the current final render SHA256")
+    checks = countercheck.get("checks")
+    if not isinstance(checks, dict):
+        failures.append("producer_countercheck.checks object missing")
+        return
+    dimensions = producer_review.get("dimensions", {})
+    if not isinstance(dimensions, dict):
+        dimensions = {}
+    allowed_decisions = {"score_retained", "deduction_applied"}
+    for name in WEIGHTS:
+        item = checks.get(name)
+        if not isinstance(item, dict):
+            failures.append(f"producer_countercheck.checks.{name} missing")
+            continue
+        for field in ("challenge", "reason"):
+            if len(str(item.get(field, "")).strip()) < 20:
+                failures.append(f"producer_countercheck.checks.{name}.{field} needs at least 20 characters")
+        if item.get("decision") not in allowed_decisions:
+            failures.append(f"producer_countercheck.checks.{name}.decision must be score_retained or deduction_applied")
+        score_before = item.get("score_before")
+        score_after = item.get("score_after")
+        if (isinstance(score_before, bool) or not isinstance(score_before, (int, float)) or
+                not 0 <= score_before <= 4):
+            failures.append(f"producer_countercheck.checks.{name}.score_before must be numeric from 0 to 4")
+        if (isinstance(score_after, bool) or not isinstance(score_after, (int, float)) or
+                not 0 <= score_after <= 4):
+            failures.append(f"producer_countercheck.checks.{name}.score_after must be numeric from 0 to 4")
+        if isinstance(score_before, (int, float)) and not isinstance(score_before, bool) and isinstance(score_after, (int, float)) and not isinstance(score_after, bool):
+            if item.get("decision") == "score_retained" and abs(float(score_after) - float(score_before)) > 0.001:
+                failures.append(f"producer_countercheck.checks.{name}: score_retained requires equal before/after scores")
+            if item.get("decision") == "deduction_applied" and score_after >= score_before:
+                failures.append(f"producer_countercheck.checks.{name}: deduction_applied requires a lower after score")
+        final_item = dimensions.get(name)
+        final_score = final_item.get("score") if isinstance(final_item, dict) else None
+        if (isinstance(score_after, bool) or not isinstance(score_after, (int, float)) or
+                isinstance(final_score, bool) or not isinstance(final_score, (int, float)) or
+                abs(float(score_after) - float(final_score)) > 0.001):
+            failures.append(f"producer_countercheck.checks.{name}.score_after must equal the final producer score")
 
 
 
@@ -238,6 +294,8 @@ def evaluate(candidate: str | Path) -> dict[str, Any]:
                     "summary": "Validated exception record; this is incomplete, not a quality pass."}
 
     elif status in ("target_met", "rework_required"):
+        if "independent_review" in report or "blind_reviews" in report:
+            failures.append("schema v3 does not accept external-review fields; use producer self-review and countercheck")
         # Cross-check the candidate manifest and reference profile against the same bound files.
         try:
             delivery = _load_json(candidate_path / "DELIVERY.json")
@@ -261,12 +319,14 @@ def evaluate(candidate: str | Path) -> dict[str, Any]:
 
         producer = report.get("producer_review")
         producer_total, producer_values = _score_review(producer, "producer_review", failures, enforce_threshold=False)
-        producer_id = producer.get("reviewer_id", "") if isinstance(producer, dict) else ""
         if isinstance(producer, dict):
             if str(producer.get("render_sha256", "")).lower() != actual_hashes.get("render"):
                 failures.append("producer_review is not bound to the current final render SHA256")
             if str(producer.get("reference_sha256", "")).lower() != REFERENCE_SHA256:
                 failures.append("producer_review is not bound to the locked P1 reference SHA256")
+        _check_producer_countercheck(
+            report.get("producer_countercheck"), producer, actual_hashes.get("render"), failures
+        )
         producer_preflight_passed = (
             producer_total is not None
             and producer_total >= 85
@@ -278,38 +338,19 @@ def evaluate(candidate: str | Path) -> dict[str, Any]:
         _check_checklist(report.get("combo_checks"), COMBO_CHECKS, "combo_checks", failures)
         _check_checklist(report.get("hard_gates"), HARD_GATES, "hard_gates", failures)
 
-        # Do not spend blind-review cycles on a visibly failing producer draft.
-        # Once producer preflight is clear, the final gate still requires two
-        # separated reviews bound to the exact final render hash.
-        collect_blind_reviews = status != "rework_required" or producer_preflight_passed
-        if collect_blind_reviews:
-            reviews = report.get("blind_reviews")
-            if not isinstance(reviews, list) or len(reviews) != 2:
-                failures.append("exactly two blind_reviews are required after producer preflight passes")
-                reviews = []
-            reviewer_ids: set[str] = set()
-            for index, review in enumerate(reviews, start=1):
-                label = f"blind_reviews[{index}]"
-                if not isinstance(review, dict):
-                    failures.append(f"{label}: review object missing")
-                    continue
-                reviewer_id = str(review.get("reviewer_id", "")).strip()
-                if not reviewer_id or reviewer_id in reviewer_ids or reviewer_id == str(producer_id):
-                    failures.append(f"{label}: reviewer_id must be unique and differ from producer")
-                reviewer_ids.add(reviewer_id)
-                if review.get("blind") is not True:
-                    failures.append(f"{label}: blind must be true (reviewer saw neither producer scores nor the other review)")
-                if str(review.get("render_sha256", "")).lower() != actual_hashes.get("render"):
-                    failures.append(f"{label}: review is not bound to the current final render SHA256")
-                if str(review.get("reference_sha256", "")).lower() != REFERENCE_SHA256:
-                    failures.append(f"{label}: review is not bound to the locked P1 reference SHA256")
-                _score_review(review, label, failures)
-                _check_checklist(review.get("combo_checks"), COMBO_CHECKS, f"{label}.combo_checks", failures)
-                _check_checklist(review.get("hard_gates"), HARD_GATES, f"{label}.hard_gates", failures)
-        elif status == "rework_required":
+        if status == "target_met" and not producer_preflight_passed:
             failures.append(
-                "producer preflight is below target or a top-level checklist is incomplete; "
-                "repair the producer draft before requesting blind reviews"
+                "target_met requires producer score >=85, every dimension >=3, and all combo/hard checks passing"
+            )
+        if status == "rework_required" and not producer_preflight_passed:
+            failures.append(
+                "producer self-review is below target or a checklist is incomplete; "
+                "repair the draft before marking it target_met"
+            )
+        elif status == "rework_required" and producer_preflight_passed:
+            failures.append(
+                "producer self-review and all checklists pass; resolve any remaining repair_queue items "
+                "or change status to target_met"
             )
 
         repro = report.get("reproducibility")
@@ -320,6 +361,12 @@ def evaluate(candidate: str | Path) -> dict[str, Any]:
 
         if status == "rework_required":
             failures.append("report status is rework_required; complete the listed repairs and reassess before ending")
+        if status == "target_met":
+            target_queue = report.get("repair_queue")
+            if not isinstance(target_queue, list):
+                failures.append("target_met requires repair_queue to be an empty list")
+            elif target_queue:
+                failures.append("target_met cannot retain unresolved repair_queue items")
         if status == "target_met" and not failures:
             return {"state": "target_met", "stop_allowed": True, "target_met": True,
                     "candidate_id": candidate_id, "failures": [], "repairs": [],
@@ -352,7 +399,7 @@ def evaluate(candidate: str | Path) -> dict[str, Any]:
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Validate P1 static-map completion evidence and quality thresholds.")
+    parser = argparse.ArgumentParser(description="Validate P1 static-map producer review, evidence, and quality thresholds.")
     parser.add_argument("--candidate", required=True, help="Project-relative or absolute vNN candidate directory")
     args = parser.parse_args()
     result = evaluate(args.candidate)

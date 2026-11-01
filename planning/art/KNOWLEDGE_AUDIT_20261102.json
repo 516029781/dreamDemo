@@ -1,0 +1,709 @@
+{
+ "schema": "knowledge-audit-v1",
+ "generated_on": "2026-11-02",
+ "generated_at": "2026-11-02T03:45+08:00",
+ "scope_note": "首次迁移审计：逐条覆盖活动入口、本次选中包及其依赖；未被引用的历史文件只登记状态。",
+ "priority_rules": [
+  "用户本轮明确要求",
+  "本次 REQUIREMENTS_BRIEF 覆盖决定",
+  "已启用业务包",
+  "已批准 ART_STYLE_BASE",
+  "reusable 案例",
+  "observed/proposed 经验"
+ ],
+ "files": [
+  {
+   "path": "AGENTS.md",
+   "sha256": "1b88c58f07b28b8e4dc66f01ccfb02c43fa6c3ad42b56d63635457789be1b841",
+   "scope": "common/dev_core",
+   "lifecycle": "active",
+   "maturity": "not_applicable",
+   "rule_ids": [
+    "R-EVID-01",
+    "R-DISK-01",
+    "R-HOOK-01",
+    "R-VEG-01",
+    "R-85-01"
+   ],
+   "duplicate_of": [],
+   "conflicts_with": [
+    "R-VEG-01"
+   ],
+   "canonical_source": "AGENTS.md",
+   "decision": "split_scope",
+   "replacement_or_archive_path": null,
+   "evidence": [],
+   "references_updated": true,
+   "note": "混装通用执行约束与 P1 专属硬规则（无植被/85/hook）。通用部分保留；P1 部分迁入业务包，P1 无植被条款由后续用户决定取代"
+  },
+  {
+   "path": "START_HERE.md",
+   "sha256": "bcacc95f5541d795bf75d627d8e713dfb20c2dc42eacc713cd9f0c81baabeaac",
+   "scope": "router",
+   "lifecycle": "active",
+   "maturity": "not_applicable",
+   "rule_ids": [
+    "R-KNOW-01"
+   ],
+   "duplicate_of": [],
+   "conflicts_with": [],
+   "canonical_source": "START_HERE.md",
+   "decision": "revise_in_place",
+   "replacement_or_archive_path": null,
+   "evidence": [],
+   "references_updated": true,
+   "note": "现为 P1 专用入口；改为跨业务路由，P1 细节迁入业务包入口"
+  },
+  {
+   "path": "MODEL_EXECUTION_GUIDE.md",
+   "sha256": "75c72629a71ef3f6b199c124f6f187ce4683bc6c06e4d30cbfa22566671c3237",
+   "scope": "business/p1_autumn_static",
+   "lifecycle": "active",
+   "maturity": "not_applicable",
+   "rule_ids": [
+    "R-BLIND-01",
+    "R-P1-PARAM-01"
+   ],
+   "duplicate_of": [],
+   "conflicts_with": [
+    "R-BLIND-01"
+   ],
+   "canonical_source": "MODEL_EXECUTION_GUIDE.md",
+   "decision": "revise_in_place",
+   "replacement_or_archive_path": null,
+   "evidence": [],
+   "references_updated": true,
+   "note": "P1 专用执行指南；G3 的“两份独立盲评”与用户 2026-11-01 决定冲突，改为制作侧自评+机械 gate，盲评降为可选历史"
+  },
+  {
+   "path": "knowledge/README.md",
+   "sha256": "737209c36a1aef0a4e5693b5520d82d6fd89ddbc4ff3e1ba5d61639fe418efd8",
+   "scope": "router",
+   "lifecycle": "active",
+   "maturity": "not_applicable",
+   "rule_ids": [
+    "R-KNOW-01",
+    "R-VEG-01"
+   ],
+   "duplicate_of": [],
+   "conflicts_with": [
+    "R-VEG-01"
+   ],
+   "canonical_source": "knowledge/README.md",
+   "decision": "revise_in_place",
+   "replacement_or_archive_path": null,
+   "evidence": [],
+   "references_updated": true,
+   "note": "知识入口；保留无植被政策指针，删除重复正文，改为通用层+业务包路由；P1 状态链接到业务包"
+  },
+  {
+   "path": "knowledge/STANDARDS.md",
+   "sha256": "887239bf15ed6d5effadbd6cd3d805e6ee82346a751d7f9d60db88e44235d831",
+   "scope": "common/dev_core",
+   "lifecycle": "active",
+   "maturity": "not_applicable",
+   "rule_ids": [
+    "R-85-01",
+    "R-VEG-01"
+   ],
+   "duplicate_of": [],
+   "conflicts_with": [
+    "R-VEG-01"
+   ],
+   "canonical_source": "knowledge/STANDARDS.md",
+   "decision": "split_scope",
+   "replacement_or_archive_path": null,
+   "evidence": [],
+   "references_updated": true,
+   "note": "速查表中的 P1 行（无植被/85/参考）迁入 P1 业务包；通用层只保留跨业务规则"
+  },
+  {
+   "path": "knowledge/RECIPES.md",
+   "sha256": "ba738b12a7df1cb265e3452fa9b5abc22737943c3e40119150ccbddbae16d003",
+   "scope": "common/dev_core",
+   "lifecycle": "active",
+   "maturity": "not_applicable",
+   "rule_ids": [
+    "R-VEG-01"
+   ],
+   "duplicate_of": [],
+   "conflicts_with": [
+    "R-VEG-01"
+   ],
+   "canonical_source": "knowledge/RECIPES.md",
+   "decision": "revise_in_place",
+   "replacement_or_archive_path": null,
+   "evidence": [],
+   "references_updated": true,
+   "note": "仅为指针页；删除 P1 无植被重复表述，改为链接业务包"
+  },
+  {
+   "path": "knowledge/REUSABLE_MAP_ART_PIPELINE.md",
+   "sha256": "61dfcc46f15f50f6596fe4c611cfccc58976dda64f16740e20627792a5d061db",
+   "scope": "common/methods/map_art",
+   "lifecycle": "active",
+   "maturity": "observed",
+   "rule_ids": [
+    "R-VEG-01",
+    "R-EVID-01"
+   ],
+   "duplicate_of": [],
+   "conflicts_with": [
+    "R-VEG-01"
+   ],
+   "canonical_source": "knowledge/REUSABLE_MAP_ART_PIPELINE.md",
+   "decision": "revise_in_place",
+   "replacement_or_archive_path": null,
+   "evidence": [],
+   "references_updated": true,
+   "note": "通用地图制作方法权威正文；保留原地路径（物理移动延后，避免断链）。植被段改为“默认避免密集叶草、按 brief 决定”，删除 P1 零植被复用"
+  },
+  {
+   "path": "knowledge/CASEBOOK.md",
+   "sha256": "3a844a980fc6a30849cab5c56d64d17ab55ec4909eeb11f3ee5132eed73f2440",
+   "scope": "common/cases",
+   "lifecycle": "active",
+   "maturity": "not_applicable",
+   "rule_ids": [
+    "R-KNOW-01"
+   ],
+   "duplicate_of": [],
+   "conflicts_with": [],
+   "canonical_source": "knowledge/CASEBOOK.md",
+   "decision": "keep_authoritative",
+   "replacement_or_archive_path": null,
+   "evidence": [],
+   "references_updated": false,
+   "note": "已正确声明无成功案例；作为案例库唯一入口"
+  },
+  {
+   "path": "knowledge/PROJECT_AUDIT.md",
+   "sha256": "8e36342324a99665a21f8b74ebc3449119a53c97f4a4d698a35bc463977b2b39",
+   "scope": "knowledge_maintenance",
+   "lifecycle": "active",
+   "maturity": "not_applicable",
+   "rule_ids": [
+    "R-KNOW-01"
+   ],
+   "duplicate_of": [],
+   "conflicts_with": [],
+   "canonical_source": "knowledge/PROJECT_AUDIT.md",
+   "decision": "revise_in_place",
+   "replacement_or_archive_path": null,
+   "evidence": [],
+   "references_updated": false,
+   "note": "知识库维护审计；追加本轮迁移状态指针，历史发现保留"
+  },
+  {
+   "path": "knowledge/MAP_PARAMETER_HARNESS_RULES_20261029.md",
+   "sha256": "3364b942d0ac0f210ca027d23d423c96124d5d2a696f57acc3eacd0a8485f542",
+   "scope": "common/methods/map_art",
+   "lifecycle": "active",
+   "maturity": "observed",
+   "rule_ids": [
+    "R-EVID-01"
+   ],
+   "duplicate_of": [],
+   "conflicts_with": [],
+   "canonical_source": "knowledge/MAP_PARAMETER_HARNESS_RULES_20261029.md",
+   "decision": "keep_authoritative",
+   "replacement_or_archive_path": null,
+   "evidence": [],
+   "references_updated": false,
+   "note": "地图参数转 Harness 规则；仅地图任务加载，不是视觉规则"
+  },
+  {
+   "path": "knowledge/N5_VISUAL_PRODUCTION_PLAYBOOK.md",
+   "sha256": "c82e0f1bb9778f732548bb205d130ccdcebb8f624a762b573f69c0cf16a1f56b",
+   "scope": "archive",
+   "lifecycle": "deprecated",
+   "maturity": "not_applicable",
+   "rule_ids": [],
+   "duplicate_of": [],
+   "conflicts_with": [],
+   "canonical_source": "knowledge/N5_VISUAL_PRODUCTION_PLAYBOOK.md",
+   "decision": "archive_historical",
+   "replacement_or_archive_path": null,
+   "evidence": [],
+   "references_updated": false,
+   "note": "完整游戏阶段停用文档，已自标停用；保持不变"
+  },
+  {
+   "path": "knowledge/DIAGNOSIS_20261026.md",
+   "sha256": "711ee69bcff1c5d47fb0b0df1f57694d323629028c483da042ac9b1d271283b9",
+   "scope": "archive",
+   "lifecycle": "deprecated",
+   "maturity": "not_applicable",
+   "rule_ids": [],
+   "duplicate_of": [],
+   "conflicts_with": [],
+   "canonical_source": "knowledge/DIAGNOSIS_20261026.md",
+   "decision": "archive_historical",
+   "replacement_or_archive_path": null,
+   "evidence": [],
+   "references_updated": false,
+   "note": "旧完整游戏诊断，已自标停用；保持不变"
+  },
+  {
+   "path": "knowledge/ARKNIGHTS_MAP_DATA_AND_HARNESS_AUDIT_20261029.md",
+   "sha256": "8ca0e98ba7609292f3212809dce3470e8381849d6b09dd7ef73cf6b80a3247db",
+   "scope": "business/research_arknights_mapdata",
+   "lifecycle": "active",
+   "maturity": "observed",
+   "rule_ids": [
+    "R-P1-PARAM-01"
+   ],
+   "duplicate_of": [],
+   "conflicts_with": [],
+   "canonical_source": "knowledge/ARKNIGHTS_MAP_DATA_AND_HARNESS_AUDIT_20261029.md",
+   "decision": "keep_authoritative",
+   "replacement_or_archive_path": null,
+   "evidence": [],
+   "references_updated": false,
+   "note": "独立研究/数据包，只在数据研究或 Harness 任务加载；不得作为视觉参考"
+  },
+  {
+   "path": "planning/execution/LESSONS.md",
+   "sha256": "8834d4148be14a2daad6651ccf3054758a7d1ce1aaf389f5880d9700faa5cf88",
+   "scope": "split",
+   "lifecycle": "active",
+   "maturity": "proposed",
+   "rule_ids": [
+    "R-VEG-01",
+    "R-EVID-01"
+   ],
+   "duplicate_of": [],
+   "conflicts_with": [
+    "R-VEG-01"
+   ],
+   "canonical_source": "planning/execution/LESSONS.md",
+   "decision": "split_scope",
+   "replacement_or_archive_path": null,
+   "evidence": [],
+   "references_updated": true,
+   "note": "经验索引；L-ART-06（P1 无植被）为当前用户偏好，21:00 手绘尝试已被 23:19–23:23 记录取代"
+  },
+  {
+   "path": "planning/art/STATIC_MAP_WORKFLOW_20261028.md",
+   "sha256": "39f63f42af2ae78de7a56c3e7c130768331ecf4884677c7779e093279cf1e8e7",
+   "scope": "business/p1_autumn_static",
+   "lifecycle": "active",
+   "maturity": "observed",
+   "rule_ids": [
+    "R-85-01",
+    "R-EVID-01"
+   ],
+   "duplicate_of": [],
+   "conflicts_with": [],
+   "canonical_source": "planning/art/STATIC_MAP_WORKFLOW_20261028.md",
+   "decision": "keep_authoritative",
+   "replacement_or_archive_path": null,
+   "evidence": [],
+   "references_updated": false,
+   "note": "P1 G0–G3 工作流权威；保留原地路径，由业务包 manifest 引用"
+  },
+  {
+   "path": "planning/art/P1_T084_ART_DIRECTION_STANDARD_20261028.md",
+   "sha256": "576cfcdc60f12e9bbafe082987066e91e8c04c83802aa6594ffa0de2bbff6ea5",
+   "scope": "business/p1_autumn_static",
+   "lifecycle": "active",
+   "maturity": "observed",
+   "rule_ids": [
+    "R-85-01",
+    "R-VEG-01",
+    "R-P1-PARAM-01"
+   ],
+   "duplicate_of": [],
+   "conflicts_with": [
+    "R-VEG-01"
+   ],
+   "canonical_source": "planning/art/P1_T084_ART_DIRECTION_STANDARD_20261028.md",
+   "decision": "revise_in_place",
+   "replacement_or_archive_path": null,
+   "evidence": [],
+   "references_updated": true,
+   "note": "P1 视觉权威；2026-11-02 追加勘误：确认无植被适配条款继续有效（21:00 手绘方向已被 23:23 记录覆盖），其余锚点/评分不变"
+  },
+  {
+   "path": "planning/art/ACTIVE_STATIC_ART.json",
+   "sha256": "120e92b23ddbe6d72c3b7cee2a0c984a2d8e76f42dd5236e299cd6b2dfbca264",
+   "scope": "business/p1_autumn_static",
+   "lifecycle": "active",
+   "maturity": "not_applicable",
+   "rule_ids": [
+    "R-EVID-01"
+   ],
+   "duplicate_of": [],
+   "conflicts_with": [],
+   "canonical_source": "planning/art/ACTIVE_STATIC_ART.json",
+   "decision": "keep_authoritative",
+   "replacement_or_archive_path": null,
+   "evidence": [],
+   "references_updated": false,
+   "note": "P1 当前候选状态机（2026-11-01T23:23 版，零植被）；业务包与评分卡据此对齐"
+  },
+  {
+   "path": "planning/art/STATIC_ART_INFORMATION_CORRECTION_20261101.md",
+   "sha256": "bca973a1be2401bd2521f5a2dbb74c43bfc61f49d387b5ca35b973816d3b81b3",
+   "scope": "business/p1_autumn_static",
+   "lifecycle": "active",
+   "maturity": "not_applicable",
+   "rule_ids": [
+    "R-EVID-01"
+   ],
+   "duplicate_of": [],
+   "conflicts_with": [],
+   "canonical_source": "planning/art/STATIC_ART_INFORMATION_CORRECTION_20261101.md",
+   "decision": "keep_authoritative",
+   "replacement_or_archive_path": null,
+   "evidence": [],
+   "references_updated": false,
+   "note": "I0–I5 信息订正契约与证据口径"
+  },
+  {
+   "path": "planning/art/P1_WORKORDER_20261101_NEXT.md",
+   "sha256": "854e9228b12f5ae7901b55e2dece3bd66464f29054028fd2d66c484502ae9e8c",
+   "scope": "business/p1_autumn_static",
+   "lifecycle": "active",
+   "maturity": "not_applicable",
+   "rule_ids": [
+    "R-EVID-01"
+   ],
+   "duplicate_of": [],
+   "conflicts_with": [],
+   "canonical_source": "planning/art/P1_WORKORDER_20261101_NEXT.md",
+   "decision": "keep_authoritative",
+   "replacement_or_archive_path": null,
+   "evidence": [],
+   "references_updated": false,
+   "note": "当前活动工作单（差距 1–3）"
+  },
+  {
+   "path": "planning/art/ART_DOCUMENTATION_ARCHIVE_INDEX_20261029.md",
+   "sha256": "8c00c5d62d91dc54270571b38c1d10f8e413bf2fe20690feb7d9ec1ab95aa453",
+   "scope": "router/archive",
+   "lifecycle": "active",
+   "maturity": "not_applicable",
+   "rule_ids": [
+    "R-KNOW-01"
+   ],
+   "duplicate_of": [],
+   "conflicts_with": [],
+   "canonical_source": "planning/art/ART_DOCUMENTATION_ARCHIVE_INDEX_20261029.md",
+   "decision": "keep_authoritative",
+   "replacement_or_archive_path": null,
+   "evidence": [],
+   "references_updated": false,
+   "note": "既有归档索引即权威，不另建重复归档表（方案 §审计样例）"
+  },
+  {
+   "path": "planning/art/P1_ART_HARNESS_ARCHITECTURE_20261102.md",
+   "sha256": "c2d41f8a8c9c5f2d5c37add3a43a0bc6f8a9e7516e3a780fa8341364c9162346",
+   "scope": "business/p1_autumn_static",
+   "lifecycle": "active",
+   "maturity": "observed",
+   "rule_ids": [
+    "R-HOOK-01"
+   ],
+   "duplicate_of": [],
+   "conflicts_with": [],
+   "canonical_source": "planning/art/P1_ART_HARNESS_ARCHITECTURE_20261102.md",
+   "decision": "keep_authoritative",
+   "replacement_or_archive_path": null,
+   "evidence": [],
+   "references_updated": false,
+   "note": "P1 Harness 架构与现状；明确独立终审不是阻塞"
+  },
+  {
+   "path": "planning/art/CODEX_STATIC_MAP_QUALITY_HOOK_20261029.md",
+   "sha256": "be6bd96cabb525bbc94ed911530451c56721050ebb78728845b66e051c2b2c91",
+   "scope": "business/p1_autumn_static",
+   "lifecycle": "active",
+   "maturity": "observed",
+   "rule_ids": [
+    "R-HOOK-01"
+   ],
+   "duplicate_of": [],
+   "conflicts_with": [],
+   "canonical_source": "planning/art/CODEX_STATIC_MAP_QUALITY_HOOK_20261029.md",
+   "decision": "keep_authoritative",
+   "replacement_or_archive_path": null,
+   "evidence": [],
+   "references_updated": false,
+   "note": "P1 会话 Hook 契约；仅 P1，不得当跨业务路由器"
+  },
+  {
+   "path": "planning/art/ART_STYLE_SYSTEM_AND_NEW_PRODUCT_ONBOARDING_PLAN_20261102.md",
+   "sha256": "7ae53d860719d0aa54aaeaa2b9b8416d04e4848097ae11850bc600751ce8a137",
+   "scope": "common/dev_core",
+   "lifecycle": "active",
+   "maturity": "not_applicable",
+   "rule_ids": [
+    "R-KNOW-01"
+   ],
+   "duplicate_of": [],
+   "conflicts_with": [],
+   "canonical_source": "planning/art/ART_STYLE_SYSTEM_AND_NEW_PRODUCT_ONBOARDING_PLAN_20261102.md",
+   "decision": "keep_authoritative",
+   "replacement_or_archive_path": null,
+   "evidence": [],
+   "references_updated": false,
+   "note": "本轮迁移依据；P0-1..P0-5 已执行，P0-6/P1-1.. 待办"
+  },
+  {
+   "path": ".agents/skills/p1-art-director/SKILL.md",
+   "sha256": "20d54831659fa12840ba58063b2b57ee6e7ca68e55fd7517663694173054dcf1",
+   "scope": "business/p1_autumn_static",
+   "lifecycle": "active",
+   "maturity": "not_applicable",
+   "rule_ids": [
+    "R-KNOW-01"
+   ],
+   "duplicate_of": [],
+   "conflicts_with": [],
+   "canonical_source": ".agents/skills/p1-art-director/SKILL.md",
+   "decision": "keep_authoritative",
+   "replacement_or_archive_path": null,
+   "evidence": [],
+   "references_updated": false,
+   "note": "P1 可选 skill_refs，不作新业务默认指导"
+  },
+  {
+   "path": ".agents/skills/p1-map-environment-art/SKILL.md",
+   "sha256": "79d1db00286ba8016ce98bce047d4d4c4dd976a34b7cc4c85cd8b2b58c50917b",
+   "scope": "business/p1_autumn_static",
+   "lifecycle": "active",
+   "maturity": "not_applicable",
+   "rule_ids": [
+    "R-KNOW-01"
+   ],
+   "duplicate_of": [],
+   "conflicts_with": [],
+   "canonical_source": ".agents/skills/p1-map-environment-art/SKILL.md",
+   "decision": "keep_authoritative",
+   "replacement_or_archive_path": null,
+   "evidence": [],
+   "references_updated": false,
+   "note": "同上"
+  },
+  {
+   "path": "tools/static_map_quality_gate.py",
+   "sha256": "bef0362a67be8dd0cd69ccbe92095c127eced743173f029509851cfb44b3c7d9",
+   "scope": "business/p1_autumn_static",
+   "lifecycle": "active",
+   "maturity": "observed",
+   "rule_ids": [
+    "R-HOOK-01",
+    "R-85-01"
+   ],
+   "duplicate_of": [],
+   "conflicts_with": [],
+   "canonical_source": "tools/static_map_quality_gate.py",
+   "decision": "keep_authoritative",
+   "replacement_or_archive_path": null,
+   "evidence": [],
+   "references_updated": false,
+   "note": "P1 机械 gate；不读图、不启动 Blender"
+  },
+  {
+   "path": ".codex/hooks.json",
+   "sha256": "03a72858a6b9624acff1c36a4eb420662bb54e43d36da1e571e82463d737d864",
+   "scope": "business/p1_autumn_static",
+   "lifecycle": "active",
+   "maturity": "observed",
+   "rule_ids": [
+    "R-HOOK-01"
+   ],
+   "duplicate_of": [],
+   "conflicts_with": [],
+   "canonical_source": ".codex/hooks.json",
+   "decision": "keep_authoritative",
+   "replacement_or_archive_path": null,
+   "evidence": [],
+   "references_updated": false,
+   "note": "P1 会话 Hook 配置；不改用户全局配置"
+  }
+ ],
+ "rules": [
+  {
+   "rule_id": "R-VEG-01",
+   "statement": "P1 整图无植被（AGENTS/README/STANDARDS/RECIPES/pipeline 的旧表述 + 2026-11-01T23:23 状态文件与 23:20 工作单）",
+   "locations": [
+    "AGENTS.md#L9",
+    "knowledge/README.md#L3,L33",
+    "knowledge/STANDARDS.md#L17",
+    "knowledge/RECIPES.md#L8",
+    "knowledge/REUSABLE_MAP_ART_PIPELINE.md",
+    "planning/execution/LESSONS.md#L-ART-06"
+   ],
+   "conflict": "2026-11-01 21:00 曾按用户要求做手绘植被（V26/V27）；23:19–23:23 的更新记录再次明确整图无植物。两份记录相反，以时间更晚者为权威",
+   "decision": "keep_active_latest_wins",
+   "canonical_source": "knowledge/business/p1_autumn_static/BUSINESS_PROFILE.md",
+   "replacement": "业务包 r03 记录零植被政策；21:00 手绘方向标 superseded/historical（V27 树草为中间产物）",
+   "evidence": [
+    "planning/art/ACTIVE_STATIC_ART.json#user_art_direction(23:23)",
+    "planning/art/P1_WORKORDER_20261101_NEXT.md(23:20)",
+    "planning/art/STATIC_ART_INFORMATION_CORRECTION_20261101.md(23:19)"
+   ],
+   "maturity": "not_applicable",
+   "lifecycle": "active"
+  },
+  {
+   "rule_id": "R-BLIND-01",
+   "statement": "G3 必须两份独立盲评均 ≥85 才可交付（MODEL_EXECUTION_GUIDE L27）",
+   "locations": [
+    "MODEL_EXECUTION_GUIDE.md#L27"
+   ],
+   "conflict": "与用户 2026-11-01 决定“无需其他模型独立终审”及 AGENTS L24“独立审稿不是阻塞条件”冲突",
+   "decision": "superseded",
+   "canonical_source": "planning/art/P1_ART_HARNESS_ARCHITECTURE_20261102.md",
+   "replacement": "制作侧六维自评+反证，机械 gate 校验字段与算术；盲评仅作可选诊断，不阻塞",
+   "evidence": [
+    "AGENTS.md#L24",
+    "planning/art/P1_ART_HARNESS_ARCHITECTURE_20261102.md#L4"
+   ],
+   "maturity": "not_applicable",
+   "lifecycle": "superseded"
+  },
+  {
+   "rule_id": "R-85-01",
+   "statement": "P1 质量门槛：总分≥85、六维各≥3、组合项与硬门槛通过",
+   "locations": [
+    "AGENTS.md#L11",
+    "knowledge/README.md",
+    "planning/art/P1_T084_ART_DIRECTION_STANDARD_20261028.md"
+   ],
+   "conflict": "无冲突；但被通用文件复述，存在范围泄漏风险（新业务可能误用）",
+   "decision": "scope_to_p1",
+   "canonical_source": "planning/art/P1_T084_ART_DIRECTION_STANDARD_20261028.md",
+   "replacement": "通用层不写阈值；P1 业务包 scorecard.json 引用原标准",
+   "evidence": [
+    "planning/art/P1_T084_ART_DIRECTION_STANDARD_20261028.md"
+   ],
+   "maturity": "not_applicable",
+   "lifecycle": "active"
+  },
+  {
+   "rule_id": "R-P1-PARAM-01",
+   "statement": "P1 参考图 SHA、相机、锚点、屏幕色样等专属参数",
+   "locations": [
+    "AGENTS.md",
+    "START_HERE.md",
+    "knowledge/STANDARDS.md",
+    "MODEL_EXECUTION_GUIDE.md"
+   ],
+   "conflict": "无冲突；归属错误（P1 参数出现在根入口/通用层）",
+   "decision": "move_to_p1",
+   "canonical_source": "planning/art/P1_T084_ART_DIRECTION_STANDARD_20261028.md",
+   "replacement": "P1 业务包 references.manifest.json + STYLE_PROFILE.md",
+   "evidence": [
+    "planning/art/ACTIVE_STATIC_ART.json"
+   ],
+   "maturity": "not_applicable",
+   "lifecycle": "active"
+  },
+  {
+   "rule_id": "R-EVID-01",
+   "statement": "源/候选/证据分离；SHA 绑定；同机位对照；失败返修；不得伪造通过",
+   "locations": [
+    "AGENTS.md#L19-L21",
+    "knowledge/REUSABLE_MAP_ART_PIPELINE.md",
+    "planning/art/STATIC_MAP_WORKFLOW_20261028.md"
+   ],
+   "conflict": "表述分散但无相反要求",
+   "decision": "consolidate_common",
+   "canonical_source": "knowledge/common/dev_core/HARNESS_LIFECYCLE.md",
+   "replacement": "通用生命周期单条正文；其余文件保留摘要与指针",
+   "evidence": [
+    "planning/art/STATIC_ART_VERIFICATION_20261101_2226.md"
+   ],
+   "maturity": "not_applicable",
+   "lifecycle": "active"
+  },
+  {
+   "rule_id": "R-DISK-01",
+   "statement": "项目目录 15 GiB 上限/12 GiB 预警；清理先 dry-run；保护源与证据",
+   "locations": [
+    "AGENTS.md#L21"
+   ],
+   "conflict": "无",
+   "decision": "keep_common",
+   "canonical_source": "AGENTS.md",
+   "replacement": null,
+   "evidence": [
+    "art/static_map/p1_autumn_courtyard/v25/REVIEW.md#§15"
+   ],
+   "maturity": "not_applicable",
+   "lifecycle": "active"
+  },
+  {
+   "rule_id": "R-HOOK-01",
+   "statement": "P1 会话 Hook 仅在项目/会话 armed 时阻塞未过门禁的结束；不改用户全局配置",
+   "locations": [
+    "AGENTS.md#L24-L27",
+    "planning/art/CODEX_STATIC_MAP_QUALITY_HOOK_20261029.md"
+   ],
+   "conflict": "无冲突；但属 P1 单业务，不应写成跨业务能力",
+   "decision": "scope_to_p1",
+   "canonical_source": "planning/art/CODEX_STATIC_MAP_QUALITY_HOOK_20261029.md",
+   "replacement": null,
+   "evidence": [
+    "tools/static_map_quality_gate.py",
+    ".codex/hooks.json"
+   ],
+   "maturity": "observed",
+   "lifecycle": "active"
+  },
+  {
+   "rule_id": "R-KNOW-01",
+   "statement": "知识分层（common/business/active）、按需加载、状态三字段分离、唯一权威源",
+   "locations": [
+    "planning/art/ART_STYLE_SYSTEM_AND_NEW_PRODUCT_ONBOARDING_PLAN_20261102.md"
+   ],
+   "conflict": "无既有正文；新增规则",
+   "decision": "new_rule",
+   "canonical_source": "knowledge/README.md",
+   "replacement": null,
+   "evidence": [
+    "knowledge/business/manifest.json"
+   ],
+   "maturity": "proposed",
+   "lifecycle": "active"
+  },
+  {
+   "rule_id": "R-ARTBASE-01",
+   "statement": "项目级美术基线候选条款（主次/轮廓/材质统一/可编辑源/先小样）",
+   "locations": [
+    "planning/art/ART_STYLE_SYSTEM_AND_NEW_PRODUCT_ONBOARDING_PLAN_20261102.md#§2A"
+   ],
+   "conflict": "未经用户批准",
+   "decision": "keep_draft",
+   "canonical_source": "knowledge/common/art_base/ART_STYLE_BASE.md",
+   "replacement": null,
+   "evidence": [],
+   "maturity": "proposed",
+   "lifecycle": "draft"
+  }
+ ],
+ "summary": {
+  "files_audited": 27,
+  "rules_audited": 9,
+  "conflicts_blocking_now": 0,
+  "superseded_rules": [
+   "R-BLIND-01"
+  ],
+  "scope_leaks_fixed": [
+   "R-85-01",
+   "R-P1-PARAM-01",
+   "R-HOOK-01"
+  ],
+  "draft_rules": [
+   "R-ARTBASE-01"
+  ],
+  "deferred": [
+   "knowledge/REUSABLE_MAP_ART_PIPELINE.md 物理移动延后至引用全部更新后（P0-4 后续批次）"
+  ],
+  "notes": "R-VEG-01 经复核为 active（以 23:23 记录为准）；21:00 手绘方向为 superseded 的中间尝试"
+ },
+ "hash_note": "文件 SHA 为迁移后当前值；迁移前副本见 planning/art/migration_20261102/rollback_r0/ROLLBACK_MANIFEST.json"
+}

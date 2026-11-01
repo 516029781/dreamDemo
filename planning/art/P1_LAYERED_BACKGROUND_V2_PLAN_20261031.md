@@ -1,6 +1,6 @@
 # P1 秋日静态地图：背景重绘施工方案 V2
 
-> ⛔ **历史文档（SUPERSEDED）** —— 当前唯一有效方案是 [P1_BACKGROUND_OPTIMIZE_v24_1_PLAN.md](P1_BACKGROUND_OPTIMIZE_v24_1_PLAN.md)（v24.2）。本文仅作决策与方法记录，**不要照此执行**。
+> ⛔ **历史方案，已由 2026-11-01 v3 用户目标取代。** 当前 P1 完全无植被，也不要求其他模型独立终审；本文只供追溯，不按其中的植被、背景坐标或旧验收规则制作。现行任务见 `planning/art/P1_WORKORDER_20261101_NEXT.md`，流程见 `planning/art/STATIC_MAP_WORKFLOW_20261028.md`。
 
 
 状态：**当前背景制作方案；尚未完成新候选。** 本文订正 `P1_LAYERED_BACKGROUND_MATTE_PLAN_20261031.md` 与 `P1_LAYERED_BACKGROUND_BUILD_SPEC_V1.json` 的背景制作和验收方法。整体流程、85 分与逐维 ≥3 的标准仍分别由 `STATIC_MAP_WORKFLOW_20261028.md`、`P1_T084_ART_DIRECTION_STANDARD_20261028.md` 决定。机器可读的起始参数见 `P1_LAYERED_BACKGROUND_BUILD_SPEC_V2.json`。只制作固定机位的静态环境图；不制作角色、UI 或玩法。

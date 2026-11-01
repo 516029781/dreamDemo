@@ -1,0 +1,35 @@
+{
+ "schema": "resolved-knowledge-v1",
+ "request_id": "_validation_plan",
+ "run_id": "20261102-0322",
+ "business_id": "p1_autumn_static",
+ "deliverable_type": "discussion",
+ "loaded": [
+  {
+   "path": "AGENTS.md",
+   "sha256": "1b88c58f07b28b8e4dc66f01ccfb02c43fa6c3ad42b56d63635457789be1b841",
+   "scope": "common/dev_core",
+   "lifecycle": "active",
+   "maturity": "not_applicable",
+   "usage": "method"
+  },
+  {
+   "path": "knowledge/business/p1_autumn_static/START_HERE.md",
+   "sha256": "1ee0c07b8ecb6873f24dc5612421c2c1a5713ed6a0da71b7d7d021f5b61e8522",
+   "scope": "business/p1_autumn_static",
+   "lifecycle": "active",
+   "maturity": "not_applicable",
+   "usage": "reading_only"
+  }
+ ],
+ "decisions": [],
+ "not_loaded_neighbors": [
+  "knowledge/business/research_arknights_mapdata/"
+ ],
+ "verification": {
+  "all_paths_exist": true,
+  "sha_matched": true,
+  "conflicts_blocking": []
+ },
+ "created_at": "2026-11-02T02:54:13"
+}

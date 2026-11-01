@@ -2,6 +2,8 @@
 
 日期：2026-11-01。本文只订正**当前入口、状态与证据口径**，不生成新图，也不修改既有 Blender 源、旧评审包或评分阈值。机器可读状态以同目录的 `ACTIVE_STATIC_ART.json` 为准；开工时须重新核实磁盘，不能长期把本快照当实时状态。
 
+> **历史状态快照。** 本文记录当日 22:26 的核查，后续 v3 用户决策已覆盖其中的执行建议：P1 画面完全无植被，制作模型自评并逐维反证，不要求其他模型独立终审。尤其本文 I5 中“取得评审”、旧的树草语义 ROI 和“先人工评审”等句子不再作为当前任务步骤。当前只按 `START_HERE.md` 与 `STATIC_MAP_WORKFLOW_20261028.md` 执行。
+
 ## 当前应相信什么
 
 1. 唯一整图参考仍是 `reference/_raw_screenshots/P1/t084s.jpg`（SHA256 见 `ACTIVE_STATIC_ART.json`）；现行任务范围与85分门槛仍以 `AGENTS.md`、`STATIC_MAP_WORKFLOW_20261028.md`、`P1_T084_ART_DIRECTION_STANDARD_20261028.md` 为准。

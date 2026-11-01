@@ -1,0 +1,30 @@
+{
+  "schema": "active-product-v1",
+  "business_id": "<business_id>",
+  "business_version": "r01",
+  "active_request": {
+    "request_id": "<YYYYMMDD-slug>",
+    "brief": "path/REQUIREMENTS_BRIEF.md",
+    "design": "path/SOLUTION_DESIGN.md",
+    "design_snapshot": "path/baselines/design_rNN/BASELINE_MANIFEST.json",
+    "tests": "path/test_cases.json",
+    "dev_review": "path/DEV_FEASIBILITY_REVIEW.md",
+    "status": "requirements | design | dev_review | production | final | delivered"
+  },
+  "candidate": {
+    "path": "<candidate dir>",
+    "scene_sha256": null,
+    "image_sha256": null,
+    "source_image_binding": "unverified | verified",
+    "binding_evidence": null
+  },
+  "quality": {
+    "score_status": "unverified_current_image | scored | target_met | rework_required",
+    "scores": null,
+    "hard_gates": null,
+    "review_sha_bound": false
+  },
+  "blocking_items": [],
+  "next_step": "<one sentence>",
+  "updated_at": "<ISO8601>"
+}

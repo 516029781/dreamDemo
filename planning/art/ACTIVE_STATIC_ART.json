@@ -1,7 +1,7 @@
 {
   "schema": "active-static-art-v1",
   "updated_on": "2026-11-01",
-  "updated_at": "2026-11-01T22:26+08:00",
+  "updated_at": "2026-11-01T23:15+08:00",
   "scope": "P1 autumn static environment image and editable Blender source",
   "reference": {
     "path": "reference/_raw_screenshots/P1/t084s.jpg",
@@ -34,18 +34,25 @@
     "execution_rules": "AGENTS.md",
     "workflow": "planning/art/STATIC_MAP_WORKFLOW_20261028.md",
     "visual_standard": "planning/art/P1_T084_ART_DIRECTION_STANDARD_20261028.md",
-    "correction_plan": "planning/art/STATIC_ART_INFORMATION_CORRECTION_20261101.md",
-    "verification_record": "planning/art/STATIC_ART_VERIFICATION_20261101_2226.md"
+    "quality_gate": "planning/art/CODEX_STATIC_MAP_QUALITY_HOOK_20261029.md"
   },
   "next_production_plan": {
     "path": "planning/art/P1_WORKORDER_20261101_NEXT.md",
     "status": "ready_not_started",
     "gaps": [
       "value structure missing (high-key flat light; weak contact shadows)",
-      "left tree reads as bare skeleton / isolated dark clump",
-      "grass distribution imbalanced (planters only; banks and foreground bare)"
+      "remove every existing plant asset, texture, planter, soil patch, and vegetation instance",
+      "replace the left tree zone with a grounded, functional maintenance cabinet/equipment group",
+      "replace the right grass planter with a closed cylindrical filter/storage vessel; clarify foreground/midground/background separation"
     ],
-    "note": "No new candidate started. One hypothesis per batch; same-camera re-render plus manual crop comparison."
+    "note": "No new candidate started. Current user direction requires zero vegetation anywhere in the image. Use large purposeful equipment and structural forms with restrained details. P1 vegetation is factual reference content only; no fidelity claim for it is part of the adaptation score. Record one hypothesis per batch and compare same-camera renders. Do not require independent final review."
+  },
+  "user_art_direction": {
+    "updated_on": "2026-11-01",
+    "avoid": ["all vegetation", "trees", "leaves", "grass", "flowers", "shrubs", "moss", "vines", "weeds", "planters", "soil patches", "plant textures", "random filler props"],
+    "prefer": ["large readable boxes", "functional equipment masses", "closed cylindrical utility vessel", "low detail", "clear spacing and silhouettes", "grounded structural layering"],
+    "applies_to": "current P1 static-map candidate; future maps follow their own brief and latest user direction",
+    "tradeoff": "P1 reference contains plants, but current target explicitly removes all vegetation. Score the execution quality of the no-vegetation adaptation; do not deduct points solely for the requested removal and do not claim plant-feature fidelity."
   },
   "evidence_integrity": {
     "old_delivery_applies_to": "renders/final.png sha16 3db2b42c (v25 initial) and appended v25-r2 block sha16 1113cb01; scene 02a67405 / 4bc610cd",
@@ -69,7 +76,15 @@
     "planning/art/V24_SCENE_LOGIC_AND_ART_REVIEW_20261101.md",
     "planning/art/P1_V25_ART_REPAIR_PLAN_20261101.md",
     "planning/art/P1_V26_VEGETATION_ROLLBACK_PLAN_20261101.md",
-    "planning/art/P1_V27_HANDPAINTED_FOLIAGE_PLAN_20261101.md"
+    "planning/art/P1_V27_HANDPAINTED_FOLIAGE_PLAN_20261101.md",
+    "planning/art/STATIC_ART_INFORMATION_CORRECTION_20261101.md",
+    "planning/art/STATIC_ART_VERIFICATION_20261101_2226.md",
+    "planning/art/P1_BACKGROUND_OPTIMIZE_v24_1_PLAN.md",
+    "planning/art/P1_TWO_TIER_TERRAIN_PLAN_20261101.md",
+    "planning/art/P1_EXECUTION_TABLE_20261101.md",
+    "planning/art/P1_SCENE_ART_REDESIGN_PLAN_20261030.md",
+    "planning/art/P1_REFERENCE_METHOD_ALIGNMENT_PLAN_20261031.md",
+    "planning/art/BACKGROUND_PLANS_INDEX.md"
   ],
   "diagnostic_only": [
     "planning/art/P1_REFERENCE_FEATURE_AUDIT_20261101.md"
@@ -78,7 +93,7 @@
     "i3_mask_and_roi_calibration": "not_started",
     "source_image_reproduction_proof": "not_verified",
     "new_candidate_packaging": "not_started",
-    "current_image_review_bound_to_its_sha": "not_done"
+    "producer_self_review_bound_to_current_image_sha": "not_done"
   },
-  "next_production_start": "Follow P1_WORKORDER_20261101_NEXT.md gap order 1->2->3, one hypothesis per batch, same-camera re-render with crop comparison. Calibrate I3 mask before using any numeric color gate; keep full-image color statistics diagnostic_only. Verify source-image binding by isolated rerender before packaging a candidate. Do not inherit old review scores."
+  "next_production_start": "Follow P1_WORKORDER_20261101_NEXT.md. Begin with preservation and a new unused candidate directory; remove every vegetation asset, replace the left/right plant zones with functional equipment, repair lighting and background hierarchy, then complete same-camera score-and-repair loops. The producer self-review plus mechanical v3 gate is the only required release path; no independent reviewer is required. Verify source-image binding by isolated rerender. Do not inherit old scores."
 }

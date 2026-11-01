@@ -1,6 +1,6 @@
 # P1 背景层次重做方案
 
-> ⛔ **历史文档（SUPERSEDED）** —— 当前唯一有效方案是 [P1_BACKGROUND_OPTIMIZE_v24_1_PLAN.md](P1_BACKGROUND_OPTIMIZE_v24_1_PLAN.md)（v24.2）。本文仅作决策与方法记录，**不要照此执行**。
+> ⛔ **历史方案，已由 2026-11-01 v3 用户目标取代。** 当前 P1 完全无植被，也不要求其他模型独立终审；本文只供追溯，不按其中的植被、背景坐标或旧验收规则制作。现行任务见 `planning/art/P1_WORKORDER_20261101_NEXT.md`，流程见 `planning/art/STATIC_MAP_WORKFLOW_20261028.md`。
 
 
 日期：2026-10-29  

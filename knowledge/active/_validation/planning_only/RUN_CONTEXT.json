@@ -1,0 +1,32 @@
+{
+ "schema": "run-context-v1",
+ "project_root": "C:/软件/鼠鼠",
+ "session_id": "validation-plan",
+ "request_id": "_validation_plan",
+ "run_id": "20261102-0322",
+ "task_mode": "planning",
+ "business_id": "p1_autumn_static",
+ "deliverable_type": "discussion",
+ "knowledge_snapshot": {
+  "manifest": "knowledge/business/manifest.json",
+  "business_version": "r02",
+  "art_base": "not-loaded"
+ },
+ "design_baseline": {
+  "path": "none",
+  "status": "none"
+ },
+ "candidate": {
+  "path": "none",
+  "write_owner_run": "none",
+  "mode": "readonly"
+ },
+ "checks": {
+  "harness_spec": "none (planning mode never arms production gate)",
+  "manual_check_set": [
+   "document references only"
+  ]
+ },
+ "created_at": "2026-11-02T02:54:13",
+ "notes": "planning: review/plan discussion, no candidate allocation, no Stop gate"
+}

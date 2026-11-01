@@ -1,0 +1,33 @@
+{
+  "schema": "baseline-manifest-v1",
+  "baseline_id": "design_r01",
+  "request_id": "<YYYYMMDD-slug>",
+  "created_at": "<ISO8601>",
+  "status": "draft | frozen",
+  "contents": [
+    {
+      "role": "solution_design",
+      "path": "SOLUTION_DESIGN.md",
+      "sha256": "<sha>",
+      "copied": true
+    },
+    {
+      "role": "test_cases",
+      "path": "test_cases.json",
+      "sha256": "<sha>",
+      "copied": true
+    },
+    {
+      "role": "preview_pack",
+      "path": "DESIGN_PREVIEW_PACK/",
+      "sha256": "<aggregate or per-file list>",
+      "copied": true
+    }
+  ],
+  "immutability": "frozen baselines are never edited in place; create design_r(NN+1) and re-approve affected items",
+  "dev_review": {
+    "path": "DEV_FEASIBILITY_REVIEW.md",
+    "status": "confirmed | changes_required | blocked_on_user_input | blocked_technical"
+  },
+  "parent_baseline_id": null
+}

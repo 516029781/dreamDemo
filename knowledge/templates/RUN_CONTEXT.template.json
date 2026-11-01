@@ -1,0 +1,30 @@
+{
+  "schema": "run-context-v1",
+  "project_root": "C:/软件/鼠鼠",
+  "session_id": "<session>",
+  "request_id": "<YYYYMMDD-slug>",
+  "run_id": "<YYYYMMDD-HHMM>",
+  "task_mode": "planning | production",
+  "business_id": "<business_id | none>",
+  "deliverable_type": "<type>",
+  "knowledge_snapshot": {
+    "manifest": "knowledge/business/manifest.json",
+    "business_version": "r01",
+    "art_base": "none | knowledge/common/art_base/ART_STYLE_BASE.md#sha"
+  },
+  "design_baseline": {
+    "path": "baselines/design_rNN/BASELINE_MANIFEST.json",
+    "status": "none | confirmed"
+  },
+  "candidate": {
+    "path": "<absolute candidate dir>",
+    "write_owner_run": "<run_id>",
+    "mode": "write | readonly"
+  },
+  "checks": {
+    "harness_spec": "business/<id>/HARNESS_SPEC.json or none",
+    "manual_check_set": ["file existence", "sha binding", "crop comparison"]
+  },
+  "created_at": "<ISO8601>",
+  "notes": "一个会话的活动指针只指向自身运行；不得使用 latest 等共享名。"
+}

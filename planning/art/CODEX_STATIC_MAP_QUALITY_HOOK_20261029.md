@@ -1,39 +1,32 @@
 # Codex 项目级 P1 静态地图质量闭环
 
-更新：2026-10-29。作用范围只限本仓库中的 Codex 会话，不配置用户级或全局 hook。
+更新：2026-11-01，v3。作用范围只限本仓库中的 Codex 会话，不配置用户级或全局 hook。
 
-> 2026-10-31 复核：项目 hook 与 gate 已恢复为当前 `AGENTS.md` 的结束规则：低分使用 `rework_required` 继续返修；只有 `target_met` 或证据完整的真实 `blocked_external` 可以结束。旧 `quality_below_target` 仅保留在历史候选报告中，不是新候选的有效结束状态。
+> v3 用户决策：**不要求其他模型独立终审；整图完全无植被。** 旧 schema、独立终审和稀疏植被规则均不适用于新候选。
 
 ## 1. 运行边界
 
-- Hook 定义在 `.codex/hooks.json`，处理程序是 `.codex/hooks/static_map_quality_hook.py`；评分与证据核验器是 `tools/static_map_quality_gate.py`。
-- 处理程序用脚本所在仓库根与事件 `cwd` 做路径包含校验，并确认根目录含 `.git` 和 `AGENTS.md`；中文 Windows 路径不经 Git 子进程编码转换。
-- `UserPromptSubmit` 只在用户明确要求开始/继续制作、返修或重渲 P1 静态地图时，为该 Codex `session_id` 建立本地状态。可直接说“继续优化 P1 静态地图达到目标”，或在执行提示中加 `!p1-static-map-run`。纯讨论、方案、审核问题不启动。
-- 会话状态写入 `.codex/state/static_map_runs/<session_id>.json`，该目录在 `.gitignore` 中，不提交、不共享给其他会话。未启动该任务的同项目会话在 Stop 时直接放行；其他项目从不加载本项目配置。
-- 用户明确说暂停/取消制作时，只清除本会话状态。完成或外部阻塞后归档到同一 ignored state 目录并解除本会话 hook。
-- 项目 hook 是非托管 hook。Codex 首次要求审阅/信任时，应在 Codex 的 `/hooks` 页面核对本文件和脚本后信任；这一步只信任此项目定义，不需要修改 `C:\Users\tt\.codex`。
+- Hook 定义在 `.codex/hooks.json`，处理程序为 `.codex/hooks/static_map_quality_hook.py`，机械验收脚本为 `tools/static_map_quality_gate.py`。
+- Hook 核对项目根、事件 `cwd`、`.git` 与 `AGENTS.md`。只在用户明确启动/继续 P1 静态地图制作、且当前会话已 armed 时工作；方案讨论、普通审核和其他项目不受阻。
+- 会话状态在 `.codex/state/static_map_runs/<session_id>.json`，该目录 ignored，不提交、不与其他会话共享。用户明确暂停/取消时清除当前会话状态；正常达标或完整真实外部阻塞后归档并解除 hook。
+- Hook 未受信任或未 armed 时，执行者按 `AGENTS.md` 手动运行 gate。无需修改用户级 Codex 设置。
 
-## 2. 目标与返回规则
+## 2. 允许结束的质量条件
 
-正常放行必须同时满足：
+正常 `target_met` 必须同时满足：
 
-1. 固定参考 `reference/_raw_screenshots/P1/t084s.jpg` 的 SHA256 为 `13706e7eab96726565156a9e6440727de5d5bac82ee9c09c293a5745dd7446de`。
-2. Blender 源、最终渲染、REVIEW、DELIVERY、P1 profile 全部存在，路径在当前候选目录内且 SHA 与 `GATE_REPORT.json` 一致；`DELIVERY.json` 和 profile 再次绑定相同源/图/参考。
-3. 两份盲评分别按 P1 标准权重 20/20/20/15/15/10 计算，且各自达到总分 ≥85、每维 ≥3/4；总分由 gate 重算，不信任手填总分。制作者自评须有证据并绑定同一参考/最终图，但只用于返修导航，不作为通过票。
-4. 两份盲评各自记录 floor/tree/grass/lighting 四项组合检查及八项 P1 硬门槛；每份评审均须全为 `pass` 并附可读证据，报告汇总项也必须通过。
-5. Blender 场景重新打开成功，复现渲染的 SHA 与最终图一致。
+1. 固定参考是 `reference/_raw_screenshots/P1/t084s.jpg`，SHA256 为 `13706e7eab96726565156a9e6440727de5d5bac82ee9c09c293a5745dd7446de`。
+2. `scene.blend`、`renders/final.png`、`REVIEW.md`、`DELIVERY.json`、参考 profile 全部在候选内，真实 SHA 与 gate 一致；DELIVERY/profile 再绑定同一参考、源、图。
+3. **无独立审核要求。** 制作者须亲自查看绑定的最终图，提交六维自评，总分 `≥85/100` 且每维 `≥3/4`；每维要有至少 20 字符的可见证据。再由同一制作模型做一次逐维反证自检：列出最可能推翻/降低当前评分的可见反例、处理理由及最终分，并绑定同一 render SHA。评分权重为 20/20/20/15/15/10，维度名见 P1 美术标准。
+4. 组合检查 `floor`、`structures`、`lighting`、`background` 和八项硬门槛均为 `pass`，每项含至少 20 字符图像证据。必须包含 `no_vegetation`：整图不得出现树、叶、草、花、灌木、苔藓、藤蔓、盆栽、裸土/花池或植物图案/贴图。REVIEW 还须记录 Outliner、隐藏集合、实例/Geometry Nodes、材质和图片纹理的资产清点，以及最终图全画面目视结果；仅靠关键词搜索不能结案。P1 原图植物仅为参考事实，不进入当前评分目标。
+5. 隔离复制后重开 Blender 成功，复现渲染退出码为 0，复现 SHA 与绑定最终图一致。
+6. 若失败，`repair_queue` 对每项写明缺陷、原因、修复动作、预期效果和验证方法。`rework_required` 会阻止当前制作任务结束并提示同一制作模型继续修改源、重渲、重评。
 
-返修阶段按制作侧预检分流：当报告状态为 `rework_required`，且制作自评低于 85、任一维低于 3、或汇总组合/硬门槛尚未通过时，gate 反馈这些制作侧修复项，暂不要求两份盲评。制作侧预检达到目标后，即使仍有盲评/复现/哈希问题，gate 才要求补齐最终评审并继续阻止结束。最终状态 `target_met` 始终必须含两份完整盲评；制作者自评分数本身不作为放行票。
+只有确实无法由当前制作模型解决的外部依赖，且报告记录至少两种替代尝试、候选内带 SHA 的证据和恢复条件，才可 `blocked_external` 结束；等待独立审稿、普通低分或实现困难不属于外部阻塞。门槛不设返修次数上限。
 
-同一方法两轮无改善时，记录反例并换技术路线继续返修；尝试次数或完整低分包均不构成正常结束条件。只有外部状态真正阻断继续工作时，才按下文 `blocked_external` 的证据契约报告未完成。
+## 3. 文件布局和报告契约
 
-任何报告缺失、字段错误、源图或参考 hash 不一致、分数不足、组合项失败、硬门槛失败、复现失败，Stop hook 都返回 `decision: block`，让同一 Codex 会话继续；提示中包含失败项和报告里的修复队列。没有固定次数上限。达标后自动解除本会话状态。只有结构完整的 `blocked_external`（具体外部依赖、至少两种替代尝试、候选目录内的带 SHA 证据和恢复条件）可允许任务以“未完成”结束；不会被写成 `target_met`。
-
-## 3. 当前候选与文件结构
-
-启动时检查实际版本目录，从当前最高版本号之后预留新目录，不覆盖旧版。不从历史文档中的 v06/v08 示例选择新候选；以下结构与 JSON 的版本号仅为 schema 示例：
-
-```
+```text
 art/static_map/p1_autumn_courtyard/vNN/
 ├─ scene.blend
 ├─ renders/final.png
@@ -43,29 +36,47 @@ art/static_map/p1_autumn_courtyard/vNN/
 └─ reference_analysis/P1_REFERENCE_PROFILE.json
 ```
 
-报告里所有路径使用相对仓库根的 `/` 分隔符。`GATE_REPORT.json` 的字段示意（下面故意省略部分维度、盲评、门槛项目，**不能直接作为通过报告**）：
+报告路径采用仓库根相对路径，分隔符为 `/`。以下仅为字段形状示意，不可直接当作通过报告：
 
 ```json
 {
-  "schema": "p1-static-map-quality-gate/v1",
-  "candidate_id": "v06",
+  "schema": "p1-static-map-quality-gate/v3",
+  "candidate_id": "vNN",
   "status": "target_met",
   "bindings": {
     "reference": {"path": "reference/_raw_screenshots/P1/t084s.jpg", "sha256": "..."},
-    "scene": {"path": "art/static_map/p1_autumn_courtyard/v06/scene.blend", "sha256": "..."},
-    "render": {"path": "art/static_map/p1_autumn_courtyard/v06/renders/final.png", "sha256": "..."},
-    "review": {"path": "art/static_map/p1_autumn_courtyard/v06/REVIEW.md", "sha256": "..."},
-    "delivery": {"path": "art/static_map/p1_autumn_courtyard/v06/DELIVERY.json", "sha256": "..."},
-    "profile": {"path": "art/static_map/p1_autumn_courtyard/v06/reference_analysis/P1_REFERENCE_PROFILE.json", "sha256": "..."}
+    "scene": {"path": "art/static_map/p1_autumn_courtyard/vNN/scene.blend", "sha256": "..."},
+    "render": {"path": "art/static_map/p1_autumn_courtyard/vNN/renders/final.png", "sha256": "..."},
+    "review": {"path": "art/static_map/p1_autumn_courtyard/vNN/REVIEW.md", "sha256": "..."},
+    "delivery": {"path": "art/static_map/p1_autumn_courtyard/vNN/DELIVERY.json", "sha256": "..."},
+    "profile": {"path": "art/static_map/p1_autumn_courtyard/vNN/reference_analysis/P1_REFERENCE_PROFILE.json", "sha256": "..."}
   },
   "producer_review": {
-    "reviewer_id": "producer",
+    "producer_id": "codex-p1-producer",
     "reference_sha256": "13706e7eab96726565156a9e6440727de5d5bac82ee9c09c293a5745dd7446de",
-    "render_sha256": "与 bindings.render.sha256 相同",
-    "dimensions": {"composition_and_space": {"score": 3.5, "evidence": "基于固定机位全图和锚点对照的具体观察……"}},
-    "total_score": 88.0
+    "render_sha256": "same-as-bindings.render.sha256",
+    "dimensions": {
+      "composition_and_space": {"score": 3.5, "evidence": "固定镜头下六个空间锚点与高差的可见对照……"},
+      "object_structure": {"score": 3.5, "evidence": "维护柜和圆筒设备均接地且有检修面……"},
+      "surface_materials": {"score": 3, "evidence": "石材与金属明度、粗糙度可区分……"},
+      "scene_layering_and_object_organization": {"score": 3.5, "evidence": "全图无植被，设备替代体块有明确主次……"},
+      "lighting_depth": {"score": 3.5, "evidence": "暖地面、暗设备和冷软远景保持分层……"},
+      "style_cohesion": {"score": 3.5, "evidence": "近中远细节密度一致且无突兀风格……"}
+    },
+    "total_score": 85.0
   },
-  "blind_reviews": [],
+  "producer_countercheck": {
+    "producer_id": "codex-p1-producer",
+    "render_sha256": "same-as-bindings.render.sha256",
+    "checks": {
+      "composition_and_space": {"challenge": "寻找主锚点偏位/空间关系不成立的可见反例……", "decision": "score_retained", "score_before": 3.5, "reason": "检查后发现台阶与设备的层级成立，未找到足以降分的反例……", "score_after": 3.5},
+      "object_structure": {"challenge": "寻找设备悬空、接口缺失或用途不明的反例……", "decision": "score_retained", "score_before": 3.5, "reason": "检查底座与检修面后保留当前分数……", "score_after": 3.5},
+      "surface_materials": {"challenge": "寻找石材与金属区分不清或表面过平的反例……", "decision": "score_retained", "score_before": 3, "reason": "对照近景材质后保留当前分数……", "score_after": 3},
+      "scene_layering_and_object_organization": {"challenge": "寻找植物残留、设备随机填空或前中远拥挤的反例……", "decision": "score_retained", "score_before": 3.5, "reason": "全图和缩图检查后保留当前分数……", "score_after": 3.5},
+      "lighting_depth": {"challenge": "寻找接触影缺失、远景过硬或明暗无层次的反例……", "decision": "score_retained", "score_before": 3.5, "reason": "检查全图明暗分层后保留当前分数……", "score_after": 3.5},
+      "style_cohesion": {"challenge": "寻找物件细节密度或材质风格互相冲突的反例……", "decision": "score_retained", "score_before": 3.5, "reason": "全图检查后保留当前分数……", "score_after": 3.5}
+    }
+  },
   "combo_checks": {},
   "hard_gates": {},
   "reproducibility": {"scene_reopened": true, "exit_code": 0, "render_sha256": "..."},
@@ -73,32 +84,22 @@ art/static_map/p1_autumn_courtyard/vNN/
 }
 ```
 
-`status` 允许 `target_met`、`rework_required` 或 `blocked_external`。`producer_review.dimensions` 与盲评（若 target_met）都必须包含六个维度对象，每个有 `score: 0..4`、至少 20 字符的可见证据；每份评审有重算一致的 `total_score`。制作者评审也必须包含当前 `reference_sha256` 和 `render_sha256`；在 `rework_required` 且制作侧预检未过时，gate 不要求盲评。制作侧预检通过后，`target_met` 的两个盲评必须有不同 reviewer_id、`blind: true`、当前 reference/render SHA，不能把制作者 ID 作为审阅人；每份盲评内部还必须含完整 `combo_checks` 和 `hard_gates`。低分/门槛失败时，`repair_queue` 必须逐项说明 defect、cause、action、expected_effect、verification，供同一会话返修。四项组合检查 key 为 `floor/tree/grass/lighting`；硬门槛 key 为 `foreground_steps_railings`、`right_grass_cylinder`、`cohesive_non_checkerboard_ground`、`tree_branching_negative_space`、`dense_wavy_grass_canopy`、`functional_midground_structure`、`cool_soft_background`、`materials_resolve`；每项为 `{ "status": "pass", "evidence": "..." }`。
+允许状态为 `target_met`、`rework_required`、`blocked_external`。维度 key 与权重固定为：`composition_and_space:20`、`object_structure:20`、`surface_materials:20`、`scene_layering_and_object_organization:15`、`lighting_depth:15`、`style_cohesion:10`。gate 重算总分，不信任手填值。`producer_countercheck.checks` 必须包含全部六维；每项 `challenge`、`reason` 至少 20 字符，`decision` 为 `score_retained` 或 `deduction_applied`；保分时前后分一致，扣分时后分必须更低，且 `score_after` 等于该维最终自评分。目标状态还要求 `repair_queue` 是空列表。`producer_id` 必须与 `producer_review.producer_id` 一致，render SHA 必须与当前图一致。gate 仍无法验证这些文字是否诚实或视觉判断是否正确。
 
-`DELIVERY.json` 须包含：
+组合检查 key：`floor`、`structures`、`lighting`、`background`。硬门槛 key：`foreground_steps_railings`、`right_cylindrical_equipment`、`cohesive_non_checkerboard_ground`、`left_area_functional_replacement`、`no_vegetation`、`functional_midground_structure`、`cool_soft_background`、`materials_resolve`。每项格式为 `{ "status": "pass", "evidence": "..." }`。
 
-```json
-{
-  "candidate_id": "v06",
-  "bindings": {
-    "reference_sha256": "...",
-    "scene_sha256": "...",
-    "final_render_sha256": "...",
-    "reference_profile_sha256": "..."
-  }
-}
+`DELIVERY.json` 的 `bindings` 必须含 `reference_sha256`、`scene_sha256`、`final_render_sha256`、`reference_profile_sha256`；profile 本身也须含固定 `reference_sha256`。schema v2 及更早报告只供历史追溯，不可用于新候选。
+
+## 4. Gate 能力边界
+
+脚本能核真实路径和 SHA、参考身份、分数算术/阈值、清单字段、复现声明及修复队列；它**不看图片、不启动 Blender、不检测场景对象，也不证明自评真实**。因此制作模型必须真的查看 SHA 绑定的图，并用具体可见区域写证据；机械 gate 通过只表示证据结构和数字通过，不表示脚本自动判断画质。
+
+Codex `decision: block` 会向同一已 armed 会话提示失败项和修复队列，不会自动编辑 Blender 文件。制作模型需继续执行“看图找根因 → 修改原生源 → 同机位渲染 → 更新 SHA/自评 → 再跑 gate”。它不会阻止用户手动停止或外部强行中断。
+
+手动核验命令：
+
+```powershell
+python tools/static_map_quality_gate.py --candidate art/static_map/p1_autumn_courtyard/vNN
 ```
 
-P1 profile 须含同一 `reference_sha256`。`blocked_external` 可不具备最终源/图/评分，但必须绑定固定参考，并在 `external_blocker` 中写清具体外部依赖、至少两种替代尝试（各有 action/result）、候选目录内带 SHA 的失败证据和恢复条件；通过此例外只表示任务被记录为外部阻塞，绝不表示质量达标。
-
-## 4. 可信度边界
-
-脚本能客观核验文件路径、真实 SHA、固定参考身份、分数算术、阈值、状态字段、评审自报的组合/硬门槛和返修证据是否齐全。它不能从 JSON 证明审阅者真的独立，也不能替代视觉判断；模型必须看绑定的图像并按 `P1_T084_ART_DIRECTION_STANDARD_20261028.md` 给出逐项可见证据。不要把“机械门禁通过”表述成独立的人类艺术验收。双盲声明仍依赖执行者诚实。
-
-Codex Stop hook 的 `decision: block` 会自动生成继续提示；它不会拒绝用户、停止按钮或外部强制中断。项目级 hook 仅在此 `.codex` 层受信任时生效。若 Codex 未加载/未信任 hook，可手动执行：
-
-```
-python tools/static_map_quality_gate.py --candidate art/static_map/p1_autumn_courtyard/v06
-```
-
-继续规范以 `AGENTS.md`、`STATIC_MAP_WORKFLOW_20261028.md` 和 `P1_T084_ART_DIRECTION_STANDARD_20261028.md` 为准；本文件只定义 Codex 接线与 gate 的机器契约。
+当前流程权威来源是 `AGENTS.md`、`planning/art/STATIC_MAP_WORKFLOW_20261028.md` 和 `planning/art/P1_T084_ART_DIRECTION_STANDARD_20261028.md`；本文件只定义项目 Hook 接线和机器契约。

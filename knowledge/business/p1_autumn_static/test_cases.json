@@ -1,0 +1,97 @@
+{
+  "schema": "business-test-cases-v1",
+  "business_id": "p1_autumn_static",
+  "version": "r02",
+  "bound_workorder": "planning/art/P1_WORKORDER_20261101_NEXT.md",
+  "cases": [
+    {
+      "test_id": "TEST-P1-FILES",
+      "covers": ["P1-A"],
+      "stage": "final",
+      "check_type": "mechanical",
+      "responsible": "automated",
+      "method": "sha256 of reference, scene, final image vs ACTIVE_STATIC_ART.json",
+      "pass_criteria": "all three exist and full sha256 match",
+      "evidence_path": "<run>/evidence/TEST-P1-FILES/",
+      "diagnostic_only": false,
+      "failure_rule": "record state_mismatch; do not cite the state file until corrected"
+    },
+    {
+      "test_id": "TEST-P1-BIND",
+      "covers": ["P1-A"],
+      "stage": "final",
+      "check_type": "mechanical",
+      "responsible": "automated",
+      "method": "isolated copy reopen + render with recorded command; compare sha/tolerance",
+      "pass_criteria": "reproduction record exists, bound to the same image sha",
+      "evidence_path": "<run>/evidence/TEST-P1-BIND/",
+      "diagnostic_only": false,
+      "failure_rule": "mark source_image_binding unverified; do not claim packaging"
+    },
+    {
+      "test_id": "TEST-P1-NOVEG",
+      "covers": ["P1-B"],
+      "stage": "prototype",
+      "check_type": "visual",
+      "responsible": "model_visual",
+      "method": "outliner/hidden-collection/GN instance/material/image-texture sweep + full-frame corner inspection",
+      "pass_criteria": "no tree, leaf, grass, flower, shrub, moss, vine, weed, planter, bare soil or plant texture in final image",
+      "evidence_path": "<run>/evidence/TEST-P1-NOVEG/",
+      "diagnostic_only": false,
+      "failure_rule": "remove asset and its instances; re-check references; rerun full-frame inspection"
+    },
+    {
+      "test_id": "TEST-P1-REPLACE",
+      "covers": ["P1-B"],
+      "stage": "prototype",
+      "check_type": "visual",
+      "responsible": "model_visual",
+      "method": "left tree zone and right cylinder zone crops; check purpose, base contact, doors/ports and shadow",
+      "pass_criteria": "left zone reads as maintenance cabinet group (2-3 modules, grounded, readable openings); right zone reads as closed cylindrical vessel (lid, support ring, few ports); neither floats",
+      "evidence_path": "<run>/evidence/TEST-P1-REPLACE/",
+      "diagnostic_only": false,
+      "failure_rule": "revise massing/grounding; keep one hypothesis per batch"
+    },
+    {
+      "test_id": "TEST-P1-VALUE",
+      "covers": ["P1-C"],
+      "stage": "prototype",
+      "check_type": "visual",
+      "responsible": "model_visual",
+      "method": "same-camera crops at stairs / equipment base / planter base; judge three value bands and contact shadows",
+      "pass_criteria": "each named crop shows readable lit face, shaded face and contact shadow in the same direction as reference",
+      "evidence_path": "<run>/evidence/TEST-P1-VALUE/",
+      "diagnostic_only": false,
+      "failure_rule": "adjust sun/world/AO only; rerun crops"
+    },
+    {
+      "test_id": "TEST-P1-COLOR-DIAG",
+      "covers": ["DIAG"],
+      "stage": "prototype",
+      "check_type": "manual",
+      "responsible": "model_visual",
+      "method": "full-image HSV/brightness statistics vs reference",
+      "pass_criteria": "n/a - trend reading only",
+      "evidence_path": "<run>/evidence/TEST-P1-COLOR-DIAG/",
+      "diagnostic_only": true,
+      "failure_rule": "never gates; requires I3 mask calibration before any threshold"
+    },
+    {
+      "test_id": "TEST-P1-SCORE",
+      "covers": ["REQ-P1-03"],
+      "stage": "final",
+      "check_type": "mechanical",
+      "responsible": "automated",
+      "method": "recompute weighted total from six dimension scores; check >=85 and each >=3; verify 8 hard gates and 4 combo checks present",
+      "pass_criteria": "arithmetic consistent; thresholds met; evidence strings >=20 chars; report fields complete",
+      "evidence_path": "<run>/evidence/TEST-P1-SCORE/",
+      "diagnostic_only": false,
+      "failure_rule": "block end; return to rework with named dimension or gate"
+    }
+  ],
+  "coverage": {
+    "requirements_total": 3,
+    "requirements_with_cases": 3,
+    "manual_only_requirements": []
+  }
+}

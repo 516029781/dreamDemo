@@ -1,0 +1,98 @@
+{
+ "schema": "scorecard-v1",
+ "business_id": "p1_autumn_static",
+ "version": "r03",
+ "updated_at": "2026-11-02",
+ "authority": "planning/art/P1_T084_ART_DIRECTION_STANDARD_20261028.md",
+ "scale": {
+  "dimension_score": "0-4",
+  "pass_total": 85,
+  "min_each_dimension": 3,
+  "formula": "sum(weight_i * score_i / 4)"
+ },
+ "dimensions": [
+  {
+   "id": "composition_space",
+   "weight": 20,
+   "label": "构图与空间"
+  },
+  {
+   "id": "object_structure",
+   "weight": 20,
+   "label": "物件结构"
+  },
+  {
+   "id": "material_surface",
+   "weight": 20,
+   "label": "材质表面"
+  },
+  {
+   "id": "scene_layering",
+   "weight": 15,
+   "label": "场景层次与物件组织",
+   "note_r02": "按 2026-11-01T23:23 状态文件：全图无植被；左树区/右草池由有用途的设备体块接替（恢复原 4 分标准）"
+  },
+  {
+   "id": "light_depth",
+   "weight": 15,
+   "label": "光色纵深"
+  },
+  {
+   "id": "style_unity",
+   "weight": 10,
+   "label": "画风统一"
+  }
+ ],
+ "combo_checks": [
+  "floor",
+  "structures",
+  "lighting",
+  "background"
+ ],
+ "hard_gates": [
+  {
+   "key": "foreground_steps_railings",
+   "status_scope": "active"
+  },
+  {
+   "key": "right_cylindrical_equipment",
+   "status_scope": "active"
+  },
+  {
+   "key": "cohesive_non_checkerboard_ground",
+   "status_scope": "active"
+  },
+  {
+   "key": "left_area_functional_replacement",
+   "status_scope": "active"
+  },
+  {
+   "key": "no_vegetation",
+   "status_scope": "active"
+  },
+  {
+   "key": "functional_midground_structure",
+   "status_scope": "active"
+  },
+  {
+   "key": "cool_soft_background",
+   "status_scope": "active"
+  },
+  {
+   "key": "materials_resolve",
+   "status_scope": "active"
+  }
+ ],
+ "gate_compatibility": {
+  "mechanical_gate": "tools/static_map_quality_gate.py",
+  "gate_version_expects": "no_vegetation + left_area_functional_replacement",
+  "compatible_with_scorecard_r03": true,
+  "handling": "评分卡与 gate 一致；仍须注意 gate 不读图、不能证明评审独立性",
+  "follow_up": "按 P1-2 在路由适配器中复用同一检查集"
+ },
+ "review_policy": {
+  "independent_final_review_required": false,
+  "maker_self_review": "六维逐维自评 + 最强反例 + 保分/扣分理由，绑定当前图 SHA",
+  "note": "用户 2026-11-01 决定：不需要其他模型独立终审；机械 gate 不读图"
+ }
+}

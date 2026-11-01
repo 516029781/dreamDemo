@@ -1,0 +1,44 @@
+{
+ "schema": "rollback-manifest-v1",
+ "created_at": "2026-11-02",
+ "reason": "restore pre-migration document entries (P0-2/P0-5)",
+ "restore_command": "copy each path from this directory back to project root preserving relative paths",
+ "files": [
+  {
+   "path": "START_HERE.md",
+   "backup": "planning/art/migration_20261102/rollback_r0\\START_HERE.md",
+   "sha256": "2f053a008b052699f6a5ebc9f609c63c6aeda4623a1721a4070d7c2d776042ee",
+   "bytes": 2418
+  },
+  {
+   "path": "AGENTS.md",
+   "backup": "planning/art/migration_20261102/rollback_r0\\AGENTS.md",
+   "sha256": "c0ccf32cd8dfbafb2aee634424bf47b7a187d92e0a363f18eb69adf47da29f44",
+   "bytes": 3570
+  },
+  {
+   "path": "knowledge/README.md",
+   "backup": "planning/art/migration_20261102/rollback_r0\\knowledge/README.md",
+   "sha256": "ccbc94a6b5872d1a188f70241d6e831d5134ee47760b42ca6eef47d8107b1d85",
+   "bytes": 4225
+  },
+  {
+   "path": "knowledge/STANDARDS.md",
+   "backup": "planning/art/migration_20261102/rollback_r0\\knowledge/STANDARDS.md",
+   "sha256": "a1bcdde1175bad67aa64e44bb872b35084324eb0ab639a4b10ac707717e12e5d",
+   "bytes": 2627
+  },
+  {
+   "path": "knowledge/RECIPES.md",
+   "backup": "planning/art/migration_20261102/rollback_r0\\knowledge/RECIPES.md",
+   "sha256": "512ab60b7937e45c927dae34c5e75f9fec463a6b9a9d11a9fa6b63af83c1eb67",
+   "bytes": 768
+  },
+  {
+   "path": "MODEL_EXECUTION_GUIDE.md",
+   "backup": "planning/art/migration_20261102/rollback_r0\\MODEL_EXECUTION_GUIDE.md",
+   "sha256": "96773d639571b6a08738f6f342c7d9c548efd0f6d5a08aad1c9294ada9520ad7",
+   "bytes": 4079
+  }
+ ]
+}

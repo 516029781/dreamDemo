@@ -1,0 +1,42 @@
+{
+  "schema": "resolved-knowledge-v1",
+  "request_id": "<YYYYMMDD-slug>",
+  "run_id": "<YYYYMMDD-HHMM>",
+  "business_id": "<business_id | none>",
+  "deliverable_type": "<type>",
+  "loaded": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "<sha>",
+      "scope": "common/dev_core",
+      "lifecycle": "active",
+      "maturity": "not_applicable",
+      "usage": "requirement | method | experiment"
+    },
+    {
+      "path": "knowledge/business/p1_autumn_static/BUSINESS_PROFILE.md",
+      "sha256": "<sha>",
+      "scope": "business/p1_autumn_static",
+      "lifecycle": "active",
+      "maturity": "not_applicable",
+      "usage": "requirement"
+    }
+  ],
+  "decisions": [
+    {
+      "rule_id": "R-VEG-01",
+      "decision": "inherit | override | not_applicable",
+      "basis": "user instruction / brief clause",
+      "note": ""
+    }
+  ],
+  "not_loaded_neighbors": [
+    "knowledge/business/<other_id>/"
+  ],
+  "verification": {
+    "all_paths_exist": true,
+    "sha_matched": true,
+    "conflicts_blocking": []
+  },
+  "created_at": "<ISO8601>"
+}

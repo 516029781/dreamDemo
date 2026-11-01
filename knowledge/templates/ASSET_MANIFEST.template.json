@@ -1,0 +1,28 @@
+{
+  "schema": "asset-manifest-v1",
+  "business_id": "<business_id>",
+  "project_root": "<absolute or repo-relative>",
+  "policy": {
+    "git_tracking": "code/json/md only; *.blend and image binaries stay local",
+    "assets_outside_git": true,
+    "editable_source_required": true
+  },
+  "assets": [
+    {
+      "asset_id": "A-001",
+      "role": "scene_source | texture | reference | render | evidence",
+      "path": "<path>",
+      "sha256": "<sha>",
+      "bytes": 0,
+      "editable": true,
+      "source": "<origin, license, date>",
+      "used_by": ["<run_id or candidate>"],
+      "notes": ""
+    }
+  ],
+  "reproduction": {
+    "dependencies": [],
+    "reopen_command": "",
+    "expected_outputs": []
+  }
+}

@@ -1,0 +1,66 @@
+{
+ "schema": "resolved-knowledge-v1",
+ "request_id": "_validation_new",
+ "run_id": "20261102-0321",
+ "business_id": "new_business_bootstrap",
+ "deliverable_type": "static_map",
+ "loaded": [
+  {
+   "path": "AGENTS.md",
+   "sha256": "1b88c58f07b28b8e4dc66f01ccfb02c43fa6c3ad42b56d63635457789be1b841",
+   "scope": "common/dev_core",
+   "lifecycle": "active",
+   "maturity": "not_applicable",
+   "usage": "method"
+  },
+  {
+   "path": "knowledge/common/dev_core/HARNESS_LIFECYCLE.md",
+   "sha256": "20d3b6c38d24373b16ab8a9807db130fcc858700fae78108e80fa1fefb956ed8",
+   "scope": "common/dev_core",
+   "lifecycle": "active",
+   "maturity": "not_applicable",
+   "usage": "method"
+  },
+  {
+   "path": "knowledge/common/dev_core/STANDARDS.md",
+   "sha256": "8b5f47195b8915a1fabea7432ed4c30adcd4f49ad9c1d4a9a19823ad0266d613",
+   "scope": "common/dev_core",
+   "lifecycle": "active",
+   "maturity": "not_applicable",
+   "usage": "method"
+  },
+  {
+   "path": "knowledge/common/methods/map_art/README.md",
+   "sha256": "262341c8b5bd77011d938ae229833d728ea7c7a9880fa7b37b6a3293114cd0c3",
+   "scope": "common/methods/map_art",
+   "lifecycle": "active",
+   "maturity": "not_applicable",
+   "usage": "method"
+  },
+  {
+   "path": "knowledge/common/art_base/ART_STYLE_BASE.md",
+   "sha256": "51998aa77f850f12d9ae31101c7923efc29299268860f34214cf738f8db25ebb",
+   "scope": "common/art_base",
+   "lifecycle": "draft",
+   "maturity": "proposed",
+   "usage": "information_only"
+  }
+ ],
+ "decisions": [
+  {
+   "rule_id": "R-ARTBASE-01",
+   "decision": "not_applicable",
+   "basis": "baseline still draft",
+   "note": "no gate"
+  }
+ ],
+ "not_loaded_neighbors": [
+  "knowledge/business/p1_autumn_static/"
+ ],
+ "verification": {
+  "all_paths_exist": true,
+  "sha_matched": true,
+  "conflicts_blocking": []
+ },
+ "created_at": "2026-11-02T02:54:13"
+}

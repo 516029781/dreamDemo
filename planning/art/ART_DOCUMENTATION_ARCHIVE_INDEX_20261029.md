@@ -1,11 +1,13 @@
 # 美术流程历史文件索引
 
-更新：2026-10-29。此索引用于防止旧文档重新进入当前执行链。列为历史不表示删除原始候选或 Git 历史。
+更新：2026-11-01。此索引用于防止旧文档重新进入当前执行链。列为历史不表示删除原始候选或 Git 历史。
 
 ## 当前权威文件
 
 - 执行流程：`STATIC_MAP_WORKFLOW_20261028.md`
-- 目标与评分：`P1_T084_ART_DIRECTION_STANDARD_20261028.md`
+- 目标与评分：`P1_T084_ART_DIRECTION_STANDARD_20261028.md`（2026-11-01 v3：完全无植被，设备替代原树/草区）
+- Hook/Gate 契约：`CODEX_STATIC_MAP_QUALITY_HOOK_20261029.md`（schema v3；制作模型自评 + 同模型逐维反证；不要求独立终审）
+- 当前链路审查与时序图：`STATIC_MAP_CHAIN_AUDIT_AND_SEQUENCE_20261101.md`
 - 地图参数/Harness 规则：`knowledge/MAP_PARAMETER_HARNESS_RULES_20261029.md`
 - Arknights 数据来源与研究事实：`knowledge/ARKNIGHTS_MAP_DATA_AND_HARNESS_AUDIT_20261029.md`
 - 入口：`AGENTS.md`、`START_HERE.md`
@@ -16,6 +18,8 @@
 | 文件/资源 | 状态 | 处理要求 |
 |---|---|---|
 | `P1_T084_ART_DIRECTION_STANDARD_20261028.md` | 当前视觉标准 | 唯一秋日整图目标；参考 SHA、六锚点、色彩样本和 85 分口径以此为准 |
+| `P1_GOAL_CONFIRM_20261031.md` | 历史目标确认 | 保留当日判断与证据；两份盲评、树草制作和旧植被评分已被 2026-11-01 v3 覆盖 |
+| `P1_STANDARD_REVIEW_20261101.md` | 历史审查记录 | 其双盲评、独立终审和旧植被硬门槛结论已被当前流程/schema v3 覆盖 |
 | `ARKNIGHTS_BASE_MAP_ART_STANDARD_20261029.md` | 已被用户澄清覆盖 | 不再是画面目标；仅保留研究背景，不得按其中的 `reference_lock_pending` 制作 |
 | `P1_VISUAL_TARGET_LOCK_20261027.md`、`P1_MAP_ART_ONLY_REVIEW_20261028.md` | 历史流程/评审 | 可追溯 t084 与旧候选；旧差距、分数、角色/UI要求不直接迁移到 v06 |
 | `target_layout_v04.json` | 旧机器配置，待逐字段核对 | 有 P1 六锚点，也残留 90 分、角色/UI展示层和旧阈值；不能直接作为当前门禁 |
