@@ -1,0 +1,135 @@
+<style>
+  .routewrap { background:#0e1216; border:1px solid #263038; border-radius:10px; padding:18px 16px 12px; font-family:"Noto Sans SC",system-ui,sans-serif; color:#d9e2e6; max-width:1180px; }
+  .routewrap h2 { font-size:17px; font-weight:600; margin:0 0 2px; }
+  .routewrap .sub { font-size:12px; color:#8d9aa1; margin-bottom:12px; }
+  .routewrap svg { width:100%; height:auto; display:block; background:#0b0f12; border-radius:6px; }
+  .lg { display:flex; flex-wrap:wrap; gap:16px; margin-top:12px; font-size:12.5px; color:#aab6bc; }
+  .lg i { display:inline-block; width:26px; height:0; border-top:3px solid; vertical-align:middle; margin-right:6px; }
+  .lg b { color:#e8f0f3; font-weight:600; }
+  .note { margin-top:10px; font-size:12px; color:#93a0a7; line-height:1.7; }
+</style>
+<div class="routewrap">
+  <h2>航天基地 v1.3 · 总平面与三条动线（南花园在楼下方）</h2>
+  <div class="sub">上北下南 · 单位 m · 核心区 240×190 · 南花园 240×30（y−30..0）· 南向通道 24×30（含检查站）· 试车间 170×130</div>
+
+  <svg viewBox="0 0 940 1320" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <marker id="aG" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+        <path d="M0,0 L10,5 L0,10 z" fill="#f2c14e"/></marker>
+      <marker id="aC" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+        <path d="M0,0 L10,5 L0,10 z" fill="#5fc3d6"/></marker>
+      <marker id="aP" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+        <path d="M0,0 L10,5 L0,10 z" fill="#c58ad6"/></marker>
+    </defs>
+
+    <!-- S=2.9 px/m；X(x)=90+x*S；Y(y)=690-y*S -->
+    <g>
+      <!-- 世界底板 -->
+      <rect x="90" y="139" width="696" height="1102" fill="#0f1418" stroke="#334049"/>
+      <!-- 核心区 -->
+      <rect x="90" y="139" width="696" height="551" fill="#121a20" stroke="#3a4a55" stroke-width="1.6"/>
+      <!-- 环廊（西 / 东 / 北 / 南） -->
+      <rect x="90" y="487" width="203" height="145" fill="#17242b"/>
+      <rect x="583" y="487" width="203" height="145" fill="#17242b"/>
+      <rect x="293" y="139" width="290" height="203" fill="#17242b"/>
+      <rect x="293" y="487" width="290" height="203" fill="#17242b"/>
+      <!-- 中央设备体 -->
+      <rect x="293" y="342" width="290" height="145" fill="#151c21" stroke="#3a4a55"/>
+      <!-- 四室 -->
+      <rect x="90" y="487" width="203" height="203" fill="#1d2a31" stroke="#4d6572" stroke-width="1.6"/>
+      <rect x="90" y="139" width="203" height="203" fill="#1d2a31" stroke="#4d6572" stroke-width="1.6"/>
+      <rect x="583" y="139" width="203" height="203" fill="#1d2a31" stroke="#4d6572" stroke-width="1.6"/>
+      <rect x="583" y="487" width="203" height="203" fill="#1d2a31" stroke="#4d6572" stroke-width="1.6"/>
+      <!-- 总裁 -->
+      <rect x="380" y="342" width="116" height="87" fill="#22303a" stroke="#8a9aa3" stroke-dasharray="6 4" stroke-width="1.6"/>
+
+      <!-- 离心圆 -->
+      <circle cx="191" cy="588" r="55" fill="none" stroke="#3f8f99" stroke-width="7" opacity=".85"/>
+      <!-- 浮力池 -->
+      <rect x="126" y="190" width="130" height="81" fill="#1b3a44" stroke="#4f8a96"/>
+      <!-- 蓝室坑 -->
+      <rect x="628" y="190" width="113" height="99" fill="#182a35" stroke="#4f8a96"/>
+      <!-- 黑室隔墙 -->
+      <line x1="630" y1="545" x2="735" y2="545" stroke="#5a6d77" stroke-width="3"/>
+      <line x1="630" y1="592" x2="735" y2="592" stroke="#5a6d77" stroke-width="3"/>
+
+      <!-- 南侧花园带（核心区下方） -->
+      <rect x="90" y="690" width="696" height="87" fill="#172a22" stroke="#4c7a5e" stroke-width="1.6"/>
+      <!-- 水池 + 喷泉 -->
+      <rect x="380" y="719" width="116" height="29" fill="#1b3f4b" stroke="#5aa0ad"/>
+      <circle cx="409" cy="733" r="9" fill="none" stroke="#7fc2cc" stroke-width="2.4"/>
+      <circle cx="394" cy="733" r="6" fill="none" stroke="#7fc2cc" stroke-width="2"/>
+      <circle cx="467" cy="733" r="6" fill="none" stroke="#7fc2cc" stroke-width="2"/>
+      <!-- 出口 -->
+      <rect x="416" y="772" width="44" height="10" fill="#4d8f5f"/>
+      <!-- 引道 / 试车间 -->
+      <rect x="403" y="777" width="70" height="87" fill="#161d22" stroke="#3a4a55"/>
+      <rect x="191" y="864" width="493" height="377" fill="#10171b" stroke="#3a4a55"/>
+      <!-- 南向通道内容 -->
+      <rect x="415" y="805" width="9" height="9" fill="#2c3a42" stroke="#7f939c"/> <!-- 岗亭 (112,-42) -->
+      <rect x="421" y="792" width="34" height="3" fill="#7f939c"/>                <!-- 门架 -->
+      <rect x="403" y="830" width="70" height="4" fill="#3a4d57"/>                <!-- 管廊 -->
+      <rect x="406" y="812" width="3" height="6" fill="#c9a34a"/>                 <!-- 隔离墩 -->
+      <rect x="466" y="816" width="3" height="6" fill="#c9a34a"/>
+      <rect x="496" y="790" width="26" height="40" fill="#1a2429" stroke="#4d6572" stroke-dasharray="3 3"/> <!-- 筒仓列 -->
+      <rect x="525" y="818" width="116" height="6" fill="#2c3a42"/>                <!-- 东区吊桥(背景) -->
+      <g font-size="9.5" fill="#9fb0b8">
+        <text x="392" y="801" text-anchor="end">门架</text>
+        <text x="392" y="816" text-anchor="end">检查站</text>
+        <text x="392" y="836" text-anchor="end">管廊</text>
+        <text x="492" y="786" text-anchor="end">筒仓</text>
+        <text x="584" y="840">东区吊桥</text>
+      </g>
+      <!-- 撤离点 -->
+
+      <!-- 标注 -->
+      <g font-size="14" fill="#dfe9ec" text-anchor="middle">
+        <text x="191" y="575">H1 离心</text>
+        <text x="191" y="596" font-size="10.5" fill="#8fa6ae">出生点 · 22 点</text>
+        <text x="191" y="245">H2 浮力</text>
+        <text x="191" y="265" font-size="10.5" fill="#8fa6ae">只接离心 / 蓝室 · 22 点</text>
+        <text x="684" y="245">H3 蓝室</text>
+        <text x="684" y="265" font-size="10.5" fill="#8fa6ae">18 点</text>
+        <text x="684" y="575">H4 黑室</text>
+        <text x="684" y="596" font-size="10.5" fill="#8fa6ae">14 点 · 竖梯上总裁</text>
+        <text x="438" y="390">总裁 40×30</text>
+        <text x="438" y="409" font-size="10.5" fill="#d9a05b">H2 / H4 室内竖梯</text>
+        <text x="438" y="560" font-size="11" fill="#9fb0b8">南环廊（闭合环）</text>
+        <text x="438" y="710" font-size="13" fill="#cfe6d8">南花园 · 喷泉</text>
+        <text x="438" y="727" font-size="10.5" fill="#93b3a1">离心 / 黑室下方共用 · 撤离集散</text>
+        <text x="460" y="760" font-size="10.5" fill="#9fd0ae" text-anchor="start">出口</text>
+        <text x="438" y="820" font-size="11" fill="#8fa6ae">引道</text>
+        <text x="438" y="930" font-size="12" fill="#8fa6ae">试车间（露天防爆场）</text>
+        <text x="653" y="1198" font-size="10.5" fill="#e6c34a" text-anchor="start">丢包撤离点 (195,−180)</text>
+      </g>
+
+      <!-- 搜刮环线（黄）：H1→W→H2→N→H3→E→H4→南门→花园→出口→引道→撤离 -->
+      <polyline points="191,588 191,487 191,342 191,245 293,245 438,245 583,245 684,245 684,342 684,487 684,545 684,588 684,690 684,745 520,745 460,772 438,777 438,864 438,1000 646,1206"
+        fill="none" stroke="#f2c14e" stroke-width="3.4" stroke-dasharray="10 7" marker-end="url(#aG)" opacity=".95"/>
+      <!-- 直冲（青）：H1 南门 → 花园 → 出口 -->
+      <polyline points="191,588 191,690 191,745 380,745 416,772 438,777 438,864 438,1000 646,1206"
+        fill="none" stroke="#5fc3d6" stroke-width="3.4" marker-end="url(#aC)" opacity=".95"/>
+      <!-- 总裁线（紫）：H1→W→H2→竖梯→总裁→H4→南门→花园→出口 -->
+      <polyline points="191,588 191,487 191,342 191,245 260,330 380,383 438,383 496,383 560,560 684,588 684,690 684,745 520,745 460,772 438,777 438,864 438,1000 646,1206"
+        fill="none" stroke="#c58ad6" stroke-width="2.6" stroke-dasharray="4 5" marker-end="url(#aP)" opacity=".9"/>
+
+      <!-- 尺寸线 -->
+      <line x1="90" y1="126" x2="786" y2="126" stroke="#4d6572"/>
+      <text x="438" y="120" font-size="11" fill="#8fa6ae" text-anchor="middle">240 m</text>
+      <line x1="76" y1="139" x2="76" y2="690" stroke="#4d6572"/>
+      <text x="60" y="420" font-size="11" fill="#8fa6ae" text-anchor="middle" transform="rotate(-90,60,420)">190 m</text>
+      <line x1="76" y1="690" x2="76" y2="777" stroke="#4d6572"/>
+      <text x="60" y="740" font-size="10" fill="#8fa6ae" text-anchor="middle" transform="rotate(-90,60,740)">30 m</text>
+    </g>
+  </svg>
+
+  <div class="lg">
+    <span><i style="border-color:#f2c14e"></i><b>搜刮环线</b> 770 m / 128 s · 92 点全拿</span>
+    <span><i style="border-color:#5fc3d6"></i><b>南花园直冲</b> 350 m / 58 s · 只拿离心</span>
+    <span><i style="border-color:#c58ad6"></i><b>总裁线</b> 605 m / 101 s · + 总裁 11 点</span>
+  </div>
+  <div class="note">
+    花园在<b>离心与黑室下方</b>（y−30..0），不占核心区中间；两栋楼各开南门直落花园，绕过水池喷泉后出南墙 15 m 门洞，经 30 m 引道进入试车间，一路接通到丢包撤离点。
+    南环廊（原南中格）只闭合环，不做水景、不开出口。南向通道依次为：花园南门 → 检查站（岗亭/道闸/阻车钉）→ 导视门架 → 跨路管廊 → 隔离墩 → 试车间北门。地图无闸门、无单向门，770 m 是搜刮线不是强制线。
+  </div>
+</div>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>航天基地核心区 · 修订总平面 v1.2 草案</title>
+<style>
+  body { margin:0; background:#12161a; color:#d9e2e6; font-family:"Noto Sans SC",system-ui,sans-serif; }
+  .wrap { max-width:1180px; margin:0 auto; padding:24px 20px 40px; }
+  h1 { font-size:20px; font-weight:600; margin:0 0 4px; letter-spacing:.02em; }
+  .sub { color:#8d9aa1; font-size:12.5px; margin-bottom:18px; }
+  svg { width:100%; height:auto; display:block; background:#0d1114; border:1px solid #263038; border-radius:8px; }
+  .legend { display:flex; flex-wrap:wrap; gap:14px; margin-top:14px; font-size:12.5px; color:#aab6bc; }
+  .chip { display:inline-flex; align-items:center; gap:6px; }
+  .sw { width:12px; height:12px; border-radius:2px; display:inline-block; }
+  .notes { margin-top:18px; display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .card { background:#161d22; border:1px solid #263038; border-radius:8px; padding:12px 14px; font-size:13px; line-height:1.65; }
+  .card b { color:#e8f0f3; }
+  .bad { color:#d98b6a; }
+  .good { color:#7fb98f; }
+  ul { margin:6px 0 0 18px; padding:0; }
+  li { margin:3px 0; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>三角洲航天基地 · 核心区修订总平面（v1.2 草案）</h1>
+  <div class="sub">依据：实机地图核心区放大 + PhysX 碰撞俯视。方向：上北下南。单位 m。核心区 240 × 190。</div>
+
+  <svg viewBox="0 0 800 700" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <pattern id="hatch" width="8" height="8" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+        <rect width="8" height="8" fill="#243038"/>
+        <line x1="0" y1="0" x2="0" y2="8" stroke="#33424c" stroke-width="2"/>
+      </pattern>
+      <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M0,0 L10,5 L0,10 z" fill="#7fb98f"/>
+      </marker>
+    </defs>
+
+    <!-- 坐标换算：1m = 2.8px，原点 (60, 600) 左下；x 向右，y 向上 -->
+    <g transform="translate(60,600)">
+      <!-- 核心区底板 -->
+      <rect x="0" y="-532" width="672" height="532" fill="#10161a" stroke="#3a4a55" stroke-width="2"/>
+      <!-- 环廊（四周连通） -->
+      <rect x="0" y="-532" width="672" height="182" fill="#17242b" stroke="none"/>
+      <rect x="0" y="-182" width="672" height="182" fill="#17242b" stroke="none"/>
+      <rect x="0" y="-350" width="182" height="168" fill="#17242b" stroke="none"/>
+      <rect x="490" y="-350" width="182" height="168" fill="#17242b" stroke="none"/>
+      <rect x="182" y="-350" width="308" height="168" fill="#141b1f" stroke="none"/>
+
+      <!-- 环廊中线箭头（逆时针连通示意） -->
+      <polyline points="91,-175 91,-350 581,-350 581,-175 581,-7 91,-7" fill="none" stroke="#7fb98f" stroke-width="2.4" stroke-dasharray="9 7" marker-end="url(#arr)" opacity=".85"/>
+
+      <!-- H1 离心（西南 0..70 × 0..70） -->
+      <g transform="translate(0,-196)">
+        <rect width="196" height="196" fill="#1d2a31" stroke="#4d6572" stroke-width="2"/>
+        <circle cx="98" cy="98" r="54" fill="none" stroke="#3f8f99" stroke-width="8" opacity=".9"/>
+        <text x="98" y="88" text-anchor="middle" font-size="15" fill="#dfe9ec">H1 离心机室</text>
+        <text x="98" y="108" text-anchor="middle" font-size="11.5" fill="#8fa6ae">Ø38 下沉地坪 · 出生点</text>
+      </g>
+
+      <!-- H2 浮力（西北 0..70 × 120..190） -->
+      <g transform="translate(0,-532)">
+        <rect width="196" height="196" fill="#1d2a31" stroke="#4d6572" stroke-width="2"/>
+        <rect x="30" y="58" width="128" height="76" fill="#1b3a44" stroke="#4f8a96" stroke-width="1.6"/>
+        <text x="98" y="88" text-anchor="middle" font-size="15" fill="#dfe9ec">H2 浮力室</text>
+        <text x="98" y="108" text-anchor="middle" font-size="11.5" fill="#8fa6ae">45×28 深池 · 只接 H1 / H3</text>
+      </g>
+
+      <!-- H3 蓝室（东北 170..240 × 120..190） -->
+      <g transform="translate(476,-532)">
+        <rect width="196" height="196" fill="#1d2a31" stroke="#4d6572" stroke-width="2"/>
+        <rect x="42" y="52" width="112" height="96" fill="#182a35" stroke="#4f8a96" stroke-width="1.6"/>
+        <text x="98" y="88" text-anchor="middle" font-size="15" fill="#dfe9ec">H3 蓝室</text>
+        <text x="98" y="108" text-anchor="middle" font-size="11.5" fill="#8fa6ae">下沉坑 · 卫星 · 蓝光带</text>
+      </g>
+
+      <!-- H4 黑室（东南 170..240 × 0..70） -->
+      <g transform="translate(476,-196)">
+        <rect width="196" height="196" fill="#1d2a31" stroke="#4d6572" stroke-width="2"/>
+        <line x1="48" y1="60" x2="150" y2="60" stroke="#5a6d77" stroke-width="3"/>
+        <line x1="48" y1="108" x2="150" y2="108" stroke="#5a6d77" stroke-width="3"/>
+        <text x="98" y="88" text-anchor="middle" font-size="15" fill="#dfe9ec">H4 黑室</text>
+        <text x="98" y="128" text-anchor="middle" font-size="11.5" fill="#8fa6ae">指挥角 · 矮隔墙</text>
+      </g>
+
+      <!-- 总裁（中央偏北 100..140 × 90..120，架空） -->
+      <g transform="translate(280,-336)">
+        <rect width="112" height="84" fill="#22303a" stroke="#8a9aa3" stroke-width="2" stroke-dasharray="6 4"/>
+        <text x="56" y="38" text-anchor="middle" font-size="13.5" fill="#eef4f6">总裁室</text>
+        <text x="56" y="57" text-anchor="middle" font-size="10.5" fill="#9fb0b8">40×30 架空玻璃盒</text>
+        <text x="56" y="73" text-anchor="middle" font-size="10.5" fill="#d9a05b">仅内部竖梯 H2 / H4</text>
+      </g>
+
+      <!-- 南花园 / 喷泉（x70..170, y0..70） -->
+      <g transform="translate(196,-196)">
+        <rect width="280" height="196" fill="#172a22" stroke="#4c7a5e" stroke-width="2"/>
+        <rect x="52" y="78" width="176" height="52" fill="#1b3f4b" stroke="#5aa0ad" stroke-width="1.6"/>
+        <circle cx="140" cy="104" r="16" fill="none" stroke="#7fc2cc" stroke-width="3"/>
+        <circle cx="70" cy="104" r="10" fill="none" stroke="#7fc2cc" stroke-width="2" opacity=".8"/>
+        <circle cx="210" cy="104" r="10" fill="none" stroke="#7fc2cc" stroke-width="2" opacity=".8"/>
+        <text x="140" y="40" text-anchor="middle" font-size="13.5" fill="#cfe6d8">南花园 · 喷泉</text>
+        <text x="140" y="58" text-anchor="middle" font-size="10.5" fill="#93b3a1">H1 / H4 共用集散 · 撤离起点</text>
+      </g>
+
+      <!-- 出口 -->
+      <rect x="238" y="4" width="36" height="12" fill="#4d8f5f"/>
+      <text x="256" y="34" text-anchor="middle" font-size="11" fill="#9fd0ae">南出口 15m（走引道）</text>
+      <rect x="640" y="-114" width="12" height="30" fill="#8a6a3c"/>
+      <text x="646" y="-124" text-anchor="middle" font-size="10.5" fill="#cda97a">东吊桥（备选）</text>
+
+      <!-- 关键连接标注 -->
+      <text x="86" y="-262" font-size="11" fill="#7fb98f">西环廊</text>
+      <text x="336" y="-366" font-size="11" fill="#7fb98f">北环廊（H2↔H3）</text>
+      <text x="600" y="-262" font-size="11" fill="#7fb98f">东环廊</text>
+      <text x="336" y="-14" font-size="11" fill="#7fb98f">南环廊（经花园）</text>
+
+      <!-- 尺寸标注 -->
+      <line x1="0" y1="22" x2="672" y2="22" stroke="#4d6572" stroke-width="1"/>
+      <line x1="0" y1="16" x2="0" y2="28" stroke="#4d6572" stroke-width="1"/>
+      <line x1="672" y1="16" x2="672" y2="28" stroke="#4d6572" stroke-width="1"/>
+      <text x="336" y="44" text-anchor="middle" font-size="11" fill="#8fa6ae">240 m</text>
+      <line x1="-18" y1="0" x2="-18" y2="-532" stroke="#4d6572" stroke-width="1"/>
+      <line x1="-24" y1="0" x2="-12" y2="0" stroke="#4d6572" stroke-width="1"/>
+      <line x1="-24" y1="-532" x2="-12" y2="-532" stroke="#4d6572" stroke-width="1"/>
+      <text x="-26" y="-266" text-anchor="middle" font-size="11" fill="#8fa6ae" transform="rotate(-90,-26,-266)">190 m</text>
+    </g>
+  </svg>
+
+  <div class="legend">
+    <span class="chip"><span class="sw" style="background:#1d2a31;border:1px solid #4d6572"></span>房间</span>
+    <span class="chip"><span class="sw" style="background:#17242b"></span>连通环廊（原中庭/院落位置）</span>
+    <span class="chip"><span class="sw" style="background:#172a22"></span>南花园 / 喷泉</span>
+    <span class="chip"><span class="sw" style="background:#22303a;border:1px dashed #8a9aa3"></span>总裁（架空）</span>
+    <span class="chip"><span class="sw" style="background:#4d8f5f"></span>撤离出口</span>
+  </div>
+
+  <div class="notes">
+    <div class="card">
+      <b>本次修订（按你的三条决定）</b>
+      <ul>
+        <li><span class="bad">删</span> 北中庭、南中庭、西院、东院：不再作为独立房间与陈设主题。</li>
+        <li><span class="good">改</span> 四周剩余空间统一为<b>连通环廊</b>，四个角楼都能沿环走通。</li>
+        <li><span class="good">改</span> 浮力室只留两个门：<b>南→离心</b>、<b>东→蓝室</b>；不再有 A 廊/西前厅。</li>
+        <li><span class="good">改</span> 总裁下到架空层：<b>只从 H2 / H4 内部竖梯进入</b>，周边无门。</li>
+        <li><span class="good">改</span> 花园移到<b>南侧</b>（离心与黑室之间），H1/H4 共用，作为撤离集散。</li>
+      </ul>
+    </div>
+    <div class="card">
+      <b>需要你拍板的两件事</b>
+      <ul>
+        <li><b>出口数量</b>：① 只保留南花园 15 m 出口（正对引道，引道需从 x180 移到 x≈108..132）；② 南出口 + 东侧吊桥出口（两处撤离，动线更接近实机）。</li>
+        <li><b>引道/试车间是否随南出口居中</b>：若选①，引道与试车间整体左移约 70 m，整图像素公式保持不变、只改锚点；若你希望少动，可保留现有引道、把南出口放在花园东南角。</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</body>
+</html>
