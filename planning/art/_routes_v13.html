@@ -29,8 +29,8 @@
       <!-- 核心区 -->
       <rect x="90" y="139" width="696" height="551" fill="#121a20" stroke="#3a4a55" stroke-width="1.6"/>
       <!-- 环廊（西 / 东 / 北 / 南） -->
-      <rect x="90" y="487" width="203" height="145" fill="#17242b"/>
-      <rect x="583" y="487" width="203" height="145" fill="#17242b"/>
+      <rect x="90" y="342" width="203" height="145" fill="#17242b"/>
+      <rect x="583" y="342" width="203" height="145" fill="#17242b"/>
       <rect x="293" y="139" width="290" height="203" fill="#17242b"/>
       <rect x="293" y="487" width="290" height="203" fill="#17242b"/>
       <!-- 中央设备体 -->
@@ -45,21 +45,24 @@
 
       <!-- 离心圆 -->
       <circle cx="191" cy="588" r="55" fill="none" stroke="#3f8f99" stroke-width="7" opacity=".85"/>
-      <!-- 浮力池 -->
-      <rect x="126" y="190" width="130" height="81" fill="#1b3a44" stroke="#4f8a96"/>
-      <!-- 蓝室坑 -->
-      <rect x="628" y="190" width="113" height="99" fill="#182a35" stroke="#4f8a96"/>
-      <!-- 黑室隔墙 -->
-      <line x1="630" y1="545" x2="735" y2="545" stroke="#5a6d77" stroke-width="3"/>
-      <line x1="630" y1="592" x2="735" y2="592" stroke="#5a6d77" stroke-width="3"/>
+      <!-- 浮力池 45×28，中心 (34.5,152) -->
+      <rect x="125" y="209" width="130" height="81" fill="#09222c" stroke="#7fc2cc" stroke-width="2"/>
+      <text x="190" y="300" font-size="10" fill="#7fc2cc" text-anchor="middle">池 45×28</text>
+      <!-- 蓝室坑 24×22，中心 (205,155) -->
+      <rect x="650" y="209" width="70" height="63" fill="#081a24" stroke="#7fc2cc" stroke-width="2"/>
+      <text x="685" y="289" font-size="9" fill="#7fc2cc" text-anchor="middle">坑 24×22</text>
+      <!-- 黑室隔墙：① y12 / ② y26 / ③ y40，错位留口 -->
+      <line x1="606" y1="655" x2="641" y2="655" stroke="#5a6d77" stroke-width="3"/>
+      <line x1="658" y1="615" x2="705" y2="615" stroke="#5a6d77" stroke-width="3"/>
+      <line x1="629" y1="574" x2="664" y2="574" stroke="#5a6d77" stroke-width="3"/>
 
       <!-- 南侧花园带（核心区下方） -->
       <rect x="90" y="690" width="696" height="87" fill="#172a22" stroke="#4c7a5e" stroke-width="1.6"/>
       <!-- 水池 + 喷泉 -->
-      <rect x="380" y="713" width="116" height="23" fill="#1b3f4b" stroke="#5aa0ad"/>
-      <circle cx="409" cy="725" r="9" fill="none" stroke="#7fc2cc" stroke-width="2.4"/>
-      <circle cx="394" cy="725" r="6" fill="none" stroke="#7fc2cc" stroke-width="2"/>
-      <circle cx="467" cy="725" r="6" fill="none" stroke="#7fc2cc" stroke-width="2"/>
+      <rect x="380" y="720" width="116" height="23" fill="#1b3f4b" stroke="#5aa0ad"/>
+      <circle cx="409" cy="732" r="9" fill="none" stroke="#7fc2cc" stroke-width="2.4"/>
+      <circle cx="394" cy="732" r="6" fill="none" stroke="#7fc2cc" stroke-width="2"/>
+      <circle cx="467" cy="732" r="6" fill="none" stroke="#7fc2cc" stroke-width="2"/>
       <!-- 出口 -->
       <rect x="416" y="772" width="44" height="10" fill="#4d8f5f"/>
       <!-- 引道 / 试车间 -->
@@ -86,31 +89,31 @@
       <g font-size="14" fill="#dfe9ec" text-anchor="middle">
         <text x="191" y="575">H1 离心</text>
         <text x="191" y="596" font-size="10.5" fill="#8fa6ae">出生点 · 22 点</text>
-        <text x="191" y="245">H2 浮力</text>
-        <text x="191" y="265" font-size="10.5" fill="#8fa6ae">只接离心 / 蓝室 · 22 点</text>
-        <text x="684" y="245">H3 蓝室</text>
-        <text x="684" y="265" font-size="10.5" fill="#8fa6ae">18 点</text>
-        <text x="684" y="575">H4 黑室</text>
-        <text x="684" y="596" font-size="10.5" fill="#8fa6ae">14 点 · 竖梯上总裁</text>
+        <text x="191" y="170">H2 浮力</text>
+        <text x="191" y="190" font-size="10.5" fill="#8fa6ae">只接离心 / 蓝室 · 22 点</text>
+        <text x="684" y="170">H3 蓝室</text>
+        <text x="684" y="190" font-size="10.5" fill="#8fa6ae">18 点</text>
+        <text x="720" y="520">H4 黑室</text>
+        <text x="720" y="540" font-size="10.5" fill="#8fa6ae">14 点 · 竖梯上总裁</text>
         <text x="438" y="390">总裁 40×30</text>
         <text x="438" y="409" font-size="10.5" fill="#d9a05b">H2 / H4 室内竖梯</text>
         <text x="438" y="560" font-size="11" fill="#9fb0b8">南环廊（闭合环）</text>
-        <text x="438" y="710" font-size="13" fill="#cfe6d8">南花园 · 喷泉</text>
-        <text x="438" y="727" font-size="10.5" fill="#93b3a1">离心 / 黑室下方共用 · 撤离集散</text>
+        <text x="438" y="700" font-size="13" fill="#cfe6d8">南花园 · 喷泉</text>
+        <text x="438" y="715" font-size="10.5" fill="#93b3a1">离心 / 黑室下方共用 · 撤离集散</text>
         <text x="460" y="760" font-size="10.5" fill="#9fd0ae" text-anchor="start">出口</text>
         <text x="438" y="820" font-size="11" fill="#8fa6ae">引道</text>
-        <text x="438" y="930" font-size="12" fill="#8fa6ae">试车间（露天防爆场）</text>
-        <text x="653" y="1198" font-size="10.5" fill="#e6c34a" text-anchor="start">丢包撤离点 (195,−180)</text>
+        <text x="540" y="930" font-size="12" fill="#8fa6ae">试车间（露天防爆场）</text>
+        <text x="664" y="1200" font-size="10.5" fill="#e6c34a" text-anchor="start">丢包撤离点 (195,−180)</text>
       </g>
 
       <!-- 搜刮环线（黄）：H1→W→H2→N→H3→E→H4→南门→花园→出口→引道→撤离 -->
-      <polyline points="191,588 191,487 191,342 191,245 293,245 438,245 583,245 684,245 684,342 684,487 684,545 684,588 684,690 684,745 520,745 460,772 438,777 438,864 438,1000 646,1206"
+      <polyline points="191,588 191,487 191,342 270,342 270,245 293,245 438,245 583,245 620,300 684,300 684,342 684,487 684,545 720,600 720,630 684,690 438,777 438,864 449,872 449,1000 656,1212"
         fill="none" stroke="#f2c14e" stroke-width="3.4" stroke-dasharray="10 7" marker-end="url(#aG)" opacity=".95"/>
       <!-- 直冲（青）：H1 南门 → 花园 → 出口 -->
-      <polyline points="191,588 191,690 191,745 380,745 416,772 438,777 438,864 438,1000 646,1206"
+      <polyline points="191,588 191,690 438,777 438,864 449,872 449,1000 656,1212"
         fill="none" stroke="#5fc3d6" stroke-width="3.4" marker-end="url(#aC)" opacity=".95"/>
       <!-- 总裁线（紫）：H1→W→H2→竖梯→总裁→H4→南门→花园→出口 -->
-      <polyline points="191,588 191,487 191,342 191,245 260,330 380,383 438,383 496,383 560,560 684,588 684,690 684,745 520,745 460,772 438,777 438,864 438,1000 646,1206"
+      <polyline points="191,588 191,487 191,342 287,336 380,371 438,385 496,400 589,493 684,545 720,600 720,630 684,690 438,777 438,864 449,872 449,1000 656,1212"
         fill="none" stroke="#c58ad6" stroke-width="2.6" stroke-dasharray="4 5" marker-end="url(#aP)" opacity=".9"/>
 
       <!-- 尺寸线 -->
