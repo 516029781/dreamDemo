@@ -17,24 +17,24 @@
  "commands": [
   {
    "exit_code": 0,
-   "wall_seconds": 3.19,
+   "wall_seconds": 3.14,
    "command": "C:\\软件\\鼠鼠\\.tools\\blender\\blender-4.5.15-windows-x64\\blender.exe -b C:\\软件\\鼠鼠\\art\\static_map\\space_base_minigame\\v15\\scene.blend --python tools/repro_v13_render.py -- ..."
   },
   {
    "exit_code": 0,
-   "wall_seconds": 24.35,
+   "wall_seconds": 25.15,
    "command": "C:\\软件\\鼠鼠\\.tools\\blender\\blender-4.5.15-windows-x64\\blender.exe -b --factory-startup --python tools/blender_space_base/build_scene_v15.py -- ..."
   },
   {
    "exit_code": 0,
-   "wall_seconds": 3.1,
+   "wall_seconds": 3.09,
    "command": "C:\\软件\\鼠鼠\\.tools\\blender\\blender-4.5.15-windows-x64\\blender.exe -b C:\\软件\\鼠鼠\\art\\static_map\\space_base_minigame\\v15\\repro\\scene_rebuilt.blend --python tools/repro_v13_render.py -- ..."
   }
  ],
- "container_sha256_orig": "cbf7d3c8f35821fc516f4acdc61610b50ba29e694b64c9e5205faad2216fb2db",
- "container_sha256_rebuilt": "21ac652cad50cfe314f2ce74d115792ea0f6ae0f04bbf12dc8e355b7fa9ff6ad",
- "content_sha256_orig": "45c181bf6ebe33d50d40dba187d0cf05de621c1e8b91d683b93f6f89f9ca178d",
- "content_sha256_rebuilt": "45c181bf6ebe33d50d40dba187d0cf05de621c1e8b91d683b93f6f89f9ca178d",
+ "container_sha256_orig": "169c954d5e07f3fd686e908a2ec4d594ffe5276e41fb4bf66e3c851619697fc2",
+ "container_sha256_rebuilt": "cb9ab1e468b49994d1c56f7960a755400dccc1dd3d076ddf54f6a572bc9e5362",
+ "content_sha256_orig": "57bd2bffbd01fe39f7a721d5c5a6183a4ab74c7c28bd6637bc1727269ed9d5d0",
+ "content_sha256_rebuilt": "57bd2bffbd01fe39f7a721d5c5a6183a4ab74c7c28bd6637bc1727269ed9d5d0",
  "shape": [
   620,
   420,

@@ -18,8 +18,8 @@ CAND = ROOT / "art/static_map/space_base_minigame/v15"
 REN = CAND / "renders"
 CHK = REN / "checks"
 EV = CAND / "evidence"
-REQ = "20261108-space-base-v15-rooms"
-RUN = "20261108-2320"
+REQ = "20261109-space-base-v152-rooms"
+RUN = "20261109-1125"
 REQDIR = ROOT / "knowledge/active" / REQ
 RUNDIR = REQDIR / "runs" / RUN
 

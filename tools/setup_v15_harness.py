@@ -13,8 +13,8 @@ import json
 from pathlib import Path
 
 ROOT = Path("C:/软件/鼠鼠")
-REQ = "20261108-space-base-v15-rooms"
-RUN = "20261108-2320"
+REQ = "20261109-space-base-v152-rooms"
+RUN = "20261109-1125"
 BASE = ROOT / "knowledge/active" / REQ
 RUNDIR = BASE / "runs" / RUN
 EV = RUNDIR / "evidence"
