@@ -1,0 +1,206 @@
+{
+ "schema": "gate-report-v1",
+ "request_id": "20261108-space-base-v15-rooms",
+ "run_id": "20261108-2320",
+ "stage": "N7_mechanical",
+ "pass": true,
+ "imaging": {
+  "S1_light_land": {
+   "light_land": 0.51,
+   "rule": ">=0.45",
+   "pass": true
+  },
+  "S2_green": {
+   "green_ratio": 0.0126,
+   "rule": "<=0.12",
+   "pass": true
+  },
+  "S3_orange": {
+   "orange_ratio": 0.0007,
+   "rule": "<=0.02",
+   "pass": true
+  },
+  "water_frac": {
+   "value": 0.7756,
+   "note": "reported next to S1 on purpose: cool darks are counted as water (plan 5.6)"
+  }
+ },
+ "scene": {
+  "I1": {
+   "value": {
+    "H1": {
+     "expected": 6,
+     "present": 6,
+     "missing": [],
+     "pass": true
+    },
+    "H2": {
+     "expected": 6,
+     "present": 6,
+     "missing": [],
+     "pass": true
+    },
+    "H3": {
+     "expected": 6,
+     "present": 6,
+     "missing": [],
+     "pass": true
+    },
+    "H4": {
+     "expected": 6,
+     "present": 6,
+     "missing": [],
+     "pass": true
+    }
+   },
+   "pass": true
+  },
+  "I4": {
+   "value": {
+    "H1": {
+     "cap_material": "v15.cap_h1",
+     "pass": true
+    },
+    "H2": {
+     "cap_material": "v15.cap_h2",
+     "pass": true
+    },
+    "H3": {
+     "cap_material": "v15.cap_h3",
+     "pass": true
+    },
+    "H4": {
+     "cap_material": "v15.cap_h4",
+     "pass": true
+    }
+   },
+   "pass": true
+  },
+  "I6": {
+   "value": {
+    "objects": 1751,
+    "delta": 366,
+    "materials": 82
+   },
+   "pass": true
+  },
+  "I7": {
+   "value": {
+    "roof_tokens": [],
+    "ceo": [],
+    "flat_slabs": []
+   },
+   "pass": true
+  },
+  "I11": {
+   "value": {
+    "H1": {
+     "count": 52,
+     "density": 0.045,
+     "target": ">=52 parts (0.045/m2)",
+     "pass": true
+    },
+    "H2": {
+     "count": 53,
+     "density": 0.0458,
+     "target": ">=52 parts (0.045/m2)",
+     "pass": true
+    },
+    "H3": {
+     "count": 52,
+     "density": 0.045,
+     "target": ">=52 parts (0.045/m2)",
+     "pass": true
+    },
+    "H4": {
+     "count": 52,
+     "density": 0.045,
+     "target": ">=52 parts (0.045/m2)",
+     "pass": true
+    }
+   },
+   "pass": true
+  },
+  "I12": {
+   "value": {
+    "H1": {
+     "groups": 2,
+     "pass": true
+    },
+    "H2": {
+     "groups": 3,
+     "pass": true
+    },
+    "H3": {
+     "groups": 1,
+     "pass": true
+    },
+    "H4": {
+     "groups": 2,
+     "pass": true
+    }
+   },
+   "pass": true
+  },
+  "I5": {
+   "value": {
+    "families_ge5": 8,
+    "largest": [
+     [
+      "h4_v15",
+      83
+     ],
+     [
+      "h1_v15",
+      76
+     ],
+     [
+      "h3_v15",
+      64
+     ],
+     [
+      "h2_v15",
+      57
+     ],
+     [
+      "h2_v15_office",
+      9
+     ],
+     [
+      "h1_v15_cabn",
+      6
+     ]
+    ]
+   },
+   "pass": true
+  }
+ },
+ "halls": {
+  "H1": {
+   "light_pct": 30.5,
+   "L_med": 0.46,
+   "water_pct": 16.4
+  },
+  "H2": {
+   "light_pct": 49.7,
+   "L_med": 0.618,
+   "water_pct": 3.3
+  },
+  "H3": {
+   "light_pct": 39.5,
+   "L_med": 0.595,
+   "water_pct": 8.5
+  },
+  "H4": {
+   "light_pct": 39.7,
+   "L_med": 0.595,
+   "water_pct": 0.5
+  }
+ },
+ "failed": [],
+ "visual": {
+  "front_back_comparison": "delivered (renders/checks/01_core.png vs v14)",
+  "three_person_blind_test": "not_run"
+ },
+ "note": "mechanical closure only; the identity blind test (I10) was not run, so target_met is not claimed"
+}

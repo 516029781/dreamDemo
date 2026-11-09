@@ -1,0 +1,9 @@
+{
+ "check": "S9",
+ "bevel_objects": 643,
+ "bevel_width_range": [
+  0.026,
+  0.08
+ ],
+ "pass": true
+}

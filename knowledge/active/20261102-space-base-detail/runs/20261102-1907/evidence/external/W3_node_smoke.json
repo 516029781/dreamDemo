@@ -1,0 +1,63 @@
+{
+ "status": "diagnostic_only",
+ "note": "Node stub; not a WeChat/device test. W3/W4 remain external.",
+ "image": {
+  "path": "C:\\软件\\鼠鼠\\runtime_space_base\\assets\\space_base_v02.jpg",
+  "width": 1920,
+  "height": 2560
+ },
+ "initial": {
+  "camX": 0,
+  "camY": 557,
+  "viewW": 1080,
+  "viewH": 1620
+ },
+ "clampedLow": {
+  "camX": 0,
+  "camY": 0,
+  "viewW": 1080,
+  "viewH": 1620
+ },
+ "clampedHigh": {
+  "camX": 840,
+  "camY": 940,
+  "viewW": 1080,
+  "viewH": 1620
+ },
+ "checks": {
+  "map_loaded_log": true,
+  "first_frame_log": true,
+  "low_clamped": true,
+  "high_clamped": true,
+  "no_errors": true
+ },
+ "logs": [
+  {
+   "level": "log",
+   "args": [
+    "SPACE_BASE_MAP_LOADED",
+    {
+     "width": 1920,
+     "height": 2560,
+     "load_ms": 1,
+     "memorySize": 4096,
+     "benchmarkLevel": 30,
+     "windowWidth": 540,
+     "windowHeight": 960,
+     "pixelRatio": 2
+    }
+   ]
+  },
+  {
+   "level": "log",
+   "args": [
+    "SPACE_BASE_FIRST_FRAME",
+    {
+     "ms": 1,
+     "memorySize": 4096,
+     "benchmarkLevel": 30
+    }
+   ]
+  }
+ ]
+}

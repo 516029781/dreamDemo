@@ -1,0 +1,51 @@
+{
+ "schema": "run-status-v1",
+ "request_id": "20261108-space-base-v13-testworkshop",
+ "run_id": "20261108-1755",
+ "business_id": "space_base_minigame",
+ "task_mode": "production",
+ "stage": "N7",
+ "status": "in_progress",
+ "end_state": null,
+ "note": "Mechanical N7 closed (check_v7 PASS). Not target_met: visual cases + blind test remain; run is not ended (HARNESS_LIFECYCLE 3).",
+ "completed": [
+  "N0",
+  "N1",
+  "N2",
+  "N3",
+  "N4",
+  "N5",
+  "N6"
+ ],
+ "n7": {
+  "pass": [
+   "TV13-01",
+   "TV13-02",
+   "TV13-03",
+   "TV13-04",
+   "TV13-05",
+   "TV13-08",
+   "TV13-09"
+  ],
+  "diagnostic_only": [
+   "TV13-06",
+   "TV13-07"
+  ],
+  "not_run": [
+   "TV13-10"
+  ]
+ },
+ "hypotheses": [
+  "H1",
+  "H2",
+  "H3",
+  "H4"
+ ],
+ "blocking": [
+  "TV13-10 three-person blind test requires user",
+  "TV13-06/07 visual self-review not yet signed off",
+  "Q2 S1 threshold decision deferred"
+ ],
+ "candidate": "art/static_map/space_base_minigame/v13",
+ "business_gate_pass": true
+}

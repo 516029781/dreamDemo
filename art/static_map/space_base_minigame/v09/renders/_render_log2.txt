@@ -1,0 +1,11 @@
+00:00.594  blend            | Read blend: "C:\软件\鼠鼠\art\static_map\space_base_minigame\v09\scene.blend"
+20:33.016  render           | Saved: 'C:\软件\鼠鼠\art\static_map\space_base_minigame\v09\renders\master_raw.png'
+24:09.047  render           | Saved: 'C:\软件\鼠鼠\art\static_map\space_base_minigame\v09\renders\core_raw.png'
+26:35.188  render           | Saved: 'C:\软件\鼠鼠\art\static_map\space_base_minigame\v09\renders\hero_raw.png'
+VIEW_DONE master_raw.png 1232.3s
+VIEW_DONE core_raw.png 216.0s
+VIEW_DONE hero_raw.png 146.1s
+VIEWS_ALL_OK
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:37:16)
+
+Blender quit

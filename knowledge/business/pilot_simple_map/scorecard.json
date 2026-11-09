@@ -1,0 +1,20 @@
+{
+  "schema": "checklist-scorecard-v1",
+  "business_id": "pilot_simple_map",
+  "version": "r01",
+  "note": "这是可读性检查表，不是评分卡：没有总分门槛，也不映射到 P1 的六维权重。",
+  "items": [
+    {"id": "C-01", "question": "主体是否读得出是一个台地院落，而不是一堆方块？", "answer_type": "yes_no", "weight": null},
+    {"id": "C-02", "question": "10 个体块是否都接地、没有悬空或明显穿插？", "answer_type": "yes_no", "weight": null},
+    {"id": "C-03", "question": "投影是否只有一个方向？", "answer_type": "yes_no", "weight": null},
+    {"id": "C-04", "question": "石/木/金属/地四族是否都能在画面里指认出来？", "answer_type": "yes_no", "weight": null},
+    {"id": "C-05", "question": "背景是否自然退远，没有悬浮块/切边/死黑？", "answer_type": "yes_no", "weight": null}
+  ],
+  "thresholds": null,
+  "explicitly_not_inherited_from_p1": [
+    "六维权重 20/20/20/15/15/10",
+    "总分 >= 85",
+    "8 条 P1 硬门槛（含 no_vegetation）",
+    "t084 参考图 SHA 绑定"
+  ]
+}

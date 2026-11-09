@@ -1,0 +1,53 @@
+{
+ "schema": "resolved-knowledge-v1",
+ "request_id": "20261108-space-base-v11-fan",
+ "run_id": "20261108-1500",
+ "business_id": "space_base_minigame",
+ "decisions": [
+  "r11：场地合并为截顶扇形（顶边146/弧底196/进深267，47,399 m²），全场 +4.70",
+  "四厅 34×34、10 m 过道、31 m 附属带、24×31 下沉中庭；总裁盒删除",
+  "桥 A 删除，仅保留花园—半岛桥 B；桥 B 坡度不变（4.70→3.0）",
+  "俯视相机绕 Z +20°，让扇形在画面上竖直；画幅仍 240×420",
+  "HARNESS_SPEC 升 r11，退役 12 项、保留 13 项业务门禁",
+  "r12：花园缩到 34×34（一个核心模块），墙内 1 池/4 坛/2 模纹/廊架 6 榀，8 株棕榈",
+  "r12：三条分立道路取消，改一条 48 m 宽大路面直通花园门架",
+  "r13：核心区 2×2 + 十字过道，取消附属带/中庭，南侧 12 m 装卸带",
+  "r13：场地阶梯收窄 146→130→104；花园 34×34 居中于大路面",
+  "r14：核心区外围空地 34 m → 8 m（侧）/ 13 m（北），场地 31.4k → 16.7k m²",
+  "r14：四厅与十字过道全部敞顶、删除屋顶机组与过道玻璃；新增 REQ-35 / GA15"
+ ],
+ "loaded": [
+  {
+   "path": "planning/art/SPACE_BASE_FAN_MASTERPLAN_20261108.md",
+   "sha256": "54ee6e4da85e18865eaec2d914b1661ee29a191879adf7ab75c949c6408c6c55"
+  },
+  {
+   "path": "knowledge/active/20261108-space-base-v11-fan\\REQUIREMENTS_BRIEF.md",
+   "sha256": "e8d0cbb409f386462c5dc8dfc02a51e6f53539f24fea923d74cb244fed9560a8"
+  },
+  {
+   "path": "knowledge/business/space_base_minigame/HARNESS_SPEC.json",
+   "sha256": "f30b5609d2b734748a1c42620644480c58a70468b4436d4d5037bbdeadf62e0c"
+  },
+  {
+   "path": "tools/blender_space_base/build_scene_v11.py",
+   "sha256": "b3fa57acf83468a4e140fb0945ecb7147e8e3683a7027d7b28c1c421cf44b4cc"
+  },
+  {
+   "path": "tools/blender_space_base/evidence_v11.py",
+   "sha256": "0ebfcedd90114faf69d3386b723926aa6fb9b978c6191f5c44fbb0c1c29ae398"
+  },
+  {
+   "path": "tools/space_base_v11_post.py",
+   "sha256": "ad5de13426f7c81f60c896807f6626fe66ec5abf3a8c62471c727f0875057478"
+  },
+  {
+   "path": "tools/make_v11_delivery.py",
+   "sha256": "7117acd8310ded8a3f9c85cbf5562b1135e99f3278b22f652ef9d8c184482ca4"
+  },
+  {
+   "path": "tools/space_base_check_v7.py",
+   "sha256": "6f29d172bef0db2287c8f223ddc85827ac3cb19d5491038fa10281e0ebd39e12"
+  }
+ ]
+}

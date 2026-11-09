@@ -1,0 +1,65 @@
+{
+ "schema": "manifest-v1",
+ "request_id": "20261104-space-base-v7",
+ "run_id": "20261104-0220",
+ "entries": [
+  {
+   "path": "scene.blend",
+   "sha256": "df348882849e745a0e740a728ea98fef54a39a0b83a685b48dc0d83672cfcc6e"
+  },
+  {
+   "path": "renders/space_base_v07_master.png",
+   "sha256": "40e55309ab28b48c01b62f74a1ae421c47e9336b1032b7c1a5d7b4e8a9a4a9d8"
+  },
+  {
+   "path": "renders/master_raw.png",
+   "sha256": "7d6fd56502de33a04737a684544b63f2e6975680e55e9b5ede541c038f96ff4f"
+  },
+  {
+   "path": "renders/space_base_v07.jpg",
+   "sha256": "cd07e51b04c0a57f5411d90197722aa51a5e383280b110b8c852af558f9ff5a1"
+  },
+  {
+   "path": "renders/space_base_v07_core.png",
+   "sha256": "41f132014be7344f7025b1808bdb632bb4971973bb816af8d3b12524efc54e45"
+  },
+  {
+   "path": "renders/core_raw.png",
+   "sha256": "666c781441389217bac3914ac58a34d132e8e82e5963187e18641271998676d5"
+  },
+  {
+   "path": "renders/space_base_v07_hero.png",
+   "sha256": "d876dfa10251a8e17599a0aac712fbb976e2cd909091e34e21d4a368125ab336"
+  },
+  {
+   "path": "renders/space_base_v07_hero.jpg",
+   "sha256": "9adafbd0432315e9d255a8a5d6745756c57c701a753345571df86ec324e739ed"
+  },
+  {
+   "path": "renders/hero_raw.png",
+   "sha256": "0a0de5f804e50108160443359cf1629ded0c87ae1ddeda8cec609d2d4b136ad0"
+  },
+  {
+   "path": "renders/checks/01_core.png",
+   "sha256": "abd7ded8c626c0dd8a835e19c8d18a861a44fcc08e4f88e0ca833487f612b4b6"
+  },
+  {
+   "path": "renders/checks/02_causeway_hall.png",
+   "sha256": "ae21b6a487eed992ca01922580ed11b732e97dc0de549704855f827b43e20c7f"
+  },
+  {
+   "path": "renders/checks/03_peninsula.png",
+   "sha256": "56f6d9c097fd6e2e4c823febede73324bc0eeba682be37b8542a353964a935ad"
+  },
+  {
+   "path": "renders/checks/04_north_band.png",
+   "sha256": "19b0e70288475033836a8901a870ab0a1be1d67208a9a87166360b5e674bc766"
+  },
+  {
+   "path": "renders/checks/05_g5_pair.png",
+   "sha256": "b4fc7db741635696ecd38c02456757dd169d6bf1231d50157681d19809f3fad5"
+  }
+ ],
+ "font_license": "无随包字体；数字/字母为脚本自绘矢量（tools/space_base_v6_post.py vdigit），中文未烘焙",
+ "assets": "叶卡 3 张随包（card_grass/bush/palm.png，自绘，OFL 等效自产）"
+}

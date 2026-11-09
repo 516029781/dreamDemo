@@ -1,0 +1,103 @@
+{
+ "check": "G4",
+ "probes": [
+  {
+   "name": "garden_north_gate",
+   "world": [
+    120,
+    -14
+   ],
+   "px": [
+    840,
+    1032
+   ],
+   "rgb": [
+    156,
+    161,
+    151
+   ]
+  },
+  {
+   "name": "fountain_ring",
+   "world": [
+    111,
+    -39
+   ],
+   "px": [
+    777,
+    1175
+   ],
+   "rgb": [
+    40,
+    75,
+    87
+   ]
+  },
+  {
+   "name": "causeway_mid",
+   "world": [
+    166,
+    -97
+   ],
+   "px": [
+    1162,
+    1508
+   ],
+   "rgb": [
+    224,
+    213,
+    182
+   ]
+  },
+  {
+   "name": "evac_strip",
+   "world": [
+    221.39,
+    -216.17
+   ],
+   "px": [
+    1549,
+    2191
+   ],
+   "rgb": [
+    233,
+    235,
+    54
+   ]
+  },
+  {
+   "name": "evac_glow",
+   "world": [
+    197.14,
+    -222.65
+   ],
+   "px": [
+    1379,
+    2228
+   ],
+   "rgb": [
+    61,
+    89,
+    85
+   ]
+  },
+  {
+   "name": "water",
+   "world": [
+    20,
+    -240
+   ],
+   "px": [
+    140,
+    2328
+   ],
+   "rgb": [
+    38,
+    70,
+    74
+   ]
+  }
+ ],
+ "pass": true,
+ "rules": "evac strip yellow; garden gate passable; evac glow blue-dominant"
+}

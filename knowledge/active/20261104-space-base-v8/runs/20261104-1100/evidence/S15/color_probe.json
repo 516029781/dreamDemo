@@ -1,0 +1,73 @@
+{
+ "check": "S15",
+ "rule": "|dH|<=12, |dS|<=0.08, |dL|<=0.06 (M8.5 hard gate)",
+ "rows": [
+  {
+   "room": "H1",
+   "name": "离心",
+   "current": "#4C6D81",
+   "target": "#547684",
+   "H": 203,
+   "S": 0.26,
+   "L": 0.4,
+   "dH": 5,
+   "dS": 0.04,
+   "dL": -0.02,
+   "pass": true
+  },
+  {
+   "room": "H2",
+   "name": "浮力",
+   "current": "#42747F",
+   "target": "#477A8A",
+   "H": 191,
+   "S": 0.32,
+   "L": 0.38,
+   "dH": -4,
+   "dS": -0.0,
+   "dL": -0.03,
+   "pass": true
+  },
+  {
+   "room": "H3",
+   "name": "蓝室",
+   "current": "#4A76C5",
+   "target": "#3A6DBF",
+   "H": 219,
+   "S": 0.51,
+   "L": 0.53,
+   "dH": 2,
+   "dS": -0.02,
+   "dL": 0.04,
+   "pass": true
+  },
+  {
+   "room": "H4",
+   "name": "黑室",
+   "current": "#47786C",
+   "target": "#58837D",
+   "H": 165,
+   "S": 0.26,
+   "L": 0.37,
+   "dH": -6,
+   "dS": 0.06,
+   "dL": -0.05,
+   "pass": true
+  },
+  {
+   "room": "C5",
+   "name": "总裁",
+   "current": "#9C866E",
+   "target": "#95755B",
+   "H": 31,
+   "S": 0.19,
+   "L": 0.52,
+   "dH": 4,
+   "dS": -0.05,
+   "dL": 0.05,
+   "pass": true
+  }
+ ],
+ "pass": true,
+ "diagnostic_only": true
+}

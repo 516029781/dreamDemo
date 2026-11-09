@@ -1,0 +1,296 @@
+{
+ "schema": "resolved-knowledge-v1",
+ "request_id": "20261108-space-base-v13-testworkshop",
+ "run_id": "20261108-1755",
+ "business_id": "space_base_minigame",
+ "deliverable_type": "static_map",
+ "loaded": [
+  {
+   "path": "planning/art/SPACE_BASE_EXTERIOR_ORGANIC_PLAN_20261108.md",
+   "sha256": "cc4217ed7da00f1cf00be1c28584c2762f8d468e77ac4e06c2e008199c35978a",
+   "scope": "active",
+   "lifecycle": "active",
+   "maturity": "observed",
+   "usage": "requirement"
+  },
+  {
+   "path": "planning/art/SPACE_BASE_FAN_MASTERPLAN_20261108.md",
+   "sha256": "54ee6e4da85e18865eaec2d914b1661ee29a191879adf7ab75c949c6408c6c55",
+   "scope": "active",
+   "lifecycle": "superseded",
+   "maturity": "observed",
+   "usage": "experiment"
+  },
+  {
+   "path": "planning/art/SPACE_BASE_MASTER_SPEC_20261102.md",
+   "sha256": "5af3e12ac4d3130a1c571f19cd7cc89086d529690de4d8d44437f94b63efe757",
+   "scope": "business/space_base_minigame",
+   "lifecycle": "active",
+   "maturity": "observed",
+   "usage": "requirement"
+  },
+  {
+   "path": "planning/art/SPACE_BASE_INTERIOR_DRESSING_20261102.md",
+   "sha256": "85d755bb83164b134f2213f56305679cd175b008dc981c09c86dea9e48c743d2",
+   "scope": "business/space_base_minigame",
+   "lifecycle": "active",
+   "maturity": "observed",
+   "usage": "requirement"
+  },
+  {
+   "path": "planning/art/SPACE_BASE_LAYOUT_ISSUES_20261103.md",
+   "sha256": "c8f39dfc61b671deed34268c79c172d08e7bae788cba05a18a0757e2d3b6f9f3",
+   "scope": "business/space_base_minigame",
+   "lifecycle": "active",
+   "maturity": "observed",
+   "usage": "method"
+  },
+  {
+   "path": "knowledge/common/dev_core/HARNESS_LIFECYCLE.md",
+   "sha256": "5a87406ed0ed017d726e85d51e610b80e582fa684c71cf8f0e92a178e5dc752d",
+   "scope": "common/dev_core",
+   "lifecycle": "active",
+   "maturity": "not_applicable",
+   "usage": "method"
+  },
+  {
+   "path": "knowledge/common/methods/map_art/README.md",
+   "sha256": "262341c8b5bd77011d938ae229833d728ea7c7a9880fa7b37b6a3293114cd0c3",
+   "scope": "common/methods/map_art",
+   "lifecycle": "active",
+   "maturity": "not_applicable",
+   "usage": "method"
+  },
+  {
+   "path": "knowledge/REUSABLE_MAP_ART_PIPELINE.md",
+   "sha256": "61dfcc46f15f50f6596fe4c611cfccc58976dda64f16740e20627792a5d061db",
+   "scope": "common/methods/map_art",
+   "lifecycle": "active",
+   "maturity": "observed",
+   "usage": "method"
+  },
+  {
+   "path": "AGENTS.md",
+   "sha256": "47fb3497c259f8480a8cb39a0e5534e6b8923c2c2ac6037c0fa20035929860cd",
+   "scope": "common/dev_core",
+   "lifecycle": "active",
+   "maturity": "not_applicable",
+   "usage": "requirement"
+  },
+  {
+   "path": "START_HERE.md",
+   "sha256": "e06c8c34a84419f31212f4dc73ed3730b2c1c409d5e9e99f687707da36dfb35e",
+   "scope": "common/dev_core",
+   "lifecycle": "active",
+   "maturity": "not_applicable",
+   "usage": "requirement"
+  },
+  {
+   "path": "knowledge/business/space_base_minigame/HARNESS_SPEC.json",
+   "sha256": "f30b5609d2b734748a1c42620644480c58a70468b4436d4d5037bbdeadf62e0c",
+   "scope": "business/space_base_minigame",
+   "lifecycle": "active",
+   "maturity": "not_applicable",
+   "usage": "requirement"
+  },
+  {
+   "path": "knowledge/business/space_base_minigame/BUSINESS_PROFILE.md",
+   "sha256": "40d8b256e857e375367a5f17b9b47122fa27790dc17e8bac86efb07f47e1de6d",
+   "scope": "business/space_base_minigame",
+   "lifecycle": "active",
+   "maturity": "not_applicable",
+   "usage": "requirement"
+  },
+  {
+   "path": "knowledge/business/space_base_minigame/STYLE_PROFILE.md",
+   "sha256": "bd2335802350f4f4095452e6bb9f4f329d54378d14ef7de08a37954d229e9987",
+   "scope": "business/space_base_minigame",
+   "lifecycle": "active",
+   "maturity": "observed",
+   "usage": "requirement"
+  },
+  {
+   "path": "knowledge/business/space_base_minigame/test_cases.json",
+   "sha256": "b4854ecd3d60ab104b8124d22e04f00f0055856b766cba706f252d61c28f4bf8",
+   "scope": "business/space_base_minigame",
+   "lifecycle": "active",
+   "maturity": "not_applicable",
+   "usage": "requirement"
+  },
+  {
+   "path": "tools/blender_space_base/build_scene_v12.py",
+   "sha256": "b2390cd38b8dd4e80934706a1b9a1dd4f41810dc07d474c0297d12713f6f5dce",
+   "scope": "tools",
+   "lifecycle": "active",
+   "maturity": "not_applicable",
+   "usage": "method"
+  },
+  {
+   "path": "tools/blender_space_base/render_v12_views.py",
+   "sha256": "a9fbf786d54081c47bf67d35fab3c01cc7117b3dcf4a49d781fcb152eabb2dd9",
+   "scope": "tools",
+   "lifecycle": "active",
+   "maturity": "not_applicable",
+   "usage": "method"
+  },
+  {
+   "path": "tools/blender_space_base/render_v12_quick.py",
+   "sha256": "a68430bb4f6b363174c571829f2c9d9488ac00a6aff95a3552ca27fcf0aae6f3",
+   "scope": "tools",
+   "lifecycle": "active",
+   "maturity": "not_applicable",
+   "usage": "method"
+  },
+  {
+   "path": "tools/space_base_check_v7.py",
+   "sha256": "6f29d172bef0db2287c8f223ddc85827ac3cb19d5491038fa10281e0ebd39e12",
+   "scope": "tools",
+   "lifecycle": "active",
+   "maturity": "not_applicable",
+   "usage": "method"
+  },
+  {
+   "path": "tools/space_base_v11_post.py",
+   "sha256": "ad5de13426f7c81f60c896807f6626fe66ec5abf3a8c62471c727f0875057478",
+   "scope": "tools",
+   "lifecycle": "active",
+   "maturity": "not_applicable",
+   "usage": "method"
+  },
+  {
+   "path": "tools/make_v11_delivery.py",
+   "sha256": "7117acd8310ded8a3f9c85cbf5562b1135e99f3278b22f652ef9d8c184482ca4",
+   "scope": "tools",
+   "lifecycle": "active",
+   "maturity": "not_applicable",
+   "usage": "method"
+  },
+  {
+   "path": "art/static_map/space_base_minigame/v12/scene.blend",
+   "sha256": "967c1505c7d700c6abb280ec8f91a3d5f8e21da42a2a0b6ef2265a6e2605704c",
+   "scope": "candidate/parent",
+   "lifecycle": "active",
+   "maturity": "reproduced",
+   "usage": "experiment"
+  },
+  {
+   "path": "art/static_map/space_base_minigame/v12/renders/master_raw.png",
+   "sha256": "cb57110f8126cd32bf876b60278f7a71879bb26023203cc82a75b0483bb297c0",
+   "scope": "candidate/parent",
+   "lifecycle": "active",
+   "maturity": "reproduced",
+   "usage": "experiment"
+  },
+  {
+   "path": "art/static_map/space_base_minigame/v12/renders/hero_raw.png",
+   "sha256": "6ec4d9d6e956bb5fd4fa0ee29d0607818cbf7ed0c070832abb2efd667d120ae7",
+   "scope": "candidate/parent",
+   "lifecycle": "active",
+   "maturity": "reproduced",
+   "usage": "experiment"
+  },
+  {
+   "path": "art/static_map/space_base_minigame/v12/DEVLOG.md",
+   "sha256": "0feda6776b6c5dab5483607cba5a42ad84bafb8785de4f907c7b7fb656f95617",
+   "scope": "candidate/parent",
+   "lifecycle": "active",
+   "maturity": "observed",
+   "usage": "method"
+  },
+  {
+   "path": "reference/_df_screenshots/gamersky/01_航天基地.jpg",
+   "sha256": "4b5ef636e55182a02c1fe62d59cc1cc7c8c43d2904a7e5d06bdaafe4cfa60dfe",
+   "scope": "reference",
+   "lifecycle": "active",
+   "maturity": "observed",
+   "usage": "structural_reference"
+  },
+  {
+   "path": "reference/_df_screenshots/gamersky/12_水平试车间.jpg",
+   "sha256": "21076db950035a26a0c19369ee8251a35941042c21ffbb62fe4035afc13d880e",
+   "scope": "reference",
+   "lifecycle": "active",
+   "maturity": "observed",
+   "usage": "visual_reference"
+  },
+  {
+   "path": "reference/_df_screenshots/gamersky/13_核心区.jpg",
+   "sha256": "0ad05aea0a6ebd513f0c26f9eb46c02bc70fc6a36c324a647c4b8e9441fd7caf",
+   "scope": "reference",
+   "lifecycle": "active",
+   "maturity": "observed",
+   "usage": "visual_reference"
+  },
+  {
+   "path": "knowledge/active/20261108-space-base-v13-testworkshop/REQUIREMENTS_BRIEF.md",
+   "sha256": "1d135f2132e88fa10521fcd45d65868eca3af322d2d3bc98a7c08586619c9baa",
+   "scope": "active",
+   "lifecycle": "active",
+   "maturity": "not_applicable",
+   "usage": "requirement"
+  }
+ ],
+ "decisions": [
+  {
+   "rule_id": "D1",
+   "decision": "override",
+   "basis": "user 17:45",
+   "note": "南端由码头改为水平试车间（露天防爆场）"
+  },
+  {
+   "rule_id": "D2",
+   "decision": "close",
+   "basis": "D1",
+   "note": "Q4 码头敞顶问题消失"
+  },
+  {
+   "rule_id": "D3",
+   "decision": "not_applicable",
+   "basis": "画幅变更",
+   "note": "旧规范 170×130 尺寸/全局坐标不照搬，只借构件类型"
+  },
+  {
+   "rule_id": "D4",
+   "decision": "override",
+   "basis": "user 17:19",
+   "note": "全图不做屋顶；实机试车间本来露天，逻辑自洽"
+  },
+  {
+   "rule_id": "D5",
+   "decision": "override",
+   "basis": "实机 A 级观察卡 §8.4.6",
+   "note": "M8 做旧限制解禁于室外；防爆墙脚 1.5 m 水渍必须做"
+  },
+  {
+   "rule_id": "D6",
+   "decision": "not_applicable",
+   "basis": "玩法层分离",
+   "note": "绿色战术烟雾不进静态底图"
+  },
+  {
+   "rule_id": "E9",
+   "decision": "override",
+   "basis": "v12 DEVLOG §4",
+   "note": "局部明度起伏降权为观察项；改用 E6b/E11-E15"
+  },
+  {
+   "rule_id": "Q1-Q5",
+   "decision": "inherit",
+   "basis": "brief §5 默认假设",
+   "note": "按默认执行，不阻塞开发；Q2 留到验收前决策"
+  }
+ ],
+ "not_loaded_neighbors": [
+  "knowledge/business/p1_autumn_static/ (P1 专属，不适用)",
+  "knowledge/business/research_arknights_mapdata/ (只作数据研究)",
+  "knowledge/business/pilot_simple_map/ (流程样例，不是风格来源)",
+  "planning/art/SPACE_BASE_RENDER_BRIEF_20261102.md (v03 历史稿)"
+ ],
+ "conflicts": [
+  {
+   "conflict": "南端=码头 vs 南端=水平试车间",
+   "decision": "以用户 17:45 为准",
+   "source": "REQUIREMENTS_BRIEF §1 覆盖声明"
+  }
+ ]
+}

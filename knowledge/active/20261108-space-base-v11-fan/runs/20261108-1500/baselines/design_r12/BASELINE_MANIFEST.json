@@ -1,0 +1,37 @@
+{
+ "schema": "baseline-manifest-v1",
+ "design_version": "r12",
+ "run_id": "20261108-1500",
+ "supersedes": "r11",
+ "note": "r12：花园缩到 34×34，三路合并为一条 48 m 大路面",
+ "entries": [
+  {
+   "path": "SPACE_BASE_FAN_MASTERPLAN_20261108.md",
+   "sha256": "54ee6e4da85e18865eaec2d914b1661ee29a191879adf7ab75c949c6408c6c55"
+  },
+  {
+   "path": "REQUIREMENTS_BRIEF.md",
+   "sha256": "e71e8f64af175842fdedee171d460d120e27d961dd1d2b85b13bebc1e48d3389"
+  },
+  {
+   "path": "HARNESS_SPEC.json",
+   "sha256": "de3dbbc4102c7497c3f5af5621fbfe76e7e5c9cf7eab41d4fa7e253dd3168ad5"
+  },
+  {
+   "path": "build_scene_v11.py",
+   "sha256": "064420a92fa9b11b4b8e7f24d7ab7afb02879ed52b42183f52eafd9c4d4e25d8"
+  },
+  {
+   "path": "evidence_v11.py",
+   "sha256": "7968619984b44304740df72b70fe832b4d1e7d180c64d9d7496cea0bd0322442"
+  },
+  {
+   "path": "space_base_v11_post.py",
+   "sha256": "ad5de13426f7c81f60c896807f6626fe66ec5abf3a8c62471c727f0875057478"
+  },
+  {
+   "path": "space_base_check_v7.py",
+   "sha256": "6f29d172bef0db2287c8f223ddc85827ac3cb19d5491038fa10281e0ebd39e12"
+  }
+ ]
+}

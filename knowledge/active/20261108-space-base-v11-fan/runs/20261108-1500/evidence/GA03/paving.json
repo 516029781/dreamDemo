@@ -1,0 +1,16 @@
+{
+ "check": "GA03",
+ "deck_size_m": [
+  32.8,
+  32.8
+ ],
+ "border_overhang_m": 0.6,
+ "joint_count": 5,
+ "joint_pitch_m": [
+  5.6,
+  5.6,
+  5.6,
+  5.6
+ ],
+ "pass": true
+}

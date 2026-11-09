@@ -1,0 +1,34 @@
+{
+ "schema": "reproduction-v2",
+ "request_id": "20261108-space-base-v13-testworkshop",
+ "run_id": "20261108-1755",
+ "method": "isolated reopen + rerender; compare CONTENT SHA of decoded raw RGB (HARNESS_LIFECYCLE 3)",
+ "declared_tolerance": "identical decoded RGB bytes at 420x620 / 8 samples / seed 0 / same camera",
+ "fixed_conditions": {
+  "resolution": [
+   420,
+   620
+  ],
+  "samples": 8,
+  "seed": 0,
+  "camera": "Camera"
+ },
+ "commands": [
+  "blender -b --factory-startup --python tools/blender_space_base/build_scene_v13.py -- --out <repro>/scene.blend",
+  "blender -b <candidate>/scene.blend --python tools/repro_v13_render.py -- <repro>/orig.png",
+  "blender -b <repro>/scene.blend --python tools/repro_v13_render.py -- <repro>/rebuilt.png"
+ ],
+ "container_sha256_orig": "50aa1f7a7c55258857d9829952b6fe78c4bcde1bb692290c1257d62c24e9ea9c",
+ "container_sha256_rebuilt": "b707c85b08a558c93624164fc6ed0eb876bc24a577ce642168e9722bf8e50d19",
+ "content_sha256_orig": "10ed42ddfddc2f5c9f1c4b30c9b3db7a69ae406c1ee35f9a550a95d07d9f47d2",
+ "content_sha256_rebuilt": "10ed42ddfddc2f5c9f1c4b30c9b3db7a69ae406c1ee35f9a550a95d07d9f47d2",
+ "shape": [
+  620,
+  420,
+  3
+ ],
+ "rms": 0.0,
+ "content_sha_match": true,
+ "pass": true,
+ "note": "container SHA differs by design (PNG metadata); only content SHA is a gate."
+}

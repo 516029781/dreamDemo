@@ -1,0 +1,10 @@
+{
+ "check": "GA07",
+ "benches": 6,
+ "pergola_columns": 8,
+ "containers": 2,
+ "gates": 2,
+ "signs": 2,
+ "lamps": 8,
+ "pass": true
+}

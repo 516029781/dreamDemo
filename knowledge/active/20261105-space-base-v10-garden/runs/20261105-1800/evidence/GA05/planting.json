@@ -1,0 +1,13 @@
+{
+ "check": "GA05",
+ "palm_trunks": 32,
+ "palm_walk_rows": 16,
+ "palm_edge_rows": 16,
+ "palm_cards": 16,
+ "beds": 4,
+ "parterres": 2,
+ "edge_hedges": 2,
+ "green_area_design_m2": 1232,
+ "green_ratio_design": 0.169,
+ "pass": true
+}

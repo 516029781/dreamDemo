@@ -1,0 +1,63 @@
+00:00.578  blend            | Read blend: "C:\软件\鼠鼠\art\static_map\space_base_minigame\v09\scene.blend"
+12:58.015  render           | Saved: 'C:\软件\鼠鼠\art\static_map\space_base_minigame\v09\renders\master_raw.png'
+16:36.187  render           | Saved: 'C:\软件\鼠鼠\art\static_map\space_base_minigame\v09\renders\core_raw.png'
+19:05.656  render           | Saved: 'C:\软件\鼠鼠\art\static_map\space_base_minigame\v09\renders\hero_raw.png'
+VIEW_DONE master_raw.png 777.3s
+VIEW_DONE core_raw.png 218.2s
+VIEW_DONE hero_raw.png 149.5s
+VIEWS_ALL_OK
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:37:16)
+
+Blender quit
+00:02.765  blend            | Read blend: "C:\软件\鼠鼠\art\static_map\space_base_minigame\v09\scene.blend"
+02:07.703  render           | Saved: 'C:\软件\鼠鼠\art\static_map\space_base_minigame\v09\renders\near\CameraP1.png'
+03:57.343  render           | Saved: 'C:\软件\鼠鼠\art\static_map\space_base_minigame\v09\renders\near\CameraP2.png'
+05:38.859  render           | Saved: 'C:\软件\鼠鼠\art\static_map\space_base_minigame\v09\renders\near\CameraP3.png'
+08:23.078  render           | Saved: 'C:\软件\鼠鼠\art\static_map\space_base_minigame\v09\renders\near\CameraP4.png'
+10:24.843  render           | Saved: 'C:\软件\鼠鼠\art\static_map\space_base_minigame\v09\renders\near\CameraP5.png'
+13:30.672  render           | Saved: 'C:\软件\鼠鼠\art\static_map\space_base_minigame\v09\renders\near\CameraP6.png'
+14:48.203  render           | Saved: 'C:\软件\鼠鼠\art\static_map\space_base_minigame\v09\renders\near\CameraP7.png'
+17:57.015  render           | Saved: 'C:\软件\鼠鼠\art\static_map\space_base_minigame\v09\renders\near\CameraP8.png'
+C:\软件\鼠鼠\tools\blender_space_base\render_v9_near.py:61: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  dmat.use_nodes = True
+C:\软件\鼠鼠\tools\blender_space_base\render_v9_near.py:83: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  if world and world.use_nodes:
+18:04.656  render           | Saved: 'C:\软件\鼠鼠\art\static_map\space_base_minigame\v09\renders\near\CameraP1_z.png'
+18:12.328  render           | Saved: 'C:\软件\鼠鼠\art\static_map\space_base_minigame\v09\renders\near\CameraP2_z.png'
+18:19.953  render           | Saved: 'C:\软件\鼠鼠\art\static_map\space_base_minigame\v09\renders\near\CameraP3_z.png'
+18:27.593  render           | Saved: 'C:\软件\鼠鼠\art\static_map\space_base_minigame\v09\renders\near\CameraP4_z.png'
+18:35.234  render           | Saved: 'C:\软件\鼠鼠\art\static_map\space_base_minigame\v09\renders\near\CameraP5_z.png'
+18:42.828  render           | Saved: 'C:\软件\鼠鼠\art\static_map\space_base_minigame\v09\renders\near\CameraP6_z.png'
+18:50.422  render           | Saved: 'C:\软件\鼠鼠\art\static_map\space_base_minigame\v09\renders\near\CameraP7_z.png'
+18:58.125  render           | Saved: 'C:\软件\鼠鼠\art\static_map\space_base_minigame\v09\renders\near\CameraP8_z.png'
+C:\软件\鼠鼠\tools\blender_space_base\render_v9_near.py:101: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  if world and world.use_nodes:
+NEAR_DONE CameraP1 124.7s
+NEAR_DONE CameraP2 109.6s
+NEAR_DONE CameraP3 101.5s
+NEAR_DONE CameraP4 164.2s
+NEAR_DONE CameraP5 121.8s
+NEAR_DONE CameraP6 185.8s
+NEAR_DONE CameraP7 77.5s
+NEAR_DONE CameraP8 188.8s
+DEPTH_DONE CameraP1
+DEPTH_DONE CameraP2
+DEPTH_DONE CameraP3
+DEPTH_DONE CameraP4
+DEPTH_DONE CameraP5
+DEPTH_DONE CameraP6
+DEPTH_DONE CameraP7
+DEPTH_DONE CameraP8
+NEAR_ALL_OK
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:37:16)
+
+Blender quit
+NPR_OK CameraP1 (1080, 1920)
+NPR_OK CameraP2 (1080, 1920)
+NPR_OK CameraP3 (1080, 1920)
+NPR_OK CameraP4 (1080, 1920)
+NPR_OK CameraP5 (1080, 1920)
+NPR_OK CameraP6 (1080, 1920)
+NPR_OK CameraP7 (1080, 1920)
+NPR_OK CameraP8 (1080, 1920)
+NPR_ALL_OK

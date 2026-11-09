@@ -1,0 +1,60 @@
+{
+ "schema": "delivery-v1",
+ "business_id": "space_base_minigame",
+ "request_id": "20261102-space-base-map",
+ "run_id": "20261102-1314",
+ "status": "target_met",
+ "source": {
+  "path": "C:\\软件\\鼠鼠\\art\\static_map\\space_base_minigame\\v01\\scene.blend",
+  "sha256": "a226ca39f3fa13b640207d65d96d410fb000210cae881edb43a7a62a10132a07"
+ },
+ "master": {
+  "path": "C:\\软件\\鼠鼠\\art\\static_map\\space_base_minigame\\v01\\renders\\space_base_v01_master.png",
+  "size": [
+   3840,
+   5120
+  ],
+  "container_sha256": "48df97d426cc4479f58807965d0bb1bcfb3fdc115e8c5564bc0b6ffc1b2d79e1",
+  "content_sha256": "e40212cf8ec8d5e893839c83c167616ffb33dffa0a6be0105723425da0046702"
+ },
+ "shipped_jpeg": {
+  "path": "C:\\软件\\鼠鼠\\art\\static_map\\space_base_minigame\\v01\\renders\\space_base_v01.jpg",
+  "size": [
+   1920,
+   2560
+  ],
+  "bytes": 448184,
+  "container_sha256": "785505f66f3a144134a4c58b00b16290bc44b72983e0fe81f7401c07808effff",
+  "content_sha256": "a5f654980088048c0849a0abd7056c85879fa573e9a89993ef6a3453b8ec5271"
+ },
+ "reference_profile": {
+  "path": "C:\\软件\\鼠鼠\\art\\static_map\\space_base_minigame\\v01\\reference_analysis\\SPACE_BASE_REFERENCE_PROFILE.json",
+  "sha256": "a4826a0ab8a1cc5dc2f8ba117723f6a56f8506ede3d82c700d7ebbdaa2d4b2e9"
+ },
+ "spec": {
+  "path": "planning/art/SPACE_BASE_MASTER_SPEC_20261102.md",
+  "version": "v1.3",
+  "sha256": "4e0e22229b5afdecfe860b331dc49ee02e4a0a2ac3b41c7805f305cbd1933fc1"
+ },
+ "checks": {
+  "required": "17/17",
+  "external": [
+   "A1",
+   "W3",
+   "W4"
+  ]
+ },
+ "reproduction": {
+  "status": "pass (RMS=0.0/255, tol=2.0)",
+  "rms": 0.0,
+  "tolerance": "2.0/255",
+  "path": "C:\\软件\\鼠鼠\\knowledge\\active\\20261102-space-base-map\\runs\\20261102-1314\\repro\\master_repro_flipped.png"
+ },
+ "commands": {
+  "build_final": "blender -b --factory-startup --python tools/blender_space_base/build_scene.py -- --stage final --out art/static_map/space_base_minigame/v01/scene.blend",
+  "master": "blender -b art/static_map/space_base_minigame/v01/scene.blend --python tools/blender_space_base/render_only.py -- --out art/static_map/space_base_minigame/v01/renders/final/master_raw.png --res 3840x5120 --samples 32",
+  "export": "python tools/space_base_export.py flip/jpeg/checks",
+  "checker": "python tools/space_base_check.py --request knowledge/active/20261102-space-base-map --candidate art/static_map/space_base_minigame/v01 --run 20261102-1314 --stage final"
+ },
+ "notes": "Final image is horizontally mirrored from the physical camera per C2; source scene coordinates are not mirrored."
+}

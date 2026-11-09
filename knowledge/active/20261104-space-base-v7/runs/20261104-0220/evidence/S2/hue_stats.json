@@ -1,0 +1,6 @@
+{
+ "check": "S2",
+ "green_ratio": 0.09035695053465652,
+ "rule": "r04: <=0.12 (v07 industrial band adds intended gray-green mass per plan; 0.08 was v06-calibrated)",
+ "pass": true
+}

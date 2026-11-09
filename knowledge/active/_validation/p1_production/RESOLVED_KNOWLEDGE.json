@@ -15,7 +15,7 @@
   },
   {
    "path": "knowledge/common/dev_core/HARNESS_LIFECYCLE.md",
-   "sha256": "20d3b6c38d24373b16ab8a9807db130fcc858700fae78108e80fa1fefb956ed8",
+   "sha256": "5a87406ed0ed017d726e85d51e610b80e582fa684c71cf8f0e92a178e5dc752d",
    "scope": "common/dev_core",
    "lifecycle": "active",
    "maturity": "not_applicable",
@@ -122,5 +122,5 @@
   "sha_matched": true,
   "conflicts_blocking": []
  },
- "created_at": "2026-11-02T02:54:13"
+ "created_at": "2026-11-02T07:08:36"
 }

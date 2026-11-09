@@ -1,0 +1,61 @@
+{
+ "schema": "delivery-v1",
+ "business_id": "space_base_minigame",
+ "request_id": "20261102-space-base-detail",
+ "run_id": "20261102-1907",
+ "status": "target_met",
+ "source": {
+  "path": "C:\\软件\\鼠鼠\\art\\static_map\\space_base_minigame\\v02\\scene.blend",
+  "sha256": "1341e5cc5f110f9a36384c9feed6a152cdb9aa7036f4a25285db1cfc01658df0"
+ },
+ "master": {
+  "path": "C:\\软件\\鼠鼠\\art\\static_map\\space_base_minigame\\v02\\renders\\space_base_v02_master.png",
+  "size": [
+   3840,
+   5120
+  ],
+  "container_sha256": "630c465d22975bd6227f49938b0a1453a383ed0534cc531d50a5764cd1798acf",
+  "content_sha256": "35e0cd8251d14595c34a006d04d6a21fa530de6f7cb214a61faae296a654b9c8"
+ },
+ "shipped_jpeg": {
+  "path": "C:\\软件\\鼠鼠\\art\\static_map\\space_base_minigame\\v02\\renders\\space_base_v02.jpg",
+  "size": [
+   1920,
+   2560
+  ],
+  "bytes": 463201,
+  "container_sha256": "3aa646cbd01bec5d243ee2af785e8890182cc4179f7e24092103ff8a432ef647",
+  "content_sha256": "8040b8b196c83370d1b9df921c3e5ecf5a23389777dc328cd170e83cc62d2501"
+ },
+ "reference_profile": {
+  "path": "C:\\软件\\鼠鼠\\art\\static_map\\space_base_minigame\\v02\\reference_analysis\\SPACE_BASE_REFERENCE_PROFILE.json",
+  "sha256": "a4826a0ab8a1cc5dc2f8ba117723f6a56f8506ede3d82c700d7ebbdaa2d4b2e9"
+ },
+ "spec": {
+  "path": "planning/art/SPACE_BASE_MASTER_SPEC_20261102.md",
+  "version": "v1.3",
+  "sha256": "4e0e22229b5afdecfe860b331dc49ee02e4a0a2ac3b41c7805f305cbd1933fc1"
+ },
+ "checks": {
+  "required": "17/17",
+  "detail": "D1-D5/5",
+  "external": [
+   "A1",
+   "W3",
+   "W4"
+  ]
+ },
+ "reproduction": {
+  "status": "pass",
+  "rms": 0.303,
+  "tolerance": "2.0/255",
+  "path": "knowledge\\active\\20261102-space-base-detail\\runs\\20261102-1907\\repro\\reproduction.json"
+ },
+ "commands": {
+  "build_detail": "cp v01/scene.blend v02/scene.blend && blender -b v02/scene.blend --python tools/blender_space_base/build_detail_v2.py -- --save",
+  "master": "blender -b art/static_map/space_base_minigame/v02/scene.blend --python tools/blender_space_base/render_only.py -- --out art/static_map/space_base_minigame/v02/renders/final/master_raw_v2.png --res 3840x5120 --samples 32",
+  "export": "python tools/space_base_export.py flip/jpeg/checks/stats",
+  "checker": "python tools/space_base_check_v2.py --request knowledge/active/20261102-space-base-detail --candidate art/static_map/space_base_minigame/v02 --run 20261102-1907 --stage final"
+ },
+ "notes": "v02 is a detail pass over v01; source scene is unmirrored, final image is the C2 horizontal mirror. v01 remains untouched."
+}

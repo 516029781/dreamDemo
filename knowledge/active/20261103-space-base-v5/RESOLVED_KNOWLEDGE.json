@@ -1,0 +1,97 @@
+{
+ "schema": "resolved-knowledge-v1",
+ "request_id": "20261103-space-base-v5",
+ "run_id": "20261103-1010",
+ "business_id": "space_base_minigame",
+ "deliverable_type": "static_map",
+ "loaded": [
+  {
+   "path": "AGENTS.md",
+   "sha256": "47fb3497c259f8480a8cb39a0e5534e6b8923c2c2ac6037c0fa20035929860cd",
+   "scope": "business/space_base_minigame",
+   "lifecycle": "active",
+   "maturity": "not_applicable",
+   "usage": "requirement"
+  },
+  {
+   "path": "knowledge/active/20261103-space-base-v5/REQUIREMENTS_BRIEF.md",
+   "sha256": "93d44081455793f040fecfb125a6e50c350df278c63c9ed73c9d0da8ac258c64",
+   "scope": "business/space_base_minigame",
+   "lifecycle": "active",
+   "maturity": "not_applicable",
+   "usage": "requirement"
+  },
+  {
+   "path": "planning/art/SPACE_BASE_NEW_PLAN_20261103.md",
+   "sha256": "36e389e94264f121a5d91fecc00454a865bd3ded262895bd6aa45e180b470450",
+   "scope": "business/space_base_minigame",
+   "lifecycle": "active",
+   "maturity": "not_applicable",
+   "usage": "requirement"
+  },
+  {
+   "path": "planning/art/SPACE_BASE_VISUAL_UPGRADE_PLAN_20261103.md",
+   "sha256": "cd63b0e3bbf1c1aa46a955c0d491b8842b22c498245b8e7def6b3f664e539988",
+   "scope": "business/space_base_minigame",
+   "lifecycle": "active",
+   "maturity": "not_applicable",
+   "usage": "requirement"
+  },
+  {
+   "path": "knowledge/business/space_base_minigame/BUSINESS_PROFILE.md",
+   "sha256": "f8f670f95b2b56e8093ab2c6c794d135f93dd8bfe2156f424de169fb4ba110ad",
+   "scope": "business/space_base_minigame",
+   "lifecycle": "active",
+   "maturity": "not_applicable",
+   "usage": "requirement"
+  },
+  {
+   "path": "knowledge/business/space_base_minigame/HARNESS_SPEC.json",
+   "sha256": "a8d65c0c872fece5d52ece657876ed0c62dee0cdb7c5b41cc2fa10de1fad408e",
+   "scope": "business/space_base_minigame",
+   "lifecycle": "active",
+   "maturity": "not_applicable",
+   "usage": "requirement"
+  },
+  {
+   "path": "tools/blender_space_base/build_scene_v5.py",
+   "sha256": "4586b337a9afab3d7551f8e02578b0d344635c53f1de695bd1ab8fafd58dc795",
+   "scope": "business/space_base_minigame",
+   "lifecycle": "active",
+   "maturity": "not_applicable",
+   "usage": "requirement"
+  },
+  {
+   "path": "art/static_map/space_base_minigame/v05/assets/card_grass.png",
+   "sha256": "1cfabd6e7450eed2a582befb84ae65ca480b5d8348bbefdc1b3e49be8d683fb1",
+   "scope": "business/space_base_minigame",
+   "lifecycle": "active",
+   "maturity": "not_applicable",
+   "usage": "requirement"
+  },
+  {
+   "path": "art/static_map/space_base_minigame/v05/assets/card_bush.png",
+   "sha256": "2f54e848ccb2cb6e46b269fbc96d0d9bb406c1880efcba2bf76e2475a0d98d2d",
+   "scope": "business/space_base_minigame",
+   "lifecycle": "active",
+   "maturity": "not_applicable",
+   "usage": "requirement"
+  },
+  {
+   "path": "art/static_map/space_base_minigame/v05/assets/card_palm.png",
+   "sha256": "637b045cdb9077a2a2e8174cc18d594806b18130c1653af7eeb373ccd498c100",
+   "scope": "business/space_base_minigame",
+   "lifecycle": "active",
+   "maturity": "not_applicable",
+   "usage": "requirement"
+  },
+  {
+   "path": "knowledge/common/dev_core/HARNESS_LIFECYCLE.md",
+   "sha256": "5a87406ed0ed017d726e85d51e610b80e582fa684c71cf8f0e92a178e5dc752d",
+   "scope": "business/space_base_minigame",
+   "lifecycle": "active",
+   "maturity": "not_applicable",
+   "usage": "requirement"
+  }
+ ]
+}

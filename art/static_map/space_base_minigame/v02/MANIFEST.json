@@ -1,0 +1,67 @@
+{
+ "schema": "asset-manifest-v1",
+ "business_id": "space_base_minigame",
+ "version": "v02",
+ "files": [
+  {
+   "path": "scene.blend",
+   "sha256": "1341e5cc5f110f9a36384c9feed6a152cdb9aa7036f4a25285db1cfc01658df0",
+   "bytes": 6232894
+  },
+  {
+   "path": "renders/space_base_v02_master.png",
+   "sha256": "630c465d22975bd6227f49938b0a1453a383ed0534cc531d50a5764cd1798acf",
+   "bytes": 13741781
+  },
+  {
+   "path": "renders/space_base_v02.jpg",
+   "sha256": "3aa646cbd01bec5d243ee2af785e8890182cc4179f7e24092103ff8a432ef647",
+   "bytes": 463201
+  },
+  {
+   "path": "reference_analysis/SPACE_BASE_REFERENCE_PROFILE.json",
+   "sha256": "a4826a0ab8a1cc5dc2f8ba117723f6a56f8506ede3d82c700d7ebbdaa2d4b2e9",
+   "bytes": 2152
+  },
+  {
+   "path": "renders/checks/01_core.png",
+   "sha256": "645c3c57dd6250a6ff7a60bab42d50f0e0409187d17d397812dfd3881fd95cda",
+   "bytes": 586772
+  },
+  {
+   "path": "renders/checks/02_workshop.png",
+   "sha256": "404bd7bb9efabd03d924010c1850173620d78db3421ed8fa2fc8bc2b651d8265",
+   "bytes": 504143
+  },
+  {
+   "path": "renders/checks/03_south_exit.png",
+   "sha256": "b2f64b35176cb918651aa4c0d44252e924f9f5721372d3c7d62df53a277df1a0",
+   "bytes": 216063
+  },
+  {
+   "path": "renders/checks/04_ceo.png",
+   "sha256": "a8565d36e32db78727a515eacf2c076918b53d53624361d1c2a15243d4845b9c",
+   "bytes": 183840
+  },
+  {
+   "path": "REVIEW.md",
+   "sha256": "b2df4b566d6dcba6c8b51f3d8ebb865d16d72db0f939a49a3338d9e436046f20",
+   "bytes": 3916
+  },
+  {
+   "path": "DELIVERY.json",
+   "sha256": "f33455594ea31aac5a8a61a9cfafbb6b40cd3d603a0e4581b0a93615aac6a7f9",
+   "bytes": 2530
+  },
+  {
+   "path": "GATE_REPORT.json",
+   "sha256": "8a471e5aff67e09e6a6233262ae9ca2883a2bd35e545a5ecaa9d8210ee213222",
+   "bytes": 1025
+  },
+  {
+   "path": "REPRODUCE.md",
+   "sha256": "d025f76459ac45dc55d15b4e4b3763c7a88c50ff33578b766cc33feab61996a8",
+   "bytes": 795
+  }
+ ]
+}

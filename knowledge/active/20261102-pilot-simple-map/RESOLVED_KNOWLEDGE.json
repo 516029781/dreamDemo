@@ -1,0 +1,34 @@
+{
+  "schema": "resolved-knowledge-v1",
+  "request_id": "20261102-pilot-simple-map",
+  "business_id": "pilot_simple_map",
+  "resolved_at": "2026-11-02T07:10+08:00",
+  "routing": {
+    "decision": "new_business_bootstrap",
+    "why": "需求是'做一张简单的图验证流程'，不含 P1 关键词，也不是数据研究；按 manifest.routing_rules.no_match 新建业务包，不借用其他业务视觉答案",
+    "considered_and_rejected": [
+      {"business_id": "p1_autumn_static", "reason": "会写入 P1 候选、继承 8 条硬门槛与 85 分，且用户明确说'简单'；验证目标不是 P1 美术"},
+      {"business_id": "research_arknights_mapdata", "reason": "只做数据研究，不产出图像"}
+    ]
+  },
+  "loaded": [
+    {"path": "knowledge/business/manifest.json", "sha256": "195c0b2dff26acec61ac2e1b6b7a1c79fbb8683c837d8fc28e22412a4ba6a7ed", "why": "路由规则与业务清单"},
+    {"path": "knowledge/common/dev_core/HARNESS_LIFECYCLE.md", "sha256": "20d3b6c38d24373b16ab8a9807db130fcc858700fae78108e80fa1fefb956ed8", "why": "N0–N8 与证据契约（不可改写）"},
+    {"path": "knowledge/common/art_base/ART_STYLE_BASE.md", "sha256": "51998aa77f850f12d9ae31101c7923efc29299268860f34214cf738f8db25ebb", "why": "仅作背景；status=draft，未按批准基线使用"},
+    {"path": "knowledge/business/pilot_simple_map/BUSINESS_PROFILE.md", "sha256": "bdb10d35860516fa53bd484ab69eeb10512de9bef86de5e1af0a8beeb73f6308", "why": "本业务目标与边界"},
+    {"path": "knowledge/business/pilot_simple_map/STYLE_PROFILE.md", "sha256": "515e23987fe0970f74bf1aafae81d2b642c8784218177f079323c84c928d3ce6", "why": "风格事实与禁止外推条款"},
+    {"path": "knowledge/business/pilot_simple_map/test_cases.json", "sha256": "f6b5de601e331734d8e12af98b7935e812f9f9f09676d52b51409e541d170a52", "why": "用例与容差"},
+    {"path": "knowledge/business/pilot_simple_map/HARNESS_SPEC.json", "sha256": "a5781320a7fa037024364380e403f7fb7a52ad53dfa201655104b73e2e315c7e", "why": "本业务检查集"}
+  ],
+  "excluded": [
+    {"path": "knowledge/business/p1_autumn_static/", "reason": "业务隔离；其 scorecard 与 gate 写死 P1 参考与门槛"},
+    {"path": "tools/static_map_quality_gate.py", "reason": "P1 专用机械 gate，对新业务无语义"},
+    {"path": "planning/art/P1_T084_ART_DIRECTION_STANDARD_20261028.md", "reason": "P1 视觉标准，不适用于本单"},
+    {"path": "planning/execution/LESSONS.md", "reason": "本轮未加载：经验索引与本单验证目标无关，避免把 P1 经验当通用规则"}
+  ],
+  "gaps_found": [
+    "manifest.routing_rules 没有'pilot/实验性运行'这一类，本次靠 no_match 兜底",
+    "HARNESS_SPEC 模板没有'本 spec 未接入 hook'的显式字段，本次写进 capabilities_not_implemented",
+    "没有跨业务的机械 gate；新业务只能人工核对 + 自建脚本"
+  ]
+}

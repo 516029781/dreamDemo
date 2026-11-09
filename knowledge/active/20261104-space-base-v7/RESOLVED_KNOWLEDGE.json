@@ -1,0 +1,54 @@
+{
+ "schema": "resolved-knowledge-v1",
+ "request_id": "20261104-space-base-v7",
+ "run_id": "20261103-2100",
+ "business_id": "space_base_minigame",
+ "decisions": [
+  "Q1=I2+（预置 P1）",
+  "Q2=斜角保持 20°（预置 P2 同源）",
+  "Q3=总裁盒开顶（预置 P2）",
+  "换色公式 L'=0.34+0.55L、S≤0.85，保形换色（模拟 S1 48.7% 达标）",
+  "新门禁 S11/S13/S15 首两切片 diagnostic_only（预置 P7）",
+  "M8.5 迭代 r1-r10：暖光把低饱和冷色拖 ΔH −40..−66 且 S 稀释 2-3×；高饱和基色守住色相",
+  "r3 定案：h1-h4 基色 = 目标色相 + S1.0/L0.10-0.30 + 同色相 emission 0.30-0.88 护色；C5 用补偿基色",
+  "H3 蓝室：坑底改蓝光 pit_blue、分区带蓝灰 zone_blue、PitLight 暖→冷 #B9CEE0、地板同色 emission",
+  "H3 探针孔径修正：x0 126→141（避开 CEO 盒 x≤140.8 的 warm overlap，属 C5 区内容）",
+  "S12 判据按意图精化：出画（上框≥0.9/左右≥0.55）+ 无宽人工边界行；自然岸线不算边界",
+  "v07 版式：岛+渠+双桥+北/东外圈+发射区+半岛（地标对齐方案 §4，用户 2026-11-04 确认）",
+  "渠道用布尔差集挖八角平台；码头压顶白条收边；外圈为剪影级体块（无室内）",
+  "半岛沿用干船坞坐标系（u/v 20°），甲板/道具/撤离点/集装箱原位保留，护 G4/G5",
+  "英雄图 30° 俯角画幅上沿在地平线下 ~20°：远山几何不可见，属口径修正非 bug；远山由 17°/8° 宣传视角承担",
+  "发射区 30° 斜堤尾段伸出 240 m 窗外，接受（对角线出画是故意的构图）",
+  "G8 重定向：堤道—半岛甲板接缝（spec r04）；G4 fountain_ring 探针改 (111,-7)"
+ ],
+ "open_questions": [
+  "S6 墙竖缝降级与 S1 全帧口径待控制器签认（沿用 r02 遗留）"
+ ],
+ "conflicts": [],
+ "loaded": [
+  {
+   "path": "planning/art/SPACE_BASE_UNIFIED_PLAN_20261103.md",
+   "sha256": "3002198511efaafe3e5fd411b012941fe042a648b27090e44905326ed2dca4b2"
+  },
+  {
+   "path": "planning/art/SPACE_BASE_NEW_PLAN_20261103.md",
+   "sha256": "27462856e88e8f5c5fa73328a2bae4505c7b411c74fd8e524e4404bfe171456b"
+  },
+  {
+   "path": "planning/art/SPACE_BASE_ART_STYLE_DF_REFERENCE_20261102.md",
+   "sha256": "465d379bd282ad258ae2ac03c64498ad86bca49fe063da802ca23134ddfb366b"
+  },
+  {
+   "path": "reference/_df_screenshots/PALETTE.json",
+   "sha256": "680497c79a0be841fd28433e3a1a75ba03d146499a1adc3146012bc0af1134c0"
+  },
+  {
+   "path": "knowledge/business/space_base_minigame/BUSINESS_PROFILE.md",
+   "sha256": "40d8b256e857e375367a5f17b9b47122fa27790dc17e8bac86efb07f47e1de6d"
+  },
+  {
+   "path": "knowledge/business/space_base_minigame/HARNESS_SPEC.json",
+   "sha256": "07b5c064df6b44600006e6a34eb46b16713ccb7937dd03cfed7a80c2f1f46d75"
+  }
+ ]
+}

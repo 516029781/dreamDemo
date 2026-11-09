@@ -1,0 +1,188 @@
+{
+ "schema": "v14-grounding-v1",
+ "scene": "C:/软件/鼠鼠/art/static_map/space_base_minigame/v14/scene.blend",
+ "meshes": 1369,
+ "bottom_z_histogram": {
+  "4.7": 215,
+  "4.8": 201,
+  "0.2": 164,
+  "0.0": 145,
+  "0.3": 32,
+  "4.9": 29,
+  "9.3": 27,
+  "5.1": 21,
+  "12.2": 19,
+  "5.6": 18,
+  "0.1": 17,
+  "11.7": 16,
+  "17.2": 16,
+  "9.0": 16,
+  "4.3": 14,
+  "-0.3": 13
+ },
+ "airborne_suspects": [
+  {
+   "name": "fan_band_1",
+   "zmin": 5.148
+  },
+  {
+   "name": "fan_band_10",
+   "zmin": 5.148
+  },
+  {
+   "name": "fan_band_11",
+   "zmin": 5.148
+  },
+  {
+   "name": "fan_band_2",
+   "zmin": 5.148
+  },
+  {
+   "name": "fan_band_3",
+   "zmin": 5.148
+  },
+  {
+   "name": "fan_band_4",
+   "zmin": 5.148
+  },
+  {
+   "name": "fan_band_5",
+   "zmin": 5.148
+  },
+  {
+   "name": "fan_band_6",
+   "zmin": 5.148
+  },
+  {
+   "name": "fan_band_7",
+   "zmin": 5.148
+  },
+  {
+   "name": "fan_band_8",
+   "zmin": 5.148
+  },
+  {
+   "name": "fan_band_9",
+   "zmin": 5.148
+  },
+  {
+   "name": "fan_band_n0",
+   "zmin": 5.148
+  },
+  {
+   "name": "fan_band_n1",
+   "zmin": 5.148
+  },
+  {
+   "name": "gedge_0",
+   "zmin": 5.06
+  },
+  {
+   "name": "gedge_1",
+   "zmin": 5.06
+  },
+  {
+   "name": "gedge_2",
+   "zmin": 5.06
+  },
+  {
+   "name": "gedge_3",
+   "zmin": 5.06
+  },
+  {
+   "name": "ggate_cap_-1",
+   "zmin": 9.3
+  },
+  {
+   "name": "ggate_cap_1",
+   "zmin": 9.3
+  },
+  {
+   "name": "gperg_slat_0",
+   "zmin": 7.3
+  },
+  {
+   "name": "gperg_slat_1",
+   "zmin": 7.36
+  },
+  {
+   "name": "gperg_slat_2",
+   "zmin": 7.42
+  },
+  {
+   "name": "gperg_slat_3",
+   "zmin": 7.48
+  },
+  {
+   "name": "gperg_slat_4",
+   "zmin": 7.54
+  },
+  {
+   "name": "gperg_slat_5",
+   "zmin": 7.6
+  },
+  {
+   "name": "gsign_0",
+   "zmin": 7.6
+  },
+  {
+   "name": "gsign_1",
+   "zmin": 7.6
+  },
+  {
+   "name": "gw_e_band",
+   "zmin": 5.22
+  },
+  {
+   "name": "gw_s_band",
+   "zmin": 5.22
+  },
+  {
+   "name": "gw_w_band",
+   "zmin": 5.22
+  },
+  {
+   "name": "h1_band_n",
+   "zmin": 14.3
+  },
+  {
+   "name": "h1_drum_band",
+   "zmin": 8.32
+  },
+  {
+   "name": "h1_drum_cap",
+   "zmin": 24.4
+  },
+  {
+   "name": "h1_drum_eye",
+   "zmin": 24.8
+  },
+  {
+   "name": "h1_ndoor_head",
+   "zmin": 7.1
+  },
+  {
+   "name": "h1_pj_n_h1.5",
+   "zmin": 6.18
+  },
+  {
+   "name": "h1_pj_n_h10.5",
+   "zmin": 15.18
+  },
+  {
+   "name": "h1_pj_n_h3.0",
+   "zmin": 7.68
+  },
+  {
+   "name": "h1_pj_n_h4.5",
+   "zmin": 9.18
+  },
+  {
+   "name": "h1_pj_n_h6.0",
+   "zmin": 10.68
+  }
+ ],
+ "airborne_suspect_count": 196,
+ "diagnostic_only": true,
+ "note": "bounding-box proxy; visual sign-off is still required"
+}

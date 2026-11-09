@@ -1,0 +1,76 @@
+{
+ "schema": "delivery-v1",
+ "business_id": "space_base_minigame",
+ "request_id": "20261103-space-base-v310",
+ "run_id": "20261103-0256",
+ "status": "target_met",
+ "created": "2026-11-03T02:55",
+ "source": {
+  "path": "planning/art/SPACE_BASE_NEW_PLAN_20261103.md",
+  "version": "v3.10",
+  "sha256": "60401febcaac8d9aff4b88e054f724874fb5e79a3d94d838460f811fe464a6a1"
+ },
+ "scene": {
+  "path": "art/static_map/space_base_minigame/v03/scene_v3.blend",
+  "sha256": "413d7c1d37d76f5de73096214513c095108e2fcc01f28e5da92d404a6a86de3b",
+  "builder": "tools/blender_space_base/build_scene_v3.py",
+  "procedural_only": true,
+  "objects": 399,
+  "faces": 4134,
+  "furniture_from_plan": 109
+ },
+ "master": {
+  "path": "art/static_map/space_base_minigame/v03/renders/space_base_v03_master.png",
+  "size": [
+   1680,
+   2478
+  ],
+  "supersample_raw": [
+   3360,
+   5880
+  ],
+  "sha256": "127097121e3e9cc45909d9f993e6438532dbf837635dfaff1186b6f5d344f698"
+ },
+ "shipped_jpeg": {
+  "path": "art/static_map/space_base_minigame/v03/renders/space_base_v03.jpg",
+  "size": [
+   1680,
+   2478
+  ],
+  "bytes": 189000,
+  "sha256": "eae801aecc0d1f0524d1db7be90d101522316b58c8e6c22a9a54948f32e202db"
+ },
+ "checks": {
+  "mechanical_pass": [
+   "G1",
+   "G4_probes",
+   "G6_selfcheck",
+   "W1",
+   "S2",
+   "S3"
+  ],
+  "mechanical_pass_with_rule_change": {
+   "S1": "全帧 15.7%（水面占 66%）；按陆地相对口径 46.1% >= 45% —— r02 草案改口径，待控制器签认"
+  },
+  "visual_pending": [
+   "G2",
+   "G3",
+   "G5",
+   "G8",
+   "S4",
+   "S5",
+   "S6",
+   "S7"
+  ],
+  "external": [
+   "A1",
+   "W3",
+   "W4"
+  ]
+ },
+ "harness_spec": {
+  "current": "r01 (v2.0 布局，G1/W1/G4 已过期)",
+  "draft": "r02 per plan §12：7 px/m 北朝上 1680x2478，探针随 v3.10 重算",
+  "note": "r02 未生效前以 GATE_REPORT.json 实测值作证据"
+ }
+}

@@ -1,0 +1,12 @@
+{
+ "check": "W1",
+ "size": [
+  1680,
+  2478
+ ],
+ "mode": "RGB",
+ "format": "JPEG",
+ "bytes": 431285,
+ "max_edge": 2478,
+ "pass": true
+}

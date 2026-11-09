@@ -1,0 +1,93 @@
+{
+ "test_id": "TEST-G7",
+ "check": "G7",
+ "viewport": [
+  1080,
+  1620
+ ],
+ "clamp": {
+  "left": [
+   0,
+   840
+  ],
+  "top": [
+   0,
+   940
+  ]
+ },
+ "points": [
+  {
+   "point": "x=0 wall",
+   "px": -0.0,
+   "py": 1315.16,
+   "viewport_left": 0.0,
+   "viewport_top": 505.16,
+   "inside": true
+  },
+  {
+   "point": "x=240 wall",
+   "px": 1920.0,
+   "py": 1315.16,
+   "viewport_left": 840.0,
+   "viewport_top": 505.16,
+   "inside": true
+  },
+  {
+   "point": "south wall y-190",
+   "px": 960.0,
+   "py": 70.05,
+   "viewport_left": 420.0,
+   "viewport_top": 0.0,
+   "inside": true
+  },
+  {
+   "point": "north wall y190",
+   "px": 960.0,
+   "py": 2560.28,
+   "viewport_left": 420.0,
+   "viewport_top": 940.0,
+   "inside": true
+  },
+  {
+   "point": "south exit",
+   "px": 960.0,
+   "py": 1118.57,
+   "viewport_left": 420.0,
+   "viewport_top": 308.57,
+   "inside": true
+  },
+  {
+   "point": "workshop north gate",
+   "px": 960.0,
+   "py": 921.97,
+   "viewport_left": 420.0,
+   "viewport_top": 111.97,
+   "inside": true
+  },
+  {
+   "point": "evac",
+   "px": 1560.0,
+   "py": 135.59,
+   "viewport_left": 840.0,
+   "viewport_top": 0.0,
+   "inside": true
+  },
+  {
+   "point": "exit west edge",
+   "px": 900.0,
+   "py": 1118.57,
+   "viewport_left": 360.0,
+   "viewport_top": 308.57,
+   "inside": true
+  },
+  {
+   "point": "exit east edge",
+   "px": 1020.0,
+   "py": 1118.57,
+   "viewport_left": 480.0,
+   "viewport_top": 308.57,
+   "inside": true
+  }
+ ],
+ "pass": true
+}

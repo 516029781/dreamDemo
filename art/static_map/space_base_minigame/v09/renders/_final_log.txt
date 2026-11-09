@@ -1,0 +1,91 @@
+C:\软件\鼠鼠\tools\blender_space_base\build_scene_v9.py:130: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m.use_nodes = True
+C:\软件\鼠鼠\tools\blender_space_base\build_scene_v9.py:1681: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m.use_nodes = True
+C:\软件\鼠鼠\tools\blender_space_base\build_scene_v9.py:1791: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m.use_nodes = True
+C:\软件\鼠鼠\tools\blender_space_base\build_scene_v9.py:2259: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  world.use_nodes = True
+CARDS palms=4
+FURNITURE_PLACED 109
+SURFACE_TEX on 8 materials
+IL_SHADER on 9 materials
+BEVELED 969
+CULL removed=23
+SCENE_STATS objects=1926 meshes=23053 furniture=109
+Info: Saved as "scene.blend"
+BUILD_OK v08 art/static_map/space_base_minigame/v09/scene.blend 
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:37:16)
+
+Blender quit
+00:00.531  blend            | Read blend: "C:\软件\鼠鼠\art\static_map\space_base_minigame\v09\scene.blend"
+07:05.734  render           | Saved: 'C:\软件\鼠鼠\art\static_map\space_base_minigame\v09\renders\master_raw.png'
+09:17.313  render           | Saved: 'C:\软件\鼠鼠\art\static_map\space_base_minigame\v09\renders\core_raw.png'
+10:46.938  render           | Saved: 'C:\软件\鼠鼠\art\static_map\space_base_minigame\v09\renders\hero_raw.png'
+VIEW_DONE master_raw.png 425.0s
+VIEW_DONE core_raw.png 131.6s
+VIEW_DONE hero_raw.png 89.6s
+VIEWS_ALL_OK
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:37:16)
+
+Blender quit
+00:00.547  blend            | Read blend: "C:\软件\鼠鼠\art\static_map\space_base_minigame\v09\scene.blend"
+01:19.297  render           | Saved: 'C:\软件\鼠鼠\art\static_map\space_base_minigame\v09\renders\near\CameraP1.png'
+02:25.516  render           | Saved: 'C:\软件\鼠鼠\art\static_map\space_base_minigame\v09\renders\near\CameraP2.png'
+03:44.172  render           | Saved: 'C:\软件\鼠鼠\art\static_map\space_base_minigame\v09\renders\near\CameraP3.png'
+05:38.562  render           | Saved: 'C:\软件\鼠鼠\art\static_map\space_base_minigame\v09\renders\near\CameraP4.png'
+06:56.641  render           | Saved: 'C:\软件\鼠鼠\art\static_map\space_base_minigame\v09\renders\near\CameraP5.png'
+08:30.844  render           | Saved: 'C:\软件\鼠鼠\art\static_map\space_base_minigame\v09\renders\near\CameraP6.png'
+09:09.656  render           | Saved: 'C:\软件\鼠鼠\art\static_map\space_base_minigame\v09\renders\near\CameraP7.png'
+11:24.281  render           | Saved: 'C:\软件\鼠鼠\art\static_map\space_base_minigame\v09\renders\near\CameraP8.png'
+C:\软件\鼠鼠\tools\blender_space_base\render_v9_near.py:61: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  dmat.use_nodes = True
+C:\软件\鼠鼠\tools\blender_space_base\render_v9_near.py:83: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  if world and world.use_nodes:
+11:31.687  render           | Saved: 'C:\软件\鼠鼠\art\static_map\space_base_minigame\v09\renders\near\CameraP1_z.png'
+11:39.094  render           | Saved: 'C:\软件\鼠鼠\art\static_map\space_base_minigame\v09\renders\near\CameraP2_z.png'
+11:46.469  render           | Saved: 'C:\软件\鼠鼠\art\static_map\space_base_minigame\v09\renders\near\CameraP3_z.png'
+11:53.953  render           | Saved: 'C:\软件\鼠鼠\art\static_map\space_base_minigame\v09\renders\near\CameraP4_z.png'
+12:01.328  render           | Saved: 'C:\软件\鼠鼠\art\static_map\space_base_minigame\v09\renders\near\CameraP5_z.png'
+12:08.687  render           | Saved: 'C:\软件\鼠鼠\art\static_map\space_base_minigame\v09\renders\near\CameraP6_z.png'
+12:16.031  render           | Saved: 'C:\软件\鼠鼠\art\static_map\space_base_minigame\v09\renders\near\CameraP7_z.png'
+12:23.531  render           | Saved: 'C:\软件\鼠鼠\art\static_map\space_base_minigame\v09\renders\near\CameraP8_z.png'
+C:\软件\鼠鼠\tools\blender_space_base\render_v9_near.py:101: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  if world and world.use_nodes:
+NEAR_DONE CameraP1 78.6s
+NEAR_DONE CameraP2 66.2s
+NEAR_DONE CameraP3 78.7s
+NEAR_DONE CameraP4 114.4s
+NEAR_DONE CameraP5 78.1s
+NEAR_DONE CameraP6 94.2s
+NEAR_DONE CameraP7 38.8s
+NEAR_DONE CameraP8 134.6s
+DEPTH_DONE CameraP1
+DEPTH_DONE CameraP2
+DEPTH_DONE CameraP3
+DEPTH_DONE CameraP4
+DEPTH_DONE CameraP5
+DEPTH_DONE CameraP6
+DEPTH_DONE CameraP7
+DEPTH_DONE CameraP8
+NEAR_ALL_OK
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:37:16)
+
+Blender quit
+NPR_OK CameraP1 (1080, 1920)
+NPR_OK CameraP2 (1080, 1920)
+NPR_OK CameraP3 (1080, 1920)
+NPR_OK CameraP4 (1080, 1920)
+NPR_OK CameraP5 (1080, 1920)
+NPR_OK CameraP6 (1080, 1920)
+NPR_OK CameraP7 (1080, 1920)
+NPR_OK CameraP8 (1080, 1920)
+NPR_ALL_OK
+Traceback (most recent call last):
+  File "C:\软件\鼠鼠\tools\space_base_v9_post.py", line 536, in <module>
+    main()
+    ~~~~^^
+  File "C:\软件\鼠鼠\tools\space_base_v9_post.py", line 372, in main
+    gate = [p for p in probes if p["name"] == "garden_north_gate"][0]["rgb"]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range

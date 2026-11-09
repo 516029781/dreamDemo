@@ -1,0 +1,25 @@
+{
+ "check": "GA01",
+ "area_m2": 1156.0,
+ "bbox": {
+  "x": [
+   116.55,
+   160.13
+  ],
+  "y": [
+   -65.05,
+   -21.47
+  ]
+ },
+ "z_top": 4.75,
+ "vertices": 8,
+ "size_m": [
+  34.0,
+  34.0
+ ],
+ "decks": {
+  "av_deck_b": true,
+  "garden_deck": true
+ },
+ "pass": true
+}

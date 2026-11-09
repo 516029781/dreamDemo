@@ -4,8 +4,8 @@
 
 ## 1. 任务范围与路由
 
-- 项目承载多个业务：当前有 P1 秋日庭院静态地图（`p1_autumn_static`）与 Arknights 地图参数研究数据包
-  （`research_arknights_mapdata`）。新需求按根 `START_HERE.md` 路由。
+- 项目承载多个业务：当前有 P1 秋日庭院静态地图（`p1_autumn_static`）、Arknights 地图参数研究数据包
+  （`research_arknights_mapdata`）与航天基地静态地图（`space_base_minigame`，规划/制作中）。新需求按根 `START_HERE.md` 路由。
 - 不得把某个业务的参考图、色板、相机、评分或禁用项当作其他业务的默认规则。
 - 完整游戏阶段（角色/UI/玩法/Cocos/微信/发布审核）仍暂停；恢复需用户明确启动并重新读取当时有效入口。
 

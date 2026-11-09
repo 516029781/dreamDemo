@@ -1,0 +1,15 @@
+{
+ "check": "GA04",
+ "wall_segments": 3,
+ "wall_height_m": 0.92,
+ "band_z_rel_deck": [
+  0.52,
+  0.7
+ ],
+ "coping_z_rel_deck": [
+  0.92,
+  1.04
+ ],
+ "open_north": true,
+ "pass": true
+}

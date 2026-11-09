@@ -1,0 +1,103 @@
+{
+ "check": "G4",
+ "probes": [
+  {
+   "name": "garden_north_gate",
+   "world": [
+    120,
+    -14
+   ],
+   "px": [
+    840,
+    1032
+   ],
+   "rgb": [
+    180,
+    188,
+    182
+   ]
+  },
+  {
+   "name": "fountain_ring",
+   "world": [
+    111,
+    -39
+   ],
+   "px": [
+    777,
+    1175
+   ],
+   "rgb": [
+    47,
+    91,
+    99
+   ]
+  },
+  {
+   "name": "causeway_mid",
+   "world": [
+    166,
+    -97
+   ],
+   "px": [
+    1162,
+    1508
+   ],
+   "rgb": [
+    220,
+    209,
+    180
+   ]
+  },
+  {
+   "name": "dock_floor",
+   "world": [
+    188.42,
+    -181.12
+   ],
+   "px": [
+    1318,
+    1990
+   ],
+   "rgb": [
+    201,
+    201,
+    180
+   ]
+  },
+  {
+   "name": "evac_strip",
+   "world": [
+    218.57,
+    -214.85
+   ],
+   "px": [
+    1530,
+    2183
+   ],
+   "rgb": [
+    255,
+    255,
+    76
+   ]
+  },
+  {
+   "name": "water",
+   "world": [
+    20,
+    -240
+   ],
+   "px": [
+    140,
+    2328
+   ],
+   "rgb": [
+    50,
+    80,
+    86
+   ]
+  }
+ ],
+ "pass": true,
+ "rules": "evac strip yellow; garden gate not water/wall"
+}

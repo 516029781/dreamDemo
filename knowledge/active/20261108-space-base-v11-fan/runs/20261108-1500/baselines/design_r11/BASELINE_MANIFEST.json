@@ -1,0 +1,37 @@
+{
+ "schema": "baseline-manifest-v1",
+ "design_version": "r11",
+ "run_id": "20261108-1500",
+ "supersedes": "r10",
+ "note": "r11 = v2.2：扇形整地 + 单层四厅 34×34 + 总裁盒删除 + 桥A删除",
+ "entries": [
+  {
+   "path": "SPACE_BASE_FAN_MASTERPLAN_20261108.md",
+   "sha256": "902c182e4ef98cd151760f18a531ee8bc9bd706df506cb4fa8132ba9524c73f0"
+  },
+  {
+   "path": "REQUIREMENTS_BRIEF.md",
+   "sha256": "8ff65005275a5dd04d923ff5558ce7215f6617cee5c2a92152b88f610730ca48"
+  },
+  {
+   "path": "HARNESS_SPEC.json",
+   "sha256": "2e72ef8604106e0e29d287e7ab4da3d67786fc908e02de30a1e5f0f2adb1ea19"
+  },
+  {
+   "path": "build_scene_v11.py",
+   "sha256": "e3aba8cebc4ac83b3aaab1ac6fbe46b8ae2eab90f17eb308e40be68e061f0482"
+  },
+  {
+   "path": "evidence_v11.py",
+   "sha256": "c4a5a8384f85c0f7e309229c2357a27c7648b97938f0cec6c44e058320ab77ba"
+  },
+  {
+   "path": "space_base_v11_post.py",
+   "sha256": "ad5de13426f7c81f60c896807f6626fe66ec5abf3a8c62471c727f0875057478"
+  },
+  {
+   "path": "space_base_check_v7.py",
+   "sha256": "6f29d172bef0db2287c8f223ddc85827ac3cb19d5491038fa10281e0ebd39e12"
+  }
+ ]
+}

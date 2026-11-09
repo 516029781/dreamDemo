@@ -1,0 +1,7 @@
+{
+ "check": "S8",
+ "materials_with_noise_ramp": 27,
+ "materials_with_ao_node": 12,
+ "illustration_materials": 7,
+ "pass": true
+}

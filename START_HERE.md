@@ -7,6 +7,7 @@
 项目同时承载：
 - **P1 秋日庭院静态地图**（active 业务包 `p1_autumn_static`）
 - **Arknights 地图参数与 Harness 研究数据包**（`research_arknights_mapdata`，只作数据研究，不作视觉参考）
+- **航天基地静态地图**（active 业务包 `space_base_minigame`，WeChat 小游戏预渲染图；当前 N5 生产）
 
 其他产品/地图按需求新建业务包接入，不默认继承任何既有画面的答案。
 

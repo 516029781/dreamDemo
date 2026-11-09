@@ -1,0 +1,30 @@
+{
+ "check": "GA06",
+ "pools": [
+  {
+   "name": "gpool_-1",
+   "dim": [
+    22.0,
+    8.0,
+    0.01
+   ],
+   "z_top": 4.615,
+   "material": [
+    "v10.garden_pool"
+   ]
+  },
+  {
+   "name": "gpool_1",
+   "dim": [
+    22.0,
+    8.0,
+    0.01
+   ],
+   "z_top": 4.615,
+   "material": [
+    "v10.garden_pool"
+   ]
+  }
+ ],
+ "pass": true
+}

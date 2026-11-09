@@ -1,0 +1,37 @@
+{
+ "schema": "baseline-manifest-v1",
+ "design_version": "r08",
+ "run_id": "20261105-1800",
+ "supersedes": "design_r07",
+ "note": "r08 = v1.4：G02b 外圈棕榈列 +16（共 32），平台几何不变",
+ "entries": [
+  {
+   "path": "SPACE_BASE_GARDEN_OUTFIELD_PLAN_20261105.md",
+   "sha256": "10e894c9bd62e7a4b7e674fe25ec12c51b439512114418d700c705c7b194bc99"
+  },
+  {
+   "path": "SPACE_BASE_GARDEN_HARNESS_DEV_PLAN_20261105.md",
+   "sha256": "59364aeaef592a50f74f098cc95da58cf3d10719d3477dddd4b2badbc15bfe3a"
+  },
+  {
+   "path": "REQUIREMENTS_BRIEF.md",
+   "sha256": "5dd5808407dffbc6bd4a09f748a1198a793413acc8c45bdbc14e0894c29c6a39"
+  },
+  {
+   "path": "HARNESS_SPEC.json",
+   "sha256": "59c060ad87ca92ba485f5be26fb93b652640f95418ce09eac8f1648e0860ad2c"
+  },
+  {
+   "path": "build_scene_v10.py",
+   "sha256": "d5920af08e6c3847528e22c5fab37c504c3ce6eee134d246bc29748dca619579"
+  },
+  {
+   "path": "evidence_v10.py",
+   "sha256": "fe828fb1971e136c011be37ac36443d12043bab9a10a8c718a6401dc5fea92f7"
+  },
+  {
+   "path": "space_base_check_v7.py",
+   "sha256": "b8e2827f29a8f8193c2aa8858cb60ac34b4358e1f7593f8556f814782a9ba2ca"
+  }
+ ]
+}

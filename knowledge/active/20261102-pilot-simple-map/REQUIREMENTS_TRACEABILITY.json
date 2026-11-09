@@ -1,0 +1,59 @@
+{
+ "schema": "requirements-traceability-v1",
+ "request_id": "20261102-pilot-simple-map",
+ "business_id": "pilot_simple_map",
+ "brief_sha256": "871a33a2467ec48d31dea29f261c09f4dab4f1381f04cf0a3daee735775ca0ba",
+ "image_pixel_sha256": "135843d8cdeb2079fb1a926eaf546756b714afd1850eb228c5516d8d3a177039",
+ "rows": [
+  {
+   "req_id": "REQ-01",
+   "requirement": "单帧 16:9 960×540",
+   "test_id": "TEST-01",
+   "status": "pass",
+   "evidence": "runs/20261102-0710/evidence/TEST-01/size.json"
+  },
+  {
+   "req_id": "REQ-02",
+   "requirement": "≥6 功能体块且接地",
+   "test_id": "TEST-02",
+   "status": "pass",
+   "evidence": "runs/20261102-0710/evidence/TEST-02/objects.json"
+  },
+  {
+   "req_id": "REQ-03",
+   "requirement": "单主光、投影同向",
+   "test_id": "TEST-03",
+   "status": "pass",
+   "evidence": "runs/20261102-0710/evidence/TEST-03/shadow.md"
+  },
+  {
+   "req_id": "REQ-04",
+   "requirement": "四材质族、无纯黑纯白",
+   "test_id": "TEST-04",
+   "status": "pass_visual",
+   "evidence": "runs/20261102-0710/evidence/TEST-04/value_stats.json"
+  },
+  {
+   "req_id": "REQ-05",
+   "requirement": "SHA + 隔离复现",
+   "test_id": "TEST-05",
+   "status": "pass",
+   "evidence": "runs/20261102-0710/reproduction.json"
+  },
+  {
+   "req_id": "REQ-06",
+   "requirement": "文档链闭合",
+   "test_id": "TEST-06",
+   "status": "pass",
+   "evidence": "runs/20261102-0710/evidence/TEST-06/linkage.json"
+  }
+ ],
+ "coverage": {
+  "total": 6,
+  "pass": 5,
+  "pass_visual": 1,
+  "fail": 0,
+  "not_run": 0
+ },
+ "notes": "status=pass_visual 表示视觉判定通过，但对应数值证据标记为 diagnostic_only。"
+}

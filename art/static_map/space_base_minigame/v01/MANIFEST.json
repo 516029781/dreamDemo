@@ -1,0 +1,77 @@
+{
+ "schema": "asset-manifest-v1",
+ "business_id": "space_base_minigame",
+ "version": "v01",
+ "files": [
+  {
+   "path": "scene.blend",
+   "sha256": "a226ca39f3fa13b640207d65d96d410fb000210cae881edb43a7a62a10132a07",
+   "bytes": 4364293
+  },
+  {
+   "path": "renders/space_base_v01_master.png",
+   "sha256": "48df97d426cc4479f58807965d0bb1bcfb3fdc115e8c5564bc0b6ffc1b2d79e1",
+   "bytes": 13602094
+  },
+  {
+   "path": "renders/space_base_v01.jpg",
+   "sha256": "785505f66f3a144134a4c58b00b16290bc44b72983e0fe81f7401c07808effff",
+   "bytes": 448184
+  },
+  {
+   "path": "renders/graybox.png",
+   "sha256": "c907d630aae1cece53aa0edccf81bf442681391232ff8aeed381e6b14d52bc15",
+   "bytes": 3105080
+  },
+  {
+   "path": "renders/color_combo.png",
+   "sha256": "c9f56f9d454cbefec2842f42db49c02332a0a1dccecad3d092cbedf16acd1e1c",
+   "bytes": 3653824
+  },
+  {
+   "path": "reference_analysis/SPACE_BASE_REFERENCE_PROFILE.json",
+   "sha256": "a4826a0ab8a1cc5dc2f8ba117723f6a56f8506ede3d82c700d7ebbdaa2d4b2e9",
+   "bytes": 2152
+  },
+  {
+   "path": "renders/checks/01_core.png",
+   "sha256": "723bf320e9b27d1927b30a451cd2f43057d9afef39820a5a22e426d37538ab1f",
+   "bytes": 557238
+  },
+  {
+   "path": "renders/checks/02_workshop.png",
+   "sha256": "6cdb6ec6aa3ddf912536e4ce837c4878d2a310b01d9f3667e45bce7e0e99ae8c",
+   "bytes": 463489
+  },
+  {
+   "path": "renders/checks/03_south_exit.png",
+   "sha256": "4e306fb3151856632aee6281c361b4ec98cae80075e399187fe63f8b4034e1fb",
+   "bytes": 208868
+  },
+  {
+   "path": "renders/checks/04_ceo.png",
+   "sha256": "32d45f18f16716c052f883e7f05a384a723975d7b80962794f7cad1a61f9d30a",
+   "bytes": 169441
+  },
+  {
+   "path": "REVIEW.md",
+   "sha256": "148d3f48802267bb40eb22fc284ebb1b9a3da7a67b3179d28a8352261c136608",
+   "bytes": 3259
+  },
+  {
+   "path": "DELIVERY.json",
+   "sha256": "ac479b020f027db40b30e32a8e88cb4a344c65be76523159bfebe0eca6def599",
+   "bytes": 2634
+  },
+  {
+   "path": "GATE_REPORT.json",
+   "sha256": "60b377b689f31106692a538a882596ddf77524f039dfe3cfd9c6a71a87e66310",
+   "bytes": 932
+  },
+  {
+   "path": "REPRODUCE.md",
+   "sha256": "67088101b8c8f44de988746f6cb52d7b6521f3e3220f3a5c4db3393094740066",
+   "bytes": 815
+  }
+ ]
+}

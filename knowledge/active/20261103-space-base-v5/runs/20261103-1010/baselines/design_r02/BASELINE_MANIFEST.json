@@ -1,0 +1,26 @@
+{
+ "schema": "baseline-manifest-v1",
+ "business_id": "space_base_minigame",
+ "request_id": "20261103-space-base-v5",
+ "run_id": "20261103-1010",
+ "design": "r02",
+ "created_at": "2026-11-03T10:12",
+ "files": [
+  {
+   "path": "REQUIREMENTS_BRIEF.md",
+   "sha256": "93d44081455793f040fecfb125a6e50c350df278c63c9ed73c9d0da8ac258c64"
+  },
+  {
+   "path": "SPACE_BASE_NEW_PLAN_20261103.md",
+   "sha256": "36e389e94264f121a5d91fecc00454a865bd3ded262895bd6aa45e180b470450"
+  },
+  {
+   "path": "SPACE_BASE_VISUAL_UPGRADE_PLAN_20261103.md",
+   "sha256": "cd63b0e3bbf1c1aa46a955c0d491b8842b22c498245b8e7def6b3f664e539988"
+  },
+  {
+   "path": "build_scene_v5.py",
+   "sha256": "61245f0629c2d22779a5540404840b638066d58681d0da81c1d61d470c187bf4"
+  }
+ ]
+}

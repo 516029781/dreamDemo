@@ -1,0 +1,11 @@
+{
+ "schema": "delivery-v1",
+ "request_id": "20261108-space-base-v13-testworkshop",
+ "run_id": "20261108-1755",
+ "stage": "N7_partial",
+ "map_png": "renders/space_base_v13_master.png",
+ "map_jpg": "renders/space_base_v13.jpg",
+ "core_tile": "renders/space_base_v13_core.png",
+ "hero": "renders/space_base_v13_hero.png",
+ "status": "in_progress"
+}

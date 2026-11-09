@@ -1,0 +1,11 @@
+{
+ "check": "W2",
+ "map_bytes": 471997,
+ "js_bytes": 22616,
+ "config_bytes": 1390,
+ "main_bytes": 496003,
+ "main_limit": 4194304,
+ "total_limit": 31457280,
+ "pass": true,
+ "package_note": "map to subpackage at runtime (Cocos); arithmetic only"
+}

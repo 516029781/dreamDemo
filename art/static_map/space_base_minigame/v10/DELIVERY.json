@@ -1,0 +1,190 @@
+{
+ "schema": "delivery-v2",
+ "request_id": "20261105-space-base-v10-garden",
+ "run_id": "20261105-1800",
+ "candidate": "art/static_map/space_base_minigame/v10",
+ "required_checks": [
+  "G1",
+  "G2",
+  "G3",
+  "G4",
+  "G5",
+  "G6",
+  "G7",
+  "G8",
+  "W1",
+  "W2",
+  "S1",
+  "S2",
+  "S3",
+  "S4",
+  "S5",
+  "S6",
+  "S7",
+  "S8",
+  "S9",
+  "S10",
+  "S11",
+  "S12",
+  "S13",
+  "S14",
+  "S15"
+ ],
+ "diagnostic_only": [
+  "S11",
+  "S13",
+  "S15"
+ ],
+ "required_checks_present": [
+  "G1",
+  "G2",
+  "G3",
+  "G4",
+  "G5",
+  "G6",
+  "G7",
+  "G8",
+  "W1",
+  "W2",
+  "S1",
+  "S2",
+  "S3",
+  "S4",
+  "S5",
+  "S6",
+  "S7",
+  "S8",
+  "S9",
+  "S10",
+  "S11",
+  "S12",
+  "S13",
+  "S14",
+  "S15"
+ ],
+ "map_jpg": {
+  "path": "renders/space_base_v10.jpg",
+  "bytes": 499473,
+  "size": [
+   1680,
+   2478
+  ],
+  "subpackage": "map (runtime)"
+ },
+ "master": {
+  "path": "renders/space_base_v10_master.png",
+  "size": [
+   1680,
+   2478
+  ]
+ },
+ "master_raw": {
+  "path": "renders/master_raw.png",
+  "size": [
+   3360,
+   5880
+  ]
+ },
+ "core_tile": {
+  "path": "renders/space_base_v10_core.png",
+  "size": [
+   2072,
+   1876
+  ],
+  "px_per_m": 14
+ },
+ "hero": {
+  "path": "renders/space_base_v10_hero.png",
+  "size": [
+   1920,
+   1080
+  ]
+ },
+ "hero_route": {
+  "path": "renders/hero/HeroRoute.png",
+  "size": [
+   1920,
+   1080
+  ]
+ },
+ "garden_checks": {
+  "paving": "renders/checks/06_paving.png",
+  "wall": "renders/checks/07_wall.png"
+ },
+ "source": {
+  "path": "scene.blend",
+  "relative": true
+ },
+ "color_gate": {
+  "S15": true,
+  "rows": [
+   {
+    "room": "H1",
+    "name": "离心",
+    "current": "#4D6F83",
+    "target": "#547684",
+    "H": 202,
+    "S": 0.26,
+    "L": 0.41,
+    "dH": 5,
+    "dS": 0.04,
+    "dL": -0.02,
+    "pass": true
+   },
+   {
+    "room": "H2",
+    "name": "浮力",
+    "current": "#417480",
+    "target": "#477A8A",
+    "H": 191,
+    "S": 0.33,
+    "L": 0.38,
+    "dH": -3,
+    "dS": 0.01,
+    "dL": -0.03,
+    "pass": true
+   },
+   {
+    "room": "H3",
+    "name": "蓝室",
+    "current": "#4B76C6",
+    "target": "#3A6DBF",
+    "H": 219,
+    "S": 0.52,
+    "L": 0.54,
+    "dH": 2,
+    "dS": -0.02,
+    "dL": 0.05,
+    "pass": true
+   },
+   {
+    "room": "H4",
+    "name": "黑室",
+    "current": "#497C6F",
+    "target": "#58837D",
+    "H": 165,
+    "S": 0.26,
+    "L": 0.39,
+    "dH": -7,
+    "dS": 0.06,
+    "dL": -0.04,
+    "pass": true
+   },
+   {
+    "room": "C5",
+    "name": "总裁",
+    "current": "#9B7F63",
+    "target": "#95755B",
+    "H": 30,
+    "S": 0.22,
+    "L": 0.5,
+    "dH": 3,
+    "dS": -0.02,
+    "dL": 0.03,
+    "pass": true
+   }
+  ]
+ },
+ "gate_report": "GATE_REPORT.json",
+ "notes": "v10 = 中央花园外场（100x74 m，净 7272 m2）+ 桥 A/B 拆分 + 两级铺装 + 挡墙橙带 + 2 池 / 4 花坛 / 2 模纹园 / 16 棕榈 / 观景台 / 廊架；S1 0.536、S12 0.590"
+}

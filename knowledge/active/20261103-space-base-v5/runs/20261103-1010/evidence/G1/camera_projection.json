@@ -1,0 +1,79 @@
+{
+ "check": "G1",
+ "camera": {
+  "type": "ORTHO",
+  "ortho_scale": 420.0,
+  "location": [
+   120.0,
+   -44.0,
+   300.0
+  ],
+  "rotation_deg": [
+   0,
+   0,
+   0
+  ]
+ },
+ "master_raw": [
+  3360,
+  5880
+ ],
+ "delivered": [
+  1680,
+  2478
+ ],
+ "px_per_m": {
+  "x": 7.0,
+  "y": 5.7344
+ },
+ "bleed_bottom_px": 70,
+ "projection": [
+  {
+   "world": [
+    0,
+    166
+   ],
+   "label": "NW",
+   "px": 0.0,
+   "py": 0.0
+  },
+  {
+   "world": [
+    240,
+    166
+   ],
+   "label": "NE",
+   "px": 1680.0,
+   "py": 0.0
+  },
+  {
+   "world": [
+    0,
+    -254
+   ],
+   "label": "SW",
+   "px": 0.0,
+   "py": 2408.45
+  },
+  {
+   "world": [
+    240,
+    -254
+   ],
+   "label": "SE",
+   "px": 1680.0,
+   "py": 2408.45
+  },
+  {
+   "world": [
+    120,
+    -14
+   ],
+   "label": "garden_gate",
+   "px": 840.0,
+   "py": 1032.19
+  }
+ ],
+ "pass": true,
+ "verified_by": "G4 probes (content lands where the formula says)"
+}

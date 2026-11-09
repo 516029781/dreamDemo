@@ -1,0 +1,6 @@
+{
+ "check": "S3",
+ "orange_ratio": 0.0005,
+ "rule": "orange <= 0.02 (band only)",
+ "pass": true
+}

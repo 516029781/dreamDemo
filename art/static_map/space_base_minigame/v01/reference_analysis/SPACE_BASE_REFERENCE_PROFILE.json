@@ -1,0 +1,118 @@
+{
+ "schema": "reference-profile-v1",
+ "business_id": "space_base_minigame",
+ "request_id": "20261102-space-base-map",
+ "run_id": "20261102-1314",
+ "authority_spec": {
+  "path": "planning/art/SPACE_BASE_MASTER_SPEC_20261102.md",
+  "version": "v1.3",
+  "sha256": "4e0e22229b5afdecfe860b331dc49ee02e4a0a2ac3b41c7805f305cbd1933fc1"
+ },
+ "screenshots": {
+  "manifest": "reference/_df_screenshots/MANIFEST.json",
+  "sha256": "6aefb6fa47bd9a06236dcf0f07b27115ec08a529ebb1f7fec140f0a29b32a361",
+  "count": 13,
+  "usage": "internal visual reference only; not shipped, not redistributed"
+ },
+ "physx": {
+  "note": "reference/_df_physx/hangtianjidi.bin exists but is not read by this run; layout is frozen by spec v1.3"
+ },
+ "camera": {
+  "projection": "orthographic",
+  "pitch_deg": 55,
+  "euler_deg": [
+   55,
+   0,
+   180
+  ],
+  "location": [
+   120,
+   813.86,
+   573.6
+  ],
+  "target": [
+   120,
+   -5.34,
+   0
+  ],
+  "ortho_scale": 240,
+  "sensor_fit": "HORIZONTAL",
+  "final_resolution": [
+   1920,
+   2560
+  ],
+  "master_resolution": [
+   3840,
+   5120
+  ],
+  "bleed_px_south": 70
+ },
+ "world": {
+  "x": [
+   0,
+   240
+  ],
+  "y": [
+   -190,
+   190
+  ],
+  "z": [
+   0,
+   13.5
+  ],
+  "px_per_m": 8,
+  "py_per_m": 6.5536,
+  "key_points": {
+   "south_exit": {
+    "world": [
+     120,
+     -30
+    ],
+    "px_py": [
+     960,
+     1119
+    ]
+   },
+   "north_gate": {
+    "world": [
+     120,
+     -60
+    ],
+    "px_py": [
+     960,
+     922
+    ]
+   },
+   "evac": {
+    "world": [
+     195,
+     -180
+    ],
+    "px_py": [
+     1560,
+     136
+    ]
+   }
+  }
+ },
+ "palette": {
+  "structure_white": "#CFD5D6",
+  "concrete": "#979C9C",
+  "mid_grey": "#676D6E",
+  "steel": "#3B4344",
+  "near_black": "#222B2D",
+  "haavk_green": "#3E9B63",
+  "teal": "#17707C",
+  "blue_light": "#2F5C9C",
+  "orange": "#C87A30",
+  "warning_yellow": "#D6A62B",
+  "brass": "#AA8355",
+  "dark_stone": "#3A322A"
+ },
+ "constraints": [
+  "P1 reference/scorecard/gate not used",
+  "no AI whole-image delivery",
+  "no external textures",
+  "screenshots not shipped"
+ ]
+}

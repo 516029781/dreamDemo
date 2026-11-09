@@ -1,0 +1,9 @@
+{
+ "check": "GA14",
+ "roller_doors": 8,
+ "roller_height_m": 5.0,
+ "double_doors": 4,
+ "canopies": 4,
+ "slat_lines": 111,
+ "pass": true
+}

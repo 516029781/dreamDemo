@@ -1,0 +1,9 @@
+{
+ "check": "S12",
+ "left": 1.0,
+ "right": 0.651,
+ "side_water_ratio": 0.826,
+ "wide_boundary_rows": 0,
+ "rule": ">=0.55 each side, no wide horizontal boundary",
+ "pass": true
+}

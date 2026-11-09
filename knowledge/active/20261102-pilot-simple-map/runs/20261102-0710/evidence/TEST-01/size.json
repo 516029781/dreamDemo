@@ -1,0 +1,9 @@
+{
+ "test_id": "TEST-01",
+ "image": "C:\\软件\\鼠鼠\\art\\static_map\\pilot_simple_map\\v01\\renders\\final.png",
+ "width": 960,
+ "height": 540,
+ "mode": "RGB",
+ "expect": "960x540",
+ "pass": true
+}

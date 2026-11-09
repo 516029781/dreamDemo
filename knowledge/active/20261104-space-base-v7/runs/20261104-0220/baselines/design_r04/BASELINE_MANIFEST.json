@@ -1,0 +1,39 @@
+{
+ "schema": "baseline-manifest-v1",
+ "design_version": "r04",
+ "run_id": "20261104-0220",
+ "entries": [
+  {
+   "path": "HARNESS_SPEC.json",
+   "sha256": "07b5c064df6b44600006e6a34eb46b16713ccb7937dd03cfed7a80c2f1f46d75"
+  },
+  {
+   "path": "SPACE_BASE_LANDMARK_ALIGNMENT_PLAN_20261104.md",
+   "sha256": "f3ecc12959f8a59976cb30b16f79f9546985337e85e8e43d4deb3f79cdd8b8c8"
+  },
+  {
+   "path": "SPACE_BASE_UNIFIED_PLAN_20261103.md",
+   "sha256": "3002198511efaafe3e5fd411b012941fe042a648b27090e44905326ed2dca4b2"
+  },
+  {
+   "path": "build_scene_v7.py",
+   "sha256": "f10b7ab8e7e3c112de296c4d776319200fbbadb8afaea23843d8bcd47e09fd36"
+  },
+  {
+   "path": "render_v7_views.py",
+   "sha256": "283e76f4a9802fde4616fffc9ccbc50fc161355ecc5315179406b32528dd070a"
+  },
+  {
+   "path": "space_base_check_v5.py",
+   "sha256": "3915229ef144e44249e05cef593b73c88dcd92aac67241cf3a7df1c8d3807315"
+  },
+  {
+   "path": "space_base_v7_post.py",
+   "sha256": "7ccb43b1e2312903347b651052c9c8855b606a4dba14bbabdd204a7917dd771e"
+  },
+  {
+   "path": "make_v7_delivery.py",
+   "sha256": "7ee82c748494fbf10da4ebc37489ed4839ecf60cd40c3fd3ddf4d32644af93d2"
+  }
+ ]
+}

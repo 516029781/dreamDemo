@@ -1,0 +1,17 @@
+{
+ "schema": "run-context-v1",
+ "request_id": "20261108-space-base-v14-art",
+ "run_id": "20261108-2035",
+ "business_id": "space_base_minigame",
+ "deliverable_type": "static_map",
+ "task_mode": "production",
+ "harness_stage": "N7",
+ "candidate": "art/static_map/space_base_minigame/v14",
+ "parent_candidate": "art/static_map/space_base_minigame/v13 (frozen, readonly)",
+ "checks": {
+  "harness_spec": "knowledge/business/space_base_minigame/HARNESS_SPEC.json",
+  "checker": "tools/space_base_check_v7.py",
+  "art": "tools/check_v14_art.py",
+  "scene": "tools/check_v14_scene.py"
+ }
+}

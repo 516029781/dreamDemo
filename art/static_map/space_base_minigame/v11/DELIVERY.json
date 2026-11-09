@@ -1,0 +1,53 @@
+{
+ "schema": "delivery-v1",
+ "request_id": "20261108-space-base-v11-fan",
+ "run_id": "20261108-1500",
+ "design_version": "r11",
+ "map_png": {
+  "path": "renders/space_base_v11_master.png",
+  "bytes": 2602870,
+  "size": [
+   1680,
+   2478
+  ],
+  "sha256": "098f7f9cd737f9137773a0779db2ac044f8e86c6ffe50f3c296dfbeaf0961125"
+ },
+ "map_jpg": {
+  "path": "renders/space_base_v11.jpg",
+  "bytes": 294093,
+  "size": [
+   1680,
+   2478
+  ],
+  "sha256": "432528606558d3354e9aacb94b6c88cb462895440492d46295b5b88215abf3e2"
+ },
+ "master_raw": {
+  "path": "renders/master_raw.png",
+  "size": [
+   3360,
+   5880
+  ]
+ },
+ "core_tile": {
+  "path": "renders/space_base_v11_core.png",
+  "size": [
+   2072,
+   1876
+  ]
+ },
+ "hero": {
+  "path": "renders/space_base_v11_hero.png",
+  "size": [
+   1920,
+   1080
+  ]
+ },
+ "checks": [
+  "01_core.png",
+  "02_avenue_bridge.png",
+  "03_peninsula.png",
+  "04_avenue_head.png",
+  "05_g5_pair.png"
+ ],
+ "notes": "v11 扇形整地：47,399 m²，单层四厅 34×34，总裁盒删除，桥 A 删除。"
+}

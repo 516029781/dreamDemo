@@ -1,0 +1,133 @@
+{
+ "schema": "gate-report-v1",
+ "request_id": "20261108-space-base-v11-fan",
+ "run_id": "20261108-1500",
+ "spec_version": "r14",
+ "business_checks": {
+  "G1": {
+   "pass": true,
+   "file": "G1/projection.json"
+  },
+  "G2": {
+   "pass": true,
+   "file": "G2/legibility.json"
+  },
+  "G6": {
+   "pass": true,
+   "file": "G6/geom_check.json"
+  },
+  "G8": {
+   "pass": true,
+   "file": "G8/junction.json"
+  },
+  "W1": {
+   "pass": true,
+   "file": "W1/ship.json"
+  },
+  "S1": {
+   "pass": true,
+   "file": "S1/value_stats.json"
+  },
+  "S2": {
+   "pass": true,
+   "file": "S2/hue_stats.json"
+  },
+  "S3": {
+   "pass": true,
+   "file": "S3/hue_stats.json"
+  },
+  "S8": {
+   "pass": true,
+   "file": "S8/material_layers.json"
+  },
+  "S9": {
+   "pass": true,
+   "file": "S9/bevel_count.json"
+  },
+  "S10": {
+   "pass": true,
+   "file": "S10/core_density.json"
+  },
+  "S12": {
+   "pass": true,
+   "file": "S12/water_border.json"
+  },
+  "S15": {
+   "pass": true,
+   "file": "S15/color_probe.json"
+  }
+ },
+ "project_checks": {
+  "GA01": true,
+  "GA02": true,
+  "GA03": true,
+  "GA04": true,
+  "GA05": true,
+  "GA06": true,
+  "GA07": true,
+  "GA08": true,
+  "GA09": true,
+  "GA11": true,
+  "GA12": true,
+  "GA13": true,
+  "GA14": true,
+  "GA15": true
+ },
+ "retired_checks": [
+  {
+   "check_id": "S5",
+   "reason": "池缘 0.045 圆角是 r07 起的有意设计（S9 记录），与“混凝土不倒角”冲突，退役"
+  },
+  {
+   "check_id": "G3",
+   "reason": "总裁盒已按用户要求删除，对象不存在"
+  },
+  {
+   "check_id": "G4",
+   "reason": "撤离黄框/蓝光探针绑定旧岛坐标，v11 岛已并入扇形场地，探针位失效"
+  },
+  {
+   "check_id": "G5",
+   "reason": "集装箱遮挡撤离框的镜头属于旧岛北门，随 G4 退役"
+  },
+  {
+   "check_id": "G7",
+   "reason": "近景机位 P1–P8 尚未按新核心区重对，本轮不纳入"
+  },
+  {
+   "check_id": "W2",
+   "reason": "分包与包体预算属于小游戏构建侧，本轮只交付静态图"
+  },
+  {
+   "check_id": "S4",
+   "reason": "五室色相签名改为四厅，需重定 PALETTE，本轮未做"
+  },
+  {
+   "check_id": "S6",
+   "reason": "3×3 地面分区随岛改版，需重定探针"
+  },
+  {
+   "check_id": "S7",
+   "reason": "“总裁是唯一暖区”的前提已删除"
+  },
+  {
+   "check_id": "S11",
+   "reason": "逐区明度跨度依赖旧岛探针（预置 diagnostic）"
+  },
+  {
+   "check_id": "S13",
+   "reason": "插画笔触口径对 47k m² 大地形不成立（v09/v10 均为预置 diagnostic）"
+  },
+  {
+   "check_id": "S14",
+   "reason": "总裁盒已删除"
+  }
+ ],
+ "headline": {
+  "S1": 0.696,
+  "S2": 0.0081,
+  "S3": 0.0005,
+  "S12": 0.826
+ },
+ "pass": true
+}

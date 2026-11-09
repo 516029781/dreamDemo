@@ -1,0 +1,19 @@
+{
+ "schema": "run-status-v1",
+ "request_id": "20261108-space-base-v14-art",
+ "run_id": "20261108-2035",
+ "stage": "N7",
+ "status": "mechanical_complete",
+ "end_state": null,
+ "failed_metrics": [
+  "A2_bright_gt080_pct",
+  "A3_dark_lt030_pct",
+  "A4_span_p90_p10",
+  "A13_mean_saturation"
+ ],
+ "blocking": [
+  "visual sign-off",
+  "3-person blind test"
+ ],
+ "note": "not target_met; visual cases not closed"
+}

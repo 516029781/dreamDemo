@@ -1,0 +1,105 @@
+{
+ "check": "G4",
+ "probes": [
+  {
+   "name": "south_notch",
+   "world": [
+    125,
+    -5.0
+   ],
+   "px": [
+    875,
+    980
+   ],
+   "rgb": [
+    219,
+    206,
+    179
+   ]
+  },
+  {
+   "name": "fountain_ring",
+   "world": [
+    101.0,
+    0.5
+   ],
+   "px": [
+    707,
+    949
+   ],
+   "rgb": [
+    86,
+    145,
+    137
+   ],
+   "window": 5
+  },
+  {
+   "name": "avenue_mid",
+   "world": [
+    150,
+    -60
+   ],
+   "px": [
+    1050,
+    1295
+   ],
+   "rgb": [
+    223,
+    208,
+    168
+   ]
+  },
+  {
+   "name": "evac_strip",
+   "world": [
+    222.71,
+    -213.35
+   ],
+   "px": [
+    1558,
+    2175
+   ],
+   "rgb": [
+    182,
+    189,
+    102
+   ],
+   "window": 5
+  },
+  {
+   "name": "evac_glow",
+   "world": [
+    216.88,
+    -215.47
+   ],
+   "px": [
+    1518,
+    2187
+   ],
+   "rgb": [
+    75,
+    118,
+    214
+   ]
+  },
+  {
+   "name": "water",
+   "world": [
+    20,
+    -240
+   ],
+   "px": [
+    140,
+    2328
+   ],
+   "rgb": [
+    46,
+    78,
+    80
+   ]
+  }
+ ],
+ "pass": true,
+ "rules": "evac strip yellow-dominant (R,G > B by >=55; 0.7 m bar at 7 px/m is anti-aliased); island south notch passable; evac glow blue-dominant"
+}

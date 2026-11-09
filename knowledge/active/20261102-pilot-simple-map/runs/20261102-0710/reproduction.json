@@ -1,0 +1,39 @@
+{
+ "test_id": "TEST-05",
+ "image": "art/static_map/pilot_simple_map/v01/renders/final.png",
+ "reopen_image": "knowledge/active/20261102-pilot-simple-map/runs/20261102-0710/repro/renders/reopen.png",
+ "pixel_sha256_final": "135843d8cdeb2079fb1a926eaf546756b714afd1850eb228c5516d8d3a177039",
+ "pixel_sha256_reopen": "135843d8cdeb2079fb1a926eaf546756b714afd1850eb228c5516d8d3a177039",
+ "pixel_sha_match": true,
+ "file_sha256_final": "9b184c156e5c27170bf043566cf5d88680f31bcfd3a739c9c650f05fee58f2b6",
+ "file_sha256_reopen": "7c1f3b3130ecb55d2b9f59533c0b90cca6cf1f01f349b0575348dc9927da6a99",
+ "file_sha_match": false,
+ "rms_255": 0.0,
+ "max_channel_diff": [
+  0,
+  0,
+  0
+ ],
+ "tolerance_rms_255": 2.0,
+ "tolerance_declared_before_run": true,
+ "reopen_exit_code": 0,
+ "reopen_elapsed_s": 19,
+ "reopen_settings": {
+  "engine": "CYCLES",
+  "samples": 64,
+  "resolution": [
+   960,
+   540
+  ],
+  "seed": 0,
+  "animated_seed": false,
+  "view_transform": "AgX",
+  "look": "None",
+  "exposure": 0.1
+ },
+ "external_libraries": [],
+ "external_images": [],
+ "finding": "PNG 元数据（File/Date/RenderTime/cycles.*）每次渲染都不同，导致 file SHA 不同而像素完全一致；复现契约须以 pixel_sha256 为准，file SHA 仅作参考。",
+ "remedy_considered": "tools/normalize_render.py 可去元数据使 file SHA 一致（实测两份均为 7c1f3b31…），但会丢失 sRGB/gamma 色块，故不用于交付图。",
+ "pass": true
+}

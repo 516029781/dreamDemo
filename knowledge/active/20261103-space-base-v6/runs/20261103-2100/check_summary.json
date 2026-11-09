@@ -1,0 +1,138 @@
+{
+ "schema": "check-summary-v2",
+ "stage": "final",
+ "spec": "r03",
+ "request": "C:\\软件\\鼠鼠\\knowledge\\active\\20261103-space-base-v6",
+ "candidate": "C:\\软件\\鼠鼠\\art\\static_map\\space_base_minigame\\v06",
+ "run": "20261103-2100",
+ "images": {
+  "master": {
+   "size": [
+    1680,
+    2478
+   ],
+   "mode": "RGB",
+   "bytes": 5675367
+  },
+  "raw": {
+   "size": [
+    3360,
+    5880
+   ],
+   "mode": "RGB",
+   "bytes": 17585865
+  },
+  "core": {
+   "size": [
+    2072,
+    1876
+   ],
+   "mode": "RGB",
+   "bytes": 3299866
+  },
+  "hero": {
+   "size": [
+    1920,
+    1080
+   ],
+   "mode": "RGB",
+   "bytes": 1949505
+  },
+  "ship": {
+   "size": [
+    1680,
+    2478
+   ],
+   "mode": "RGB",
+   "format": "JPEG",
+   "bytes": 450420
+  }
+ },
+ "coverage": {
+  "requirements": [
+   "REQ-01",
+   "REQ-02",
+   "REQ-03",
+   "REQ-04",
+   "REQ-05",
+   "REQ-06",
+   "REQ-07",
+   "REQ-08",
+   "REQ-09",
+   "REQ-10",
+   "REQ-11",
+   "REQ-12",
+   "REQ-13",
+   "REQ-14",
+   "REQ-15",
+   "REQ-16",
+   "REQ-17",
+   "REQ-18",
+   "REQ-19",
+   "REQ-20",
+   "REQ-21",
+   "REQ-22",
+   "REQ-23",
+   "REQ-24",
+   "REQ-25",
+   "REQ-26",
+   "REQ-27",
+   "REQ-28"
+  ],
+  "covered": [
+   "REQ-01",
+   "REQ-02",
+   "REQ-03",
+   "REQ-04",
+   "REQ-05",
+   "REQ-06",
+   "REQ-07",
+   "REQ-08",
+   "REQ-09",
+   "REQ-10",
+   "REQ-11",
+   "REQ-12",
+   "REQ-13",
+   "REQ-14",
+   "REQ-15",
+   "REQ-16",
+   "REQ-17",
+   "REQ-18",
+   "REQ-19",
+   "REQ-20",
+   "REQ-21",
+   "REQ-22",
+   "REQ-23",
+   "REQ-24",
+   "REQ-25",
+   "REQ-26",
+   "REQ-27",
+   "REQ-28"
+  ],
+  "missing": [],
+  "extra": [],
+  "dangling": [],
+  "ids": {
+   "test_cases": "20261103-space-base-v6",
+   "run_context": "20261103-space-base-v6",
+   "resolved": "20261103-space-base-v6"
+  },
+  "ids_consistent": true,
+  "resolved_failures": []
+ },
+ "manifest": {
+  "files": 14,
+  "bad": []
+ },
+ "reproduction": {
+  "schema": "reproduction-v1",
+  "run_id": "20261103-2100",
+  "method": "isolated reopen: scene.blend -> 420x735@64spp vs master_raw downscale",
+  "rms": 7.911,
+  "threshold": 8.0,
+  "pass": true
+ },
+ "hard_failures": [],
+ "pass": true,
+ "notes": []
+}

@@ -1,6 +1,6 @@
 {
  "schema": "business-manifest-v1",
- "updated_at": "2026-11-02T03:40+08:00",
+ "updated_at": "2026-11-02T07:20+08:00",
  "routing_rules": {
   "selection": "按用户需求中的 deliverable_type + 主题/业务 ID 显式选择；关键词只作候选提示，不自动决定",
   "no_match": "new_business_bootstrap：只用 common 层 + 用户 Brief，新建业务包，不借用其他业务视觉答案",
@@ -33,7 +33,6 @@
    "optional_docs": [
     "knowledge/business/p1_autumn_static/DRAWING_PLAYBOOK.md",
     "planning/art/P1_WORKORDER_20261101_NEXT.md",
-    "planning/art/STATIC_ART_INFORMATION_CORRECTION_20261101.md",
     "planning/art/STATIC_ART_INFORMATION_CORRECTION_20261101.md"
    ],
    "excluded_packages": [
@@ -79,6 +78,83 @@
    "harness": null,
    "version": "r01",
    "notes": "只作数据/规则研究，绝不作为视觉参考或色板来源"
+  },
+  {
+   "business_id": "pilot_simple_map",
+   "title": "流程验证用最小场景（pilot）",
+   "deliverable_types": [
+    "static_map"
+   ],
+   "triggers": [
+    "流程验证",
+    "pilot",
+    "简单场景"
+   ],
+   "lifecycle": "pilot",
+   "activation_basis": "用户 2026-11-02 06:58「做一个简单的图 验证一下流程吧」",
+   "entry": "knowledge/business/pilot_simple_map/BUSINESS_PROFILE.md",
+   "required_docs": [
+    "knowledge/business/pilot_simple_map/BUSINESS_PROFILE.md",
+    "knowledge/business/pilot_simple_map/STYLE_PROFILE.md",
+    "knowledge/business/pilot_simple_map/test_cases.json",
+    "knowledge/business/pilot_simple_map/HARNESS_SPEC.json"
+   ],
+   "optional_docs": [
+    "knowledge/business/pilot_simple_map/scorecard.json"
+   ],
+   "excluded_packages": [
+    "p1_autumn_static",
+    "research_arknights_mapdata"
+   ],
+   "style_profile_id": "pilot_plain_diorama",
+   "skill_refs": [],
+   "scorecard": "knowledge/business/pilot_simple_map/scorecard.json",
+   "harness": "knowledge/business/pilot_simple_map/HARNESS_SPEC.json",
+   "version": "r01",
+   "notes": "机制验证业务，不继承 P1 评分与硬门槛；maturity=observed（单张实证）"
+  },
+  {
+   "business_id": "space_base_minigame",
+   "title": "航天基地静态地图（WeChat 小游戏）",
+   "deliverable_types": [
+    "static_map"
+   ],
+   "triggers": [
+    "航天基地",
+    "space base",
+    "南花园",
+    "丢包撤离点",
+    "微信小游戏地图"
+   ],
+   "lifecycle": "active",
+   "activation_basis": "用户 2026-11-02「开始吧」确认 SPACE_BASE_EXECUTION_PLAN_20261102.md 的一次性执行计划",
+   "entry": "knowledge/business/space_base_minigame/START_HERE.md",
+   "required_docs": [
+    "knowledge/business/space_base_minigame/BUSINESS_PROFILE.md",
+    "knowledge/business/space_base_minigame/STYLE_PROFILE.md",
+    "knowledge/business/space_base_minigame/HARNESS_SPEC.json",
+    "knowledge/business/space_base_minigame/test_cases.json",
+    "planning/art/SPACE_BASE_MASTER_SPEC_20261102.md",
+    "planning/art/SPACE_BASE_EXECUTION_PLAN_20261102.md",
+    "planning/art/HANDOFF_20261102.md"
+   ],
+   "optional_docs": [
+    "knowledge/business/space_base_minigame/scorecard.json",
+    "planning/art/_routes_v13.html",
+    "planning/art/_corridor_strip.html",
+    "planning/art/STATIC_MAP_WORKFLOW_20261028.md"
+   ],
+   "excluded_packages": [
+    "p1_autumn_static",
+    "research_arknights_mapdata",
+    "pilot_simple_map"
+   ],
+   "style_profile_id": "space_base_v13",
+   "skill_refs": [],
+   "scorecard": "knowledge/business/space_base_minigame/scorecard.json",
+   "harness": "knowledge/business/space_base_minigame/HARNESS_SPEC.json",
+   "version": "r01",
+   "notes": "静态图 + 可编辑 Blender 源；A1/W3/W4 运行时外置；不继承 P1 评分/参考"
   }
  ],
  "new_business_bootstrap": {

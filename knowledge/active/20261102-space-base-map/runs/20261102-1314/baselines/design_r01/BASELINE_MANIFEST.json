@@ -1,0 +1,57 @@
+{
+ "schema": "baseline-manifest-v1",
+ "baseline_id": "design_r01",
+ "request_id": "20261102-space-base-map",
+ "created_at": "2026-11-02T13:18+08:00",
+ "status": "frozen",
+ "contents": [
+  {
+   "role": "requirements_brief",
+   "path": "REQUIREMENTS_BRIEF.md",
+   "sha256": "7604194bcf2b025e8a1804f2371bf0bbb80d2ed7deb36916dd1d60488771cf03",
+   "copied": true
+  },
+  {
+   "role": "solution_design",
+   "path": "SOLUTION_DESIGN.md",
+   "sha256": "0cc61d90db0b074ae391b1aebc203a9c26589488035e7925b037f2cbae594ef6",
+   "copied": true
+  },
+  {
+   "role": "test_cases",
+   "path": "test_cases.json",
+   "sha256": "b4854ecd3d60ab104b8124d22e04f00f0055856b766cba706f252d61c28f4bf8",
+   "copied": true
+  },
+  {
+   "role": "dev_feasibility_review",
+   "path": "DEV_FEASIBILITY_REVIEW.md",
+   "sha256": "e754b74967ac3f46754530d064912d1904f2f6fde4cfdfe82589263a44ad6733",
+   "copied": true
+  },
+  {
+   "role": "authority_spec",
+   "path": "SPACE_BASE_MASTER_SPEC_20261102.md",
+   "sha256": "4e0e22229b5afdecfe860b331dc49ee02e4a0a2ac3b41c7805f305cbd1933fc1",
+   "copied": true
+  },
+  {
+   "role": "preview_routes",
+   "path": "DESIGN_PREVIEW_PACK/_routes_v13.html",
+   "sha256": "6b98e788503287676e4b559881fd337046d34892dd15e8b66998fd529059b589",
+   "copied": true
+  },
+  {
+   "role": "preview_corridor",
+   "path": "DESIGN_PREVIEW_PACK/_corridor_strip.html",
+   "sha256": "650dbdff5fa2ded686a1e7faee6e6ae8bcc3f7e7d5688df86358d21f227d1e43",
+   "copied": true
+  }
+ ],
+ "immutability": "frozen baselines are never edited in place; create design_r(NN+1) and re-approve affected items",
+ "dev_review": {
+  "path": "DEV_FEASIBILITY_REVIEW.md",
+  "status": "confirmed"
+ },
+ "parent_baseline_id": null
+}

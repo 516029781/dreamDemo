@@ -1,0 +1,131 @@
+{
+ "stage": "final",
+ "request": "C:\\软件\\鼠鼠\\knowledge\\active\\20261102-space-base-map",
+ "candidate": "C:\\软件\\鼠鼠\\art\\static_map\\space_base_minigame\\v01",
+ "run": "20261102-1314",
+ "coverage": {
+  "requirements": [
+   "REQ-01",
+   "REQ-02",
+   "REQ-03",
+   "REQ-04",
+   "REQ-05",
+   "REQ-06",
+   "REQ-07",
+   "REQ-08",
+   "REQ-09",
+   "REQ-10",
+   "REQ-11",
+   "REQ-12",
+   "REQ-13",
+   "REQ-14",
+   "REQ-15",
+   "REQ-16",
+   "REQ-17",
+   "REQ-18",
+   "REQ-19",
+   "REQ-20"
+  ],
+  "covered": [
+   "REQ-01",
+   "REQ-02",
+   "REQ-03",
+   "REQ-04",
+   "REQ-05",
+   "REQ-06",
+   "REQ-07",
+   "REQ-08",
+   "REQ-09",
+   "REQ-10",
+   "REQ-11",
+   "REQ-12",
+   "REQ-13",
+   "REQ-14",
+   "REQ-15",
+   "REQ-16",
+   "REQ-17",
+   "REQ-18",
+   "REQ-19",
+   "REQ-20"
+  ],
+  "missing": [],
+  "extra": [],
+  "dangling_evidence": [],
+  "ids": {
+   "brief_request": "20261102-space-base-map",
+   "test_cases": "20261102-space-base-map",
+   "run_context": "20261102-space-base-map",
+   "resolved": "20261102-space-base-map"
+  },
+  "ids_consistent": true,
+  "resolved_loaded_failures": []
+ },
+ "images": {
+  "master": {
+   "size": [
+    3840,
+    5120
+   ],
+   "mode": "RGB",
+   "bytes": 13602094
+  },
+  "ship": {
+   "size": [
+    1920,
+    2560
+   ],
+   "mode": "RGB",
+   "format": "JPEG",
+   "bytes": 448184
+  }
+ },
+ "w1": {
+  "test_id": "TEST-W1",
+  "check": "W1",
+  "size": [
+   1920,
+   2560
+  ],
+  "mode": "RGB",
+  "format": "JPEG",
+  "bytes": 448184,
+  "max_edge": 2560,
+  "limit_bytes": 3145728,
+  "pass": true
+ },
+ "w2": {
+  "test_id": "TEST-W2",
+  "check": "W2",
+  "map_bytes": 448184,
+  "js_bytes": 22616,
+  "config_bytes": 1390,
+  "main_bytes": 472190,
+  "main_limit_bytes": 4194304,
+  "total_limit_bytes": 31457280,
+  "package_note": "quickstart arithmetic; map may be moved to a subpackage for Cocos",
+  "pass": true
+ },
+ "manifest": {
+  "files": 14,
+  "bad": []
+ },
+ "reproduction": {
+  "schema": "reproduction-v1",
+  "status": "pass",
+  "pass": true,
+  "master": "art\\static_map\\space_base_minigame\\v01\\renders\\space_base_v01_master.png",
+  "repro": "knowledge\\active\\20261102-space-base-map\\runs\\20261102-1314\\repro\\master_repro_flipped.png",
+  "master_content_sha256": "e40212cf8ec8d5e893839c83c167616ffb33dffa0a6be0105723425da0046702",
+  "repro_content_sha256": "e40212cf8ec8d5e893839c83c167616ffb33dffa0a6be0105723425da0046702",
+  "same_content_sha": true,
+  "rms": 0.0,
+  "tolerance": "2.0/255",
+  "size_ok": true,
+  "command": "blender -b repro/scene.blend --python tools/blender_space_base/render_only.py -- --out repro/master_repro_raw.png --res 3840x5120 --samples 32; flip L-R",
+  "exit_code": 0,
+  "elapsed_ms": 360789,
+  "note": "Cycles same-scene renders may not be bit-identical; pass by RMS tolerance."
+ },
+ "hard_failures": [],
+ "pass": true
+}

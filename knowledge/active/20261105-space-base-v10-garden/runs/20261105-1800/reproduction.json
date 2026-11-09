@@ -1,0 +1,14 @@
+{
+ "schema": "reproduction-v1",
+ "master": "art/static_map/space_base_minigame/v10/renders/master_raw.png",
+ "repro": "art/static_map/space_base_minigame/v10/renders/repro.png",
+ "size": [
+  420,
+  735
+ ],
+ "rms": 7.483,
+ "tolerance": 8.0,
+ "samples": 24,
+ "pass": true,
+ "note": "Cycles same-scene re-render; pass by RMS tolerance (v09 baseline 3.557)."
+}

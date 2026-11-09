@@ -1,0 +1,12 @@
+{
+ "test_id": "TEST-W2",
+ "check": "W2",
+ "map_bytes": 463201,
+ "js_bytes": 22616,
+ "config_bytes": 1390,
+ "main_bytes": 487207,
+ "main_limit_bytes": 4194304,
+ "total_limit_bytes": 31457280,
+ "package_note": "quickstart arithmetic; map may be moved to a subpackage",
+ "pass": true
+}

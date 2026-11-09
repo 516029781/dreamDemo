@@ -1,0 +1,11 @@
+{
+ "test_id": "TV13-03",
+ "roof_hits": [],
+ "count": 0,
+ "exempted": [
+  "corr_truss",
+  "corr_beam",
+  "truss_dark",
+  "k05_parapet"
+ ]
+}

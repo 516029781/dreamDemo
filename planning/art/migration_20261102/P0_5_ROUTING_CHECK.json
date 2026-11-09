@@ -1,6 +1,6 @@
 {
  "schema": "p0-5-routing-check-v1",
- "generated_at": "2026-11-02T02:54:13",
+ "generated_at": "2026-11-02T07:08:36",
  "samples": [
   "p1_production",
   "new_business",
@@ -56,7 +56,8 @@
    "status": "pass",
    "detail": [
     "p1_autumn_static",
-    "research_arknights_mapdata"
+    "research_arknights_mapdata",
+    "pilot_simple_map"
    ]
   },
   {

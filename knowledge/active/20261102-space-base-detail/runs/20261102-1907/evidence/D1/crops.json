@@ -1,0 +1,116 @@
+{
+ "crops": [
+  {
+   "path": "runs/20261102-1907/evidence/D1/crops/h1_room.png",
+   "world": [
+    0,
+    70,
+    0,
+    70
+   ],
+   "px": [
+    0,
+    2630,
+    1120,
+    3548
+   ],
+   "name": "h1_room"
+  },
+  {
+   "path": "runs/20261102-1907/evidence/D1/crops/h2_room.png",
+   "world": [
+    0,
+    70,
+    120,
+    190
+   ],
+   "px": [
+    0,
+    4203,
+    1120,
+    5120
+   ],
+   "name": "h2_room"
+  },
+  {
+   "path": "runs/20261102-1907/evidence/D1/crops/h3_room.png",
+   "world": [
+    170,
+    240,
+    120,
+    190
+   ],
+   "px": [
+    2720,
+    4203,
+    3840,
+    5120
+   ],
+   "name": "h3_room"
+  },
+  {
+   "path": "runs/20261102-1907/evidence/D1/crops/h4_room.png",
+   "world": [
+    170,
+    240,
+    0,
+    70
+   ],
+   "px": [
+    2720,
+    2630,
+    3840,
+    3548
+   ],
+   "name": "h4_room"
+  },
+  {
+   "path": "runs/20261102-1907/evidence/D1/crops/ceo.png",
+   "world": [
+    96,
+    144,
+    86,
+    124
+   ],
+   "px": [
+    1536,
+    3758,
+    2304,
+    4256
+   ],
+   "name": "ceo"
+  },
+  {
+   "path": "runs/20261102-1907/evidence/D1/crops/workshop_gate_evac.png",
+   "world": [
+    100,
+    210,
+    -190,
+    -60
+   ],
+   "px": [
+    1600,
+    140,
+    3360,
+    1844
+   ],
+   "name": "workshop_gate_evac"
+  },
+  {
+   "path": "runs/20261102-1907/evidence/D1/crops/garden.png",
+   "world": [
+    0,
+    240,
+    -30,
+    0
+   ],
+   "px": [
+    0,
+    2237,
+    3840,
+    2630
+   ],
+   "name": "garden"
+  }
+ ]
+}

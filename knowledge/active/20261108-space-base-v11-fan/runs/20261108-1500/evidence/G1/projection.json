@@ -1,0 +1,26 @@
+{
+ "check": "G1",
+ "width": 1680,
+ "height": 2478,
+ "scale_px_per_m": 7.0,
+ "projection_points": [
+  [
+   0,
+   0
+  ],
+  [
+   1680,
+   0
+  ],
+  [
+   1680,
+   2478
+  ],
+  [
+   0,
+   2478
+  ]
+ ],
+ "error_px": 0,
+ "pass": true
+}

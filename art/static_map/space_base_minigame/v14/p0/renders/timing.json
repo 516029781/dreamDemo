@@ -1,0 +1,48 @@
+{
+ "schema": "v14-p0-render-timing-v1",
+ "source_scene": "C:/软件/鼠鼠/art/static_map/space_base_minigame/v13/scene.blend",
+ "command": "blender -b <v13>/scene.blend --python tools/render_v14_cm_candidates.py -- <OUT>",
+ "fixed_conditions": {
+  "camera": "Camera",
+  "resolution": [
+   1680,
+   2478
+  ],
+  "samples": 24,
+  "seed": 0,
+  "is_char_hidden": true
+ },
+ "total_wall_seconds": 233.55,
+ "records": [
+  {
+   "file": "cm_A_current.png",
+   "view_transform": "Standard",
+   "look": "None",
+   "exposure": 0.22,
+   "wall_seconds": 76.99,
+   "exit_ok": true,
+   "bytes": 3724791,
+   "sha256": "4ca5108bd2dd7a41dc66d5e17484efb483b29074ad5da973d6287cbb333b7b94"
+  },
+  {
+   "file": "cm_C_agx_mhc.png",
+   "view_transform": "AgX",
+   "look": "AgX - Medium High Contrast",
+   "exposure": 0.22,
+   "wall_seconds": 80.41,
+   "exit_ok": true,
+   "bytes": 3693580,
+   "sha256": "37be37569a1b06916c083400518cf5d429244f74b045fff02dd16cb199bbe03a"
+  },
+  {
+   "file": "cm_D_standard_m015.png",
+   "view_transform": "Standard",
+   "look": "None",
+   "exposure": -0.15,
+   "wall_seconds": 76.0,
+   "exit_ok": true,
+   "bytes": 3642489,
+   "sha256": "0a0196eb0106b5db01f6556a9250c87d3d73760221d4561cf721a9d100f4585c"
+  }
+ ]
+}

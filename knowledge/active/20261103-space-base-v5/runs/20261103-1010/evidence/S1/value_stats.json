@@ -1,0 +1,14 @@
+{
+ "check": "S1",
+ "rule": "land-relative light ratio >= 45% (lum>=0.62, sat<=0.28)",
+ "light_full": 0.188491422417109,
+ "water_ratio": 0.656831294714978,
+ "light_land": 0.5492675162805295,
+ "sensitivity": {
+  "sat<=0.22": 0.34577490836948116,
+  "sat<=0.25": 0.476601992893731,
+  "sat<=0.28": 0.5492675162805295
+ },
+ "lum_median_land": 0.7179098129272461,
+ "pass": true
+}

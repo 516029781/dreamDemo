@@ -1,0 +1,86 @@
+{
+ "schema": "manifest-v1",
+ "created_at": "2026-11-08T17:22:21",
+ "entries": [
+  {
+   "path": "scene.blend",
+   "sha256": "ceea0f110bebb4a16b82a1db67104645768a1d78024c4936fef8ccae1ea384b6",
+   "bytes": 703247
+  },
+  {
+   "path": "renders/space_base_v11_master.png",
+   "sha256": "098f7f9cd737f9137773a0779db2ac044f8e86c6ffe50f3c296dfbeaf0961125",
+   "bytes": 2602870
+  },
+  {
+   "path": "renders/space_base_v11.jpg",
+   "sha256": "432528606558d3354e9aacb94b6c88cb462895440492d46295b5b88215abf3e2",
+   "bytes": 294093
+  },
+  {
+   "path": "renders/space_base_v11_core.png",
+   "sha256": "53eb96d1b7f5576ccd15023e556bb2118f12c4557cae86a6623af0b63a6e39f6",
+   "bytes": 2937733
+  },
+  {
+   "path": "renders/space_base_v11_hero.png",
+   "sha256": "998d83cca2f7bc9d75c4d31c86847b80d0133d04bc2bd4c3cb5b8783b3f18fe0",
+   "bytes": 2119693
+  },
+  {
+   "path": "renders/master_raw.png",
+   "sha256": "c2374490deed2809ce66182def0c245d7dfaa6e9c5790196aff580b92a4742af",
+   "bytes": 17112035
+  },
+  {
+   "path": "renders/route.png",
+   "sha256": "703c82b748b097317282e1a948cc2f640ec8a9920ec471d6a12eb6ed66df89be",
+   "bytes": 2024547
+  },
+  {
+   "path": "renders/checks/01_core.png",
+   "sha256": "2cac2bf16337ea342105255c034725fafc96950b156b945c88bae40c4c75ec1d",
+   "bytes": 1283961
+  },
+  {
+   "path": "renders/checks/02_avenue_bridge.png",
+   "sha256": "235c45dca9e703cab49804cc49103d8d1c2069cf9c7628ad558f9e3d47318634",
+   "bytes": 783566
+  },
+  {
+   "path": "renders/checks/03_peninsula.png",
+   "sha256": "208bb6b8995a6f4d38fcede0336705dbb82ebd7d2a1233a9518c57cb7a7bb97e",
+   "bytes": 1176898
+  },
+  {
+   "path": "renders/checks/04_avenue_head.png",
+   "sha256": "2ce4dfc18d20c1c0ddbfea0e2c4dd8b535a0cbd459bc11eee00868c9b9c1820d",
+   "bytes": 1067704
+  },
+  {
+   "path": "renders/checks/05_g5_pair.png",
+   "sha256": "f545e6c802dbec154076131dd36867b207d8a6d28727c6794dbf59f085354262",
+   "bytes": 857150
+  },
+  {
+   "path": "REVIEW.md",
+   "sha256": "5bdddf66b5739e18e788de1b856a36f9b26a414fa8637279cdcdd0a72e72f7cd",
+   "bytes": 1920
+  },
+  {
+   "path": "DELIVERY.json",
+   "sha256": "7572a09ef6ea576bba7fa5d535c3b2411a2a85d364a2e1d03d539bddd0ed14c0",
+   "bytes": 1075
+  },
+  {
+   "path": "GATE_REPORT.json",
+   "sha256": "de9722973bd17c6c400c27174e6215c1d1a731150bfe627574b8882741a72388",
+   "bytes": 2821
+  },
+  {
+   "path": "REPRODUCE.md",
+   "sha256": "3f705c9e73353c7b97f785cae5993982e8681e206d97f0389b125fd23b56b744",
+   "bytes": 1010
+  }
+ ]
+}

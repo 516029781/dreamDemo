@@ -1,0 +1,16 @@
+{
+ "check": "GA11",
+ "exterior_windows": 27,
+ "window_frames": 27,
+ "mullions": 44,
+ "door_slats": 45,
+ "door_jambs": 18,
+ "door_heads": 9,
+ "k07_canopies": 5,
+ "downpipes": 4,
+ "wall_lamps": 10,
+ "windsock_arm": true,
+ "k07_facade_v_min": -13.995,
+ "glass_material": "v10.win_dark",
+ "pass": true
+}

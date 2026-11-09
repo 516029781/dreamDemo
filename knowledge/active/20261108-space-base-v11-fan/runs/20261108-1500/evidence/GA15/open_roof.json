@@ -1,0 +1,13 @@
+{
+ "check": "GA15",
+ "roof_objects": [],
+ "corridor_glazing": [],
+ "hall_interior_objects": {
+  "1": 47,
+  "2": 23,
+  "3": 48,
+  "4": 13
+ },
+ "note": "四厅与十字过道不设屋顶/天花板，俯视可直接读到室内陈设",
+ "pass": true
+}

@@ -1,0 +1,8 @@
+{
+ "schema": "reproduction-v1",
+ "run_id": "20261104-1100",
+ "method": "isolated reopen: scene.blend -> 840x1470@64spp -> LANCZOS 420x735 vs master_raw same chain",
+ "rms": 5.852,
+ "threshold": 8.0,
+ "pass": true
+}

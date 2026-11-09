@@ -1,0 +1,131 @@
+{
+ "test_id": "TV13-01",
+ "components": {
+  "S-01_blast_wall": {
+   "count": 70,
+   "sample": [
+    "ws_coping_e_0",
+    "ws_coping_e_1",
+    "ws_coping_e_2",
+    "ws_coping_e_3",
+    "ws_coping_e_4",
+    "ws_coping_n_0"
+   ]
+  },
+  "S-02_entrance": {
+   "count": 11,
+   "sample": [
+    "ws_entrance",
+    "ws_entrance_dark",
+    "ws_entrance_jamb_0",
+    "ws_entrance_jamb_1",
+    "ws_entrance_letter_0",
+    "ws_entrance_letter_1"
+   ]
+  },
+  "S-03_ground_pipes": {
+   "count": 60,
+   "sample": [
+    "ws_flange_0_0",
+    "ws_flange_0_1",
+    "ws_flange_0_2",
+    "ws_flange_0_3",
+    "ws_flange_0_4",
+    "ws_flange_0_5"
+   ]
+  },
+  "S-04_diversion_pit": {
+   "count": 10,
+   "sample": [
+    "ws_pit_cone",
+    "ws_pit_floor",
+    "ws_pit_wall_0",
+    "ws_pit_wall_1",
+    "ws_pit_wall_2",
+    "ws_pit_wall_3"
+   ]
+  },
+  "S-05_containers": {
+   "count": 10,
+   "sample": [
+    "ws_cont_0_0",
+    "ws_cont_0_1",
+    "ws_cont_0_2",
+    "ws_cont_1_0",
+    "ws_cont_1_1",
+    "ws_cont_1_2"
+   ]
+  },
+  "S-06_ground_marks": {
+   "count": 13,
+   "sample": [
+    "ws_puddle_0",
+    "ws_puddle_1",
+    "ws_puddle_2",
+    "ws_slabjoint_0",
+    "ws_slabjoint_1",
+    "ws_slabjoint_2"
+   ]
+  },
+  "S-07_control_room": {
+   "count": 5,
+   "sample": [
+    "ws_ctrl_bench",
+    "ws_ctrl_glass_0",
+    "ws_ctrl_glass_1",
+    "ws_ctrl_glass_2",
+    "ws_ctrl_glass_3"
+   ]
+  },
+  "S-08_bollards": {
+   "count": 4,
+   "sample": [
+    "ws_bollard_0",
+    "ws_bollard_1",
+    "ws_bollard_2",
+    "ws_bollard_bar"
+   ]
+  },
+  "S-09_evac_frame": {
+   "count": 6,
+   "sample": [
+    "ws_evac_0",
+    "ws_evac_1",
+    "ws_evac_2",
+    "ws_evac_3",
+    "ws_evac_arrow_h",
+    "ws_evac_arrow_v"
+   ]
+  },
+  "S-10_terminal": {
+   "count": 2,
+   "sample": [
+    "ws_terminal",
+    "ws_terminal_led"
+   ]
+  },
+  "S-11_clutter": {
+   "count": 15,
+   "sample": [
+    "ws_cab_0",
+    "ws_cab_1",
+    "ws_cab_2",
+    "ws_cab_3",
+    "ws_cab_4",
+    "ws_cab_5"
+   ]
+  },
+  "S-12_ladders": {
+   "count": 18,
+   "sample": [
+    "ws_ladder_rail_0_0",
+    "ws_ladder_rail_0_1",
+    "ws_ladder_rail_1_0",
+    "ws_ladder_rail_1_1",
+    "ws_ladder_rung_0_0",
+    "ws_ladder_rung_0_1"
+   ]
+  }
+ },
+ "all_present": true
+}

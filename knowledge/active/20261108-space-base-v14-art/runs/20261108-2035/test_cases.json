@@ -1,0 +1,112 @@
+{
+ "schema": "test-cases-v1",
+ "request_id": "20261108-space-base-v14-art",
+ "business_id": "space_base_minigame",
+ "version": "v14",
+ "cases": [
+  {
+   "test_id": "TVV14-01",
+   "covers": [
+    "REQ-50"
+   ],
+   "stage": "final",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "evidence_path": "runs/20261108-2035/evidence/TVV14-01/",
+   "diagnostic_only": false,
+   "pass_criteria": "see REQUIREMENTS_BRIEF",
+   "failure_rule": "return to N6"
+  },
+  {
+   "test_id": "TVV14-02",
+   "covers": [
+    "REQ-51"
+   ],
+   "stage": "final",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "evidence_path": "runs/20261108-2035/evidence/TVV14-02/",
+   "diagnostic_only": false,
+   "pass_criteria": "see REQUIREMENTS_BRIEF",
+   "failure_rule": "return to N6"
+  },
+  {
+   "test_id": "TVV14-03",
+   "covers": [
+    "REQ-52"
+   ],
+   "stage": "final",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "evidence_path": "runs/20261108-2035/evidence/TVV14-03/",
+   "diagnostic_only": false,
+   "pass_criteria": "see REQUIREMENTS_BRIEF",
+   "failure_rule": "return to N6"
+  },
+  {
+   "test_id": "TVV14-04",
+   "covers": [
+    "REQ-53"
+   ],
+   "stage": "final",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "evidence_path": "runs/20261108-2035/evidence/TVV14-04/",
+   "diagnostic_only": false,
+   "pass_criteria": "see REQUIREMENTS_BRIEF",
+   "failure_rule": "return to N6"
+  },
+  {
+   "test_id": "TVV14-05",
+   "covers": [
+    "REQ-54"
+   ],
+   "stage": "final",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "evidence_path": "runs/20261108-2035/evidence/TVV14-05/",
+   "diagnostic_only": false,
+   "pass_criteria": "see REQUIREMENTS_BRIEF",
+   "failure_rule": "return to N6"
+  },
+  {
+   "test_id": "TVV14-06",
+   "covers": [
+    "REQ-55"
+   ],
+   "stage": "final",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "evidence_path": "runs/20261108-2035/evidence/TVV14-06/",
+   "diagnostic_only": false,
+   "pass_criteria": "see REQUIREMENTS_BRIEF",
+   "failure_rule": "return to N6"
+  },
+  {
+   "test_id": "TVV14-07",
+   "covers": [
+    "REQ-56"
+   ],
+   "stage": "final",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "evidence_path": "runs/20261108-2035/evidence/TVV14-07/",
+   "diagnostic_only": false,
+   "pass_criteria": "see REQUIREMENTS_BRIEF",
+   "failure_rule": "return to N6"
+  },
+  {
+   "test_id": "TVV14-08",
+   "covers": [
+    "REQ-57"
+   ],
+   "stage": "final",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "evidence_path": "runs/20261108-2035/evidence/TVV14-08/",
+   "diagnostic_only": false,
+   "pass_criteria": "see REQUIREMENTS_BRIEF",
+   "failure_rule": "return to N6"
+  }
+ ]
+}

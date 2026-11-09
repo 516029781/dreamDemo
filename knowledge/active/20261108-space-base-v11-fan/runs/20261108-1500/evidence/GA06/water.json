@@ -1,0 +1,18 @@
+{
+ "check": "GA06",
+ "pools": [
+  {
+   "name": "gpool_water",
+   "dim": [
+    11.6,
+    11.6,
+    0.01
+   ],
+   "z_top": 4.615,
+   "material": [
+    "v6.pool"
+   ]
+  }
+ ],
+ "pass": true
+}

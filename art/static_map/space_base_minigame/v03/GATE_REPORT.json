@@ -1,0 +1,173 @@
+{
+ "schema": "space-base-gate-v1",
+ "business_id": "space_base_minigame",
+ "version": "v03",
+ "layout_source": "planning/art/SPACE_BASE_NEW_PLAN_20261103.md (v3.10)",
+ "G1": {
+  "master": [
+   3360,
+   5880
+  ],
+  "final": [
+   1680,
+   2478
+  ],
+  "px_per_m_x": 7.0,
+  "px_per_m_y": 5.7344,
+  "pass": true
+ },
+ "W1": {
+  "jpg_bytes": 189000,
+  "jpg_quality": 88,
+  "max_side": 2478,
+  "alpha": false,
+  "pass": true
+ },
+ "G4_probes": {
+  "garden_north_gate_120_-14": {
+   "world": [
+    120,
+    -14
+   ],
+   "px": [
+    840,
+    1032
+   ],
+   "rgb": [
+    251,
+    247,
+    227
+   ]
+  },
+  "fountain_ring_120_-39": {
+   "world": [
+    111,
+    -39
+   ],
+   "px": [
+    777,
+    1175
+   ],
+   "rgb": [
+    87,
+    113,
+    124
+   ]
+  },
+  "causeway_mid_166_-97": {
+   "world": [
+    166,
+    -97
+   ],
+   "px": [
+    1162,
+    1508
+   ],
+   "rgb": [
+    197,
+    203,
+    198
+   ]
+  },
+  "dock_floor_u48_v0": {
+   "world": [
+    188.42,
+    -181.12
+   ],
+   "px": [
+    1318,
+    1990
+   ],
+   "rgb": [
+    207,
+    213,
+    209
+   ]
+  },
+  "evac_frame_221_-214": {
+   "world": [
+    221,
+    -214
+   ],
+   "px": [
+    1547,
+    2179
+   ],
+   "rgb": [
+    197,
+    202,
+    197
+   ]
+  },
+  "evac_strip_u90_v16.8": {
+   "world": [
+    218.57,
+    -214.85
+   ],
+   "px": [
+    1530,
+    2183
+   ],
+   "rgb": [
+    255,
+    255,
+    98
+   ]
+  },
+  "water_sw_20_-240": {
+   "world": [
+    20,
+    -240
+   ],
+   "px": [
+    140,
+    2328
+   ],
+   "rgb": [
+    63,
+    87,
+    92
+   ]
+  }
+ },
+ "S1_S2_S3": {
+  "S1_light_ratio": 0.1567,
+  "S2_green_ratio": 0.0297,
+  "S3_orange_ratio": 0.0002,
+  "water_ratio": 0.6601
+ },
+ "crops": {
+  "check_core": [
+   322,
+   183,
+   1358,
+   951
+  ],
+  "check_garden_causeway": [
+   462,
+   986,
+   1246,
+   1318
+  ],
+  "check_dock": [
+   980,
+   1685,
+   1680,
+   2328
+  ],
+  "check_north": [
+   322,
+   149,
+   1358,
+   401
+  ]
+ },
+ "hashes": {
+  "master_png": "127097121e3e9cc45909d9f993e6438532dbf837635dfaff1186b6f5d344f698",
+  "shipped_jpg": "eae801aecc0d1f0524d1db7be90d101522316b58c8e6c22a9a54948f32e202db"
+ },
+ "notes": [
+  "S2 绿色含花园植被（方案 S2 规则中植被绿独立景观色，不计入企业绿配额）",
+  "G5（集装箱挡撤离黄框）与 G2/G3/G8/S4-S7 属视觉项，交独立审核"
+ ]
+}

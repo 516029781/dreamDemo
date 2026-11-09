@@ -1,0 +1,31 @@
+{
+ "schema": "baseline-manifest-v1",
+ "design_version": "r06",
+ "run_id": "20261104-1500",
+ "entries": [
+  {
+   "path": "HARNESS_SPEC.json",
+   "sha256": "59c060ad87ca92ba485f5be26fb93b652640f95418ce09eac8f1648e0860ad2c"
+  },
+  {
+   "path": "SPACE_BASE_EVAC_AVENUE_STYLE_PLAN_20261104.md",
+   "sha256": "67697aa343103c9f389d6be05a5144c7c07d9f13bb8add9a1cf03455d904583f"
+  },
+  {
+   "path": "build_scene_v9.py",
+   "sha256": "9f901f75e9ae3afe3269aec8226a06bfd6e3f734182771466a970b97d285cce1"
+  },
+  {
+   "path": "render_v9_near.py",
+   "sha256": "5201d58eccea4012d7573b16aa4f96df0d86147bb39242375b82884419de38bb"
+  },
+  {
+   "path": "render_v9_views.py",
+   "sha256": "04c1976ee99196b73bc2a1d0569535d0cafd73f4ce8122d8bcc91546c06a89b8"
+  },
+  {
+   "path": "space_base_v9_npr.py",
+   "sha256": "b7c0912cd50327066acaacaff4423e2e8d202356cf2355c7688ff1c032320e69"
+  }
+ ]
+}

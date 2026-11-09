@@ -1,0 +1,11 @@
+{
+ "image": "art/static_map/space_base_minigame/v02/renders/space_base_v02.jpg",
+ "size": [
+  1920,
+  2560
+ ],
+ "white_light_pct": 48.88,
+ "green_pct": 0.1,
+ "orange_pct": 0.06,
+ "note": "diagnostic_only; HSV thresholds are approximate and do not replace visual review"
+}

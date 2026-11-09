@@ -1,0 +1,443 @@
+{
+ "candidate": "art/static_map/space_base_minigame/v09",
+ "files": 108,
+ "snapshot": {
+  "DELIVERY.json": [
+   1793858441,
+   2566
+  ],
+  "GATE_REPORT.json": [
+   1793858441,
+   3482
+  ],
+  "MANIFEST.json": [
+   1793858441,
+   2171
+  ],
+  "REPRODUCE.md": [
+   1793858441,
+   1869
+  ],
+  "REVIEW.md": [
+   1793857001,
+   3922
+  ],
+  "scene.blend": [
+   1793859557,
+   984503
+  ],
+  "scene.blend1": [
+   1793857004,
+   984783
+  ],
+  "scene_fix.blend": [
+   1793779241,
+   920399
+  ],
+  "scene_fix.blend1": [
+   1793779186,
+   920191
+  ],
+  "scene_smoke.blend": [
+   1793852522,
+   984762
+  ],
+  "scene_smoke.blend1": [
+   1793852430,
+   981645
+  ],
+  "scene_v2.blend": [
+   1793779575,
+   920349
+  ],
+  "scene_v3.blend": [
+   1793780064,
+   920275
+  ],
+  "renders\\core_raw.png": [
+   1793857559,
+   3901118
+  ],
+  "renders\\hero_raw.png": [
+   1793857649,
+   2345713
+  ],
+  "renders\\master_raw.png": [
+   1793857427,
+   17813788
+  ],
+  "renders\\repro_840.png": [
+   1793856886,
+   1303767
+  ],
+  "renders\\space_base_v09.jpg": [
+   1793858426,
+   431285
+  ],
+  "renders\\space_base_v09_core.png": [
+   1793858431,
+   3042096
+  ],
+  "renders\\space_base_v09_hero.jpg": [
+   1793858433,
+   260549
+  ],
+  "renders\\space_base_v09_hero.png": [
+   1793858433,
+   1858461
+  ],
+  "renders\\space_base_v09_master.png": [
+   1793858426,
+   5711041
+  ],
+  "renders\\_check_log.txt": [
+   1793854683,
+   1600
+  ],
+  "renders\\_check_log2.txt": [
+   1793855302,
+   1599
+  ],
+  "renders\\_final2_log.txt": [
+   1793856758,
+   5134
+  ],
+  "renders\\_final3_log.txt": [
+   1793856958,
+   180
+  ],
+  "renders\\_final4_log.txt": [
+   1793858435,
+   5134
+  ],
+  "renders\\_final_log.txt": [
+   1793854012,
+   5390
+  ],
+  "renders\\_fin_master.png": [
+   1793858447,
+   814254
+  ],
+  "renders\\_hero_log.txt": [
+   1793859496,
+   641
+  ],
+  "renders\\_hero_log2.txt": [
+   1793859853,
+   1674
+  ],
+  "renders\\_hero_view.png": [
+   1793859196,
+   972234
+  ],
+  "renders\\_iso_nostreet.png": [
+   1793776545,
+   373449
+  ],
+  "renders\\_near3_log.txt": [
+   1793781106,
+   115
+  ],
+  "renders\\_p2_bottom.png": [
+   1793776510,
+   364049
+  ],
+  "renders\\_prev_master.png": [
+   1793778464,
+   953333
+  ],
+  "renders\\_render_log.txt": [
+   1793779494,
+   3966
+  ],
+  "renders\\_render_log2.txt": [
+   1793781097,
+   650
+  ],
+  "renders\\_rev_ave.png": [
+   1793849796,
+   682293
+  ],
+  "renders\\_rev_evac.png": [
+   1793849848,
+   377795
+  ],
+  "renders\\_rev_island.png": [
+   1793849796,
+   1166414
+  ],
+  "renders\\_rev_master.png": [
+   1793849779,
+   559504
+  ],
+  "renders\\_rev_pen.png": [
+   1793849796,
+   1064850
+  ],
+  "renders\\_scale_check.png": [
+   1793856933,
+   284106
+  ],
+  "renders\\_test_p1.png": [
+   1793775738,
+   875491
+  ],
+  "renders\\_z_bridge.png": [
+   1793775256,
+   345311
+  ],
+  "renders\\_z_pen.png": [
+   1793775256,
+   377446
+  ],
+  "renders\\checks\\01_core.png": [
+   1793858433,
+   1263050
+  ],
+  "renders\\checks\\02_avenue_bridge.png": [
+   1793858433,
+   2047100
+  ],
+  "renders\\checks\\03_peninsula.png": [
+   1793858433,
+   712255
+  ],
+  "renders\\checks\\04_avenue_head.png": [
+   1793858433,
+   566326
+  ],
+  "renders\\checks\\05_g5_pair.png": [
+   1793858433,
+   584244
+  ],
+  "renders\\hero\\HeroLow.png": [
+   1793859852,
+   2101384
+  ],
+  "renders\\hero\\HeroMid.png": [
+   1793859744,
+   2237337
+  ],
+  "renders\\hero\\HeroWide.png": [
+   1793859642,
+   2054327
+  ],
+  "renders\\hero\\_HeroLow.png": [
+   1793859859,
+   838206
+  ],
+  "renders\\hero\\_HeroMid.png": [
+   1793859858,
+   909272
+  ],
+  "renders\\hero\\_HeroWide.png": [
+   1793859858,
+   805408
+  ],
+  "renders\\near\\CameraP1.png": [
+   1793857729,
+   2017842
+  ],
+  "renders\\near\\CameraP1_z.png": [
+   1793858361,
+   616592
+  ],
+  "renders\\near\\CameraP2.png": [
+   1793857795,
+   2010612
+  ],
+  "renders\\near\\CameraP2_z.png": [
+   1793858368,
+   732980
+  ],
+  "renders\\near\\CameraP3.png": [
+   1793857899,
+   1998743
+  ],
+  "renders\\near\\CameraP3_z.png": [
+   1793858375,
+   452456
+  ],
+  "renders\\near\\CameraP4.png": [
+   1793858013,
+   1878240
+  ],
+  "renders\\near\\CameraP4_z.png": [
+   1793858383,
+   105187
+  ],
+  "renders\\near\\CameraP5.png": [
+   1793858092,
+   1839015
+  ],
+  "renders\\near\\CameraP5_z.png": [
+   1793858390,
+   219647
+  ],
+  "renders\\near\\CameraP6.png": [
+   1793858181,
+   1847713
+  ],
+  "renders\\near\\CameraP6_z.png": [
+   1793858397,
+   267228
+  ],
+  "renders\\near\\CameraP7.png": [
+   1793858220,
+   1785257
+  ],
+  "renders\\near\\CameraP7_z.png": [
+   1793858405,
+   394299
+  ],
+  "renders\\near\\CameraP8.png": [
+   1793858353,
+   1876489
+  ],
+  "renders\\near\\CameraP8_z.png": [
+   1793858412,
+   518331
+  ],
+  "renders\\near_npr\\CameraP1_npr.png": [
+   1793858414,
+   2187172
+  ],
+  "renders\\near_npr\\CameraP2_npr.png": [
+   1793858415,
+   2107678
+  ],
+  "renders\\near_npr\\CameraP3_npr.png": [
+   1793858416,
+   2200806
+  ],
+  "renders\\near_npr\\CameraP4_npr.png": [
+   1793858417,
+   2070053
+  ],
+  "renders\\near_npr\\CameraP5_npr.png": [
+   1793858418,
+   2086587
+  ],
+  "renders\\near_npr\\CameraP6_npr.png": [
+   1793858419,
+   1947410
+  ],
+  "renders\\near_npr\\CameraP7_npr.png": [
+   1793858420,
+   2050312
+  ],
+  "renders\\near_npr\\CameraP8_npr.png": [
+   1793858421,
+   1995188
+  ],
+  "renders\\near_npr\\_CameraP3_prev.png": [
+   1793779515,
+   1600
+  ],
+  "renders\\near_npr\\_CameraP5_prev.png": [
+   1793779516,
+   618639
+  ],
+  "renders\\near_npr\\_CameraP7_prev.png": [
+   1793779516,
+   633160
+  ],
+  "renders\\near_npr\\_contact.png": [
+   1793858448,
+   1287588
+  ],
+  "renders\\near_test\\CameraP1.png": [
+   1793776391,
+   957710
+  ],
+  "renders\\near_test\\CameraP1_z.png": [
+   1793776481,
+   275869
+  ],
+  "renders\\near_test\\CameraP2.png": [
+   1793776425,
+   942687
+  ],
+  "renders\\near_test\\CameraP2_z.png": [
+   1793776484,
+   338998
+  ],
+  "renders\\near_test\\CameraP4.png": [
+   1793776477,
+   883489
+  ],
+  "renders\\near_test\\CameraP4_z.png": [
+   1793776488,
+   49206
+  ],
+  "renders\\near_test_npr\\CameraP1_npr.png": [
+   1793776489,
+   1166443
+  ],
+  "renders\\near_test_npr\\CameraP2_npr.png": [
+   1793776490,
+   1137598
+  ],
+  "renders\\near_test_npr\\CameraP4_npr.png": [
+   1793776490,
+   1069660
+  ],
+  "renders\\near_v2\\CameraP3.png": [
+   1793779914,
+   408554
+  ],
+  "renders\\near_v2\\CameraP3_z.png": [
+   1793779944,
+   30321
+  ],
+  "renders\\near_v2\\CameraP7.png": [
+   1793779710,
+   1730522
+  ],
+  "renders\\near_v2\\CameraP7_z.png": [
+   1793779929,
+   282260
+  ],
+  "renders\\near_v2_npr\\CameraP3_npr.png": [
+   1793779947,
+   6126
+  ],
+  "renders\\near_v2_npr\\CameraP7_npr.png": [
+   1793779950,
+   2005506
+  ],
+  "renders\\near_v2_npr\\_p3.png": [
+   1793779957,
+   1600
+  ],
+  "renders\\near_v2_npr\\_p7.png": [
+   1793779957,
+   612276
+  ],
+  "renders\\_ref\\r04.png": [
+   1793860063,
+   398889
+  ],
+  "renders\\_ref\\r09.png": [
+   1793860063,
+   356036
+  ],
+  "renders\\_ref\\r11.png": [
+   1793860063,
+   649342
+  ],
+  "renders\\_ref\\r13.png": [
+   1793860063,
+   408872
+  ],
+  "renders\\_ref\\wc.png": [
+   1793860093,
+   650606
+  ]
+ },
+ "verified_at": "2026-11-05T20:05+08:00",
+ "changed": [],
+ "missing": [],
+ "new_files": [],
+ "read_only_ok": true
+}

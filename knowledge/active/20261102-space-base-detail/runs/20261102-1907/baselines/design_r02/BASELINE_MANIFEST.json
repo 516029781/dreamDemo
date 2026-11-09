@@ -1,0 +1,65 @@
+{
+ "schema": "baseline-manifest-v1",
+ "baseline_id": "design_r02",
+ "request_id": "20261102-space-base-detail",
+ "created_at": "2026-11-02T19:20+08:00",
+ "status": "frozen",
+ "contents": [
+  {
+   "role": "requirements_brief",
+   "path": "REQUIREMENTS_BRIEF.md",
+   "sha256": "9a02b669ac7bbda931a060a8eefec7aea8b838e54cd7815d9dcaf99dbcbc3593",
+   "copied": true
+  },
+  {
+   "role": "solution_design",
+   "path": "SOLUTION_DESIGN.md",
+   "sha256": "17f45d6b637a53638802b01ec2c020d06d027497dece27bf8feab39de20b5f6c",
+   "copied": true
+  },
+  {
+   "role": "test_cases",
+   "path": "test_cases.json",
+   "sha256": "3bca666f95eedb6f01f9c1f7c1091206238903cf5c8e9f49e44621a5122f99fb",
+   "copied": true
+  },
+  {
+   "role": "conflicts_and_decisions",
+   "path": "CONFLICTS_AND_DECISIONS.md",
+   "sha256": "86864c17e719d3291d715bf049a205c62e02b93397e8c1067ca5bb87e143b6f1",
+   "copied": true
+  },
+  {
+   "role": "dev_feasibility_review",
+   "path": "DEV_FEASIBILITY_REVIEW.md",
+   "sha256": "ba6758e6a3f429f9b329d0d098aaaa8b5f8e0614e7280c3b79cfe6993c075e52",
+   "copied": true
+  },
+  {
+   "role": "authority_spec",
+   "path": "SPACE_BASE_MASTER_SPEC_20261102.md",
+   "sha256": "4e0e22229b5afdecfe860b331dc49ee02e4a0a2ac3b41c7805f305cbd1933fc1",
+   "copied": true
+  },
+  {
+   "role": "preview_routes",
+   "path": "DESIGN_PREVIEW_PACK/_routes_v13.html",
+   "sha256": "6b98e788503287676e4b559881fd337046d34892dd15e8b66998fd529059b589",
+   "copied": true
+  },
+  {
+   "role": "preview_corridor",
+   "path": "DESIGN_PREVIEW_PACK/_corridor_strip.html",
+   "sha256": "650dbdff5fa2ded686a1e7faee6e6ae8bcc3f7e7d5688df86358d21f227d1e43",
+   "copied": true
+  }
+ ],
+ "immutability": "frozen baselines are never edited in place; create design_r(NN+1) and re-approve affected items",
+ "dev_review": {
+  "path": "DEV_FEASIBILITY_REVIEW.md",
+  "status": "confirmed"
+ },
+ "parent_baseline_id": "design_r01",
+ "parent_baseline_path": "knowledge/active/20261102-space-base-map/runs/20261102-1314/baselines/design_r01/BASELINE_MANIFEST.json",
+ "parent_baseline_sha256": "980579c574491b849fa3bc3f3350443682ab1a247c08a3e43e942ef5667621ac"
+}

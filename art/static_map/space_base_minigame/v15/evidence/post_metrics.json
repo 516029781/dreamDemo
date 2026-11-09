@@ -1,0 +1,47 @@
+{
+ "schema": "v15-post-v1",
+ "S1": {
+  "light_land": 0.51,
+  "rule": ">=0.45",
+  "pass": true
+ },
+ "S2": {
+  "green_ratio": 0.0126,
+  "rule": "<=0.12",
+  "pass": true
+ },
+ "S3": {
+  "orange_ratio": 0.0007,
+  "rule": "<=0.02",
+  "pass": true
+ },
+ "water_frac": 0.7756,
+ "land_frac": 0.2244,
+ "halls": {
+  "H1": {
+   "light_pct": 30.5,
+   "L_med": 0.46,
+   "water_pct": 16.4
+  },
+  "H2": {
+   "light_pct": 49.7,
+   "L_med": 0.618,
+   "water_pct": 3.3
+  },
+  "H3": {
+   "light_pct": 39.5,
+   "L_med": 0.595,
+   "water_pct": 8.5
+  },
+  "H4": {
+   "light_pct": 39.7,
+   "L_med": 0.595,
+   "water_pct": 0.5
+  }
+ },
+ "grade": {
+  "sat": 0.97,
+  "contrast": 1.02,
+  "warm": 1.0
+ }
+}

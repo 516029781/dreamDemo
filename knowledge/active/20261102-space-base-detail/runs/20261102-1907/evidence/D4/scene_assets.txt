@@ -1,0 +1,4 @@
+command: blender -b art/static_map/space_base_minigame/v02/scene.blend --python-expr "...IMAGES...TEXNODES..."
+IMAGES 0
+TEXNODES 0
+Blender quit

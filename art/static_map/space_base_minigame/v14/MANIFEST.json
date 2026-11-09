@@ -1,0 +1,128 @@
+{
+ "schema": "manifest-v1",
+ "request_id": "20261108-space-base-v14-art",
+ "run_id": "20261108-2035",
+ "candidate": "art/static_map/space_base_minigame/v14",
+ "entries": [
+  {
+   "path": "scene.blend",
+   "sha256": "28932dccab0b193cbb70e4d41865fa08a8242e53b4b0adceb65ebe090a01e820",
+   "bytes": 10620249
+  },
+  {
+   "path": "renders/master_raw.png",
+   "sha256": "092c2090b70a828f33a25ed3507c75e09037b5cbcb567127b25664864ae9bba6",
+   "bytes": 17238538
+  },
+  {
+   "path": "renders/hero_raw.png",
+   "sha256": "11e52cf9dfc58da15cca8803e8a3c7cfebf3486f5592f6878db65d02e383872a",
+   "bytes": 2081379
+  },
+  {
+   "path": "renders/route.png",
+   "sha256": "d7085753f6f19203a3d9d3a23b128311c8580f6ea4e57b5574379f73f4095524",
+   "bytes": 3713882
+  },
+  {
+   "path": "renders/space_base_v14_master.png",
+   "sha256": "f58168a7cbd483ffb924b71aefaee6985fcf11925118f9a2e89687c795f2be38",
+   "bytes": 2911364
+  },
+  {
+   "path": "renders/space_base_v14.jpg",
+   "sha256": "bca2018405a37298a8dd51e7b5b314d32f7a8230032c45d8030dd4d8ab655a89",
+   "bytes": 209958
+  },
+  {
+   "path": "renders/space_base_v14_hero.png",
+   "sha256": "35fccf18b2cbd1dd6c7caaa95f8327bbd182b15a6c7755edb7ef5586990e7d50",
+   "bytes": 1726392
+  },
+  {
+   "path": "renders/space_base_v14_core.png",
+   "sha256": "7cbb2835a382c09abd33c66cc83b363b6ff357bf0e5630b72767dc3c085cba79",
+   "bytes": 2020446
+  },
+  {
+   "path": "renders/space_base_v11_master.png",
+   "sha256": "f58168a7cbd483ffb924b71aefaee6985fcf11925118f9a2e89687c795f2be38",
+   "bytes": 2911364
+  },
+  {
+   "path": "renders/space_base_v11.jpg",
+   "sha256": "3faf086b33aba32b409009c6524199861398486ee8cb8c1a03cdbb42122897e5",
+   "bytes": 267025
+  },
+  {
+   "path": "renders/space_base_v11_hero.png",
+   "sha256": "35fccf18b2cbd1dd6c7caaa95f8327bbd182b15a6c7755edb7ef5586990e7d50",
+   "bytes": 1726392
+  },
+  {
+   "path": "renders/space_base_v11_core.png",
+   "sha256": "7cbb2835a382c09abd33c66cc83b363b6ff357bf0e5630b72767dc3c085cba79",
+   "bytes": 2020446
+  },
+  {
+   "path": "renders/_cmp_master.png",
+   "sha256": "e6699c6502c46e78024b83023885ba31884605297e8bf26fc2910ead54978d8b",
+   "bytes": 1121513
+  },
+  {
+   "path": "renders/_cmp_hero.png",
+   "sha256": "3463f073e2ac364cd30c22b003c3ebf1aadd4c12d473eae680f82a11267b6e35",
+   "bytes": 932296
+  },
+  {
+   "path": "renders/checks/01_core.png",
+   "sha256": "089f05317ea07d946e8f74d77724946899496561956c79d3f640fcb206294d79",
+   "bytes": 910923
+  },
+  {
+   "path": "renders/checks/02_avenue_bridge.png",
+   "sha256": "50fca6f8af91326250f9a886b11b5c26882885d4e087b51adf65ecfe4d339302",
+   "bytes": 535319
+  },
+  {
+   "path": "renders/checks/03_peninsula.png",
+   "sha256": "a7e0a7dfef78f04f196c17ad2d617d4436fbef8483920e892a0701df5e47e472",
+   "bytes": 457022
+  },
+  {
+   "path": "renders/checks/04_avenue_head.png",
+   "sha256": "05f572f3ca2c7971496b4acdbc1d92a9f3d330d6489d98d25b347548cc6ea6eb",
+   "bytes": 537013
+  },
+  {
+   "path": "renders/checks/05_g5_pair.png",
+   "sha256": "cda7a85a4011522b7fd0fe94d20fe3740596ba4c391c80dbac1890b508c8ccac",
+   "bytes": 397737
+  },
+  {
+   "path": "REVIEW.md",
+   "sha256": "63c19e219bc9c677c4ed88efc959397b8e860316bcafaec83c676a9be90d1742",
+   "bytes": 3479
+  },
+  {
+   "path": "DEVLOG.md",
+   "sha256": "eab385635bec113a2921e8a8660edd39fedab75a7a1b2899b39af4a4ebfec10f",
+   "bytes": 1339
+  },
+  {
+   "path": "GATE_REPORT.json",
+   "sha256": "413892b3a93c45c1281d4b6ba3cc807f5d739c1ebb77e345904a9c82b3c0542f",
+   "bytes": 1564
+  },
+  {
+   "path": "DELIVERY.json",
+   "sha256": "0da48841734741887f2d5400affb285fb8fdf573547260f02c688a7d008caba3",
+   "bytes": 344
+  },
+  {
+   "path": "REPRODUCE.md",
+   "sha256": "12e20c59889a13bb9fb06b9cc2332b349974f6e2a42ce98c89f5d1ac9e40e878",
+   "bytes": 979
+  }
+ ]
+}

@@ -1,0 +1,17 @@
+{
+ "schema": "reproduction-v1",
+ "status": "pass",
+ "pass": true,
+ "master": "art\\static_map\\space_base_minigame\\v01\\renders\\space_base_v01_master.png",
+ "repro": "knowledge\\active\\20261102-space-base-map\\runs\\20261102-1314\\repro\\master_repro_flipped.png",
+ "master_content_sha256": "e40212cf8ec8d5e893839c83c167616ffb33dffa0a6be0105723425da0046702",
+ "repro_content_sha256": "e40212cf8ec8d5e893839c83c167616ffb33dffa0a6be0105723425da0046702",
+ "same_content_sha": true,
+ "rms": 0.0,
+ "tolerance": "2.0/255",
+ "size_ok": true,
+ "command": "blender -b repro/scene.blend --python tools/blender_space_base/render_only.py -- --out repro/master_repro_raw.png --res 3840x5120 --samples 32; flip L-R",
+ "exit_code": 0,
+ "elapsed_ms": 360789,
+ "note": "Cycles same-scene renders may not be bit-identical; pass by RMS tolerance."
+}

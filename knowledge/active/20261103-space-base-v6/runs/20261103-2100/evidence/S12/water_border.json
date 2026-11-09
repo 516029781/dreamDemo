@@ -1,0 +1,9 @@
+{
+ "check": "S12",
+ "rule": "water exits frame; no wide artificial boundary row",
+ "top_row_water_ratio": 1.0,
+ "side_water_ratio": 0.713,
+ "wide_boundary_rows": 0,
+ "max_jump": 187.0,
+ "pass": true
+}

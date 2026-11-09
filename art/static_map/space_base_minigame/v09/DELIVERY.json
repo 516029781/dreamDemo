@@ -1,0 +1,179 @@
+{
+ "schema": "delivery-v2",
+ "request_id": "20261104-space-base-v9",
+ "run_id": "20261104-1500",
+ "candidate": "art/static_map/space_base_minigame/v09",
+ "required_checks": [
+  "G1",
+  "G2",
+  "G3",
+  "G4",
+  "G5",
+  "G6",
+  "G7",
+  "G8",
+  "W1",
+  "W2",
+  "S1",
+  "S2",
+  "S3",
+  "S4",
+  "S5",
+  "S6",
+  "S7",
+  "S8",
+  "S9",
+  "S10",
+  "S11",
+  "S12",
+  "S13",
+  "S14",
+  "S15"
+ ],
+ "diagnostic_only": [
+  "S11",
+  "S13",
+  "S15"
+ ],
+ "required_checks_present": [
+  "G1",
+  "G2",
+  "G3",
+  "G4",
+  "G5",
+  "G6",
+  "G7",
+  "G8",
+  "W1",
+  "W2",
+  "S1",
+  "S2",
+  "S3",
+  "S4",
+  "S5",
+  "S6",
+  "S7",
+  "S8",
+  "S9",
+  "S10",
+  "S11",
+  "S12",
+  "S13",
+  "S14",
+  "S15"
+ ],
+ "map_jpg": {
+  "path": "renders/space_base_v09.jpg",
+  "bytes": 431285,
+  "size": [
+   1680,
+   2478
+  ],
+  "subpackage": "map (runtime)"
+ },
+ "master": {
+  "path": "renders/space_base_v09_master.png",
+  "size": [
+   1680,
+   2478
+  ]
+ },
+ "master_raw": {
+  "path": "renders/master_raw.png",
+  "size": [
+   3360,
+   5880
+  ]
+ },
+ "core_tile": {
+  "path": "renders/space_base_v09_core.png",
+  "size": [
+   2072,
+   1876
+  ],
+  "px_per_m": 14
+ },
+ "hero": {
+  "path": "renders/space_base_v09_hero.png",
+  "size": [
+   1920,
+   1080
+  ]
+ },
+ "source": {
+  "path": "scene.blend",
+  "relative": true
+ },
+ "color_gate": {
+  "S15": true,
+  "rows": [
+   {
+    "room": "H1",
+    "name": "离心",
+    "current": "#4D6F83",
+    "target": "#547684",
+    "H": 202,
+    "S": 0.26,
+    "L": 0.41,
+    "dH": 5,
+    "dS": 0.04,
+    "dL": -0.02,
+    "pass": true
+   },
+   {
+    "room": "H2",
+    "name": "浮力",
+    "current": "#417480",
+    "target": "#477A8A",
+    "H": 191,
+    "S": 0.33,
+    "L": 0.38,
+    "dH": -3,
+    "dS": 0.01,
+    "dL": -0.03,
+    "pass": true
+   },
+   {
+    "room": "H3",
+    "name": "蓝室",
+    "current": "#4B76C6",
+    "target": "#3A6DBF",
+    "H": 219,
+    "S": 0.52,
+    "L": 0.54,
+    "dH": 2,
+    "dS": -0.02,
+    "dL": 0.05,
+    "pass": true
+   },
+   {
+    "room": "H4",
+    "name": "黑室",
+    "current": "#497C6F",
+    "target": "#58837D",
+    "H": 165,
+    "S": 0.26,
+    "L": 0.39,
+    "dH": -7,
+    "dS": 0.06,
+    "dL": -0.04,
+    "pass": true
+   },
+   {
+    "room": "C5",
+    "name": "总裁",
+    "current": "#9B7F63",
+    "target": "#95755B",
+    "H": 30,
+    "S": 0.22,
+    "L": 0.5,
+    "dH": 3,
+    "dS": -0.02,
+    "dL": 0.03,
+    "pass": true
+   }
+  ]
+ },
+ "gate_report": "GATE_REPORT.json",
+ "notes": "v09 = 统一方案 v1.1 全量落地：保形换色(r10 迭代 5/5) + 总裁盒开顶 + 桁架/吊灯 + 水面出画 + 插画 I2+ + D1-D10 标注"
+}

@@ -1,0 +1,22 @@
+SITE_OK
+TERRACE_OK
+NGATE_OK
+CORE_OK
+DOMES_OK
+DRESS_OK
+FORECOURT_OK
+GARDEN_COMPACT_OK
+WORKSHOP_OK
+CARDS palms=8 garden=32 forecourt=8
+PURGE_INTRUDERS 480
+STRIP_ROOF_CAPS 4
+SURFACE_TEX on 8 materials
+IL_SHADER on 9 materials
+BEVELED 754
+POOL_EDGE_ROUNDED 7
+SCENE_STATS objects=1383 meshes=9935 furniture=0
+Info: Saved as "scene.blend"
+BUILD_OK v10 C:\软件\鼠鼠\art\static_map\space_base_minigame\v14\p0\timing\scene.blend 
+Blender 4.5.15 LTS (hash 5afeabba6097 built 2026-10-22 01:35:27)
+
+Blender quit

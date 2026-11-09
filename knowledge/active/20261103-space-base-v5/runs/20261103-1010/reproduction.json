@@ -1,0 +1,10 @@
+{
+ "schema": "reproduction-v1",
+ "run_id": "20261103-1010",
+ "status": "pass",
+ "rms": 5.553,
+ "tolerance": 8.0,
+ "pass": true,
+ "method": "copy scene.blend + assets to runs/repro, reopen, render 420x735@12spp, compare with master_raw downscale",
+ "note": "RMS 差异来自采样/分辨率；贴图为相对路径 //assets/*.png"
+}

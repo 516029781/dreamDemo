@@ -1,0 +1,470 @@
+{
+ "schema": "test-cases-v1",
+ "request_id": "20261103-space-base-v5",
+ "business_id": "space_base_minigame",
+ "version": "r02",
+ "bound_brief_sha256": "93d44081455793f040fecfb125a6e50c350df278c63c9ed73c9d0da8ac258c64",
+ "bound_design_sha256": "36e389e94264f121a5d91fecc00454a865bd3ded262895bd6aa45e180b470450",
+ "bound_design_snapshot": "runs/20261103-1010/baselines/design_r02/SPACE_BASE_NEW_PLAN_20261103.md",
+ "cases": [
+  {
+   "test_id": "TEST-G1",
+   "covers": [
+    "REQ-01"
+   ],
+   "stage": "final",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v05/renders/space_base_v05_master.png"
+    ],
+    "fixed_conditions": "相机锁 ortho 420、北朝上；投影点 (0,166)/(240,166)/(0,-254)/(240,-254)"
+   },
+   "method": "camera_projection：world_to_camera_view 逐点换算 px/py；master 3360×5880",
+   "pass_criteria": "x0→px0, x240→px1680, y166→py0, y-254→py2408, 出血→2478；误差≤2px",
+   "evidence_path": "runs/20261103-1010/evidence/G1/camera_projection.json",
+   "diagnostic_only": false,
+   "failure_rule": "重渲并重跑对应证据"
+  },
+  {
+   "test_id": "TEST-G2",
+   "covers": [
+    "REQ-02"
+   ],
+   "stage": "final",
+   "check_type": "visual",
+   "responsible": "producer",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v05/renders/space_base_v05_master.png"
+    ],
+    "fixed_conditions": ""
+   },
+   "method": "遮字后逐区辨认",
+   "pass_criteria": "七区可辨；独立审核复核",
+   "evidence_path": "runs/20261103-1010/evidence/G2/mentions.md",
+   "diagnostic_only": false,
+   "failure_rule": "重渲并重跑对应证据"
+  },
+  {
+   "test_id": "TEST-G3",
+   "covers": [
+    "REQ-03"
+   ],
+   "stage": "final",
+   "check_type": "visual",
+   "responsible": "producer",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v05/renders/checks/01_core.png"
+    ],
+    "fixed_conditions": ""
+   },
+   "method": "看总裁盒与两侧竖梯",
+   "pass_criteria": "两梯可见、x=120 实墙、环廊无门",
+   "evidence_path": "runs/20261103-1010/evidence/G3/notes.md",
+   "diagnostic_only": false,
+   "failure_rule": "重渲并重跑对应证据"
+  },
+  {
+   "test_id": "TEST-G4",
+   "covers": [
+    "REQ-04"
+   ],
+   "stage": "final",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v05/renders/space_base_v05_master.png"
+    ],
+    "fixed_conditions": "px=x*7, py=(166-y)*5.7344"
+   },
+   "method": "像素探针：花园北口、喷泉环、堤道中、坞底、撤离框、水面",
+   "pass_criteria": "北口非水非墙；撤离条为黄色；水面深青",
+   "evidence_path": "runs/20261103-1010/evidence/G4/probes.json",
+   "diagnostic_only": false,
+   "failure_rule": "重渲并重跑对应证据"
+  },
+  {
+   "test_id": "TEST-G5",
+   "covers": [
+    "REQ-05"
+   ],
+   "stage": "final",
+   "check_type": "visual",
+   "responsible": "producer",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v05/renders/checks/05_g5_pair.png"
+    ],
+    "fixed_conditions": "坞门内侧 8 m 高位，同机位 A/B"
+   },
+   "method": "A 有箱列 / B 隐藏 5 箱",
+   "pass_criteria": "A 看不到黄框，B 露出",
+   "evidence_path": "runs/20261103-1010/evidence/G5/pair_note.md",
+   "diagnostic_only": false,
+   "failure_rule": "重渲并重跑对应证据"
+  },
+  {
+   "test_id": "TEST-G6",
+   "covers": [
+    "REQ-06"
+   ],
+   "stage": "final",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v05/scene.blend"
+    ],
+    "fixed_conditions": ""
+   },
+   "method": "场景普查：对象/面数、包围盒、NaN",
+   "pass_criteria": "无 NaN；布尔洞闭合；无越界",
+   "evidence_path": "runs/20261103-1010/evidence/G6/geom_check.json",
+   "diagnostic_only": false,
+   "failure_rule": "重渲并重跑对应证据"
+  },
+  {
+   "test_id": "TEST-G7",
+   "covers": [
+    "REQ-07"
+   ],
+   "stage": "final",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v05/renders/space_base_v05_master.png"
+    ],
+    "fixed_conditions": "1680×2478"
+   },
+   "method": "四边像素检查",
+   "pass_criteria": "四边无黑边",
+   "evidence_path": "runs/20261103-1010/evidence/G7/borders.json",
+   "diagnostic_only": false,
+   "failure_rule": "重渲并重跑对应证据"
+  },
+  {
+   "test_id": "TEST-G8",
+   "covers": [
+    "REQ-08"
+   ],
+   "stage": "final",
+   "check_type": "visual",
+   "responsible": "producer",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v05/renders/checks/02_garden_causeway.png"
+    ],
+    "fixed_conditions": ""
+   },
+   "method": "看花园与堤道接缝",
+   "pass_criteria": "材质/分缝连续",
+   "evidence_path": "runs/20261103-1010/evidence/G8/notes.md",
+   "diagnostic_only": false,
+   "failure_rule": "重渲并重跑对应证据"
+  },
+  {
+   "test_id": "TEST-W1",
+   "covers": [
+    "REQ-09"
+   ],
+   "stage": "final",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v05/renders/space_base_v05.jpg"
+    ],
+    "fixed_conditions": "1680×2478"
+   },
+   "method": "PIL 读尺寸/模式/大小",
+   "pass_criteria": "JPEG ≤3MB、无 alpha、max edge≤4096",
+   "evidence_path": "runs/20261103-1010/evidence/W1/file_check.json",
+   "diagnostic_only": false,
+   "failure_rule": "重渲并重跑对应证据"
+  },
+  {
+   "test_id": "TEST-W2",
+   "covers": [
+    "REQ-10"
+   ],
+   "stage": "final",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v05/renders/space_base_v05.jpg"
+    ],
+    "fixed_conditions": ""
+   },
+   "method": "主包算术",
+   "pass_criteria": "≤4 MB；总包≤30 MB",
+   "evidence_path": "runs/20261103-1010/evidence/W2/package.json",
+   "diagnostic_only": false,
+   "failure_rule": "重渲并重跑对应证据"
+  },
+  {
+   "test_id": "TEST-S1",
+   "covers": [
+    "REQ-11"
+   ],
+   "stage": "final",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v05/renders/space_base_v05_master.png"
+    ],
+    "fixed_conditions": ""
+   },
+   "method": "明度/饱和度统计；水掩膜",
+   "pass_criteria": "陆地相对浅色≥45%",
+   "evidence_path": "runs/20261103-1010/evidence/S1/value_stats.json",
+   "diagnostic_only": false,
+   "failure_rule": "重渲并重跑对应证据"
+  },
+  {
+   "test_id": "TEST-S2",
+   "covers": [
+    "REQ-12"
+   ],
+   "stage": "final",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v05/renders/space_base_v05_master.png"
+    ],
+    "fixed_conditions": ""
+   },
+   "method": "绿色像素占比",
+   "pass_criteria": "≤8%",
+   "evidence_path": "runs/20261103-1010/evidence/S2/hue_stats.json",
+   "diagnostic_only": false,
+   "failure_rule": "重渲并重跑对应证据"
+  },
+  {
+   "test_id": "TEST-S3",
+   "covers": [
+    "REQ-13"
+   ],
+   "stage": "final",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v05/renders/space_base_v05_master.png"
+    ],
+    "fixed_conditions": ""
+   },
+   "method": "橙像素占比",
+   "pass_criteria": "≤2%",
+   "evidence_path": "runs/20261103-1010/evidence/S3/hue_stats.json",
+   "diagnostic_only": false,
+   "failure_rule": "重渲并重跑对应证据"
+  },
+  {
+   "test_id": "TEST-S4",
+   "covers": [
+    "REQ-14"
+   ],
+   "stage": "final",
+   "check_type": "visual",
+   "responsible": "producer",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v05/renders/checks/01_core.png"
+    ],
+    "fixed_conditions": ""
+   },
+   "method": "五室色相检查",
+   "pass_criteria": "各一色相签名",
+   "evidence_path": "runs/20261103-1010/evidence/S4/notes.md",
+   "diagnostic_only": false,
+   "failure_rule": "重渲并重跑对应证据"
+  },
+  {
+   "test_id": "TEST-S5",
+   "covers": [
+    "REQ-15"
+   ],
+   "stage": "final",
+   "check_type": "visual",
+   "responsible": "producer",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v05/renders/checks/03_dock.png"
+    ],
+    "fixed_conditions": ""
+   },
+   "method": "近景边缘检查",
+   "pass_criteria": "无圆角倒角",
+   "evidence_path": "runs/20261103-1010/evidence/S5/notes.md",
+   "diagnostic_only": false,
+   "failure_rule": "重渲并重跑对应证据"
+  },
+  {
+   "test_id": "TEST-S6",
+   "covers": [
+    "REQ-16"
+   ],
+   "stage": "final",
+   "check_type": "visual",
+   "responsible": "producer",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v05/renders/checks/01_core.png"
+    ],
+    "fixed_conditions": ""
+   },
+   "method": "地面分区与墙脚带",
+   "pass_criteria": "成立；墙面竖缝降级已记录",
+   "evidence_path": "runs/20261103-1010/evidence/S6/notes.md",
+   "diagnostic_only": false,
+   "failure_rule": "重渲并重跑对应证据"
+  },
+  {
+   "test_id": "TEST-S7",
+   "covers": [
+    "REQ-17"
+   ],
+   "stage": "final",
+   "check_type": "visual",
+   "responsible": "producer",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v05/renders/space_base_v05_master.png"
+    ],
+    "fixed_conditions": ""
+   },
+   "method": "阴影与暖区",
+   "pass_criteria": "半影 0.3–0.6 m；总裁唯一暖区",
+   "evidence_path": "runs/20261103-1010/evidence/S7/notes.md",
+   "diagnostic_only": false,
+   "failure_rule": "重渲并重跑对应证据"
+  },
+  {
+   "test_id": "TEST-S8",
+   "covers": [
+    "REQ-18"
+   ],
+   "stage": "final",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v05/scene.blend"
+    ],
+    "fixed_conditions": ""
+   },
+   "method": "材质节点普查",
+   "pass_criteria": "≥8 类材质带 base/roughness 变化",
+   "evidence_path": "runs/20261103-1010/evidence/S8/material_layers.json",
+   "diagnostic_only": false,
+   "failure_rule": "重渲并重跑对应证据"
+  },
+  {
+   "test_id": "TEST-S9",
+   "covers": [
+    "REQ-19"
+   ],
+   "stage": "final",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v05/scene.blend"
+    ],
+    "fixed_conditions": ""
+   },
+   "method": "Bevel 修改器普查",
+   "pass_criteria": "≥500 对象",
+   "evidence_path": "runs/20261103-1010/evidence/S9/bevel_count.json",
+   "diagnostic_only": false,
+   "failure_rule": "重渲并重跑对应证据"
+  },
+  {
+   "test_id": "TEST-S10",
+   "covers": [
+    "REQ-20"
+   ],
+   "stage": "final",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v05/renders/space_base_v05_core.png"
+    ],
+    "fixed_conditions": "核心区 14 px/m"
+   },
+   "method": "相机换算 + 同源检查",
+   "pass_criteria": "≥14 px/m；同一 scene.blend",
+   "evidence_path": "runs/20261103-1010/evidence/S10/core_density.json",
+   "diagnostic_only": false,
+   "failure_rule": "重渲并重跑对应证据"
+  },
+  {
+   "test_id": "TEST-A1",
+   "covers": [
+    "REQ-21"
+   ],
+   "stage": "final",
+   "check_type": "external",
+   "responsible": "external",
+   "input": {
+    "files": [],
+    "fixed_conditions": "无角色层"
+   },
+   "method": "角色阴影",
+   "pass_criteria": "外置",
+   "evidence_path": "runs/20261103-1010/evidence/external/A1.md",
+   "diagnostic_only": false,
+   "failure_rule": "运行时另测"
+  },
+  {
+   "test_id": "TEST-W3",
+   "covers": [
+    "REQ-22"
+   ],
+   "stage": "final",
+   "check_type": "external",
+   "responsible": "external",
+   "input": {
+    "files": [],
+    "fixed_conditions": "真机"
+   },
+   "method": "首帧/内存",
+   "pass_criteria": "外置",
+   "evidence_path": "runs/20261103-1010/evidence/external/W3.md",
+   "diagnostic_only": false,
+   "failure_rule": "真机另测"
+  },
+  {
+   "test_id": "TEST-W4",
+   "covers": [
+    "REQ-23"
+   ],
+   "stage": "final",
+   "check_type": "external",
+   "responsible": "external",
+   "input": {
+    "files": [],
+    "fixed_conditions": "低端机"
+   },
+   "method": "自动降级",
+   "pass_criteria": "外置",
+   "evidence_path": "runs/20261103-1010/evidence/external/W4.md",
+   "diagnostic_only": false,
+   "failure_rule": "真机另测"
+  }
+ ],
+ "coverage": {
+  "requirements": 23,
+  "checks": 23
+ },
+ "notes": "r02：相机/比例/朝向变更 + 视觉升级；S1 改陆地相对口径；新增 S8/S9/S10。"
+}

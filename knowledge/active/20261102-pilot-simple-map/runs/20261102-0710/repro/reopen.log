@@ -1,0 +1,14 @@
+00:01.797  blend            | Read blend: "C:\软件\鼠鼠\knowledge\active\20261102-pilot-simple-map\runs\20261102-0710\repro\scene.blend"
+00:18.984  render           | Saved: 'C:\软件\鼠鼠\knowledge\active\20261102-pilot-simple-map\runs\20261102-0710\repro\renders\reopen.png'
+REOPEN_ENGINE CYCLES
+REOPEN_SAMPLES 64
+REOPEN_RES 960 540
+REOPEN_SEED 0 animated False
+REOPEN_VIEW AgX None 0.10000000149011612
+REOPEN_CAMERA cam [0.0, -13.4, 6.9]
+REOPEN_FILE_LIBRARIES []
+REOPEN_IMAGES []
+REOPEN_DONE C:/软件/鼠鼠/knowledge/active/20261102-pilot-simple-map/runs/20261102-0710/repro/renders/reopen.png
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:37:16)
+
+Blender quit

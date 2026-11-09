@@ -1,6 +1,8 @@
 # 开发可行性确认（N4）：<产品/地图名称>
 
 - 确认人/模型：
+- 确认来源 confirmed_by：`user` / `self`（`self` 表示制作方自评，不得记成用户批准）
+- 确认依据 confirmed_basis：（用户原话、指令日期、或评审记录路径）
 - 时间：
 - 状态：`confirmed` / `changes_required` / `blocked_on_user_input` / `blocked_technical`
 

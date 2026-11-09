@@ -1,0 +1,10 @@
+{
+ "schema": "delivery-v1",
+ "request_id": "20261108-space-base-v14-art",
+ "run_id": "20261108-2035",
+ "map_png": "renders/space_base_v14_master.png",
+ "map_jpg": "renders/space_base_v14.jpg",
+ "hero": "renders/space_base_v14_hero.png",
+ "core_tile": "renders/space_base_v14_core.png",
+ "status": "mechanical_complete_visual_pending"
+}

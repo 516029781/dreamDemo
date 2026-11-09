@@ -1,0 +1,54 @@
+{
+ "schema": "manifest-v1",
+ "business_id": "space_base_minigame",
+ "version": "v03",
+ "created": "2026-11-03T02:55",
+ "layout": "plan v3.10 (north-up, 240x420 m, water-dominant)",
+ "entries": [
+  {
+   "path": "scene_v3.blend",
+   "bytes": 286516,
+   "sha256": "413d7c1d37d76f5de73096214513c095108e2fcc01f28e5da92d404a6a86de3b"
+  },
+  {
+   "path": "renders/master_raw.png",
+   "bytes": 16498536,
+   "sha256": "7ca7ba08185722d3745161635fea9509ca3fc56d113572544368e2913c40747f"
+  },
+  {
+   "path": "renders/space_base_v03_master.png",
+   "bytes": 2312317,
+   "sha256": "127097121e3e9cc45909d9f993e6438532dbf837635dfaff1186b6f5d344f698"
+  },
+  {
+   "path": "renders/space_base_v03.jpg",
+   "bytes": 189000,
+   "sha256": "eae801aecc0d1f0524d1db7be90d101522316b58c8e6c22a9a54948f32e202db"
+  },
+  {
+   "path": "GATE_REPORT.json",
+   "bytes": 2431,
+   "sha256": "b928cf01d12a702f91f011059900d34a7187a9c70bb30c5af68c38d5989a11eb"
+  },
+  {
+   "path": "checks/check_core.png",
+   "bytes": 604699,
+   "sha256": "2b22e8cf4ddb0c5e4a4220cba136d37b7c299c3975a1e1593156e01ea3927c5d"
+  },
+  {
+   "path": "checks/check_garden_causeway.png",
+   "bytes": 169823,
+   "sha256": "39a0e4cd92720f1821ff86de5273f2c6dc8a67475781c8dce92bb704f710ec74"
+  },
+  {
+   "path": "checks/check_dock.png",
+   "bytes": 365506,
+   "sha256": "a90b43111f7ba5a55443e05cc2579f4d3dc405865c3c984acbb34f045fc4c0c9"
+  },
+  {
+   "path": "checks/check_north.png",
+   "bytes": 182231,
+   "sha256": "581edd2215f52be7d5ef6316b4508883f350bdcfd08363daa92891beb9f645c5"
+  }
+ ]
+}

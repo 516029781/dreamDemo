@@ -1,0 +1,106 @@
+{
+ "schema": "gate-report-v1",
+ "request_id": "20261108-space-base-v13-testworkshop",
+ "run_id": "20261108-1755",
+ "stage": "N7_mechanical_closed",
+ "mechanical": {
+  "TV13-01": {
+   "status": "pass",
+   "detail": "12/12 S-components present"
+  },
+  "TV13-02": {
+   "status": "pass",
+   "detail": "blacklist hits 0"
+  },
+  "TV13-03": {
+   "status": "pass",
+   "detail": "roof hits 0"
+  },
+  "TV13-04": {
+   "status": "pass",
+   "detail": "E15 props/400m2 = 1.450"
+  },
+  "TV13-05": {
+   "status": "pass",
+   "detail": {
+    "E11_spacing_cv": 0.704,
+    "E12_mirror_similarity": 0.175,
+    "E13_dominant_heading_share": 0.281,
+    "E14_collinearity": 0.25,
+    "E15_props_per_400m2": 1.45,
+    "E15_props_total": 29
+   }
+  },
+  "TV13-06": {
+   "status": "diagnostic_only",
+   "detail": "visual, see _cmp_master.png"
+  },
+  "TV13-07": {
+   "status": "diagnostic_only",
+   "detail": "visual, see _cmp_south.png"
+  },
+  "TV13-08": {
+   "status": "pass",
+   "detail": "content SHA match=True rms=0.0"
+  },
+  "TV13-09": {
+   "status": "pass",
+   "detail": "space_base_check_v7 PASS, hard_failures=0"
+  },
+  "TV13-10": {
+   "status": "not_run",
+   "detail": "3-person blind test requires user"
+  }
+ },
+ "notes": "TV13-10 blind test not_run; TV13-06/07 diagnostic_only. diagnostic_only and not_run are NOT counted as pass. Business gate is mechanical-only (visual scoring not implemented).",
+ "pass": false,
+ "business_gate": {
+  "check": "space_base_check_v7",
+  "pass": true,
+  "hard_failures": [],
+  "images": {
+   "master": {
+    "size": [
+     1680,
+     2478
+    ],
+    "mode": "RGB",
+    "bytes": 2969929
+   },
+   "raw": {
+    "size": [
+     3360,
+     5880
+    ],
+    "mode": "RGB",
+    "bytes": 16962411
+   },
+   "core": {
+    "size": [
+     2072,
+     1876
+    ],
+    "mode": "RGB",
+    "bytes": 1977176
+   },
+   "hero": {
+    "size": [
+     1920,
+     1080
+    ],
+    "mode": "RGB",
+    "bytes": 1731506
+   },
+   "ship": {
+    "size": [
+     1680,
+     2478
+    ],
+    "mode": "RGB",
+    "format": "JPEG",
+    "bytes": 174215
+   }
+  },
+  "spec": "r14"
+ }
+}

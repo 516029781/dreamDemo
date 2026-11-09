@@ -1,0 +1,37 @@
+{
+ "schema": "baseline-manifest-v1",
+ "design_version": "r14",
+ "run_id": "20261108-1500",
+ "supersedes": "r13",
+ "note": "r14：核心区外围空地 34→8 m、场地 16,703 m²、四厅敞顶 + GA15",
+ "entries": [
+  {
+   "path": "SPACE_BASE_V3_PLAN_20261108.md",
+   "sha256": "af3fa73d8408e3b1f33550bd2f8b5c900587b06660b65cf6ac93312feee7d00e"
+  },
+  {
+   "path": "REQUIREMENTS_BRIEF.md",
+   "sha256": "e8d0cbb409f386462c5dc8dfc02a51e6f53539f24fea923d74cb244fed9560a8"
+  },
+  {
+   "path": "HARNESS_SPEC.json",
+   "sha256": "f30b5609d2b734748a1c42620644480c58a70468b4436d4d5037bbdeadf62e0c"
+  },
+  {
+   "path": "build_scene_v11.py",
+   "sha256": "b3fa57acf83468a4e140fb0945ecb7147e8e3683a7027d7b28c1c421cf44b4cc"
+  },
+  {
+   "path": "evidence_v11.py",
+   "sha256": "0ebfcedd90114faf69d3386b723926aa6fb9b978c6191f5c44fbb0c1c29ae398"
+  },
+  {
+   "path": "space_base_v11_post.py",
+   "sha256": "ad5de13426f7c81f60c896807f6626fe66ec5abf3a8c62471c727f0875057478"
+  },
+  {
+   "path": "space_base_check_v7.py",
+   "sha256": "6f29d172bef0db2287c8f223ddc85827ac3cb19d5491038fa10281e0ebd39e12"
+  }
+ ]
+}

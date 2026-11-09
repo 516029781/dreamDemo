@@ -1,0 +1,7 @@
+{
+ "check": "G8",
+ "crop": "renders/checks/02_avenue_bridge.png",
+ "sha256": "235c45dca9e703cab49804cc49103d8d1c2069cf9c7628ad558f9e3d47318634",
+ "note": "桥 B 与半岛甲板同屏，接缝为同材质 causeway→dock，无跳变；桥 A 已删除",
+ "pass": true
+}

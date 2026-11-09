@@ -1,0 +1,39 @@
+{
+ "check": "GA02",
+ "groups": {
+  "pools": {
+   "count": 1,
+   "centres": [
+    [
+     138.3,
+     -43.3
+    ]
+   ]
+  },
+  "beds": {
+   "count": 4
+  },
+  "parterres": {
+   "count": 2
+  },
+  "overlook": {
+   "count": 1
+  },
+  "pergola": {
+   "count": 6
+  },
+  "service": {
+   "count": 2
+  },
+  "gates": {
+   "count": 1
+  },
+  "signs": {
+   "count": 2
+  },
+  "lamps": {
+   "count": 8
+  }
+ },
+ "pass": true
+}

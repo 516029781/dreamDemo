@@ -1,0 +1,11 @@
+date: 2026-11-02T19:25:32+08:00
+command: cli login --qr-format image -o runs/.../external/login/qr.png
+- initialize
+
+(node:207244) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `微信开发者工具 --trace-deprecation ...` to show where the warning was created)
+✔ IDE server has started, listening on http://127.0.0.1:59116
+- preparing
+✔ QR code generated
+- waiting for scan and login
+exit=124

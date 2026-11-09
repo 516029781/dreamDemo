@@ -1,0 +1,11 @@
+{
+ "image": "art/static_map/space_base_minigame/v01/renders/graybox.png",
+ "size": [
+  1920,
+  2560
+ ],
+ "white_light_pct": 1.69,
+ "green_pct": 0.0,
+ "orange_pct": 0.0,
+ "note": "diagnostic_only; HSV thresholds are approximate and do not replace visual review"
+}

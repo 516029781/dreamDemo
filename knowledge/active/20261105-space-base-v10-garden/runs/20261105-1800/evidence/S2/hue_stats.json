@@ -1,0 +1,6 @@
+{
+ "check": "S2",
+ "green_ratio": 0.031633202554042616,
+ "rule": "r07: <=0.12 (garden planting 1,010 m2 = 13.9% of the deck; whole-map green stays far below)",
+ "pass": true
+}

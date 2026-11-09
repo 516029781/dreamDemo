@@ -1,0 +1,79 @@
+{
+ "rows": [
+  {
+   "room": "H1",
+   "name": "离心",
+   "current": "#9B9E85",
+   "target": "#547684",
+   "H": 67,
+   "S": 0.11,
+   "L": 0.57,
+   "dH": -130,
+   "dS": -0.11,
+   "dL": 0.15,
+   "pass": false
+  },
+  {
+   "room": "H2",
+   "name": "浮力",
+   "current": "#919382",
+   "target": "#477A8A",
+   "H": 67,
+   "S": 0.07,
+   "L": 0.54,
+   "dH": -127,
+   "dS": -0.25,
+   "dL": 0.13,
+   "pass": false
+  },
+  {
+   "room": "H3",
+   "name": "蓝室",
+   "current": "#C8C3A0",
+   "target": "#3A6DBF",
+   "H": 52,
+   "S": 0.27,
+   "L": 0.71,
+   "dH": -164,
+   "dS": -0.27,
+   "dL": 0.22,
+   "pass": false
+  },
+  {
+   "room": "H4",
+   "name": "黑室",
+   "current": "#8F8F74",
+   "target": "#58837D",
+   "H": 60,
+   "S": 0.11,
+   "L": 0.51,
+   "dH": -112,
+   "dS": -0.09,
+   "dL": 0.08,
+   "pass": false
+  },
+  {
+   "room": "C5",
+   "name": "总裁",
+   "current": "#D8DBC8",
+   "target": "#95755B",
+   "H": 69,
+   "S": 0.21,
+   "L": 0.82,
+   "dH": 43,
+   "dS": -0.03,
+   "dL": 0.35,
+   "pass": false
+  }
+ ],
+ "path": "art/static_map/space_base_minigame/v05/renders/core_raw.png",
+ "pass_count": 0,
+ "total": 5,
+ "bad": [
+  "H1",
+  "H2",
+  "H3",
+  "H4",
+  "C5"
+ ]
+}

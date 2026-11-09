@@ -1,0 +1,122 @@
+{
+ "schema": "resolved-knowledge-v1",
+ "request_id": "20261108-space-base-v14-art",
+ "run_id": "20261108-2035",
+ "business_id": "space_base_minigame",
+ "loaded": [
+  {
+   "path": "planning/art/SPACE_BASE_V14_ONESHOT_PLAN_20261108.md",
+   "sha256": "fc8d650665a3eb9af33e3d1b19460f6ef7afee4b856869a79915b015352f17cd",
+   "scope": "active",
+   "lifecycle": "active",
+   "maturity": "observed",
+   "usage": "requirement"
+  },
+  {
+   "path": "planning/art/SPACE_BASE_TECHNICAL_ART_PLAN_20261108.md",
+   "sha256": "28e1a241d78f17a3440a6beca7a6cfad69be7d37f2e1ed7aee96525a9500ba06",
+   "scope": "active",
+   "lifecycle": "active",
+   "maturity": "observed",
+   "usage": "requirement"
+  },
+  {
+   "path": "planning/art/SPACE_BASE_EXTERIOR_ORGANIC_PLAN_20261108.md",
+   "sha256": "055eb28aa01912a71797733a713030c633a10f2af786c81b335ec31fdedf505c",
+   "scope": "active",
+   "lifecycle": "active",
+   "maturity": "observed",
+   "usage": "requirement"
+  },
+  {
+   "path": "knowledge/common/dev_core/HARNESS_LIFECYCLE.md",
+   "sha256": "5a87406ed0ed017d726e85d51e610b80e582fa684c71cf8f0e92a178e5dc752d",
+   "scope": "active",
+   "lifecycle": "active",
+   "maturity": "observed",
+   "usage": "requirement"
+  },
+  {
+   "path": "knowledge/business/space_base_minigame/HARNESS_SPEC.json",
+   "sha256": "f30b5609d2b734748a1c42620644480c58a70468b4436d4d5037bbdeadf62e0c",
+   "scope": "active",
+   "lifecycle": "active",
+   "maturity": "observed",
+   "usage": "requirement"
+  },
+  {
+   "path": "knowledge/business/space_base_minigame/STYLE_PROFILE.md",
+   "sha256": "bd2335802350f4f4095452e6bb9f4f329d54378d14ef7de08a37954d229e9987",
+   "scope": "active",
+   "lifecycle": "active",
+   "maturity": "observed",
+   "usage": "requirement"
+  },
+  {
+   "path": "AGENTS.md",
+   "sha256": "47fb3497c259f8480a8cb39a0e5534e6b8923c2c2ac6037c0fa20035929860cd",
+   "scope": "active",
+   "lifecycle": "active",
+   "maturity": "observed",
+   "usage": "requirement"
+  },
+  {
+   "path": "tools/blender_space_base/build_scene_v14.py",
+   "sha256": "233f547fcdb2c90cc5ecc8f0cce5104fa86e1ec1c4b8fa7575ca1c128081b92c",
+   "scope": "active",
+   "lifecycle": "active",
+   "maturity": "observed",
+   "usage": "requirement"
+  },
+  {
+   "path": "tools/blender_space_base/gen_v14_from_v13.py",
+   "sha256": "2e3fcf8a1e2dca6dc1d4f9190e1f66611ec71f5a3576e6229857bbb55a5221ae",
+   "scope": "active",
+   "lifecycle": "active",
+   "maturity": "observed",
+   "usage": "requirement"
+  },
+  {
+   "path": "tools/check_v14_art.py",
+   "sha256": "ce075e1440ee8fb0032d653cac603d3b32420317ce852aa723d7116cfcedd447",
+   "scope": "active",
+   "lifecycle": "active",
+   "maturity": "observed",
+   "usage": "requirement"
+  },
+  {
+   "path": "tools/check_v14_scene.py",
+   "sha256": "f361e5cd60e8eebf8566840579e4c42a08a1f9aa65670bde3dd24edb895a88ff",
+   "scope": "active",
+   "lifecycle": "active",
+   "maturity": "observed",
+   "usage": "requirement"
+  },
+  {
+   "path": "tools/space_base_check_v7.py",
+   "sha256": "6f29d172bef0db2287c8f223ddc85827ac3cb19d5491038fa10281e0ebd39e12",
+   "scope": "active",
+   "lifecycle": "active",
+   "maturity": "observed",
+   "usage": "requirement"
+  }
+ ],
+ "decisions": [
+  {
+   "rule_id": "Q-T1",
+   "decision": "A cool-grey base + warm accents"
+  },
+  {
+   "rule_id": "Q-T2",
+   "decision": "color management changed only in the v14 branch"
+  },
+  {
+   "rule_id": "Q-T3",
+   "decision": "S1 contract unchanged; P0 measured 0.614"
+  },
+  {
+   "rule_id": "L0-b",
+   "decision": "candidate D (Standard / None / -0.15)"
+  }
+ ]
+}

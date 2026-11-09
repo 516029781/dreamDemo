@@ -1,0 +1,43 @@
+{
+ "schema": "p0-decision-v1",
+ "request": "SPACE_BASE_TECHNICAL_ART_PLAN_20261108 v1.1 P0",
+ "trigger": "用户 2026-11-08 20:05「开始吧」",
+ "created_at": "2026-11-08T20:06+08:00",
+ "status": "defaults_applied_non_blocking",
+ "decisions": [
+  {
+   "id": "Q-T1",
+   "question": "色温方向",
+   "applied": "A 冷灰基地 + 暖光点缀",
+   "basis": "方案 v1.1 §7 推荐默认；不阻塞开发，后续可按 A/B 图调整",
+   "user_confirmed": false
+  },
+  {
+   "id": "Q-T2",
+   "question": "是否允许改 view_transform / exposure",
+   "applied": "只在新增 v14 分支改，v13 冻结不动",
+   "basis": "方案 v1.1 §7 推荐默认；图变即证据失效",
+   "user_confirmed": false
+  },
+  {
+   "id": "Q-T3",
+   "question": "S1 门禁冲突",
+   "applied": "已降级为 P5 验收复核项，不改契约",
+   "basis": "v1.1 §0.3 A/B 实测 + check_v7 不读像素；P0 补跑 S1 基线证据",
+   "user_confirmed": false
+  }
+ ],
+ "p0_scope": [
+  "补测耗时留证",
+  "补跑 S1 基线",
+  "交付尺寸复测 L0-b 三候选",
+  "写 A1–A13 检查器",
+  "冻结 v13 前对照"
+ ],
+ "not_in_p0": [
+  "L0-a compositor 栈",
+  "L1–L6 任何场景改动",
+  "v14 正式 scene.blend 构建"
+ ],
+ "note": "P0 不改任何美术，只建可复现的度量与基线；每轮出同机位前后对照图后才进 P1。"
+}

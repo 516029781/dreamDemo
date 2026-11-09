@@ -1,0 +1,10 @@
+{
+ "check": "GA08",
+ "cones": [],
+ "bad_cones": [],
+ "k10_pipes_in_platform": [],
+ "bridge_parts_in_platform": [],
+ "legacy_cw_rack_removed": true,
+ "legacy_cw_objects": [],
+ "pass": true
+}

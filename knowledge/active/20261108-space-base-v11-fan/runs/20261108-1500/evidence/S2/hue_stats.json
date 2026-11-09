@@ -1,0 +1,6 @@
+{
+ "check": "S2",
+ "green_ratio": 0.0081,
+ "rule": "green <= 0.14 (garden + planting on a 47k m2 plate)",
+ "pass": true
+}

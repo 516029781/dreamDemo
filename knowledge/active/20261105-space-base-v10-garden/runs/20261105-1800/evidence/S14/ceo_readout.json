@@ -1,0 +1,8 @@
+{
+ "check": "S14",
+ "rule": "CEO box std>=0.15; mean<=0.88; furniture>=3",
+ "mean": 0.49,
+ "std": 0.202,
+ "furniture_components": 18,
+ "pass": true
+}

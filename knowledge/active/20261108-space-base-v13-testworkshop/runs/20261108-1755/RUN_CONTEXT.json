@@ -1,0 +1,47 @@
+{
+ "schema": "run-context-v1",
+ "project_root": "C:/软件/鼠鼠",
+ "session_id": "workbuddy-2026-11-08-space-base-v13",
+ "request_id": "20261108-space-base-v13-testworkshop",
+ "run_id": "20261108-1755",
+ "task_mode": "production",
+ "business_id": "space_base_minigame",
+ "deliverable_type": "static_map",
+ "harness_stage": "N5",
+ "knowledge_snapshot": {
+  "manifest": "knowledge/business/manifest.json",
+  "business_version": "r14",
+  "art_base": "not_applicable (business STYLE_PROFILE r13 only)",
+  "lifecycle_contract": "knowledge/common/dev_core/HARNESS_LIFECYCLE.md",
+  "lifecycle_sha256": "5a87406ed0ed017d726e85d51e610b80e582fa684c71cf8f0e92a178e5dc752d"
+ },
+ "design_baseline": {
+  "path": "knowledge/active/20261108-space-base-v13-testworkshop/runs/20261108-1755/baselines/design_r15/BASELINE_MANIFEST.json",
+  "status": "confirmed",
+  "design_version": "r15",
+  "confirmed_basis": "用户 2026-11-08 17:54「按我们的 harness 流程开始开发」；方案 v2.0 17:45 已过目",
+  "previous": "r14"
+ },
+ "candidate": {
+  "path": "C:/软件/鼠鼠/art/static_map/space_base_minigame/v13",
+  "write_owner_run": "20261108-1755",
+  "mode": "write",
+  "parent_candidate": "C:/软件/鼠鼠/art/static_map/space_base_minigame/v12 (readonly, frozen)"
+ },
+ "checks": {
+  "harness_spec": "knowledge/business/space_base_minigame/HARNESS_SPEC.json",
+  "checker": "tools/space_base_check_v7.py",
+  "organic_checker": "tools/check_v13_organic.py",
+  "manual_check_set": [
+   "file existence",
+   "sha binding",
+   "camera projection",
+   "isolated reopen reproduction (content SHA)",
+   "producer visual self-review",
+   "south workshop S-01..S-12",
+   "front/back same-camera comparison"
+  ]
+ },
+ "created_at": "2026-11-08T17:55+08:00",
+ "notes": "v13：南端重建为水平试车间（露天防爆场）；路面五层填充；R1-R5 去对称；全图不做屋顶。"
+}

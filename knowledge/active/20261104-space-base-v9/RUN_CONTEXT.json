@@ -1,0 +1,40 @@
+{
+ "schema": "run-context-v1",
+ "project_root": "C:/软件/鼠鼠",
+ "session_id": "workbuddy-2026-11-04-space-base",
+ "request_id": "20261104-space-base-v9",
+ "run_id": "20261104-1500",
+ "task_mode": "production",
+ "business_id": "space_base_minigame",
+ "deliverable_type": "static_map",
+ "knowledge_snapshot": {
+  "manifest": "knowledge/business/manifest.json",
+  "manifest_sha256": "2ecdaa97a29ae1d9c258205987a1da02d7b1def9c2f470a28646128d46ac12d0",
+  "business_version": "r06",
+  "art_base": "v08",
+  "lifecycle_contract": "knowledge/common/dev_core/HARNESS_LIFECYCLE.md"
+ },
+ "design_baseline": {
+  "path": "knowledge/active/20261104-space-base-v9/runs/20261104-1500/baselines/design_r06/BASELINE_MANIFEST.json",
+  "status": "confirmed",
+  "confirmed_basis": "用户 2026-11-04 12:21–14:49 连续指令：删四带 + 中轴大道 + 全量 A/B 档 + 主交付改近景 + 加角色",
+  "baseline_manifest_sha256": "5b0a505e571aa6808f62c2a1af7ffd25b91a595019b692095e9006212b8f7f24"
+ },
+ "candidate": {
+  "path": "C:/软件/鼠鼠/art/static_map/space_base_minigame/v09",
+  "write_owner_run": "20261103-2100",
+  "mode": "write"
+ },
+ "checks": {
+  "harness_spec": "knowledge/business/space_base_minigame/HARNESS_SPEC.json",
+  "manual_check_set": [
+   "file existence",
+   "sha binding",
+   "camera projection",
+   "isolated reopen reproduction",
+   "producer visual self-review"
+  ]
+ },
+ "created_at": "2026-11-03T21:00+08:00",
+ "notes": "r03：保形换色 + 总裁盒开顶 + 插画 I2+；v05 只读留档。"
+}

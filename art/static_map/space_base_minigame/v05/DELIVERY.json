@@ -1,0 +1,298 @@
+{
+ "schema": "delivery-v1",
+ "business_id": "space_base_minigame",
+ "request_id": "20261103-space-base-v5",
+ "run_id": "20261103-1010",
+ "created": "2026-11-03T10:52",
+ "status": "producer_complete_pending_review",
+ "source": {
+  "path": "planning/art/SPACE_BASE_NEW_PLAN_20261103.md",
+  "version": "v3.10",
+  "sha256": "36e389e94264f121a5d91fecc00454a865bd3ded262895bd6aa45e180b470450"
+ },
+ "scene": {
+  "path": "art/static_map/space_base_minigame/v05/scene.blend",
+  "sha256": "65f846ec9b89d236b62e927901fe63d71e1a13d2d5a5be2e8785a930a23f1e7e",
+  "builder": "tools/blender_space_base/build_scene_v5.py",
+  "objects": 1253,
+  "faces": 17535,
+  "bevel": 521,
+  "procedural_only": true,
+  "relative_textures": true
+ },
+ "master": {
+  "path": "art/static_map/space_base_minigame/v05/renders/space_base_v05_master.png",
+  "size": [
+   1680,
+   2478
+  ],
+  "supersample_raw": [
+   3360,
+   5880
+  ],
+  "sha256": "a3a264a6e1736b2a45fe1b5efb5f06106447d28832b3d30b42ab7cd29d0a5552"
+ },
+ "shipped_jpeg": {
+  "path": "art/static_map/space_base_minigame/v05/renders/space_base_v05.jpg",
+  "size": [
+   1680,
+   2478
+  ],
+  "bytes": 307925,
+  "sha256": "3fe6ae4458995a38fdc41a28fdd8b7901830ac7756a9523fd4adc673de3f58a7"
+ },
+ "core_tile": {
+  "path": "art/static_map/space_base_minigame/v05/renders/space_base_v05_core.png",
+  "size": [
+   2072,
+   1876
+  ],
+  "px_per_m": 14.0,
+  "sha256": "dc4738378f065d9244f18e5f164fdf2860dde8912066fdade17862fe36d4206c"
+ },
+ "hero": {
+  "path": "art/static_map/space_base_minigame/v05/renders/space_base_v05_hero.png",
+  "size": [
+   1920,
+   1080
+  ],
+  "sha256": "71c4794320efe8b33994318abd01e01b4b0856a8a4f94f36b010d3ef8aed36cb"
+ },
+ "checks": {
+  "G1": {
+   "status": "pass",
+   "evidence": "evidence/G1/camera_projection.json",
+   "value": "[1680, 2478] / {'x': 7.0, 'y': 5.7344}"
+  },
+  "G2": {
+   "status": "producer_review",
+   "evidence": "evidence/G2/mentions.md",
+   "value": "七区可辨（自评）"
+  },
+  "G3": {
+   "status": "producer_review_partial",
+   "evidence": "evidence/G3/notes.md",
+   "value": "梯身需 14 px/m 高清片；实墙/导轨成立"
+  },
+  "G4": {
+   "status": "pass",
+   "evidence": "evidence/G4/probes.json",
+   "value": [
+    {
+     "name": "garden_north_gate",
+     "world": [
+      120,
+      -14
+     ],
+     "px": [
+      840,
+      1032
+     ],
+     "rgb": [
+      180,
+      188,
+      182
+     ]
+    },
+    {
+     "name": "fountain_ring",
+     "world": [
+      111,
+      -39
+     ],
+     "px": [
+      777,
+      1175
+     ],
+     "rgb": [
+      47,
+      91,
+      99
+     ]
+    },
+    {
+     "name": "causeway_mid",
+     "world": [
+      166,
+      -97
+     ],
+     "px": [
+      1162,
+      1508
+     ],
+     "rgb": [
+      220,
+      209,
+      180
+     ]
+    },
+    {
+     "name": "dock_floor",
+     "world": [
+      188.42,
+      -181.12
+     ],
+     "px": [
+      1318,
+      1990
+     ],
+     "rgb": [
+      201,
+      201,
+      180
+     ]
+    },
+    {
+     "name": "evac_strip",
+     "world": [
+      218.57,
+      -214.85
+     ],
+     "px": [
+      1530,
+      2183
+     ],
+     "rgb": [
+      255,
+      255,
+      76
+     ]
+    },
+    {
+     "name": "water",
+     "world": [
+      20,
+      -240
+     ],
+     "px": [
+      140,
+      2328
+     ],
+     "rgb": [
+      50,
+      80,
+      86
+     ]
+    }
+   ]
+  },
+  "G5": {
+   "status": "producer_review",
+   "evidence": "evidence/G5/pair_note.md",
+   "value": "A 无黄框 / B 露出"
+  },
+  "G6": {
+   "status": "pass",
+   "evidence": "evidence/G6/geom_check.json",
+   "value": "1253 obj / 17535 faces / NaN 0"
+  },
+  "G7": {
+   "status": "pass",
+   "evidence": "evidence/G7/borders.json",
+   "value": {
+    "top": 74.20158386230469,
+    "bottom": 72.32023620605469,
+    "left": 73.04815673828125,
+    "right": 73.58797454833984
+   }
+  },
+  "G8": {
+   "status": "producer_review",
+   "evidence": "evidence/G8/notes.md",
+   "value": "标高连续、材质有意切换"
+  },
+  "W1": {
+   "status": "pass",
+   "evidence": "evidence/W1/file_check.json",
+   "value": "[1680, 2478] 307925B"
+  },
+  "W2": {
+   "status": "pass",
+   "evidence": "evidence/W2/package.json",
+   "value": "main 331931B"
+  },
+  "S1": {
+   "status": "pass",
+   "evidence": "evidence/S1/value_stats.json",
+   "value": "land 0.549 (full 0.188)"
+  },
+  "S2": {
+   "status": "pass",
+   "evidence": "evidence/S2/hue_stats.json",
+   "value": "0.0236"
+  },
+  "S3": {
+   "status": "pass",
+   "evidence": "evidence/S3/hue_stats.json",
+   "value": "0.0003"
+  },
+  "S4": {
+   "status": "producer_review",
+   "evidence": "evidence/S4/notes.md",
+   "value": "五室各一签名"
+  },
+  "S5": {
+   "status": "producer_review",
+   "evidence": "evidence/S5/notes.md",
+   "value": "6–8 cm 切角，非圆角"
+  },
+  "S6": {
+   "status": "producer_review_with_waiver",
+   "evidence": "evidence/S6/notes.md",
+   "value": "地面 3×3 已建；墙竖缝降级待确认"
+  },
+  "S7": {
+   "status": "producer_review",
+   "evidence": "evidence/S7/notes.md",
+   "value": "半影 0.35 m；总裁唯一暖区"
+  },
+  "S8": {
+   "status": "pass",
+   "evidence": "evidence/S8/material_layers.json",
+   "value": "28 类"
+  },
+  "S9": {
+   "status": "pass",
+   "evidence": "evidence/S9/bevel_count.json",
+   "value": "521 对象"
+  },
+  "S10": {
+   "status": "pass",
+   "evidence": "evidence/S10/core_density.json",
+   "value": "14.0 px/m"
+  },
+  "A1": {
+   "status": "external",
+   "evidence": "evidence/external/A1.md",
+   "value": "无角色层"
+  },
+  "W3": {
+   "status": "external",
+   "evidence": "evidence/external/W3.md",
+   "value": "未上真机"
+  },
+  "W4": {
+   "status": "external",
+   "evidence": "evidence/external/W4.md",
+   "value": "未上真机"
+  }
+ },
+ "summary": {
+  "mechanical_pass": 12,
+  "producer_review": 8,
+  "external": 3,
+  "fail": 0
+ },
+ "spec": {
+  "path": "knowledge/business/space_base_minigame/HARNESS_SPEC.json",
+  "version": "r02",
+  "status": "draft_pending_controller"
+ },
+ "open_items": [
+  "Q1 S6 墙竖缝降级",
+  "Q2 S1 陆地相对口径",
+  "Q3 英雄图是否随包",
+  "独立审核",
+  "A1/W3/W4"
+ ]
+}

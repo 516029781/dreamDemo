@@ -1,0 +1,103 @@
+{
+ "check": "G4",
+ "probes": [
+  {
+   "name": "garden_north_gate",
+   "world": [
+    120,
+    -14
+   ],
+   "px": [
+    840,
+    1032
+   ],
+   "rgb": [
+    185,
+    189,
+    170
+   ]
+  },
+  {
+   "name": "fountain_ring",
+   "world": [
+    111,
+    -7
+   ],
+   "px": [
+    777,
+    992
+   ],
+   "rgb": [
+    255,
+    254,
+    203
+   ]
+  },
+  {
+   "name": "causeway_mid",
+   "world": [
+    166,
+    -97
+   ],
+   "px": [
+    1162,
+    1508
+   ],
+   "rgb": [
+    224,
+    214,
+    183
+   ]
+  },
+  {
+   "name": "evac_strip",
+   "world": [
+    221.39,
+    -216.17
+   ],
+   "px": [
+    1549,
+    2191
+   ],
+   "rgb": [
+    233,
+    236,
+    64
+   ]
+  },
+  {
+   "name": "evac_glow",
+   "world": [
+    214.06,
+    -216.5
+   ],
+   "px": [
+    1498,
+    2193
+   ],
+   "rgb": [
+    84,
+    140,
+    237
+   ]
+  },
+  {
+   "name": "water",
+   "world": [
+    20,
+    -240
+   ],
+   "px": [
+    140,
+    2328
+   ],
+   "rgb": [
+    38,
+    70,
+    74
+   ]
+  }
+ ],
+ "pass": true,
+ "rules": "evac strip yellow; island south notch passable; evac glow blue-dominant"
+}

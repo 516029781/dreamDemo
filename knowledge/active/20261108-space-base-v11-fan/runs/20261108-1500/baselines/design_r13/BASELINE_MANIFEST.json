@@ -1,0 +1,37 @@
+{
+ "schema": "baseline-manifest-v1",
+ "design_version": "r13",
+ "run_id": "20261108-1500",
+ "supersedes": "r12",
+ "note": "r13：2×2 核心 + 十字过道 + 12 m 装卸带；场地阶梯收窄；花园居中",
+ "entries": [
+  {
+   "path": "SPACE_BASE_V3_PLAN_20261108.md",
+   "sha256": "1aaf87267ec26a9a35faeee4a28e71cc37a3508754e88ebe0772223c12050eba"
+  },
+  {
+   "path": "REQUIREMENTS_BRIEF.md",
+   "sha256": "2c0a2b3ab54685bcc9e282bfb250d607e3a24d3ae7cae8e22556dd83e091369a"
+  },
+  {
+   "path": "HARNESS_SPEC.json",
+   "sha256": "f00d4d661f543746778bfd1251ae07592a9e2eb47c518f50c4b0d01b565e7b19"
+  },
+  {
+   "path": "build_scene_v11.py",
+   "sha256": "1422199482f7e45354cd84ee4d16346427796f61e275fbd4856629ee2ccb47f5"
+  },
+  {
+   "path": "evidence_v11.py",
+   "sha256": "4f297009f4dde05d42d121d4d700d6eca2e83e2b366cd78fc4aedbfccc08ea64"
+  },
+  {
+   "path": "space_base_v11_post.py",
+   "sha256": "ad5de13426f7c81f60c896807f6626fe66ec5abf3a8c62471c727f0875057478"
+  },
+  {
+   "path": "space_base_check_v7.py",
+   "sha256": "6f29d172bef0db2287c8f223ddc85827ac3cb19d5491038fa10281e0ebd39e12"
+  }
+ ]
+}

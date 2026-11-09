@@ -1,0 +1,141 @@
+{
+ "schema": "test-cases-v1",
+ "request_id": "20261102-pilot-simple-map",
+ "business_id": "pilot_simple_map",
+ "version": "r01",
+ "bound_brief_sha256": "871a33a2467ec48d31dea29f261c09f4dab4f1381f04cf0a3daee735775ca0ba",
+ "bound_design_snapshot": "baselines/design_r01",
+ "cases": [
+  {
+   "test_id": "TEST-01",
+   "covers": [
+    "REQ-01"
+   ],
+   "stage": "final",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "input": {
+    "files": [
+     "art/static_map/pilot_simple_map/v01/renders/final.png"
+    ],
+    "fixed_conditions": "同一张 final.png，不做缩放"
+   },
+   "method": "PIL 读取尺寸与模式，断言 960x540 且 RGB",
+   "pass_criteria": "宽=960 且 高=540 且 mode in (RGB, RGBA)",
+   "evidence_path": "runs/20261102-0710/evidence/TEST-01/size.json",
+   "diagnostic_only": false,
+   "failure_rule": "改 resolution 后重渲，重跑 TEST-01..05"
+  },
+  {
+   "test_id": "TEST-02",
+   "covers": [
+    "REQ-02"
+   ],
+   "stage": "prototype",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "input": {
+    "files": [
+     "art/static_map/pilot_simple_map/v01/scene.blend"
+    ],
+    "fixed_conditions": "重开 scene.blend，枚举网格对象的世界包围盒底面 z"
+   },
+   "method": "Blender 重开 + 打印每个网格 zmin；人工核对功能体块清单",
+   "pass_criteria": "≥6 个功能体块存在（platform/steps/parapet/crates/barrel/lamp/back_wall），且每个 zmin ≥ -0.001 或明确坐在其他物体上",
+   "evidence_path": "runs/20261102-0710/evidence/TEST-02/objects.json",
+   "diagnostic_only": false,
+   "failure_rule": "回 N2 调坐标，重渲并重跑 TEST-02"
+  },
+  {
+   "test_id": "TEST-03",
+   "covers": [
+    "REQ-03"
+   ],
+   "stage": "final",
+   "check_type": "visual",
+   "responsible": "model_visual",
+   "input": {
+    "files": [
+     "art/static_map/pilot_simple_map/v01/renders/final.png"
+    ],
+    "fixed_conditions": "整图，不裁切"
+   },
+   "method": "目视：平台投影、灯柱投影、木箱投影三处的落地方向",
+   "pass_criteria": "三处投影在画面中同向（均朝右下）；不存在第二方向的硬影",
+   "evidence_path": "runs/20261102-0710/evidence/TEST-03/shadow.md",
+   "diagnostic_only": false,
+   "failure_rule": "检查 sun 旋转是否为 QUATERNION 模式；改光向后重跑 TEST-03/04"
+  },
+  {
+   "test_id": "TEST-04",
+   "covers": [
+    "REQ-04"
+   ],
+   "stage": "final",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "input": {
+    "files": [
+     "art/static_map/pilot_simple_map/v01/renders/final.png"
+    ],
+    "fixed_conditions": "整图统计"
+   },
+   "method": "PIL 统计 V 通道：近黑(V<0.04)与近白(V>0.98)像素占比",
+   "pass_criteria": "近黑 < 1% 且 近白 < 1%；四个材质族在画面中均可指认（木箱暖褐、桶深灰、石浅灰、地灰褐）",
+   "evidence_path": "runs/20261102-0710/evidence/TEST-04/value_stats.json",
+   "diagnostic_only": true,
+   "failure_rule": "调 exposure / 基色后重渲；数值部分为 diagnostic_only，材质族指认由视觉复核"
+  },
+  {
+   "test_id": "TEST-05",
+   "covers": [
+    "REQ-05"
+   ],
+   "stage": "final",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "input": {
+    "files": [
+     "art/static_map/pilot_simple_map/v01/scene.blend",
+     "art/static_map/pilot_simple_map/v01/renders/final.png"
+    ],
+    "fixed_conditions": "隔离目录复制 scene.blend 后重开重渲；同分辨率同采样"
+   },
+   "method": "sha256(源+图) 对照 MANIFEST；隔离目录重渲后与 final.png 做逐像素 RMS",
+   "pass_criteria": "两份 SHA 与 MANIFEST 一致；重渲图尺寸一致且 RMS ≤ 2.0/255（容差事前声明，见 OPEN_QUESTIONS Q-02）",
+   "evidence_path": "runs/20261102-0710/reproduction.json",
+   "diagnostic_only": false,
+   "failure_rule": "先查打包（贴图/路径/相对链接），未留证前状态只能写 unverified"
+  },
+  {
+   "test_id": "TEST-06",
+   "covers": [
+    "REQ-06"
+   ],
+   "stage": "final",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "input": {
+    "files": [
+     "REQUIREMENTS_BRIEF.md",
+     "SOLUTION_DESIGN.md",
+     "test_cases.json",
+     "RUN_CONTEXT.json",
+     "RESOLVED_KNOWLEDGE.json"
+    ],
+    "fixed_conditions": "同一 request 目录"
+   },
+   "method": "脚本解析 REQ-ID 与 covers，断言每个 REQ 至少被一个 case 覆盖，且引用的证据路径存在",
+   "pass_criteria": "6/6 REQ 覆盖；0 个悬空证据路径；文件互相引用的 business_id/request_id 一致",
+   "evidence_path": "runs/20261102-0710/evidence/TEST-06/linkage.json",
+   "diagnostic_only": false,
+   "failure_rule": "补文档或改引用；不得用 not_applicable 冒充 pass"
+  }
+ ],
+ "coverage": {
+  "requirements_total": 6,
+  "requirements_with_cases": 6,
+  "manual_only_requirements": []
+ },
+ "notes": "TEST-04 的数值部分是 diagnostic_only，不计 PASS；材质族是否成立由视觉复核。诊断与验收分开记。"
+}

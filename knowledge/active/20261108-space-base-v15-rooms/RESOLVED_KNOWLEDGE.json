@@ -1,0 +1,142 @@
+{
+ "schema": "resolved-knowledge-v1",
+ "request_id": "20261108-space-base-v15-rooms",
+ "run_id": "20261108-2320",
+ "business_id": "space_base_minigame",
+ "loaded": [
+  {
+   "path": "planning/art/SPACE_BASE_CORE_ROOMS_ART_PLAN_20261108.md",
+   "sha256": "28a26b93e71d9ba0821c0453104c5a48f18fe56672eadce3a2ebf1cfa5be1bc6",
+   "scope": "active",
+   "lifecycle": "active",
+   "maturity": "observed",
+   "usage": "requirement"
+  },
+  {
+   "path": "planning/art/SPACE_BASE_CORE_ROOMS_CHECK_20261108.md",
+   "sha256": "c288bbd1d2343dbbe259ee2b621ced7e0f61a9e6e89b432299306c162c723f6d",
+   "scope": "active",
+   "lifecycle": "active",
+   "maturity": "observed",
+   "usage": "requirement"
+  },
+  {
+   "path": "planning/art/SPACE_BASE_INTERIOR_DRESSING_20261102.md",
+   "sha256": "85d755bb83164b134f2213f56305679cd175b008dc981c09c86dea9e48c743d2",
+   "scope": "active",
+   "lifecycle": "active",
+   "maturity": "observed",
+   "usage": "requirement"
+  },
+  {
+   "path": "knowledge/common/dev_core/HARNESS_LIFECYCLE.md",
+   "sha256": "5a87406ed0ed017d726e85d51e610b80e582fa684c71cf8f0e92a178e5dc752d",
+   "scope": "active",
+   "lifecycle": "active",
+   "maturity": "observed",
+   "usage": "requirement"
+  },
+  {
+   "path": "knowledge/business/space_base_minigame/HARNESS_SPEC.json",
+   "sha256": "f30b5609d2b734748a1c42620644480c58a70468b4436d4d5037bbdeadf62e0c",
+   "scope": "active",
+   "lifecycle": "active",
+   "maturity": "observed",
+   "usage": "requirement"
+  },
+  {
+   "path": "knowledge/business/space_base_minigame/STYLE_PROFILE.md",
+   "sha256": "bd2335802350f4f4095452e6bb9f4f329d54378d14ef7de08a37954d229e9987",
+   "scope": "active",
+   "lifecycle": "active",
+   "maturity": "observed",
+   "usage": "requirement"
+  },
+  {
+   "path": "AGENTS.md",
+   "sha256": "47fb3497c259f8480a8cb39a0e5534e6b8923c2c2ac6037c0fa20035929860cd",
+   "scope": "active",
+   "lifecycle": "active",
+   "maturity": "observed",
+   "usage": "requirement"
+  },
+  {
+   "path": "tools/blender_space_base/build_scene_v15.py",
+   "sha256": "dc518163ffd9db3156a1e74becba5e29b386c91a8649000af877f4d047541272",
+   "scope": "active",
+   "lifecycle": "active",
+   "maturity": "observed",
+   "usage": "requirement"
+  },
+  {
+   "path": "tools/blender_space_base/v15_rooms_src.py",
+   "sha256": "762cc6ef37573a017656a0635b2200154f71cc4831ce5d1fc1d3b8bd7a17cdd9",
+   "scope": "active",
+   "lifecycle": "active",
+   "maturity": "observed",
+   "usage": "requirement"
+  },
+  {
+   "path": "tools/blender_space_base/gen_v15_from_v14.py",
+   "sha256": "a08a63067814ed6cbfe96c75cdaeea1059047d39a6c442d654c9a3ffd5d1d1a0",
+   "scope": "active",
+   "lifecycle": "active",
+   "maturity": "observed",
+   "usage": "requirement"
+  },
+  {
+   "path": "tools/check_v15_scene.py",
+   "sha256": "4f564771b84f18e36a6daa55a3b5724d45f774ca0de996ba37ef4e7f89387e4e",
+   "scope": "active",
+   "lifecycle": "active",
+   "maturity": "observed",
+   "usage": "requirement"
+  },
+  {
+   "path": "tools/post_v15.py",
+   "sha256": "43f1f56b5fc6ab6354d324dce30a89b5d6d80a2329ec643e87bc7627e8d2e7a1",
+   "scope": "active",
+   "lifecycle": "active",
+   "maturity": "observed",
+   "usage": "requirement"
+  },
+  {
+   "path": "tools/space_base_check_v7.py",
+   "sha256": "6f29d172bef0db2287c8f223ddc85827ac3cb19d5491038fa10281e0ebd39e12",
+   "scope": "active",
+   "lifecycle": "active",
+   "maturity": "observed",
+   "usage": "requirement"
+  }
+ ],
+ "decisions": [
+  {
+   "rule_id": "Q-T1",
+   "decision": "keep the warm-sand land / cool-water split; hall identity by shape first, colour second"
+  },
+  {
+   "rule_id": "Q-T2",
+   "decision": "colour management unchanged from v14 (Standard, no LUT, gamma 1.10)"
+  },
+  {
+   "rule_id": "Q-T3",
+   "decision": "S1 >= 0.45 unchanged; the v1.2 25%% dark-area cap was retracted after measurement"
+  },
+  {
+   "rule_id": "Q5",
+   "decision": "H2 pool rim follows the screenshot: concrete upstand + 1.2 m teal cap + black guard runs, no full yellow ring"
+  },
+  {
+   "rule_id": "Q6",
+   "decision": "cool darks are read as water by the S1 mask; water_frac is reported next to S1"
+  },
+  {
+   "rule_id": "Q7",
+   "decision": "52 mid-scale parts per hall fits the 450-object budget"
+  },
+  {
+   "rule_id": "Q1",
+   "decision": "no exec suite: build_ceo and the CEO constant are removed from the v15 builder"
+  }
+ ]
+}

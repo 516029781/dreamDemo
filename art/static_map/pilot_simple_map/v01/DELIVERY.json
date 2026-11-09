@@ -1,0 +1,82 @@
+{
+ "schema": "delivery-v1",
+ "business_id": "pilot_simple_map",
+ "request_id": "20261102-pilot-simple-map",
+ "run_id": "20261102-0710",
+ "candidate": "art/static_map/pilot_simple_map/v01",
+ "delivered_at": "2026-11-02T07:18+08:00",
+ "end_state": "target_met",
+ "scope_note": "流程验证单：证明 N0–N8 与证据契约可执行，不评价美术水平，不代表生产工期。",
+ "artifacts": {
+  "scene": {
+   "path": "art/static_map/pilot_simple_map/v01/scene.blend",
+   "sha256": "ab977ac206b05ff8e2736caf9af860eebb57a42bbb9ca12dd195488c9e2041a9"
+  },
+  "image": {
+   "path": "art/static_map/pilot_simple_map/v01/renders/final.png",
+   "sha256": "9b184c156e5c27170bf043566cf5d88680f31bcfd3a739c9c650f05fee58f2b6",
+   "pixel_sha256": "135843d8cdeb2079fb1a926eaf546756b714afd1850eb228c5516d8d3a177039",
+   "resolution": [
+    960,
+    540
+   ],
+   "samples": 64
+  },
+  "build_script": {
+   "path": "art/static_map/pilot_simple_map/v01/build_scene.py",
+   "sha256": "6fbcc718c134bb879c27c2c31c7fe2a920ffd37691a6a60dd39971518d96216b"
+  },
+  "render_script": {
+   "path": "art/static_map/pilot_simple_map/v01/render_only.py",
+   "sha256": "f10c34d4b0ab192ba2f884244401f29498bdb2c2ed5db98ab6fb2dd78365b4fe"
+  },
+  "reproduction": {
+   "path": "knowledge/active/20261102-pilot-simple-map/runs/20261102-0710/reproduction.json",
+   "reopen_exit_code": 0,
+   "rms_255": 0.0,
+   "pixel_sha_match": true,
+   "file_sha_match": false
+  },
+  "manifest": "art/static_map/pilot_simple_map/v01/MANIFEST.json"
+ },
+ "checks": [
+  {
+   "test_id": "TEST-01",
+   "result": "pass",
+   "evidence": "knowledge/active/20261102-pilot-simple-map/runs/20261102-0710/evidence/TEST-01/size.json"
+  },
+  {
+   "test_id": "TEST-02",
+   "result": "pass",
+   "evidence": "knowledge/active/20261102-pilot-simple-map/runs/20261102-0710/evidence/TEST-02/objects.json"
+  },
+  {
+   "test_id": "TEST-03",
+   "result": "pass",
+   "evidence": "knowledge/active/20261102-pilot-simple-map/runs/20261102-0710/evidence/TEST-03/shadow.md"
+  },
+  {
+   "test_id": "TEST-04",
+   "result": "pass_visual",
+   "evidence": "knowledge/active/20261102-pilot-simple-map/runs/20261102-0710/evidence/TEST-04/value_stats.json",
+   "note": "数值部分 diagnostic_only，不计 PASS；材质族为视觉复核"
+  },
+  {
+   "test_id": "TEST-05",
+   "result": "pass",
+   "evidence": "knowledge/active/20261102-pilot-simple-map/runs/20261102-0710/reproduction.json"
+  },
+  {
+   "test_id": "TEST-06",
+   "result": "pass",
+   "evidence": "knowledge/active/20261102-pilot-simple-map/runs/20261102-0710/evidence/TEST-06/linkage.json"
+  }
+ ],
+ "known_gaps": [
+  "pixel_sha256 才是复现依据；file SHA 随 PNG 元数据变化，不得当门槛",
+  "机械检查集仅覆盖尺寸/明度/文档闭环，不覆盖美术质量",
+  "本业务 maturity=observed，只有一张图，不外推到其他场景复杂度",
+  "未接入 Hook，全部为人工触发"
+ ],
+ "rollback": "删除 art/static_map/pilot_simple_map/ 与 knowledge/business/pilot_simple_map/、knowledge/active/20261102-pilot-simple-map/ 即可；P1 文件未被改动"
+}

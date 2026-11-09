@@ -1,0 +1,221 @@
+{
+ "schema": "resolved-knowledge-v1",
+ "request_id": "20261102-space-base-map",
+ "run_id": "20261102-1314",
+ "business_id": "space_base_minigame",
+ "deliverable_type": "static_map",
+ "loaded": [
+  {
+   "path": "AGENTS.md",
+   "sha256": "47fb3497c259f8480a8cb39a0e5534e6b8923c2c2ac6037c0fa20035929860cd",
+   "scope": "common/dev_core",
+   "lifecycle": "active",
+   "maturity": "not_applicable",
+   "usage": "requirement"
+  },
+  {
+   "path": "START_HERE.md",
+   "sha256": "e06c8c34a84419f31212f4dc73ed3730b2c1c409d5e9e99f687707da36dfb35e",
+   "scope": "common/dev_core",
+   "lifecycle": "active",
+   "maturity": "not_applicable",
+   "usage": "requirement"
+  },
+  {
+   "path": "knowledge/common/dev_core/HARNESS_LIFECYCLE.md",
+   "sha256": "5a87406ed0ed017d726e85d51e610b80e582fa684c71cf8f0e92a178e5dc752d",
+   "scope": "common/dev_core",
+   "lifecycle": "active",
+   "maturity": "not_applicable",
+   "usage": "requirement"
+  },
+  {
+   "path": "knowledge/common/dev_core/STANDARDS.md",
+   "sha256": "8b5f47195b8915a1fabea7432ed4c30adcd4f49ad9c1d4a9a19823ad0266d613",
+   "scope": "common/dev_core",
+   "lifecycle": "active",
+   "maturity": "not_applicable",
+   "usage": "requirement"
+  },
+  {
+   "path": "knowledge/business/manifest.json",
+   "sha256": "2ecdaa97a29ae1d9c258205987a1da02d7b1def9c2f470a28646128d46ac12d0",
+   "scope": "common/routing",
+   "lifecycle": "active",
+   "maturity": "not_applicable",
+   "usage": "requirement"
+  },
+  {
+   "path": "knowledge/business/space_base_minigame/START_HERE.md",
+   "sha256": "a4cd062199bea621b9e3ee9c387cd915f1b1e3e812623a584fa955e325265c97",
+   "scope": "business/space_base_minigame",
+   "lifecycle": "active",
+   "maturity": "not_applicable",
+   "usage": "requirement"
+  },
+  {
+   "path": "knowledge/business/space_base_minigame/BUSINESS_PROFILE.md",
+   "sha256": "d299cb5ffc652342cc54ce7997f2ae99fe7863f3de0829d9f936a29b0cd471b9",
+   "scope": "business/space_base_minigame",
+   "lifecycle": "active",
+   "maturity": "not_applicable",
+   "usage": "requirement"
+  },
+  {
+   "path": "knowledge/business/space_base_minigame/STYLE_PROFILE.md",
+   "sha256": "bd2335802350f4f4095452e6bb9f4f329d54378d14ef7de08a37954d229e9987",
+   "scope": "business/space_base_minigame",
+   "lifecycle": "active",
+   "maturity": "observed",
+   "usage": "requirement"
+  },
+  {
+   "path": "knowledge/business/space_base_minigame/HARNESS_SPEC.json",
+   "sha256": "7e08a44da1abee9548b23a7acc237fcc5323750a651d1197dbd97a08caaf2153",
+   "scope": "business/space_base_minigame",
+   "lifecycle": "active",
+   "maturity": "not_applicable",
+   "usage": "requirement"
+  },
+  {
+   "path": "knowledge/business/space_base_minigame/test_cases.json",
+   "sha256": "b4854ecd3d60ab104b8124d22e04f00f0055856b766cba706f252d61c28f4bf8",
+   "scope": "business/space_base_minigame",
+   "lifecycle": "active",
+   "maturity": "not_applicable",
+   "usage": "requirement"
+  },
+  {
+   "path": "knowledge/business/space_base_minigame/scorecard.json",
+   "sha256": "cf3252f429b4ee5a478b11a2013f8361eb40f058cd8873888014125acfda8790",
+   "scope": "business/space_base_minigame",
+   "lifecycle": "active",
+   "maturity": "not_applicable",
+   "usage": "requirement"
+  },
+  {
+   "path": "knowledge/active/20261102-space-base-map/REQUIREMENTS_BRIEF.md",
+   "sha256": "7604194bcf2b025e8a1804f2371bf0bbb80d2ed7deb36916dd1d60488771cf03",
+   "scope": "active/20261102-space-base-map",
+   "lifecycle": "active",
+   "maturity": "not_applicable",
+   "usage": "requirement"
+  },
+  {
+   "path": "knowledge/active/20261102-space-base-map/SOLUTION_DESIGN.md",
+   "sha256": "0cc61d90db0b074ae391b1aebc203a9c26589488035e7925b037f2cbae594ef6",
+   "scope": "active/20261102-space-base-map",
+   "lifecycle": "active",
+   "maturity": "not_applicable",
+   "usage": "requirement"
+  },
+  {
+   "path": "knowledge/active/20261102-space-base-map/test_cases.json",
+   "sha256": "b4854ecd3d60ab104b8124d22e04f00f0055856b766cba706f252d61c28f4bf8",
+   "scope": "active/20261102-space-base-map",
+   "lifecycle": "active",
+   "maturity": "not_applicable",
+   "usage": "requirement"
+  },
+  {
+   "path": "planning/art/SPACE_BASE_MASTER_SPEC_20261102.md",
+   "sha256": "4e0e22229b5afdecfe860b331dc49ee02e4a0a2ac3b41c7805f305cbd1933fc1",
+   "scope": "business/space_base_minigame",
+   "lifecycle": "active",
+   "maturity": "observed",
+   "usage": "requirement"
+  },
+  {
+   "path": "planning/art/SPACE_BASE_EXECUTION_PLAN_20261102.md",
+   "sha256": "dd67af48e9292937fee648aa382e3b8891b12ed477f695700e102797ed6f3712",
+   "scope": "business/space_base_minigame",
+   "lifecycle": "active",
+   "maturity": "observed",
+   "usage": "requirement"
+  },
+  {
+   "path": "planning/art/HANDOFF_20261102.md",
+   "sha256": "6be7aa06361a89c98584d393e6ca7455a3b1e584b879c8c52ed0e3a96f413375",
+   "scope": "business/space_base_minigame",
+   "lifecycle": "active",
+   "maturity": "observed",
+   "usage": "requirement"
+  },
+  {
+   "path": "planning/art/_routes_v13.html",
+   "sha256": "6b98e788503287676e4b559881fd337046d34892dd15e8b66998fd529059b589",
+   "scope": "business/space_base_minigame",
+   "lifecycle": "active",
+   "maturity": "observed",
+   "usage": "reference"
+  },
+  {
+   "path": "planning/art/_corridor_strip.html",
+   "sha256": "650dbdff5fa2ded686a1e7faee6e6ae8bcc3f7e7d5688df86358d21f227d1e43",
+   "scope": "business/space_base_minigame",
+   "lifecycle": "active",
+   "maturity": "observed",
+   "usage": "reference"
+  },
+  {
+   "path": "planning/art/STATIC_MAP_WORKFLOW_20261028.md",
+   "sha256": "39f63f42af2ae78de7a56c3e7c130768331ecf4884677c7779e093279cf1e8e7",
+   "scope": "common/method",
+   "lifecycle": "active",
+   "maturity": "observed",
+   "usage": "method"
+  },
+  {
+   "path": "reference/_df_screenshots/MANIFEST.json",
+   "sha256": "6aefb6fa47bd9a06236dcf0f07b27115ec08a529ebb1f7fec140f0a29b32a361",
+   "scope": "reference",
+   "lifecycle": "active",
+   "maturity": "observed",
+   "usage": "reference"
+  }
+ ],
+ "decisions": [
+  {
+   "rule_id": "SCALE-8PX",
+   "decision": "inherit",
+   "basis": "spec v1.3 + user confirmed execution plan",
+   "note": "8 px/m, 55°, 1920×2560 frozen; change => N2/N4"
+  },
+  {
+   "rule_id": "P1-GATE",
+   "decision": "not_applicable",
+   "basis": "business isolation",
+   "note": "P1 scorecard/hook/reference not loaded"
+  },
+  {
+   "rule_id": "SCOPE-STATIC",
+   "decision": "override",
+   "basis": "execution plan §0",
+   "note": "static map + editable source + W1/W2 only; runtime separate"
+  },
+  {
+   "rule_id": "A1-W3-W4",
+   "decision": "not_applicable",
+   "basis": "no character layer / no device in this run",
+   "note": "reported external, never pass"
+  },
+  {
+   "rule_id": "NO-AI-IMAGE",
+   "decision": "inherit",
+   "basis": "AGENTS.md §2",
+   "note": "no AI whole-image delivery; Blender source required"
+  }
+ ],
+ "not_loaded_neighbors": [
+  "knowledge/business/p1_autumn_static/",
+  "knowledge/business/research_arknights_mapdata/",
+  "knowledge/business/pilot_simple_map/",
+  "planning/art/SPACE_BASE_RENDER_BRIEF_20261102.md"
+ ],
+ "verification": {
+  "all_paths_exist": true,
+  "sha_matched": true,
+  "conflicts_blocking": []
+ },
+ "created_at": "2026-11-02T13:20+08:00"
+}

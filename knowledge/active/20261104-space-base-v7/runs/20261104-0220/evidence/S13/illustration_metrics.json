@@ -1,0 +1,14 @@
+{
+ "check": "S13",
+ "rule": "3 peaks sep>=0.12; dark b* -6±2; stroke coverage >=30%",
+ "peaks_0_1": [
+  0.255,
+  0.388,
+  0.667
+ ],
+ "peak_gap": 0.412,
+ "dark_b_star": -6.22,
+ "stroke_coverage": 0.076,
+ "pass": false,
+ "diagnostic_only": true
+}

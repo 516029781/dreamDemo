@@ -1,0 +1,99 @@
+{
+ "schema": "harness-spec-v1",
+ "business_id": "pilot_simple_map",
+ "spec_version": "r01",
+ "applies_to": {
+  "deliverable_types": [
+   "static_map"
+  ],
+  "task_modes": [
+   "planning",
+   "production"
+  ],
+  "excluded": [
+   "p1_autumn_static",
+   "research_arknights_mapdata",
+   "other_projects"
+  ]
+ },
+ "run_identity_required": {
+  "project_root": true,
+  "session_id": true,
+  "request_id": true,
+  "run_id": true,
+  "business_id": true
+ },
+ "checks": [
+  {
+   "check_id": "HP-01",
+   "rule_ref": "R-EVID-01",
+   "type": "mechanical",
+   "statement": "scene.blend and renders/final.png exist and match MANIFEST SHA256",
+   "command": "sha256sum + jq compare with runs/<run_id>/MANIFEST.json",
+   "evidence_fields": [
+    "scene_sha256",
+    "image_sha256",
+    "manifest_path"
+   ],
+   "on_fail": "block_end"
+  },
+  {
+   "check_id": "HP-02",
+   "rule_ref": "R-EVID-01",
+   "type": "mechanical",
+   "statement": "isolated reopen reproduction recorded with declared RMS tolerance (<=2/255)",
+   "command": "blender -b <copy of scene.blend> --python render_only.py -- <out.png>; compare pixel_sha256",
+   "evidence_fields": [
+    "reproduction_log",
+    "pixel_sha256",
+    "rms",
+    "tolerance"
+   ],
+   "on_fail": "block_end"
+  },
+  {
+   "check_id": "HP-03",
+   "rule_ref": "R-EVID-01",
+   "type": "mechanical",
+   "statement": "every REQ in brief covered by at least one TEST case; evidence paths exist",
+   "command": "python tools/pilot_simple_map_check.py --request knowledge/active/<request_id> --candidate <candidate_dir>",
+   "evidence_fields": [
+    "coverage_json",
+    "dangling_paths"
+   ],
+   "on_fail": "block_end"
+  },
+  {
+   "check_id": "HP-04",
+   "rule_ref": "R-EVID-01",
+   "type": "model_visual",
+   "statement": "visual cases TEST-02/03/04 pass on the current image SHA",
+   "command": "manual crop inspection + value stats",
+   "evidence_fields": [
+    "test_ids",
+    "evidence_paths",
+    "image_sha256"
+   ],
+   "on_fail": "rework"
+  }
+ ],
+ "end_policy": {
+  "allowed_end_states": [
+   "target_met",
+   "blocked_external"
+  ],
+  "blocked_external_requires": [
+   "attempt_1",
+   "attempt_2",
+   "hashes",
+   "recovery_condition"
+  ],
+  "stop_request_overrides_quality_gate": true
+ },
+ "capabilities_not_implemented": [
+  "knowledge router automation",
+  "automatic visual scoring",
+  "cross-business hook dispatch",
+  "this spec is not wired into any hook yet"
+ ]
+}

@@ -1,0 +1,34 @@
+{
+ "check": "S10",
+ "camera": {
+  "Camera": {
+   "lens": 50.0,
+   "ortho": 420.0,
+   "location": [
+    120.0,
+    -44.0,
+    300.0
+   ]
+  },
+  "CameraCore": {
+   "lens": 50.0,
+   "ortho": 148.0,
+   "location": [
+    120.0,
+    67.0,
+    300.0
+   ]
+  },
+  "CameraHero": {
+   "lens": 58.0,
+   "ortho": null,
+   "location": [
+    -42.0,
+    -236.0,
+    168.0
+   ]
+  }
+ },
+ "core_px_per_m": 14.0,
+ "pass": true
+}

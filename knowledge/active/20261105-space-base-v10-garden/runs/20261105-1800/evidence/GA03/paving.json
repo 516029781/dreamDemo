@@ -1,0 +1,25 @@
+{
+ "check": "GA03",
+ "secondary_u": 13,
+ "secondary_v": 16,
+ "primary_u": 4,
+ "primary_v": 5,
+ "joint_pitch_m": [
+  6.0
+ ],
+ "primary_pitch_m": [
+  24.0
+ ],
+ "secondary_width_m": 0.03,
+ "primary_width_m": 0.06,
+ "rust_halo_width_m": 0.12,
+ "perimeter_band_count": 8,
+ "perimeter_band_width_m": 1.2,
+ "coping_bevel_m": [
+  0.045,
+  0.045,
+  0.045,
+  0.045
+ ],
+ "pass": true
+}

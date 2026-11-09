@@ -1,0 +1,28 @@
+C:\软件\鼠鼠\tools\blender_space_base\build_scene_v9.py:130: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m.use_nodes = True
+C:\软件\鼠鼠\tools\blender_space_base\build_scene_v9.py:1681: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m.use_nodes = True
+C:\软件\鼠鼠\tools\blender_space_base\build_scene_v9.py:1791: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m.use_nodes = True
+C:\软件\鼠鼠\tools\blender_space_base\build_scene_v9.py:2259: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  world.use_nodes = True
+CARDS palms=4
+FURNITURE_PLACED 109
+SURFACE_TEX on 8 materials
+IL_SHADER on 9 materials
+BEVELED 969
+CULL removed=23
+SCENE_STATS objects=1926 meshes=23053 furniture=109
+Info: Saved as "scene.blend"
+BUILD_OK v08 art/static_map/space_base_minigame/v09/scene.blend 
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:37:16)
+
+Blender quit
+00:00.516  blend            | Read blend: "C:\软件\鼠鼠\art\static_map\space_base_minigame\v09\scene.blend"
+07:02.828  render           | Saved: 'C:\软件\鼠鼠\art\static_map\space_base_minigame\v09\renders\master_raw.png'
+09:15.016  render           | Saved: 'C:\软件\鼠鼠\art\static_map\space_base_minigame\v09\renders\core_raw.png'
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:37:16)
+
+Blender quit
+{"S1": false, "G4": false, "G7": true, "W1": true, "S11": false, "S12": true, "S13": false, "S14": true, "S15": true, "jpg": 430995}
+POST_OK

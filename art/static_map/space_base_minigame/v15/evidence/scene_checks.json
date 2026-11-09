@@ -1,0 +1,154 @@
+{
+ "schema": "v15-scene-check-v1",
+ "checks": {
+  "I1": {
+   "value": {
+    "H1": {
+     "expected": 6,
+     "present": 6,
+     "missing": [],
+     "pass": true
+    },
+    "H2": {
+     "expected": 6,
+     "present": 6,
+     "missing": [],
+     "pass": true
+    },
+    "H3": {
+     "expected": 6,
+     "present": 6,
+     "missing": [],
+     "pass": true
+    },
+    "H4": {
+     "expected": 6,
+     "present": 6,
+     "missing": [],
+     "pass": true
+    }
+   },
+   "pass": true
+  },
+  "I4": {
+   "value": {
+    "H1": {
+     "cap_material": "v15.cap_h1",
+     "pass": true
+    },
+    "H2": {
+     "cap_material": "v15.cap_h2",
+     "pass": true
+    },
+    "H3": {
+     "cap_material": "v15.cap_h3",
+     "pass": true
+    },
+    "H4": {
+     "cap_material": "v15.cap_h4",
+     "pass": true
+    }
+   },
+   "pass": true
+  },
+  "I6": {
+   "value": {
+    "objects": 1751,
+    "delta": 366,
+    "materials": 82
+   },
+   "pass": true
+  },
+  "I7": {
+   "value": {
+    "roof_tokens": [],
+    "ceo": [],
+    "flat_slabs": []
+   },
+   "pass": true
+  },
+  "I11": {
+   "value": {
+    "H1": {
+     "count": 52,
+     "density": 0.045,
+     "target": ">=52 parts (0.045/m2)",
+     "pass": true
+    },
+    "H2": {
+     "count": 53,
+     "density": 0.0458,
+     "target": ">=52 parts (0.045/m2)",
+     "pass": true
+    },
+    "H3": {
+     "count": 52,
+     "density": 0.045,
+     "target": ">=52 parts (0.045/m2)",
+     "pass": true
+    },
+    "H4": {
+     "count": 52,
+     "density": 0.045,
+     "target": ">=52 parts (0.045/m2)",
+     "pass": true
+    }
+   },
+   "pass": true
+  },
+  "I12": {
+   "value": {
+    "H1": {
+     "groups": 2,
+     "pass": true
+    },
+    "H2": {
+     "groups": 3,
+     "pass": true
+    },
+    "H3": {
+     "groups": 1,
+     "pass": true
+    },
+    "H4": {
+     "groups": 2,
+     "pass": true
+    }
+   },
+   "pass": true
+  },
+  "I5": {
+   "value": {
+    "families_ge5": 8,
+    "largest": [
+     [
+      "h4_v15",
+      83
+     ],
+     [
+      "h1_v15",
+      76
+     ],
+     [
+      "h3_v15",
+      64
+     ],
+     [
+      "h2_v15",
+      57
+     ],
+     [
+      "h2_v15_office",
+      9
+     ],
+     [
+      "h1_v15_cabn",
+      6
+     ]
+    ]
+   },
+   "pass": true,
+   "note": "manual review: rows/columns are intentional, mirror duplication is not"
+  }
+ }
+}

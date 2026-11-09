@@ -1,0 +1,32 @@
+{
+ "image": "C:/软件/鼠鼠/art/static_map/space_base_minigame/v14/renders/master_raw.png",
+ "image_sha256": "5b08c4499a35d926635eb9d14b6024a380c0f8516e82b69dbe3815016c60c3f5",
+ "size": [
+  1680,
+  2478
+ ],
+ "land_ratio": 0.2238,
+ "A1_land_L_p50": 0.5675,
+ "A2_bright_gt080_pct": 0.78,
+ "A3_dark_lt030_pct": 9.55,
+ "A4_span_p90_p10": 0.428,
+ "A5_clip_gt097_pct": 0.029,
+ "A10_band_gradient_proxy": [
+  0.00981,
+  0.00986,
+  0.00597
+ ],
+ "A13_mean_saturation": 0.2658,
+ "S1_light_land": 0.0172,
+ "S1_light_land_420x735": 0.0168,
+ "S1_pass": false,
+ "extra": {
+  "land_L_p10": 0.3039,
+  "land_L_p90": 0.7319,
+  "land_L_mean": 0.5301,
+  "land_L_std": 0.1584,
+  "sat_full_frame": 0.5166
+ },
+ "label": "v14 r1 full delivery size",
+ "schema": "v14-art-metrics-v1"
+}

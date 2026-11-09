@@ -1,0 +1,63 @@
+{
+ "schema": "baseline-manifest-v1",
+ "baseline_id": "design_r15",
+ "request_id": "20261108-space-base-v13-testworkshop",
+ "created_at": "2026-11-08T17:55+08:00",
+ "status": "frozen",
+ "contents": [
+  {
+   "role": "solution_design",
+   "path": "SOLUTION_DESIGN.md",
+   "sha256": "cc4217ed7da00f1cf00be1c28584c2762f8d468e77ac4e06c2e008199c35978a",
+   "copied": true
+  },
+  {
+   "role": "requirements_brief",
+   "path": "REQUIREMENTS_BRIEF.md",
+   "sha256": "1d135f2132e88fa10521fcd45d65868eca3af322d2d3bc98a7c08586619c9baa",
+   "copied": true
+  },
+  {
+   "role": "test_cases",
+   "path": "test_cases.json",
+   "sha256": "1636474d54b3f62beed1fbf35d9ffaaa4ac78746a1cd70555c8f11b6468e19a0",
+   "copied": true
+  },
+  {
+   "role": "dev_review",
+   "path": "DEV_FEASIBILITY_REVIEW.md",
+   "sha256": "04133b5599af91242aac2a4dcdb76f2c72b4ee760b89d112abc15662e12e8eb2",
+   "copied": true
+  },
+  {
+   "role": "parent_scene",
+   "path": "art/static_map/space_base_minigame/v12/scene.blend",
+   "sha256": "967c1505c7d700c6abb280ec8f91a3d5f8e21da42a2a0b6ef2265a6e2605704c",
+   "copied": false
+  },
+  {
+   "role": "parent_master",
+   "path": "art/static_map/space_base_minigame/v12/renders/master_raw.png",
+   "sha256": "cb57110f8126cd32bf876b60278f7a71879bb26023203cc82a75b0483bb297c0",
+   "copied": false
+  },
+  {
+   "role": "visual_reference",
+   "path": "reference/_df_screenshots/gamersky/12_水平试车间.jpg",
+   "sha256": "21076db950035a26a0c19369ee8251a35941042c21ffbb62fe4035afc13d880e",
+   "copied": false
+  },
+  {
+   "role": "structural_reference",
+   "path": "reference/_df_screenshots/gamersky/01_航天基地.jpg",
+   "sha256": "4b5ef636e55182a02c1fe62d59cc1cc7c8c43d2904a7e5d06bdaafe4cfa60dfe",
+   "copied": false
+  }
+ ],
+ "immutability": "frozen baselines are never edited in place; create design_r16 and re-approve affected items",
+ "dev_review": {
+  "path": "DEV_FEASIBILITY_REVIEW.md",
+  "status": "confirmed"
+ },
+ "parent_baseline_id": "design_r14"
+}

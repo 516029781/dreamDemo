@@ -1,0 +1,37 @@
+{
+ "schema": "baseline-manifest-v1",
+ "design_version": "r09",
+ "run_id": "20261105-1800",
+ "supersedes": "design_r08",
+ "note": "r09 = v1.5：半岛立面套件 G15（K07 反贴修正 + 门窗框/雨棚/落水管/墙灯/卷帘分节）+ REQ-39 / GA11",
+ "entries": [
+  {
+   "path": "SPACE_BASE_GARDEN_OUTFIELD_PLAN_20261105.md",
+   "sha256": "6912cfc82e63190f9f4ce7a1e0521a9911831558b648920e76c49077f7ce4f9f"
+  },
+  {
+   "path": "SPACE_BASE_GARDEN_HARNESS_DEV_PLAN_20261105.md",
+   "sha256": "5dcad343fc50800185371ab9f683af684dcbeb11affe28ced0c9e7a1bfc03623"
+  },
+  {
+   "path": "REQUIREMENTS_BRIEF.md",
+   "sha256": "87a9c4d82416834eaebafb2929c437f6180102d35538f23ab612daa2bafc5fa8"
+  },
+  {
+   "path": "HARNESS_SPEC.json",
+   "sha256": "59c060ad87ca92ba485f5be26fb93b652640f95418ce09eac8f1648e0860ad2c"
+  },
+  {
+   "path": "build_scene_v10.py",
+   "sha256": "5d52e0c93a510506b9ff6ea781eb0b7ba8b91a0d1f2d3ff69ac174dc25be484b"
+  },
+  {
+   "path": "evidence_v10.py",
+   "sha256": "dbf0791508c6eaa0b6a8c42550ad7c4b2cc82293b8584c87ab29de5828267d1c"
+  },
+  {
+   "path": "space_base_check_v7.py",
+   "sha256": "b8e2827f29a8f8193c2aa8858cb60ac34b4358e1f7593f8556f814782a9ba2ca"
+  }
+ ]
+}

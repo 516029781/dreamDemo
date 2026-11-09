@@ -1,0 +1,26 @@
+{
+ "master": {
+  "size": [
+   3840,
+   5120
+  ],
+  "bytes": 13741781
+ },
+ "ship": {
+  "size": [
+   1920,
+   2560
+  ],
+  "bytes": 463201,
+  "max_edge": 2560,
+  "limit_bytes": 3145728,
+  "alpha": false
+ },
+ "js_bytes": 22616,
+ "config_bytes": 1390,
+ "main_package_arithmetic_bytes": 487207,
+ "main_limit_bytes": 4194304,
+ "total_limit_bytes": 31457280,
+ "status": "pass",
+ "note": "W1/W2 are recomputed by space_base_check_v2.py"
+}

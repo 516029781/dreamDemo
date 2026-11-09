@@ -1,0 +1,9 @@
+{
+ "check": "S12",
+ "rule": "r04: side frames water >=0.55; no wide artificial boundary row; top frame may contain north-band skyline",
+ "top_row_water_ratio": 0.665,
+ "side_water_ratio": 0.712,
+ "wide_boundary_rows": 0,
+ "max_jump": 184.0,
+ "pass": true
+}

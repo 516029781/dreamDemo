@@ -1,0 +1,40 @@
+{
+ "check": "S10",
+ "core_px": 2072,
+ "ortho_scale": 148.0,
+ "px_per_m": 14.0,
+ "same_scene": true,
+ "cameras": {
+  "Camera": {
+   "type": "ORTHO",
+   "ortho_scale": 420.0,
+   "lens": 50.0,
+   "location": [
+    120.0,
+    -44.0,
+    300.0
+   ]
+  },
+  "CameraCore": {
+   "type": "ORTHO",
+   "ortho_scale": 148.0,
+   "lens": 50.0,
+   "location": [
+    120.0,
+    67.0,
+    300.0
+   ]
+  },
+  "CameraHero": {
+   "type": "PERSP",
+   "ortho_scale": 6.0,
+   "lens": 58.0,
+   "location": [
+    -42.0,
+    -236.0,
+    168.0
+   ]
+  }
+ },
+ "pass": true
+}

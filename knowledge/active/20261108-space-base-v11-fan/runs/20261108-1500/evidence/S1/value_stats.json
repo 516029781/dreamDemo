@@ -1,0 +1,6 @@
+{
+ "check": "S1",
+ "light_land": 0.696,
+ "rule": "land light-value ratio >= 0.45",
+ "pass": true
+}

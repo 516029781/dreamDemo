@@ -1,0 +1,33 @@
+{
+ "check": "GA04",
+ "wall_height_m": 1.1,
+ "wall_thickness_m": 0.4,
+ "band_z_rel_deck": [
+  0.6,
+  0.78
+ ],
+ "band_standout_m": 0.03,
+ "coping_z_rel_deck": [
+  1.1,
+  1.28
+ ],
+ "coping_width_m": 0.52,
+ "pilaster_spacing_m": [
+  4.5
+ ],
+ "pilaster_count": 12,
+ "wall_segments": 8,
+ "gate_openings": [
+  {
+   "t": 40.0,
+   "wall_inside_13m": [],
+   "open": true
+  },
+  {
+   "t": 114.0,
+   "wall_inside_13m": [],
+   "open": true
+  }
+ ],
+ "pass": true
+}

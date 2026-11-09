@@ -1,0 +1,27 @@
+{
+ "test_id": "TV13-04",
+ "props_total": 29,
+ "props_per_400m2": 1.45,
+ "sample": [
+  "fc_crate_0",
+  "fc_crate_1",
+  "fc_crate_2",
+  "fc_crate_3",
+  "fc_ctn0",
+  "fc_ctn1",
+  "fc_ctn2",
+  "fc_ctn2_0",
+  "fc_ctn2_1",
+  "fc_ctn2_2",
+  "gpar_h_0_0",
+  "gpar_h_0_1",
+  "gpar_h_0_2",
+  "gpar_h_1_0",
+  "gpar_h_1_1",
+  "gpar_h_1_2",
+  "gpool_basin",
+  "gpool_jet",
+  "gsvc_ct_0",
+  "gsvc_ct_1"
+ ]
+}

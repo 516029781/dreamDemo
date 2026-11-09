@@ -1,0 +1,162 @@
+{
+ "test_id": "TEST-G1",
+ "check": "G1",
+ "camera": {
+  "location": [
+   120.0,
+   568.23,
+   819.2
+  ],
+  "rotation_deg": [
+   35.0,
+   0.0,
+   180.0
+  ],
+  "ortho_scale": 240.0,
+  "sensor_fit": "HORIZONTAL",
+  "resolution": [
+   1920,
+   2560
+  ],
+  "image_contract": "final_px = W - raw_px; py = 70+(y+190)*6.5536; W=1920,H=2560"
+ },
+ "points": [
+  {
+   "point": "x=0 wall",
+   "world": [
+    0.0,
+    0.0,
+    0.02
+   ],
+   "raw_px": 1920.0,
+   "final_px": -0.0,
+   "py": 1315.165,
+   "expected_px": 0.0,
+   "expected_py": 1315.18,
+   "error_px": 0.015,
+   "pass": true
+  },
+  {
+   "point": "x=240 wall",
+   "world": [
+    240.0,
+    0.0,
+    0.02
+   ],
+   "raw_px": 0.0,
+   "final_px": 1920.0,
+   "py": 1315.165,
+   "expected_px": 1920.0,
+   "expected_py": 1315.18,
+   "error_px": 0.015,
+   "pass": true
+  },
+  {
+   "point": "south wall y-190",
+   "world": [
+    120.0,
+    -190.0,
+    0.02
+   ],
+   "raw_px": 960.001,
+   "final_px": 959.999,
+   "py": 70.054,
+   "expected_px": 960.0,
+   "expected_py": 70.0,
+   "error_px": 0.054,
+   "pass": true
+  },
+  {
+   "point": "north wall y190",
+   "world": [
+    120.0,
+    190.0,
+    0.02
+   ],
+   "raw_px": 960.0,
+   "final_px": 960.0,
+   "py": 2560.276,
+   "expected_px": 960.0,
+   "expected_py": 2560.0,
+   "error_px": 0.276,
+   "pass": true
+  },
+  {
+   "point": "south exit",
+   "world": [
+    120.0,
+    -30.0,
+    0.02
+   ],
+   "raw_px": 960.0,
+   "final_px": 960.0,
+   "py": 1118.568,
+   "expected_px": 960.0,
+   "expected_py": 1119.0,
+   "error_px": 0.432,
+   "pass": true
+  },
+  {
+   "point": "workshop north gate",
+   "world": [
+    120.0,
+    -60.0,
+    0.02
+   ],
+   "raw_px": 960.0,
+   "final_px": 960.0,
+   "py": 921.972,
+   "expected_px": 960.0,
+   "expected_py": 922.0,
+   "error_px": 0.028,
+   "pass": true
+  },
+  {
+   "point": "evac",
+   "world": [
+    195.0,
+    -180.0,
+    0.02
+   ],
+   "raw_px": 360.001,
+   "final_px": 1559.999,
+   "py": 135.586,
+   "expected_px": 1560.0,
+   "expected_py": 136.0,
+   "error_px": 0.414,
+   "pass": true
+  },
+  {
+   "point": "exit west edge",
+   "world": [
+    112.5,
+    -30.0,
+    0.02
+   ],
+   "raw_px": 1020.0,
+   "final_px": 900.0,
+   "py": 1118.568,
+   "expected_px": 900.0,
+   "expected_py": 1119.0,
+   "error_px": 0.432,
+   "pass": true
+  },
+  {
+   "point": "exit east edge",
+   "world": [
+    127.5,
+    -30.0,
+    0.02
+   ],
+   "raw_px": 900.0,
+   "final_px": 1020.0,
+   "py": 1118.568,
+   "expected_px": 1020.0,
+   "expected_py": 1119.0,
+   "error_px": 0.432,
+   "pass": true
+  }
+ ],
+ "max_error_px": 0.432,
+ "pass": true
+}

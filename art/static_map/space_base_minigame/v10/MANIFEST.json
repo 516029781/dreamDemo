@@ -1,0 +1,94 @@
+{
+ "schema": "manifest-v1",
+ "request_id": "20261105-space-base-v10-garden",
+ "run_id": "20261105-1800",
+ "entries": [
+  {
+   "path": "scene.blend",
+   "sha256": "7537d7be7d11920e7c08f9f87f24fceb74d529413c4f8e037c41b87e114dc3d2",
+   "bytes": 1140314
+  },
+  {
+   "path": "renders/space_base_v10_master.png",
+   "sha256": "9e58df426d77f6136e0deb8653a89f12b2edfe3d1b55c05077b4ed06a31a0b5d",
+   "bytes": 5881079
+  },
+  {
+   "path": "renders/master_raw.png",
+   "sha256": "af55333ca001aee1bddcbbd047ff93539e2f371753820a2029692dff34360e09",
+   "bytes": 18564042
+  },
+  {
+   "path": "renders/space_base_v10.jpg",
+   "sha256": "96be898545e64e07e9e57565882f7dcfca5b329f6b6f5967110de16798d850d1",
+   "bytes": 499473
+  },
+  {
+   "path": "renders/space_base_v10_core.png",
+   "sha256": "62eb39fe9492b6155e8b53f658763d1e2552c3d287ef4c4aa4d377c4acdce86b",
+   "bytes": 3043389
+  },
+  {
+   "path": "renders/core_raw.png",
+   "sha256": "ebaa586d347bbc64814c67a82ef585ee568406cae9e436ee288b1be91373fdcb",
+   "bytes": 3902316
+  },
+  {
+   "path": "renders/space_base_v10_hero.png",
+   "sha256": "533d195ae66ffe443d0c9d708a5e85d0212885fa92c028161f4b5ab521cf12bd",
+   "bytes": 2121074
+  },
+  {
+   "path": "renders/space_base_v10_hero.jpg",
+   "sha256": "c1c7807bb123ee559111782c6adba593a51a55fe8603b629ede6ef8e6ce84077",
+   "bytes": 346170
+  },
+  {
+   "path": "renders/hero_raw.png",
+   "sha256": "7d048059ef13fc84d8e030595ba0aa11109bcb3acf7f04743eb98ed6c73840b8",
+   "bytes": 2592707
+  },
+  {
+   "path": "renders/checks/01_core.png",
+   "sha256": "8036048bf5dd3a5059122f87cc3efebb2738f5955d038145a8121766d22ebc65",
+   "bytes": 1263366
+  },
+  {
+   "path": "renders/checks/02_avenue_bridge.png",
+   "sha256": "c7d31f24286c0f74c11998e31b6ce361f349e4ca3c26aab8a5ec85087d381d98",
+   "bytes": 2180646
+  },
+  {
+   "path": "renders/checks/03_peninsula.png",
+   "sha256": "d37abed3e4042c6a86d1143d241baddb843e4803892edc1dfb69068a904003a7",
+   "bytes": 712080
+  },
+  {
+   "path": "renders/checks/04_avenue_head.png",
+   "sha256": "a3165f13b189890318f56042a6c05f480d5378aa30189e1a1d479d6e0ad5846e",
+   "bytes": 580970
+  },
+  {
+   "path": "renders/checks/05_g5_pair.png",
+   "sha256": "2a915c62f67efcb427941a8322af0630f1952e28018a30ff6b31dfaa770aaccf",
+   "bytes": 583950
+  },
+  {
+   "path": "renders/checks/06_paving.png",
+   "sha256": "5ea8e2270ac85ce007a275c2dfa8b11a521fdcb9bfc93ebf2a7821170041560b",
+   "bytes": 1753334
+  },
+  {
+   "path": "renders/checks/07_wall.png",
+   "sha256": "30a384b087b0205d195b1f623e7fc1b822242b70b595284f6dd18c80e9947533",
+   "bytes": 1476962
+  },
+  {
+   "path": "renders/hero/HeroRoute.png",
+   "sha256": "e9fedb62a2890ee212ac9026e08ad529e25685e6ecc8220dbf36753878ec2f7d",
+   "bytes": 2317899
+  }
+ ],
+ "font_license": "无随包字体；数字/字母为脚本自绘矢量（tools/space_base_v10_post.py vdigit），中文未烘焙",
+ "assets": "叶卡 3 张随包（card_grass/bush/palm.png，自绘，OFL 等效自产）"
+}

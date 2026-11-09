@@ -1,0 +1,10 @@
+{
+ "schema": "delivery-v1",
+ "request_id": "20261108-space-base-v15-rooms",
+ "run_id": "20261108-2320",
+ "map_png": "renders/space_base_v15_master.png",
+ "map_jpg": "renders/space_base_v15.jpg",
+ "hero": "renders/space_base_v15_hero.png",
+ "core_tile": "renders/space_base_v15_core.png",
+ "status": "mechanical_complete_visual_pending"
+}

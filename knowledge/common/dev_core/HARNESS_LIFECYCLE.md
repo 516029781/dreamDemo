@@ -22,9 +22,15 @@
 
 ## 3. 证据契约（R-EVID-01 唯一正文）
 
+- 每个交付绑定两种 SHA，不可混用：
+  - **content SHA（像素）**：对解码后的 raw RGB 取 SHA256，用于复现比对与"同图"判定；
+  - **container SHA（文件）**：对文件字节取 SHA256，仅作归档标识。
+  PNG/JPEG 会写入路径、时间、渲染耗时等元数据，同一画面两次导出 container SHA 必然不同——
+  2026-11-02 pilot 实测：像素差 0、content SHA 相同、container SHA 不同。
+  因此"复现通过"只比 content SHA；把 container SHA 当门槛会制造假失败。
 - 源、候选、证据分离；候选目录不得回写设计快照。
 - 每个交付绑定完整 SHA256：源、最终图、报告、复现记录。
-- 同一图 SHA 变更后，旧视觉评分失效，须重跑受影响用例；交付前跑全量。
+- 同一图 content SHA 变更后，旧视觉评分失效，须重跑受影响用例；交付前跑全量。
 - 复现验证必须在隔离目录重开源并重渲，记录命令、退出码、耗时与结果 SHA；未留证则标 `unverified`。
 - 允许降采样/降噪差异须在报告中预先声明容差；不得事后放宽。
 - `not_run` / `not_applicable` / `failed` 不得写成 `pass`；`diagnostic_only` 不计 PASS。

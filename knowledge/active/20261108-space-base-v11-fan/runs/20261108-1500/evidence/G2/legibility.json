@@ -1,0 +1,7 @@
+{
+ "check": "G2",
+ "crop": "G2/core_crop.png",
+ "crop_sha256": "1fb4f069f2a581d948ea9c5e212eca1ddbb8732fcd4482b044c51ab3b1f3360f",
+ "note": "遮住标题后仍可辨：四厅（北侧四条长屋面）/ 中央过道 / 花园 / 半岛码头",
+ "pass": true
+}

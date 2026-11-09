@@ -1,0 +1,502 @@
+{
+ "schema": "harness-spec-v1",
+ "business_id": "space_base_minigame",
+ "spec_version": "r12",
+ "applies_to": "space_base_minigame / v11 fan site (design r11)",
+ "run_identity_required": {
+  "project_root": true,
+  "session_id": true,
+  "request_id": true,
+  "run_id": true,
+  "business_id": true
+ },
+ "required_checks": [
+  "G1",
+  "G2",
+  "G6",
+  "G8",
+  "W1",
+  "S1",
+  "S2",
+  "S3",
+  "S8",
+  "S9",
+  "S10",
+  "S12",
+  "S15"
+ ],
+ "external_checks": [
+  "A1",
+  "W3",
+  "W4"
+ ],
+ "checks": [
+  {
+   "check_id": "G1",
+   "rule_ref": "spec §9.7.1 G1",
+   "type": "mechanical",
+   "statement": "240 m = 1680 px（7 px/m）；master 3360×5880；交付 1680×2478；误差 ≤2 px",
+   "evidence_fields": [
+    "width",
+    "height",
+    "scale_px_per_m",
+    "projection_points"
+   ],
+   "on_fail": "rework"
+  },
+  {
+   "check_id": "G2",
+   "rule_ref": "spec §9.7.1 G2",
+   "type": "visual",
+   "statement": "遮住文字仍能辨出 H1/H2/H3/H4/总裁/花园/试车间",
+   "evidence_fields": [
+    "crop_paths",
+    "image_sha256"
+   ],
+   "on_fail": "rework"
+  },
+  {
+   "check_id": "G3",
+   "rule_ref": "spec §9.7.1 G3",
+   "type": "visual",
+   "statement": "总裁两条竖梯入口读得出；落地层四边实墙；环廊摸不到门",
+   "evidence_fields": [
+    "core_crop",
+    "geom_check",
+    "image_sha256"
+   ],
+   "on_fail": "rework"
+  },
+  {
+   "check_id": "G4",
+   "rule_ref": "spec §9.7.1 G4",
+   "type": "visual",
+   "statement": "撤离黄框为黄色（R,G 比 B 高 ≥55；0.7 m 条在 7 px/m 下有抗锯齿）；岛南豁口可通行；撤离蓝光蓝占优",
+   "evidence_fields": [
+    "probes",
+    "image_sha256"
+   ],
+   "on_fail": "rework"
+  },
+  {
+   "check_id": "G5",
+   "rule_ref": "spec §9.7.1 G5",
+   "type": "visual",
+   "statement": "从北门看，集装箱挡住撤离黄框",
+   "evidence_fields": [
+    "crop_path",
+    "image_sha256"
+   ],
+   "on_fail": "rework"
+  },
+  {
+   "check_id": "G6",
+   "rule_ref": "spec §9.7.1 G6",
+   "type": "mechanical",
+   "statement": "无悬浮块/断墙/穿模；6 格扫视",
+   "evidence_fields": [
+    "geom_check",
+    "crop_paths"
+   ],
+   "on_fail": "rework"
+  },
+  {
+   "check_id": "G7",
+   "rule_ref": "spec §9.7.1 G7",
+   "type": "mechanical",
+   "statement": "四边跟随边界不越界/无黑边/角色在视口内",
+   "evidence_fields": [
+    "viewport_math",
+    "crop_paths"
+   ],
+   "on_fail": "rework"
+  },
+  {
+   "check_id": "G8",
+   "rule_ref": "spec §9.7.1 G8",
+   "type": "visual",
+   "statement": "堤道与半岛甲板同屏（checks/02_causeway_hall.png），接缝无材质跳变；岛南缘豁口与发射区堤首同屏不穿模",
+   "evidence_fields": [
+    "seam_crop",
+    "image_sha256"
+   ],
+   "on_fail": "rework"
+  },
+  {
+   "check_id": "W1",
+   "rule_ref": "spec §9.7.2 W1 / §7.9",
+   "type": "mechanical",
+   "statement": "JPEG ≤3 MB；1680×2478；max edge ≤4096；无 alpha",
+   "evidence_fields": [
+    "file_bytes",
+    "dimensions",
+    "format"
+   ],
+   "on_fail": "rework"
+  },
+  {
+   "check_id": "W2",
+   "rule_ref": "spec §9.7.2 W2 / §7.9",
+   "type": "mechanical",
+   "statement": "主包算术≤4 MB；主包+分包≤30 MB；地图标记为分包资产",
+   "evidence_fields": [
+    "map_bytes",
+    "project_bytes",
+    "package_note"
+   ],
+   "on_fail": "rework"
+  },
+  {
+   "check_id": "S1",
+   "rule_ref": "spec §9.7.3 S1",
+   "type": "visual",
+   "statement": "陆地相对浅色占比 ≥45%（水掩膜外；全帧值仅记录）",
+   "evidence_fields": [
+    "value_stats",
+    "water_mask",
+    "image_sha256"
+   ],
+   "on_fail": "rework"
+  },
+  {
+   "check_id": "S2",
+   "rule_ref": "spec §9.7.3 S2",
+   "type": "visual",
+   "statement": "整图绿占比 <= 0.12（r04：v07 工业带/渠道按方案使用灰绿工业色，0.08 为 v06 口径，阈值随合法地景演进）",
+   "evidence_fields": [
+    "hue_stats",
+    "image_sha256"
+   ],
+   "on_fail": "rework"
+  },
+  {
+   "check_id": "S3",
+   "rule_ref": "spec §9.7.3 S3",
+   "type": "visual",
+   "statement": "橙≤2%，只在扶手/门头/警示条",
+   "evidence_fields": [
+    "hue_stats",
+    "image_sha256"
+   ],
+   "on_fail": "rework"
+  },
+  {
+   "check_id": "S4",
+   "rule_ref": "spec §9.7.3 S4",
+   "type": "visual",
+   "statement": "五室各只有一个色相签名",
+   "evidence_fields": [
+    "crop_paths",
+    "image_sha256"
+   ],
+   "on_fail": "rework"
+  },
+  {
+   "check_id": "S5",
+   "rule_ref": "spec §9.7.3 S5",
+   "type": "visual",
+   "statement": "没有圆角（金属 R≤0.05，混凝土不倒角）",
+   "evidence_fields": [
+    "closeup_paths",
+    "image_sha256"
+   ],
+   "on_fail": "rework"
+  },
+  {
+   "check_id": "S6",
+   "rule_ref": "spec §9.7.3 S6",
+   "type": "visual",
+   "statement": "地面 3×3 分区与墙脚带成立；墙面竖缝降级为不可见项（记录）",
+   "evidence_fields": [
+    "closeup_paths",
+    "image_sha256"
+   ],
+   "on_fail": "rework"
+  },
+  {
+   "check_id": "S7",
+   "rule_ref": "spec §9.7.3 S7",
+   "type": "visual",
+   "statement": "阴影 0.6–0.8 倍硬边；总裁是唯一暖区",
+   "evidence_fields": [
+    "shadow_check",
+    "image_sha256"
+   ],
+   "on_fail": "rework"
+  },
+  {
+   "check_id": "A1",
+   "rule_ref": "spec §9.7.4 A1",
+   "type": "external",
+   "statement": "角色阴影方向与场景主光一致；本轮无角色层",
+   "evidence_fields": [
+    "runtime_note"
+   ],
+   "on_fail": "external"
+  },
+  {
+   "check_id": "W3",
+   "rule_ref": "spec §9.7.2 W3",
+   "type": "external",
+   "statement": "真机首帧≤1.5 s；运行内存≤150 MB；无 page error",
+   "evidence_fields": [
+    "device_log"
+   ],
+   "on_fail": "external"
+  },
+  {
+   "check_id": "W4",
+   "rule_ref": "spec §9.7.2 W4",
+   "type": "external",
+   "statement": "低端机自动选 1440×1920 或 1280×1707；世界坐标一致",
+   "evidence_fields": [
+    "device_log"
+   ],
+   "on_fail": "external"
+  },
+  {
+   "check_id": "S8",
+   "rule_ref": "upgrade plan §5 / r02",
+   "type": "mechanical",
+   "statement": "≥8 类材质带 base/roughness 变化（Noise+ColorRamp 链）",
+   "evidence_fields": [
+    "material_layers"
+   ],
+   "on_fail": "rework"
+  },
+  {
+   "check_id": "S9",
+   "rule_ref": "upgrade plan P0-C / r02",
+   "type": "mechanical",
+   "statement": "≥500 个硬表面对象带 Bevel 修改器（0.06–0.08 / 2 段 / 30°）",
+   "evidence_fields": [
+    "bevel_count"
+   ],
+   "on_fail": "rework"
+  },
+  {
+   "check_id": "S10",
+   "rule_ref": "upgrade plan P1-E / r02",
+   "type": "mechanical",
+   "statement": "核心区 ≥14 px/m，高清片与主图同源（同一 scene.blend）",
+   "evidence_fields": [
+    "core_density",
+    "camera"
+   ],
+   "on_fail": "rework"
+  },
+  {
+   "check_id": "S11",
+   "rule_ref": "unified plan §9.1 / r03",
+   "type": "mechanical",
+   "statement": "明度跨度：逐区 L 的 p25–p75 ≥0.22，任一区域中位 ≤0.80",
+   "evidence_fields": [
+    "value_span"
+   ],
+   "on_fail": "rework",
+   "diagnostic_only": true
+  },
+  {
+   "check_id": "S12",
+   "rule_ref": "unified plan §9.1 / r03",
+   "type": "mechanical",
+   "statement": "英雄图：左右画框水色占比 >=0.55（西侧开阔海面）；无宽人工边界行（单行跳变>8/255 像素占比>0.4 的行数=0）；上框允许北外圈天际线入画（r04 记录，v07 北带为合法地景）",
+   "evidence_fields": [
+    "water_border"
+   ],
+   "on_fail": "rework",
+   "diagnostic_only": false
+  },
+  {
+   "check_id": "S13",
+   "rule_ref": "unified plan §9.1 / r03",
+   "type": "mechanical",
+   "statement": "插画指标：三峰直方图峰距 ≥0.12；暗部 b* −6±2；笔触覆盖 ≥30%",
+   "evidence_fields": [
+    "illustration_metrics"
+   ],
+   "on_fail": "rework",
+   "diagnostic_only": true
+  },
+  {
+   "check_id": "S14",
+   "rule_ref": "unified plan §9.1 / r03",
+   "type": "mechanical",
+   "statement": "总裁盒可读：盒内 std ≥0.15、mean ≤0.88、可见家具 ≥3 件",
+   "evidence_fields": [
+    "ceo_readout"
+   ],
+   "on_fail": "rework",
+   "diagnostic_only": false
+  },
+  {
+   "check_id": "S15",
+   "rule_ref": "unified plan §9.1 / r03",
+   "type": "mechanical",
+   "statement": "逐区配色：五区 |ΔH|≤12°、|ΔS|≤0.08、|ΔL|≤0.06（color_probe vs PALETTE.json 换算目标）",
+   "evidence_fields": [
+    "color_probe"
+   ],
+   "on_fail": "rework",
+   "diagnostic_only": true
+  }
+ ],
+ "end_policy": {
+  "allowed_end_states": [
+   "target_met",
+   "blocked_external"
+  ],
+  "required_for_target_met": [
+   "G1",
+   "G2",
+   "G6",
+   "G8",
+   "W1",
+   "S1",
+   "S2",
+   "S3",
+   "S8",
+   "S9",
+   "S10",
+   "S12",
+   "S15"
+  ],
+  "external_reported_separately": [
+   "A1",
+   "W3",
+   "W4"
+  ],
+  "blocked_external_requires": [
+   "attempt_1",
+   "attempt_2",
+   "hashes",
+   "recovery_condition"
+  ],
+  "stop_request_overrides_quality_gate": true,
+  "retired": [
+   "S5",
+   "G3",
+   "G4",
+   "G5",
+   "G7",
+   "W2",
+   "S4",
+   "S6",
+   "S7",
+   "S11",
+   "S13",
+   "S14"
+  ]
+ },
+ "capabilities_not_implemented": [
+  "automatic visual scoring",
+  "cross-business hook dispatch",
+  "WeChat real-device performance measurement",
+  "this spec is not wired into the P1 hook"
+ ],
+ "status": "draft_pending_controller",
+ "supersedes": "r06",
+ "deliverable": {
+  "width": 1680,
+  "height": 2478,
+  "master": [
+   3360,
+   5880
+  ],
+  "core_tile": [
+   2072,
+   1876
+  ],
+  "hero": [
+   1920,
+   1080
+  ],
+  "px_per_m_x": 7.0,
+  "px_per_m_y": 5.9,
+  "orientation": "north_up",
+  "orientation_note": "画面竖向对齐场地轴线（俯视相机绕 Z 轴 +20°），非正北向上",
+  "files": {
+   "master": "space_base_v11_master.png",
+   "ship": "space_base_v11.jpg",
+   "core": "space_base_v11_core.png",
+   "hero": "space_base_v11_hero.png"
+  }
+ },
+ "notes_r02": [
+  "相机/比例/朝向变更（r01 的 G1/W1/G4/S1 值全部过期）",
+  "S1 改陆地相对口径；新增 S8/S9/S10",
+  "r02 生效需控制器签认；未签认前交付标 draft_pending_controller"
+ ],
+ "notes_r03": [
+  "新增 S11–S15（统一方案 §9.1）；S11/S13/S15 首两切片 diagnostic_only",
+  "总裁盒开顶、保形换色、插画 I2+（统一方案 v1.1 §13.1 预置决策）",
+  "r03 生效需控制器签认；未签认前交付标 draft_pending_controller"
+ ],
+ "retired_checks": [
+  {
+   "check_id": "S5",
+   "reason": "池缘 0.045 圆角是 r07 起的有意设计（S9 记录），与“混凝土不倒角”冲突，退役"
+  },
+  {
+   "check_id": "G3",
+   "reason": "总裁盒已按用户要求删除，对象不存在"
+  },
+  {
+   "check_id": "G4",
+   "reason": "撤离黄框/蓝光探针绑定旧岛坐标，v11 岛已并入扇形场地，探针位失效"
+  },
+  {
+   "check_id": "G5",
+   "reason": "集装箱遮挡撤离框的镜头属于旧岛北门，随 G4 退役"
+  },
+  {
+   "check_id": "G7",
+   "reason": "近景机位 P1–P8 尚未按新核心区重对，本轮不纳入"
+  },
+  {
+   "check_id": "W2",
+   "reason": "分包与包体预算属于小游戏构建侧，本轮只交付静态图"
+  },
+  {
+   "check_id": "S4",
+   "reason": "五室色相签名改为四厅，需重定 PALETTE，本轮未做"
+  },
+  {
+   "check_id": "S6",
+   "reason": "3×3 地面分区随岛改版，需重定探针"
+  },
+  {
+   "check_id": "S7",
+   "reason": "“总裁是唯一暖区”的前提已删除"
+  },
+  {
+   "check_id": "S11",
+   "reason": "逐区明度跨度依赖旧岛探针（预置 diagnostic）"
+  },
+  {
+   "check_id": "S13",
+   "reason": "插画笔触口径对 47k m² 大地形不成立（v09/v10 均为预置 diagnostic）"
+  },
+  {
+   "check_id": "S14",
+   "reason": "总裁盒已删除"
+  }
+ ],
+ "project_checks": [
+  "GA01",
+  "GA02",
+  "GA03",
+  "GA04",
+  "GA05",
+  "GA06",
+  "GA07",
+  "GA08",
+  "GA09",
+  "GA11",
+  "GA12",
+  "GA13",
+  "GA14"
+ ],
+ "notes_r11": "v11：岛+前台+花园合并为一块扇形整地（47,399 m²，全场 +4.70）；核心区改为单层四厅 34×34 + 10 m 过道 + 31 m 附属带；总裁盒删除；花园围墙保留（橙带仍在外缘女儿墙与花园墙上）；桥 A 删除，仅保留花园—半岛桥 B。退役 11 项检查见 retired_checks，其余 14 项为本轮门禁。",
+ "notes_r12": "r12：花园由 100×74 缩到 **34×34（= 一个核心模块）**，墙内 1 池 / 4 坛 / 2 模纹 / 廊架 6 榀；核心区到花园改为**一条 48 m 宽大路面**，三条分立道路取消。其余（扇形整地、单层四厅、1:1 构件）不变。"
+}

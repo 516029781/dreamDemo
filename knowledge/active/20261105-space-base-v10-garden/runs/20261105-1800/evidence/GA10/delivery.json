@@ -1,0 +1,22 @@
+{
+ "check": "GA10",
+ "five_piece": {
+  "REVIEW.md": true,
+  "DELIVERY.json": true,
+  "GATE_REPORT.json": true,
+  "MANIFEST.json": true,
+  "REPRODUCE.md": true
+ },
+ "manifest_entries": 17,
+ "manifest_bad": [],
+ "manifest_sha256": "930d58fe29bacd69b0272be952d9d69921cb9cb59226f56944a0efdec4d37ded",
+ "reproduction": {
+  "rms": 7.483,
+  "pass": true
+ },
+ "check_summary": {
+  "hard_failures": [],
+  "pass": true
+ },
+ "pass": true
+}

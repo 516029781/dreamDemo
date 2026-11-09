@@ -1,0 +1,79 @@
+{
+ "schema": "gate-report-v1",
+ "request_id": "20261108-space-base-v14-art",
+ "run_id": "20261108-2035",
+ "stage": "N7_mechanical",
+ "pass": false,
+ "imaging": {
+  "A1_land_L_p50": {
+   "value": 0.6701,
+   "pass": true
+  },
+  "A2_bright_gt080_pct": {
+   "value": 18.7,
+   "pass": false
+  },
+  "A3_dark_lt030_pct": {
+   "value": 4.81,
+   "pass": false
+  },
+  "A4_span_p90_p10": {
+   "value": 0.4707,
+   "pass": false
+  },
+  "A5_clip_gt097_pct": {
+   "value": 0.101,
+   "pass": true
+  },
+  "A13_mean_saturation": {
+   "value": 0.1953,
+   "pass": false
+  },
+  "S1_light_land": {
+   "value": 0.5074,
+   "pass": true
+  }
+ },
+ "scene": {
+  "在用材质 A6": {
+   "value": 62,
+   "verdict": "FAIL"
+  },
+  "material_family 族数": {
+   "value": 7,
+   "verdict": "diagnostic_only"
+  },
+  "低粗糙度占比 A7": {
+   "value": 0.2449,
+   "verdict": "FAIL"
+  },
+  "metallic>0.5 材质数 A7": {
+   "value": 7,
+   "verdict": "PASS"
+  },
+  "结构块倒角 A8 (px)": {
+   "value": 1.54,
+   "verdict": "PASS"
+  }
+ },
+ "failed_metrics": [
+  "A2_bright_gt080_pct",
+  "A3_dark_lt030_pct",
+  "A4_span_p90_p10",
+  "A13_mean_saturation"
+ ],
+ "visual": {
+  "front_back_comparison": "diagnostic_only",
+  "three_person_blind_test": "not_run"
+ },
+ "note": "not_run / diagnostic_only are NOT counted as pass. Business gate is mechanical only.",
+ "business_gate": {
+  "checker": "space_base_check_v7",
+  "pass": true,
+  "hard_failures": []
+ },
+ "reproduction": {
+  "content_sha_match": true,
+  "rms": 0.0
+ }
+}

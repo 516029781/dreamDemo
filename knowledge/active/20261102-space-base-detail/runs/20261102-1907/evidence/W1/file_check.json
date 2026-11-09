@@ -1,0 +1,14 @@
+{
+ "test_id": "TEST-W1",
+ "check": "W1",
+ "size": [
+  1920,
+  2560
+ ],
+ "mode": "RGB",
+ "format": "JPEG",
+ "bytes": 463201,
+ "max_edge": 2560,
+ "limit_bytes": 3145728,
+ "pass": true
+}

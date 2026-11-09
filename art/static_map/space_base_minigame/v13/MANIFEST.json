@@ -1,0 +1,113 @@
+{
+ "schema": "manifest-v1",
+ "request_id": "20261108-space-base-v13-testworkshop",
+ "run_id": "20261108-1755",
+ "candidate": "art/static_map/space_base_minigame/v13",
+ "entries": [
+  {
+   "path": "scene.blend",
+   "sha256": "cb6a7a35e38e72e0e3e72c37f9a07ab1a96a9976b8d6565f2f81300163d64350",
+   "bytes": 10468586
+  },
+  {
+   "path": "renders/master_raw.png",
+   "sha256": "2e4e93ff05c9f725abea8658d58bcc3abd679cec2d0ac5b03ff8fe3b1ac6ae78",
+   "bytes": 16962411
+  },
+  {
+   "path": "renders/space_base_v13_master.png",
+   "sha256": "fff818e206ee3d1d68adc94150a5d68b65589f51f823eb0b92b50188b39de643",
+   "bytes": 2969929
+  },
+  {
+   "path": "renders/space_base_v13.jpg",
+   "sha256": "06b68b7989276dd0489bedc83884a303d76383396610fcd97fb5c09a70742be7",
+   "bytes": 203620
+  },
+  {
+   "path": "renders/space_base_v13_core.png",
+   "sha256": "e680163695855d7b2a55c705967a07452d248f86dfd70aecd8bf1cd9cbc4e895",
+   "bytes": 1977176
+  },
+  {
+   "path": "renders/space_base_v13_hero.png",
+   "sha256": "4e0a496dadd79fc560998c670f9e8462dbb850948a59e5ab02df76e334251e90",
+   "bytes": 1731506
+  },
+  {
+   "path": "renders/hero_raw.png",
+   "sha256": "ccfc78cff85793ce820fba2a473f39539c77711927879acc5350690096759d0b",
+   "bytes": 2107341
+  },
+  {
+   "path": "renders/route.png",
+   "sha256": "f49824dc03bcae09d1e478ee84b4af64062ae2bc0c758cffcbd43427ba48a773",
+   "bytes": 2023207
+  },
+  {
+   "path": "renders/_cmp_master.png",
+   "sha256": "947e952efe391bee508e6662bca392003aec0a75ac055ca578a51a0554fdd82f",
+   "bytes": 999119
+  },
+  {
+   "path": "renders/_cmp_south.png",
+   "sha256": "66d7c0501c91555664e5b7b7ed79ff7f5e712c2fac9a507fa0f2f3b71701b8db",
+   "bytes": 336213
+  },
+  {
+   "path": "renders/checks/01_core.png",
+   "sha256": "66c23a077bace6fb078e39a93f6a3a63abe2cb90ac76dcb7da91acea52ed8b43",
+   "bytes": 897754
+  },
+  {
+   "path": "renders/checks/02_avenue_bridge.png",
+   "sha256": "7ba173361b100fbb50a1f350d4b13e692a571507f48ca0ef45d3c08835b0b50a",
+   "bytes": 533523
+  },
+  {
+   "path": "renders/checks/03_peninsula.png",
+   "sha256": "67aad5238959d97b2b9ac3699ab0d75d2da782ae90159215a7cfcc772695848c",
+   "bytes": 485724
+  },
+  {
+   "path": "renders/checks/04_avenue_head.png",
+   "sha256": "b07068b731329c714ed49852a35a5f48af83c994b615f74c73a2fb72e1a0e426",
+   "bytes": 529994
+  },
+  {
+   "path": "renders/checks/05_g5_pair.png",
+   "sha256": "455fc9d371a2b97a088428b224fa8cb229217d9ef3340a251856e8acb611e90f",
+   "bytes": 404027
+  },
+  {
+   "path": "renders/space_base_v11_master.png",
+   "sha256": "fff818e206ee3d1d68adc94150a5d68b65589f51f823eb0b92b50188b39de643",
+   "bytes": 2969929
+  },
+  {
+   "path": "renders/space_base_v11.jpg",
+   "sha256": "a6296ddf29e3aaa6ce75ec4cee9f0ff27996399d3ceeb60255ce8feb6ddc972f",
+   "bytes": 174215
+  },
+  {
+   "path": "renders/space_base_v11_core.png",
+   "sha256": "e680163695855d7b2a55c705967a07452d248f86dfd70aecd8bf1cd9cbc4e895",
+   "bytes": 1977176
+  },
+  {
+   "path": "renders/space_base_v11_hero.png",
+   "sha256": "4e0a496dadd79fc560998c670f9e8462dbb850948a59e5ab02df76e334251e90",
+   "bytes": 1731506
+  }
+ ],
+ "missing_by_design": [],
+ "highres_raw": {
+  "path": "renders/master_raw.png",
+  "size": [
+   3360,
+   5880
+  ],
+  "samples": 12,
+  "aspect_note": "portrait 0.571 vs delivery 0.678; narrower horizontal span, same camera (v11 precedent)"
+ }
+}

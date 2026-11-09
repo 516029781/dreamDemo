@@ -1,0 +1,45 @@
+{
+ "schema": "run-context-v1",
+ "project_root": "C:/软件/鼠鼠",
+ "session_id": "qoder-2026-11-02-space-base",
+ "request_id": "20261102-space-base-detail",
+ "run_id": "20261102-1907",
+ "task_mode": "production",
+ "business_id": "space_base_minigame",
+ "deliverable_type": "static_map",
+ "knowledge_snapshot": {
+  "manifest": "knowledge/business/manifest.json",
+  "manifest_sha256": "2ecdaa97a29ae1d9c258205987a1da02d7b1def9c2f470a28646128d46ac12d0",
+  "business_version": "r01",
+  "art_base": "none",
+  "lifecycle_contract": "knowledge/common/dev_core/HARNESS_LIFECYCLE.md"
+ },
+ "design_baseline": {
+  "path": "runs/20261102-1907/baselines/design_r02/BASELINE_MANIFEST.json",
+  "status": "confirmed",
+  "confirmed_basis": "用户 2026-11-02「继续补齐 L2/L3 细节和真机验证」；v01 design_r01 布局/相机不变",
+  "baseline_manifest_sha256": "133eaf92f49863bc361f78d6592a469353554bea43054d7024116608ddec9621",
+  "parent_baseline_id": "design_r01",
+  "parent_baseline_manifest_sha256": "980579c574491b849fa3bc3f3350443682ab1a247c08a3e43e942ef5667621ac"
+ },
+ "candidate": {
+  "path": "C:/软件/鼠鼠/art/static_map/space_base_minigame/v02",
+  "write_owner_run": "20261102-1907",
+  "mode": "write",
+  "upstream_read_only": "C:/软件/鼠鼠/art/static_map/space_base_minigame/v01"
+ },
+ "checks": {
+  "harness_spec": "knowledge/business/space_base_minigame/HARNESS_SPEC.json",
+  "manual_check_set": [
+   "file existence",
+   "sha binding",
+   "camera projection",
+   "isolated reopen reproduction",
+   "producer visual self-review",
+   "detail D1-D5",
+   "runtime smoke (W3/W4 external)"
+  ]
+ },
+ "created_at": "2026-11-02T19:20+08:00",
+ "notes": "v02 只追加 L2/L3 细节；v01 目录只读。test_cases 的 G/S 用例继承 v01 布局回归口径，input.files 指向 v01 作为对照，v02 证据写入本 run 的 evidence/；D1-D5 证据见 evidence/D*。活动指针只指向本运行；未使用 latest。"
+}

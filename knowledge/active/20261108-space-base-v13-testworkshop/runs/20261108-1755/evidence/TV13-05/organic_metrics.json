@@ -1,0 +1,64 @@
+{
+ "test_id": "TV13-04/05",
+ "metrics": {
+  "E11_spacing_cv": 0.704,
+  "E12_mirror_similarity": 0.175,
+  "E13_dominant_heading_share": 0.281,
+  "E14_collinearity": 0.25,
+  "E15_props_per_400m2": 1.45,
+  "E15_props_total": 29
+ },
+ "targets": {
+  "E11": ">=0.28",
+  "E12": "<=0.35",
+  "E13": "<=0.40",
+  "E14": "<=0.35",
+  "E15": ">=1.0"
+ },
+ "groups": {
+  "containers_south": {
+   "n": 10,
+   "spacing_cv": 1.604,
+   "mirror_similarity": 0.2,
+   "dominant_heading_share": 0.3
+  },
+  "drums_south": {
+   "n": 5,
+   "spacing_cv": 0.531,
+   "mirror_similarity": 0.8,
+   "dominant_heading_share": 0.4
+  },
+  "cabinets_south": {
+   "n": 6,
+   "spacing_cv": 0.212,
+   "mirror_similarity": 0.0,
+   "dominant_heading_share": 0.333
+  },
+  "pallets_south": {
+   "n": 4,
+   "spacing_cv": 1.067,
+   "mirror_similarity": 0.0,
+   "dominant_heading_share": 0.5
+  },
+  "tanks_approach": {
+   "n": 0,
+   "spacing_cv": 0.0,
+   "mirror_similarity": 0.0,
+   "dominant_heading_share": 0.0
+  },
+  "palms": {
+   "n": 24,
+   "spacing_cv": 0.523,
+   "mirror_similarity": 0.083,
+   "dominant_heading_share": 0.167
+  },
+  "containers_yard": {
+   "n": 8,
+   "spacing_cv": 0.418,
+   "mirror_similarity": 0.25,
+   "dominant_heading_share": 0.375
+  }
+ },
+ "note": "E14 uses a fixed 0.5 m v-band proxy (declared before measurement). H4 fixed E15 to count only distinguishable volumetric props; the pre-fix count (232 meshes incl. markings) is retained below.",
+ "e15_pre_fix_mesh_count": 232
+}

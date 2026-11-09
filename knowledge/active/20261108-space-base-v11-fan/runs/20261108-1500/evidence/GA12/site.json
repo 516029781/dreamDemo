@@ -1,0 +1,17 @@
+{
+ "check": "GA12",
+ "site": "stepped",
+ "area_m2": 16703.4,
+ "widths_m": {
+  "core": 94.0,
+  "apron": 74.0,
+  "parking": 62.0
+ },
+ "depth_m": 203.2,
+ "seawall_segments": 13,
+ "orange_band_segments": 13,
+ "coping_segments": 13,
+ "wall_height_m": 0.86,
+ "bridge_a_removed": true,
+ "pass": true
+}

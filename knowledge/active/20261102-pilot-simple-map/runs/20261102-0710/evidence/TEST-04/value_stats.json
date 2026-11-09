@@ -1,0 +1,12 @@
+{
+ "test_id": "TEST-04",
+ "image": "C:\\软件\\鼠鼠\\art\\static_map\\pilot_simple_map\\v01\\renders\\final.png",
+ "pixels": 518400,
+ "near_black_pct": 0.057,
+ "near_white_pct": 0.0,
+ "luma_min": 4.2,
+ "luma_max": 171.6,
+ "luma_mean": 114.6,
+ "thresholds": "near_black<1% and near_white<1%",
+ "diagnostic_only": true
+}

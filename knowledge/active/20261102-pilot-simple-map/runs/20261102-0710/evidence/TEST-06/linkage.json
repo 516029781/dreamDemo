@@ -1,0 +1,30 @@
+{
+ "test_id": "TEST-06",
+ "requirements": [
+  "REQ-01",
+  "REQ-02",
+  "REQ-03",
+  "REQ-04",
+  "REQ-05",
+  "REQ-06"
+ ],
+ "covered": [
+  "REQ-01",
+  "REQ-02",
+  "REQ-03",
+  "REQ-04",
+  "REQ-05",
+  "REQ-06"
+ ],
+ "missing": [],
+ "extra": [],
+ "dangling_evidence": [],
+ "request_ids": {
+  "brief": "20261102-pilot-simple-map",
+  "test_cases": "20261102-pilot-simple-map",
+  "run_context": "20261102-pilot-simple-map",
+  "resolved": "20261102-pilot-simple-map"
+ },
+ "ids_consistent": true,
+ "pass": true
+}

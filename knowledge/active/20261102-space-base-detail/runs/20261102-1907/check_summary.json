@@ -1,0 +1,123 @@
+{
+ "stage": "final",
+ "request": "C:\\软件\\鼠鼠\\knowledge\\active\\20261102-space-base-detail",
+ "candidate": "C:\\软件\\鼠鼠\\art\\static_map\\space_base_minigame\\v02",
+ "run": "20261102-1907",
+ "coverage": {
+  "requirements": [
+   "REQ-01",
+   "REQ-02",
+   "REQ-03",
+   "REQ-04",
+   "REQ-05",
+   "REQ-06",
+   "REQ-07",
+   "REQ-08",
+   "REQ-09",
+   "REQ-10",
+   "REQ-11",
+   "REQ-12",
+   "REQ-13",
+   "REQ-14",
+   "REQ-15",
+   "REQ-16",
+   "REQ-17",
+   "REQ-18",
+   "REQ-19",
+   "REQ-20"
+  ],
+  "covered": [
+   "REQ-01",
+   "REQ-02",
+   "REQ-03",
+   "REQ-04",
+   "REQ-05",
+   "REQ-06",
+   "REQ-07",
+   "REQ-08",
+   "REQ-09",
+   "REQ-10",
+   "REQ-11",
+   "REQ-12",
+   "REQ-13",
+   "REQ-14",
+   "REQ-15",
+   "REQ-16",
+   "REQ-17",
+   "REQ-18",
+   "REQ-19",
+   "REQ-20"
+  ],
+  "missing": [],
+  "extra": [],
+  "dangling_evidence": [],
+  "ids": {
+   "brief_request": "20261102-space-base-detail",
+   "test_cases": "20261102-space-base-detail",
+   "run_context": "20261102-space-base-detail",
+   "resolved": "20261102-space-base-detail"
+  },
+  "ids_consistent": true,
+  "resolved_loaded_failures": [
+   {
+    "path": "planning\\art\\HANDOFF_20261102.md",
+    "reason": "sha mismatch"
+   }
+  ]
+ },
+ "images": {
+  "master": {
+   "size": [
+    3840,
+    5120
+   ],
+   "mode": "RGB",
+   "bytes": 13741781
+  },
+  "ship": {
+   "size": [
+    1920,
+    2560
+   ],
+   "mode": "RGB",
+   "format": "JPEG",
+   "bytes": 463201
+  }
+ },
+ "w1": {
+  "test_id": "TEST-W1",
+  "check": "W1",
+  "size": [
+   1920,
+   2560
+  ],
+  "mode": "RGB",
+  "format": "JPEG",
+  "bytes": 463201,
+  "max_edge": 2560,
+  "limit_bytes": 3145728,
+  "pass": true
+ },
+ "w2": {
+  "test_id": "TEST-W2",
+  "check": "W2",
+  "map_bytes": 463201,
+  "js_bytes": 22616,
+  "config_bytes": 1390,
+  "main_bytes": 487207,
+  "main_limit_bytes": 4194304,
+  "total_limit_bytes": 31457280,
+  "package_note": "quickstart arithmetic; map may be moved to a subpackage",
+  "pass": true
+ },
+ "manifest": {
+  "files": 12,
+  "bad": []
+ },
+ "reproduction": {},
+ "hard_failures": [
+  "resolved knowledge binding failures 1",
+  "missing runs/<run>/reproduction.json"
+ ],
+ "pass": false
+}

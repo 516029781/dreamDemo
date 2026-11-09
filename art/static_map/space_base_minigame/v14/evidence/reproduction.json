@@ -1,0 +1,47 @@
+{
+ "schema": "reproduction-v2",
+ "request_id": "20261108-space-base-v14-art",
+ "run_id": "20261108-2035",
+ "method": "isolated reopen + rerender; compare CONTENT SHA of decoded raw RGB",
+ "declared_tolerance": "identical decoded RGB bytes at 420x620 / 8 samples / seed 0 / same camera + compositor",
+ "fixed_conditions": {
+  "resolution": [
+   420,
+   620
+  ],
+  "samples": 8,
+  "seed": 0,
+  "camera": "Camera",
+  "compositor": "on"
+ },
+ "commands": [
+  {
+   "exit_code": 0,
+   "wall_seconds": 16.29,
+   "command": "C:\\软件\\鼠鼠\\.tools\\blender\\blender-4.5.15-windows-x64\\blender.exe -b C:\\软件\\鼠鼠\\art\\static_map\\space_base_minigame\\v14\\scene.blend --python tools/repro_v13_render.py -- ..."
+  },
+  {
+   "exit_code": 0,
+   "wall_seconds": 97.69,
+   "command": "C:\\软件\\鼠鼠\\.tools\\blender\\blender-4.5.15-windows-x64\\blender.exe -b --factory-startup --python tools/blender_space_base/build_scene_v14.py -- ..."
+  },
+  {
+   "exit_code": 0,
+   "wall_seconds": 7.87,
+   "command": "C:\\软件\\鼠鼠\\.tools\\blender\\blender-4.5.15-windows-x64\\blender.exe -b C:\\软件\\鼠鼠\\art\\static_map\\space_base_minigame\\v14\\repro\\scene_rebuilt.blend --python tools/repro_v13_render.py -- ..."
+  }
+ ],
+ "container_sha256_orig": "76d4bb39d0127f43750dbd9e8922ea4b6b8baf8d38e4d4914c0af68a11878162",
+ "container_sha256_rebuilt": "c09fb5044fe58107393c84477aa7d81f810edfd85863c8921f72680b7507477a",
+ "content_sha256_orig": "7e61b301c6a756edbfd4fd4b53030401d65f5f70722d9f402ae44c95c7d18d17",
+ "content_sha256_rebuilt": "7e61b301c6a756edbfd4fd4b53030401d65f5f70722d9f402ae44c95c7d18d17",
+ "shape": [
+  620,
+  420,
+  3
+ ],
+ "rms": 0.0,
+ "content_sha_match": true,
+ "pass": true,
+ "note": "container SHA differs by design (PNG metadata); only content SHA is a gate."
+}

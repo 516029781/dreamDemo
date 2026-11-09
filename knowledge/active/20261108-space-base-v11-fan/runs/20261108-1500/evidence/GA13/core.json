@@ -1,0 +1,40 @@
+{
+ "check": "GA13",
+ "halls": {
+  "1": {
+   "w_m": 34.0,
+   "d_m": 34.0,
+   "h_m": 12.5
+  },
+  "2": {
+   "w_m": 34.0,
+   "d_m": 34.0,
+   "h_m": 12.5
+  },
+  "3": {
+   "w_m": 34.0,
+   "d_m": 34.0,
+   "h_m": 12.5
+  },
+  "4": {
+   "w_m": 34.0,
+   "d_m": 34.0,
+   "h_m": 12.5
+  }
+ },
+ "corridor_ns": [
+  78.0,
+  10.0
+ ],
+ "corridor_ew": [
+  10.0,
+  78.0
+ ],
+ "loading_strip": {
+  "depth_m": 3.6,
+  "height_m": 1.1
+ },
+ "annex_present": false,
+ "mezzanine_or_ceo": [],
+ "pass": true
+}

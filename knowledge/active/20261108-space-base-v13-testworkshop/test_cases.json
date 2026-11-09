@@ -1,0 +1,220 @@
+{
+ "schema": "test-cases-v1",
+ "request_id": "20261108-space-base-v13-testworkshop",
+ "business_id": "space_base_minigame",
+ "version": "r15",
+ "bound_brief_sha256": "1d135f2132e88fa10521fcd45d65868eca3af322d2d3bc98a7c08586619c9baa",
+ "bound_design_snapshot": "baselines/design_r15",
+ "cases": [
+  {
+   "test_id": "TV13-01",
+   "covers": [
+    "REQ-40"
+   ],
+   "stage": "prototype",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v13/scene.blend",
+     "art/static_map/space_base_minigame/v13/renders/master_raw.png"
+    ],
+    "fixed_conditions": "CameraMaster 1680x2478 / Cycles 24 samples / same crop region"
+   },
+   "method": "blender -b scene.blend --python tools/check_v13_workshop.py ；统计 S-01..S-12 对象名并导出南端裁图",
+   "pass_criteria": "12 类构件全部存在：ws_wall >=3 段、ws_entrance、ws_pipe >=4、ws_cont >=8、ws_pit、ws_yellow >=3、ws_evac、ws_terminal、ws_ladder >=2、ws_drum >=5、ws_cab >=6、ws_bollard >=3",
+   "evidence_path": "runs/20261108-1755/evidence/TV13-01/",
+   "diagnostic_only": false,
+   "failure_rule": "返回 N6：按缺失构件补 build_test_workshop；重跑 TV13-01/02"
+  },
+  {
+   "test_id": "TV13-02",
+   "covers": [
+    "REQ-41"
+   ],
+   "stage": "prototype",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v13/scene.blend",
+     "art/static_map/space_base_minigame/v13/renders/master_raw.png"
+    ],
+    "fixed_conditions": "CameraMaster 1680x2478 / Cycles 24 samples / same crop region"
+   },
+   "method": "对象名黑名单扫描 test_hall / test_hall_roof / evac_glow / pen_curb / k06_tank / drum_ / 停机坪",
+   "pass_criteria": "黑名单命中数 = 0",
+   "evidence_path": "runs/20261108-1755/evidence/TV13-02/",
+   "diagnostic_only": false,
+   "failure_rule": "返回 N6：删除残留；重跑 TV13-02/03"
+  },
+  {
+   "test_id": "TV13-03",
+   "covers": [
+    "REQ-42"
+   ],
+   "stage": "prototype",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v13/scene.blend",
+     "art/static_map/space_base_minigame/v13/renders/master_raw.png"
+    ],
+    "fixed_conditions": "CameraMaster 1680x2478 / Cycles 24 samples / same crop region"
+   },
+   "method": "扫描全场景对象名含 roof / ceiling / skylight / truss 且位于 core 或 workshop 的对象",
+   "pass_criteria": "命中数 = 0；四厅敞顶结构未变",
+   "evidence_path": "runs/20261108-1755/evidence/TV13-03/",
+   "diagnostic_only": false,
+   "failure_rule": "返回 N6：删除屋顶对象；重跑 TV13-03"
+  },
+  {
+   "test_id": "TV13-04",
+   "covers": [
+    "REQ-43"
+   ],
+   "stage": "final",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v13/scene.blend",
+     "art/static_map/space_base_minigame/v13/renders/master_raw.png"
+    ],
+    "fixed_conditions": "CameraMaster 1680x2478 / Cycles 24 samples / same crop region"
+   },
+   "method": "check_v13_organic.py 统计主路面（v ±24，t -4..104）内可辨物件数 / 8000 m²",
+   "pass_criteria": "密度 >= 1 件 / 400 m²（即 >=20 件）",
+   "evidence_path": "runs/20261108-1755/evidence/TV13-04/",
+   "diagnostic_only": false,
+   "failure_rule": "返回 N6：按 F1–F5 补层，不靠撒小件；重跑 TV13-04/05"
+  },
+  {
+   "test_id": "TV13-05",
+   "covers": [
+    "REQ-44"
+   ],
+   "stage": "final",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v13/scene.blend",
+     "art/static_map/space_base_minigame/v13/renders/master_raw.png"
+    ],
+    "fixed_conditions": "CameraMaster 1680x2478 / Cycles 24 samples / same crop region"
+   },
+   "method": "check_v13_organic.py 计算 E11–E14（同类视觉物间距 CV / 镜像配对 / 朝向聚类 / 共线拟合）",
+   "pass_criteria": "E11>=0.28 且 E12<=0.35 且 E13<=0.40 且 E14<=0.35",
+   "evidence_path": "runs/20261108-1755/evidence/TV13-05/",
+   "diagnostic_only": false,
+   "failure_rule": "返回 N6：按 R1–R5 改生成器；重跑 TV13-05"
+  },
+  {
+   "test_id": "TV13-06",
+   "covers": [
+    "REQ-45"
+   ],
+   "stage": "final",
+   "check_type": "visual",
+   "responsible": "model_visual",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v13/scene.blend",
+     "art/static_map/space_base_minigame/v13/renders/master_raw.png"
+    ],
+    "fixed_conditions": "CameraMaster 1680x2478 / Cycles 24 samples / same crop region"
+   },
+   "method": "俯视图目视：大路面是否仍是一整块、无新增分幅路缘或抬高",
+   "pass_criteria": "路面连续、无新路缘、无分幅；可行走区一眼可辨",
+   "evidence_path": "runs/20261108-1755/evidence/TV13-06/",
+   "diagnostic_only": false,
+   "failure_rule": "返回 N6：撤销分幅对象；重跑 TV13-06"
+  },
+  {
+   "test_id": "TV13-07",
+   "covers": [
+    "REQ-46"
+   ],
+   "stage": "final",
+   "check_type": "visual",
+   "responsible": "model_visual",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v13/scene.blend",
+     "art/static_map/space_base_minigame/v13/renders/master_raw.png"
+    ],
+    "fixed_conditions": "CameraMaster 1680x2478 / Cycles 24 samples / same crop region"
+   },
+   "method": "同机位并排 v12/v13 master + hero + 南端裁图",
+   "pass_criteria": "南端识别组合可读；无新穿模/悬空；主路面密度可见提升",
+   "evidence_path": "runs/20261108-1755/evidence/TV13-07/",
+   "diagnostic_only": false,
+   "failure_rule": "返回 N6：定位到对象后修；重跑 TV13-07"
+  },
+  {
+   "test_id": "TV13-08",
+   "covers": [
+    "REQ-47"
+   ],
+   "stage": "final",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v13/scene.blend",
+     "art/static_map/space_base_minigame/v13/renders/master_raw.png"
+    ],
+    "fixed_conditions": "CameraMaster 1680x2478 / Cycles 24 samples / same crop region"
+   },
+   "method": "隔离目录重开 build_scene_v13.py 重渲 master；对解码 raw RGB 取 SHA256 比对（content SHA，非 container SHA）",
+   "pass_criteria": "content SHA 一致；记录命令/退出码/耗时/结果 SHA",
+   "evidence_path": "runs/20261108-1755/evidence/TV13-08/",
+   "diagnostic_only": false,
+   "failure_rule": "标 unverified 并返修；不得用 container SHA 判失败"
+  },
+  {
+   "test_id": "TV13-09",
+   "covers": [
+    "REQ-48"
+   ],
+   "stage": "final",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v13/scene.blend",
+     "art/static_map/space_base_minigame/v13/renders/master_raw.png"
+    ],
+    "fixed_conditions": "CameraMaster 1680x2478 / Cycles 24 samples / same crop region"
+   },
+   "method": "python tools/space_base_check_v7.py --request knowledge/active/20261108-space-base-v13-testworkshop --candidate art/static_map/space_base_minigame/v13 --run 20261108-1755",
+   "pass_criteria": "13 项 required_checks 全 PASS，0 硬失败",
+   "evidence_path": "runs/20261108-1755/evidence/TV13-09/",
+   "diagnostic_only": false,
+   "failure_rule": "按 TEST-ID 定位返修；重跑全量"
+  },
+  {
+   "test_id": "TV13-10",
+   "covers": [
+    "REQ-49"
+   ],
+   "stage": "final",
+   "check_type": "visual",
+   "responsible": "user_decision",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v13/scene.blend",
+     "art/static_map/space_base_minigame/v13/renders/master_raw.png"
+    ],
+    "fixed_conditions": "CameraMaster 1680x2478 / Cycles 24 samples / same crop region"
+   },
+   "method": "3 人 5 秒盲测：改造前后图与实机截图混排指认",
+   "pass_criteria": "秒认出我们图的 <=1 人",
+   "evidence_path": "runs/20261108-1755/evidence/TV13-10/",
+   "diagnostic_only": false,
+   "failure_rule": "返回 N2/N3 重审设计（design_recheck_required）"
+  }
+ ]
+}

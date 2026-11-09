@@ -1,0 +1,712 @@
+{
+ "schema": "test-cases-v1",
+ "request_id": "20261108-space-base-v11-fan",
+ "business_id": "space_base_minigame",
+ "version": 1,
+ "bound_brief_sha256": "e8d0cbb409f386462c5dc8dfc02a51e6f53539f24fea923d74cb244fed9560a8",
+ "bound_design_sha256": "af3fa73d8408e3b1f33550bd2f8b5c900587b06660b65cf6ac93312feee7d00e",
+ "bound_design_snapshot": "runs/20261108-1500/baselines/design_r13/SPACE_BASE_V3_PLAN_20261108.md",
+ "design_version": "r14",
+ "cases": [
+  {
+   "test_id": "TEST-REQ-01",
+   "covers": [
+    "REQ-01"
+   ],
+   "check_id": "GA12",
+   "stage": "final",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v11/scene.blend"
+    ]
+   },
+   "method": "扇形整地面积/标高/桥A删除",
+   "pass_criteria": "evidence pass = true",
+   "evidence_path": "runs/20261108-1500/evidence/GA12/site.json",
+   "diagnostic_only": false,
+   "failure_rule": "rework and re-run evidence"
+  },
+  {
+   "test_id": "TEST-REQ-02",
+   "covers": [
+    "REQ-02"
+   ],
+   "check_id": "GA12",
+   "stage": "final",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v11/scene.blend"
+    ]
+   },
+   "method": "岸壁/橙带/压顶段数",
+   "pass_criteria": "evidence pass = true",
+   "evidence_path": "runs/20261108-1500/evidence/GA12/site.json",
+   "diagnostic_only": false,
+   "failure_rule": "rework and re-run evidence"
+  },
+  {
+   "test_id": "TEST-REQ-03",
+   "covers": [
+    "REQ-03"
+   ],
+   "check_id": "GA12",
+   "stage": "final",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v11/scene.blend"
+    ]
+   },
+   "method": "桥A对象计数为0",
+   "pass_criteria": "evidence pass = true",
+   "evidence_path": "runs/20261108-1500/evidence/GA12/site.json",
+   "diagnostic_only": false,
+   "failure_rule": "rework and re-run evidence"
+  },
+  {
+   "test_id": "TEST-REQ-04",
+   "covers": [
+    "REQ-04"
+   ],
+   "check_id": "GA13",
+   "stage": "final",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v11/scene.blend"
+    ]
+   },
+   "method": "四厅尺寸/墙高/单层",
+   "pass_criteria": "evidence pass = true",
+   "evidence_path": "runs/20261108-1500/evidence/GA13/core.json",
+   "diagnostic_only": false,
+   "failure_rule": "rework and re-run evidence"
+  },
+  {
+   "test_id": "TEST-REQ-05",
+   "covers": [
+    "REQ-05"
+   ],
+   "check_id": "GA13",
+   "stage": "final",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v11/scene.blend"
+    ]
+   },
+   "method": "过道净宽与长度",
+   "pass_criteria": "evidence pass = true",
+   "evidence_path": "runs/20261108-1500/evidence/GA13/core.json",
+   "diagnostic_only": false,
+   "failure_rule": "rework and re-run evidence"
+  },
+  {
+   "test_id": "TEST-REQ-06",
+   "covers": [
+    "REQ-06"
+   ],
+   "check_id": "GA13",
+   "stage": "final",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v11/scene.blend"
+    ]
+   },
+   "method": "中庭尺寸与下沉",
+   "pass_criteria": "evidence pass = true",
+   "evidence_path": "runs/20261108-1500/evidence/GA13/core.json",
+   "diagnostic_only": false,
+   "failure_rule": "rework and re-run evidence"
+  },
+  {
+   "test_id": "TEST-REQ-07",
+   "covers": [
+    "REQ-07"
+   ],
+   "check_id": "GA13",
+   "stage": "final",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v11/scene.blend"
+    ]
+   },
+   "method": "离心机鼓直径与顶高",
+   "pass_criteria": "evidence pass = true",
+   "evidence_path": "runs/20261108-1500/evidence/GA13/core.json",
+   "diagnostic_only": false,
+   "failure_rule": "rework and re-run evidence"
+  },
+  {
+   "test_id": "TEST-REQ-08",
+   "covers": [
+    "REQ-08"
+   ],
+   "check_id": "GA14",
+   "stage": "final",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v11/scene.blend"
+    ]
+   },
+   "method": "卷帘门数量与尺寸",
+   "pass_criteria": "evidence pass = true",
+   "evidence_path": "runs/20261108-1500/evidence/GA14/kit.json",
+   "diagnostic_only": false,
+   "failure_rule": "rework and re-run evidence"
+  },
+  {
+   "test_id": "TEST-REQ-09",
+   "covers": [
+    "REQ-09"
+   ],
+   "check_id": "GA14",
+   "stage": "final",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v11/scene.blend"
+    ]
+   },
+   "method": "双开门数量",
+   "pass_criteria": "evidence pass = true",
+   "evidence_path": "runs/20261108-1500/evidence/GA14/kit.json",
+   "diagnostic_only": false,
+   "failure_rule": "rework and re-run evidence"
+  },
+  {
+   "test_id": "TEST-REQ-10",
+   "covers": [
+    "REQ-10"
+   ],
+   "check_id": "GA14",
+   "stage": "final",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v11/scene.blend"
+    ]
+   },
+   "method": "雨棚与分节线",
+   "pass_criteria": "evidence pass = true",
+   "evidence_path": "runs/20261108-1500/evidence/GA14/kit.json",
+   "diagnostic_only": false,
+   "failure_rule": "rework and re-run evidence"
+  },
+  {
+   "test_id": "TEST-REQ-11",
+   "covers": [
+    "REQ-11"
+   ],
+   "check_id": "GA14",
+   "stage": "final",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v11/scene.blend"
+    ]
+   },
+   "method": "装卸月台",
+   "pass_criteria": "evidence pass = true",
+   "evidence_path": "runs/20261108-1500/evidence/GA14/kit.json",
+   "diagnostic_only": false,
+   "failure_rule": "rework and re-run evidence"
+  },
+  {
+   "test_id": "TEST-REQ-12",
+   "covers": [
+    "REQ-12"
+   ],
+   "check_id": "GA02",
+   "stage": "final",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v11/scene.blend"
+    ]
+   },
+   "method": "花园元素计数",
+   "pass_criteria": "evidence pass = true",
+   "evidence_path": "runs/20261108-1500/evidence/GA02/layout.json",
+   "diagnostic_only": false,
+   "failure_rule": "rework and re-run evidence"
+  },
+  {
+   "test_id": "TEST-REQ-13",
+   "covers": [
+    "REQ-13"
+   ],
+   "check_id": "GA03",
+   "stage": "final",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v11/scene.blend"
+    ]
+   },
+   "method": "两级分缝与边带",
+   "pass_criteria": "evidence pass = true",
+   "evidence_path": "runs/20261108-1500/evidence/GA03/paving.json",
+   "diagnostic_only": false,
+   "failure_rule": "rework and re-run evidence"
+  },
+  {
+   "test_id": "TEST-REQ-14",
+   "covers": [
+    "REQ-14"
+   ],
+   "check_id": "GA04",
+   "stage": "final",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v11/scene.blend"
+    ]
+   },
+   "method": "围墙剖面与壁柱",
+   "pass_criteria": "evidence pass = true",
+   "evidence_path": "runs/20261108-1500/evidence/GA04/wall_profile.json",
+   "diagnostic_only": false,
+   "failure_rule": "rework and re-run evidence"
+  },
+  {
+   "test_id": "TEST-REQ-15",
+   "covers": [
+    "REQ-15"
+   ],
+   "check_id": "GA05",
+   "stage": "final",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v11/scene.blend"
+    ]
+   },
+   "method": "棕榈/花坛/模纹园/边篱",
+   "pass_criteria": "evidence pass = true",
+   "evidence_path": "runs/20261108-1500/evidence/GA05/planting.json",
+   "diagnostic_only": false,
+   "failure_rule": "rework and re-run evidence"
+  },
+  {
+   "test_id": "TEST-REQ-16",
+   "covers": [
+    "REQ-16"
+   ],
+   "check_id": "GA06",
+   "stage": "final",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v11/scene.blend"
+    ]
+   },
+   "method": "镜面池",
+   "pass_criteria": "evidence pass = true",
+   "evidence_path": "runs/20261108-1500/evidence/GA06/water.json",
+   "diagnostic_only": false,
+   "failure_rule": "rework and re-run evidence"
+  },
+  {
+   "test_id": "TEST-REQ-17",
+   "covers": [
+    "REQ-17"
+   ],
+   "check_id": "GA07",
+   "stage": "final",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v11/scene.blend"
+    ]
+   },
+   "method": "廊架/观景台/门架",
+   "pass_criteria": "evidence pass = true",
+   "evidence_path": "runs/20261108-1500/evidence/GA07/structures.json",
+   "diagnostic_only": false,
+   "failure_rule": "rework and re-run evidence"
+  },
+  {
+   "test_id": "TEST-REQ-18",
+   "covers": [
+    "REQ-18"
+   ],
+   "check_id": "GA08",
+   "stage": "final",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v11/scene.blend"
+    ]
+   },
+   "method": "浮锥/K10/遗留管架",
+   "pass_criteria": "evidence pass = true",
+   "evidence_path": "runs/20261108-1500/evidence/GA08/cleanup.json",
+   "diagnostic_only": false,
+   "failure_rule": "rework and re-run evidence"
+  },
+  {
+   "test_id": "TEST-REQ-19",
+   "covers": [
+    "REQ-19"
+   ],
+   "check_id": "GA11",
+   "stage": "final",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v11/scene.blend"
+    ]
+   },
+   "method": "半岛立面套件",
+   "pass_criteria": "evidence pass = true",
+   "evidence_path": "runs/20261108-1500/evidence/GA11/facade.json",
+   "diagnostic_only": false,
+   "failure_rule": "rework and re-run evidence"
+  },
+  {
+   "test_id": "TEST-REQ-20",
+   "covers": [
+    "REQ-20"
+   ],
+   "check_id": "GA01",
+   "stage": "final",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v11/scene.blend"
+    ]
+   },
+   "method": "花园平台几何",
+   "pass_criteria": "evidence pass = true",
+   "evidence_path": "runs/20261108-1500/evidence/GA01/platform_geom.json",
+   "diagnostic_only": false,
+   "failure_rule": "rework and re-run evidence"
+  },
+  {
+   "test_id": "TEST-REQ-21",
+   "covers": [
+    "REQ-21"
+   ],
+   "check_id": "GA09",
+   "stage": "final",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v11/scene.blend"
+    ]
+   },
+   "method": "HeroRoute 四角",
+   "pass_criteria": "evidence pass = true",
+   "evidence_path": "runs/20261108-1500/evidence/GA09/hero_route.json",
+   "diagnostic_only": false,
+   "failure_rule": "rework and re-run evidence"
+  },
+  {
+   "test_id": "TEST-REQ-22",
+   "covers": [
+    "REQ-22"
+   ],
+   "check_id": "G1",
+   "stage": "final",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v11/scene.blend"
+    ]
+   },
+   "method": "像素投影",
+   "pass_criteria": "evidence pass = true",
+   "evidence_path": "runs/20261108-1500/evidence/G1/projection.json",
+   "diagnostic_only": false,
+   "failure_rule": "rework and re-run evidence"
+  },
+  {
+   "test_id": "TEST-REQ-23",
+   "covers": [
+    "REQ-23"
+   ],
+   "check_id": "S1",
+   "stage": "final",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v11/scene.blend"
+    ]
+   },
+   "method": "陆地浅色占比",
+   "pass_criteria": "evidence pass = true",
+   "evidence_path": "runs/20261108-1500/evidence/S1/value_stats.json",
+   "diagnostic_only": false,
+   "failure_rule": "rework and re-run evidence"
+  },
+  {
+   "test_id": "TEST-REQ-24",
+   "covers": [
+    "REQ-24"
+   ],
+   "check_id": "S2",
+   "stage": "final",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v11/scene.blend"
+    ]
+   },
+   "method": "绿占比",
+   "pass_criteria": "evidence pass = true",
+   "evidence_path": "runs/20261108-1500/evidence/S2/hue_stats.json",
+   "diagnostic_only": false,
+   "failure_rule": "rework and re-run evidence"
+  },
+  {
+   "test_id": "TEST-REQ-25",
+   "covers": [
+    "REQ-25"
+   ],
+   "check_id": "S3",
+   "stage": "final",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v11/scene.blend"
+    ]
+   },
+   "method": "橙占比",
+   "pass_criteria": "evidence pass = true",
+   "evidence_path": "runs/20261108-1500/evidence/S3/hue_stats.json",
+   "diagnostic_only": false,
+   "failure_rule": "rework and re-run evidence"
+  },
+  {
+   "test_id": "TEST-REQ-26",
+   "covers": [
+    "REQ-26"
+   ],
+   "check_id": "S12",
+   "stage": "final",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v11/scene.blend"
+    ]
+   },
+   "method": "英雄图侧框水色",
+   "pass_criteria": "evidence pass = true",
+   "evidence_path": "runs/20261108-1500/evidence/S12/water_border.json",
+   "diagnostic_only": false,
+   "failure_rule": "rework and re-run evidence"
+  },
+  {
+   "test_id": "TEST-REQ-27",
+   "covers": [
+    "REQ-27"
+   ],
+   "check_id": "S15",
+   "stage": "final",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v11/scene.blend"
+    ]
+   },
+   "method": "四区明度",
+   "pass_criteria": "evidence pass = true",
+   "evidence_path": "runs/20261108-1500/evidence/S15/color_probe.json",
+   "diagnostic_only": false,
+   "failure_rule": "rework and re-run evidence"
+  },
+  {
+   "test_id": "TEST-REQ-28",
+   "covers": [
+    "REQ-28"
+   ],
+   "check_id": "G6",
+   "stage": "final",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v11/scene.blend"
+    ]
+   },
+   "method": "几何完整性",
+   "pass_criteria": "evidence pass = true",
+   "evidence_path": "runs/20261108-1500/evidence/G6/geom_check.json",
+   "diagnostic_only": false,
+   "failure_rule": "rework and re-run evidence"
+  },
+  {
+   "test_id": "TEST-REQ-29",
+   "covers": [
+    "REQ-29"
+   ],
+   "check_id": "S8",
+   "stage": "final",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v11/scene.blend"
+    ]
+   },
+   "method": "材质层",
+   "pass_criteria": "evidence pass = true",
+   "evidence_path": "runs/20261108-1500/evidence/S8/material_layers.json",
+   "diagnostic_only": false,
+   "failure_rule": "rework and re-run evidence"
+  },
+  {
+   "test_id": "TEST-REQ-30",
+   "covers": [
+    "REQ-30"
+   ],
+   "check_id": "S9",
+   "stage": "final",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v11/scene.blend"
+    ]
+   },
+   "method": "倒角数量",
+   "pass_criteria": "evidence pass = true",
+   "evidence_path": "runs/20261108-1500/evidence/S9/bevel_count.json",
+   "diagnostic_only": false,
+   "failure_rule": "rework and re-run evidence"
+  },
+  {
+   "test_id": "TEST-REQ-31",
+   "covers": [
+    "REQ-31"
+   ],
+   "check_id": "S10",
+   "stage": "final",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v11/scene.blend"
+    ]
+   },
+   "method": "核心区密度",
+   "pass_criteria": "evidence pass = true",
+   "evidence_path": "runs/20261108-1500/evidence/S10/core_density.json",
+   "diagnostic_only": false,
+   "failure_rule": "rework and re-run evidence"
+  },
+  {
+   "test_id": "TEST-REQ-32",
+   "covers": [
+    "REQ-32"
+   ],
+   "check_id": "W1",
+   "stage": "final",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v11/scene.blend"
+    ]
+   },
+   "method": "交付 JPEG 属性",
+   "pass_criteria": "evidence pass = true",
+   "evidence_path": "runs/20261108-1500/evidence/W1/ship.json",
+   "diagnostic_only": false,
+   "failure_rule": "rework and re-run evidence"
+  },
+  {
+   "test_id": "TEST-REQ-33",
+   "covers": [
+    "REQ-33"
+   ],
+   "check_id": "G2",
+   "stage": "final",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v11/scene.blend"
+    ]
+   },
+   "method": "遮字可辨",
+   "pass_criteria": "evidence pass = true",
+   "evidence_path": "runs/20261108-1500/evidence/G2/legibility.json",
+   "diagnostic_only": false,
+   "failure_rule": "rework and re-run evidence"
+  },
+  {
+   "test_id": "TEST-REQ-34",
+   "covers": [
+    "REQ-34"
+   ],
+   "check_id": "G8",
+   "stage": "final",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v11/scene.blend"
+    ]
+   },
+   "method": "桥B与半岛同屏",
+   "pass_criteria": "evidence pass = true",
+   "evidence_path": "runs/20261108-1500/evidence/G8/junction.json",
+   "diagnostic_only": false,
+   "failure_rule": "rework and re-run evidence"
+  },
+  {
+   "test_id": "TEST-REQ-35",
+   "covers": [
+    "REQ-35"
+   ],
+   "check_id": "GA15",
+   "stage": "final",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v11/scene.blend"
+    ]
+   },
+   "method": "屋顶 / 过道玻璃对象计数 + 每厅室内陈设计数",
+   "pass_criteria": "无 h1..h4 屋面板、无女儿墙、无 corr_*_glass；每厅室内对象 ≥3",
+   "evidence_path": "runs/20261108-1500/evidence/GA15/open_roof.json",
+   "diagnostic_only": false,
+   "failure_rule": "restore roof removal and re-run evidence"
+  }
+ ]
+}

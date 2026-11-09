@@ -1,0 +1,35 @@
+{
+ "schema": "gate-report-v1",
+ "business_id": "space_base_minigame",
+ "request_id": "20261102-space-base-map",
+ "run_id": "20261102-1314",
+ "status": "target_met",
+ "required_checks": {
+  "G1": "pass",
+  "G2": "pass",
+  "G3": "pass",
+  "G4": "pass",
+  "G5": "pass",
+  "G6": "pass",
+  "G7": "pass",
+  "G8": "pass",
+  "W1": "pass",
+  "W2": "pass",
+  "S1": "pass",
+  "S2": "pass",
+  "S3": "pass",
+  "S4": "pass",
+  "S5": "pass",
+  "S6": "pass",
+  "S7": "pass"
+ },
+ "external_checks": {
+  "A1": "external/not_run",
+  "W3": "external/not_run",
+  "W4": "external/not_run"
+ },
+ "mechanical_checker": "runs/20261102-1314/check_summary.json",
+ "reproduction": "pass (RMS=0.0/255, tol=2.0)",
+ "image_content_sha256": "e40212cf8ec8d5e893839c83c167616ffb33dffa0a6be0105723425da0046702",
+ "notes": "Producer self-review + mechanical checker; no independent reviewer, no P1 hook. External items are not pass."
+}

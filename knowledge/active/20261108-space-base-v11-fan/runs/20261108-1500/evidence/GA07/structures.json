@@ -1,0 +1,10 @@
+{
+ "check": "GA07",
+ "pergola_slats": 6,
+ "pergola_posts": 2,
+ "overlook": 1,
+ "gate_posts": 2,
+ "gate_beam": 1,
+ "lamps": 8,
+ "pass": true
+}

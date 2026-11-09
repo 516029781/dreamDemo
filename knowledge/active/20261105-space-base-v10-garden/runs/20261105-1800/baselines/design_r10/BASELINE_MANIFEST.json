@@ -1,0 +1,41 @@
+{
+ "schema": "baseline-manifest-v1",
+ "design_version": "r10",
+ "run_id": "20261105-1800",
+ "supersedes": "design_r09",
+ "note": "r10 = v1.6：岛—花园填地整接（2,903 m² 前台、坡道、检查站、泊车）、桥 A 与花园北墙删除 + REQ-40 / GA12",
+ "entries": [
+  {
+   "path": "SPACE_BASE_GARDEN_OUTFIELD_PLAN_20261105.md",
+   "sha256": "6912cfc82e63190f9f4ce7a1e0521a9911831558b648920e76c49077f7ce4f9f"
+  },
+  {
+   "path": "SPACE_BASE_GROUND_INFILL_PLAN_20261106.md",
+   "sha256": "7310d5a2c72bc945e34f1aae3d9d2889838d7bdc1408ca09aedfa0bccbf4a97e"
+  },
+  {
+   "path": "SPACE_BASE_GARDEN_HARNESS_DEV_PLAN_20261105.md",
+   "sha256": "43af690f68e4b6d404e94d46272a7bce2e05caafeb33fa47c548988ef83b23cd"
+  },
+  {
+   "path": "REQUIREMENTS_BRIEF.md",
+   "sha256": "4b11386bd04c840441560eb483a29386f6439b85b1df3330f20e1226b5843022"
+  },
+  {
+   "path": "HARNESS_SPEC.json",
+   "sha256": "59c060ad87ca92ba485f5be26fb93b652640f95418ce09eac8f1648e0860ad2c"
+  },
+  {
+   "path": "build_scene_v10.py",
+   "sha256": "0d1ad01802191ecdd4b742605ae5ae0c9a9cb699569defcb21630a20b031fa78"
+  },
+  {
+   "path": "evidence_v10.py",
+   "sha256": "e4c819b9fc37c5fbc09425571d3aceed4ecf1f48fa3e7b6350be3da2a4b1d2e9"
+  },
+  {
+   "path": "space_base_check_v7.py",
+   "sha256": "b8e2827f29a8f8193c2aa8858cb60ac34b4358e1f7593f8556f814782a9ba2ca"
+  }
+ ]
+}

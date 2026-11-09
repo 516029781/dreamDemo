@@ -1,0 +1,184 @@
+{
+ "schema": "gate-report-v2",
+ "request_id": "20261103-space-base-v6",
+ "run_id": "20261103-2100",
+ "spec": "r03",
+ "candidate": "art/static_map/space_base_minigame/v06",
+ "checks": {
+  "G1": {
+   "pass": true,
+   "file": "G1/camera_projection.json"
+  },
+  "G2": {
+   "pass": true,
+   "file": "G2/notes.md",
+   "evidence": "producer notes"
+  },
+  "G3": {
+   "pass": true,
+   "file": "G3/notes.md",
+   "evidence": "producer notes"
+  },
+  "G4": {
+   "pass": true,
+   "file": "G4/probes.json"
+  },
+  "G5": {
+   "pass": true,
+   "file": "G5/notes.md",
+   "evidence": "producer notes"
+  },
+  "G6": {
+   "pass": true,
+   "file": "G6_geom_check.json"
+  },
+  "G7": {
+   "pass": true,
+   "file": "G7/borders.json"
+  },
+  "G8": {
+   "pass": true,
+   "file": "G8/notes.md",
+   "evidence": "producer notes"
+  },
+  "S1": {
+   "pass": false,
+   "file": "S1/value_stats.json"
+  },
+  "S10": {
+   "pass": true,
+   "file": "S10_core_density.json"
+  },
+  "S11": {
+   "pass": false,
+   "file": "S11/value_span.json"
+  },
+  "S12": {
+   "pass": true,
+   "file": "S12/water_border.json"
+  },
+  "S13": {
+   "pass": false,
+   "file": "S13/illustration_metrics.json"
+  },
+  "S14": {
+   "pass": true,
+   "file": "S14/ceo_readout.json"
+  },
+  "S15": {
+   "pass": true,
+   "file": "S15/color_probe.json"
+  },
+  "S2": {
+   "pass": true,
+   "file": "S2/hue_stats.json"
+  },
+  "S3": {
+   "pass": true,
+   "file": "S3/hue_stats.json"
+  },
+  "S4": {
+   "pass": true,
+   "file": "S4/notes.md",
+   "evidence": "producer notes"
+  },
+  "S5": {
+   "pass": true,
+   "file": "S5/notes.md",
+   "evidence": "producer notes"
+  },
+  "S6": {
+   "pass": true,
+   "file": "S6/notes.md",
+   "evidence": "producer notes"
+  },
+  "S7": {
+   "pass": true,
+   "file": "S7/notes.md",
+   "evidence": "producer notes"
+  },
+  "S8": {
+   "pass": true,
+   "file": "S8_material_layers.json"
+  },
+  "S9": {
+   "pass": true,
+   "file": "S9_bevel_count.json"
+  },
+  "W1": {
+   "pass": true,
+   "file": "W1/file_check.json"
+  },
+  "W2": {
+   "pass": true,
+   "file": "W2/package.json"
+  }
+ },
+ "required_checks": [
+  "G1",
+  "G2",
+  "G3",
+  "G4",
+  "G5",
+  "G6",
+  "G7",
+  "G8",
+  "W1",
+  "W2",
+  "S1",
+  "S2",
+  "S3",
+  "S4",
+  "S5",
+  "S6",
+  "S7",
+  "S8",
+  "S9",
+  "S10",
+  "S11",
+  "S12",
+  "S13",
+  "S14",
+  "S15"
+ ],
+ "diagnostic_only": [
+  "S11",
+  "S13",
+  "S15"
+ ],
+ "hard_failures": [
+  "S1"
+ ],
+ "diagnostic_failures": [
+  "S11",
+  "S13"
+ ],
+ "missing_evidence": [],
+ "external": [
+  "A1",
+  "W3",
+  "W4"
+ ],
+ "known_deviations": [
+  {
+   "check": "S1",
+   "measured": false,
+   "note": "S1 陆地相对浅色 0.427-0.44 vs 0.45：与 S15（DF 实机目标色 L≈0.42-0.54）存在口径张力——45% 阈值源自 r02 暖米灰 palette 时代；方案 §4.3 模拟 48.7% 未计入插画压档与 GI。保 S15（本轮核心目标）则 S1 上限约 0.44；提亮房间将破坏逐区配色。待控制器裁决。"
+  },
+  {
+   "check": "S11",
+   "measured": false,
+   "note": "H3 明度跨度 0.213-0.22 vs 0.22（diagnostic_only）：蓝室大坑占比高，跨度受坑底均色压制。"
+  },
+  {
+   "check": "S13",
+   "measured": false,
+   "note": "笔触覆盖 0.07 vs 0.30（diagnostic_only）：结构张量口径对俯视平面图过严；三峰与暗部 b* 已过。"
+  },
+  {
+   "check": "S7",
+   "note": "太阳 45°（影长 ≈1.0× 物高）；55° 曾试做但破坏 S15 房间饱和度，回滚。"
+  }
+ ],
+ "pass": false
+}

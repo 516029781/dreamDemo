@@ -1,0 +1,101 @@
+{
+ "schema": "delivery-v1",
+ "business_id": "space_base_minigame",
+ "request_id": "20261103-space-base-v310-full",
+ "run_id": "20261103-0936",
+ "status": "target_met",
+ "created": "2026-11-03T09:44",
+ "source": {
+  "path": "planning/art/SPACE_BASE_NEW_PLAN_20261103.md",
+  "version": "v3.10",
+  "sha256": "36e389e94264f121a5d91fecc00454a865bd3ded262895bd6aa45e180b470450"
+ },
+ "scene": {
+  "path": "art/static_map/space_base_minigame/v04/scene_v4.blend",
+  "sha256": "006ae573d27a3c5c816bd020c3afa8c65abad979931fd8dbbab30652282877f8",
+  "builder": "tools/blender_space_base/build_scene_v3.py",
+  "procedural_only": true,
+  "objects": 626,
+  "faces": 12642,
+  "furniture_from_plan": 109,
+  "detail_pass": true
+ },
+ "master": {
+  "path": "art/static_map/space_base_minigame/v04/renders/space_base_v04_master.png",
+  "size": [
+   1680,
+   2478
+  ],
+  "supersample_raw": [
+   3360,
+   5880
+  ],
+  "sha256": "fac64e8f0db412a2602b1e8e70a80afd92043c989ef16650cd88d61773f80674"
+ },
+ "shipped_jpeg": {
+  "path": "art/static_map/space_base_minigame/v04/renders/space_base_v04.jpg",
+  "size": [
+   1680,
+   2478
+  ],
+  "bytes": 215365,
+  "sha256": "d8dac6b14ddf018e48101518a4b69592d65b11198e89ec45ee6977a3937db92a"
+ },
+ "review_sheet": {
+  "path": "art/static_map/space_base_minigame/v04/REVIEW_SHEET.png",
+  "sha256": "5f7543c387ce7af1ad63a516cf9186f560006e05d4bda6c0453c12ed92b4ec87"
+ },
+ "checks": {
+  "mechanical_pass": [
+   "G1",
+   "G4_probes",
+   "G6_selfcheck",
+   "W1",
+   "S2",
+   "S3"
+  ],
+  "mechanical_pass_with_rule_change": {
+   "S1": "全帧 15.9%（水面 66.6%）；陆地相对 47.6% >= 45% —— r02 草案口径，待控制器签认"
+  },
+  "visual_evidence_ready": {
+   "G5": "checks/check_g5_pair.png（坞门 8 m 高位，有箱列 vs 去箱列 A/B）",
+   "others": [
+    "G2",
+    "G3",
+    "G8",
+    "S4",
+    "S5",
+    "S6",
+    "S7"
+   ]
+  },
+  "visual_pending_human": [
+   "G2",
+   "G3",
+   "G5",
+   "G8",
+   "S4",
+   "S5",
+   "S6",
+   "S7"
+  ],
+  "external": [
+   "A1",
+   "W3",
+   "W4"
+  ]
+ },
+ "fixed_this_pass": [
+  "横置圆柱（吊舱/压力舱/2 组管道/管廊管）轴心高度错误，曾整体悬空",
+  "水面箱体盖住坞底与断头院",
+  "切角平台未开洞，池/坑被平台封死（改布尔开洞）",
+  "地面分区板盖住池/坑（改回字形）",
+  "管廊管线中心错误（曾两头各伸 44 m）",
+  "Ø10 舱门曾为 10 m 立式圆柱"
+ ],
+ "harness_spec": {
+  "current": "r01 (v2.0 布局，G1/W1/G4 已过期)",
+  "draft": "r02 per plan §12",
+  "note": "r02 未生效前以 GATE_REPORT.json 实测值作证据"
+ }
+}

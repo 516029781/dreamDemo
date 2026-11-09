@@ -1,0 +1,438 @@
+{
+ "schema": "test-cases-v1",
+ "request_id": "20261102-space-base-detail",
+ "business_id": "space_base_minigame",
+ "version": "r01",
+ "bound_brief_sha256": "9a02b669ac7bbda931a060a8eefec7aea8b838e54cd7815d9dcaf99dbcbc3593",
+ "bound_design_sha256": "17f45d6b637a53638802b01ec2c020d06d027497dece27bf8feab39de20b5f6c",
+ "bound_design_snapshot": "runs/20261102-1907/baselines/design_r02",
+ "cases": [
+  {
+   "test_id": "TEST-G1",
+   "covers": [
+    "REQ-01"
+   ],
+   "stage": "prototype",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v01/renders/graybox.png",
+     "art/static_map/space_base_minigame/v01/renders/space_base_v01_master.png"
+    ],
+    "fixed_conditions": "相机锁 55°/ortho240；投影点 (0,0)/(240,0)/(120,-190)/(120,190)"
+   },
+   "method": "camera_check.py: world_to_camera_view 逐点换算 px/py；检查 master 3840×5120",
+   "pass_criteria": "x0→px0, x240→px1920, y-190→py70, y190→py2560, y-30→py1119；误差≤1px；master 3840×5120",
+   "evidence_path": "runs/20261102-1907/evidence/G1/camera_projection.json",
+   "diagnostic_only": false,
+   "failure_rule": "改相机 target/ortho_scale 后重渲，重跑 TEST-G1..G8"
+  },
+  {
+   "test_id": "TEST-G2",
+   "covers": [
+    "REQ-02"
+   ],
+   "stage": "prototype",
+   "check_type": "visual",
+   "responsible": "model_visual",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v01/renders/graybox.png"
+    ],
+    "fixed_conditions": "遮住所有标签，整图与 6 格裁切"
+   },
+   "method": "目视四室/总裁/花园/试车间的形与位置",
+   "pass_criteria": "遮字仍能说出 H1/H2/H3/H4/总裁/花园/试车间",
+   "evidence_path": "runs/20261102-1907/evidence/G2/readability.md",
+   "diagnostic_only": false,
+   "failure_rule": "回 L1 调墙位/门位/体块比例"
+  },
+  {
+   "test_id": "TEST-G3",
+   "covers": [
+    "REQ-03"
+   ],
+   "stage": "prototype",
+   "check_type": "visual",
+   "responsible": "model_visual",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v01/renders/graybox.png"
+    ],
+    "fixed_conditions": "核心区裁切 + 总裁特写"
+   },
+   "method": "走 H2/H4 竖梯到 9m 检修廊，核对两梯口/四边实墙/环廊无门",
+   "pass_criteria": "两梯口在盒体西/东墙；设备体落地层四边实墙；环廊摸不到门",
+   "evidence_path": "runs/20261102-1907/evidence/G3/ceo_access.md",
+   "diagnostic_only": false,
+   "failure_rule": "改梯位/桥/墙段后重渲"
+  },
+  {
+   "test_id": "TEST-G4",
+   "covers": [
+    "REQ-04"
+   ],
+   "stage": "prototype",
+   "check_type": "visual",
+   "responsible": "model_visual",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v01/renders/graybox.png"
+    ],
+    "fixed_conditions": "南出口裁切"
+   },
+   "method": "目视 + camera_check 投影：py 1119、x112.5..127.5",
+   "pass_criteria": "出口在纵向 43.7%、横向 46.9–53.1%；不被 UI 占位压住",
+   "evidence_path": "runs/20261102-1907/evidence/G4/exit.md",
+   "diagnostic_only": false,
+   "failure_rule": "改花园/引道轴或相机后重渲"
+  },
+  {
+   "test_id": "TEST-G5",
+   "covers": [
+    "REQ-05"
+   ],
+   "stage": "prototype",
+   "check_type": "visual",
+   "responsible": "model_visual",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v01/renders/graybox.png"
+    ],
+    "fixed_conditions": "北门视角裁切"
+   },
+   "method": "从北门 (120,-60) 沿视线看 (195,-180)，检查 (170,-140) 集装箱体块",
+   "pass_criteria": "北门看不到撤离黄框；集装箱挡得住但绕得过去",
+   "evidence_path": "runs/20261102-1907/evidence/G5/occlusion.md",
+   "diagnostic_only": false,
+   "failure_rule": "移集装箱/改门位后重渲"
+  },
+  {
+   "test_id": "TEST-G6",
+   "covers": [
+    "REQ-06"
+   ],
+   "stage": "prototype",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v01/scene.blend",
+     "art/static_map/space_base_minigame/v01/renders/graybox.png"
+    ],
+    "fixed_conditions": "重开 scene.blend，统计所有网格世界包围盒"
+   },
+   "method": "geom_check.py: zmin/边界/支撑；6 格裁切目视",
+   "pass_criteria": "无 zmin<-0.01 的悬浮体块；无穿模/断墙；6 格扫视无缺块",
+   "evidence_path": "runs/20261102-1907/evidence/G6/geom_check.json",
+   "diagnostic_only": false,
+   "failure_rule": "修接地/墙段/体块后重渲"
+  },
+  {
+   "test_id": "TEST-G7",
+   "covers": [
+    "REQ-07"
+   ],
+   "stage": "prototype",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v01/renders/graybox.png"
+    ],
+    "fixed_conditions": "视口 1080×1620，四边各贴一次"
+   },
+   "method": "camera_check.py 计算视口顶/左夹取；输出四边模拟裁切",
+   "pass_criteria": "四边不越界、无黑边；角色始终在视口内",
+   "evidence_path": "runs/20261102-1907/evidence/G7/viewport_math.json",
+   "diagnostic_only": false,
+   "failure_rule": "改相机/整图尺寸后重跑"
+  },
+  {
+   "test_id": "TEST-G8",
+   "covers": [
+    "REQ-08"
+   ],
+   "stage": "prototype",
+   "check_type": "visual",
+   "responsible": "model_visual",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v01/renders/graybox.png"
+    ],
+    "fixed_conditions": "南出口裁切，花园带与引道同屏"
+   },
+   "method": "目视地面材质/分缝/高差连续",
+   "pass_criteria": "出口处花园与引道同屏，地面连续，无接缝/错台",
+   "evidence_path": "runs/20261102-1907/evidence/G8/seam.md",
+   "diagnostic_only": false,
+   "failure_rule": "改地面/分缝/出口后重渲"
+  },
+  {
+   "test_id": "TEST-W1",
+   "covers": [
+    "REQ-09"
+   ],
+   "stage": "final",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v01/renders/space_base_v01.jpg"
+    ],
+    "fixed_conditions": "最终 JPEG 原文件"
+   },
+   "method": "space_base_check.py: PIL 读尺寸/格式/大小",
+   "pass_criteria": "1920×2560、JPEG、≤3 MB、无 alpha、最大边≤4096",
+   "evidence_path": "runs/20261102-1907/evidence/W1/file_check.json",
+   "diagnostic_only": false,
+   "failure_rule": "降 q/6px/m 重渲；仍>4MB 分包"
+  },
+  {
+   "test_id": "TEST-W2",
+   "covers": [
+    "REQ-10"
+   ],
+   "stage": "final",
+   "check_type": "mechanical",
+   "responsible": "automated",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v01/renders/space_base_v01.jpg",
+     "game.json",
+     "project.config.json"
+    ],
+    "fixed_conditions": "轻引擎 quickstart 包体算术"
+   },
+   "method": "space_base_check.py: 地图+js+config 字节数",
+   "pass_criteria": "主包算术≤4 MB；总包≤30 MB；地图可分包",
+   "evidence_path": "runs/20261102-1907/evidence/W2/package.json",
+   "diagnostic_only": false,
+   "failure_rule": "换分包/降质后重跑"
+  },
+  {
+   "test_id": "TEST-S1",
+   "covers": [
+    "REQ-11"
+   ],
+   "stage": "final",
+   "check_type": "visual",
+   "responsible": "model_visual",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v01/renders/space_base_v01_master.png"
+    ],
+    "fixed_conditions": "整图"
+   },
+   "method": "目视 + 明度/色相统计（diagnostic）",
+   "pass_criteria": "白+浅灰≥45%",
+   "evidence_path": "runs/20261102-1907/evidence/S1/value.md",
+   "diagnostic_only": false,
+   "failure_rule": "调基色/曝光后重渲"
+  },
+  {
+   "test_id": "TEST-S2",
+   "covers": [
+    "REQ-12"
+   ],
+   "stage": "final",
+   "check_type": "visual",
+   "responsible": "model_visual",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v01/renders/space_base_v01_master.png"
+    ],
+    "fixed_conditions": "整图"
+   },
+   "method": "目视 + 绿色面积统计（diagnostic）",
+   "pass_criteria": "大面积绿≤8%，只在竖板/黑室墙；门洞/终端小绿未铺开",
+   "evidence_path": "runs/20261102-1907/evidence/S2/green.md",
+   "diagnostic_only": false,
+   "failure_rule": "收绿/改材质后重渲"
+  },
+  {
+   "test_id": "TEST-S3",
+   "covers": [
+    "REQ-13"
+   ],
+   "stage": "final",
+   "check_type": "visual",
+   "responsible": "model_visual",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v01/renders/space_base_v01_master.png"
+    ],
+    "fixed_conditions": "整图"
+   },
+   "method": "目视 + 橙色面积统计（diagnostic）",
+   "pass_criteria": "橙≤2%，只在扶手/门头/警示条",
+   "evidence_path": "runs/20261102-1907/evidence/S3/orange.md",
+   "diagnostic_only": false,
+   "failure_rule": "收橙/改材质后重渲"
+  },
+  {
+   "test_id": "TEST-S4",
+   "covers": [
+    "REQ-14"
+   ],
+   "stage": "final",
+   "check_type": "visual",
+   "responsible": "model_visual",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v01/renders/space_base_v01_master.png"
+    ],
+    "fixed_conditions": "五室裁切"
+   },
+   "method": "目视五室色相签名",
+   "pass_criteria": "H1 青蓝 / H2 青黄 / H3 蓝光 / H4 绿 / 总裁 黄铜；无混色",
+   "evidence_path": "runs/20261102-1907/evidence/S4/hue.md",
+   "diagnostic_only": false,
+   "failure_rule": "改材质/灯光后重渲"
+  },
+  {
+   "test_id": "TEST-S5",
+   "covers": [
+    "REQ-15"
+   ],
+   "stage": "final",
+   "check_type": "visual",
+   "responsible": "model_visual",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v01/renders/space_base_v01_master.png"
+    ],
+    "fixed_conditions": "金属/混凝土特写"
+   },
+   "method": "目视倒角/圆角",
+   "pass_criteria": "金属 R≤0.05；混凝土不倒角",
+   "evidence_path": "runs/20261102-1907/evidence/S5/corners.md",
+   "diagnostic_only": false,
+   "failure_rule": "修几何后重渲"
+  },
+  {
+   "test_id": "TEST-S6",
+   "covers": [
+    "REQ-16"
+   ],
+   "stage": "final",
+   "check_type": "visual",
+   "responsible": "model_visual",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v01/renders/space_base_v01_master.png"
+    ],
+    "fixed_conditions": "墙/地特写"
+   },
+   "method": "目视分缝",
+   "pass_criteria": "墙 1.2×2.4、地 3×3；缝深/色差可读",
+   "evidence_path": "runs/20261102-1907/evidence/S6/joints.md",
+   "diagnostic_only": false,
+   "failure_rule": "改材质/贴片后重渲"
+  },
+  {
+   "test_id": "TEST-S7",
+   "covers": [
+    "REQ-17"
+   ],
+   "stage": "final",
+   "check_type": "visual",
+   "responsible": "model_visual",
+   "input": {
+    "files": [
+     "art/static_map/space_base_minigame/v01/renders/space_base_v01_master.png"
+    ],
+    "fixed_conditions": "整图 + 总裁特写"
+   },
+   "method": "目视阴影方向/长度/硬边/暖区",
+   "pass_criteria": "阴影 0.6–0.8 倍物高、同向硬边；总裁唯一暖区",
+   "evidence_path": "runs/20261102-1907/evidence/S7/shadow.md",
+   "diagnostic_only": false,
+   "failure_rule": "改太阳/补光后重渲"
+  },
+  {
+   "test_id": "TEST-A1",
+   "covers": [
+    "REQ-18"
+   ],
+   "stage": "final",
+   "check_type": "external",
+   "responsible": "external",
+   "input": {
+    "files": [],
+    "fixed_conditions": "运行时贴角色后"
+   },
+   "method": "运行时另测角色假阴影方向",
+   "pass_criteria": "角色阴影与主光一致，无两面影子",
+   "evidence_path": "runs/20261102-1907/evidence/external/A1.md",
+   "diagnostic_only": false,
+   "failure_rule": "运行时调角色层"
+  },
+  {
+   "test_id": "TEST-W3",
+   "covers": [
+    "REQ-19"
+   ],
+   "stage": "final",
+   "check_type": "external",
+   "responsible": "external",
+   "input": {
+    "files": [],
+    "fixed_conditions": "微信真机"
+   },
+   "method": "真机首帧/内存/page error",
+   "pass_criteria": "首帧≤1.5 s；内存≤150 MB；无 page error",
+   "evidence_path": "runs/20261102-1907/evidence/external/W3.md",
+   "diagnostic_only": false,
+   "failure_rule": "真机另测"
+  },
+  {
+   "test_id": "TEST-W4",
+   "covers": [
+    "REQ-20"
+   ],
+   "stage": "final",
+   "check_type": "external",
+   "responsible": "external",
+   "input": {
+    "files": [],
+    "fixed_conditions": "低端真机"
+   },
+   "method": "低端机选择 1440×1920 / 1280×1707",
+   "pass_criteria": "自动降级；世界坐标一致",
+   "evidence_path": "runs/20261102-1907/evidence/external/W4.md",
+   "diagnostic_only": false,
+   "failure_rule": "真机另测"
+  }
+ ],
+ "coverage": {
+  "requirements_total": 20,
+  "requirements_with_cases": 20,
+  "required_for_target": [
+   "REQ-01",
+   "REQ-02",
+   "REQ-03",
+   "REQ-04",
+   "REQ-05",
+   "REQ-06",
+   "REQ-07",
+   "REQ-08",
+   "REQ-09",
+   "REQ-10",
+   "REQ-11",
+   "REQ-12",
+   "REQ-13",
+   "REQ-14",
+   "REQ-15",
+   "REQ-16",
+   "REQ-17"
+  ],
+  "external": [
+   "REQ-18",
+   "REQ-19",
+   "REQ-20"
+  ]
+ },
+ "notes": "A1/W3/W4 are external runtime checks; not_run/external must not be written as pass. P1 hook and scorecard do not apply."
+}

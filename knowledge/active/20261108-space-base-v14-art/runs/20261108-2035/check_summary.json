@@ -1,0 +1,137 @@
+{
+ "schema": "check-summary-v2",
+ "stage": "final",
+ "spec": "r14",
+ "request": "C:\\软件\\鼠鼠\\knowledge\\active\\20261108-space-base-v14-art",
+ "candidate": "C:\\软件\\鼠鼠\\art\\static_map\\space_base_minigame\\v14",
+ "run": "20261108-2035",
+ "images": {
+  "master": {
+   "size": [
+    1680,
+    2478
+   ],
+   "mode": "RGB",
+   "bytes": 2911364
+  },
+  "raw": {
+   "size": [
+    3360,
+    5880
+   ],
+   "mode": "RGB",
+   "bytes": 17238538
+  },
+  "core": {
+   "size": [
+    2072,
+    1876
+   ],
+   "mode": "RGB",
+   "bytes": 2020446
+  },
+  "hero": {
+   "size": [
+    1920,
+    1080
+   ],
+   "mode": "RGB",
+   "bytes": 1726392
+  },
+  "ship": {
+   "size": [
+    1680,
+    2478
+   ],
+   "mode": "RGB",
+   "format": "JPEG",
+   "bytes": 267025
+  }
+ },
+ "coverage": {
+  "requirements": [
+   "REQ-50",
+   "REQ-51",
+   "REQ-52",
+   "REQ-53",
+   "REQ-54",
+   "REQ-55",
+   "REQ-56",
+   "REQ-57"
+  ],
+  "covered": [
+   "REQ-50",
+   "REQ-51",
+   "REQ-52",
+   "REQ-53",
+   "REQ-54",
+   "REQ-55",
+   "REQ-56",
+   "REQ-57"
+  ],
+  "missing": [],
+  "extra": [],
+  "dangling": [],
+  "ids": {
+   "test_cases": "20261108-space-base-v14-art",
+   "run_context": "20261108-space-base-v14-art",
+   "resolved": "20261108-space-base-v14-art"
+  },
+  "ids_consistent": true,
+  "resolved_failures": []
+ },
+ "manifest": {
+  "files": 24,
+  "bad": []
+ },
+ "reproduction": {
+  "schema": "reproduction-v2",
+  "request_id": "20261108-space-base-v14-art",
+  "run_id": "20261108-2035",
+  "method": "isolated reopen + rerender; compare CONTENT SHA of decoded raw RGB",
+  "declared_tolerance": "identical decoded RGB bytes at 420x620 / 8 samples / seed 0 / same camera + compositor",
+  "fixed_conditions": {
+   "resolution": [
+    420,
+    620
+   ],
+   "samples": 8,
+   "seed": 0,
+   "camera": "Camera",
+   "compositor": "on"
+  },
+  "commands": [
+   {
+    "exit_code": 0,
+    "wall_seconds": 16.29,
+    "command": "C:\\软件\\鼠鼠\\.tools\\blender\\blender-4.5.15-windows-x64\\blender.exe -b C:\\软件\\鼠鼠\\art\\static_map\\space_base_minigame\\v14\\scene.blend --python tools/repro_v13_render.py -- ..."
+   },
+   {
+    "exit_code": 0,
+    "wall_seconds": 97.69,
+    "command": "C:\\软件\\鼠鼠\\.tools\\blender\\blender-4.5.15-windows-x64\\blender.exe -b --factory-startup --python tools/blender_space_base/build_scene_v14.py -- ..."
+   },
+   {
+    "exit_code": 0,
+    "wall_seconds": 7.87,
+    "command": "C:\\软件\\鼠鼠\\.tools\\blender\\blender-4.5.15-windows-x64\\blender.exe -b C:\\软件\\鼠鼠\\art\\static_map\\space_base_minigame\\v14\\repro\\scene_rebuilt.blend --python tools/repro_v13_render.py -- ..."
+   }
+  ],
+  "container_sha256_orig": "76d4bb39d0127f43750dbd9e8922ea4b6b8baf8d38e4d4914c0af68a11878162",
+  "container_sha256_rebuilt": "c09fb5044fe58107393c84477aa7d81f810edfd85863c8921f72680b7507477a",
+  "content_sha256_orig": "7e61b301c6a756edbfd4fd4b53030401d65f5f70722d9f402ae44c95c7d18d17",
+  "content_sha256_rebuilt": "7e61b301c6a756edbfd4fd4b53030401d65f5f70722d9f402ae44c95c7d18d17",
+  "shape": [
+   620,
+   420,
+   3
+  ],
+  "rms": 0.0,
+  "content_sha_match": true,
+  "pass": true,
+  "note": "container SHA differs by design (PNG metadata); only content SHA is a gate."
+ },
+ "hard_failures": [],
+ "pass": true,
+ "notes": []
+}

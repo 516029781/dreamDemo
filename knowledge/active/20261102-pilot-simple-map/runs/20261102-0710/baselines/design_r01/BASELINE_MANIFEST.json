@@ -1,0 +1,36 @@
+{
+ "schema": "baseline-manifest-v1",
+ "baseline_id": "design_r01",
+ "request_id": "20261102-pilot-simple-map",
+ "created_at": "2026-11-02T07:23+08:00",
+ "status": "frozen",
+ "contents": [
+  {
+   "role": "solution_design",
+   "path": "SOLUTION_DESIGN.md",
+   "sha256": "2f54fdf91dc27465372034488baf1fb5a457556cf55e0c6f6a690d29a347fdf1",
+   "copied": true
+  },
+  {
+   "role": "test_cases",
+   "path": "test_cases.json",
+   "sha256": "4adac28aa57eee5949c1f7d202c77c3d0afae83f7cf6007a7809bd4b26705b36",
+   "copied": true
+  },
+  {
+   "role": "preview_pack",
+   "path": "DESIGN_PREVIEW_PACK/",
+   "sha256": {
+    "DESIGN_PREVIEW_PACK/blockout.png": "b305e190538e05c78fa630709f9164e7ed2615b3661f49e9eda2a33c3faedb4b"
+   },
+   "copied": true
+  }
+ ],
+ "immutability": "frozen baselines are never edited in place; create design_r(NN+1) and re-approve affected items",
+ "dev_review": {
+  "path": "DEV_FEASIBILITY_REVIEW.md",
+  "status": "confirmed"
+ },
+ "parent_baseline_id": null,
+ "note": "r01 在同一次运行内重建过一次：仅修正预览图路径引用，设计内容未变；重建发生在交付前。"
+}

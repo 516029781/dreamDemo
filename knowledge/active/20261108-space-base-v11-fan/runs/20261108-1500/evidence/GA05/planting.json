@@ -1,0 +1,10 @@
+{
+ "check": "GA05",
+ "palms_garden": 8,
+ "palm_cards": 8,
+ "beds": 4,
+ "parterres": 2,
+ "hedges": 4,
+ "palms_plate": 8,
+ "pass": true
+}
