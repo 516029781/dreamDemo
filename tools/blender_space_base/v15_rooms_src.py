@@ -117,13 +117,13 @@ def _v15_h1(tag, t0, v0, z, m, c):
                  hh, hh + 0.20, m["dark"], c)
     # the pod: the only diagonal in the hall
     zc = Z3 + 2.30
-    _v15_hcyl("%s_v15_pod" % tag, t0 + 20.0, v0 + 15.0, zc, 8.4, 1.25, m["metal"], c, -18, 28)
+    _v15_hcyl("%s_v15_pod" % tag, t0 + 20.0, v0 + 15.0, zc, 8.4, 1.25, m["char_dark"], c, -18, 28)
     aa = math.radians(-18)
     for i, s in enumerate((-1.9, 1.9)):
         cu = 20.0 + s * math.cos(aa)
         cv = 15.0 + s * math.sin(aa)
         _v15_hcyl("%s_v15_podband%d" % (tag, i), t0 + cu, v0 + cv, zc, 0.55, 1.31,
-                  m["platform"], c, -18, 28)
+                  m["steel"], c, -18, 28)
     for i, s in enumerate((-4.0, 4.0)):
         cu = 20.0 + s * math.cos(aa)
         cv = 15.0 + s * math.sin(aa)
@@ -207,10 +207,10 @@ def _v15_h2(tag, t0, v0, z, m, c):
     # pool bed + inner shadow ledge
     R("bed", PX0, PX1, PY0, PY1, ZF, ZF + 0.14, m["h2_poolbed"])
     for nm, (a0, a1, b0, b1) in {
-            "sh_n": (PX0, PX1, PY0, PY0 + 1.1),
-            "sh_s": (PX0, PX1, PY1 - 1.1, PY1),
-            "sh_w": (PX0, PX0 + 1.1, PY0 + 1.1, PY1 - 1.1),
-            "sh_e": (PX1 - 1.1, PX1, PY0 + 1.1, PY1 - 1.1)}.items():
+            "sh_n": (PX0, PX1, PY0, PY0 + 1.6),
+            "sh_s": (PX0, PX1, PY1 - 1.6, PY1),
+            "sh_w": (PX0, PX0 + 1.6, PY0 + 1.6, PY1 - 1.6),
+            "sh_e": (PX1 - 1.6, PX1, PY0 + 1.6, PY1 - 1.6)}.items():
         R(nm, a0, a1, b0, b1, ZF + 0.14, ZF + 0.24, m["cope"])
     # coping: concrete upstand + teal cap (the single strongest colour cue of H2)
     for nm, (a0, a1, b0, b1) in {
@@ -420,25 +420,25 @@ def _v15_h4(tag, t0, v0, z, m, c):
     R("green_n", IN0, IN1, IN0, IN0 + 1.2, ZD, ZD + 0.10, m["cap_h4"])
     R("green_e", IN1 - 1.2, IN1, IN0 + 1.2, IN1, ZD, ZD + 0.10, m["cap_h4"])
     # circular hatch: Ø6 ring + 12 radial ribs + hub + inner ring, east side
-    _v15_cyl("%s_v15_hatch" % tag, t0 + 28.0, v0 + 17.0, ZD, ZD + 0.14, 3.0,
+    _v15_cyl("%s_v15_hatch" % tag, t0 + 28.0, v0 + 17.0, ZD, ZD + 0.14, 3.75,
              m["char_dark"], c, 40)
-    _v15_ring("%s_v15_hatch_ring" % tag, t0 + 28.0, v0 + 17.0, 2.9, 0.35, ZD + 0.14,
-              ZD + 0.26, m["cope"], c, 40)
-    _v15_ring("%s_v15_hatch_ring2" % tag, t0 + 28.0, v0 + 17.0, 1.85, 0.30, ZD + 0.14,
-              ZD + 0.24, m["cope"], c, 32)
+    _v15_ring("%s_v15_hatch_ring" % tag, t0 + 28.0, v0 + 17.0, 3.62, 0.45, ZD + 0.14,
+              ZD + 0.30, m["cope"], c, 40)
+    _v15_ring("%s_v15_hatch_ring2" % tag, t0 + 28.0, v0 + 17.0, 2.30, 0.38, ZD + 0.14,
+              ZD + 0.28, m["cope"], c, 32)
     for i in range(12):
         a = i * 30.0 + 15.0
-        cu = 28.0 + 2.35 * math.cos(math.radians(a))
-        cv = 17.0 + 2.35 * math.sin(math.radians(a))
-        _v15_rot("%s_v15_rib%d" % (tag, i), t0 + cu, v0 + cv, 1.25, 0.30,
-                 ZD + 0.14, ZD + 0.26, m["cope"], c, deg=a)
-    _v15_cyl("%s_v15_hub" % tag, t0 + 28.0, v0 + 17.0, ZD + 0.14, ZD + 0.34, 0.75,
-             m["steel"], c, 16)
+        cu = 28.0 + 2.95 * math.cos(math.radians(a))
+        cv = 17.0 + 2.95 * math.sin(math.radians(a))
+        _v15_rot("%s_v15_rib%d" % (tag, i), t0 + cu, v0 + cv, 1.70, 0.34,
+                 ZD + 0.14, ZD + 0.30, m["steel"], c, deg=a)
+    _v15_cyl("%s_v15_hub" % tag, t0 + 28.0, v0 + 17.0, ZD + 0.14, ZD + 0.38, 0.85,
+             m["ws_yellow"], c, 16)
     # barrel-vault mouth: dark recess pad + two concentric rib arcs + jamb columns
-    R("vault", 1.5, 6.5, 3.0, 9.0, ZD, ZD + 0.14, m["char_dark"])
-    for i, rr in enumerate((2.2, 3.4)):
-        _v15_ring("%s_v15_arc%d" % (tag, i), t0 + 6.5, v0 + 6.0, rr, 0.35, ZD + 0.14,
-                  ZD + 0.28, m["rib_blue"], c, 40,
+    R("vault", 1.2, 7.2, 2.4, 9.6, ZD, ZD + 0.14, m["char_dark"])
+    for i, rr in enumerate((2.0, 3.3, 4.6)):
+        _v15_ring("%s_v15_arc%d" % (tag, i), t0 + 6.5, v0 + 6.0, rr, 0.60, ZD + 0.14,
+                  ZD + 0.34, m["rib_blue"], c, 40,
                   AV_ROT + math.radians(-90), AV_ROT + math.radians(90))
     for i, ww in enumerate((3.4, 8.6)):
         _v15_cyl("%s_v15_jamb%d" % (tag, i), t0 + 6.5, v0 + ww, ZD, z + 2.8, 0.32,
@@ -447,6 +447,12 @@ def _v15_h4(tag, t0, v0, z, m, c):
     for i, uu in enumerate((12.0, 18.0)):
         R("pv%d" % i, uu, uu + 0.4, 6.0, 14.0, ZD, ZD + 1.2, m["white"])
         R("pvc%d" % i, uu - 0.1, uu + 0.5, 6.0, 14.0, ZD + 1.2, ZD + 1.42, m["cope"])
+    # yellow channel arrows so the partitions read as walls, not shelving
+    for i, (au, av_, deg) in enumerate(((13.0, 8.6, 0), (16.6, 11.4, 90), (13.0, 12.6, 180))):
+        _v15_rot("%s_v15_arrow%d" % (tag, i), t0 + au, v0 + av_, 1.6, 0.45,
+                 ZD + 0.14, ZD + 0.24, m["ws_yellow"], c, deg=deg)
+        _v15_rot("%s_v15_arrowtip%d" % (tag, i), t0 + au + 0.9, v0 + av_, 0.9, 0.45,
+                 ZD + 0.14, ZD + 0.24, m["ws_yellow"], c, deg=deg + 30)
     for i, vv in enumerate((6.0, 10.0, 14.0)):
         R("ph%d" % i, 12.0, 18.0, vv, vv + 0.4, ZD, ZD + 1.2, m["white"])
         R("phc%d" % i, 12.0, 18.0, vv - 0.1, vv + 0.5, ZD + 1.2, ZD + 1.42, m["cope"])

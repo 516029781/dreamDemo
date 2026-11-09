@@ -6,7 +6,7 @@
  "loaded": [
   {
    "path": "planning/art/SPACE_BASE_CORE_ROOMS_ART_PLAN_20261108.md",
-   "sha256": "28a26b93e71d9ba0821c0453104c5a48f18fe56672eadce3a2ebf1cfa5be1bc6",
+   "sha256": "df03b377523b80ef04997df5a5cde5e9079def96821bfa12afa1b993f87eb97a",
    "scope": "active",
    "lifecycle": "active",
    "maturity": "observed",
@@ -62,7 +62,7 @@
   },
   {
    "path": "tools/blender_space_base/build_scene_v15.py",
-   "sha256": "dc518163ffd9db3156a1e74becba5e29b386c91a8649000af877f4d047541272",
+   "sha256": "683aa7724ff6ebb1799492346341680c080af87f8283cd124e65c4e4c7c8444f",
    "scope": "active",
    "lifecycle": "active",
    "maturity": "observed",
@@ -70,7 +70,7 @@
   },
   {
    "path": "tools/blender_space_base/v15_rooms_src.py",
-   "sha256": "762cc6ef37573a017656a0635b2200154f71cc4831ce5d1fc1d3b8bd7a17cdd9",
+   "sha256": "b15de6157cb51c3a0b2f34288475adca0ce9079378b1b4df4aa30d21ff161c7c",
    "scope": "active",
    "lifecycle": "active",
    "maturity": "observed",
@@ -78,7 +78,7 @@
   },
   {
    "path": "tools/blender_space_base/gen_v15_from_v14.py",
-   "sha256": "a08a63067814ed6cbfe96c75cdaeea1059047d39a6c442d654c9a3ffd5d1d1a0",
+   "sha256": "96d81fa67bb870981484f9f2ea4cf330828650de3c9ea9f6867b699a2dfb618b",
    "scope": "active",
    "lifecycle": "active",
    "maturity": "observed",

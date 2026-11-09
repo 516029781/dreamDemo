@@ -17,8 +17,8 @@ ROOMS = HERE / "v15_rooms_src.py"
 NEW_MATS = '''        # ---- v15 四核心区（复核 D2/D5/D9：冷相深色 + 色温预补偿）
         "h1_floor": make_mat("v15.h1_floor", "#767C78", 0.90),
         "h1_disc": make_mat("v15.h1_disc", "#222B2D", 0.86),
-        "h2_poolbed": make_mat("v15.h2_poolbed", "#3D4444", 0.92),
-        "h3_pitbed": make_mat("v15.h3_pitbed", "#2A4160", 0.86),
+        "h2_poolbed": make_mat("v15.h2_poolbed", "#232A2C", 0.92),
+        "h3_pitbed": make_mat("v15.h3_pitbed", "#2E5490", 0.86),
         "cap_h1": make_mat("v15.cap_h1", "#1C7C88", 0.62),
         "cap_h2": make_mat("v15.cap_h2", "#3E6E73", 0.62),
         "cap_h3": make_mat("v15.cap_h3", "#2C4A78", 0.66),

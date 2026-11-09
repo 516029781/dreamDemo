@@ -6,22 +6,22 @@
  "pass": true,
  "imaging": {
   "S1_light_land": {
-   "light_land": 0.51,
+   "light_land": 0.5101,
    "rule": ">=0.45",
    "pass": true
   },
   "S2_green": {
-   "green_ratio": 0.0126,
+   "green_ratio": 0.01254,
    "rule": "<=0.12",
    "pass": true
   },
   "S3_orange": {
-   "orange_ratio": 0.0007,
+   "orange_ratio": 0.00068,
    "rule": "<=0.02",
    "pass": true
   },
   "water_frac": {
-   "value": 0.7756,
+   "value": 0.7758,
    "note": "reported next to S1 on purpose: cool darks are counted as water (plan 5.6)"
   }
  },
@@ -78,8 +78,8 @@
   },
   "I6": {
    "value": {
-    "objects": 1751,
-    "delta": 366,
+    "objects": 1758,
+    "delta": 373,
     "materials": 82
    },
    "pass": true
@@ -113,8 +113,8 @@
      "pass": true
     },
     "H4": {
-     "count": 52,
-     "density": 0.045,
+     "count": 64,
+     "density": 0.0554,
      "target": ">=52 parts (0.045/m2)",
      "pass": true
     }
@@ -148,7 +148,7 @@
     "largest": [
      [
       "h4_v15",
-      83
+      90
      ],
      [
       "h1_v15",
@@ -177,24 +177,24 @@
  },
  "halls": {
   "H1": {
-   "light_pct": 30.5,
-   "L_med": 0.46,
-   "water_pct": 16.4
+   "light_pct": 30.0,
+   "L_med": 0.455,
+   "water_pct": 16.5
   },
   "H2": {
-   "light_pct": 49.7,
+   "light_pct": 49.6,
    "L_med": 0.618,
-   "water_pct": 3.3
+   "water_pct": 3.6
   },
   "H3": {
-   "light_pct": 39.5,
+   "light_pct": 39.6,
    "L_med": 0.595,
-   "water_pct": 8.5
+   "water_pct": 8.4
   },
   "H4": {
-   "light_pct": 39.7,
-   "L_med": 0.595,
-   "water_pct": 0.5
+   "light_pct": 39.4,
+   "L_med": 0.593,
+   "water_pct": 2.3
   }
  },
  "failed": [],

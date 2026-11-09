@@ -53,8 +53,8 @@
   },
   "I6": {
    "value": {
-    "objects": 1751,
-    "delta": 366,
+    "objects": 1758,
+    "delta": 373,
     "materials": 82
    },
    "pass": true
@@ -88,8 +88,8 @@
      "pass": true
     },
     "H4": {
-     "count": 52,
-     "density": 0.045,
+     "count": 64,
+     "density": 0.0554,
      "target": ">=52 parts (0.045/m2)",
      "pass": true
     }
@@ -123,7 +123,7 @@
     "largest": [
      [
       "h4_v15",
-      83
+      90
      ],
      [
       "h1_v15",

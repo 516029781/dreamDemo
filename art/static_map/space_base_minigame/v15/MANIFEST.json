@@ -6,68 +6,68 @@
  "entries": [
   {
    "path": "scene.blend",
-   "sha256": "62495cd5e1423f384fd9aae44abc452009924b304ea2c02939c541f547bea34a",
-   "bytes": 13060268
+   "sha256": "1369fa4a74181f8047f01fb881d7f393c73d7497e95b3e4b92f222ecd1b22575",
+   "bytes": 13113663
   },
   {
    "path": "renders/master_raw.png",
-   "sha256": "1bd6bde8e87110ee79b271e528910eec30fd69475bdcf3556f4dc4ed9f3e7c7e",
-   "bytes": 17394072
+   "sha256": "7dfa4847e86f886f4cde4eb3a39cece71be22e00b09ad78d259e62fc64d8e25d",
+   "bytes": 17400578
   },
   {
    "path": "renders/hero_raw.png",
-   "sha256": "3ff851ba4cbd13397e018a27e1abb6e99e5c39b65c2406e6fe9e050cdce5e50d",
-   "bytes": 2293890
+   "sha256": "07fb13469b6ecd2bc555157bc6acd1e5fa6b0afa59c876fedca4dab10a98476f",
+   "bytes": 2293783
   },
   {
    "path": "renders/space_base_v15_master.png",
-   "sha256": "8376cfbcc3345a8ceee1fbb6e59a9444cf458a0ff461c4cf028d15399cd4f67a",
-   "bytes": 3013614
+   "sha256": "21d3c5c2cff7a7dd65e21b3ab21ebb5e19143e5d7d186b202be6af05770b5849",
+   "bytes": 3015478
   },
   {
    "path": "renders/space_base_v15.jpg",
-   "sha256": "07a065b1f372dc4afb7bcd640f59a9a59da38e6f8b10e3cb6bbe24cb7a68ffee",
-   "bytes": 245937
+   "sha256": "6c96952d57cb3e6ea00ee6c466d6a20545e18ae26f7dda8867b5081661d6946d",
+   "bytes": 246352
   },
   {
    "path": "renders/space_base_v15_hero.png",
-   "sha256": "1b12396d7f882986512462bc83f6681c34b1b8c84aa226739b9941e12f210142",
-   "bytes": 1926422
+   "sha256": "f6e24244e7bb13c13cc2de6af64f71cabd5c8d969d873e15dc6c954e0de18ec5",
+   "bytes": 1926216
   },
   {
    "path": "renders/space_base_v15_core.png",
-   "sha256": "84ffe1a28726a06797db46840b4c08e685fa39b9ab4609bbd5a79f66dcf0e6ea",
-   "bytes": 2251288
+   "sha256": "a3faf5fe0b2b2dae53044711565c4b9e05dc20e4d536057222f093d9537efcc5",
+   "bytes": 2257578
   },
   {
    "path": "renders/space_base_v11_master.png",
-   "sha256": "8376cfbcc3345a8ceee1fbb6e59a9444cf458a0ff461c4cf028d15399cd4f67a",
-   "bytes": 3013614
+   "sha256": "21d3c5c2cff7a7dd65e21b3ab21ebb5e19143e5d7d186b202be6af05770b5849",
+   "bytes": 3015478
   },
   {
    "path": "renders/space_base_v11.jpg",
-   "sha256": "c21287157e8435a035205c0248589582548fafd13ca68fc8901647129d3ee564",
-   "bytes": 277005
+   "sha256": "a1704620cc6a929c1fe8596109a853db3e999d2c6f9ceeb8ce0b26b1b2be1f35",
+   "bytes": 277266
   },
   {
    "path": "renders/space_base_v11_hero.png",
-   "sha256": "1b12396d7f882986512462bc83f6681c34b1b8c84aa226739b9941e12f210142",
-   "bytes": 1926422
+   "sha256": "f6e24244e7bb13c13cc2de6af64f71cabd5c8d969d873e15dc6c954e0de18ec5",
+   "bytes": 1926216
   },
   {
    "path": "renders/space_base_v11_core.png",
-   "sha256": "84ffe1a28726a06797db46840b4c08e685fa39b9ab4609bbd5a79f66dcf0e6ea",
-   "bytes": 2251288
+   "sha256": "a3faf5fe0b2b2dae53044711565c4b9e05dc20e4d536057222f093d9537efcc5",
+   "bytes": 2257578
   },
   {
    "path": "evidence/scene_checks.json",
-   "sha256": "fe731d3f315c33083f6e521160657e3860b70eaa825030cca2f2dca63f8fc81a",
-   "bytes": 2422
+   "sha256": "684d3c235faf639a3f3587a9d89093f5771966c1082130e63d92fdbf2c81c27a",
+   "bytes": 2423
   },
   {
    "path": "evidence/post_metrics.json",
-   "sha256": "84b671502ce2aaf7c88614a9d810081785749f952d8b45fd4be959c606992839",
-   "bytes": 720
+   "sha256": "6ba52a453869894630fe7d4ec2c5ea95ea29c396f5556e01d3c6eac418798445",
+   "bytes": 725
   },
   {
    "path": "DELIVERY.json",
@@ -76,8 +76,8 @@
   },
   {
    "path": "GATE_REPORT.json",
-   "sha256": "57f4c7510740b7aff3615e07ae546f3878845cdf12d10e1a71d117dc8ef314fa",
-   "bytes": 3481
+   "sha256": "93cfb2fb107e14ad0ec4a3d637ae2ef9eec3a2aa50e72b8e736948a2cd77cc32",
+   "bytes": 3487
   },
   {
    "path": "REVIEW.md",

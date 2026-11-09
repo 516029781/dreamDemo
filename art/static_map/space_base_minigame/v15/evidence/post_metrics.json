@@ -1,42 +1,42 @@
 {
  "schema": "v15-post-v1",
  "S1": {
-  "light_land": 0.51,
+  "light_land": 0.5101,
   "rule": ">=0.45",
   "pass": true
  },
  "S2": {
-  "green_ratio": 0.0126,
+  "green_ratio": 0.01254,
   "rule": "<=0.12",
   "pass": true
  },
  "S3": {
-  "orange_ratio": 0.0007,
+  "orange_ratio": 0.00068,
   "rule": "<=0.02",
   "pass": true
  },
- "water_frac": 0.7756,
- "land_frac": 0.2244,
+ "water_frac": 0.7758,
+ "land_frac": 0.2242,
  "halls": {
   "H1": {
-   "light_pct": 30.5,
-   "L_med": 0.46,
-   "water_pct": 16.4
+   "light_pct": 30.0,
+   "L_med": 0.455,
+   "water_pct": 16.5
   },
   "H2": {
-   "light_pct": 49.7,
+   "light_pct": 49.6,
    "L_med": 0.618,
-   "water_pct": 3.3
+   "water_pct": 3.6
   },
   "H3": {
-   "light_pct": 39.5,
+   "light_pct": 39.6,
    "L_med": 0.595,
-   "water_pct": 8.5
+   "water_pct": 8.4
   },
   "H4": {
-   "light_pct": 39.7,
-   "L_med": 0.595,
-   "water_pct": 0.5
+   "light_pct": 39.4,
+   "L_med": 0.593,
+   "water_pct": 2.3
   }
  },
  "grade": {
